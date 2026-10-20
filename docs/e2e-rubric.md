@@ -18,3 +18,20 @@ The criteria above are copied from the creative brief (FROZEN 6) and do not chan
 - the "pick up at step N, or start over" question, asked only when `moreme-output/run-log.md` already exists.
 
 Also expected: `run-log.md` `check=` values contain no spaces, and `time=` may be a date only (`YYYY-MM-DD`), because SKILL.md tells the model not to run a command to get the time.
+
+## Chat-visible stage lines (T-011, 2026-10-20)
+
+This note sharpens how R1-R6 are judged. It does not add an item. The R1-R6 criterion "the transcript shows the check named in SKILL.md actually happened" includes the lines SKILL.md tells the model to show the user, so the reviewer checks them where the user would see them.
+
+The user sees only main-thread assistant chat text. In `transcript.md` that is the blocks headed exactly `**Assistant:**`. Text that appears only in `run-log.md`, inside a tool call's input (such as a Write of `run-log.md`), in a tool result, or in a subagent block was never shown to the user and does not count.
+
+For each stage N from 1 to 6, the stage's R item passes only if the chat text shows:
+
+1. the stage's opening line (what happens next and about how long it takes), before the stage's first Write, Edit, Bash, or Agent call;
+2. the exact done line `Step N of 6 done: <Name>.`, after the stage's last tool call and before any tool call of the next stage.
+
+Also required: for R2, the running word count of the samples in chat; for R3, the analysis report shown in chat (the content of `report.txt`, not only a Read of it), or the labeled estimate on the no-Python path.
+
+The reviewer records, per stage, the transcript line of the opening line, the done line, and (stages 2 and 3) the shown result. The driver adds a mechanical cross-check to `manifest.json` (`chat_visibility`); the reviewer's judgment decides.
+
+Why: in run `e2e-20261020-r1` the reviewer passed R1-R10 although the done lines for stages 2 and 3, the Step 2 word count, the Step 3 opening line, and the Step 3 report never appeared in chat. They existed only in `run-log.md` and in tool calls, so the user would have seen several minutes of silence. That run's record stays as it was scored; later runs are scored with this note.

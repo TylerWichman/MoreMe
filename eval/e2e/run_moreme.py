@@ -23,9 +23,13 @@ Usage:
     python eval/e2e/run_moreme.py review --run-id ID
         clean-room rubric review of a finished run (1 call)
 
-Outputs: eval/e2e/runs/<run-id>/ (logs/, manifest.json, transcript.md,
-output/ = the run's moreme-output folder, review.json). Ledger of every child
-call: eval/e2e/calls.jsonl.
+Outputs. Committed, sanitized by tools/sanitize_artifacts.py:
+eval/e2e/runs/<run-id>/ (manifest.json, transcript.md, interviewee-brief.txt,
+review.json, rubric-record.md). Raw evidence, never committed:
+<evidence>/e2e/runs/<run-id>/ (logs/, output/ = the run's moreme-output folder)
+and the ledger of every child call <evidence>/e2e/calls.jsonl, where <evidence>
+is eval/lib/artifacts.evidence_root() (MOREME_EVIDENCE_DIR, else the OneShot
+project evidence folder, else <repo>/.evidence).
 """
 import argparse
 import json
@@ -40,7 +44,7 @@ from pathlib import Path
 HERE = Path(__file__).resolve().parent
 REPO = HERE.parent.parent
 sys.path.insert(0, str(REPO / "eval"))
-from lib import childrun  # noqa: E402
+from lib import artifacts, childrun, personas  # noqa: E402
 
 CORPUS = REPO / "eval" / "corpus"
 SPLIT_JSON = REPO / "eval" / "split.json"
@@ -48,7 +52,7 @@ LICENSES = REPO / "eval" / "corpus" / "licenses.json"
 SKILL_SRC = REPO / "moreme"
 RUBRIC = REPO / "docs" / "e2e-rubric.md"
 RUNS = HERE / "runs"
-LEDGER = HERE / "calls.jsonl"
+LEDGER = artifacts.evidence_root() / "e2e" / "calls.jsonl"
 MAX_CALLS = 60
 OPENER = "I'd like to make my voice skill"
 DONE_RE = re.compile(r"Step 6 of 6 done", re.I)
@@ -71,6 +75,7 @@ PERSONAS = {
         "task": ("A short letter to my old friend telling her the first snow came early this year and asking how "
                  "her winter is going."),
         "excerpt_words": 350,
+        "first_name": personas.persona_first_name("era-c"),
     },
 }
 
@@ -146,6 +151,7 @@ def interviewee_brief(persona, scratch):
         "- Reply with only the words this person would type into the chat. No preamble, no quotes, no stage "
         "directions, no Markdown.\n"
         "- Answer interview questions briefly and in character, in one to three sentences, in your own voice.\n"
+        + personas.name_rule(persona) + "\n"
         "- When MoreMe asks for things you wrote, do not paste text. Give these file paths, exactly: "
         + ", ".join(p["give_files"]) + "\n"
         "- When MoreMe asks for a short message to use for the test, give this task, exactly: " + p["task"] + "\n"
@@ -167,6 +173,11 @@ def interviewee_prompt(brief, history, last_assistant):
             + last_assistant + "\n>>>\n\nWrite your reply now.")
 
 
+def evidence_run_dir(run_id):
+    """Raw evidence folder for one run (logs/, output/), outside the repo."""
+    return artifacts.evidence_root() / "e2e" / "runs" / run_id
+
+
 def call_text(events):
     """All main-thread assistant text of one call, joined (the question may not
     be in the last block)."""
@@ -183,7 +194,7 @@ DUMMY_SKILL = ("---\nname: my-voice\ndescription: Safety check skill for the Mor
 
 def cmd_safety(args):
     run_dir = RUNS / args.run_id
-    logs = run_dir / "logs"
+    logs = evidence_run_dir(args.run_id) / "logs"
     skills_home = childrun.home() / ".claude" / "skills"
     sent = [skills_home / n for n in SENTINELS]
     for s in sent:
@@ -236,9 +247,8 @@ def cmd_safety(args):
         out["spill_new"] = r["row"]["spill_new"]
         out["guard_new_entries"] = r["row"]["guard_new_entries"]
     out["finished"] = now_iso()
-    run_dir.mkdir(parents=True, exist_ok=True)
-    (run_dir / "safety-result.json").write_text(json.dumps(out, indent=2, ensure_ascii=False), encoding="utf-8")
-    print(json.dumps(out, indent=2, ensure_ascii=False))
+    artifacts.write_committed_json(run_dir / "safety-result.json", out)
+    print(artifacts.sanitize_text(json.dumps(out, indent=2, ensure_ascii=False)))
     return 0
 
 
@@ -259,14 +269,18 @@ def cmd_run(args):
     run_dir = RUNS / args.run_id
     if run_dir.exists() and any(run_dir.iterdir()):
         raise SystemExit("run folder exists, pick a new run id: %s" % run_dir)
-    logs = run_dir / "logs"
+    ev = evidence_run_dir(args.run_id)
+    if ev.exists() and any(ev.iterdir()):
+        raise SystemExit("evidence folder exists, pick a new run id: %s" % artifacts.sanitize_text(str(ev)))
+    logs = ev / "logs"
     logs.mkdir(parents=True)
+    run_dir.mkdir(parents=True, exist_ok=True)
     scratch, found_train = build_scratch(args.run_id, persona, split)
     iv_dir = childrun.make_scratch("moreme-e2e", args.run_id + "-iv")
     ledger = childrun.Ledger(LEDGER)
     sid = str(uuid.uuid4())
     brief = interviewee_brief(persona, scratch)
-    (run_dir / "interviewee-brief.txt").write_text(license_header(persona) + "\n\n" + brief, encoding="utf-8")
+    artifacts.write_committed(run_dir / "interviewee-brief.txt", license_header(persona) + "\n\n" + brief)
     manifest = {
         "run_id": args.run_id, "persona": persona, "started": now_iso(), "cli_version": childrun.claude_version(),
         "model_pinned": childrun.MODEL, "session_id": sid, "scratch": str(scratch), "interviewee_scratch": str(iv_dir),
@@ -276,6 +290,7 @@ def cmd_run(args):
         "env_removed": "every variable starting with CLAUDE (any case) and AI_AGENT",
         "env_set_after_scrub": childrun.ENV_SET_AFTER_SCRUB, "scratch_settings": childrun.scratch_settings(),
         "license_header": license_header(persona), "banner_source": PERSONAS[persona]["banner_source"],
+        "persona_first_name": PERSONAS[persona]["first_name"], "evidence_dir": str(ev),
         "turns": [], "status": "running",
     }
     spill_before = childrun.spill_names()
@@ -337,24 +352,116 @@ def cmd_run(args):
     manifest["spill_new"] = sorted(childrun.spill_names() - spill_before)
     out = scratch / "moreme-output"
     if out.exists():
-        dest = run_dir / "output"
+        dest = ev / "output"
         if dest.exists():
             shutil.rmtree(str(dest))
         shutil.copytree(str(out), str(dest))
     installed = scratch / ".claude" / "skills" / "my-voice" / "SKILL.md"
     manifest["installed_skill_md_exists"] = installed.exists()
-    manifest["validate_skill"] = validate_skill(run_dir / "output" / "my-voice")
+    manifest["validate_skill"] = validate_skill(ev / "output" / "my-voice")
     manifest["stage_timings"] = stage_timings(manifest["turns"])
+    manifest["chat_visibility"] = chat_visibility(load_turn_events(manifest, logs), ev / "output" / "report.txt")
     write_manifest(run_dir, manifest)
-    render(run_dir)
-    print(json.dumps({"status": status, "run_dir": str(run_dir), "calls_in_ledger": ledger.count(),
+    render(run_dir, logs)
+    print(json.dumps({"status": status, "run_dir": artifacts.sanitize_text(str(run_dir)),
+                      "calls_in_ledger": ledger.count(), "chat_visibility_ok": manifest["chat_visibility"]["ok"],
                       "spill_new": len(manifest["spill_new"]), "validate_skill": manifest["validate_skill"]},
                      indent=2))
     return 0 if status == "completed" else 3
 
 
 def write_manifest(run_dir, manifest):
-    (run_dir / "manifest.json").write_text(json.dumps(manifest, indent=2, ensure_ascii=False), encoding="utf-8")
+    """The committed manifest is sanitized (home path, user name, emails)."""
+    artifacts.write_committed_json(Path(run_dir) / "manifest.json", manifest)
+
+
+def load_turn_events(manifest, logs_dir):
+    """[(user_text, events)] for the skill turns, in order."""
+    out = []
+    for t in manifest["turns"]:
+        if t["role"] != "skill":
+            continue
+        log = Path(logs_dir) / (t["label"] + ".jsonl")
+        events = childrun.parse_events(log.read_text(encoding="utf-8")) if log.exists() else []
+        out.append((t["user"], events))
+    return out
+
+
+STAGE_NAMES = ["Interview", "Sample", "Analysis", "Generate", "Blind A/B", "Install"]
+WORK_TOOLS = ("Write", "Edit", "Bash", "Agent", "Task")
+
+
+def chat_items(turn_events):
+    """Linear chat-level sequence: ("user", text), ("text", text) for main-thread
+    assistant text (what the user sees), ("tool", name) for main-thread tool calls."""
+    items = []
+    for user, events in turn_events:
+        items.append(("user", user))
+        for e in events:
+            if e.get("type") != "assistant" or e.get("parent_tool_use_id"):
+                continue
+            for c in (e.get("message") or {}).get("content") or []:
+                if not isinstance(c, dict):
+                    continue
+                if c.get("type") == "text" and c.get("text", "").strip():
+                    items.append(("text", c["text"]))
+                elif c.get("type") == "tool_use":
+                    items.append(("tool", c.get("name")))
+    return items
+
+
+WORDS_RE = re.compile(r"\b\d[\d,]*\s+words\b", re.I)
+
+
+def chat_visibility(turn_events, report_path=None):
+    """Mechanical cross-check of the rubric's chat-visibility rule (the
+    clean-room reviewer is authoritative). Per stage: opening (chat text before
+    the stage's first Write/Edit/Bash/Agent call), done (the exact done line in
+    chat text, in order), and for stage 2 a word count, for stage 3 the report
+    shown (at least 60% of report.txt's non-empty lines appear in chat text)."""
+    items = chat_items(turn_events)
+    done_at = {}
+    for idx, (kind, val) in enumerate(items):
+        if kind != "text":
+            continue
+        for n, name in enumerate(STAGE_NAMES, 1):
+            if n not in done_at and ("Step %d of 6 done: %s." % (n, name)) in val:
+                done_at[n] = idx
+    report_lines = []
+    if report_path and Path(report_path).exists():
+        report_lines = [x.strip() for x in Path(report_path).read_text(encoding="utf-8", errors="replace").splitlines()
+                        if x.strip()]
+    stages = []
+    prev = -1
+    in_order = True
+    for n, name in enumerate(STAGE_NAMES, 1):
+        st = {"stage": n, "done": n in done_at}
+        end = done_at.get(n)
+        if end is not None and end < prev:
+            in_order = False
+        span = items[prev + 1:end] if end is not None else items[prev + 1:]
+        first_work = next((i for i, (k, v) in enumerate(span) if k == "tool" and v in WORK_TOOLS), None)
+        before = span[:first_work] if first_work is not None else span
+        st["opening"] = any(k == "text" for k, _ in before)
+        texts = "\n".join(v for k, v in span if k == "text")
+        if end is not None:
+            texts += "\n" + items[end][1]
+        if n == 2:
+            st["word_count"] = bool(WORDS_RE.search(texts))
+        if n == 3:
+            if report_lines:
+                shown = sum(1 for x in report_lines if x in texts)
+                st["report_lines_shown"] = "%d/%d" % (shown, len(report_lines))
+                st["report_shown"] = shown >= 0.6 * len(report_lines)
+            else:
+                st["report_shown"] = None
+        stages.append(st)
+        if end is not None:
+            prev = end
+    ok = in_order and all(s["done"] and s["opening"] for s in stages)
+    ok = ok and stages[1].get("word_count", False) and stages[2].get("report_shown") is not False
+    return {"ok": bool(ok), "done_lines_in_order": in_order, "stages": stages,
+            "note": "Mechanical cross-check only; the clean-room reviewer decides R1-R6."}
 
 
 def validate_skill(skill_dir):
@@ -426,8 +533,23 @@ def render_events(events):
     return lines
 
 
-def render(run_dir):
+def logs_for(run_dir):
+    """A run's raw logs: <run_dir>/logs if present (older layout), else the evidence folder."""
+    local = Path(run_dir) / "logs"
+    return local if local.is_dir() else evidence_run_dir(Path(run_dir).name) / "logs"
+
+
+def output_for(run_dir):
+    """A run's moreme-output copy: <run_dir>/output if present, else the evidence folder."""
+    local = Path(run_dir) / "output"
+    return local if local.is_dir() else evidence_run_dir(Path(run_dir).name) / "output"
+
+
+def render(run_dir, logs_dir=None):
+    """Rebuild transcript.md from the raw logs. The written file is sanitized
+    and carries the sanitizer disclosure under its title."""
     run_dir = Path(run_dir)
+    logs_dir = Path(logs_dir) if logs_dir is not None else logs_for(run_dir)
     m = json.loads((run_dir / "manifest.json").read_text(encoding="utf-8"))
     rows = [r for r in childrun.Ledger(LEDGER).rows() if r.get("run_id") == m["run_id"]]
     model_ids = sorted(set(r.get("model") for r in rows if r.get("model")))
@@ -440,7 +562,8 @@ def render(run_dir):
         "choice and is not evidence of quality." % m["banner_source"],
         "",
         "Every turn below is verbatim: user messages, assistant text, tool calls, and tool output, rendered from "
-        "the stream-json logs in `logs/`. This is a headless Claude Code run (`claude -p`), not a screen capture.",
+        "the stream-json logs (kept outside the repo). This is a headless Claude Code run (`claude -p`), not a "
+        "screen capture. Only the sanitizer substitutions named above were made.",
         "",
         "## Run header",
         "",
@@ -451,6 +574,7 @@ def render(run_dir):
         "| CLI version | %s |" % m["cli_version"],
         "| Model (pinned / reported by init) | %s / %s |" % (m["model_pinned"], ", ".join(model_ids)),
         "| Persona / sample source | %s / %s |" % (m["persona"], m["banner_source"]),
+        "| Persona first name (invented) | %s |" % m.get("persona_first_name", "(none)"),
         "| Train files in scratch | %s |" % ", ".join(m["train_files_in_scratch"]),
         "| Session id | %s |" % m["session_id"],
         "| Scratch project | `%s` |" % m["scratch"],
@@ -484,6 +608,18 @@ def render(run_dir):
     ]
     for st in m.get("stage_timings", []):
         lines.append("| %d | %s |" % (st["stage"], st["seconds"]))
+    cv = m.get("chat_visibility")
+    if cv:
+        lines += ["", "## Chat-visible stage lines (mechanical cross-check; the reviewer decides)", "",
+                  "| Stage | Opening line | Done line | Extra |", "|---|---|---|---|"]
+        for st in cv["stages"]:
+            extra = ""
+            if "word_count" in st:
+                extra = "word count shown: %s" % st["word_count"]
+            if "report_shown" in st:
+                extra = "report shown: %s (%s lines)" % (st["report_shown"], st.get("report_lines_shown", "n/a"))
+            lines.append("| %d | %s | %s | %s |" % (st["stage"], st["opening"], st["done"], extra))
+        lines += ["", "Done lines in order: %s. Overall: %s." % (cv["done_lines_in_order"], cv["ok"])]
     lines += ["", "## Turns", ""]
     n = 0
     for t in m["turns"]:
@@ -495,11 +631,10 @@ def render(run_dir):
             n, t["label"], t["latency_s"], t.get("num_turns"), json.dumps(row.get("skill_calls"))), ""]
         who = "Driver opener" if t["turn"] == 0 else "Simulated interviewee"
         lines += ["**User (%s):**" % who, "", fence(t["user"]), ""]
-        log = run_dir / "logs" / (t["label"] + ".jsonl")
+        log = logs_dir / (t["label"] + ".jsonl")
         events = childrun.parse_events(log.read_text(encoding="utf-8")) if log.exists() else []
         lines += render_events(events)
-    (run_dir / "transcript.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
-    return run_dir / "transcript.md"
+    return artifacts.write_committed(run_dir / "transcript.md", "\n".join(lines) + "\n", disclose=True)
 
 
 def cmd_render(args):
@@ -514,12 +649,23 @@ e2e-rubric.md (the rubric), transcript.md (the verbatim run transcript), and out
 including output/run-log.md). Use nothing else. Read the rubric and SKILL.md first, then the whole transcript (it is
 long; read it in parts with offset and limit until the end), run-log.md, and the files in output/ you need.
 
+Chat visibility (part of R1-R6, see "Chat-visible stage lines" in the rubric): the user sees only main-thread
+assistant text, which the transcript shows as blocks headed exactly "**Assistant:**". Text that appears only in
+run-log.md, in a tool call's input (for example a Write of run-log.md), in a tool result, or in a subagent block does
+NOT count as shown. For each stage 1 to 6 find, in "**Assistant:**" blocks only: (1) the opening line, written before
+the stage's first Write, Edit, Bash, or Agent call; (2) the exact done line "Step N of 6 done: <Name>." after the
+stage's last tool call and before any tool call of the next stage. Also find the Step 2 word count shown in chat, and
+the Step 3 report shown in chat (the report.txt content, not only a Read of it). A stage whose opening line, done line,
+or required result is missing from chat fails its R item even if run-log.md says passed.
+
 Judge every rubric item R1 to R10. For R9, list every question the assistant asked the user and classify each as
 expected or unnecessary with a one-line reason. For R10(b), compare the ab-present tool output with the assistant's
 next chat message character by character (ignoring only leading/trailing whitespace) and say whether they match.
 
 Reply with ONLY one JSON object, no prose before or after it, with this shape:
 {"items": [{"id": "R1", "pass": true, "evidence": "transcript.md line N: ...", "reason": "..."}, ... one per R1..R10],
+ "chat_visibility": [{"stage": 1, "opening": {"shown": true, "line": N}, "done": {"shown": true, "line": N},
+   "result": {"what": "word count or report or none", "shown": true, "line": N}}, ... one per stage 1..6],
  "r9_questions": [{"line": N, "question": "...", "class": "expected", "reason": "..."}],
  "verdict": "pass" or "fail", "notes": "..."}
 """
@@ -527,17 +673,17 @@ Reply with ONLY one JSON object, no prose before or after it, with this shape:
 
 def cmd_review(args):
     run_dir = RUNS / args.run_id
-    for need in ("transcript.md", "output/run-log.md"):
-        if not (run_dir / need).exists():
-            raise SystemExit("missing %s in %s" % (need, run_dir))
+    out_dir = output_for(run_dir)
+    if not (run_dir / "transcript.md").exists() or not (out_dir / "run-log.md").exists():
+        raise SystemExit("missing transcript.md or output/run-log.md for %s" % args.run_id)
     rd = childrun.make_scratch("moreme-e2e", args.run_id + "-review",
                                files={"SKILL.md": SKILL_SRC / "SKILL.md", "e2e-rubric.md": RUBRIC,
                                       "transcript.md": run_dir / "transcript.md"})
-    shutil.copytree(str(run_dir / "output"), str(rd / "output"))
+    shutil.copytree(str(out_dir), str(rd / "output"))
     ledger = childrun.Ledger(LEDGER)
     flags = (["--model", childrun.MODEL, "--no-session-persistence", "--tools=Read,Glob,Grep"]
              + childrun.ISO_FLAGS + ["--permission-mode", "default", "--permission-prompts", "none"])
-    r = childrun.run_claude("review", flags, rd, REVIEW_PROMPT, ledger, run_dir / "logs", [], allowed_skills=[],
+    r = childrun.run_claude("review", flags, rd, REVIEW_PROMPT, ledger, logs_for(run_dir), [], allowed_skills=[],
                             max_calls=MAX_CALLS, timeout=SKILL_TIMEOUT,
                             extra={"run_id": args.run_id + "-review", "role": "reviewer"})
     text = r["text"].strip()
@@ -550,8 +696,8 @@ def cmd_review(args):
             verdict = None
     out = {"run_id": args.run_id, "reviewed": now_iso(), "invalid": r["invalid"], "flags": flags,
            "reviewer_scratch": str(rd), "verdict": verdict, "raw": text if verdict is None else None}
-    (run_dir / "review.json").write_text(json.dumps(out, indent=2, ensure_ascii=False), encoding="utf-8")
-    print(json.dumps(out, indent=2, ensure_ascii=False)[:6000])
+    artifacts.write_committed_json(run_dir / "review.json", out)
+    print(artifacts.sanitize_text(json.dumps(out, indent=2, ensure_ascii=False))[:6000])
     return 0
 
 

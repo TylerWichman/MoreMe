@@ -160,3 +160,123 @@ def test_rubric_file_has_every_item():
                  "R9 No unnecessary clarification turns", "R10 Blind A/B integrity"):
         assert item in text
     assert "project_is_home" in text and "pick up at step N" in text
+
+
+# ------------------------------------------------------------- T-011 additions
+
+def _a(*blocks):
+    return {"type": "assistant", "parent_tool_use_id": None, "message": {"content": list(blocks)}}
+
+
+def _t(text):
+    return {"type": "text", "text": text}
+
+
+def _u(name):
+    return {"type": "tool_use", "id": name, "name": name, "input": {}}
+
+
+def _good_turns(report_lines):
+    names = drv.STAGE_NAMES
+    t1 = [_a(_t("Step 1 of 6: five questions, about 3 minutes."), _u("Write")), _a(_t("Step 1 of 6 done: Interview."))]
+    t2 = [_a(_t("Step 2 of 6: saving your samples, about 2 minutes."), _u("Read"), _u("Write")),
+          _a(_t("Saved 3 pieces, about 3,300 words.")), _a(_t("Step 2 of 6 done: Sample.")),
+          _a(_t("Step 3 of 6: measuring your style, about 1 minute."), _u("Bash")),
+          _a(_t("\n".join(report_lines))), _a(_t("Step 3 of 6 done: Analysis."))]
+    rest = []
+    for n in range(4, 7):
+        rest += [_a(_t("Step %d of 6: next part." % n), _u("Bash")),
+                 _a(_t("Step %d of 6 done: %s." % (n, names[n - 1])))]
+    return [("I'd like to make my voice skill", t1), ("my-writing/a.txt", t2 + rest)]
+
+
+def test_chat_visibility_passes_when_every_line_is_in_chat(tmp_path):
+    report = tmp_path / "report.txt"
+    lines = ["Your style", "Sentences: 21 words on average", "Commas: 80 per 1,000 words"]
+    report.write_text("\n".join(lines) + "\n", encoding="utf-8")
+    cv = drv.chat_visibility(_good_turns(lines), report)
+    assert cv["ok"] and cv["done_lines_in_order"]
+    assert all(s["done"] and s["opening"] for s in cv["stages"])
+    assert cv["stages"][1]["word_count"] and cv["stages"][2]["report_shown"]
+
+
+def test_chat_visibility_fails_like_run_r1(tmp_path):
+    """r1 shape: stages 2-4 ran in one turn with tool calls only; the done
+    lines and the report lived in run-log.md writes, not in chat."""
+    report = tmp_path / "report.txt"
+    report.write_text("Your style\nSentences: 21 words on average\n", encoding="utf-8")
+    t1 = [_a(_t("Step 1 of 6: questions."), _u("Write")), _a(_t("Step 1 of 6 done: Interview."))]
+    silent = [_a(_u("Read"), _u("Write"), _u("Bash"), _u("Read"), _u("Write"), _u("Bash")),
+              _a(_t("Here is your skill.")), _a(_t("Step 4 of 6 done: Generate."))]
+    cv = drv.chat_visibility([("hi", t1), ("files", silent)], report)
+    assert not cv["ok"]
+    st = dict((s["stage"], s) for s in cv["stages"])
+    assert st[1]["done"] and not st[2]["done"] and not st[3]["done"] and st[4]["done"]
+    assert st[2]["word_count"] is False
+    assert st[3]["report_shown"] is False
+
+
+def test_chat_visibility_ignores_subagent_and_tool_text():
+    sub = {"type": "assistant", "parent_tool_use_id": "x",
+           "message": {"content": [_t("Step 1 of 6 done: Interview.")]}}
+    write = _a({"type": "tool_use", "id": "w", "name": "Write",
+                "input": {"content": "Step 1 of 6 done: Interview."}})
+    cv = drv.chat_visibility([("hi", [sub, write])], None)
+    assert not cv["stages"][0]["done"]
+
+
+def test_interviewee_brief_has_persona_first_name(temp):
+    d, _ = drv.build_scratch("t1", "era-c", SPLIT)
+    brief = drv.interviewee_brief("era-c", d)
+    name = drv.PERSONAS["era-c"]["first_name"]
+    assert "Your first name is %s." % name in brief
+    assert "sign it %s" % name in brief
+
+
+def test_raw_evidence_defaults_outside_tracked_tree():
+    ledger = drv.LEDGER.resolve()
+    ev = drv.evidence_run_dir("r9").resolve()
+    for p in (ledger, ev):
+        inside_repo = REPO.resolve() in p.parents
+        assert not inside_repo or ".evidence" in p.parts
+    assert ev.name == "r9"
+
+
+def test_render_sanitizes_and_discloses(tmp_path, monkeypatch):
+    sys.path.insert(0, str(REPO / "tools"))
+    import sanitize_artifacts as sa
+    fake = {"home": "C:\\Users\\zqxjones", "users": ["zqxjones"], "names": ["Zqxjones"], "emails": []}
+    monkeypatch.setattr(sa, "_DEFAULT", sa.Sanitizer(fake))
+    run = tmp_path / "r2"
+    run.mkdir()
+    logs = tmp_path / "ev-logs"
+    logs.mkdir()
+    events = [_a(_t("Love, Zqxjones"), {"type": "tool_use", "id": "g", "name": "Glob",
+                                         "input": {"path": "C:\\Users\\zqxjones\\AppData\\Local\\Temp\\x"}})]
+    (logs / "skill-t00.jsonl").write_text("\n".join(json.dumps(e) for e in events), encoding="utf-8")
+    ledger = tmp_path / "calls.jsonl"
+    ledger.write_text("", encoding="utf-8")
+    monkeypatch.setattr(drv, "LEDGER", ledger)
+    manifest = {"run_id": "r2", "license_header": "HDR", "banner_source": "PD texts", "started": "s",
+                "cli_version": "2.1.303", "model_pinned": "m", "persona": "era-c", "persona_first_name": "Hattie",
+                "train_files_in_scratch": [], "session_id": "sid",
+                "scratch": "C:\\Users\\zqxjones\\AppData\\Local\\Temp\\moreme-e2e\\r2", "status": "completed",
+                "skill_flags_first": ["--model", "m"], "interviewee_flags": ["--tools", ""], "env_removed": "x",
+                "env_set_after_scrub": {}, "scratch_settings": {},
+                "turns": [{"turn": 0, "role": "skill", "label": "skill-t00", "user": "hi", "latency_s": 1}],
+                "chat_visibility": drv.chat_visibility([("hi", events)], None)}
+    (run / "manifest.json").write_text(json.dumps(manifest), encoding="utf-8")
+    text = drv.render(run, logs).read_text(encoding="utf-8")
+    assert "zqxjones" not in text.lower()
+    assert "Love, [name]" in text
+    assert "~\\\\AppData" in text
+    assert sa.DISCLOSURE in text
+    assert "Persona first name (invented) | Hattie" in text
+    assert "Chat-visible stage lines" in text
+
+
+def test_rubric_has_chat_visibility_note():
+    text = (REPO / "docs" / "e2e-rubric.md").read_text(encoding="utf-8")
+    assert "Chat-visible stage lines" in text and "**Assistant:**" in text
+    assert "e2e-20261020-r1" in text
+    assert "Chat visibility" in drv.REVIEW_PROMPT and "chat_visibility" in drv.REVIEW_PROMPT
