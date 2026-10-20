@@ -33,6 +33,7 @@ This holds inside one long turn. After the user gives their samples, Steps 2, 3,
 - **Saving files:** use the Write tool for new files and Write or Edit for changes. Never use Bash to write, copy, move, or delete files.
 - **Skill files:** `my-voice/SKILL.md` and `my-voice.zip` are made only by `analyze.py build-skill`. Never write, edit, or zip them yourself (the one exception is the no-Python path in Step 4).
 - **Checking whether a file exists:** use Glob, not Read, so a missing file is not an error.
+- **The user's name:** never take it from a username, a file or folder path, the environment, or other system details. Use a name only if the user gave it in the interview or this chat, or signed their samples with it. Otherwise sign drafts with their usual sign-off and no name, or leave them unsigned.
 - **Starting point:** before Step 1, Glob for `moreme-output/run-log.md`. If it exists, read it and follow "Picking up an earlier run" in `reference/troubleshooting.md`. If not, start at Step 1.
 
 ### Stage exit lines
@@ -160,9 +161,9 @@ This step shows the user two drafts of the same message, one written with my-voi
 
 1. Say: "Next, a quick test. I'll write the same short message two ways, and you pick the one that sounds more like you. This takes about 2 minutes." Then ask for a short real message they need to write, and offer two or three suggestions based on their interview answers. If they name none, use the first suggestion.
 2. Write the task text, as the user gave it, to `moreme-output/ab-task.md`. (If Glob finds `moreme-output/ab-result.json` from an earlier run, use the folder `moreme-output/ab-run-2/` instead for this step's files and commands; see `reference/blind-ab.md`.)
-3. The shared rule for both drafts (use the same words in both): "Write only the message itself, as plain text. No title, no notes before or after it, no Markdown. Keep it under 150 words unless the task says otherwise."
+3. The shared rule for both drafts (use the same words in both): "Write only the message itself, as plain text. No title, no notes before or after it, no Markdown. Keep it under 150 words unless the task says otherwise. Never take a name from a username, a file path, or system details. If you do not know the writer's name, sign off without one."
 4. **"Without" draft.** Start a subagent (the Task or Agent tool). Its whole prompt is the task text, a blank line, the shared rule, a blank line, and `Do not use any skills.` Nothing else: no interview answers, no samples, no voice notes. Save its reply, unchanged, to `moreme-output/draft-without.md`.
-5. **"With" draft.** Read `moreme-output/my-voice/SKILL.md` and write the same task as the user, following that file and the shared rule. Save it to `moreme-output/draft-with.md`.
+5. **"With" draft.** Read `moreme-output/my-voice/SKILL.md` and write the same task as the user, following that file and the shared rule. Sign with a name only as "The user's name" in Ground rules allows. Save it to `moreme-output/draft-with.md`.
 6. Run, in this order:
 
    ```

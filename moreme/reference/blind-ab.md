@@ -20,7 +20,7 @@ If the user names none or says "you pick", use the first suggestion. Save the ta
 Both drafts get exactly this rule:
 
 ```
-Write only the message itself, as plain text. No title, no notes before or after it, no Markdown. Keep it under 150 words unless the task says otherwise.
+Write only the message itself, as plain text. No title, no notes before or after it, no Markdown. Keep it under 150 words unless the task says otherwise. Never take a name from a username, a file path, or system details. If you do not know the writer's name, sign off without one.
 ```
 
 ## The "without" draft (subagent)
@@ -30,7 +30,7 @@ Start a subagent with the Task or Agent tool (a general-purpose agent). Its prom
 ```
 <task text from ab-task.md>
 
-Write only the message itself, as plain text. No title, no notes before or after it, no Markdown. Keep it under 150 words unless the task says otherwise.
+Write only the message itself, as plain text. No title, no notes before or after it, no Markdown. Keep it under 150 words unless the task says otherwise. Never take a name from a username, a file path, or system details. If you do not know the writer's name, sign off without one.
 
 Do not use any skills.
 ```
@@ -41,7 +41,7 @@ Save the subagent's reply to `moreme-output/draft-without.md` unchanged. If it a
 
 ## The "with" draft
 
-Read `moreme-output/my-voice/SKILL.md`, then write the task as the user, following that skill and the shared rule. Save it to `moreme-output/draft-with.md`.
+Read `moreme-output/my-voice/SKILL.md`, then write the task as the user, following that skill and the shared rule. Use the user's name only if they gave it in the interview or this chat, or signed their samples with it; never take it from a username, a folder path, or system details. Save it to `moreme-output/draft-with.md`.
 
 ## Shuffle and show
 
