@@ -280,6 +280,47 @@ def test_chat_visibility_report_after_step4_tool_is_late(tmp_path):
     assert cv["stages"][2]["report_shown"] is False
 
 
+def _intro_turn():
+    return [_a(_t("MoreMe asks five questions. It takes about 12 minutes. Question 1?"))]
+
+
+def test_chat_visibility_does_not_credit_next_steps_opening_r5_shape(tmp_path):
+    """r5: the report message went Step 2 done, report, Step 3 done, check-in,
+    Step 4 opening. Step 4's 'Next' line must not count as Step 3's opening."""
+    report = tmp_path / "report.txt"
+    report.write_text("Report line A\nReport line B\n", encoding="utf-8")
+    t2 = [_a(_u("Write"), _t("Step 1 of 6 done: Interview.\n\nStep 2 of 6: a few prompts. About 5 minutes. "
+                              "About 60 of 300 words so far. Tell me a story."))]
+    t3 = [_a(_u("Write"), _u("Bash"), _u("Read")),
+          _a(_t("Step 2 of 6 done: Sample.\n\nHere is what MoreMe measured:\nReport line A\nReport line B\n\n"
+                "Step 3 of 6 done: Analysis.\n\nDoes this sound like you?\n\nNext, I'll write your skill. "
+                "It takes about a minute."))]
+    cv = drv.chat_visibility([("go", _intro_turn()), ("a", t2), ("story", t3)], report)
+    st = dict((s["stage"], s) for s in cv["stages"])
+    assert st[3]["opening"] is False
+    assert st[4]["opening"] is True and st[3]["report_shown"] is True
+
+
+def test_chat_visibility_opening_before_a_late_done_line_r4_shape(tmp_path):
+    """r4: Step 3's opening came before the Step 2 done line, which landed in
+    the report message; the opening was shown in time and counts."""
+    t2 = [_a(_u("Write"), _t("Step 1 of 6 done: Interview.\n\nNext, a few prompts. About 5 minutes. Tell me."))]
+    t3 = [_a(_t("Step 3 of 6: Analysis. Next, MoreMe's measuring script reads your samples."), _u("Bash")),
+          _a(_t("Step 2 of 6 done: Sample.\n\nReport.\n\nStep 3 of 6 done: Analysis.\n\nDoes this sound like you?"))]
+    cv = drv.chat_visibility([("go", _intro_turn()), ("a", t2), ("story", t3)], None)
+    st = dict((s["stage"], s) for s in cv["stages"])
+    assert st[3]["opening"] is True and st[3]["done_timely"] is True
+
+
+def test_opening_line_shapes():
+    assert drv.opening_line("Step 3 of 6: Analysis.", 3)
+    assert drv.opening_line("Next, a quick test.", 5)
+    assert drv.opening_line("**Last step:** install.", 6)
+    assert drv.opening_line("This takes about 2 minutes.", 2)
+    assert not drv.opening_line("Step 3 of 6 done: Analysis.", 3)
+    assert not drv.opening_line("Here is what MoreMe measured in your writing:", 3)
+
+
 def test_chat_visibility_ignores_subagent_and_tool_text():
     sub = {"type": "assistant", "parent_tool_use_id": "x",
            "message": {"content": [_t("Step 1 of 6 done: Interview.")]}}
@@ -364,3 +405,4 @@ def test_rubric_has_chat_visibility_note():
     assert "check-in" in text and "check-in" in drv.REVIEW_PROMPT
     assert "Guided writing sample" in text and "Guided writing sample" in drv.REVIEW_PROMPT
     assert "about 300" in text and "Stop early" in text and "No paste step" in text
+    assert "Sample composition (run validity)" in text and "75%" in text

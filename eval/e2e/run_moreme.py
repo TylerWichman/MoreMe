@@ -140,44 +140,52 @@ def assert_scratch_contents(d, persona, split):
 
 # ------------------------------------------------- verbatim passages (AMEND-003)
 
-PASSAGE_MAX_WORDS = 80
+PASSAGE_MIN_WORDS = 60
+PASSAGE_MAX_WORDS = 100
 SENTENCE_END = re.compile(r"(?<=[.!?])[\"')\]]*\s+")
 USE_RE = re.compile(r"^\s*USE:\s*(.+?)\s*$", re.M)
 
 
-def passage_spans(text, max_words=PASSAGE_MAX_WORDS):
-    """(start, end) character spans of passages: whole paragraphs, or runs of
-    whole sentences when a paragraph is longer than max_words. Spans never
-    cut inside a sentence."""
-    spans = []
+def sentence_spans(text):
+    """(start, end) of every sentence, paragraph by paragraph, in source order."""
+    out = []
     for m in re.finditer(r"[^\n]+(?:\n(?!\s*\n)[^\n]+)*", text):
         p_start, para = m.start(), m.group(0)
         if not para.strip():
             continue
-        if len(para.split()) <= max_words:
-            spans.append((p_start, m.end()))
-            continue
-        sents = []
         pos = 0
         for s in SENTENCE_END.finditer(para):
-            sents.append((pos, s.start() + len(s.group(0).rstrip())))
+            out.append((p_start + pos, p_start + s.start() + len(s.group(0).rstrip())))
             pos = s.end()
-        if pos < len(para):
-            sents.append((pos, len(para)))
-        cur_start = None
-        cur_words = 0
-        for a, b in sents:
-            w = len(para[a:b].split())
-            if cur_start is not None and cur_words + w > max_words:
-                spans.append((p_start + cur_start, p_start + prev_end))
-                cur_start, cur_words = None, 0
-            if cur_start is None:
-                cur_start = a
-            cur_words += w
-            prev_end = b
-        if cur_start is not None:
-            spans.append((p_start + cur_start, p_start + prev_end))
-    return [(a, b) for a, b in spans if text[a:b].strip()]
+        if pos < len(para) and para[pos:].strip():
+            out.append((p_start + pos, p_start + len(para.rstrip())))
+    return out
+
+
+def passage_spans(text, min_words=PASSAGE_MIN_WORDS, max_words=PASSAGE_MAX_WORDS):
+    """(start, end) character spans of passages of min_words to max_words words:
+    runs of whole consecutive sentences (they may cross a paragraph break, which
+    stays in the text as written). Spans never cut inside a sentence; a stretch
+    that cannot reach min_words without passing max_words is skipped."""
+    spans = []
+    cur = None
+    words = 0
+    for a, b in sentence_spans(text):
+        w = len(text[a:b].split())
+        if cur is not None and words + w > max_words:
+            if words >= min_words:
+                spans.append((cur, prev_end))
+            cur, words = None, 0
+        if cur is None:
+            if w > max_words:
+                continue
+            cur = a
+        words += w
+        prev_end = b
+        if words >= min_words:
+            spans.append((cur, prev_end))
+            cur, words = None, 0
+    return spans
 
 
 def author_words(persona):
@@ -246,6 +254,30 @@ def resolve_answer(reply, catalog, used=()):
     return "\n\n".join(c["text"].strip() for c in chosen), prov, None
 
 
+CORPUS_SHARE_MIN = 0.75
+
+
+def sample_composition(turns):
+    """Words the simulated user typed before MoreMe's Step 2 done line, split
+    into verbatim corpus passages and role-played answers. A run counts only
+    when corpus words are at least CORPUS_SHARE_MIN of the sample."""
+    corpus = roleplay = 0
+    for t in turns:
+        if t["role"] == "skill":
+            if "2" in [str(x) for x in t.get("steps_done", [])]:
+                break
+            continue
+        n = len((t.get("answer") or "").split())
+        if t.get("answer_kind") == "passages":
+            corpus += n
+        else:
+            roleplay += n
+    total = corpus + roleplay
+    share = round(corpus / float(total), 3) if total else 0.0
+    return {"corpus_words": corpus, "roleplay_words": roleplay, "total_words": total, "corpus_share": share,
+            "min_share": CORPUS_SHARE_MIN, "meets_rule": share >= CORPUS_SHARE_MIN}
+
+
 SAMPLE_METHOD = ("Answers to MoreMe's writing prompts are verbatim passages from those texts, picked by the "
                  "simulated interviewee to fit each prompt (whole paragraphs or whole sentences, never reworded); "
                  "answers to interview questions and other replies were written in role by the agent.")
@@ -265,12 +297,14 @@ def interviewee_brief(persona, scratch=None, catalog=None):
         "Rules for your replies:\n"
         "- Reply with only the words this person would type into the chat. No preamble, no quotes, no stage "
         "directions, no Markdown.\n"
-        "- Answer interview questions briefly and in character, in one to three sentences, in your own voice.\n"
+        "- Answer interview questions in character with one short sentence of about 15 words at most. Keep "
+        "them short: the writing passages, not these answers, should make up most of what you type.\n"
         + personas.name_rule(persona) + "\n"
         "- When MoreMe asks you to write something (a story, a reply, an explanation, an opinion, a few lines "
         "about anything), do not write it yourself. Reply with exactly one line: USE: followed by the ids of "
-        "the one or two passages that fit the request best, for example USE: p4, p9. Pick passages you have not "
-        "used yet. Prefer one passage; add a second only if the first is short.\n"
+        "the one passage that fits the request best, for example USE: p4. Pick a passage you have not used yet. "
+        "Prefer a passage whose tone fits what was asked, and when a plainer passage fits, pick it over one "
+        "that reads like an old quotation.\n"
         "- When MoreMe asks for a short message to use for the test, give this task, exactly: " + p["task"] + "\n"
         "- When MoreMe shows Draft A and Draft B and asks which sounds more like you, reply with only the "
         "letter A or B, for the draft closer to your own writing.\n"
@@ -505,11 +539,13 @@ def cmd_run(args):
     manifest["installed_skill_md_exists"] = installed.exists()
     manifest["validate_skill"] = validate_skill(ev / "output" / "my-voice")
     manifest["stage_timings"] = stage_timings(manifest["turns"])
+    manifest["sample_composition"] = sample_composition(manifest["turns"])
     manifest["chat_visibility"] = chat_visibility(load_turn_events(manifest, logs), ev / "output" / "report.txt")
     write_manifest(run_dir, manifest)
     render(run_dir, logs)
     print(json.dumps({"status": status, "run_dir": artifacts.sanitize_text(str(run_dir)),
                       "calls_in_ledger": ledger.count(), "chat_visibility_ok": manifest["chat_visibility"]["ok"],
+                      "sample_composition": manifest["sample_composition"],
                       "spill_new": len(manifest["spill_new"]), "validate_skill": manifest["validate_skill"]},
                      indent=2))
     return 0 if status == "completed" else 3
@@ -578,6 +614,21 @@ def ask_indices(items):
     return out
 
 
+def opening_line(text, n):
+    """True if some line of text reads like stage n's opening: it names the
+    step ("Step n of 6", not its done line), starts with "Next" or "Last step",
+    or gives a time in minutes."""
+    for line in text.splitlines():
+        s = line.strip().lstrip("*#> ").strip()
+        if not s:
+            continue
+        if re.match(r"Step %d of 6\b(?! done)" % n, s) or re.match(r"(?:Next|Last step)\b", s, re.I):
+            return True
+        if MINUTE_RE.search(s):
+            return True
+    return False
+
+
 def chat_visibility(turn_events, report_path=None):
     """Mechanical cross-check of the rubric's chat-visibility rule (decision
     2026-10-20 turn boundaries; the clean-room reviewer is authoritative).
@@ -626,13 +677,25 @@ def chat_visibility(turn_events, report_path=None):
         # The text after the previous done line (same message) counts, and so
         # does chat text up to the next message that asks the user to act.
         deadline = next_ask(start if prev is None else start + 1)
+        own_done = "Step %d of 6 done: %s." % (n, name)
+        last = min(end, deadline) if end is not None else deadline
         window = []
         if prev is not None:
-            window.append(text_after_done(prev, n - 1))
-            window += [v for k, v in items[prev + 1:deadline + 1] if k == "text"]
+            # The previous done line may come late (in a later turn-ending
+            # message); this stage's opening may then precede it, after the
+            # last message that asked the user to act.
+            lo = max([a for a in asks if a < prev] or [-1])
+            window += [v for k, v in items[lo + 1:prev] if k == "text"]
+            first = text_after_done(prev, n - 1)
+            window.append(first.split(own_done, 1)[0] if end == prev else first)
+            if end != prev:
+                window += [v for k, v in items[prev + 1:last + 1] if k == "text"]
         else:
-            window += [v for k, v in items[:deadline + 1] if k == "text"]
-        st["opening"] = any(w.strip() for w in window)
+            window += [v for k, v in items[:last + 1] if k == "text"]
+        # Only text before this stage's own done line can be its opening (text
+        # after it opens the next stage), and it must look like an opening line.
+        window = [w.split(own_done, 1)[0] for w in window]
+        st["opening"] = any(opening_line(w, n) for w in window)
         if n == 1:
             # Step 1's opening is the introduction with the time it takes; a bare
             # interview question does not count.
@@ -787,6 +850,10 @@ def render(run_dir, logs_dir=None):
         "| Model (pinned / reported by init) | %s / %s |" % (m["model_pinned"], ", ".join(model_ids)),
         "| Persona / sample source | %s / %s |" % (m["persona"], m["banner_source"]),
         "| Persona first name (invented) | %s |" % m.get("persona_first_name", "(none)"),
+        "| Sample composition (before the Step 2 done line) | %s |" % (
+            "corpus %(corpus_words)s words, role-play %(roleplay_words)s words, corpus share %(corpus_share)s "
+            "(run counts only at %(min_share)s or more: %(meets_rule)s)" % m["sample_composition"]
+            if m.get("sample_composition") else "n/a"),
         "| Train files in scratch | %s |" % ", ".join(m["train_files_in_scratch"]),
         "| Session id | %s |" % m["session_id"],
         "| Scratch project | `%s` |" % m["scratch"],

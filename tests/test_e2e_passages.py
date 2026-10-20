@@ -15,18 +15,51 @@ spec.loader.exec_module(drv)
 SPLIT = json.loads((REPO / "eval" / "split.json").read_text(encoding="utf-8"))
 
 
-def test_spans_are_whole_paragraphs_or_sentences():
-    text = ("Short paragraph one.\n\n" + " ".join("Sentence number %d is here." % i for i in range(40))
-            + "\n\nLast one.\n")
-    spans = drv.passage_spans(text, max_words=30)
+def test_spans_are_whole_sentences_within_word_limits():
+    sents = ["Sentence number %d is here." % i for i in range(40)]
+    text = "Short paragraph one.\n\n" + " ".join(sents) + "\n\nLast one.\n"
+    spans = drv.passage_spans(text, min_words=12, max_words=20)
     pieces = [text[a:b] for a, b in spans]
-    assert pieces[0] == "Short paragraph one."
-    assert pieces[-1] == "Last one."
-    for p in pieces[1:-1]:
-        assert len(p.split()) <= 30
-        assert p.startswith("Sentence number") and p.endswith("here.")
-    joined = " ".join(pieces[1:-1])
-    assert joined == " ".join("Sentence number %d is here." % i for i in range(40))
+    assert pieces
+    for piece in pieces:
+        assert 12 <= len(piece.split()) <= 20
+        assert piece.rstrip().endswith((".", "!", "?"))
+        assert text.count(piece) == 1
+    # A passage may cross a paragraph break; the break stays as written.
+    assert pieces[0].startswith("Short paragraph one.\n\nSentence number 0")
+
+
+def test_catalog_passages_are_60_to_100_words():
+    ws = [c["words"] for c in drv.passage_catalog("era-c", SPLIT)]
+    assert len(ws) >= 30
+    assert min(ws) >= drv.PASSAGE_MIN_WORDS and max(ws) <= drv.PASSAGE_MAX_WORDS
+    assert (drv.PASSAGE_MIN_WORDS, drv.PASSAGE_MAX_WORDS) == (60, 100)
+
+
+def test_sample_composition_rule():
+    turns = [
+        {"role": "skill", "steps_done": []},
+        {"role": "interviewee", "answer": "one two three four five", "answer_kind": "in_role"},
+        {"role": "skill", "steps_done": ["1"]},
+        {"role": "interviewee", "answer": " ".join(["w"] * 80), "answer_kind": "passages"},
+        {"role": "skill", "steps_done": []},
+        {"role": "interviewee", "answer": " ".join(["w"] * 70), "answer_kind": "passages"},
+        {"role": "skill", "steps_done": ["2", "3"]},
+        {"role": "interviewee", "answer": "Yes, that sounds like me, more or less.", "answer_kind": "in_role"},
+    ]
+    c = drv.sample_composition(turns)
+    assert (c["corpus_words"], c["roleplay_words"]) == (150, 5)
+    assert c["meets_rule"] and c["corpus_share"] == round(150 / 155.0, 3)
+    turns[1]["answer"] = " ".join(["x"] * 60)
+    c = drv.sample_composition(turns)
+    assert c["corpus_share"] == round(150 / 210.0, 3) and not c["meets_rule"]
+    assert drv.CORPUS_SHARE_MIN == 0.75
+
+
+def test_brief_keeps_interview_answers_short_and_one_passage():
+    brief = drv.interviewee_brief("era-c")
+    assert "about 15 words at most" in brief
+    assert "the one passage that fits" in brief and "old quotation" in brief
 
 
 def test_catalog_is_verbatim_train_text_with_exact_spans():
