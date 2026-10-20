@@ -14,7 +14,7 @@ from conftest import FIXTURES
 REPO = Path(__file__).resolve().parents[1]
 SKILL = REPO / "moreme" / "SKILL.md"
 REFERENCE = REPO / "moreme" / "reference"
-ALLOWED_PASTE_CONTEXT = ("never", "offers to paste", "pasted article")
+ALLOWED_PASTE_CONTEXT = ("never", "offers to paste")
 
 
 def _body():
@@ -137,3 +137,17 @@ def test_too_few_excerpts_message_names_conversation_file(cli, tmp_path):
               "--out", out, "--date", "2026-10-20")
     messages = [e["message"] for e in res.json["errors"] if e["code"] == "notes_count_out_of_range"]
     assert any("like [conversation.txt]" in m for m in messages), messages
+
+
+def test_never_question_authorship():
+    body = _flat(_body())
+    talk = body[body.index("## How to talk to the user"):body.index("## Ground rules")]
+    assert ("Never ask whether the user wrote an answer themselves or where it came from. "
+            "Every answer counts as their writing.") in talk
+    sa = _flat((REFERENCE / "samples-and-analysis.md").read_text(encoding="utf-8"))
+    assert "Never ask whether they wrote it or where it came from" in sa
+    for path in _skill_files():
+        low = _flat(path.read_text(encoding="utf-8")).lower()
+        for phrase in ("ask once whether they wrote", "clearly not the user's own", "clearly did not write",
+                       "whether they have something they wrote alone"):
+            assert phrase not in low, (path.name, phrase)

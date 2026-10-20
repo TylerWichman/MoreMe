@@ -14,7 +14,7 @@ The user sees only your chat text; tool calls and their output are hidden or col
 
 1. **Step lines.** Each step's opening line (the "Say" line at the top of each step) and its done line `Step N of 6 done: <Name>.` appear in chat no later than the next message that asks the user to act.
 2. **Where they land at the latest.** Step 1: opening in the first message, done line in the first writing prompt. Steps 2 and 3: in the Step 3 report message, which ends with the check-in question. Step 4: in the message asking for the A/B task. Step 5: in or before the install question. Step 6: in the closing message.
-3. **Results in chat.** Step 2's progress cue and Step 3's full report go in your chat text. Reading a file does not show it to the user.
+3. **Results in chat.** Step 2's progress cue and Step 3's full report go in your chat text.
 
 These lines are updates, not extra questions. Ask only the questions this file lists.
 
@@ -23,7 +23,8 @@ These lines are updates, not extra questions. Ask only the questions this file l
 - Plain, short sentences. Second person ("Tell me about your week"). No jargon.
 - No long dashes (the U+2014 character). Use commas, periods, colons, or parentheses.
 - No hype and no exclamation marks. Do not praise the user's writing.
-- Ask one question per message. Never ask something this file already answers: where to save files, which file format to use, whether to run the script, whether to continue to the next step.
+- Never ask whether the user wrote an answer themselves or where it came from. Every answer counts as their writing.
+- Ask one question per message. Never ask something this file already answers (where to save, which format, whether to run the script or go on).
 - Never show scoring details from the eval or any number the report does not show.
 
 ## Ground rules
@@ -32,7 +33,7 @@ These lines are updates, not extra questions. Ask only the questions this file l
 - **Working folder:** run every command from the project folder. Never use `cd`. Always pass paths that start with `moreme-output/`.
 - **Saving files:** use the Write tool for new files and Write or Edit for changes. Never use Bash to write, copy, move, or delete files.
 - **Skill files:** `my-voice/SKILL.md` and `my-voice.zip` are made only by `analyze.py build-skill`. Never write, edit, or zip them yourself (except the no-Python path in Step 4).
-- **Checking whether a file exists:** use Glob, not Read, so a missing file is not an error.
+- **Checking whether a file exists:** use Glob, not Read (a missing file is then not an error).
 - **The user's name:** never take it from a username, a file or folder path, the environment, or other system details. Use a name only if the user gave it in the interview or this chat, or signed their samples with it. Otherwise sign drafts with their usual sign-off and no name, or leave them unsigned.
 - **Earlier run:** right after the user's first answer (never before it), Glob for `moreme-output/run-log.md`. If it exists, read it and follow "Picking up an earlier run" in `reference/troubleshooting.md`. If not, go on with Step 1.
 
@@ -55,7 +56,7 @@ stage=N name=<name> status=passed check=<what was checked> time=<time>
 
 ### The script command (PREFIX)
 
-Steps 3 to 6 call `analyze.py` in this skill's folder (SKILL_DIR). In Claude Code, SKILL_DIR is `.claude/skills/moreme` (project folder) or `~/.claude/skills/moreme` (personal folder), written exactly so, with forward slashes, never as a full `C:\...` or `/Users/...` path, so MoreMe's permission rules match and the user sees fewer prompts. On claude.ai, it is the full folder path you were given.
+Steps 3 to 6 call `analyze.py` in this skill's folder (SKILL_DIR). In Claude Code, SKILL_DIR is `.claude/skills/moreme` (project folder) or `~/.claude/skills/moreme` (personal folder), written exactly so, with forward slashes, never as a full `C:\...` or `/Users/...` path, so MoreMe's permission rules match. On claude.ai, it is the full folder path you were given.
 
 PREFIX is the Python command found in Step 3 plus `SKILL_DIR/analyze.py`, for example `python .claude/skills/moreme/analyze.py`. Use the exact same PREFIX for every later call.
 
@@ -78,7 +79,7 @@ PREFIX is the Python command found in Step 3 plus `SKILL_DIR/analyze.py`, for ex
    3. "Pick three words for how you want to sound."
    4. "What bugs you most in drafts AI writes for you? Words, phrases, or habits."
    5. "Any habits you always or never have? For example sign-offs, emoji, or exclamation marks."
-4. Follow-ups: at most 2 in the whole interview, and only when an answer is empty or contradicts another answer. Otherwise accept the answer as given. Details and examples: `reference/interview-guide.md`.
+4. Follow-ups: at most 2 in the whole interview, and only when an answer is empty or contradicts another answer. Otherwise accept the answer as given. Details: `reference/interview-guide.md`.
 5. After the last answer, Write `moreme-output/interview.md` with each question and the user's answer copied word for word (format in the interview guide). Also Write `moreme-output/samples/conversation.txt` with the five answers: the user's words only, word for word, a blank line between answers, none of your text.
 
 **Exit check:** 5 answers saved in `interview.md` and `conversation.txt`, follow-ups 2 or fewer. Log it, for example `stage=1 name=interview status=passed check=answers=5,followups=0 time=...`. Then write `Step 1 of 6 done: Interview.` as chat text, at the latest at the top of the first writing prompt.
@@ -93,7 +94,7 @@ The sample is this conversation: the user types, MoreMe measures what they type.
 4. **Short answers.** After a very short answer, the next prompt plainly invites more ("Tell me a bit more: what happened next?"). Never scold.
 5. **Save each answer** to the end of `moreme-output/samples/conversation.txt` (Write or Edit): the user's words only, word for word, typos kept, a blank line before it.
 6. **Stop at about 300 words,** usually after 4 to 6 prompts. At most 8 prompts; if still under 300, continue with what you have and log `status=degraded reason=below_floor`.
-7. **Stopping early.** If the user wants to stop writing, say in one sentence that fewer words make the measurement less reliable, and offer one more prompt. If they still want to stop, continue to Step 3 with what you have and log `status=degraded reason=user_stopped_early`.
+7. **Stopping early.** If the user wants to stop writing, say in one sentence that fewer words make the measurement less reliable, and offer one more prompt. If they still want to stop, go to Step 3 and log `status=degraded reason=user_stopped_early`.
 
 **Exit check:** `conversation.txt` holds the user's answers, word total logged. Log it, for example `stage=2 name=sample status=passed check=prompts=5,words_about=320 time=...`. Then write `Step 2 of 6 done: Sample.` as chat text (in the Step 3 report message at the latest).
 
@@ -115,11 +116,12 @@ The sample is this conversation: the user types, MoreMe measures what they type.
    ```
 
 5. Read `moreme-output/report.txt`. Then log Step 3 in `run-log.md` (exit check below).
-6. **Report message (ends your turn),** in this order:
-   - `Step 2 of 6 done: Sample.` and this step's opening line, if not written yet
+6. **Report message (ends your turn),** exactly in this order, nothing skipped:
+   - `Step 2 of 6 done: Sample.` (if not shown yet)
+   - this step's opening line (item 1), always, even if written earlier
    - the line: Here is what MoreMe measured in your writing:
    - the full text of `report.txt`, copied word for word (the user cannot see what Read returns)
-   - one or two plain sentences tying it to their interview answers (if the report says there was very little text, say again that the numbers are rough)
+   - one or two plain sentences tying it to their interview answers (if the report says the text was short, repeat that the numbers are rough)
    - `Step 3 of 6 done: Analysis.`
    - the question: Does this sound like you? Reply yes, or tell me what's off.
    - last, Step 4's opening line: Next, I'll write your my-voice skill. It takes about a minute.

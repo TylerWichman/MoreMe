@@ -126,8 +126,9 @@ def test_step3_report_message_ends_turn_with_checkin():
     body = _flat(_body())
     s3 = _flat(_steps(_body())[3])
     read = s3.index("5. Read `moreme-output/report.txt`. Then log Step 3 in `run-log.md`")
-    msg = s3.index("6. **Report message (ends your turn),** in this order:")
-    prev = s3.index("- `Step 2 of 6 done: Sample.` and this step's opening line, if not written yet")
+    msg = s3.index("6. **Report message (ends your turn),** exactly in this order, nothing skipped:")
+    prev = s3.index("- `Step 2 of 6 done: Sample.` (if not shown yet)")
+    opening = s3.index("- this step's opening line (item 1), always, even if written earlier")
     lead = s3.index("- the line: Here is what MoreMe measured in your writing:")
     full = s3.index("- the full text of `report.txt`, copied word for word")
     tie = s3.index("- one or two plain sentences tying it to their interview answers")
@@ -136,7 +137,7 @@ def test_step3_report_message_ends_turn_with_checkin():
     fwd = s3.index("- last, Step 4's opening line: Next, I'll write your my-voice skill. It takes about a minute.")
     stop = s3.index("Then stop and wait for the reply. No Step 4 tool call before it.")
     save = s3.index("7. **Save the answer.**")
-    assert read < msg < prev < lead < full < tie < done < ask < fwd < stop < save
+    assert read < msg < prev < opening < lead < full < tie < done < ask < fwd < stop < save
     # The check-in sits before Step 4 starts.
     assert body.index("Does this sound like you?") < body.index("## Step 4 of 6:")
     assert "the user cannot see what Read returns" in s3

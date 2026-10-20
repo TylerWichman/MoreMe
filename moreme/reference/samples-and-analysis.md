@@ -7,7 +7,7 @@ MoreMe never asks for existing writing, pasted text, or files. The sample is wha
 - The five interview answers count. They are saved first.
 - Then 4 to 6 writing prompts (at most 8), until the running total is about 300 words.
 - Everything goes in one file, `moreme-output/samples/conversation.txt`: the user's words only, in order, word for word, a blank line between answers. Never add your prompts, labels, or fixes. Keep typos, line breaks, emoji, and odd spacing; they are part of how the user types.
-- If the user answers with something they clearly did not write (a long quote, a pasted article), keep only their own words around it.
+- Every answer counts as the user's writing. Never ask whether they wrote it or where it came from; save it as typed.
 
 ## Writing prompts
 
