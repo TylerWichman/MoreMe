@@ -43,3 +43,16 @@ Why: in run `e2e-20261020-r1` the reviewer passed R1-R10 although the done lines
 Revision (2026-10-20, decision `2026-10-20-turn-boundaries-for-visibility-moreme`): the first version of this note required each opening line before the stage's first tool call and each done line before the next stage's first tool call. Runs r2 and r3 showed the model writes chat text when it needs a reply and chains tool calls silently otherwise, whatever SKILL.md says. SKILL.md now puts the visible moments in messages that end a turn (a tool-free first turn; Step 3 ends with the report and a check-in question), and this note judges what the user has seen by the time they are asked to act. Strict tool-versus-text order inside one turn was a stand-in for that experience, not the experience itself. Runs r2 and r3 keep their records as scored.
 
 R10(d) reading: "the shared length/format rule" means the whole shared rule quoted in SKILL.md Step 5, including its closing sentences about never taking a name from a username, a file path, or system details. Those sentences are part of the rule, not extra content.
+
+## Guided writing sample (AMEND-003, T-015, 2026-10-20)
+
+Since AMEND-003, MoreMe does not ask the user to paste or point to existing writing. Step 2 collects the sample as a guided writing conversation, and the five interview answers count toward it. The reviewer applies R1-R10 to this flow as follows.
+
+- **No paste step.** Any request to paste text, attach a file, or point to a file path is an unnecessary question under R9, and a Read of a file the user did not type in this chat is a finding under R8.
+- **Prompt loop.** After the interview, MoreMe asks writing prompts, one per message, each following from the user's previous answer, until the user's own typed words reach about 300 (interview answers included). Each such prompt is an expected question under R9. A prompt asked after the running total already passed about 300 words is unnecessary.
+- **Progress cue.** A running word count shown in chat during Step 2 (for example "about 120 of 300 words so far") is the Step 2 word count required by R2 under the chat-visibility note.
+- **Short answers.** A prompt that invites a longer answer after a very short one is expected; scolding the user is not.
+- **Stop early.** If the user asks to stop before the target, one sentence saying that fewer words make the measurement less reliable is expected, and Step 2 may finish with what the user wrote and `status=degraded` with a reason. In the reference run the simulated user is told to keep writing, so a degraded Step 2 there fails R2; for real users it is a valid path.
+- **Simulated user.** In e2e runs the simulated interviewee answers each writing prompt with verbatim passages of the persona's train-split texts, chosen to fit the prompt (whole paragraphs or whole sentences, never reworded), and answers interview questions in role. The transcript banner says so. How well a passage fits a prompt is not judged; the A/B pick and the passages' fit are agent choices, not evidence of quality.
+
+Why: the operator changed how the sample is collected (AMEND-003: get users writing about things and adapt each prompt to their previous answer). The prompt loop is the core of the new Step 2, so its questions cannot count against R9.
