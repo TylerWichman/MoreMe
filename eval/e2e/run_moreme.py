@@ -56,7 +56,7 @@ SKILL_SRC = REPO / "moreme"
 RUBRIC = REPO / "docs" / "e2e-rubric.md"
 RUNS = HERE / "runs"
 LEDGER = artifacts.evidence_root() / "e2e" / "calls.jsonl"
-MAX_CALLS = 30  # per driver command (one run, one review), counted from the ledger at start
+MAX_CALLS = 45  # per driver command (one run, one review), counted from the ledger at start
 OPENER = "I'd like to make my voice skill"
 DONE_RE = re.compile(r"Step 6 of 6 done", re.I)
 STEP_RE = re.compile(r"Step ([1-6]) of 6 done")
@@ -117,46 +117,160 @@ def interviewee_flags():
 
 
 def build_scratch(run_id, persona, split):
-    files = dict(("my-writing/" + Path(f).name, CORPUS / f) for f in train_docs(split, persona))
-    d = childrun.make_scratch("moreme-e2e", run_id, skills={"moreme": SKILL_SRC}, files=files)
+    """Scratch project with only .claude/settings.json and .claude/skills/moreme.
+    Since AMEND-003 MoreMe never reads the user's files, so no writing files are
+    copied in; the interviewee gets its passages from the train split directly.
+    Returns (scratch, train files found in it), the second always empty."""
+    d = childrun.make_scratch("moreme-e2e", run_id, skills={"moreme": SKILL_SRC})
     found = childrun.assert_train_only(d, CORPUS, split)
     assert_scratch_contents(d, persona, split)
     return d, found
 
 
 def assert_scratch_contents(d, persona, split):
-    """Only .claude/settings.json, .claude/skills/moreme/**, and the persona's
-    train files under my-writing/."""
-    allowed_writing = set(Path(f).name for f in train_docs(split, persona))
+    """Only .claude/settings.json and .claude/skills/moreme/**."""
     for f in Path(d).rglob("*"):
         if not f.is_file():
             continue
         rel = f.relative_to(d).as_posix()
         if rel == ".claude/settings.json" or rel.startswith(".claude/skills/moreme/"):
             continue
-        if rel.startswith("my-writing/") and f.name in allowed_writing:
-            continue
         raise childrun.ScratchError("unexpected file in scratch project: %s" % rel)
 
 
-def interviewee_brief(persona, scratch):
+# ------------------------------------------------- verbatim passages (AMEND-003)
+
+PASSAGE_MAX_WORDS = 80
+SENTENCE_END = re.compile(r"(?<=[.!?])[\"')\]]*\s+")
+USE_RE = re.compile(r"^\s*USE:\s*(.+?)\s*$", re.M)
+
+
+def passage_spans(text, max_words=PASSAGE_MAX_WORDS):
+    """(start, end) character spans of passages: whole paragraphs, or runs of
+    whole sentences when a paragraph is longer than max_words. Spans never
+    cut inside a sentence."""
+    spans = []
+    for m in re.finditer(r"[^\n]+(?:\n(?!\s*\n)[^\n]+)*", text):
+        p_start, para = m.start(), m.group(0)
+        if not para.strip():
+            continue
+        if len(para.split()) <= max_words:
+            spans.append((p_start, m.end()))
+            continue
+        sents = []
+        pos = 0
+        for s in SENTENCE_END.finditer(para):
+            sents.append((pos, s.start() + len(s.group(0).rstrip())))
+            pos = s.end()
+        if pos < len(para):
+            sents.append((pos, len(para)))
+        cur_start = None
+        cur_words = 0
+        for a, b in sents:
+            w = len(para[a:b].split())
+            if cur_start is not None and cur_words + w > max_words:
+                spans.append((p_start + cur_start, p_start + prev_end))
+                cur_start, cur_words = None, 0
+            if cur_start is None:
+                cur_start = a
+            cur_words += w
+            prev_end = b
+        if cur_start is not None:
+            spans.append((p_start + cur_start, p_start + prev_end))
+    return [(a, b) for a, b in spans if text[a:b].strip()]
+
+
+def author_words(persona):
+    """Words of the real writer's name, from the persona's PROVENANCE author line."""
+    text = (CORPUS / "PROVENANCE.md").read_text(encoding="utf-8")
+    sec = text.split("## " + persona + "\n", 1)
+    if len(sec) < 2:
+        return []
+    m = re.search(r"^- Author:\s*([^,\n]+)", sec[1], re.M)
+    return [w for w in re.findall(r"[A-Za-z]{3,}", m.group(1))] if m else []
+
+
+def names_author(text, words):
+    """True if a passage names the real writer. 'Mr. <surname>' (another
+    person, such as a husband) does not count."""
+    for w in words:
+        for m in re.finditer(r"\b%s\b" % re.escape(w), text):
+            if not text[max(0, m.start() - 4):m.start()].endswith("Mr. "):
+                return True
+    return False
+
+
+def passage_catalog(persona, split=None):
+    """Numbered verbatim passages from the persona's give_files, which must be
+    train-split documents, leaving out any passage that names the real writer.
+    Each item: id, file (corpus path), start, end, words, text."""
+    split = split or load_split()
+    avoid = author_words(persona)
+    train = dict((Path(f).name, f) for f in train_docs(split, persona))
+    out = []
+    for rel in PERSONAS[persona]["give_files"]:
+        name = Path(rel).name
+        if name not in train:
+            raise childrun.ScratchError("passage source is not a train document: %s" % rel)
+        text = (CORPUS / train[name]).read_text(encoding="utf-8")
+        for a, b in passage_spans(text):
+            if names_author(text[a:b], avoid):
+                continue
+            out.append({"id": "p%d" % (len(out) + 1), "file": train[name], "start": a, "end": b,
+                        "words": len(text[a:b].split()), "text": text[a:b]})
+    return out
+
+
+def resolve_answer(reply, catalog, used=()):
+    """Turn an interviewee reply into the text sent to MoreMe.
+
+    A reply with a line `USE: p3, p7` becomes those passages, verbatim, joined
+    by a blank line; returns (text, [provenance], None). A reply without a USE
+    line is an in-role answer; returns (reply, None, None). Unknown or reused
+    ids return (None, None, error)."""
+    m = USE_RE.search(reply or "")
+    if not m:
+        return (reply or "").strip(), None, None
+    ids = re.findall(r"p\d+", m.group(1))
+    by_id = dict((c["id"], c) for c in catalog)
+    if not ids:
+        return None, None, "USE line names no passage id"
+    bad = [i for i in ids if i not in by_id]
+    if bad:
+        return None, None, "unknown passage ids: %s" % ", ".join(bad)
+    again = [i for i in ids if i in set(used)]
+    if again:
+        return None, None, "passages already used: %s" % ", ".join(again)
+    chosen = [by_id[i] for i in ids]
+    prov = [dict((k, c[k]) for k in ("id", "file", "start", "end", "words")) for c in chosen]
+    return "\n\n".join(c["text"].strip() for c in chosen), prov, None
+
+
+SAMPLE_METHOD = ("Answers to MoreMe's writing prompts are verbatim passages from those texts, picked by the "
+                 "simulated interviewee to fit each prompt (whole paragraphs or whole sentences, never reworded); "
+                 "answers to interview questions and other replies were written in role by the agent.")
+
+
+def interviewee_brief(persona, scratch=None, catalog=None):
     p = PERSONAS[persona]
-    excerpts = []
-    for rel in p["give_files"]:
-        text = (Path(scratch) / rel).read_text(encoding="utf-8")
-        excerpts.append("From %s:\n%s" % (rel, first_words(text, p["excerpt_words"])))
+    catalog = catalog if catalog is not None else passage_catalog(persona)
+    listing = "\n\n".join("[%s] (%d words)\n%s" % (c["id"], c["words"], c["text"].strip()) for c in catalog)
     return (
         "You are role-playing a person who is trying a tool called MoreMe inside Claude Code. MoreMe will "
-        "interview you and build a writing-voice skill from your writing. Stay in character the whole time.\n\n"
+        "interview you, ask you to write a few short things, and build a writing-voice skill from your writing. "
+        "Stay in character the whole time.\n\n"
         "Who you are:\n" + p["who"] + "\n\n"
-        "Your own writing (excerpts, so you know how you sound):\n\n" + "\n\n".join(excerpts) + "\n\n"
+        "Your own writing, as numbered passages. These are the only things you ever write for MoreMe:\n\n"
+        + listing + "\n\n"
         "Rules for your replies:\n"
         "- Reply with only the words this person would type into the chat. No preamble, no quotes, no stage "
         "directions, no Markdown.\n"
         "- Answer interview questions briefly and in character, in one to three sentences, in your own voice.\n"
         + personas.name_rule(persona) + "\n"
-        "- When MoreMe asks for things you wrote, do not paste text. Give these file paths, exactly: "
-        + ", ".join(p["give_files"]) + "\n"
+        "- When MoreMe asks you to write something (a story, a reply, an explanation, an opinion, a few lines "
+        "about anything), do not write it yourself. Reply with exactly one line: USE: followed by the ids of "
+        "the one or two passages that fit the request best, for example USE: p4, p9. Pick passages you have not "
+        "used yet. Prefer one passage; add a second only if the first is short.\n"
         "- When MoreMe asks for a short message to use for the test, give this task, exactly: " + p["task"] + "\n"
         "- When MoreMe shows Draft A and Draft B and asks which sounds more like you, reply with only the "
         "letter A or B, for the draft closer to your own writing.\n"
@@ -166,17 +280,23 @@ def interviewee_brief(persona, scratch):
         "your own voice, in one or two sentences: usually that it sounds like you, or one small correction "
         "(for example that you are chattier in letters than the numbers suggest).\n"
         "- If MoreMe asks whether to replace an existing my-voice skill, reply: Yes.\n"
+        "- If MoreMe asks whether you want to stop early or keep writing, keep writing.\n"
         "- If the message asks you nothing, reply: OK, go ahead.\n"
         "- Never type a slash command, never ask to skip a step, never mention that you are role-playing."
     )
 
 
-def interviewee_prompt(brief, history, last_assistant):
+def interviewee_prompt(brief, history, last_assistant, used=(), correction=None):
     convo = []
     for who, text in history:
         convo.append("%s: %s" % ("You" if who == "user" else "MoreMe (Claude)", text))
+    extra = ""
+    if used:
+        extra += "\n\nPassages you already used: %s." % ", ".join(used)
+    if correction:
+        extra += "\n\nYour last reply could not be used (%s). Reply again following the rules." % correction
     return (brief + "\n\nConversation so far:\n" + "\n\n".join(convo) + "\n\nMoreMe (Claude) just wrote:\n<<<\n"
-            + last_assistant + "\n>>>\n\nWrite your reply now.")
+            + last_assistant + "\n>>>" + extra + "\n\nWrite your reply now.")
 
 
 def evidence_run_dir(run_id):
@@ -287,7 +407,10 @@ def cmd_run(args):
     ledger = childrun.Ledger(LEDGER)
     cap = ledger.count() + MAX_CALLS
     sid = str(uuid.uuid4())
-    brief = interviewee_brief(persona, scratch)
+    catalog = passage_catalog(persona, split)
+    brief = interviewee_brief(persona, scratch, catalog)
+    used_ids = []
+    prov_path = ev / "provenance.jsonl"
     artifacts.write_committed(run_dir / "interviewee-brief.txt", license_header(persona) + "\n\n" + brief)
     manifest = {
         "run_id": args.run_id, "persona": persona, "started": now_iso(), "cli_version": childrun.claude_version(),
@@ -299,6 +422,8 @@ def cmd_run(args):
         "env_set_after_scrub": childrun.ENV_SET_AFTER_SCRUB, "scratch_settings": childrun.scratch_settings(),
         "license_header": license_header(persona), "banner_source": PERSONAS[persona]["banner_source"],
         "persona_first_name": PERSONAS[persona]["first_name"], "evidence_dir": str(ev),
+        "sample_method": SAMPLE_METHOD, "passage_catalog_size": len(catalog),
+        "passage_sources": sorted(set(c["file"] for c in catalog)),
         "turns": [], "status": "running",
     }
     spill_before = childrun.spill_names()
@@ -333,16 +458,28 @@ def cmd_run(args):
             if i == args.max_turns:
                 break
             t1 = time.time()
-            iv = childrun.run_claude("interviewee-t%02d" % (i + 1), interviewee_flags(), iv_dir,
-                                     interviewee_prompt(brief, history[:-1], text), ledger, logs, [],
-                                     allowed_skills=[], max_calls=cap, timeout=IV_TIMEOUT,
-                                     extra={"run_id": args.run_id, "turn": i + 1, "role": "interviewee"})
-            answer = iv["text"].strip()
-            manifest["turns"].append({"turn": i + 1, "role": "interviewee", "label": "interviewee-t%02d" % (i + 1),
-                                      "answer": answer, "latency_s": iv["row"]["latency_s"], "wall_start": t1,
-                                      "invalid": iv["invalid"]})
+            correction = None
+            answer = prov = None
+            for attempt in (0, 1):
+                label = "interviewee-t%02d" % (i + 1) + ("" if attempt == 0 else "-retry")
+                iv = childrun.run_claude(label, interviewee_flags(), iv_dir,
+                                         interviewee_prompt(brief, history[:-1], text, used_ids, correction),
+                                         ledger, logs, [], allowed_skills=[], max_calls=cap, timeout=IV_TIMEOUT,
+                                         extra={"run_id": args.run_id, "turn": i + 1, "role": "interviewee"})
+                answer, prov, correction = resolve_answer(iv["text"], catalog, used_ids)
+                if correction is None or iv["invalid"]:
+                    break
+            if prov:
+                used_ids += [x["id"] for x in prov]
+                with open(str(prov_path), "a", encoding="utf-8", newline="\n") as f:
+                    f.write(json.dumps({"turn": i + 1, "passages": prov}) + "\n")
+            manifest["turns"].append({"turn": i + 1, "role": "interviewee", "label": label,
+                                      "answer": answer, "answer_kind": "passages" if prov else "in_role",
+                                      "passage_ids": [x["id"] for x in prov] if prov else [],
+                                      "latency_s": iv["row"]["latency_s"], "wall_start": t1,
+                                      "invalid": iv["invalid"] + (["unusable:" + correction] if correction else [])})
             write_manifest(run_dir, manifest)
-            if iv["invalid"] or not answer:
+            if iv["invalid"] or correction or not answer:
                 status = "interviewee_invalid"
                 break
             prompt = answer
@@ -633,7 +770,8 @@ def render(run_dir, logs_dir=None):
         "# MoreMe end-to-end run: %s (headless)" % m["run_id"],
         "",
         "> Interviewee simulated by an AI agent; writing samples are %s. The A/B pick below is an AI agent's "
-        "choice and is not evidence of quality." % m["banner_source"],
+        "choice and is not evidence of quality." % m["banner_source"]
+        + ((" " + m["sample_method"]) if m.get("sample_method") else ""),
         "",
         "Every turn below is verbatim: user messages, assistant text, tool calls, and tool output, rendered from "
         "the stream-json logs (kept outside the repo). This is a headless Claude Code run (`claude -p`), not a "
@@ -743,7 +881,10 @@ the user replied to a later message. Also find the Step 2 word count shown in ch
 (the report.txt content, not only a Read of it) before any Step 4 tool call. A stage whose opening line, done line, or
 required result is missing or late fails its R item even if run-log.md says passed. Under R9, the Step 3 check-in
 ("Does this sound like you? ...") and the resume question after the first answer (only when run-log.md already
-existed) are expected questions.
+existed) are expected questions. Step 2 is a guided writing conversation (see "Guided writing sample" in the rubric):
+each writing prompt that follows from the previous answer, until the user's words reach about 300, is an expected
+question; a request to paste or point to files is unnecessary. The simulated user's writing answers are verbatim
+passages of real text; do not judge how well they fit the prompt.
 
 Judge every rubric item R1 to R10. For R9, list every question the assistant asked the user and classify each as
 expected or unnecessary with a one-line reason. For R10(b), compare the ab-present tool output with the assistant's
@@ -815,7 +956,7 @@ def main(argv=None):
     r = sub.add_parser("run")
     r.add_argument("--persona", default="era-c")
     r.add_argument("--run-id", required=True)
-    r.add_argument("--max-turns", type=int, default=16)
+    r.add_argument("--max-turns", type=int, default=26)
     for name in ("render", "review"):
         x = sub.add_parser(name)
         x.add_argument("--run-id", required=True)

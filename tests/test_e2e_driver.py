@@ -26,13 +26,12 @@ def temp(tmp_path, monkeypatch):
     return tmp_path
 
 
-def test_scratch_has_only_skill_settings_and_train_files(temp):
+def test_scratch_has_only_skill_and_settings(temp):
+    """AMEND-003: MoreMe never reads the user's files, so none are copied in."""
     d, found = drv.build_scratch("t1", "era-c", SPLIT)
     assert d == temp / "moreme-e2e" / "t1"
-    train = sorted(x["file"] for x in SPLIT["personas"]["era-c"]["documents"] if x["split"] == "train")
-    assert found == train
-    names = sorted(p.name for p in (d / "my-writing").iterdir())
-    assert names == sorted(Path(f).name for f in train)
+    assert found == []
+    assert not (d / "my-writing").exists()
     assert sorted(p.name for p in (d / ".claude" / "skills").iterdir()) == ["moreme"]
     assert (d / ".claude" / "skills" / "moreme" / "analyze.py").exists()
 
@@ -80,8 +79,9 @@ def _shingles(text, n=12):
 def test_interviewee_brief_uses_train_text_only_and_no_author_name(temp):
     d, _ = drv.build_scratch("t1", "era-c", SPLIT)
     brief = drv.interviewee_brief("era-c", d)
-    for rel in drv.PERSONAS["era-c"]["give_files"]:
-        assert rel in brief
+    for c in drv.passage_catalog("era-c"):
+        assert "[%s] (%d words)" % (c["id"], c["words"]) in brief
+    assert "USE:" in brief and "my-writing/" not in brief
     assert "Project folder." in brief
     assert drv.PERSONAS["era-c"]["task"] in brief
     for name in ("Stewart", "Elinore", "Pruitt", "Gutenberg"):
@@ -362,3 +362,5 @@ def test_rubric_has_chat_visibility_note():
     assert "next assistant message that asks the user to act" in text
     assert "asks the user to do\nsomething" in drv.REVIEW_PROMPT or "asks the user to do something" in drv.REVIEW_PROMPT
     assert "check-in" in text and "check-in" in drv.REVIEW_PROMPT
+    assert "Guided writing sample" in text and "Guided writing sample" in drv.REVIEW_PROMPT
+    assert "about 300" in text and "Stop early" in text and "No paste step" in text
