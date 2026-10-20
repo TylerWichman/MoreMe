@@ -37,7 +37,7 @@ def _steps(body):
     return {n: _section(body, "## Step %d of 6:" % n) for n in range(1, 7)}
 
 
-# -- Defect 1: every step is visible in chat ------------------------------------
+# -- Step visibility: turn-ending messages carry the step lines (T-010, T-012, T-013) ----
 
 
 def test_visibility_section_comes_before_the_steps():
@@ -46,34 +46,37 @@ def test_visibility_section_comes_before_the_steps():
     assert body.index("## Show every step in chat") < body.index("## Step 1 of 6:")
 
 
-def test_visibility_rules_are_explicit():
+def test_visibility_rules_use_turn_ending_messages():
     sec = _flat(_section(_body(), "## Show every step in chat"))
-    assert "The user sees only your chat text." in sec
-    assert "Before every other step's first tool call, write its opening line" in sec
-    assert "After the step's last tool call" in sec
-    assert "write `Step N of 6 done: <Name>.` as chat text, before any tool call of the next step" in sec
+    assert "The user sees only your chat text" in sec
+    assert "Put what the user must see in the message that ends your turn" in sec
+    assert ("appear in chat no later than the next message that asks the user to act") in sec
+    where = sec[sec.index("**Where they land at the latest.**"):]
+    for phrase in ("Step 1: opening in the first message, done line in the message asking for samples.",
+                   "Steps 2 and 3: in the Step 3 report message, which ends with the check-in question.",
+                   "Step 4: in the message asking for the A/B task.",
+                   "Step 5: in or before the install question.",
+                   "Step 6: in the closing message."):
+        assert phrase in where, phrase
     assert "Step 3's full report go in your chat text" in sec
-    assert "This holds inside one long turn." in sec
-    assert "Steps 2, 3, and 4" in sec
-    assert "Never run a step's tool calls silently" in sec
 
 
 def test_visibility_adds_no_questions():
     sec = _section(_body(), "## Show every step in chat")
     assert "?" not in sec
-    assert "not questions" in sec and "without waiting for a reply" in sec
+    assert "not extra questions" in sec and "Ask only the questions this file lists." in sec
 
 
-def test_each_step_has_opening_line_and_ordered_exit():
+def test_each_step_has_opening_line_and_logged_exit():
     steps = _steps(_body())
     for n, name in enumerate(STAGES, start=1):
         sec = _flat(steps[n])
         first_item = sec[sec.index("1. "):][:400]
-        assert "Say" in first_item or "first reply" in first_item, n
+        assert "Say" in first_item or "say:" in first_item or "First reply" in first_item, n
         exit_line = sec[sec.index("**Exit check:**"):]
-        log = exit_line.index("Log it, for example `stage=%d " % n)
-        done = exit_line.index("Then write `Step %d of 6 done: %s.` as chat text." % (n, name))
-        assert log < done, n
+        assert "stage=%d name=" % n in exit_line, n
+        done = "`Step %d of 6 done: %s.`" % (n, name)
+        assert done in sec, n
 
 
 def test_stage_exit_order_documented():
@@ -83,55 +86,80 @@ def test_stage_exit_order_documented():
         "Then a chat line, exactly: `Step N of 6 done: <Name>.`")
 
 
-def test_step2_word_count_and_step3_report_shown_in_chat():
-    steps = _steps(_body())
-    s2 = _flat(steps[2])
+def test_step2_word_count_shown_in_chat():
+    s2 = _flat(_steps(_body())[2])
     assert "write the running count as chat text" in s2
-    s3 = _flat(steps[3])
-    assert "the full text of `report.txt`, copied word for word" in s3
-    assert "the user cannot see what Read returns" in s3
-    assert "Tell the user in chat" in _flat(steps[4])
 
 
-# -- T-012: Step 1 message before any tool call; Step 3 report as an ordered sub-step --
-
-
-def test_step1_first_message_before_any_tool_call():
-    body = _flat(_body())
+def test_step1_first_turn_uses_no_tools():
     s1 = _flat(_steps(_body())[1])
-    item1 = s1[s1.index("1. "):s1.index("2. Write `moreme-output/.gitignore`")]
-    assert item1.startswith("1. **Before any tool call** (even the Glob for an earlier run), your first reply "
-                            "after this skill loads starts with this message")
+    item1 = s1[s1.index("1. "):s1.index("2. **After the user's first answer:**")]
+    assert item1.startswith("1. **First reply: no tools at all.**")
     assert "about 10 minutes" in item1
+    intro = item1.index("MoreMe asks five short questions")
+    perm_ref = item1.index("then the permissions sentence below, word for word")
+    q1 = item1.index("then question 1 (item 3). End your turn there.")
     perm = item1.index("Claude Code may ask your permission a few times")
-    assert item1.index("Then the permissions sentence below, word for word.") < item1.index(
-        "Only then Glob for an earlier run") < perm
-    # The visibility rules name Step 1 explicitly.
-    vis = body[body.index("## Show every step in chat"):body.index("## How to talk to the user")]
-    assert "For Step 1 that is the whole first message, before any tool call." in vis
+    assert intro < perm_ref < q1 < perm
+    # No tool instruction before question 1.
+    before_q1 = item1[:q1]
+    for tool_word in ("Glob", "Write", "Read", "Run ", "PREFIX", ".gitignore"):
+        assert tool_word not in before_q1, tool_word
 
 
-def test_earlier_run_glob_comes_after_first_message():
+def test_glob_and_gitignore_after_first_answer():
     body = _flat(_body())
     rules = body[body.index("## Ground rules"):body.index("### Stage exit lines")]
-    assert ("**Earlier run:** right after Step 1's first message (never before it), Glob for "
+    assert ("**Earlier run:** right after the user's first answer (never before it), Glob for "
             "`moreme-output/run-log.md`.") in rules
-    assert "before Step 1, Glob" not in body
-    assert "Starting point" not in body
+    s1 = _flat(_steps(_body())[1])
+    item2 = s1[s1.index("2. **After the user's first answer:**"):s1.index("3. Ask these five questions")]
+    assert item2.index("Glob for an earlier run") < item2.index("Write `moreme-output/.gitignore`") < item2.index(
+        "Then ask question 2.")
+    ts = _flat((REPO / "moreme" / "reference" / "troubleshooting.md").read_text(encoding="utf-8"))
+    assert "Right after the user's first interview answer (the first reply uses no tools)" in ts
+    assert "At the start, Glob" not in ts
 
 
-def test_step3_report_is_ordered_substep_with_fixed_shape():
+def test_step3_report_message_ends_turn_with_checkin():
+    body = _flat(_body())
     s3 = _flat(_steps(_body())[3])
-    read = s3.index("5. Read `moreme-output/report.txt`. Make no other tool call until item 6 is done.")
-    show = s3.index("6. **Show the report.** Your next chat text is, in this order:")
+    read = s3.index("5. Read `moreme-output/report.txt`. Then log Step 3 in `run-log.md`")
+    msg = s3.index("6. **Report message (ends your turn),** in this order:")
+    prev = s3.index("- `Step 2 of 6 done: Sample.` and this step's opening line, if not written yet")
     lead = s3.index("- the line: Here is what MoreMe measured in your writing:")
     full = s3.index("- the full text of `report.txt`, copied word for word")
     tie = s3.index("- one or two plain sentences tying it to their interview answers")
-    after = s3.index("Only after this, log the step and write the done line.")
-    exit_check = s3.index("**Exit check:** the item 6 report message is in chat")
-    assert read < show < lead < full < tie < after < exit_check
-    shape = s3[show:after]
-    assert "?" not in shape  # no new question to the user
+    done = s3.index("- `Step 3 of 6 done: Analysis.`")
+    ask = s3.index("- the question: Does this sound like you? Reply yes, or tell me what's off.")
+    stop = s3.index("Then stop and wait for the reply. No Step 4 tool call before it.")
+    save = s3.index("7. **Save the answer.**")
+    assert read < msg < prev < lead < full < tie < done < ask < stop < save
+    # The check-in sits before Step 4 starts.
+    assert body.index("Does this sound like you?") < body.index("## Step 4 of 6:")
+    assert "the user cannot see what Read returns" in s3
+
+
+def test_checkin_answer_flows_to_voice_notes():
+    s3 = _flat(_steps(_body())[3])
+    assert ("Add it to the end of `moreme-output/interview.md` under `## Check-in after the report`, "
+            "word for word. Accept it as given, with no follow-up. Step 4 uses it.") in s3
+    s4 = _flat(_steps(_body())[4])
+    assert ("If the Step 3 check-in says something is off, reflect it in How I sound, Do, or Don't; "
+            "never change the measured numbers.") in s4
+    guide = _flat(NOTES_GUIDE.read_text(encoding="utf-8"))
+    assert "Read the `## Check-in after the report` answer in `interview.md`." in guide
+    ig = _flat((REPO / "moreme" / "reference" / "interview-guide.md").read_text(encoding="utf-8"))
+    assert "## Check-in after the report" in ig
+
+
+def test_step4_lines_land_in_ab_task_message():
+    s4 = _flat(_steps(_body())[4])
+    assert "at the latest at the top of the A/B task message" in s4
+    assert "In the message that asks for the A/B task (Step 5), tell the user" in s4
+    s5 = _flat(_steps(_body())[5])
+    assert s5.index("1. In the same message as the Step 4 done line and summary, say:") < s5.index(
+        "Here are two drafts of the same message.")
 
 
 # -- Defect 2: never infer the user's name ----------------------------------------

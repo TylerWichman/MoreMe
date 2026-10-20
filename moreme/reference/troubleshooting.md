@@ -58,11 +58,11 @@ Stop at once. Say what is saved, for example: "Your answers and samples are save
 
 ## Picking up an earlier run
 
-At the start, Glob for `moreme-output/run-log.md`. If it exists:
+Right after the user's first interview answer (the first reply uses no tools), Glob for `moreme-output/run-log.md`. If it exists:
 
 1. Read it. Find the last step with `status=passed` (or `degraded`).
 2. Tell the user in one sentence which steps are done, and ask once: "Pick up at step N, or start over?"
 3. **Pick up:** start at the first step that has not passed. Read `interview.md`, the `samples/` files, and `report.txt` as needed. Python discovery runs again if Step 3 or later is next.
-4. **Start over:** overwrite `interview.md`, the sample files, and the other files as each step runs (Write replaces them). Start the new samples at `sample-01.txt` and list only the new files in the `profile` command. Add new lines to `run-log.md` below the old ones. If `ab-result.json` exists, the A/B uses a new folder (see `blind-ab.md`).
+4. **Start over:** keep the answer they just gave to question 1 and go on with question 2. Then overwrite `interview.md`, the sample files, and the other files as each step runs (Write replaces them). Start the new samples at `sample-01.txt` and list only the new files in the `profile` command. Add new lines to `run-log.md` below the old ones. If `ab-result.json` exists, the A/B uses a new folder (see `blind-ab.md`).
 
 Never delete the user's files with a command.

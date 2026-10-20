@@ -46,7 +46,7 @@ Never install Python, open the Store, change settings, or try other commands. If
 
 ## No-Python estimate
 
-When no Python works, Claude reads the samples and writes `moreme-output/report.txt` itself:
+When no Python works, say so in one sentence, for example: "I couldn't find Python on this computer, so I'll describe your style by reading your samples instead. These notes are estimated by Claude, not measured." Then read the samples and write `moreme-output/report.txt` yourself:
 
 ```
 Estimated by Claude, not measured
@@ -59,4 +59,4 @@ Tone: <one or two sentences>
 Other habits: <greetings, sign-offs, emoji, capital letters>
 ```
 
-Every line is a description, not a measurement. Do not write numbers with decimals. The run log gets `status=degraded reason=no_python`.
+Every line is a description, not a measurement. Do not write numbers with decimals. The run log gets `status=degraded reason=no_python`. Show this report in the Step 3 report message with the same check-in question.

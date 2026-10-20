@@ -53,8 +53,16 @@ Write it once, after the last answer. Copy the user's words exactly, typos inclu
 <question asked>: <answer>   (or "None")
 ```
 
+After the Step 3 report, add the user's reply to the check-in question ("Does this sound like you? Reply yes, or tell me what's off.") at the end of the file, word for word:
+
+```
+## Check-in after the report
+<answer>
+```
+
 ## Turning answers into notes (used in Step 4)
 
 - Question 4 words and short phrases ("synergy", "I hope this finds you well") go under `## Avoid words`, one per line. Habits ("too many bullet points") become Don't lines.
 - Question 5 habits become concrete rules: "Sign off with just my first name", "No emoji in work email".
+- The check-in answer: if the user says part of the report is off ("I use more questions than that"), put the correction into How I sound, Do, or Don't. It never changes the measured numbers, which come from analyze.py. A plain "yes" changes nothing.
 - Question 3 words describe a goal, not a measurement. Pair each with something checkable when you can, for example "direct" becomes "Put the request in the first sentence".

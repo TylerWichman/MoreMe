@@ -10,13 +10,13 @@ MoreMe walks the user through six steps in about 10 minutes and leaves them with
 
 ## Show every step in chat (required)
 
-The user sees only your chat text. Tool calls and their output are hidden or collapsed, so a step without chat text looks like minutes of silence. For every step:
+The user sees only your chat text; tool calls and their output are hidden or collapsed. Put what the user must see in the message that ends your turn (the one that asks them to act):
 
-1. **Opening line first.** For Step 1 that is the whole first message, before any tool call. Before every other step's first tool call, write its opening line (the "Say" line at the top of each step: what happens next and about how long it takes) as chat text, then make the tool call in the same reply.
-2. **Results in chat.** Step 2's word count and Step 3's full report go in your chat text. Reading a file does not show it to the user.
-3. **Done line last.** After the step's last tool call (its `run-log.md` line), write `Step N of 6 done: <Name>.` as chat text, before any tool call of the next step.
+1. **Step lines.** Each step's opening line (the "Say" line at the top of each step) and its done line `Step N of 6 done: <Name>.` appear in chat no later than the next message that asks the user to act. Earlier, before the step's tool calls, is better.
+2. **Where they land at the latest.** Step 1: opening in the first message, done line in the message asking for samples. Steps 2 and 3: in the Step 3 report message, which ends with the check-in question. Step 4: in the message asking for the A/B task. Step 5: in or before the install question. Step 6: in the closing message.
+3. **Results in chat.** Step 2's word count and Step 3's full report go in your chat text. Reading a file does not show it to the user.
 
-This holds inside one long turn. After the user gives their samples, Steps 2, 3, and 4 usually run back to back. Each still gets its own opening line, results, and done line, in order, between its tool calls. Never run a step's tool calls silently and explain at the end. These lines are updates, not questions: keep going without waiting for a reply.
+These lines are updates, not extra questions. Ask only the questions this file lists.
 
 ## How to talk to the user
 
@@ -31,16 +31,16 @@ This holds inside one long turn. After the user gives their samples, Steps 2, 3,
 - **Output folder:** always `moreme-output/` in the current project folder. Do not ask where to save. All files below live in it.
 - **Working folder:** run every command from the project folder. Never use `cd`. Always pass paths that start with `moreme-output/`.
 - **Saving files:** use the Write tool for new files and Write or Edit for changes. Never use Bash to write, copy, move, or delete files.
-- **Skill files:** `my-voice/SKILL.md` and `my-voice.zip` are made only by `analyze.py build-skill`. Never write, edit, or zip them yourself (the one exception is the no-Python path in Step 4).
+- **Skill files:** `my-voice/SKILL.md` and `my-voice.zip` are made only by `analyze.py build-skill`. Never write, edit, or zip them yourself (except the no-Python path in Step 4).
 - **Checking whether a file exists:** use Glob, not Read, so a missing file is not an error.
 - **The user's name:** never take it from a username, a file or folder path, the environment, or other system details. Use a name only if the user gave it in the interview or this chat, or signed their samples with it. Otherwise sign drafts with their usual sign-off and no name, or leave them unsigned.
-- **Earlier run:** right after Step 1's first message (never before it), Glob for `moreme-output/run-log.md`. If it exists, read it and follow "Picking up an earlier run" in `reference/troubleshooting.md`. If not, go on with Step 1.
+- **Earlier run:** right after the user's first answer (never before it), Glob for `moreme-output/run-log.md`. If it exists, read it and follow "Picking up an earlier run" in `reference/troubleshooting.md`. If not, go on with Step 1.
 
 ### Stage exit lines
 
 Every step ends with two things, in this order:
 
-1. A new last line in `moreme-output/run-log.md` (Write the file again with all earlier lines plus the new one, or use Edit).
+1. A new last line in `moreme-output/run-log.md` (Write it again with all earlier lines, or use Edit).
 2. Then a chat line, exactly: `Step N of 6 done: <Name>.` The names are Interview, Sample, Analysis, Generate, Blind A/B, Install.
 
 The run-log line:
@@ -67,7 +67,7 @@ PREFIX is the Python command found in Step 3 plus `SKILL_DIR/analyze.py`, for ex
 
 ## Step 1 of 6: Interview (about 3 minutes)
 
-1. **Before any tool call** (even the Glob for an earlier run), your first reply after this skill loads starts with this message, in your own plain words: MoreMe asks five short questions, reads a few things the user wrote, measures their style, and makes a skill called my-voice. It takes about 10 minutes. Then the permissions sentence below, word for word. Only then Glob for an earlier run (Ground rules), do item 2, and ask question 1.
+1. **First reply: no tools at all.** It is one message, in this order: in your own plain words, MoreMe asks five short questions, reads a few things the user wrote, measures their style, and makes a skill called my-voice, in about 10 minutes; then the permissions sentence below, word for word; then question 1 (item 3). End your turn there.
 
    In Claude Code:
 
@@ -77,7 +77,7 @@ PREFIX is the Python command found in Step 3 plus `SKILL_DIR/analyze.py`, for ex
 
    > Claude will run a small measuring script that came with MoreMe. It runs in Claude's sandbox, not on your computer. Your samples go there under Anthropic's terms.
 
-2. Write `moreme-output/.gitignore` with the single line `*` (keeps samples out of git), before saving anything else.
+2. **After the user's first answer:** Glob for an earlier run (Ground rules). Then Write `moreme-output/.gitignore` with the single line `*` (keeps samples out of git), before saving anything else. Then ask question 2.
 3. Ask these five questions, one per message, in this order. Keep the wording close to this:
    1. "What do you mostly use AI to help you write? For example emails, posts, or cover letters."
    2. "Who usually reads it?"
@@ -96,7 +96,7 @@ PREFIX is the Python command found in Step 3 plus `SKILL_DIR/analyze.py`, for ex
 3. After saving each paste (or all the files the user named), write the running count as chat text: "That's 2 pieces and about 450 words so far." Count words yourself; an estimate is fine here.
 4. If a piece is clearly not the user's own writing (a news article, a form letter), ask once whether they wrote it. If they say yes, keep it.
 5. **Floor: 3 pieces and 300 words in total.**
-   - Below the floor: say how many more words or pieces are needed and ask once more, for example: "That's 210 words so far. MoreMe needs at least 300, and 1,000 or more gives steadier numbers. Can you paste one or two more?"
+   - Below the floor: say how many more words or pieces are needed and ask once more, for example: "That's 210 words so far. MoreMe needs at least 300. Can you paste one or two more?"
    - Still below after that: offer "continue with rough numbers". If they agree, continue and log `status=degraded reason=below_floor`. If they would rather stop, see "If the user wants to stop".
    - Between 300 and 1,000 words: continue, and say once that the numbers will be rough.
 
@@ -110,8 +110,8 @@ PREFIX is the Python command found in Step 3 plus `SKILL_DIR/analyze.py`, for ex
    2. `py -3 --version`
    3. `python3 --version`, only if both of the others failed.
 
-   A probe works only if its output shows `Python 3.8` or higher (for example `Python 3.11.9`). Empty output, an error, a message about the Microsoft Store, or Python 2 or 3.7 and older all count as failed. Do not install anything, do not open the Store, and do not try any other command.
-3. **Confirm.** Run `<probe command without --version> SKILL_DIR/analyze.py --version`, for example `python .claude/skills/moreme/analyze.py --version`. It must exit 0 and print JSON with `"schema_version": "1"`. If it fails, go back and try the next probe. This command, minus `--version`, is PREFIX.
+   A probe works only if its output shows `Python 3.8` or higher. Empty output, an error, a message about the Microsoft Store, or Python 2 or 3.7 and older all count as failed. Do not install anything or try any other command.
+3. **Confirm.** Run `<probe command without --version> SKILL_DIR/analyze.py --version`. It must exit 0 and print JSON with `"schema_version": "1"`. If it fails, go back and try the next probe. This command, minus `--version`, is PREFIX.
 4. **Measure.** List every sample file by name:
 
    ```
@@ -119,19 +119,23 @@ PREFIX is the Python command found in Step 3 plus `SKILL_DIR/analyze.py`, for ex
    PREFIX report moreme-output/profile.json --out moreme-output/report.txt
    ```
 
-5. Read `moreme-output/report.txt`. Make no other tool call until item 6 is done.
-6. **Show the report.** Your next chat text is, in this order:
+5. Read `moreme-output/report.txt`. Then log Step 3 in `run-log.md` (exit check below).
+6. **Report message (ends your turn),** in this order:
+   - `Step 2 of 6 done: Sample.` and this step's opening line, if not written yet
    - the line: Here is what MoreMe measured in your writing:
    - the full text of `report.txt`, copied word for word (the user cannot see what Read returns)
    - one or two plain sentences tying it to their interview answers (if the report says there was very little text, say again that the numbers are rough)
+   - `Step 3 of 6 done: Analysis.`
+   - the question: Does this sound like you? Reply yes, or tell me what's off.
 
-   Only after this, log the step and write the done line.
+   Then stop and wait for the reply. No Step 4 tool call before it.
+7. **Save the answer.** Add it to the end of `moreme-output/interview.md` under `## Check-in after the report`, word for word. Accept it as given, with no follow-up. Step 4 uses it.
 
-**If no probe works or the version is too old:** say it in one sentence, for example: "I couldn't find Python on this computer, so I'll describe your style by reading your samples instead. These notes are estimated by Claude, not measured." Write `moreme-output/report.txt` yourself with the heading "Estimated by Claude, not measured" (guide: `reference/samples-and-analysis.md`). Log `status=degraded reason=no_python`. Step 4 and Step 5 then use their no-Python paths.
+**If no probe works or the version is too old:** say so in one sentence and follow "No-Python estimate" in `reference/samples-and-analysis.md`: you write `report.txt` yourself, labeled estimated by Claude, not measured, and show it in the item 6 message. Log `status=degraded reason=no_python`. Steps 4 and 5 then use their no-Python paths.
 
 **If analyze.py exits 2:** it prints one line saying what is wrong (for example a file that is not text). Tell the user in plain words, fix that one thing (usually: ask them to paste that piece as text and save it again), and run the command once more. Exit 1 or a second failure: see `reference/troubleshooting.md`.
 
-**Exit check:** the item 6 report message is in chat, and `profile.json` exists, the command exited 0, and its `schema_version` is "1". Or the degraded path is labeled and shown. Log it, for example `stage=3 name=analysis status=passed check=profile_json_schema_1,words=1180 time=...`. Then write `Step 3 of 6 done: Analysis.` as chat text.
+**Exit check:** `profile.json` exists, the command exited 0, and its `schema_version` is "1" (or the degraded path is labeled). Log it before the report message, for example `stage=3 name=analysis status=passed check=profile_json_schema_1,words=1180 time=...`. The done line goes in the report message (item 6).
 
 ## Step 4 of 6: Generate (about 1 minute)
 
@@ -147,26 +151,26 @@ PREFIX is the Python command found in Step 3 plus `SKILL_DIR/analyze.py`, for ex
    ## Adjust by channel
    ```
 
-   Read `reference/voice-notes-guide.md` (counts, wording, copying excerpts exactly) before writing. Counts, in order: 3 to 5 sentences; 5 to 8 and 3 to 6 "- " lines; the pet-peeve words from question 4, one per line; 3 to 5 excerpts (`[sample-NN.txt]` on its own line, then 40 to 120 words copied exactly from it); `Email:`, `Post:`, `Cover letter:` lines of 1 to 3 sentences. No long dashes or hype words in your own text.
+   Read `reference/voice-notes-guide.md` (counts, wording, copying excerpts exactly) before writing. Counts: 3 to 5 sentences; 5 to 8 and 3 to 6 "- " lines; question 4's pet peeves, one per line; 3 to 5 excerpts (`[sample-NN.txt]`, then 40 to 120 words copied exactly); `Email:`, `Post:`, `Cover letter:` lines of 1 to 3 sentences. No long dashes or hype words in your own text. If the Step 3 check-in says something is off, reflect it in How I sound, Do, or Don't; never change the measured numbers.
 3. Run:
 
    ```
    PREFIX build-skill moreme-output/profile.json moreme-output/voice-notes.md --samples moreme-output/samples --out moreme-output
    ```
 
-4. Read the JSON it prints. `"ok": true` means it wrote `my-voice/SKILL.md` and `my-voice.zip`. If `"ok": false`, fix `voice-notes.md` using the listed errors (the guide explains each code) and run `build-skill` again. At most 3 runs in total, without asking the user. After the third failed run, show the errors in plain words and see `reference/troubleshooting.md`.
-5. Tell the user in chat, in two or three sentences, what the skill says about them (for example their typical sentence length and two Do rules). Do not paste the whole file.
+4. Read the JSON it prints. `"ok": true` means it wrote `my-voice/SKILL.md` and `my-voice.zip`. If `"ok": false`, fix `voice-notes.md` using the listed errors (codes in the guide) and run `build-skill` again. At most 3 runs in total, without asking the user. After the third failed run, show the errors in plain words and see `reference/troubleshooting.md`.
+5. In the message that asks for the A/B task (Step 5), tell the user in two or three sentences what the skill says about them (for example their typical sentence length and two Do rules). Do not paste the whole file.
 
 **No-Python path (Step 3 was degraded):** write `moreme-output/my-voice/SKILL.md` yourself from `SKILL_DIR/templates/my-voice/SKILL.md.tmpl`, as `reference/voice-notes-guide.md` describes. Tell the user there is no zip file this time. Log `status=degraded reason=no_python`.
 
-**Exit check:** `build-skill` printed `"ok": true`, and `my-voice/SKILL.md` and `my-voice.zip` exist. Log it, for example `stage=4 name=generate status=passed check=build_skill_ok,runs=1 time=...`. Then write `Step 4 of 6 done: Generate.` as chat text.
+**Exit check:** `build-skill` printed `"ok": true`, and `my-voice/SKILL.md` and `my-voice.zip` exist. Log it, for example `stage=4 name=generate status=passed check=build_skill_ok,runs=1 time=...`. Then write `Step 4 of 6 done: Generate.` as chat text, at the latest at the top of the A/B task message.
 
 ## Step 5 of 6: Blind A/B (about 2 minutes)
 
 This step shows the user two drafts of the same message, one written with my-voice and one without, and they pick the one that sounds more like them. Full details: `reference/blind-ab.md`.
 
-1. Say: "Next, a quick test. I'll write the same short message two ways, and you pick the one that sounds more like you. This takes about 2 minutes." Then ask for a short real message they need to write, and offer two or three suggestions based on their interview answers. If they name none, use the first suggestion.
-2. Write the task text, as the user gave it, to `moreme-output/ab-task.md`. (If Glob finds `moreme-output/ab-result.json` from an earlier run, use the folder `moreme-output/ab-run-2/` instead for this step's files and commands; see `reference/blind-ab.md`.)
+1. In the same message as the Step 4 done line and summary, say: "Next, a quick test. I'll write the same short message two ways, and you pick the one that sounds more like you. This takes about 2 minutes." Then ask for a short real message they need to write, and offer two or three suggestions based on their interview answers. If they name none, use the first suggestion.
+2. Write the task text, as the user gave it, to `moreme-output/ab-task.md`. (If `moreme-output/ab-result.json` already exists, use `moreme-output/ab-run-2/`; see `reference/blind-ab.md`.)
 3. The shared rule for both drafts (use the same words in both): "Write only the message itself, as plain text. No title, no notes before or after it, no Markdown. Keep it under 150 words unless the task says otherwise. Never take a name from a username, a file path, or system details. If you do not know the writer's name, sign off without one."
 4. **"Without" draft.** Start a subagent (the Task or Agent tool). Its whole prompt is the task text, a blank line, the shared rule, a blank line, and `Do not use any skills.` Nothing else: no interview answers, no samples, no voice notes. Save its reply, unchanged, to `moreme-output/draft-without.md`.
 5. **"With" draft.** Read `moreme-output/my-voice/SKILL.md` and write the same task as the user, following that file and the shared rule. Sign with a name only as "The user's name" in Ground rules allows. Save it to `moreme-output/draft-with.md`.
@@ -180,7 +184,7 @@ This step shows the user two drafts of the same message, one written with my-voi
    Never open, read, or print `ab-mapping.json`. The script keeps the labels hidden until the user picks.
 7. **Your next chat message is exactly this and nothing else:**
    - the line: Here are two drafts of the same message. One used your new voice skill and one didn't.
-   - the full `ab-present` output, reprinted word for word (Claude Code may hide command output, so the user only sees what you reprint)
+   - the full `ab-present` output, reprinted word for word (command output may be hidden, so the user only sees what you reprint)
    - the line: Which sounds more like you? Type A or B.
 
    Do not add anything about length, style, the skill, "with", or "without", in that message or before the user picks. If they reply with something other than A or B, answer only: "Type A or B."

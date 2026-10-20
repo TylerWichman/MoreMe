@@ -21,6 +21,7 @@ Six `##` headings, exactly these, in this order. Text outside them is ignored.
 - Be specific to this person. "Warm and friendly" alone is useless. "I open with the person's name and get to the point in the first sentence" is useful.
 - Do and Don't lines must be things a reader could check in a draft: "Ask at most one question per email", "Sign off with just 'Thanks, Sam'", "No bullet points in emails".
 - Names: write the user's name into a sign-off rule only if they gave it in the interview or the chat, or signed their samples with it. Never take it from a username, a folder path, or system details. Without a known name, describe the sign-off without one, for example "Sign off with just 'Thanks,'".
+- Read the `## Check-in after the report` answer in `interview.md`. If the user said something is off, reflect it in How I sound, Do, or Don't. Never change or argue with the measured numbers.
 - You may use the report's numbers in plain words ("Most of my sentences are 8 to 15 words"). Do not invent numbers.
 - Pet-peeve words go only under Avoid words, never in Don't. The skill adds its own line telling Claude to avoid that list.
 - Your own text (every section except Examples and Avoid words) must not contain long dashes or hype words. Write plainly.
