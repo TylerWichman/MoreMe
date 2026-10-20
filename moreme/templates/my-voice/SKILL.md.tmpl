@@ -1,0 +1,54 @@
+---
+name: my-voice
+description: Use this skill whenever you draft, rewrite, or edit any text the user will send or post as their own, including emails, messages, social posts, cover letters, and bios. It holds the user's writing voice, measured from their own samples, and says how to match it.
+---
+
+# My voice
+
+## How I sound
+{{notes.how_i_sound}}
+
+## Measured profile
+| What | My number |
+|---|---|
+| A typical sentence | {{exposed.sentence_length_p50}} words |
+| Short and long sentences | {{exposed.sentence_length_p10}} to {{exposed.sentence_length_p90}} words |
+| A typical paragraph | {{exposed.paragraph_length_mean}} words |
+| Commas | {{exposed.comma_per_1k}} per 1,000 words |
+| Exclamation marks | {{exposed.exclamation_per_1k}} per 1,000 words |
+| Sentences that are questions | {{exposed.question_sentence_share}} |
+| Contractions (I'm, don't) | {{exposed.contraction_per_1k}} per 1,000 words |
+| I, me, my | {{exposed.first_person_singular_per_1k}} per 1,000 words |
+| You, your | {{exposed.second_person_per_1k}} per 1,000 words |
+| Long dashes | {{exposed.em_dash_per_1k}} per 1,000 words |
+| Emoji | {{exposed.emoji_per_1k}} per 1,000 words |
+| Sentences that start lowercase | {{exposed.lowercase_sentence_start_share}} |
+
+Measured by MoreMe analyze.py from {{meta.word_count}} words in {{meta.doc_count}} samples on {{meta.date}}.
+
+## Do
+{{notes.do}}
+
+## Don't
+{{notes.dont}}
+- Don't use any word or phrase in "Words I avoid" below, unless the task text itself uses it.
+
+## Words I avoid
+<!-- avoid-words:start -->
+{{notes.avoid_words}}
+<!-- avoid-words:end -->
+
+## Examples from my own writing
+<!-- verbatim-samples:start -->
+{{notes.examples}}
+<!-- verbatim-samples:end -->
+
+## Adjust by channel
+{{notes.channels}}
+
+## Rules for Claude
+- Write as the user. Do not mention this skill in the draft.
+- {{rules.dash_line}}
+- Match the measured sentence length and punctuation habits. When the task needs a different length, keep the habits anyway.
+
+Made with MoreMe {{meta.moreme_version}} on {{meta.date}}.
