@@ -229,6 +229,15 @@ def test_chat_visibility_credits_opening_in_the_done_line_message(tmp_path):
     assert st[3]["opening"] is False
 
 
+def test_chat_visibility_exempts_only_the_skill_load():
+    ok = [_a(_u("Skill")), _a(_t("Step 1 of 6: five questions, about 3 minutes."), _u("Glob"), _u("Write")),
+          _a(_t("Step 1 of 6 done: Interview."))]
+    late = [_a(_u("Skill"), _u("Glob"), _u("Write")), _a(_t("Question 1 of 5")),
+            _a(_t("Step 1 of 6 done: Interview."))]
+    assert drv.chat_visibility([("hi", ok)], None)["stages"][0]["opening"] is True
+    assert drv.chat_visibility([("hi", late)], None)["stages"][0]["opening"] is False
+
+
 def test_chat_visibility_ignores_subagent_and_tool_text():
     sub = {"type": "assistant", "parent_tool_use_id": "x",
            "message": {"content": [_t("Step 1 of 6 done: Interview.")]}}

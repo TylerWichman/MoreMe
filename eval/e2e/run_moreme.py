@@ -388,7 +388,9 @@ def load_turn_events(manifest, logs_dir):
 
 
 STAGE_NAMES = ["Interview", "Sample", "Analysis", "Generate", "Blind A/B", "Install"]
-WORK_TOOLS = ("Write", "Edit", "Bash", "Agent", "Task")
+# The Skill call that loads MoreMe comes before SKILL.md can act, so it is exempt;
+# every other tool call counts.
+OPENING_EXEMPT_TOOLS = ("Skill",)
 
 
 def chat_items(turn_events):
@@ -416,7 +418,7 @@ WORDS_RE = re.compile(r"\b\d[\d,]*\s+words\b", re.I)
 def chat_visibility(turn_events, report_path=None):
     """Mechanical cross-check of the rubric's chat-visibility rule (the
     clean-room reviewer is authoritative). Per stage: opening (chat text before
-    the stage's first Write/Edit/Bash/Agent call), done (the exact done line in
+    the stage's first tool call other than the Skill call), done (the exact done line in
     chat text, in order), and for stage 2 a word count, for stage 3 the report
     shown (at least 60% of report.txt's non-empty lines appear in chat text)."""
     items = chat_items(turn_events)
@@ -446,7 +448,7 @@ def chat_visibility(turn_events, report_path=None):
             tail = items[prev][1].split(line, 1)[-1]
             if tail.strip():
                 span = [("text", tail)] + span
-        first_work = next((i for i, (k, v) in enumerate(span) if k == "tool" and v in WORK_TOOLS), None)
+        first_work = next((i for i, (k, v) in enumerate(span) if k == "tool" and v not in OPENING_EXEMPT_TOOLS), None)
         before = span[:first_work] if first_work is not None else span
         st["opening"] = any(k == "text" for k, _ in before)
         texts = "\n".join(v for k, v in span if k == "text")
@@ -667,7 +669,7 @@ Chat visibility (part of R1-R6, see "Chat-visible stage lines" in the rubric): t
 assistant text, which the transcript shows as blocks headed exactly "**Assistant:**". Text that appears only in
 run-log.md, in a tool call's input (for example a Write of run-log.md), in a tool result, or in a subagent block does
 NOT count as shown. For each stage 1 to 6 find, in "**Assistant:**" blocks only: (1) the opening line, written before
-the stage's first Write, Edit, Bash, or Agent call; (2) the exact done line "Step N of 6 done: <Name>." after the
+the stage's first tool call (the Skill call that loads MoreMe is exempt; every later tool call counts); (2) the exact done line "Step N of 6 done: <Name>." after the
 stage's last tool call and before any tool call of the next stage. Also find the Step 2 word count shown in chat, and
 the Step 3 report shown in chat (the report.txt content, not only a Read of it). A stage whose opening line, done line,
 or required result is missing from chat fails its R item even if run-log.md says passed.
@@ -708,7 +710,9 @@ def cmd_review(args):
             verdict = json.loads(m.group(0))
         except ValueError:
             verdict = None
-    out = {"run_id": args.run_id, "reviewed": now_iso(), "invalid": r["invalid"], "flags": flags,
+    persona = json.loads((run_dir / "manifest.json").read_text(encoding="utf-8")).get("persona")
+    out = {"license_header": license_header(persona) if persona else None,
+           "run_id": args.run_id, "reviewed": now_iso(), "invalid": r["invalid"], "flags": flags,
            "reviewer_scratch": str(rd), "verdict": verdict, "raw": text if verdict is None else None}
     artifacts.write_committed_json(run_dir / "review.json", out)
     print(artifacts.sanitize_text(json.dumps(out, indent=2, ensure_ascii=False))[:6000])

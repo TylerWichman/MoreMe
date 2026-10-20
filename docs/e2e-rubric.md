@@ -27,7 +27,7 @@ The user sees only main-thread assistant chat text. In `transcript.md` that is t
 
 For each stage N from 1 to 6, the stage's R item passes only if the chat text shows:
 
-1. the stage's opening line (what happens next and about how long it takes), before the stage's first Write, Edit, Bash, or Agent call;
+1. the stage's opening line (what happens next and about how long it takes), before the stage's first tool call. The Skill call that loads MoreMe is exempt, because SKILL.md cannot act before it is loaded; every tool call after it counts, including Glob and Read;
 2. the exact done line `Step N of 6 done: <Name>.`, after the stage's last tool call and before any tool call of the next stage.
 
 Also required: for R2, the running word count of the samples in chat; for R3, the analysis report shown in chat (the content of `report.txt`, not only a Read of it), or the labeled estimate on the no-Python path.
@@ -35,3 +35,5 @@ Also required: for R2, the running word count of the samples in chat; for R3, th
 The reviewer records, per stage, the transcript line of the opening line, the done line, and (stages 2 and 3) the shown result. The driver adds a mechanical cross-check to `manifest.json` (`chat_visibility`); the reviewer's judgment decides.
 
 Why: in run `e2e-20261020-r1` the reviewer passed R1-R10 although the done lines for stages 2 and 3, the Step 2 word count, the Step 3 opening line, and the Step 3 report never appeared in chat. They existed only in `run-log.md` and in tool calls, so the user would have seen several minutes of silence. That run's record stays as it was scored; later runs are scored with this note.
+
+R10(d) reading: "the shared length/format rule" means the whole shared rule quoted in SKILL.md Step 5, including its closing sentences about never taking a name from a username, a file path, or system details. Those sentences are part of the rule, not extra content.
