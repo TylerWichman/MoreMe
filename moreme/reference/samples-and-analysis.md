@@ -1,26 +1,31 @@
 # Samples and analysis (Steps 2 and 3)
 
-## What counts as a sample
+## The sample is the conversation
 
-- Something the user wrote themselves: emails, messages, posts, cover letters, essays, notes.
-- Each piece is saved as its own file, `moreme-output/samples/sample-01.txt` and up, numbered in the order received.
-- Save the text exactly as the user wrote it. Keep typos, line breaks, emoji, and odd spacing. Those are part of how they write.
-- If one paste holds several pieces separated by `---` or clear breaks (different greetings and sign-offs), save each piece as its own file.
-- Leave out things that are not the user's words when they are obvious and separate: a quoted email they replied to, a forwarded header, a signature block with phone numbers. If you are unsure, keep the text.
-- Text written mostly by AI is a weak sample. If the user says a piece was AI-drafted, ask once whether they have something they wrote alone. If not, keep it.
+MoreMe never asks for existing writing, pasted text, or files. The sample is what the user types in this chat:
 
-### File paths (Claude Code)
+- The five interview answers count. They are saved first.
+- Then 4 to 6 writing prompts (at most 8), until the running total is about 300 words.
+- Everything goes in one file, `moreme-output/samples/conversation.txt`: the user's words only, in order, word for word, a blank line between answers. Never add your prompts, labels, or fixes. Keep typos, line breaks, emoji, and odd spacing; they are part of how the user types.
+- If the user answers with something they clearly did not write (a long quote, a pasted article), keep only their own words around it.
 
-- Read each file with the Read tool and save its text as a sample. Plain text (`.txt`), Markdown (`.md`), and PDF files work.
-- Word files (`.docx`), Pages files, and images: ask the user to open the file and paste the text instead. Do not try to convert them with a command.
-- A folder path: ask which files in it are theirs, or take up to 10 text files from it.
+## Writing prompts
+
+Each prompt is one or two friendly sentences and follows from the user's last answer, so it feels like a conversation, not a form. Lean toward the kind of writing they said they do (answer 1). Mix these kinds:
+
+- **A short story:** "You mentioned your sister's move. How did moving day go?"
+- **An explanation:** "How would you explain that project to a new coworker?"
+- **A reply they would send:** "A friend asks if you're free Saturday but you're not. What would you write back?"
+- **An opinion with a reason:** "Which do you like better for planning, email or a quick call? Why?"
+
+Start each prompt with the running total, for example "About 180 of 300 words so far." Interview answers count. Do not nag about length. After a very short answer, the next prompt invites a little more ("Tell me a bit more: what happened next?").
 
 ## Word counts
 
-- Floor: 3 pieces and 300 words in total.
-- Under 1,000 words: the numbers will be rough. Say so once.
-- 1,000 words or more: steadier numbers. There is no upper limit, but 5 to 10 pieces is plenty.
-- In Step 2 your count is an estimate. In Step 3 the script gives the real count in `profile.json` (`word_count`). If the real count is under 300, say the numbers are very rough and continue.
+- Target: about 300 words in total, interview answers included. That is the floor for steady enough numbers.
+- 300 to 1,000 words: the numbers are rough. The report says so; repeat it once in plain words.
+- Your running count is an estimate. In Step 3 the script gives the real count in `profile.json` (`word_count`). If the real count is under 300, say the numbers are very rough and continue.
+- The user wants to stop early: one sentence that fewer words make the measurement less reliable, and one more prompt offered. If they still want to stop, continue with what you have (`status=degraded reason=user_stopped_early`).
 
 ## Python discovery (Step 3)
 
@@ -46,7 +51,7 @@ Never install Python, open the Store, change settings, or try other commands. If
 
 ## No-Python estimate
 
-When no Python works, say so in one sentence, for example: "I couldn't find Python on this computer, so I'll describe your style by reading your samples instead. These notes are estimated by Claude, not measured." Then read the samples and write `moreme-output/report.txt` yourself:
+When no Python works, say so in one sentence, for example: "I couldn't find Python on this computer, so I'll describe your style by reading your answers instead. These notes are estimated by Claude, not measured." Then read `conversation.txt` and write `moreme-output/report.txt` yourself:
 
 ```
 Estimated by Claude, not measured

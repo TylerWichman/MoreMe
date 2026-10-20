@@ -52,7 +52,7 @@ def test_visibility_rules_use_turn_ending_messages():
     assert "Put what the user must see in the message that ends your turn" in sec
     assert ("appear in chat no later than the next message that asks the user to act") in sec
     where = sec[sec.index("**Where they land at the latest.**"):]
-    for phrase in ("Step 1: opening in the first message, done line in the message asking for samples.",
+    for phrase in ("Step 1: opening in the first message, done line in the first writing prompt.",
                    "Steps 2 and 3: in the Step 3 report message, which ends with the check-in question.",
                    "Step 4: in the message asking for the A/B task.",
                    "Step 5: in or before the install question.",
@@ -86,16 +86,17 @@ def test_stage_exit_order_documented():
         "Then a chat line, exactly: `Step N of 6 done: <Name>.`")
 
 
-def test_step2_word_count_shown_in_chat():
+def test_step2_progress_cue_shown_in_chat():
     s2 = _flat(_steps(_body())[2])
-    assert "write the running count as chat text" in s2
+    assert "Start each prompt with the running total" in s2
+    assert "Step 2's progress cue and Step 3's full report go in your chat text" in _flat(_body())
 
 
 def test_step1_first_turn_uses_no_tools():
     s1 = _flat(_steps(_body())[1])
     item1 = s1[s1.index("1. "):s1.index("2. **After the user's first answer:**")]
     assert item1.startswith("1. **First reply: no tools at all.**")
-    assert "about 10 minutes" in item1
+    assert "about 12 to 15 minutes" in item1
     intro = item1.index("MoreMe asks five short questions")
     perm_ref = item1.index("then the permissions sentence below, word for word")
     q1 = item1.index("then question 1 (item 3). End your turn there.")

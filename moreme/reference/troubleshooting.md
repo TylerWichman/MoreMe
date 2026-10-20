@@ -1,6 +1,6 @@
 # Troubleshooting
 
-What to do when something goes wrong. Always tell the user in one or two plain sentences, then act. Never paste a long error or a traceback into the chat.
+What to do when something goes wrong. Always tell the user in one or two plain sentences, then act. Never put a long error or a traceback into the chat.
 
 ## analyze.py results
 
@@ -13,7 +13,7 @@ What to do when something goes wrong. Always tell the user in one or two plain s
 
 Common exit 2 messages:
 
-- **"This looks like a binary file, not text"** or **"UTF-32 text is not supported"**: a sample is not plain text. Ask the user to paste that piece as text, save it again over the same sample file, and rerun `profile`.
+- **"This looks like a binary file, not text"** or **"UTF-32 text is not supported"**: `conversation.txt` was not saved as plain text. Write it again from the user's answers in the chat and rerun `profile`.
 - **A file or folder is missing:** check the path starts with `moreme-output/` and the file was saved. Save it, then rerun.
 - **install: my-voice already exists:** ask once whether to replace it (see `install.md`).
 - **install: a safety guard message:** this happens only in automated test setups. Tell the user the install was blocked by a safety setting and offer the manual steps in `install.md`. Do not try another way to copy the files.
@@ -24,13 +24,14 @@ Common exit 2 messages:
 ### Step 1
 
 - The user answers several questions at once: count them as answered and skip ahead.
-- The user asks what MoreMe does with their writing: in Claude Code, "Your samples are saved in a folder called moreme-output on your computer, and git ignores it. The measuring script runs on your computer and sends nothing over the internet. Claude sees what you paste here, under Anthropic's terms." On claude.ai, use the claude.ai permissions sentence.
+- The user asks what MoreMe does with their writing: in Claude Code, "Your answers are saved in a folder called moreme-output on your computer, and git ignores it. The measuring script runs on your computer and sends nothing over the internet. Claude sees what you type here, under Anthropic's terms." On claude.ai, use the claude.ai permissions sentence.
 
 ### Step 2
 
-- Too short after one more ask: offer to continue with rough numbers (log `status=degraded reason=below_floor`) or to stop and come back with more writing.
-- A file the user points to cannot be read: ask them to paste its text.
-- The user has fewer than 3 pieces but 300 or more words: one long piece can be split at clear breaks (separate emails, separate posts) into separate samples. Otherwise treat it as below the floor.
+- Still under about 300 words after 8 prompts: continue with what you have and log `status=degraded reason=below_floor`.
+- The user wants to stop writing early: one sentence that fewer words make the measurement less reliable, offer one more prompt, then continue if they still want to stop (`status=degraded reason=user_stopped_early`).
+- The user offers to paste existing writing or a file: thank them and say MoreMe measures how they type here, then give the next prompt.
+- Answers stay very short: keep prompts concrete and easy ("What did you have for lunch, and was it good?"). Never scold.
 
 ### Step 3
 
@@ -63,6 +64,6 @@ Right after the user's first interview answer (the first reply uses no tools), G
 1. Read it. Find the last step with `status=passed` (or `degraded`).
 2. Tell the user in one sentence which steps are done, and ask once: "Pick up at step N, or start over?"
 3. **Pick up:** start at the first step that has not passed. Read `interview.md`, the `samples/` files, and `report.txt` as needed. Python discovery runs again if Step 3 or later is next.
-4. **Start over:** keep the answer they just gave to question 1 and go on with question 2. Then overwrite `interview.md`, the sample files, and the other files as each step runs (Write replaces them). Start the new samples at `sample-01.txt` and list only the new files in the `profile` command. Add new lines to `run-log.md` below the old ones. If `ab-result.json` exists, the A/B uses a new folder (see `blind-ab.md`).
+4. **Start over:** keep the answer they just gave to question 1 and go on with question 2. Then overwrite `interview.md`, the sample files, and the other files as each step runs (Write replaces them). Start `conversation.txt` fresh with the new answers. Add new lines to `run-log.md` below the old ones. If `ab-result.json` exists, the A/B uses a new folder (see `blind-ab.md`).
 
 Never delete the user's files with a command.

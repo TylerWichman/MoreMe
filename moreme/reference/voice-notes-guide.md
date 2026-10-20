@@ -12,7 +12,7 @@ Six `##` headings, exactly these, in this order. Text outside them is ignored.
 | `## Do` | Lines starting with `- `, each concrete and checkable | 5 to 8 lines |
 | `## Don't` | Lines starting with `- ` | 3 to 6 lines |
 | `## Avoid words` | One word or short phrase per line: the user's pet peeves from question 4 | 0 to 20 lines |
-| `## Examples` | `[sample-NN.txt]` on its own line, then an excerpt copied exactly from that file | 3 to 5 excerpts, 40 to 120 words each |
+| `## Examples` | `[conversation.txt]` on its own line, then an excerpt copied exactly from that file | 3 to 5 excerpts, 40 to 120 words each |
 | `## Adjust by channel` | Lines starting `Email:`, `Post:`, `Cover letter:` | 1 to 3 sentences each |
 
 ## Writing good notes
@@ -29,14 +29,15 @@ Six `##` headings, exactly these, in this order. Text outside them is ignored.
 
 ## Copying excerpts exactly
 
-`build-skill` checks that each excerpt appears word for word in the named sample file. To pass:
+`build-skill` checks that each excerpt appears word for word in the named file, `samples/conversation.txt`. To pass:
 
-- Read the saved sample file first and copy from it, not from your memory of the chat.
+- Read `conversation.txt` first and copy from it, not from your memory of the chat.
 - Keep every character: typos, capital letters, punctuation, emoji, spacing.
 - Copy one continuous stretch. Do not join pieces from different places or add "..." for skipped text.
+- If no single answer reaches 40 words, an excerpt may run across two answers next to each other, copied exactly, blank line included.
 - Stay inside one paragraph when you can. Line breaks inside an excerpt must match the file.
 - Aim for 60 to 100 words so small counting differences do not push you outside 40 to 120.
-- Pick excerpts that show the user's habits: a typical opening, a sign-off, a sentence with their usual punctuation. Use different samples when you can.
+- Pick excerpts that show the user's habits: a typical opening, a sign-off, a sentence with their usual punctuation. Use different answers when you can; the longest answers work best.
 
 ## Example
 
@@ -62,12 +63,12 @@ synergy
 I hope this email finds you well
 
 ## Examples
-[sample-01.txt]
-<60 to 100 words copied exactly from sample-01.txt>
-[sample-03.txt]
-<60 to 100 words copied exactly from sample-03.txt>
-[sample-04.txt]
-<60 to 100 words copied exactly from sample-04.txt>
+[conversation.txt]
+<60 to 100 words copied exactly from one answer>
+[conversation.txt]
+<60 to 100 words copied exactly from another answer>
+[conversation.txt]
+<60 to 100 words copied exactly from a third answer>
 
 ## Adjust by channel
 Email: Two or three short paragraphs. First name in the greeting.
@@ -133,9 +134,9 @@ Only when Step 3 found no Python. Read `SKILL_DIR/templates/my-voice/SKILL.md.tm
 
 - Keep the frontmatter, headings, table rows, markers, and fixed lines exactly as in the template.
 - Every number cell in "Measured profile": `not measured`. For example `| A typical sentence | not measured |`.
-- Replace the "Measured by MoreMe analyze.py ..." line with: `Not measured: Python was not available. These notes are estimated by Claude from N samples on YYYY-MM-DD.`
+- Replace the "Measured by MoreMe analyze.py ..." line with: `Not measured: Python was not available. These notes are estimated by Claude from N words on YYYY-MM-DD.`
 - `{{notes.how_i_sound}}`, `{{notes.do}}`, `{{notes.dont}}`, `{{notes.channels}}`: the matching sections of your notes.
-- `{{notes.examples}}`: each excerpt as a line `From sample-NN.txt:`, then the excerpt exactly, with a blank line between excerpts.
+- `{{notes.examples}}`: each excerpt as a line `From conversation.txt:`, then the excerpt exactly, with a blank line between excerpts.
 - `{{notes.avoid_words}}`: the default list above, one item per line starting with `- ` (leave out any the user's samples use), then the user's own pet peeves.
 - `{{rules.dash_line}}`: "Do not use long dashes. Use commas, periods, colons, or parentheses instead." If the samples clearly use long dashes, write "Long dashes are fine. My samples use them." instead.
 - `{{meta.moreme_version}}`: `v1.0.0`. `{{meta.date}}`: today's date.

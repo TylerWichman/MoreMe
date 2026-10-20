@@ -98,7 +98,7 @@ def test_six_stages_in_order():
     heads = re.findall(r"^## Step (\d) of 6: (.+?) \(about (\d) minutes?\)$", body, re.M)
     assert [int(h[0]) for h in heads] == [1, 2, 3, 4, 5, 6]
     assert [h[1] for h in heads] == STAGES
-    assert sum(int(h[2]) for h in heads) == 10
+    assert sum(int(h[2]) for h in heads) == 13  # about 12 to 15 minutes (AMEND-003)
 
 
 def test_stage_exit_lines_documented():

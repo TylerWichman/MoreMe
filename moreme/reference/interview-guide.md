@@ -14,7 +14,9 @@ Ask one per message, in this order. Small changes in wording are fine. Do not ad
 | 4 | What bugs you most in drafts AI writes for you? Words, phrases, or habits. | "Avoid words" (single words and short phrases), Don't rules (habits) |
 | 5 | Any habits you always or never have? For example sign-offs, emoji, or exclamation marks. | Do and Don't rules |
 
-Before question 1, the first message also gives the plain overview, the time (about 10 minutes), and the permissions sentence from SKILL.md, word for word.
+Before question 1, the first message also gives the plain overview, the time (about 12 to 15 minutes), and the permissions sentence from SKILL.md, word for word. It also says the answers count as writing, so the user should answer the way they normally type.
+
+The five answers are the start of the writing sample. After the last one, save them (the user's words only) to `moreme-output/samples/conversation.txt`; the Step 2 writing prompts add to that file (see `samples-and-analysis.md`).
 
 ## Follow-ups
 
