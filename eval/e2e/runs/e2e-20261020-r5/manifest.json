@@ -1,0 +1,497 @@
+{
+  "run_id": "e2e-20261020-r5",
+  "persona": "era-c",
+  "started": "2026-10-20T17:00:12",
+  "cli_version": "2.1.303 (Claude Code)",
+  "model_pinned": "claude-sonnet-5-5",
+  "session_id": "04aa44f3-e162-409d-9e9b-36e8c64d1b96",
+  "scratch": "~\\AppData\\Local\\Temp\\moreme-e2e\\e2e-20261020-r5",
+  "interviewee_scratch": "~\\AppData\\Local\\Temp\\moreme-e2e\\e2e-20261020-r5-iv",
+  "train_files_in_scratch": [],
+  "opener": "I'd like to make my voice skill",
+  "skill_flags_first": [
+    "--model",
+    "claude-sonnet-5-5",
+    "--session-id",
+    "04aa44f3-e162-409d-9e9b-36e8c64d1b96",
+    "--setting-sources",
+    "project",
+    "--strict-mcp-config",
+    "--permission-mode",
+    "acceptEdits",
+    "--permission-prompts",
+    "none",
+    "--allowedTools=Skill(moreme),Bash(python --version),Bash(py -3 --version),Bash(python3 --version),Bash(python .claude/skills/moreme/analyze.py:*),Bash(py -3 .claude/skills/moreme/analyze.py:*)"
+  ],
+  "skill_flags_later": [
+    "--model",
+    "claude-sonnet-5-5",
+    "--resume",
+    "04aa44f3-e162-409d-9e9b-36e8c64d1b96",
+    "--setting-sources",
+    "project",
+    "--strict-mcp-config",
+    "--permission-mode",
+    "acceptEdits",
+    "--permission-prompts",
+    "none",
+    "--allowedTools=Skill(moreme),Bash(python --version),Bash(py -3 --version),Bash(python3 --version),Bash(python .claude/skills/moreme/analyze.py:*),Bash(py -3 .claude/skills/moreme/analyze.py:*)"
+  ],
+  "interviewee_flags": [
+    "--model",
+    "claude-sonnet-5-5",
+    "--no-session-persistence",
+    "--tools",
+    "",
+    "--setting-sources",
+    "project",
+    "--strict-mcp-config"
+  ],
+  "allowed_tools": [
+    "Skill(moreme)",
+    "Bash(python --version)",
+    "Bash(py -3 --version)",
+    "Bash(python3 --version)",
+    "Bash(python .claude/skills/moreme/analyze.py:*)",
+    "Bash(py -3 .claude/skills/moreme/analyze.py:*)"
+  ],
+  "env_removed": "every variable starting with CLAUDE (any case) and AI_AGENT",
+  "env_set_after_scrub": {
+    "DISABLE_AUTOUPDATER": "1",
+    "CLAUDE_CODE_DISABLE_AUTO_MEMORY": "1",
+    "MOREME_TEST_GUARD": "1"
+  },
+  "scratch_settings": {
+    "enabledPlugins": {
+      "cc-plugin-agents-md@builtin": false,
+      "cc-plugin-telemetry@builtin": false,
+      "cc-plugin-plugin-authoring@builtin": false
+    },
+    "disableBundledSkills": true,
+    "skillOverrides": {
+      "design": "off",
+      "doctor": "off"
+    },
+    "autoMemoryEnabled": false,
+    "permissions": {
+      "deny": [
+        "Edit(~/.claude/**)",
+        "Write(~/.claude/**)",
+        "Edit(~/.claude/**)",
+        "Write(~/.claude/**)"
+      ]
+    }
+  },
+  "license_header": "Corpus-derived content (persona era-c). Source texts are in the public domain in the USA. Sources: eval/corpus/PROVENANCE.md",
+  "banner_source": "public-domain texts by Elinore Pruitt Stewart (Letters of a Woman Homesteader, 1914, Project Gutenberg eBook #16623)",
+  "persona_first_name": "Hattie",
+  "evidence_dir": "~\\Documents\\OneShot\\vault\\clients\\operator\\snapshots\\moreme-public-release\\evidence\\e2e\\runs\\e2e-20261020-r5",
+  "sample_method": "Answers to MoreMe's writing prompts are verbatim passages from those texts, picked by the simulated interviewee to fit each prompt (whole paragraphs or whole sentences, never reworded); answers to interview questions and other replies were written in role by the agent.",
+  "passage_catalog_size": 65,
+  "passage_sources": [
+    "era-c/era-c-06.txt",
+    "era-c/era-c-07.txt",
+    "era-c/era-c-08.txt"
+  ],
+  "turns": [
+    {
+      "turn": 0,
+      "role": "skill",
+      "label": "skill-t00",
+      "user": "I'd like to make my voice skill",
+      "latency_s": 10.3,
+      "wall_start": 1792530012.6447694,
+      "expected_skills": [
+        "moreme"
+      ],
+      "invalid": [],
+      "steps_done": [],
+      "num_turns": 3,
+      "is_error": false
+    },
+    {
+      "turn": 1,
+      "role": "interviewee",
+      "label": "interviewee-t01",
+      "answer": "Mostly letters and emails to friends and family, and short notes to the neighbors. I'm Hattie, and I'm forever running on too long in my letters, so I lean on it to help me tidy them up.",
+      "answer_kind": "in_role",
+      "passage_ids": [],
+      "latency_s": 3.84,
+      "wall_start": 1792530022.9662821,
+      "invalid": []
+    },
+    {
+      "turn": 1,
+      "role": "skill",
+      "label": "skill-t01",
+      "user": "Mostly letters and emails to friends and family, and short notes to the neighbors. I'm Hattie, and I'm forever running on too long in my letters, so I lean on it to help me tidy them up.",
+      "latency_s": 10.51,
+      "wall_start": 1792530026.8428013,
+      "expected_skills": [
+        "moreme"
+      ],
+      "invalid": [],
+      "steps_done": [],
+      "num_turns": 3,
+      "is_error": false
+    },
+    {
+      "turn": 2,
+      "role": "interviewee",
+      "label": "interviewee-t02",
+      "answer": "Mostly my old friend back in the city, who used to be my employer, and now and then a neighbor or my sister-in-law. They put up with my long letters because they're fond of me, I suppose.",
+      "answer_kind": "in_role",
+      "passage_ids": [],
+      "latency_s": 3.63,
+      "wall_start": 1792530037.3799908,
+      "invalid": []
+    },
+    {
+      "turn": 2,
+      "role": "skill",
+      "label": "skill-t02",
+      "user": "Mostly my old friend back in the city, who used to be my employer, and now and then a neighbor or my sister-in-law. They put up with my long letters because they're fond of me, I suppose.",
+      "latency_s": 4.7,
+      "wall_start": 1792530041.0477607,
+      "expected_skills": [
+        "moreme"
+      ],
+      "invalid": [],
+      "steps_done": [],
+      "num_turns": 1,
+      "is_error": false
+    },
+    {
+      "turn": 3,
+      "role": "interviewee",
+      "label": "interviewee-t03",
+      "answer": "Warm, practical, and funny, I suppose. I'd like to sound like myself on a good day, chatty but kind.",
+      "answer_kind": "in_role",
+      "passage_ids": [],
+      "latency_s": 3.5,
+      "wall_start": 1792530045.7982905,
+      "invalid": []
+    },
+    {
+      "turn": 3,
+      "role": "skill",
+      "label": "skill-t03",
+      "user": "Warm, practical, and funny, I suppose. I'd like to sound like myself on a good day, chatty but kind.",
+      "latency_s": 4.41,
+      "wall_start": 1792530049.3474941,
+      "expected_skills": [
+        "moreme"
+      ],
+      "invalid": [],
+      "steps_done": [],
+      "num_turns": 1,
+      "is_error": false
+    },
+    {
+      "turn": 4,
+      "role": "interviewee",
+      "label": "interviewee-t04",
+      "answer": "Mostly that it's so stiff and grand, all \"I hope this message finds you well\" and lists of three things. I can't abide when it makes me sound like a greeting card instead of a woman who's been up since five with the chickens.",
+      "answer_kind": "in_role",
+      "passage_ids": [],
+      "latency_s": 15.11,
+      "wall_start": 1792530053.7995543,
+      "invalid": []
+    },
+    {
+      "turn": 4,
+      "role": "skill",
+      "label": "skill-t04",
+      "user": "Mostly that it's so stiff and grand, all \"I hope this message finds you well\" and lists of three things. I can't abide when it makes me sound like a greeting card instead of a woman who's been up since five with the chickens.",
+      "latency_s": 3.45,
+      "wall_start": 1792530068.9322774,
+      "expected_skills": [
+        "moreme"
+      ],
+      "invalid": [],
+      "steps_done": [],
+      "num_turns": 1,
+      "is_error": false
+    },
+    {
+      "turn": 5,
+      "role": "interviewee",
+      "label": "interviewee-t05",
+      "answer": "No emoji, ever, and I sign everything \"Hattie.\" I do love an exclamation mark when something's worth it, like a good snow or a pie that turned out, and I'm fond of a dash or two when I get ahead of myself.",
+      "answer_kind": "in_role",
+      "passage_ids": [],
+      "latency_s": 3.63,
+      "wall_start": 1792530072.450557,
+      "invalid": []
+    },
+    {
+      "turn": 5,
+      "role": "skill",
+      "label": "skill-t05",
+      "user": "No emoji, ever, and I sign everything \"Hattie.\" I do love an exclamation mark when something's worth it, like a good snow or a pie that turned out, and I'm fond of a dash or two when I get ahead of myself.",
+      "latency_s": 14.59,
+      "wall_start": 1792530076.1019466,
+      "expected_skills": [
+        "moreme"
+      ],
+      "invalid": [],
+      "steps_done": [
+        "1"
+      ],
+      "num_turns": 4,
+      "is_error": false
+    },
+    {
+      "turn": 6,
+      "role": "interviewee",
+      "label": "interviewee-t06",
+      "answer": "She had some kind of rash on her face and Zebulon Pike noticed the rash and heard the word \"function,\" so he thought that was the name of some disease and asked Mr. Stewart if the \"function\" was \"catching.\" Mr. Stewart had heard Sedalia, but knew \"Zebbie\" had not heard all that was said and how he got the idea he had, so he answered, \"Yes, if ye once get the fever.\"\n\nSo Zebulon Pike privately warned every one against getting the \"function\" from Sedalia. There are plenty of people here who don't know exactly what a function is, myself among them. So people edged away from Sedalia, and some asked her if she had seen the doctor and what he thought of her case. Poor girl, I'm afraid she didn't have a very enjoyable time.",
+      "answer_kind": "passages",
+      "passage_ids": [
+        "p7",
+        "p8"
+      ],
+      "latency_s": 3.8,
+      "wall_start": 1792530090.7345338,
+      "invalid": []
+    },
+    {
+      "turn": 6,
+      "role": "skill",
+      "label": "skill-t06",
+      "user": "She had some kind of rash on her face and Zebulon Pike noticed the rash and heard the word \"function,\" so he thought that was the name of some disease and asked Mr. Stewart if the \"function\" was \"catching.\" Mr. Stewart had heard Sedalia, but knew \"Zebbie\" had not heard all that was said and how he got the idea he had, so he answered, \"Yes, if ye once get the fever.\"\n\nSo Zebulon Pike privately warned every one against getting the \"function\" from Sedalia. There are plenty of people here who don't know exactly what a function is, myself among them. So people edged away from Sedalia, and some asked her if she had seen the doctor and what he thought of her case. Poor girl, I'm afraid she didn't have a very enjoyable time.",
+      "latency_s": 15.9,
+      "wall_start": 1792530094.5739887,
+      "expected_skills": [
+        "moreme"
+      ],
+      "invalid": [],
+      "steps_done": [],
+      "num_turns": 1,
+      "is_error": false
+    },
+    {
+      "turn": 7,
+      "role": "interviewee",
+      "label": "interviewee-t07",
+      "answer": "Those are my own words, Hattie's, from a letter I wrote to my old friend. Nobody else's, I promise, though I'm not sure I'd call it \"just now.\"",
+      "answer_kind": "in_role",
+      "passage_ids": [],
+      "latency_s": 5.42,
+      "wall_start": 1792530110.542975,
+      "invalid": []
+    },
+    {
+      "turn": 7,
+      "role": "skill",
+      "label": "skill-t07",
+      "user": "Those are my own words, Hattie's, from a letter I wrote to my old friend. Nobody else's, I promise, though I'm not sure I'd call it \"just now.\"",
+      "latency_s": 25.92,
+      "wall_start": 1792530116.0049613,
+      "expected_skills": [
+        "moreme"
+      ],
+      "invalid": [],
+      "steps_done": [
+        "2",
+        "3"
+      ],
+      "num_turns": 8,
+      "is_error": false
+    },
+    {
+      "turn": 8,
+      "role": "interviewee",
+      "label": "interviewee-t08",
+      "answer": "Yes, that sounds like me, though I'm chattier in my letters than that makes me out, and I do use a good many exclamation marks and dashes when I'm warmed up.",
+      "answer_kind": "in_role",
+      "passage_ids": [],
+      "latency_s": 3.62,
+      "wall_start": 1792530141.9791281,
+      "invalid": []
+    },
+    {
+      "turn": 8,
+      "role": "skill",
+      "label": "skill-t08",
+      "user": "Yes, that sounds like me, though I'm chattier in my letters than that makes me out, and I do use a good many exclamation marks and dashes when I'm warmed up.",
+      "latency_s": 35.09,
+      "wall_start": 1792530145.641037,
+      "expected_skills": [
+        "moreme"
+      ],
+      "invalid": [],
+      "steps_done": [
+        "4"
+      ],
+      "num_turns": 7,
+      "is_error": false
+    },
+    {
+      "turn": 9,
+      "role": "interviewee",
+      "label": "interviewee-t09",
+      "answer": "A short letter to my old friend telling her the first snow came early this year and asking how her winter is going.",
+      "answer_kind": "in_role",
+      "passage_ids": [],
+      "latency_s": 2.58,
+      "wall_start": 1792530180.767694,
+      "invalid": []
+    },
+    {
+      "turn": 9,
+      "role": "skill",
+      "label": "skill-t09",
+      "user": "A short letter to my old friend telling her the first snow came early this year and asking how her winter is going.",
+      "latency_s": 18.12,
+      "wall_start": 1792530183.389537,
+      "expected_skills": [
+        "moreme"
+      ],
+      "invalid": [],
+      "steps_done": [],
+      "num_turns": 8,
+      "is_error": false
+    },
+    {
+      "turn": 10,
+      "role": "interviewee",
+      "label": "interviewee-t10",
+      "answer": "A",
+      "answer_kind": "in_role",
+      "passage_ids": [],
+      "latency_s": 12.12,
+      "wall_start": 1792530201.544863,
+      "invalid": []
+    },
+    {
+      "turn": 10,
+      "role": "skill",
+      "label": "skill-t10",
+      "user": "A",
+      "latency_s": 13.7,
+      "wall_start": 1792530213.694733,
+      "expected_skills": [
+        "moreme"
+      ],
+      "invalid": [],
+      "steps_done": [
+        "5"
+      ],
+      "num_turns": 4,
+      "is_error": false
+    },
+    {
+      "turn": 11,
+      "role": "interviewee",
+      "label": "interviewee-t11",
+      "answer": "Project folder.",
+      "answer_kind": "in_role",
+      "passage_ids": [],
+      "latency_s": 3.34,
+      "wall_start": 1792530227.4253,
+      "invalid": []
+    },
+    {
+      "turn": 11,
+      "role": "skill",
+      "label": "skill-t11",
+      "user": "Project folder.",
+      "latency_s": 15.52,
+      "wall_start": 1792530230.7895062,
+      "expected_skills": [
+        "moreme"
+      ],
+      "invalid": [],
+      "steps_done": [
+        "6"
+      ],
+      "num_turns": 5,
+      "is_error": false
+    }
+  ],
+  "status": "completed",
+  "finished": "2026-10-20T17:04:06",
+  "spill_new": [
+    "HOME-AppData-Local-Temp-moreme-e2e-e2e-20261020-r5"
+  ],
+  "installed_skill_md_exists": true,
+  "validate_skill": {
+    "ok": true,
+    "errors": [],
+    "warnings": []
+  },
+  "stage_timings": [
+    {
+      "stage": 1,
+      "seconds": 78.0
+    },
+    {
+      "stage": 2,
+      "seconds": 51.2
+    },
+    {
+      "stage": 3,
+      "seconds": 0.0
+    },
+    {
+      "stage": 4,
+      "seconds": 38.8
+    },
+    {
+      "stage": 5,
+      "seconds": 46.7
+    },
+    {
+      "stage": 6,
+      "seconds": 18.9
+    }
+  ],
+  "chat_visibility": {
+    "ok": true,
+    "done_lines_in_order": true,
+    "stages": [
+      {
+        "stage": 1,
+        "done": true,
+        "opening": true,
+        "done_timely": true
+      },
+      {
+        "stage": 2,
+        "done": true,
+        "opening": true,
+        "done_timely": true,
+        "word_count": true
+      },
+      {
+        "stage": 3,
+        "done": true,
+        "opening": true,
+        "done_timely": true,
+        "report_lines_shown": "11/11",
+        "report_shown": true
+      },
+      {
+        "stage": 4,
+        "done": true,
+        "opening": true,
+        "done_timely": true
+      },
+      {
+        "stage": 5,
+        "done": true,
+        "opening": true,
+        "done_timely": true
+      },
+      {
+        "stage": 6,
+        "done": true,
+        "opening": true,
+        "done_timely": true
+      }
+    ],
+    "rule": "lines visible no later than the next message that asks the user to act",
+    "note": "Mechanical cross-check only; the clean-room reviewer decides R1-R6."
+  }
+}
