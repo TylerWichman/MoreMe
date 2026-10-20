@@ -1,0 +1,159 @@
+"""Draft-length validity gate (AD-006, A-012). Runs on dev data only, no model calls.
+
+    cd eval && python -m harness.validity [--out-dir results]
+
+Rule (pre-registered):
+1. Target length per persona = median held-out document word count recorded in
+   eval/split.json at split time, clamped to 120-400 words. Only the counts are
+   used; no held-out file is opened (read_corpus_text refuses it).
+2. Candidate profiles: each persona's whole train split (files in sorted order,
+   joined by a blank line), view `all`.
+3. Each persona's dev split (same joining) is cut into consecutive,
+   non-overlapping chunks of exactly its target length (remainder dropped), with
+   analyze.py's chunk_text (the reference-stats chunk rule).
+4. Each chunk is attributed to the candidate with the smallest delta_fw
+   (eval/reference_stats.json, ties by sorted id).
+5. Accuracy per persona and pooled. Pooled = correct chunks / all chunks
+   (every chunk counts once). The persona-balanced mean is also reported.
+6. Gate: pooled accuracy >= 2 x chance (chance = 1/K) keeps nearest-persona
+   attribution as the primary metric; below that, attribution is demoted and
+   the fallback primary (mean delta_fw from each draft to the target persona's
+   held-out profile) is in force.
+7. Any persona attributed below chance is flagged (decision
+   2026-10-20-persona-distinctness-accept-moreme: revisit before freezing).
+"""
+import argparse
+import sys
+import time
+
+from harness import common, scoring
+
+
+def dev_chunks(split, persona, length):
+    files = sorted(common.split_files(split, persona, "dev"))
+    text = "\n\n".join(common.read_corpus_text(split, f, allow=("dev",)).strip("\n") for f in files)
+    return scoring.an().chunk_text(text, length)
+
+
+def run_gate(split=None, ref=None):
+    split = split or common.load_split()
+    ref = ref or common.read_json(common.REFERENCE_STATS)
+    personas = sorted(split["personas"])
+    k = len(personas)
+    chance = 1.0 / k
+    candidates = scoring.candidate_profiles(split, "train", personas)
+    confusion = dict((p, dict((q, 0) for q in personas)) for p in personas)
+    per_chunk = []
+    targets = {}
+    for p in personas:
+        n = common.target_length(split, p)
+        targets[p] = n
+        for i, chunk in enumerate(dev_chunks(split, p, n)):
+            prof = scoring.an().profile_text(chunk, view="all", name="%s-dev-%02d" % (p, i))
+            predicted, deltas = scoring.attribute(prof, candidates, ref)
+            confusion[p][predicted] += 1
+            per_chunk.append({"persona": p, "chunk": i, "words": n, "predicted": predicted,
+                              "correct": predicted == p,
+                              "deltas": dict((q, round(v, 4)) for q, v in deltas.items() if v is not None)})
+    per_persona = {}
+    for p in personas:
+        total = sum(confusion[p].values())
+        correct = confusion[p][p]
+        acc = correct / float(total) if total else None
+        per_persona[p] = {"chunks": total, "correct": correct, "accuracy": acc,
+                          "target_words": targets[p], "below_chance": acc is not None and acc < chance,
+                          "most_confused_with": max(((confusion[p][q], q) for q in personas if q != p))[1]
+                          if total > correct else None}
+    n_all = len(per_chunk)
+    pooled = sum(1 for c in per_chunk if c["correct"]) / float(n_all)
+    balanced = sum(v["accuracy"] for v in per_persona.values()) / len(personas)
+    threshold = common.GATE_MULTIPLE * chance
+    passed = pooled >= threshold
+    return {
+        "schema_version": "1",
+        "created": time.strftime("%Y-%m-%dT%H:%M"),
+        "data": "train split (candidate profiles) and dev split (chunks); held-out text not opened; "
+                "target lengths from eval/split.json held-out word counts",
+        "metric": "delta_fw (Burrows Delta over the 150 function words, eval/reference_stats.json)",
+        "k": k,
+        "chance": chance,
+        "threshold": threshold,
+        "pooled_accuracy": pooled,
+        "pooled_correct": sum(1 for c in per_chunk if c["correct"]),
+        "pooled_chunks": n_all,
+        "persona_balanced_accuracy": balanced,
+        "passed": passed,
+        "primary_in_force": "attribution" if passed else "fallback_delta_fw",
+        "primary_description": ("nearest-persona attribution accuracy" if passed else
+                                "mean delta_fw from each draft to the target persona's held-out profile"),
+        "below_chance_personas": [p for p in personas if per_persona[p]["below_chance"]],
+        "per_persona": per_persona,
+        "confusion": {"rows": "true persona (dev chunks)", "columns": "predicted persona", "table": confusion},
+        "chunks": per_chunk,
+    }
+
+
+def _pct(x):
+    return "%.1f%%" % (100.0 * x)
+
+
+def render_markdown(r):
+    personas = sorted(r["per_persona"])
+    lines = [
+        "# Draft-length validity gate (dev data)",
+        "",
+        "Generated by `python -m harness.validity` (run from `eval/`). No model calls. "
+        "Held-out text was not opened; target lengths come from the held-out word counts in `eval/split.json`.",
+        "",
+        "Each persona's dev text is cut into chunks at its target length. Each chunk is attributed to the "
+        "persona whose train profile has the smallest `delta_fw`.",
+        "",
+        "## Result",
+        "",
+        "| Measure | Value |",
+        "|---|---|",
+        "| Personas (K) | %d |" % r["k"],
+        "| Chance | %s |" % _pct(r["chance"]),
+        "| Threshold (2 x chance) | %s |" % _pct(r["threshold"]),
+        "| Pooled accuracy (%d of %d chunks) | %s |" % (r["pooled_correct"], r["pooled_chunks"],
+                                                       _pct(r["pooled_accuracy"])),
+        "| Persona-balanced accuracy | %s |" % _pct(r["persona_balanced_accuracy"]),
+        "| Gate | %s |" % ("passed" if r["passed"] else "failed"),
+        "| Primary metric in force | %s |" % r["primary_description"],
+        "",
+        "## Per persona",
+        "",
+        "| Persona | Target words | Chunks | Correct | Accuracy | Below chance | Most often taken for |",
+        "|---|---|---|---|---|---|---|",
+    ]
+    for p in personas:
+        v = r["per_persona"][p]
+        lines.append("| %s | %d | %d | %d | %s | %s | %s |" % (
+            p, v["target_words"], v["chunks"], v["correct"], _pct(v["accuracy"]),
+            "yes" if v["below_chance"] else "no", v["most_confused_with"] or "-"))
+    lines += ["", "## Confusion table", "", "Rows: true persona. Columns: predicted persona.", "",
+              "| True \\ predicted | " + " | ".join(personas) + " |",
+              "|---|" + "---|" * len(personas)]
+    for p in personas:
+        lines.append("| %s | " % p + " | ".join(str(r["confusion"]["table"][p][q]) for q in personas) + " |")
+    flagged = r["below_chance_personas"]
+    lines += ["", "Personas attributed below chance: %s." % (", ".join(flagged) if flagged else "none"), ""]
+    return "\n".join(lines)
+
+
+def main(argv=None):
+    ap = argparse.ArgumentParser(description="draft-length validity gate on dev data")
+    ap.add_argument("--out-dir", default=str(common.RESULTS))
+    a = ap.parse_args(argv)
+    r = run_gate()
+    out = common.Path(a.out_dir)
+    common.write_json(out / "validity-gate.json", r)
+    common.write_text(out / "validity-gate.md", render_markdown(r))
+    print("pooled %s (threshold %s): %s; primary = %s; below chance: %s" % (
+        _pct(r["pooled_accuracy"]), _pct(r["threshold"]), "PASS" if r["passed"] else "FAIL",
+        r["primary_in_force"], r["below_chance_personas"] or "none"))
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())
