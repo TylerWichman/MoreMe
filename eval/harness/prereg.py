@@ -37,7 +37,10 @@ def hashed_files(repo=common.REPO):
     repo = Path(repo)
     fixed = ["moreme/SKILL.md", "moreme/templates/my-voice/SKILL.md.tmpl", "moreme/analyze.py",
              "eval/reference_stats.json", "eval/split.json", "eval/tasks/tasks.json", "eval/lib/childrun.py"]
-    harness = sorted(p.relative_to(repo).as_posix() for p in (repo / "eval" / "harness").glob("*.py"))
+    # persona_gen.py only drives skill generation; its inputs are covered by the
+    # SKILL.md hash and the committed eval/skills/ files, so it is not hashed.
+    harness = sorted(p.relative_to(repo).as_posix() for p in (repo / "eval" / "harness").glob("*.py")
+                     if p.name != "persona_gen.py")
     return fixed + harness
 
 

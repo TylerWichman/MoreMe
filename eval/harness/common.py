@@ -24,7 +24,7 @@ TEMPLATE = REPO / "moreme" / "templates" / "my-voice" / "SKILL.md.tmpl"
 
 if str(EVAL) not in sys.path:
     sys.path.insert(0, str(EVAL))
-from lib import childrun  # noqa: E402
+from lib import artifacts, childrun, personas  # noqa: E402
 
 ARMS = ("with", "without", "samples-pasted")
 REPS = {"with": 2, "without": 2, "samples-pasted": 1}
@@ -58,23 +58,19 @@ def read_json(path):
 
 
 def write_json(path, obj):
-    """UTF-8, LF, ensure_ascii False, trailing newline, atomic replace."""
-    path = Path(path)
-    path.parent.mkdir(parents=True, exist_ok=True)
-    tmp = path.with_name("." + path.name + ".tmp")
-    with open(str(tmp), "w", encoding="utf-8", newline="\n") as f:
-        json.dump(obj, f, indent=1, ensure_ascii=False)
-        f.write("\n")
-    os.replace(str(tmp), str(path))
+    """Committed JSON artifact: sanitized by eval/lib/artifacts (home path,
+    user name, emails), UTF-8, LF, ensure_ascii False, trailing newline."""
+    return artifacts.write_committed_json(path, obj)
 
 
 def write_text(path, text):
-    path = Path(path)
-    path.parent.mkdir(parents=True, exist_ok=True)
-    tmp = path.with_name("." + path.name + ".tmp")
-    with open(str(tmp), "w", encoding="utf-8", newline="\n") as f:
-        f.write(text)
-    os.replace(str(tmp), str(path))
+    """Committed text artifact, sanitized by eval/lib/artifacts."""
+    return artifacts.write_committed(path, text)
+
+
+def evidence_dir(*parts):
+    """Raw evidence folder outside the repo (eval/lib/artifacts.evidence_dir)."""
+    return artifacts.evidence_dir(*parts)
 
 
 def load_split(path=SPLIT_JSON):

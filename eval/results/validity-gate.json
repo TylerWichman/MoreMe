@@ -1,648 +1,648 @@
 {
- "schema_version": "1",
- "created": "2026-10-20T10:31",
- "data": "train split (candidate profiles) and dev split (chunks); held-out text not opened; target lengths from eval/split.json held-out word counts",
- "metric": "delta_fw (Burrows Delta over the 150 function words, eval/reference_stats.json)",
- "k": 6,
- "chance": 0.16666666666666666,
- "threshold": 0.3333333333333333,
- "pooled_accuracy": 0.7142857142857143,
- "pooled_correct": 25,
- "pooled_chunks": 35,
- "persona_balanced_accuracy": 0.6761904761904761,
- "passed": true,
- "primary_in_force": "attribution",
- "primary_description": "nearest-persona attribution accuracy",
- "below_chance_personas": [],
- "per_persona": {
-  "era-c": {
-   "chunks": 10,
-   "correct": 8,
-   "accuracy": 0.8,
-   "target_words": 400,
-   "below_chance": false,
-   "most_confused_with": "modern-a"
+  "schema_version": "1",
+  "created": "2026-10-20T16:40",
+  "data": "train split (candidate profiles) and dev split (chunks); held-out text not opened; target lengths from eval/split.json held-out word counts",
+  "metric": "delta_fw (Burrows Delta over the 150 function words, eval/reference_stats.json)",
+  "k": 6,
+  "chance": 0.16666666666666666,
+  "threshold": 0.3333333333333333,
+  "pooled_accuracy": 0.7142857142857143,
+  "pooled_correct": 25,
+  "pooled_chunks": 35,
+  "persona_balanced_accuracy": 0.6761904761904761,
+  "passed": true,
+  "primary_in_force": "attribution",
+  "primary_description": "nearest-persona attribution accuracy",
+  "below_chance_personas": [],
+  "per_persona": {
+    "era-c": {
+      "chunks": 10,
+      "correct": 8,
+      "accuracy": 0.8,
+      "target_words": 400,
+      "below_chance": false,
+      "most_confused_with": "modern-a"
+    },
+    "era-d": {
+      "chunks": 5,
+      "correct": 2,
+      "accuracy": 0.4,
+      "target_words": 400,
+      "below_chance": false,
+      "most_confused_with": "modern-a"
+    },
+    "era-e": {
+      "chunks": 4,
+      "correct": 2,
+      "accuracy": 0.5,
+      "target_words": 400,
+      "below_chance": false,
+      "most_confused_with": "era-f"
+    },
+    "era-f": {
+      "chunks": 4,
+      "correct": 2,
+      "accuracy": 0.5,
+      "target_words": 400,
+      "below_chance": false,
+      "most_confused_with": "modern-a"
+    },
+    "modern-a": {
+      "chunks": 5,
+      "correct": 5,
+      "accuracy": 1.0,
+      "target_words": 400,
+      "below_chance": false,
+      "most_confused_with": null
+    },
+    "modern-b": {
+      "chunks": 7,
+      "correct": 6,
+      "accuracy": 0.8571428571428571,
+      "target_words": 400,
+      "below_chance": false,
+      "most_confused_with": "modern-a"
+    }
   },
-  "era-d": {
-   "chunks": 5,
-   "correct": 2,
-   "accuracy": 0.4,
-   "target_words": 400,
-   "below_chance": false,
-   "most_confused_with": "modern-a"
+  "confusion": {
+    "rows": "true persona (dev chunks)",
+    "columns": "predicted persona",
+    "table": {
+      "era-c": {
+        "era-c": 8,
+        "era-d": 1,
+        "era-e": 0,
+        "era-f": 0,
+        "modern-a": 1,
+        "modern-b": 0
+      },
+      "era-d": {
+        "era-c": 0,
+        "era-d": 2,
+        "era-e": 1,
+        "era-f": 0,
+        "modern-a": 2,
+        "modern-b": 0
+      },
+      "era-e": {
+        "era-c": 0,
+        "era-d": 0,
+        "era-e": 2,
+        "era-f": 2,
+        "modern-a": 0,
+        "modern-b": 0
+      },
+      "era-f": {
+        "era-c": 0,
+        "era-d": 0,
+        "era-e": 0,
+        "era-f": 2,
+        "modern-a": 2,
+        "modern-b": 0
+      },
+      "modern-a": {
+        "era-c": 0,
+        "era-d": 0,
+        "era-e": 0,
+        "era-f": 0,
+        "modern-a": 5,
+        "modern-b": 0
+      },
+      "modern-b": {
+        "era-c": 0,
+        "era-d": 0,
+        "era-e": 0,
+        "era-f": 0,
+        "modern-a": 1,
+        "modern-b": 6
+      }
+    }
   },
-  "era-e": {
-   "chunks": 4,
-   "correct": 2,
-   "accuracy": 0.5,
-   "target_words": 400,
-   "below_chance": false,
-   "most_confused_with": "era-f"
-  },
-  "era-f": {
-   "chunks": 4,
-   "correct": 2,
-   "accuracy": 0.5,
-   "target_words": 400,
-   "below_chance": false,
-   "most_confused_with": "modern-a"
-  },
-  "modern-a": {
-   "chunks": 5,
-   "correct": 5,
-   "accuracy": 1.0,
-   "target_words": 400,
-   "below_chance": false,
-   "most_confused_with": null
-  },
-  "modern-b": {
-   "chunks": 7,
-   "correct": 6,
-   "accuracy": 0.8571428571428571,
-   "target_words": 400,
-   "below_chance": false,
-   "most_confused_with": "modern-a"
-  }
- },
- "confusion": {
-  "rows": "true persona (dev chunks)",
-  "columns": "predicted persona",
-  "table": {
-   "era-c": {
-    "era-c": 8,
-    "era-d": 1,
-    "era-e": 0,
-    "era-f": 0,
-    "modern-a": 1,
-    "modern-b": 0
-   },
-   "era-d": {
-    "era-c": 0,
-    "era-d": 2,
-    "era-e": 1,
-    "era-f": 0,
-    "modern-a": 2,
-    "modern-b": 0
-   },
-   "era-e": {
-    "era-c": 0,
-    "era-d": 0,
-    "era-e": 2,
-    "era-f": 2,
-    "modern-a": 0,
-    "modern-b": 0
-   },
-   "era-f": {
-    "era-c": 0,
-    "era-d": 0,
-    "era-e": 0,
-    "era-f": 2,
-    "modern-a": 2,
-    "modern-b": 0
-   },
-   "modern-a": {
-    "era-c": 0,
-    "era-d": 0,
-    "era-e": 0,
-    "era-f": 0,
-    "modern-a": 5,
-    "modern-b": 0
-   },
-   "modern-b": {
-    "era-c": 0,
-    "era-d": 0,
-    "era-e": 0,
-    "era-f": 0,
-    "modern-a": 1,
-    "modern-b": 6
-   }
-  }
- },
- "chunks": [
-  {
-   "persona": "era-c",
-   "chunk": 0,
-   "words": 400,
-   "predicted": "era-c",
-   "correct": true,
-   "deltas": {
-    "era-c": 0.8901,
-    "era-d": 1.0068,
-    "era-e": 0.9529,
-    "era-f": 1.1554,
-    "modern-a": 1.0189,
-    "modern-b": 1.0664
-   }
-  },
-  {
-   "persona": "era-c",
-   "chunk": 1,
-   "words": 400,
-   "predicted": "era-c",
-   "correct": true,
-   "deltas": {
-    "era-c": 0.9861,
-    "era-d": 1.1138,
-    "era-e": 1.0708,
-    "era-f": 1.1909,
-    "modern-a": 1.0145,
-    "modern-b": 1.1087
-   }
-  },
-  {
-   "persona": "era-c",
-   "chunk": 2,
-   "words": 400,
-   "predicted": "modern-a",
-   "correct": false,
-   "deltas": {
-    "era-c": 1.1728,
-    "era-d": 1.2678,
-    "era-e": 1.2993,
-    "era-f": 1.3933,
-    "modern-a": 1.1678,
-    "modern-b": 1.2408
-   }
-  },
-  {
-   "persona": "era-c",
-   "chunk": 3,
-   "words": 400,
-   "predicted": "era-c",
-   "correct": true,
-   "deltas": {
-    "era-c": 1.1738,
-    "era-d": 1.2601,
-    "era-e": 1.2112,
-    "era-f": 1.4047,
-    "modern-a": 1.2338,
-    "modern-b": 1.2682
-   }
-  },
-  {
-   "persona": "era-c",
-   "chunk": 4,
-   "words": 400,
-   "predicted": "era-d",
-   "correct": false,
-   "deltas": {
-    "era-c": 1.0104,
-    "era-d": 0.9967,
-    "era-e": 1.0864,
-    "era-f": 1.1751,
-    "modern-a": 1.039,
-    "modern-b": 1.0319
-   }
-  },
-  {
-   "persona": "era-c",
-   "chunk": 5,
-   "words": 400,
-   "predicted": "era-c",
-   "correct": true,
-   "deltas": {
-    "era-c": 0.9522,
-    "era-d": 1.0654,
-    "era-e": 1.0633,
-    "era-f": 1.162,
-    "modern-a": 1.04,
-    "modern-b": 1.0733
-   }
-  },
-  {
-   "persona": "era-c",
-   "chunk": 6,
-   "words": 400,
-   "predicted": "era-c",
-   "correct": true,
-   "deltas": {
-    "era-c": 1.0577,
-    "era-d": 1.1168,
-    "era-e": 1.1432,
-    "era-f": 1.2703,
-    "modern-a": 1.1356,
-    "modern-b": 1.1774
-   }
-  },
-  {
-   "persona": "era-c",
-   "chunk": 7,
-   "words": 400,
-   "predicted": "era-c",
-   "correct": true,
-   "deltas": {
-    "era-c": 0.8992,
-    "era-d": 1.0476,
-    "era-e": 1.0442,
-    "era-f": 1.2185,
-    "modern-a": 1.1222,
-    "modern-b": 1.1255
-   }
-  },
-  {
-   "persona": "era-c",
-   "chunk": 8,
-   "words": 400,
-   "predicted": "era-c",
-   "correct": true,
-   "deltas": {
-    "era-c": 0.8907,
-    "era-d": 0.9755,
-    "era-e": 1.0043,
-    "era-f": 1.1347,
-    "modern-a": 0.9931,
-    "modern-b": 1.0788
-   }
-  },
-  {
-   "persona": "era-c",
-   "chunk": 9,
-   "words": 400,
-   "predicted": "era-c",
-   "correct": true,
-   "deltas": {
-    "era-c": 0.8859,
-    "era-d": 0.9627,
-    "era-e": 0.9796,
-    "era-f": 1.0506,
-    "modern-a": 0.9995,
-    "modern-b": 0.9887
-   }
-  },
-  {
-   "persona": "era-d",
-   "chunk": 0,
-   "words": 400,
-   "predicted": "modern-a",
-   "correct": false,
-   "deltas": {
-    "era-c": 1.1585,
-    "era-d": 1.1275,
-    "era-e": 1.127,
-    "era-f": 1.2067,
-    "modern-a": 1.082,
-    "modern-b": 1.138
-   }
-  },
-  {
-   "persona": "era-d",
-   "chunk": 1,
-   "words": 400,
-   "predicted": "era-d",
-   "correct": true,
-   "deltas": {
-    "era-c": 1.0042,
-    "era-d": 0.951,
-    "era-e": 0.9798,
-    "era-f": 0.9785,
-    "modern-a": 0.9655,
-    "modern-b": 1.0332
-   }
-  },
-  {
-   "persona": "era-d",
-   "chunk": 2,
-   "words": 400,
-   "predicted": "era-d",
-   "correct": true,
-   "deltas": {
-    "era-c": 1.5261,
-    "era-d": 1.4895,
-    "era-e": 1.5411,
-    "era-f": 1.63,
-    "modern-a": 1.5429,
-    "modern-b": 1.6042
-   }
-  },
-  {
-   "persona": "era-d",
-   "chunk": 3,
-   "words": 400,
-   "predicted": "modern-a",
-   "correct": false,
-   "deltas": {
-    "era-c": 1.0108,
-    "era-d": 0.9538,
-    "era-e": 0.963,
-    "era-f": 1.0628,
-    "modern-a": 0.9308,
-    "modern-b": 1.0046
-   }
-  },
-  {
-   "persona": "era-d",
-   "chunk": 4,
-   "words": 400,
-   "predicted": "era-e",
-   "correct": false,
-   "deltas": {
-    "era-c": 1.0951,
-    "era-d": 0.9721,
-    "era-e": 0.9572,
-    "era-f": 1.0299,
-    "modern-a": 1.0229,
-    "modern-b": 1.0132
-   }
-  },
-  {
-   "persona": "era-e",
-   "chunk": 0,
-   "words": 400,
-   "predicted": "era-f",
-   "correct": false,
-   "deltas": {
-    "era-c": 1.1344,
-    "era-d": 1.1056,
-    "era-e": 0.9446,
-    "era-f": 0.9194,
-    "modern-a": 0.9641,
-    "modern-b": 0.9353
-   }
-  },
-  {
-   "persona": "era-e",
-   "chunk": 1,
-   "words": 400,
-   "predicted": "era-e",
-   "correct": true,
-   "deltas": {
-    "era-c": 1.0688,
-    "era-d": 1.0783,
-    "era-e": 0.9993,
-    "era-f": 1.0971,
-    "modern-a": 1.0511,
-    "modern-b": 1.0449
-   }
-  },
-  {
-   "persona": "era-e",
-   "chunk": 2,
-   "words": 400,
-   "predicted": "era-f",
-   "correct": false,
-   "deltas": {
-    "era-c": 1.2073,
-    "era-d": 1.1458,
-    "era-e": 1.0426,
-    "era-f": 1.0193,
-    "modern-a": 1.1679,
-    "modern-b": 1.1335
-   }
-  },
-  {
-   "persona": "era-e",
-   "chunk": 3,
-   "words": 400,
-   "predicted": "era-e",
-   "correct": true,
-   "deltas": {
-    "era-c": 0.9449,
-    "era-d": 0.9468,
-    "era-e": 0.7909,
-    "era-f": 0.9503,
-    "modern-a": 0.884,
-    "modern-b": 0.9105
-   }
-  },
-  {
-   "persona": "era-f",
-   "chunk": 0,
-   "words": 400,
-   "predicted": "modern-a",
-   "correct": false,
-   "deltas": {
-    "era-c": 1.4251,
-    "era-d": 1.4431,
-    "era-e": 1.2972,
-    "era-f": 1.213,
-    "modern-a": 1.2119,
-    "modern-b": 1.2419
-   }
-  },
-  {
-   "persona": "era-f",
-   "chunk": 1,
-   "words": 400,
-   "predicted": "era-f",
-   "correct": true,
-   "deltas": {
-    "era-c": 1.2043,
-    "era-d": 1.2089,
-    "era-e": 1.0284,
-    "era-f": 1.0086,
-    "modern-a": 1.1148,
-    "modern-b": 1.1188
-   }
-  },
-  {
-   "persona": "era-f",
-   "chunk": 2,
-   "words": 400,
-   "predicted": "era-f",
-   "correct": true,
-   "deltas": {
-    "era-c": 1.0944,
-    "era-d": 1.1091,
-    "era-e": 0.9691,
-    "era-f": 0.8784,
-    "modern-a": 0.9492,
-    "modern-b": 0.927
-   }
-  },
-  {
-   "persona": "era-f",
-   "chunk": 3,
-   "words": 400,
-   "predicted": "modern-a",
-   "correct": false,
-   "deltas": {
-    "era-c": 1.1016,
-    "era-d": 1.1352,
-    "era-e": 1.0147,
-    "era-f": 0.9733,
-    "modern-a": 0.9426,
-    "modern-b": 0.9883
-   }
-  },
-  {
-   "persona": "modern-a",
-   "chunk": 0,
-   "words": 400,
-   "predicted": "modern-a",
-   "correct": true,
-   "deltas": {
-    "era-c": 1.0274,
-    "era-d": 1.0734,
-    "era-e": 0.9982,
-    "era-f": 1.0639,
-    "modern-a": 0.7815,
-    "modern-b": 0.86
-   }
-  },
-  {
-   "persona": "modern-a",
-   "chunk": 1,
-   "words": 400,
-   "predicted": "modern-a",
-   "correct": true,
-   "deltas": {
-    "era-c": 1.1375,
-    "era-d": 1.0991,
-    "era-e": 1.0222,
-    "era-f": 0.976,
-    "modern-a": 0.8327,
-    "modern-b": 0.9383
-   }
-  },
-  {
-   "persona": "modern-a",
-   "chunk": 2,
-   "words": 400,
-   "predicted": "modern-a",
-   "correct": true,
-   "deltas": {
-    "era-c": 0.9889,
-    "era-d": 1.038,
-    "era-e": 0.9457,
-    "era-f": 0.9756,
-    "modern-a": 0.7361,
-    "modern-b": 0.7927
-   }
-  },
-  {
-   "persona": "modern-a",
-   "chunk": 3,
-   "words": 400,
-   "predicted": "modern-a",
-   "correct": true,
-   "deltas": {
-    "era-c": 1.0272,
-    "era-d": 1.0166,
-    "era-e": 0.8546,
-    "era-f": 0.9124,
-    "modern-a": 0.7971,
-    "modern-b": 0.8264
-   }
-  },
-  {
-   "persona": "modern-a",
-   "chunk": 4,
-   "words": 400,
-   "predicted": "modern-a",
-   "correct": true,
-   "deltas": {
-    "era-c": 1.0883,
-    "era-d": 1.0836,
-    "era-e": 0.9794,
-    "era-f": 1.0822,
-    "modern-a": 0.86,
-    "modern-b": 0.9174
-   }
-  },
-  {
-   "persona": "modern-b",
-   "chunk": 0,
-   "words": 400,
-   "predicted": "modern-b",
-   "correct": true,
-   "deltas": {
-    "era-c": 1.1964,
-    "era-d": 1.2653,
-    "era-e": 1.1768,
-    "era-f": 1.2026,
-    "modern-a": 0.9942,
-    "modern-b": 0.9525
-   }
-  },
-  {
-   "persona": "modern-b",
-   "chunk": 1,
-   "words": 400,
-   "predicted": "modern-b",
-   "correct": true,
-   "deltas": {
-    "era-c": 1.243,
-    "era-d": 1.2746,
-    "era-e": 1.2053,
-    "era-f": 1.2314,
-    "modern-a": 1.1,
-    "modern-b": 0.9639
-   }
-  },
-  {
-   "persona": "modern-b",
-   "chunk": 2,
-   "words": 400,
-   "predicted": "modern-b",
-   "correct": true,
-   "deltas": {
-    "era-c": 1.2102,
-    "era-d": 1.2045,
-    "era-e": 1.143,
-    "era-f": 1.054,
-    "modern-a": 0.9914,
-    "modern-b": 0.9077
-   }
-  },
-  {
-   "persona": "modern-b",
-   "chunk": 3,
-   "words": 400,
-   "predicted": "modern-b",
-   "correct": true,
-   "deltas": {
-    "era-c": 1.1404,
-    "era-d": 1.166,
-    "era-e": 1.0991,
-    "era-f": 1.0791,
-    "modern-a": 0.9485,
-    "modern-b": 0.8438
-   }
-  },
-  {
-   "persona": "modern-b",
-   "chunk": 4,
-   "words": 400,
-   "predicted": "modern-b",
-   "correct": true,
-   "deltas": {
-    "era-c": 1.2548,
-    "era-d": 1.271,
-    "era-e": 1.144,
-    "era-f": 1.1677,
-    "modern-a": 1.0058,
-    "modern-b": 0.8932
-   }
-  },
-  {
-   "persona": "modern-b",
-   "chunk": 5,
-   "words": 400,
-   "predicted": "modern-b",
-   "correct": true,
-   "deltas": {
-    "era-c": 1.1133,
-    "era-d": 1.1504,
-    "era-e": 1.0191,
-    "era-f": 1.0278,
-    "modern-a": 0.8871,
-    "modern-b": 0.877
-   }
-  },
-  {
-   "persona": "modern-b",
-   "chunk": 6,
-   "words": 400,
-   "predicted": "modern-a",
-   "correct": false,
-   "deltas": {
-    "era-c": 1.0061,
-    "era-d": 1.0246,
-    "era-e": 0.9136,
-    "era-f": 0.9453,
-    "modern-a": 0.7108,
-    "modern-b": 0.7201
-   }
-  }
- ]
+  "chunks": [
+    {
+      "persona": "era-c",
+      "chunk": 0,
+      "words": 400,
+      "predicted": "era-c",
+      "correct": true,
+      "deltas": {
+        "era-c": 0.8901,
+        "era-d": 1.0068,
+        "era-e": 0.9529,
+        "era-f": 1.1554,
+        "modern-a": 1.0189,
+        "modern-b": 1.0664
+      }
+    },
+    {
+      "persona": "era-c",
+      "chunk": 1,
+      "words": 400,
+      "predicted": "era-c",
+      "correct": true,
+      "deltas": {
+        "era-c": 0.9861,
+        "era-d": 1.1138,
+        "era-e": 1.0708,
+        "era-f": 1.1909,
+        "modern-a": 1.0145,
+        "modern-b": 1.1087
+      }
+    },
+    {
+      "persona": "era-c",
+      "chunk": 2,
+      "words": 400,
+      "predicted": "modern-a",
+      "correct": false,
+      "deltas": {
+        "era-c": 1.1728,
+        "era-d": 1.2678,
+        "era-e": 1.2993,
+        "era-f": 1.3933,
+        "modern-a": 1.1678,
+        "modern-b": 1.2408
+      }
+    },
+    {
+      "persona": "era-c",
+      "chunk": 3,
+      "words": 400,
+      "predicted": "era-c",
+      "correct": true,
+      "deltas": {
+        "era-c": 1.1738,
+        "era-d": 1.2601,
+        "era-e": 1.2112,
+        "era-f": 1.4047,
+        "modern-a": 1.2338,
+        "modern-b": 1.2682
+      }
+    },
+    {
+      "persona": "era-c",
+      "chunk": 4,
+      "words": 400,
+      "predicted": "era-d",
+      "correct": false,
+      "deltas": {
+        "era-c": 1.0104,
+        "era-d": 0.9967,
+        "era-e": 1.0864,
+        "era-f": 1.1751,
+        "modern-a": 1.039,
+        "modern-b": 1.0319
+      }
+    },
+    {
+      "persona": "era-c",
+      "chunk": 5,
+      "words": 400,
+      "predicted": "era-c",
+      "correct": true,
+      "deltas": {
+        "era-c": 0.9522,
+        "era-d": 1.0654,
+        "era-e": 1.0633,
+        "era-f": 1.162,
+        "modern-a": 1.04,
+        "modern-b": 1.0733
+      }
+    },
+    {
+      "persona": "era-c",
+      "chunk": 6,
+      "words": 400,
+      "predicted": "era-c",
+      "correct": true,
+      "deltas": {
+        "era-c": 1.0577,
+        "era-d": 1.1168,
+        "era-e": 1.1432,
+        "era-f": 1.2703,
+        "modern-a": 1.1356,
+        "modern-b": 1.1774
+      }
+    },
+    {
+      "persona": "era-c",
+      "chunk": 7,
+      "words": 400,
+      "predicted": "era-c",
+      "correct": true,
+      "deltas": {
+        "era-c": 0.8992,
+        "era-d": 1.0476,
+        "era-e": 1.0442,
+        "era-f": 1.2185,
+        "modern-a": 1.1222,
+        "modern-b": 1.1255
+      }
+    },
+    {
+      "persona": "era-c",
+      "chunk": 8,
+      "words": 400,
+      "predicted": "era-c",
+      "correct": true,
+      "deltas": {
+        "era-c": 0.8907,
+        "era-d": 0.9755,
+        "era-e": 1.0043,
+        "era-f": 1.1347,
+        "modern-a": 0.9931,
+        "modern-b": 1.0788
+      }
+    },
+    {
+      "persona": "era-c",
+      "chunk": 9,
+      "words": 400,
+      "predicted": "era-c",
+      "correct": true,
+      "deltas": {
+        "era-c": 0.8859,
+        "era-d": 0.9627,
+        "era-e": 0.9796,
+        "era-f": 1.0506,
+        "modern-a": 0.9995,
+        "modern-b": 0.9887
+      }
+    },
+    {
+      "persona": "era-d",
+      "chunk": 0,
+      "words": 400,
+      "predicted": "modern-a",
+      "correct": false,
+      "deltas": {
+        "era-c": 1.1585,
+        "era-d": 1.1275,
+        "era-e": 1.127,
+        "era-f": 1.2067,
+        "modern-a": 1.082,
+        "modern-b": 1.138
+      }
+    },
+    {
+      "persona": "era-d",
+      "chunk": 1,
+      "words": 400,
+      "predicted": "era-d",
+      "correct": true,
+      "deltas": {
+        "era-c": 1.0042,
+        "era-d": 0.951,
+        "era-e": 0.9798,
+        "era-f": 0.9785,
+        "modern-a": 0.9655,
+        "modern-b": 1.0332
+      }
+    },
+    {
+      "persona": "era-d",
+      "chunk": 2,
+      "words": 400,
+      "predicted": "era-d",
+      "correct": true,
+      "deltas": {
+        "era-c": 1.5261,
+        "era-d": 1.4895,
+        "era-e": 1.5411,
+        "era-f": 1.63,
+        "modern-a": 1.5429,
+        "modern-b": 1.6042
+      }
+    },
+    {
+      "persona": "era-d",
+      "chunk": 3,
+      "words": 400,
+      "predicted": "modern-a",
+      "correct": false,
+      "deltas": {
+        "era-c": 1.0108,
+        "era-d": 0.9538,
+        "era-e": 0.963,
+        "era-f": 1.0628,
+        "modern-a": 0.9308,
+        "modern-b": 1.0046
+      }
+    },
+    {
+      "persona": "era-d",
+      "chunk": 4,
+      "words": 400,
+      "predicted": "era-e",
+      "correct": false,
+      "deltas": {
+        "era-c": 1.0951,
+        "era-d": 0.9721,
+        "era-e": 0.9572,
+        "era-f": 1.0299,
+        "modern-a": 1.0229,
+        "modern-b": 1.0132
+      }
+    },
+    {
+      "persona": "era-e",
+      "chunk": 0,
+      "words": 400,
+      "predicted": "era-f",
+      "correct": false,
+      "deltas": {
+        "era-c": 1.1344,
+        "era-d": 1.1056,
+        "era-e": 0.9446,
+        "era-f": 0.9194,
+        "modern-a": 0.9641,
+        "modern-b": 0.9353
+      }
+    },
+    {
+      "persona": "era-e",
+      "chunk": 1,
+      "words": 400,
+      "predicted": "era-e",
+      "correct": true,
+      "deltas": {
+        "era-c": 1.0688,
+        "era-d": 1.0783,
+        "era-e": 0.9993,
+        "era-f": 1.0971,
+        "modern-a": 1.0511,
+        "modern-b": 1.0449
+      }
+    },
+    {
+      "persona": "era-e",
+      "chunk": 2,
+      "words": 400,
+      "predicted": "era-f",
+      "correct": false,
+      "deltas": {
+        "era-c": 1.2073,
+        "era-d": 1.1458,
+        "era-e": 1.0426,
+        "era-f": 1.0193,
+        "modern-a": 1.1679,
+        "modern-b": 1.1335
+      }
+    },
+    {
+      "persona": "era-e",
+      "chunk": 3,
+      "words": 400,
+      "predicted": "era-e",
+      "correct": true,
+      "deltas": {
+        "era-c": 0.9449,
+        "era-d": 0.9468,
+        "era-e": 0.7909,
+        "era-f": 0.9503,
+        "modern-a": 0.884,
+        "modern-b": 0.9105
+      }
+    },
+    {
+      "persona": "era-f",
+      "chunk": 0,
+      "words": 400,
+      "predicted": "modern-a",
+      "correct": false,
+      "deltas": {
+        "era-c": 1.4251,
+        "era-d": 1.4431,
+        "era-e": 1.2972,
+        "era-f": 1.213,
+        "modern-a": 1.2119,
+        "modern-b": 1.2419
+      }
+    },
+    {
+      "persona": "era-f",
+      "chunk": 1,
+      "words": 400,
+      "predicted": "era-f",
+      "correct": true,
+      "deltas": {
+        "era-c": 1.2043,
+        "era-d": 1.2089,
+        "era-e": 1.0284,
+        "era-f": 1.0086,
+        "modern-a": 1.1148,
+        "modern-b": 1.1188
+      }
+    },
+    {
+      "persona": "era-f",
+      "chunk": 2,
+      "words": 400,
+      "predicted": "era-f",
+      "correct": true,
+      "deltas": {
+        "era-c": 1.0944,
+        "era-d": 1.1091,
+        "era-e": 0.9691,
+        "era-f": 0.8784,
+        "modern-a": 0.9492,
+        "modern-b": 0.927
+      }
+    },
+    {
+      "persona": "era-f",
+      "chunk": 3,
+      "words": 400,
+      "predicted": "modern-a",
+      "correct": false,
+      "deltas": {
+        "era-c": 1.1016,
+        "era-d": 1.1352,
+        "era-e": 1.0147,
+        "era-f": 0.9733,
+        "modern-a": 0.9426,
+        "modern-b": 0.9883
+      }
+    },
+    {
+      "persona": "modern-a",
+      "chunk": 0,
+      "words": 400,
+      "predicted": "modern-a",
+      "correct": true,
+      "deltas": {
+        "era-c": 1.0274,
+        "era-d": 1.0734,
+        "era-e": 0.9982,
+        "era-f": 1.0639,
+        "modern-a": 0.7815,
+        "modern-b": 0.86
+      }
+    },
+    {
+      "persona": "modern-a",
+      "chunk": 1,
+      "words": 400,
+      "predicted": "modern-a",
+      "correct": true,
+      "deltas": {
+        "era-c": 1.1375,
+        "era-d": 1.0991,
+        "era-e": 1.0222,
+        "era-f": 0.976,
+        "modern-a": 0.8327,
+        "modern-b": 0.9383
+      }
+    },
+    {
+      "persona": "modern-a",
+      "chunk": 2,
+      "words": 400,
+      "predicted": "modern-a",
+      "correct": true,
+      "deltas": {
+        "era-c": 0.9889,
+        "era-d": 1.038,
+        "era-e": 0.9457,
+        "era-f": 0.9756,
+        "modern-a": 0.7361,
+        "modern-b": 0.7927
+      }
+    },
+    {
+      "persona": "modern-a",
+      "chunk": 3,
+      "words": 400,
+      "predicted": "modern-a",
+      "correct": true,
+      "deltas": {
+        "era-c": 1.0272,
+        "era-d": 1.0166,
+        "era-e": 0.8546,
+        "era-f": 0.9124,
+        "modern-a": 0.7971,
+        "modern-b": 0.8264
+      }
+    },
+    {
+      "persona": "modern-a",
+      "chunk": 4,
+      "words": 400,
+      "predicted": "modern-a",
+      "correct": true,
+      "deltas": {
+        "era-c": 1.0883,
+        "era-d": 1.0836,
+        "era-e": 0.9794,
+        "era-f": 1.0822,
+        "modern-a": 0.86,
+        "modern-b": 0.9174
+      }
+    },
+    {
+      "persona": "modern-b",
+      "chunk": 0,
+      "words": 400,
+      "predicted": "modern-b",
+      "correct": true,
+      "deltas": {
+        "era-c": 1.1964,
+        "era-d": 1.2653,
+        "era-e": 1.1768,
+        "era-f": 1.2026,
+        "modern-a": 0.9942,
+        "modern-b": 0.9525
+      }
+    },
+    {
+      "persona": "modern-b",
+      "chunk": 1,
+      "words": 400,
+      "predicted": "modern-b",
+      "correct": true,
+      "deltas": {
+        "era-c": 1.243,
+        "era-d": 1.2746,
+        "era-e": 1.2053,
+        "era-f": 1.2314,
+        "modern-a": 1.1,
+        "modern-b": 0.9639
+      }
+    },
+    {
+      "persona": "modern-b",
+      "chunk": 2,
+      "words": 400,
+      "predicted": "modern-b",
+      "correct": true,
+      "deltas": {
+        "era-c": 1.2102,
+        "era-d": 1.2045,
+        "era-e": 1.143,
+        "era-f": 1.054,
+        "modern-a": 0.9914,
+        "modern-b": 0.9077
+      }
+    },
+    {
+      "persona": "modern-b",
+      "chunk": 3,
+      "words": 400,
+      "predicted": "modern-b",
+      "correct": true,
+      "deltas": {
+        "era-c": 1.1404,
+        "era-d": 1.166,
+        "era-e": 1.0991,
+        "era-f": 1.0791,
+        "modern-a": 0.9485,
+        "modern-b": 0.8438
+      }
+    },
+    {
+      "persona": "modern-b",
+      "chunk": 4,
+      "words": 400,
+      "predicted": "modern-b",
+      "correct": true,
+      "deltas": {
+        "era-c": 1.2548,
+        "era-d": 1.271,
+        "era-e": 1.144,
+        "era-f": 1.1677,
+        "modern-a": 1.0058,
+        "modern-b": 0.8932
+      }
+    },
+    {
+      "persona": "modern-b",
+      "chunk": 5,
+      "words": 400,
+      "predicted": "modern-b",
+      "correct": true,
+      "deltas": {
+        "era-c": 1.1133,
+        "era-d": 1.1504,
+        "era-e": 1.0191,
+        "era-f": 1.0278,
+        "modern-a": 0.8871,
+        "modern-b": 0.877
+      }
+    },
+    {
+      "persona": "modern-b",
+      "chunk": 6,
+      "words": 400,
+      "predicted": "modern-a",
+      "correct": false,
+      "deltas": {
+        "era-c": 1.0061,
+        "era-d": 1.0246,
+        "era-e": 0.9136,
+        "era-f": 0.9453,
+        "modern-a": 0.7108,
+        "modern-b": 0.7201
+      }
+    }
+  ]
 }

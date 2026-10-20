@@ -6,6 +6,7 @@
     python -m harness prereg check|hashes|write-hashes|freeze
     python -m harness tasks check|build
     python -m harness leakage
+    python -m harness gen-skill --persona modern-a --run-id ID   (persona skill via the e2e driver)
 
 `run` makes model calls (child `claude -p`) through eval/lib/childrun.py. The
 others make none. DIR for --evidence-dir must be outside the repo: it receives
@@ -23,12 +24,14 @@ def cmd_run(argv):
     ap = argparse.ArgumentParser(prog="harness run")
     ap.add_argument("--persona", action="append", required=True)
     ap.add_argument("--split", choices=("dev", "heldout"), required=True)
-    ap.add_argument("--evidence-dir", required=True)
+    ap.add_argument("--evidence-dir", help="default: eval/lib/artifacts.evidence_dir('eval', <results name>)")
     ap.add_argument("--results", required=True)
     ap.add_argument("--mode", choices=("auto", "explicit"), default="auto")
     ap.add_argument("--task", action="append", help="limit to these task ids")
     ap.add_argument("--max-calls", type=int, default=120)
     a = ap.parse_args(argv)
+    if not a.evidence_dir:
+        a.evidence_dir = str(common.evidence_dir("eval", Path(a.results).name))
     ev = Path(a.evidence_dir).resolve()
     try:
         ev.relative_to(common.REPO)
@@ -61,6 +64,9 @@ def main(argv=None):
         return cmd_run(rest)
     if cmd == "leakage":
         return cmd_leakage(rest)
+    if cmd == "gen-skill":
+        from harness import persona_gen
+        return persona_gen.main(rest)
     if cmd == "validity":
         from harness import validity
         return validity.main(rest)
