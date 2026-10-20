@@ -1,0 +1,440 @@
+{
+  "run_id": "e2e-20261020-r2",
+  "persona": "era-c",
+  "started": "2026-10-20T10:35:02",
+  "cli_version": "2.1.303 (Claude Code)",
+  "model_pinned": "claude-sonnet-5-5",
+  "session_id": "133d339c-df37-4445-8b6d-73cab956ddad",
+  "scratch": "~\\AppData\\Local\\Temp\\moreme-e2e\\e2e-20261020-r2",
+  "interviewee_scratch": "~\\AppData\\Local\\Temp\\moreme-e2e\\e2e-20261020-r2-iv",
+  "train_files_in_scratch": [
+    "era-c/era-c-06.txt",
+    "era-c/era-c-07.txt",
+    "era-c/era-c-08.txt",
+    "era-c/era-c-10.txt",
+    "era-c/era-c-11.txt",
+    "era-c/era-c-12.txt"
+  ],
+  "opener": "I'd like to make my voice skill",
+  "skill_flags_first": [
+    "--model",
+    "claude-sonnet-5-5",
+    "--session-id",
+    "133d339c-df37-4445-8b6d-73cab956ddad",
+    "--setting-sources",
+    "project",
+    "--strict-mcp-config",
+    "--permission-mode",
+    "acceptEdits",
+    "--permission-prompts",
+    "none",
+    "--allowedTools=Skill(moreme),Bash(python --version),Bash(py -3 --version),Bash(python3 --version),Bash(python .claude/skills/moreme/analyze.py:*),Bash(py -3 .claude/skills/moreme/analyze.py:*)"
+  ],
+  "skill_flags_later": [
+    "--model",
+    "claude-sonnet-5-5",
+    "--resume",
+    "133d339c-df37-4445-8b6d-73cab956ddad",
+    "--setting-sources",
+    "project",
+    "--strict-mcp-config",
+    "--permission-mode",
+    "acceptEdits",
+    "--permission-prompts",
+    "none",
+    "--allowedTools=Skill(moreme),Bash(python --version),Bash(py -3 --version),Bash(python3 --version),Bash(python .claude/skills/moreme/analyze.py:*),Bash(py -3 .claude/skills/moreme/analyze.py:*)"
+  ],
+  "interviewee_flags": [
+    "--model",
+    "claude-sonnet-5-5",
+    "--no-session-persistence",
+    "--tools",
+    "",
+    "--setting-sources",
+    "project",
+    "--strict-mcp-config"
+  ],
+  "allowed_tools": [
+    "Skill(moreme)",
+    "Bash(python --version)",
+    "Bash(py -3 --version)",
+    "Bash(python3 --version)",
+    "Bash(python .claude/skills/moreme/analyze.py:*)",
+    "Bash(py -3 .claude/skills/moreme/analyze.py:*)"
+  ],
+  "env_removed": "every variable starting with CLAUDE (any case) and AI_AGENT",
+  "env_set_after_scrub": {
+    "DISABLE_AUTOUPDATER": "1",
+    "CLAUDE_CODE_DISABLE_AUTO_MEMORY": "1",
+    "MOREME_TEST_GUARD": "1"
+  },
+  "scratch_settings": {
+    "enabledPlugins": {
+      "cc-plugin-agents-md@builtin": false,
+      "cc-plugin-telemetry@builtin": false,
+      "cc-plugin-plugin-authoring@builtin": false
+    },
+    "disableBundledSkills": true,
+    "skillOverrides": {
+      "design": "off",
+      "doctor": "off"
+    },
+    "autoMemoryEnabled": false,
+    "permissions": {
+      "deny": [
+        "Edit(~/.claude/**)",
+        "Write(~/.claude/**)",
+        "Edit(~/.claude/**)",
+        "Write(~/.claude/**)"
+      ]
+    }
+  },
+  "license_header": "Corpus-derived content (persona era-c). Source texts are in the public domain in the USA. Sources: eval/corpus/PROVENANCE.md",
+  "banner_source": "public-domain texts by Elinore Pruitt Stewart (Letters of a Woman Homesteader, 1914, Project Gutenberg eBook #16623)",
+  "persona_first_name": "Hattie",
+  "evidence_dir": "~\\Documents\\OneShot\\vault\\clients\\operator\\snapshots\\moreme-public-release\\evidence\\e2e\\runs\\e2e-20261020-r2",
+  "turns": [
+    {
+      "turn": 0,
+      "role": "skill",
+      "label": "skill-t00",
+      "user": "I'd like to make my voice skill",
+      "latency_s": 27.19,
+      "wall_start": 1792506903.1746361,
+      "expected_skills": [
+        "moreme"
+      ],
+      "invalid": [],
+      "steps_done": [],
+      "num_turns": 5,
+      "is_error": false
+    },
+    {
+      "turn": 1,
+      "role": "interviewee",
+      "label": "interviewee-t01",
+      "answer": "I'm Hattie, and mostly I use it to help me write letters and emails to friends and family, plus the occasional short note to a neighbor about borrowing a tool or dropping off eggs.",
+      "latency_s": 5.22,
+      "wall_start": 1792506930.3887901,
+      "invalid": []
+    },
+    {
+      "turn": 1,
+      "role": "skill",
+      "label": "skill-t01",
+      "user": "I'm Hattie, and mostly I use it to help me write letters and emails to friends and family, plus the occasional short note to a neighbor about borrowing a tool or dropping off eggs.",
+      "latency_s": 5.47,
+      "wall_start": 1792506935.6920285,
+      "expected_skills": [
+        "moreme"
+      ],
+      "invalid": [],
+      "steps_done": [],
+      "num_turns": 1,
+      "is_error": false
+    },
+    {
+      "turn": 2,
+      "role": "interviewee",
+      "label": "interviewee-t02",
+      "answer": "Mostly my old friend and former employer back in the city, who gets the long letters, plus my sisters and a few cousins. The neighbors only get the short notes about eggs and borrowed tools.",
+      "latency_s": 5.6,
+      "wall_start": 1792506941.2656355,
+      "invalid": []
+    },
+    {
+      "turn": 2,
+      "role": "skill",
+      "label": "skill-t02",
+      "user": "Mostly my old friend and former employer back in the city, who gets the long letters, plus my sisters and a few cousins. The neighbors only get the short notes about eggs and borrowed tools.",
+      "latency_s": 4.92,
+      "wall_start": 1792506946.946614,
+      "expected_skills": [
+        "moreme"
+      ],
+      "invalid": [],
+      "steps_done": [],
+      "num_turns": 1,
+      "is_error": false
+    },
+    {
+      "turn": 3,
+      "role": "interviewee",
+      "label": "interviewee-t03",
+      "answer": "Warm, funny, and practical.",
+      "latency_s": 4.88,
+      "wall_start": 1792506951.9766533,
+      "invalid": []
+    },
+    {
+      "turn": 3,
+      "role": "skill",
+      "label": "skill-t03",
+      "user": "Warm, funny, and practical.",
+      "latency_s": 4.1,
+      "wall_start": 1792506956.9491699,
+      "expected_skills": [
+        "moreme"
+      ],
+      "invalid": [],
+      "steps_done": [],
+      "num_turns": 1,
+      "is_error": false
+    },
+    {
+      "turn": 4,
+      "role": "interviewee",
+      "label": "interviewee-t04",
+      "answer": "Mostly the stiff, polished tone, like it's writing a press release instead of a letter to a friend. I can't stand \"I hope this finds you well,\" lists of three things, and anything that sounds too tidy, since real news about the neighbors and the weather wanders a bit.",
+      "latency_s": 3.87,
+      "wall_start": 1792506961.0969222,
+      "invalid": []
+    },
+    {
+      "turn": 4,
+      "role": "skill",
+      "label": "skill-t04",
+      "user": "Mostly the stiff, polished tone, like it's writing a press release instead of a letter to a friend. I can't stand \"I hope this finds you well,\" lists of three things, and anything that sounds too tidy, since real news about the neighbors and the weather wanders a bit.",
+      "latency_s": 4.48,
+      "wall_start": 1792506965.028994,
+      "expected_skills": [
+        "moreme"
+      ],
+      "invalid": [],
+      "steps_done": [],
+      "num_turns": 1,
+      "is_error": false
+    },
+    {
+      "turn": 5,
+      "role": "interviewee",
+      "label": "interviewee-t05",
+      "answer": "Never any emoji, and I sign every letter just \"Hattie\" on a line by itself, usually after a little line like \"Write soon\" or \"Love to all.\" I use exclamation marks sparingly, maybe one or two in a long letter, and I do like a good long sentence with a dash or a parenthetical wandering off in the middle.",
+      "latency_s": 4.46,
+      "wall_start": 1792506969.5517948,
+      "invalid": []
+    },
+    {
+      "turn": 5,
+      "role": "skill",
+      "label": "skill-t05",
+      "user": "Never any emoji, and I sign every letter just \"Hattie\" on a line by itself, usually after a little line like \"Write soon\" or \"Love to all.\" I use exclamation marks sparingly, maybe one or two in a long letter, and I do like a good long sentence with a dash or a parenthetical wandering off in the middle.",
+      "latency_s": 12.98,
+      "wall_start": 1792506974.0564158,
+      "expected_skills": [
+        "moreme"
+      ],
+      "invalid": [],
+      "steps_done": [
+        "1"
+      ],
+      "num_turns": 3,
+      "is_error": false
+    },
+    {
+      "turn": 6,
+      "role": "interviewee",
+      "label": "interviewee-t06",
+      "answer": "my-writing/era-c-06.txt, my-writing/era-c-07.txt, my-writing/era-c-08.txt",
+      "latency_s": 2.66,
+      "wall_start": 1792506987.09041,
+      "invalid": []
+    },
+    {
+      "turn": 6,
+      "role": "skill",
+      "label": "skill-t06",
+      "user": "my-writing/era-c-06.txt, my-writing/era-c-07.txt, my-writing/era-c-08.txt",
+      "latency_s": 9.98,
+      "wall_start": 1792506989.7924783,
+      "expected_skills": [
+        "moreme"
+      ],
+      "invalid": [],
+      "steps_done": [],
+      "num_turns": 4,
+      "is_error": false
+    },
+    {
+      "turn": 7,
+      "role": "interviewee",
+      "label": "interviewee-t07",
+      "answer": "Yes, those are mine. They're letters I wrote to my old friend back in the city, and the egg notes are just a different sort of thing, much shorter and with less weather in them.",
+      "latency_s": 5.4,
+      "wall_start": 1792506999.811795,
+      "invalid": []
+    },
+    {
+      "turn": 7,
+      "role": "skill",
+      "label": "skill-t07",
+      "user": "Yes, those are mine. They're letters I wrote to my old friend back in the city, and the egg notes are just a different sort of thing, much shorter and with less weather in them.",
+      "latency_s": 101.06,
+      "wall_start": 1792507005.2565835,
+      "expected_skills": [
+        "moreme"
+      ],
+      "invalid": [],
+      "steps_done": [
+        "2",
+        "3",
+        "4"
+      ],
+      "num_turns": 14,
+      "is_error": false
+    },
+    {
+      "turn": 8,
+      "role": "interviewee",
+      "label": "interviewee-t08",
+      "answer": "A short letter to my old friend telling her the first snow came early this year and asking how her winter is going.",
+      "latency_s": 2.82,
+      "wall_start": 1792507106.3534858,
+      "invalid": []
+    },
+    {
+      "turn": 8,
+      "role": "skill",
+      "label": "skill-t08",
+      "user": "A short letter to my old friend telling her the first snow came early this year and asking how her winter is going.",
+      "latency_s": 24.9,
+      "wall_start": 1792507109.2093856,
+      "expected_skills": [
+        "moreme"
+      ],
+      "invalid": [],
+      "steps_done": [],
+      "num_turns": 8,
+      "is_error": false
+    },
+    {
+      "turn": 9,
+      "role": "interviewee",
+      "label": "interviewee-t09",
+      "answer": "A",
+      "latency_s": 3.97,
+      "wall_start": 1792507134.1672661,
+      "invalid": []
+    },
+    {
+      "turn": 9,
+      "role": "skill",
+      "label": "skill-t09",
+      "user": "A",
+      "latency_s": 10.95,
+      "wall_start": 1792507138.184587,
+      "expected_skills": [
+        "moreme"
+      ],
+      "invalid": [],
+      "steps_done": [
+        "5"
+      ],
+      "num_turns": 3,
+      "is_error": false
+    },
+    {
+      "turn": 10,
+      "role": "interviewee",
+      "label": "interviewee-t10",
+      "answer": "Project folder.",
+      "latency_s": 3.22,
+      "wall_start": 1792507149.177807,
+      "invalid": []
+    },
+    {
+      "turn": 10,
+      "role": "skill",
+      "label": "skill-t10",
+      "user": "Project folder.",
+      "latency_s": 19.01,
+      "wall_start": 1792507152.4471183,
+      "expected_skills": [
+        "moreme"
+      ],
+      "invalid": [],
+      "steps_done": [
+        "6"
+      ],
+      "num_turns": 5,
+      "is_error": false
+    }
+  ],
+  "status": "completed",
+  "finished": "2026-10-20T10:39:31",
+  "spill_new": [
+    "HOME-AppData-Local-Temp-moreme-e2e-e2e-20261020-r2"
+  ],
+  "installed_skill_md_exists": true,
+  "validate_skill": {
+    "ok": true,
+    "errors": [],
+    "warnings": []
+  },
+  "stage_timings": [
+    {
+      "stage": 1,
+      "seconds": 83.9
+    },
+    {
+      "stage": 2,
+      "seconds": 119.3
+    },
+    {
+      "stage": 3,
+      "seconds": 0.0
+    },
+    {
+      "stage": 4,
+      "seconds": 0.0
+    },
+    {
+      "stage": 5,
+      "seconds": 42.8
+    },
+    {
+      "stage": 6,
+      "seconds": 22.3
+    }
+  ],
+  "chat_visibility": {
+    "ok": false,
+    "done_lines_in_order": true,
+    "stages": [
+      {
+        "stage": 1,
+        "done": true,
+        "opening": false
+      },
+      {
+        "stage": 2,
+        "done": true,
+        "opening": true,
+        "word_count": true
+      },
+      {
+        "stage": 3,
+        "done": true,
+        "opening": true,
+        "report_lines_shown": "0/10",
+        "report_shown": false
+      },
+      {
+        "stage": 4,
+        "done": true,
+        "opening": true
+      },
+      {
+        "stage": 5,
+        "done": true,
+        "opening": true
+      },
+      {
+        "stage": 6,
+        "done": true,
+        "opening": true
+      }
+    ],
+    "note": "Mechanical cross-check only; the clean-room reviewer decides R1-R6."
+  }
+}

@@ -1,0 +1,240 @@
+{
+  "run_id": "e2e-20261020-r2",
+  "reviewed": "2026-10-20T10:41:34",
+  "invalid": [],
+  "flags": [
+    "--model",
+    "claude-sonnet-5-5",
+    "--no-session-persistence",
+    "--tools=Read,Glob,Grep",
+    "--setting-sources",
+    "project",
+    "--strict-mcp-config",
+    "--permission-mode",
+    "default",
+    "--permission-prompts",
+    "none"
+  ],
+  "reviewer_scratch": "~\\AppData\\Local\\Temp\\moreme-e2e\\e2e-20261020-r2-review",
+  "verdict": {
+    "items": [
+      {
+        "id": "R1",
+        "pass": false,
+        "evidence": "transcript.md lines 104-151: the Skill call, Glob and Write of .gitignore all run before any chat text. The first **Assistant:** block (line 150) is only 'Question 1 of 5: ...'. Done line at line 250.",
+        "reason": "Stage 1 has no chat opening line and no permissions sentence before its first tool call. run-log says passed, but the chat requirement fails."
+      },
+      {
+        "id": "R2",
+        "pass": true,
+        "evidence": "line 252: 'Next, paste three or more things you wrote yourself...about 2 minutes' comes before the first Write at line 382. Word count at line 430 ('3 pieces and about 3,100 words'). Done line at line 451. run-log line 2 is passed.",
+        "reason": "Opening, running word count and done line are all in chat in the right order. Three files were saved."
+      },
+      {
+        "id": "R3",
+        "pass": false,
+        "evidence": "line 453 opening, line 558 done. The report was only Read (lines 514-538). The next **Assistant:** block (556-561) has the done line and the Step 4 opening, with no report text.",
+        "reason": "The report.txt content and the sentences tying it to the interview never appeared in chat. profile.json and schema_version 1 were confirmed at lines 480-488."
+      },
+      {
+        "id": "R4",
+        "pass": true,
+        "evidence": "line 560 opening comes before the Read at line 563. build-skill ok:true at lines 746-753. Run-log write at 756. Chat summary at 774, done line at 776.",
+        "reason": "Opening, summary and done line are in chat in order. build-skill passed on run 1."
+      },
+      {
+        "id": "R5",
+        "pass": true,
+        "evidence": "line 778 opening and the task question come before the Glob at 796. ab-present at 1014-1056. Reveal at 1098. Done line at 1143, after the run-log write at 1123.",
+        "reason": "Opening and done line are in chat, and ab-result.json exists."
+      },
+      {
+        "id": "R6",
+        "pass": true,
+        "evidence": "line 1145 opening comes before the install call at 1160. install ok:true at 1172-1177. Glob confirms SKILL.md at 1191. Run-log write at 1215. Done line at 1237.",
+        "reason": "Opening and done line are in chat in order. The install check and the how-to-check-it-works text were done."
+      },
+      {
+        "id": "R7",
+        "pass": true,
+        "evidence": "analyze.py calls: --version (480-488), profile+report (499-511), build-skill (746-753), ab-shuffle+present (1023-1056), ab-reveal (1107-1120), install (1169-1178). No Traceback, all ok. Only the python --version probe was used, and it worked first time.",
+        "reason": "build-skill reached ok:true on run 1. No Write or Edit touched my-voice/SKILL.md or my-voice.zip, and no other zip command ran."
+      },
+      {
+        "id": "R8",
+        "pass": true,
+        "evidence": "No tool error or permission denial appears in the tool results I read (lines 96-1240).",
+        "reason": "I did not read lines ~700-726, which are the voice-notes Write call. Its result at line 732 shows success."
+      },
+      {
+        "id": "R9",
+        "pass": true,
+        "evidence": "See r9_questions.",
+        "reason": "Every question is an interview question, the sample-authorship check, the A/B task, the A/B pick or the install choice."
+      },
+      {
+        "id": "R10",
+        "pass": true,
+        "evidence": "The ab-present output (lines 1033-1055) matches the reprint at lines 1063-1085 exactly. The message at 1061 has the fixed opening, then the output, then 'Which sounds more like you? Type A or B.' (line 1087). The subagent prompt (line 955) is the task, the shared rule and 'Do not use any skills.' ab-mapping.json was never read or printed before ab-reveal at 1102.",
+        "reason": "(a), (b), (c) and (d) all hold. Nothing between the message and the pick hints at which draft is which."
+      }
+    ],
+    "chat_visibility": [
+      {
+        "stage": 1,
+        "opening": {
+          "shown": false,
+          "line": 0
+        },
+        "done": {
+          "shown": true,
+          "line": 250
+        },
+        "result": {
+          "what": "none",
+          "shown": true,
+          "line": 0
+        }
+      },
+      {
+        "stage": 2,
+        "opening": {
+          "shown": true,
+          "line": 252
+        },
+        "done": {
+          "shown": true,
+          "line": 451
+        },
+        "result": {
+          "what": "word count",
+          "shown": true,
+          "line": 430
+        }
+      },
+      {
+        "stage": 3,
+        "opening": {
+          "shown": true,
+          "line": 453
+        },
+        "done": {
+          "shown": true,
+          "line": 558
+        },
+        "result": {
+          "what": "report",
+          "shown": false,
+          "line": 0
+        }
+      },
+      {
+        "stage": 4,
+        "opening": {
+          "shown": true,
+          "line": 560
+        },
+        "done": {
+          "shown": true,
+          "line": 776
+        },
+        "result": {
+          "what": "none",
+          "shown": true,
+          "line": 774
+        }
+      },
+      {
+        "stage": 5,
+        "opening": {
+          "shown": true,
+          "line": 778
+        },
+        "done": {
+          "shown": true,
+          "line": 1143
+        },
+        "result": {
+          "what": "none",
+          "shown": true,
+          "line": 1141
+        }
+      },
+      {
+        "stage": 6,
+        "opening": {
+          "shown": true,
+          "line": 1145
+        },
+        "done": {
+          "shown": true,
+          "line": 1237
+        },
+        "result": {
+          "what": "none",
+          "shown": true,
+          "line": 1233
+        }
+      }
+    ],
+    "r9_questions": [
+      {
+        "line": 150,
+        "question": "Question 1 of 5: What do you mostly use AI to help you write?",
+        "class": "expected",
+        "reason": "Interview question 1."
+      },
+      {
+        "line": 164,
+        "question": "Question 2 of 5: Who usually reads it?",
+        "class": "expected",
+        "reason": "Interview question 2."
+      },
+      {
+        "line": 178,
+        "question": "Question 3 of 5: Pick three words for how you want to sound.",
+        "class": "expected",
+        "reason": "Interview question 3."
+      },
+      {
+        "line": 192,
+        "question": "Question 4 of 5: What bugs you most in drafts AI writes for you?",
+        "class": "expected",
+        "reason": "Interview question 4."
+      },
+      {
+        "line": 206,
+        "question": "Question 5 of 5: Any habits you always or never have?",
+        "class": "expected",
+        "reason": "Interview question 5."
+      },
+      {
+        "line": 365,
+        "question": "Did you write them yourself?",
+        "class": "expected",
+        "reason": "SKILL.md step 2.4 allows one ownership check when a piece looks like it is not the user's writing."
+      },
+      {
+        "line": 780,
+        "question": "What short, real message do you need to write? (with 3 suggestions)",
+        "class": "expected",
+        "reason": "Task for the A/B."
+      },
+      {
+        "line": 1087,
+        "question": "Which sounds more like you? Type A or B.",
+        "class": "expected",
+        "reason": "The A/B pick."
+      },
+      {
+        "line": 1149,
+        "question": "Which one do you want? (project or personal folder)",
+        "class": "expected",
+        "reason": "Install choice."
+      }
+    ],
+    "verdict": "fail",
+    "notes": "Two chat-visibility failures. R1: Stage 1 has no opening line and no permissions sentence in chat before its first tool call, and the first visible text is already Question 1. R3: the Step 3 report was never reprinted in chat, and neither were the sentences tying it to the interview answers. The rest of the run is clean. The stage 2 and 4-6 lines, the script calls, the blind A/B and the install all check out. Minor: the Step 2 word estimate (~3,100) is lower than the measured 3,839, which SKILL.md allows."
+  },
+  "raw": null
+}
