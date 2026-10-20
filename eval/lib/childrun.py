@@ -488,7 +488,7 @@ class Ledger(object):
     def append(self, row):
         self.heal()
         line = json.dumps(row, ensure_ascii=False) + "\n"
-        with open(str(self.path), "a", encoding="utf-8") as f:
+        with open(str(self.path), "a", encoding="utf-8", newline="\n") as f:
             f.write(line)
             f.flush()
             os.fsync(f.fileno())
