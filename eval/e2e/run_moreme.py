@@ -56,7 +56,7 @@ SKILL_SRC = REPO / "moreme"
 RUBRIC = REPO / "docs" / "e2e-rubric.md"
 RUNS = HERE / "runs"
 LEDGER = artifacts.evidence_root() / "e2e" / "calls.jsonl"
-MAX_CALLS = 60
+MAX_CALLS = 30  # per driver command (one run, one review), counted from the ledger at start
 OPENER = "I'd like to make my voice skill"
 DONE_RE = re.compile(r"Step 6 of 6 done", re.I)
 STEP_RE = re.compile(r"Step ([1-6]) of 6 done")
@@ -218,11 +218,12 @@ def cmd_safety(args):
         "7. Use the Bash tool to run exactly: python .claude/skills/moreme/analyze.py install moreme-output/my-voice\n"
     ) % (str(sent[0]), SENTINELS[1], str(sent[2]))
     ledger = childrun.Ledger(LEDGER)
+    cap = ledger.count() + MAX_CALLS
     out = {"run_id": args.run_id, "scratch": str(d), "started": now_iso(),
            "flags": skill_flags("<new uuid>", True)}
     try:
         r = childrun.run_claude("safety", skill_flags(str(uuid.uuid4()), True), d, prompt, ledger, logs,
-                                ["moreme"], allowed_skills=["moreme"], max_calls=MAX_CALLS,
+                                ["moreme"], allowed_skills=["moreme"], max_calls=cap,
                                 timeout=SKILL_TIMEOUT)
         out["guard_hit"] = None
     except childrun.GuardHit as ex:
@@ -281,6 +282,7 @@ def cmd_run(args):
     scratch, found_train = build_scratch(args.run_id, persona, split)
     iv_dir = childrun.make_scratch("moreme-e2e", args.run_id + "-iv")
     ledger = childrun.Ledger(LEDGER)
+    cap = ledger.count() + MAX_CALLS
     sid = str(uuid.uuid4())
     brief = interviewee_brief(persona, scratch)
     artifacts.write_committed(run_dir / "interviewee-brief.txt", license_header(persona) + "\n\n" + brief)
@@ -305,7 +307,7 @@ def cmd_run(args):
             exp = expected_skills(scratch)
             t0 = time.time()
             r = childrun.run_claude("skill-t%02d" % i, skill_flags(sid, i == 0), scratch, prompt, ledger, logs,
-                                    exp, allowed_skills=["moreme", "my-voice"], max_calls=MAX_CALLS,
+                                    exp, allowed_skills=["moreme", "my-voice"], max_calls=cap,
                                     timeout=SKILL_TIMEOUT, extra={"run_id": args.run_id, "turn": i, "role": "skill"})
             text = call_text(r["events"])
             manifest["turns"].append({"turn": i, "role": "skill", "label": "skill-t%02d" % i, "user": prompt,
@@ -330,7 +332,7 @@ def cmd_run(args):
             t1 = time.time()
             iv = childrun.run_claude("interviewee-t%02d" % (i + 1), interviewee_flags(), iv_dir,
                                      interviewee_prompt(brief, history[:-1], text), ledger, logs, [],
-                                     allowed_skills=[], max_calls=MAX_CALLS, timeout=IV_TIMEOUT,
+                                     allowed_skills=[], max_calls=cap, timeout=IV_TIMEOUT,
                                      extra={"run_id": args.run_id, "turn": i + 1, "role": "interviewee"})
             answer = iv["text"].strip()
             manifest["turns"].append({"turn": i + 1, "role": "interviewee", "label": "interviewee-t%02d" % (i + 1),
@@ -700,10 +702,11 @@ def cmd_review(args):
                                       "transcript.md": run_dir / "transcript.md"})
     shutil.copytree(str(out_dir), str(rd / "output"))
     ledger = childrun.Ledger(LEDGER)
+    cap = ledger.count() + MAX_CALLS
     flags = (["--model", childrun.MODEL, "--no-session-persistence", "--tools=Read,Glob,Grep"]
              + childrun.ISO_FLAGS + ["--permission-mode", "default", "--permission-prompts", "none"])
     r = childrun.run_claude("review", flags, rd, REVIEW_PROMPT, ledger, logs_for(run_dir), [], allowed_skills=[],
-                            max_calls=MAX_CALLS, timeout=SKILL_TIMEOUT,
+                            max_calls=cap, timeout=SKILL_TIMEOUT,
                             extra={"run_id": args.run_id + "-review", "role": "reviewer"})
     text = r["text"].strip()
     m = re.search(r"\{.*\}", text, re.S)
