@@ -1,0 +1,19 @@
+# Files that hold verbatim evidence. tools/check_prose.py skips them for the
+# em_dash, banned_word, and exclamation rules, because evidence is never edited.
+# The forbidden_token rule still applies to every file.
+#
+# One glob per line, relative to the repo root, forward slashes.
+# Text after "#" is a comment. Add a reason for each entry.
+#
+# Smaller spans inside a checked file use markers instead of this list:
+#   <!-- verbatim-samples:start --> ... <!-- verbatim-samples:end -->  (the user's own text)
+#   <!-- verbatim-output:start --> ... <!-- verbatim-output:end -->    (quoted model output, README before/after)
+#   <!-- avoid-words:start --> ... <!-- avoid-words:end -->            (avoid lists; banned_word only)
+
+docs/transcript-e2e.md          # verbatim transcript of the labeled e2e run (T-006)
+docs/transcripts/*              # any further verbatim run transcripts
+docs/example-run/*.txt          # the simulated user's own samples and analyze.py output
+docs/example-run/samples/*      # the simulated user's own samples, verbatim
+docs/example-run/draft-*.md     # A/B drafts, verbatim model output
+eval/results/drafts/*           # raw eval drafts, verbatim model output
+eval/corpus/*                   # licensed persona writing, verbatim
