@@ -22,6 +22,9 @@ Usage:
         rebuild transcript.md from the saved logs (no calls)
     python eval/e2e/run_moreme.py review --run-id ID
         clean-room rubric review of a finished run (1 call)
+    python eval/e2e/run_moreme.py export-example --run-id ID
+        copy the run's my-voice/SKILL.md to docs/example-run/ with the license
+        header (no calls)
 
 Outputs. Committed, sanitized by tools/sanitize_artifacts.py:
 eval/e2e/runs/<run-id>/ (manifest.json, transcript.md, interviewee-brief.txt,
@@ -719,6 +722,22 @@ def cmd_review(args):
     return 0
 
 
+def export_example(run_id, dest):
+    """Copy a run's generated my-voice/SKILL.md to dest/my-voice/ with the
+    persona's license header after the frontmatter, sanitized. Returns the path."""
+    run_dir = RUNS / run_id
+    persona = json.loads((run_dir / "manifest.json").read_text(encoding="utf-8"))["persona"]
+    src = output_for(run_dir) / "my-voice" / "SKILL.md"
+    text = artifacts.add_license_header(src.read_text(encoding="utf-8"), license_header(persona))
+    return artifacts.write_committed(Path(dest) / "my-voice" / "SKILL.md", text)
+
+
+def cmd_export(args):
+    p = export_example(args.run_id, args.dest)
+    print(json.dumps(validate_skill(p.parent)))
+    return 0
+
+
 def main(argv=None):
     ap = argparse.ArgumentParser(description="MoreMe headless e2e driver")
     sub = ap.add_subparsers(dest="cmd")
@@ -731,11 +750,15 @@ def main(argv=None):
     for name in ("render", "review"):
         x = sub.add_parser(name)
         x.add_argument("--run-id", required=True)
+    x = sub.add_parser("export-example")
+    x.add_argument("--run-id", required=True)
+    x.add_argument("--dest", default=str(REPO / "docs" / "example-run"))
     args = ap.parse_args(argv)
     if not args.cmd:
         ap.print_help()
         return 2
-    return dict(safety=cmd_safety, run=cmd_run, render=cmd_render, review=cmd_review)[args.cmd](args)
+    return dict(safety=cmd_safety, run=cmd_run, render=cmd_render, review=cmd_review,
+                **{"export-example": cmd_export})[args.cmd](args)
 
 
 if __name__ == "__main__":

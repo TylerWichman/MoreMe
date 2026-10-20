@@ -297,6 +297,20 @@ def test_render_sanitizes_and_discloses(tmp_path, monkeypatch):
     assert "Chat-visible stage lines" in text
 
 
+def test_export_example_adds_header_after_frontmatter(tmp_path, monkeypatch):
+    runs = tmp_path / "runs"
+    run = runs / "rx"
+    (run / "output" / "my-voice").mkdir(parents=True)
+    (run / "manifest.json").write_text(json.dumps({"persona": "era-c"}), encoding="utf-8")
+    (run / "output" / "my-voice" / "SKILL.md").write_text("---\nname: my-voice\ndescription: d\n---\n\n# My voice\n",
+                                                          encoding="utf-8")
+    monkeypatch.setattr(drv, "RUNS", runs)
+    p = drv.export_example("rx", tmp_path / "dest")
+    text = p.read_text(encoding="utf-8")
+    assert text.startswith("---\nname: my-voice\n")
+    assert drv.license_header("era-c") in text
+
+
 def test_rubric_has_chat_visibility_note():
     text = (REPO / "docs" / "e2e-rubric.md").read_text(encoding="utf-8")
     assert "Chat-visible stage lines" in text and "**Assistant:**" in text
