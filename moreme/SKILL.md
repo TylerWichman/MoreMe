@@ -12,7 +12,7 @@ MoreMe walks the user through six steps in about 10 minutes and leaves them with
 
 The user sees only your chat text. Tool calls and their output are hidden or collapsed, so a step without chat text looks like minutes of silence. For every step:
 
-1. **Opening line first.** Before the step's first tool call, write its opening line (the "Say" line at the top of each step: what happens next and about how long it takes) as chat text, then make the tool call in the same reply.
+1. **Opening line first.** For Step 1 that is the whole first message, before any tool call. Before every other step's first tool call, write its opening line (the "Say" line at the top of each step: what happens next and about how long it takes) as chat text, then make the tool call in the same reply.
 2. **Results in chat.** Step 2's word count and Step 3's full report go in your chat text. Reading a file does not show it to the user.
 3. **Done line last.** After the step's last tool call (its `run-log.md` line), write `Step N of 6 done: <Name>.` as chat text, before any tool call of the next step.
 
@@ -34,7 +34,7 @@ This holds inside one long turn. After the user gives their samples, Steps 2, 3,
 - **Skill files:** `my-voice/SKILL.md` and `my-voice.zip` are made only by `analyze.py build-skill`. Never write, edit, or zip them yourself (the one exception is the no-Python path in Step 4).
 - **Checking whether a file exists:** use Glob, not Read, so a missing file is not an error.
 - **The user's name:** never take it from a username, a file or folder path, the environment, or other system details. Use a name only if the user gave it in the interview or this chat, or signed their samples with it. Otherwise sign drafts with their usual sign-off and no name, or leave them unsigned.
-- **Starting point:** before Step 1, Glob for `moreme-output/run-log.md`. If it exists, read it and follow "Picking up an earlier run" in `reference/troubleshooting.md`. If not, start at Step 1.
+- **Earlier run:** right after Step 1's first message (never before it), Glob for `moreme-output/run-log.md`. If it exists, read it and follow "Picking up an earlier run" in `reference/troubleshooting.md`. If not, go on with Step 1.
 
 ### Stage exit lines
 
@@ -55,19 +55,19 @@ stage=N name=<name> status=passed check=<what was checked> time=<time>
 
 ### The script command (PREFIX)
 
-Steps 3 to 6 call `analyze.py`, a small Python script in this skill's folder. Find the folder this skill was loaded from (Claude Code shows it when the skill starts).
+Steps 3 to 6 call `analyze.py`, a small Python script in this skill's folder (Claude Code shows the folder when the skill starts).
 
 - In the current project's `.claude/skills/moreme`: SKILL_DIR is `.claude/skills/moreme`.
 - In the personal skills folder (in your home folder): SKILL_DIR is `~/.claude/skills/moreme`.
 - On claude.ai or anywhere else: SKILL_DIR is the full folder path you were given.
 
-In Claude Code, write SKILL_DIR exactly in one of the first two forms, with forward slashes, never as a full `C:\...` or `/Users/...` path. Those forms match MoreMe's permission rules, so the user sees fewer prompts.
+In Claude Code, write SKILL_DIR exactly in one of the first two forms, with forward slashes, never as a full `C:\...` or `/Users/...` path, so MoreMe's permission rules match and the user sees fewer prompts.
 
 PREFIX is the Python command found in Step 3 plus `SKILL_DIR/analyze.py`, for example `python .claude/skills/moreme/analyze.py`. Use the exact same PREFIX for every later call.
 
 ## Step 1 of 6: Interview (about 3 minutes)
 
-1. Your first message says, in your own plain words: MoreMe asks five short questions, reads a few things the user wrote, measures their style, and makes a skill called my-voice. It takes about 10 minutes. Then show the permissions sentence below, word for word.
+1. **Before any tool call** (even the Glob for an earlier run), your first reply after this skill loads starts with this message, in your own plain words: MoreMe asks five short questions, reads a few things the user wrote, measures their style, and makes a skill called my-voice. It takes about 10 minutes. Then the permissions sentence below, word for word. Only then Glob for an earlier run (Ground rules), do item 2, and ask question 1.
 
    In Claude Code:
 
@@ -77,7 +77,7 @@ PREFIX is the Python command found in Step 3 plus `SKILL_DIR/analyze.py`, for ex
 
    > Claude will run a small measuring script that came with MoreMe. It runs in Claude's sandbox, not on your computer. Your samples go there under Anthropic's terms.
 
-2. Write `moreme-output/.gitignore` with the single line `*`. This keeps the user's samples out of git. Do this before saving anything else.
+2. Write `moreme-output/.gitignore` with the single line `*` (keeps samples out of git), before saving anything else.
 3. Ask these five questions, one per message, in this order. Keep the wording close to this:
    1. "What do you mostly use AI to help you write? For example emails, posts, or cover letters."
    2. "Who usually reads it?"
@@ -91,8 +91,8 @@ PREFIX is the Python command found in Step 3 plus `SKILL_DIR/analyze.py`, for ex
 
 ## Step 2 of 6: Sample (about 2 minutes)
 
-1. Say: "Next, paste three or more things you wrote yourself, like emails or posts. This takes about 2 minutes." In Claude Code, add that they can give file paths instead. Ask them to paste one piece per message, or all at once with a blank line and `---` between pieces.
-2. Save each piece exactly as written to `moreme-output/samples/sample-01.txt`, `sample-02.txt`, and so on. Do not fix typos, spacing, or punctuation. For file paths, Read the file and save its text the same way. Plain text, Markdown, and PDF files are fine. For Word or other files you cannot read, ask the user to paste the text instead.
+1. Say: "Next, paste three or more things you wrote yourself, like emails or posts. This takes about 2 minutes." In Claude Code, add that they can give file paths instead. They can paste one piece per message, or all at once with `---` on a line between pieces.
+2. Save each piece exactly as written to `moreme-output/samples/sample-01.txt`, `sample-02.txt`, and so on. Do not fix typos, spacing, or punctuation. For file paths, Read the file and save its text the same way. For files you cannot read (like Word), ask the user to paste the text.
 3. After saving each paste (or all the files the user named), write the running count as chat text: "That's 2 pieces and about 450 words so far." Count words yourself; an estimate is fine here.
 4. If a piece is clearly not the user's own writing (a news article, a form letter), ask once whether they wrote it. If they say yes, keep it.
 5. **Floor: 3 pieces and 300 words in total.**
@@ -119,13 +119,19 @@ PREFIX is the Python command found in Step 3 plus `SKILL_DIR/analyze.py`, for ex
    PREFIX report moreme-output/profile.json --out moreme-output/report.txt
    ```
 
-5. Read `moreme-output/report.txt`, then copy its full text, unchanged, into your chat message. The user cannot see what Read returns, so this is the only way they see their report. Then add one or two plain sentences that connect it to their interview answers. If the report says there was very little text, repeat that the numbers are rough.
+5. Read `moreme-output/report.txt`. Make no other tool call until item 6 is done.
+6. **Show the report.** Your next chat text is, in this order:
+   - the line: Here is what MoreMe measured in your writing:
+   - the full text of `report.txt`, copied word for word (the user cannot see what Read returns)
+   - one or two plain sentences tying it to their interview answers (if the report says there was very little text, say again that the numbers are rough)
+
+   Only after this, log the step and write the done line.
 
 **If no probe works or the version is too old:** say it in one sentence, for example: "I couldn't find Python on this computer, so I'll describe your style by reading your samples instead. These notes are estimated by Claude, not measured." Write `moreme-output/report.txt` yourself with the heading "Estimated by Claude, not measured" (guide: `reference/samples-and-analysis.md`). Log `status=degraded reason=no_python`. Step 4 and Step 5 then use their no-Python paths.
 
 **If analyze.py exits 2:** it prints one line saying what is wrong (for example a file that is not text). Tell the user in plain words, fix that one thing (usually: ask them to paste that piece as text and save it again), and run the command once more. Exit 1 or a second failure: see `reference/troubleshooting.md`.
 
-**Exit check:** `profile.json` exists, the command exited 0, and its `schema_version` is "1". Or the degraded path is labeled. Log it, for example `stage=3 name=analysis status=passed check=profile_json_schema_1,words=1180 time=...`. Then write `Step 3 of 6 done: Analysis.` as chat text.
+**Exit check:** the item 6 report message is in chat, and `profile.json` exists, the command exited 0, and its `schema_version` is "1". Or the degraded path is labeled and shown. Log it, for example `stage=3 name=analysis status=passed check=profile_json_schema_1,words=1180 time=...`. Then write `Step 3 of 6 done: Analysis.` as chat text.
 
 ## Step 4 of 6: Generate (about 1 minute)
 
@@ -148,10 +154,10 @@ PREFIX is the Python command found in Step 3 plus `SKILL_DIR/analyze.py`, for ex
    PREFIX build-skill moreme-output/profile.json moreme-output/voice-notes.md --samples moreme-output/samples --out moreme-output
    ```
 
-4. Read the JSON it prints. If `"ok": true`, it wrote `moreme-output/my-voice/SKILL.md` and `moreme-output/my-voice.zip`. If `"ok": false`, fix `voice-notes.md` using the listed errors (the guide explains each code) and run `build-skill` again. At most 3 runs in total. Do this quietly; do not ask the user. After the third failed run, show the errors in plain words and see `reference/troubleshooting.md`.
+4. Read the JSON it prints. `"ok": true` means it wrote `my-voice/SKILL.md` and `my-voice.zip`. If `"ok": false`, fix `voice-notes.md` using the listed errors (the guide explains each code) and run `build-skill` again. At most 3 runs in total, without asking the user. After the third failed run, show the errors in plain words and see `reference/troubleshooting.md`.
 5. Tell the user in chat, in two or three sentences, what the skill says about them (for example their typical sentence length and two Do rules). Do not paste the whole file.
 
-**No-Python path (Step 3 was degraded):** Read `SKILL_DIR/templates/my-voice/SKILL.md.tmpl` and write `moreme-output/my-voice/SKILL.md` yourself from it, as `reference/voice-notes-guide.md` describes, with "not measured" in every number cell. Tell the user there is no zip file this time. Log `status=degraded reason=no_python`.
+**No-Python path (Step 3 was degraded):** write `moreme-output/my-voice/SKILL.md` yourself from `SKILL_DIR/templates/my-voice/SKILL.md.tmpl`, as `reference/voice-notes-guide.md` describes. Tell the user there is no zip file this time. Log `status=degraded reason=no_python`.
 
 **Exit check:** `build-skill` printed `"ok": true`, and `my-voice/SKILL.md` and `my-voice.zip` exist. Log it, for example `stage=4 name=generate status=passed check=build_skill_ok,runs=1 time=...`. Then write `Step 4 of 6 done: Generate.` as chat text.
 
@@ -194,12 +200,12 @@ This step shows the user two drafts of the same message, one written with my-voi
    - Project folder: `PREFIX install moreme-output/my-voice`
    - Personal folder: `PREFIX install moreme-output/my-voice --personal`
 4. Read the JSON it prints:
-   - `"ok": true`: Glob for `SKILL.md` inside the `installed` folder it names to confirm it is there.
-   - `"reason": "project_is_home"`: do not stop and do not retry the same command. Say: "Claude Code is open in your home folder, so this project folder is also your personal skills folder. Choose the personal folder instead, and my-voice will work in every project." If they say yes, run the `--personal` command.
-   - Exit 2 saying my-voice is already installed there: ask once, "You already have a my-voice skill there. Replace it with the new one?" On yes, run the same command with `--replace` added. On no, leave it and say the new skill is still in `moreme-output/my-voice/`.
-   - Any other exit 2: tell the user the one-line reason in plain words. Do not copy the files another way. Offer the claude.ai steps or the manual steps in `reference/install.md`.
-5. **On claude.ai, or if they choose it:** give the upload steps from `reference/install.md` and offer `my-voice.zip` as a file to download. Say in one sentence that these steps come from Anthropic's help pages and MoreMe's author has not tested them on claude.ai.
-6. Tell them how to check it works, using "How to check it works" in `reference/install.md`: a new session, a short draft request, and "use my-voice" if a draft does not sound like them.
+   - `"ok": true`: Glob for `SKILL.md` in the `installed` folder to confirm it.
+   - `"reason": "project_is_home"`: do not stop or retry the same command. Say: "Claude Code is open in your home folder, so this project folder is also your personal skills folder. Choose the personal folder instead, and my-voice will work in every project." If they say yes, run the `--personal` command.
+   - Exit 2, already installed: ask once, "You already have a my-voice skill there. Replace it with the new one?" On yes, add `--replace`. On no, say the new skill stays in `moreme-output/my-voice/`.
+   - Any other exit 2: give the one-line reason in plain words. Do not copy the files another way. Offer the steps in `reference/install.md`.
+5. **On claude.ai, or if they choose it:** give the upload steps from `reference/install.md` and offer `my-voice.zip` as a file to download. Say in one sentence that these steps come from Anthropic's help pages, untested by MoreMe's author.
+6. Tell them how to check it works ("How to check it works" in `reference/install.md`).
 
 **Exit check:** the chosen route is logged; for either Claude Code route, `install` printed `"ok": true` and the installed `SKILL.md` exists. Log it, for example `stage=6 name=install status=passed check=install_ok,route=project time=...` (`route=project`, `route=personal`, `route=claude-ai`, or `route=manual`). Then write `Step 6 of 6 done: Install.` as chat text.
 
