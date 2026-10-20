@@ -1,0 +1,583 @@
+{
+ "schema_version": "1",
+ "seed": "moreme-eval-split-v1",
+ "method": "whole documents; order by sha256(seed:persona:file); fill heldout toward max(25%, 3000 words), then dev toward max(15%, 1000 words), taking a document only if the split ends nearer its goal; rest train",
+ "targets": {
+  "heldout": 0.25,
+  "dev": 0.15,
+  "train": 0.6
+ },
+ "minimums": {
+  "train": 3000,
+  "dev": 1000,
+  "heldout": 3000
+ },
+ "word_rule": "FROZEN 1 (NFC, curly apostrophes mapped, [^\\W\\d_]+(?:'[^\\W\\d_]+)*)",
+ "personas": {
+  "era-c": {
+   "documents": [
+    {
+     "file": "era-c/era-c-01.txt",
+     "words": 613,
+     "split": "heldout"
+    },
+    {
+     "file": "era-c/era-c-02.txt",
+     "words": 1352,
+     "split": "heldout"
+    },
+    {
+     "file": "era-c/era-c-03.txt",
+     "words": 1357,
+     "split": "heldout"
+    },
+    {
+     "file": "era-c/era-c-04.txt",
+     "words": 4020,
+     "split": "dev"
+    },
+    {
+     "file": "era-c/era-c-05.txt",
+     "words": 1571,
+     "split": "heldout"
+    },
+    {
+     "file": "era-c/era-c-06.txt",
+     "words": 954,
+     "split": "train"
+    },
+    {
+     "file": "era-c/era-c-07.txt",
+     "words": 649,
+     "split": "train"
+    },
+    {
+     "file": "era-c/era-c-08.txt",
+     "words": 2236,
+     "split": "train"
+    },
+    {
+     "file": "era-c/era-c-09.txt",
+     "words": 529,
+     "split": "heldout"
+    },
+    {
+     "file": "era-c/era-c-10.txt",
+     "words": 3247,
+     "split": "train"
+    },
+    {
+     "file": "era-c/era-c-11.txt",
+     "words": 2920,
+     "split": "train"
+    },
+    {
+     "file": "era-c/era-c-12.txt",
+     "words": 2917,
+     "split": "train"
+    }
+   ],
+   "words": {
+    "train": 12923,
+    "dev": 4020,
+    "heldout": 5422
+   },
+   "total_words": 22365,
+   "share": {
+    "train": 0.5778,
+    "dev": 0.1797,
+    "heldout": 0.2424
+   },
+   "doc_count": {
+    "train": 6,
+    "dev": 1,
+    "heldout": 5
+   },
+   "median_doc_words": {
+    "train": 2576.5,
+    "dev": 4020,
+    "heldout": 1352
+   }
+  },
+  "era-d": {
+   "documents": [
+    {
+     "file": "era-d/era-d-01.txt",
+     "words": 845,
+     "split": "dev"
+    },
+    {
+     "file": "era-d/era-d-02.txt",
+     "words": 554,
+     "split": "train"
+    },
+    {
+     "file": "era-d/era-d-03.txt",
+     "words": 427,
+     "split": "dev"
+    },
+    {
+     "file": "era-d/era-d-04.txt",
+     "words": 156,
+     "split": "train"
+    },
+    {
+     "file": "era-d/era-d-05.txt",
+     "words": 362,
+     "split": "train"
+    },
+    {
+     "file": "era-d/era-d-06.txt",
+     "words": 1624,
+     "split": "heldout"
+    },
+    {
+     "file": "era-d/era-d-07.txt",
+     "words": 1191,
+     "split": "train"
+    },
+    {
+     "file": "era-d/era-d-08.txt",
+     "words": 675,
+     "split": "train"
+    },
+    {
+     "file": "era-d/era-d-09.txt",
+     "words": 45,
+     "split": "dev"
+    },
+    {
+     "file": "era-d/era-d-10.txt",
+     "words": 611,
+     "split": "train"
+    },
+    {
+     "file": "era-d/era-d-11.txt",
+     "words": 948,
+     "split": "heldout"
+    },
+    {
+     "file": "era-d/era-d-12.txt",
+     "words": 478,
+     "split": "heldout"
+    },
+    {
+     "file": "era-d/era-d-13.txt",
+     "words": 749,
+     "split": "dev"
+    },
+    {
+     "file": "era-d/era-d-14.txt",
+     "words": 901,
+     "split": "train"
+    },
+    {
+     "file": "era-d/era-d-15.txt",
+     "words": 254,
+     "split": "train"
+    },
+    {
+     "file": "era-d/era-d-16.txt",
+     "words": 482,
+     "split": "heldout"
+    },
+    {
+     "file": "era-d/era-d-17.txt",
+     "words": 2254,
+     "split": "train"
+    },
+    {
+     "file": "era-d/era-d-18.txt",
+     "words": 1635,
+     "split": "train"
+    }
+   ],
+   "words": {
+    "train": 8593,
+    "dev": 2066,
+    "heldout": 3532
+   },
+   "total_words": 14191,
+   "share": {
+    "train": 0.6055,
+    "dev": 0.1456,
+    "heldout": 0.2489
+   },
+   "doc_count": {
+    "train": 10,
+    "dev": 4,
+    "heldout": 4
+   },
+   "median_doc_words": {
+    "train": 643.0,
+    "dev": 588.0,
+    "heldout": 715.0
+   }
+  },
+  "era-e": {
+   "documents": [
+    {
+     "file": "era-e/era-e-01.txt",
+     "words": 848,
+     "split": "train"
+    },
+    {
+     "file": "era-e/era-e-02.txt",
+     "words": 868,
+     "split": "dev"
+    },
+    {
+     "file": "era-e/era-e-03.txt",
+     "words": 1132,
+     "split": "heldout"
+    },
+    {
+     "file": "era-e/era-e-04.txt",
+     "words": 1023,
+     "split": "dev"
+    },
+    {
+     "file": "era-e/era-e-05.txt",
+     "words": 1113,
+     "split": "heldout"
+    },
+    {
+     "file": "era-e/era-e-06.txt",
+     "words": 1003,
+     "split": "heldout"
+    },
+    {
+     "file": "era-e/era-e-07.txt",
+     "words": 1319,
+     "split": "train"
+    },
+    {
+     "file": "era-e/era-e-08.txt",
+     "words": 1557,
+     "split": "train"
+    },
+    {
+     "file": "era-e/era-e-09.txt",
+     "words": 1425,
+     "split": "train"
+    },
+    {
+     "file": "era-e/era-e-10.txt",
+     "words": 1299,
+     "split": "train"
+    },
+    {
+     "file": "era-e/era-e-11.txt",
+     "words": 1280,
+     "split": "train"
+    },
+    {
+     "file": "era-e/era-e-12.txt",
+     "words": 1343,
+     "split": "train"
+    }
+   ],
+   "words": {
+    "train": 9071,
+    "dev": 1891,
+    "heldout": 3248
+   },
+   "total_words": 14210,
+   "share": {
+    "train": 0.6384,
+    "dev": 0.1331,
+    "heldout": 0.2286
+   },
+   "doc_count": {
+    "train": 7,
+    "dev": 2,
+    "heldout": 3
+   },
+   "median_doc_words": {
+    "train": 1319,
+    "dev": 945.5,
+    "heldout": 1113
+   }
+  },
+  "era-f": {
+   "documents": [
+    {
+     "file": "era-f/era-f-01.txt",
+     "words": 1670,
+     "split": "dev"
+    },
+    {
+     "file": "era-f/era-f-02.txt",
+     "words": 1525,
+     "split": "train"
+    },
+    {
+     "file": "era-f/era-f-03.txt",
+     "words": 1388,
+     "split": "train"
+    },
+    {
+     "file": "era-f/era-f-04.txt",
+     "words": 1231,
+     "split": "train"
+    },
+    {
+     "file": "era-f/era-f-05.txt",
+     "words": 2089,
+     "split": "train"
+    },
+    {
+     "file": "era-f/era-f-06.txt",
+     "words": 1532,
+     "split": "train"
+    },
+    {
+     "file": "era-f/era-f-07.txt",
+     "words": 1125,
+     "split": "heldout"
+    },
+    {
+     "file": "era-f/era-f-08.txt",
+     "words": 1169,
+     "split": "heldout"
+    },
+    {
+     "file": "era-f/era-f-09.txt",
+     "words": 1441,
+     "split": "train"
+    },
+    {
+     "file": "era-f/era-f-10.txt",
+     "words": 1812,
+     "split": "heldout"
+    }
+   ],
+   "words": {
+    "train": 9206,
+    "dev": 1670,
+    "heldout": 4106
+   },
+   "total_words": 14982,
+   "share": {
+    "train": 0.6145,
+    "dev": 0.1115,
+    "heldout": 0.2741
+   },
+   "doc_count": {
+    "train": 6,
+    "dev": 1,
+    "heldout": 3
+   },
+   "median_doc_words": {
+    "train": 1483.0,
+    "dev": 1670,
+    "heldout": 1169
+   }
+  },
+  "modern-a": {
+   "documents": [
+    {
+     "file": "modern-a/modern-a-01.txt",
+     "words": 714,
+     "split": "train"
+    },
+    {
+     "file": "modern-a/modern-a-02.txt",
+     "words": 564,
+     "split": "dev"
+    },
+    {
+     "file": "modern-a/modern-a-03.txt",
+     "words": 759,
+     "split": "train"
+    },
+    {
+     "file": "modern-a/modern-a-04.txt",
+     "words": 1036,
+     "split": "train"
+    },
+    {
+     "file": "modern-a/modern-a-05.txt",
+     "words": 742,
+     "split": "train"
+    },
+    {
+     "file": "modern-a/modern-a-06.txt",
+     "words": 633,
+     "split": "dev"
+    },
+    {
+     "file": "modern-a/modern-a-07.txt",
+     "words": 569,
+     "split": "train"
+    },
+    {
+     "file": "modern-a/modern-a-08.txt",
+     "words": 454,
+     "split": "dev"
+    },
+    {
+     "file": "modern-a/modern-a-09.txt",
+     "words": 517,
+     "split": "heldout"
+    },
+    {
+     "file": "modern-a/modern-a-10.txt",
+     "words": 1235,
+     "split": "heldout"
+    },
+    {
+     "file": "modern-a/modern-a-11.txt",
+     "words": 1123,
+     "split": "heldout"
+    },
+    {
+     "file": "modern-a/modern-a-12.txt",
+     "words": 907,
+     "split": "heldout"
+    },
+    {
+     "file": "modern-a/modern-a-13.txt",
+     "words": 587,
+     "split": "train"
+    },
+    {
+     "file": "modern-a/modern-a-14.txt",
+     "words": 611,
+     "split": "train"
+    },
+    {
+     "file": "modern-a/modern-a-15.txt",
+     "words": 700,
+     "split": "train"
+    },
+    {
+     "file": "modern-a/modern-a-16.txt",
+     "words": 710,
+     "split": "train"
+    },
+    {
+     "file": "modern-a/modern-a-17.txt",
+     "words": 626,
+     "split": "train"
+    },
+    {
+     "file": "modern-a/modern-a-18.txt",
+     "words": 700,
+     "split": "dev"
+    },
+    {
+     "file": "modern-a/modern-a-19.txt",
+     "words": 998,
+     "split": "train"
+    }
+   ],
+   "words": {
+    "train": 8052,
+    "dev": 2351,
+    "heldout": 3782
+   },
+   "total_words": 14185,
+   "share": {
+    "train": 0.5676,
+    "dev": 0.1657,
+    "heldout": 0.2666
+   },
+   "doc_count": {
+    "train": 11,
+    "dev": 4,
+    "heldout": 4
+   },
+   "median_doc_words": {
+    "train": 710,
+    "dev": 598.5,
+    "heldout": 1015.0
+   }
+  },
+  "modern-b": {
+   "documents": [
+    {
+     "file": "modern-b/modern-b-01.txt",
+     "words": 1608,
+     "split": "train"
+    },
+    {
+     "file": "modern-b/modern-b-02.txt",
+     "words": 1014,
+     "split": "train"
+    },
+    {
+     "file": "modern-b/modern-b-03.txt",
+     "words": 753,
+     "split": "train"
+    },
+    {
+     "file": "modern-b/modern-b-04.txt",
+     "words": 2736,
+     "split": "heldout"
+    },
+    {
+     "file": "modern-b/modern-b-05.txt",
+     "words": 2189,
+     "split": "heldout"
+    },
+    {
+     "file": "modern-b/modern-b-06.txt",
+     "words": 1984,
+     "split": "train"
+    },
+    {
+     "file": "modern-b/modern-b-07.txt",
+     "words": 2136,
+     "split": "train"
+    },
+    {
+     "file": "modern-b/modern-b-08.txt",
+     "words": 2146,
+     "split": "dev"
+    },
+    {
+     "file": "modern-b/modern-b-09.txt",
+     "words": 1993,
+     "split": "train"
+    },
+    {
+     "file": "modern-b/modern-b-10.txt",
+     "words": 1439,
+     "split": "heldout"
+    },
+    {
+     "file": "modern-b/modern-b-11.txt",
+     "words": 786,
+     "split": "dev"
+    },
+    {
+     "file": "modern-b/modern-b-12.txt",
+     "words": 2058,
+     "split": "train"
+    }
+   ],
+   "words": {
+    "train": 11546,
+    "dev": 2932,
+    "heldout": 6364
+   },
+   "total_words": 20842,
+   "share": {
+    "train": 0.554,
+    "dev": 0.1407,
+    "heldout": 0.3053
+   },
+   "doc_count": {
+    "train": 7,
+    "dev": 2,
+    "heldout": 3
+   },
+   "median_doc_words": {
+    "train": 1984,
+    "dev": 1466.0,
+    "heldout": 2189
+   }
+  }
+ }
+}
