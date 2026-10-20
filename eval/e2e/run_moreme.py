@@ -162,6 +162,9 @@ def interviewee_brief(persona, scratch):
         "letter A or B, for the draft closer to your own writing.\n"
         "- When MoreMe asks whether to install in the project folder or the personal folder, choose the "
         "project folder. Reply: Project folder.\n"
+        "- When MoreMe shows the measurements of your writing and asks whether they sound like you, answer in "
+        "your own voice, in one or two sentences: usually that it sounds like you, or one small correction "
+        "(for example that you are chattier in letters than the numbers suggest).\n"
         "- If MoreMe asks whether to replace an existing my-voice skill, reply: Yes.\n"
         "- If the message asks you nothing, reply: OK, go ahead.\n"
         "- Never type a slash command, never ask to skip a step, never mention that you are role-playing."
@@ -418,15 +421,43 @@ def chat_items(turn_events):
 
 
 WORDS_RE = re.compile(r"\b\d[\d,]*\s+words\b", re.I)
+MINUTE_RE = re.compile(r"\bminutes?\b", re.I)
+
+
+def ask_indices(items):
+    """Indices of the messages that ask the user to act: the last chat text
+    before each user message (and before the end), i.e. the text that ends a turn."""
+    out = []
+    last_text = None
+    for idx, (kind, _v) in enumerate(items):
+        if kind == "user":
+            if last_text is not None:
+                out.append(last_text)
+            last_text = None
+        elif kind == "text":
+            last_text = idx
+    if last_text is not None:
+        out.append(last_text)
+    return out
 
 
 def chat_visibility(turn_events, report_path=None):
-    """Mechanical cross-check of the rubric's chat-visibility rule (the
-    clean-room reviewer is authoritative). Per stage: opening (chat text before
-    the stage's first tool call other than the Skill call), done (the exact done line in
-    chat text, in order), and for stage 2 a word count, for stage 3 the report
-    shown (at least 60% of report.txt's non-empty lines appear in chat text)."""
+    """Mechanical cross-check of the rubric's chat-visibility rule (decision
+    2026-10-20 turn boundaries; the clean-room reviewer is authoritative).
+
+    A stage's lines count when the user sees them no later than the next
+    message that asks the user to act (the text that ends a turn):
+      opening    chat text (not just the previous done line) between the stage's
+                 start and the first turn-ending message at or after it; for
+                 stage 1 that text must give the time ("minutes");
+      done       the exact done line in chat text, in order, with no user turn
+                 between the stage's last tool call and the done line;
+      word_count (stage 2) a "N words" count in chat within the stage;
+      report     (stage 3) at least 60% of report.txt's non-empty lines in chat
+                 text before the first tool call after the Step 3 done line.
+    """
     items = chat_items(turn_events)
+    asks = ask_indices(items)
     done_at = {}
     for idx, (kind, val) in enumerate(items):
         if kind != "text":
@@ -438,32 +469,61 @@ def chat_visibility(turn_events, report_path=None):
     if report_path and Path(report_path).exists():
         report_lines = [x.strip() for x in Path(report_path).read_text(encoding="utf-8", errors="replace").splitlines()
                         if x.strip()]
+
+    def next_ask(i):
+        return next((a for a in asks if a >= i), len(items) - 1)
+
+    def text_after_done(idx, n):
+        line = "Step %d of 6 done: %s." % (n, STAGE_NAMES[n - 1])
+        return items[idx][1].split(line, 1)[-1]
+
     stages = []
-    prev = -1
+    prev = None
     in_order = True
     for n, name in enumerate(STAGE_NAMES, 1):
         st = {"stage": n, "done": n in done_at}
         end = done_at.get(n)
-        if end is not None and end < prev:
+        if end is not None and prev is not None and end < prev:
             in_order = False
-        span = items[prev + 1:end] if end is not None else items[prev + 1:]
-        if prev >= 0:
-            # Text after the previous done line, in the same message, opens this stage.
-            line = "Step %d of 6 done: %s." % (n - 1, STAGE_NAMES[n - 2])
-            tail = items[prev][1].split(line, 1)[-1]
-            if tail.strip():
-                span = [("text", tail)] + span
-        first_work = next((i for i, (k, v) in enumerate(span) if k == "tool" and v not in OPENING_EXEMPT_TOOLS), None)
-        before = span[:first_work] if first_work is not None else span
-        st["opening"] = any(k == "text" for k, _ in before)
-        texts = "\n".join(v for k, v in span if k == "text")
+        start = 0 if prev is None else prev
+        # The text after the previous done line (same message) counts, and so
+        # does chat text up to the next message that asks the user to act.
+        deadline = next_ask(start if prev is None else start + 1)
+        window = []
+        if prev is not None:
+            window.append(text_after_done(prev, n - 1))
+            window += [v for k, v in items[prev + 1:deadline + 1] if k == "text"]
+        else:
+            window += [v for k, v in items[:deadline + 1] if k == "text"]
+        st["opening"] = any(w.strip() for w in window)
+        if n == 1:
+            # Step 1's opening is the introduction with the time it takes; a bare
+            # interview question does not count.
+            st["opening"] = bool(MINUTE_RE.search("\n".join(window)))
+        stop = end if end is not None else deadline
+        tools = [i for i in range(start, stop) if items[i][0] == "tool" and items[i][1] not in OPENING_EXEMPT_TOOLS]
         if end is not None:
-            texts += "\n" + items[end][1].split("Step %d of 6 done: %s." % (n, name), 1)[0]
+            last_tool = tools[-1] if tools else start
+            st["done_timely"] = not any(items[i][0] == "user" for i in range(last_tool, end))
+        else:
+            st["done_timely"] = False
+        texts = []
+        if prev is not None:
+            texts.append(text_after_done(prev, n - 1))
+        texts += [v for k, v in items[start + (1 if prev is not None else 0):stop] if k == "text"]
+        if end is not None:
+            texts.append(items[end][1].split("Step %d of 6 done: %s." % (n, name), 1)[0])
         if n == 2:
-            st["word_count"] = bool(WORDS_RE.search(texts))
+            st["word_count"] = bool(WORDS_RE.search("\n".join(texts)))
         if n == 3:
             if report_lines:
-                shown = sum(1 for x in report_lines if x in texts)
+                lo = done_at.get(2, 0)
+                if end is not None:
+                    hi = next((i for i in range(end + 1, len(items)) if items[i][0] == "tool"), len(items))
+                else:
+                    hi = done_at.get(4, len(items))
+                shown_text = "\n".join(v for k, v in items[lo:hi] if k == "text")
+                shown = sum(1 for x in report_lines if x in shown_text)
                 st["report_lines_shown"] = "%d/%d" % (shown, len(report_lines))
                 st["report_shown"] = shown >= 0.6 * len(report_lines)
             else:
@@ -471,9 +531,10 @@ def chat_visibility(turn_events, report_path=None):
         stages.append(st)
         if end is not None:
             prev = end
-    ok = in_order and all(s["done"] and s["opening"] for s in stages)
+    ok = in_order and all(s["done"] and s["done_timely"] and s["opening"] for s in stages)
     ok = ok and stages[1].get("word_count", False) and stages[2].get("report_shown") is not False
     return {"ok": bool(ok), "done_lines_in_order": in_order, "stages": stages,
+            "rule": "lines visible no later than the next message that asks the user to act",
             "note": "Mechanical cross-check only; the clean-room reviewer decides R1-R6."}
 
 
@@ -673,11 +734,16 @@ long; read it in parts with offset and limit until the end), run-log.md, and the
 Chat visibility (part of R1-R6, see "Chat-visible stage lines" in the rubric): the user sees only main-thread
 assistant text, which the transcript shows as blocks headed exactly "**Assistant:**". Text that appears only in
 run-log.md, in a tool call's input (for example a Write of run-log.md), in a tool result, or in a subagent block does
-NOT count as shown. For each stage 1 to 6 find, in "**Assistant:**" blocks only: (1) the opening line, written before
-the stage's first tool call (the Skill call that loads MoreMe is exempt; every later tool call counts); (2) the exact done line "Step N of 6 done: <Name>." after the
-stage's last tool call and before any tool call of the next stage. Also find the Step 2 word count shown in chat, and
-the Step 3 report shown in chat (the report.txt content, not only a Read of it). A stage whose opening line, done line,
-or required result is missing from chat fails its R item even if run-log.md says passed.
+NOT count as shown. The test is what the user has seen by the time they are asked to act: tool calls may run before
+these lines inside a turn, but each line must appear no later than the next assistant message that asks the user to do
+something (the message that ends the assistant's turn). For each stage 1 to 6 find, in "**Assistant:**" blocks only:
+(1) the opening line (what happens next and about how long it takes; for Step 1, the introduction, in the first message
+the user sees); (2) the exact done line "Step N of 6 done: <Name>." after the stage's work, not first appearing after
+the user replied to a later message. Also find the Step 2 word count shown in chat, and the Step 3 report shown in chat
+(the report.txt content, not only a Read of it) before any Step 4 tool call. A stage whose opening line, done line, or
+required result is missing or late fails its R item even if run-log.md says passed. Under R9, the Step 3 check-in
+("Does this sound like you? ...") and the resume question after the first answer (only when run-log.md already
+existed) are expected questions.
 
 Judge every rubric item R1 to R10. For R9, list every question the assistant asked the user and classify each as
 expected or unnecessary with a one-line reason. For R10(b), compare the ab-present tool output with the assistant's

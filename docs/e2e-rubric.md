@@ -25,15 +25,21 @@ This note sharpens how R1-R6 are judged. It does not add an item. The R1-R6 crit
 
 The user sees only main-thread assistant chat text. In `transcript.md` that is the blocks headed exactly `**Assistant:**`. Text that appears only in `run-log.md`, inside a tool call's input (such as a Write of `run-log.md`), in a tool result, or in a subagent block was never shown to the user and does not count.
 
-For each stage N from 1 to 6, the stage's R item passes only if the chat text shows:
+For each stage N from 1 to 6, the stage's R item passes only if the chat text shows, no later than the next assistant message that asks the user to act (the message that ends the assistant's turn and waits for a reply):
 
-1. the stage's opening line (what happens next and about how long it takes), before the stage's first tool call. The Skill call that loads MoreMe is exempt, because SKILL.md cannot act before it is loaded; every tool call after it counts, including Glob and Read;
-2. the exact done line `Step N of 6 done: <Name>.`, after the stage's last tool call and before any tool call of the next stage.
+1. the stage's opening line (what happens next and about how long it takes). For Step 1 this is the introduction, which must be in the first message the user sees, the one with question 1;
+2. the exact done line `Step N of 6 done: <Name>.`, after the stage's work. A done line that first appears after the user has replied to a later message is late and fails.
 
-Also required: for R2, the running word count of the samples in chat; for R3, the analysis report shown in chat (the content of `report.txt`, not only a Read of it), or the labeled estimate on the no-Python path.
+Also required: for R2, the running word count of the samples in chat; for R3, the analysis report shown in chat (the content of `report.txt`, not only a Read of it), or the labeled estimate on the no-Python path, before any Step 4 tool call.
+
+Tool calls may run before these lines inside a turn. What counts is what the user has seen by the time they are asked to do something.
+
+Expected questions under R9 also include the Step 3 check-in ("Does this sound like you? Reply yes, or tell me what's off.") and the resume question asked after the user's first answer when `moreme-output/run-log.md` already exists.
 
 The reviewer records, per stage, the transcript line of the opening line, the done line, and (stages 2 and 3) the shown result. The driver adds a mechanical cross-check to `manifest.json` (`chat_visibility`); the reviewer's judgment decides.
 
 Why: in run `e2e-20261020-r1` the reviewer passed R1-R10 although the done lines for stages 2 and 3, the Step 2 word count, the Step 3 opening line, and the Step 3 report never appeared in chat. They existed only in `run-log.md` and in tool calls, so the user would have seen several minutes of silence. That run's record stays as it was scored; later runs are scored with this note.
+
+Revision (2026-10-20, decision `2026-10-20-turn-boundaries-for-visibility-moreme`): the first version of this note required each opening line before the stage's first tool call and each done line before the next stage's first tool call. Runs r2 and r3 showed the model writes chat text when it needs a reply and chains tool calls silently otherwise, whatever SKILL.md says. SKILL.md now puts the visible moments in messages that end a turn (a tool-free first turn; Step 3 ends with the report and a check-in question), and this note judges what the user has seen by the time they are asked to act. Strict tool-versus-text order inside one turn was a stand-in for that experience, not the experience itself. Runs r2 and r3 keep their records as scored.
 
 R10(d) reading: "the shared length/format rule" means the whole shared rule quoted in SKILL.md Step 5, including its closing sentences about never taking a name from a username, a file path, or system details. Those sentences are part of the rule, not extra content.

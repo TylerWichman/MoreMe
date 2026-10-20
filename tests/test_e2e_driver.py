@@ -178,8 +178,8 @@ def _u(name):
 
 def _good_turns(report_lines):
     names = drv.STAGE_NAMES
-    t1 = [_a(_t("Step 1 of 6: five questions, about 3 minutes."), _u("Write")), _a(_t("Step 1 of 6 done: Interview."))]
-    t2 = [_a(_t("Step 2 of 6: saving your samples, about 2 minutes."), _u("Read"), _u("Write")),
+    t1 = [_a(_t("Step 1 of 6: five questions, about 3 minutes."), _u("Write")), _a(_t("Step 1 of 6 done: Interview.\n\nStep 2 of 6: paste three things you wrote. About 2 minutes."))]
+    t2 = [_a(_t("Saving your samples now."), _u("Read"), _u("Write")),
           _a(_t("Saved 3 pieces, about 3,300 words.")), _a(_t("Step 2 of 6 done: Sample.")),
           _a(_t("Step 3 of 6: measuring your style, about 1 minute."), _u("Bash")),
           _a(_t("\n".join(report_lines))), _a(_t("Step 3 of 6 done: Analysis."))]
@@ -238,6 +238,48 @@ def test_chat_visibility_exempts_only_the_skill_load():
     assert drv.chat_visibility([("hi", late)], None)["stages"][0]["opening"] is False
 
 
+def test_chat_visibility_t013_report_message_shape(tmp_path):
+    """T-013 shape: Steps 2 and 3 end in one report message that holds the
+    Step 2 done line, the Step 3 opening, the report, the Step 3 done line, and
+    the check-in question; Step 4 tools come only after the user's reply."""
+    report = tmp_path / "report.txt"
+    lines = ["Here is your style", "Sentences: 17 words on average"]
+    report.write_text("\n".join(lines) + "\n", encoding="utf-8")
+    t1 = [_a(_t("MoreMe asks five questions. It takes about 10 minutes. Question 1?"))]
+    t2 = [_a(_u("Glob"), _u("Write"), _t("Step 1 of 6 done: Interview.\n\nNext, paste three things. About 2 minutes."))]
+    t3 = [_a(_t("Saving them."), _u("Read"), _u("Write")), _a(_t("That is 3 pieces, about 3,800 words.")),
+          _a(_u("Bash"), _u("Bash"), _u("Read"), _u("Write")),
+          _a(_t("Step 2 of 6 done: Sample.\n\nNext, MoreMe's script reads your samples.\n\n" + "\n".join(lines)
+                + "\n\nStep 3 of 6 done: Analysis.\n\nDoes this sound like you? Reply yes, or tell me what's off."))]
+    t4 = [_a(_t("Next, I'll write your skill. About a minute."), _u("Write"), _u("Bash")),
+          _a(_t("Step 4 of 6 done: Generate.\n\nNext, a blind test. What short message should I draft?"))]
+    cv = drv.chat_visibility([("go", t1), ("letters", t2), ("files", t3), ("yes", t4)], report)
+    st = dict((s["stage"], s) for s in cv["stages"])
+    for n in (1, 2, 3, 4):
+        assert st[n]["opening"] and st[n]["done"] and st[n]["done_timely"], n
+    assert st[2]["word_count"] and st[3]["report_shown"]
+
+
+def test_chat_visibility_done_line_after_a_user_turn_is_late():
+    t1 = [_a(_t("Intro, about 10 minutes. Question 1?"))]
+    t2 = [_a(_u("Write"), _t("Thanks. Paste your files."))]
+    t3 = [_a(_t("Step 1 of 6 done: Interview."))]
+    cv = drv.chat_visibility([("go", t1), ("answer", t2), ("files", t3)], None)
+    assert cv["stages"][0]["done"] and not cv["stages"][0]["done_timely"]
+
+
+def test_chat_visibility_report_after_step4_tool_is_late(tmp_path):
+    report = tmp_path / "report.txt"
+    report.write_text("Line one of report\nLine two of report\n", encoding="utf-8")
+    t = [_a(_t("Intro, about 10 minutes."), _u("Write"), _t("Step 1 of 6 done: Interview. Next, files.")),
+         ]
+    t2 = [_a(_u("Write"), _t("Step 2 of 6 done: Sample. Next, measuring.")),
+          _a(_u("Bash"), _t("Step 3 of 6 done: Analysis.")),
+          _a(_u("Write"), _t("Line one of report\nLine two of report"))]
+    cv = drv.chat_visibility([("go", t), ("files", t2)], report)
+    assert cv["stages"][2]["report_shown"] is False
+
+
 def test_chat_visibility_ignores_subagent_and_tool_text():
     sub = {"type": "assistant", "parent_tool_use_id": "x",
            "message": {"content": [_t("Step 1 of 6 done: Interview.")]}}
@@ -253,6 +295,7 @@ def test_interviewee_brief_has_persona_first_name(temp):
     name = drv.PERSONAS["era-c"]["first_name"]
     assert "Your first name is %s." % name in brief
     assert "sign it %s" % name in brief
+    assert "asks whether they sound like you" in brief
 
 
 def test_raw_evidence_defaults_outside_tracked_tree():
@@ -316,3 +359,6 @@ def test_rubric_has_chat_visibility_note():
     assert "Chat-visible stage lines" in text and "**Assistant:**" in text
     assert "e2e-20261020-r1" in text
     assert "Chat visibility" in drv.REVIEW_PROMPT and "chat_visibility" in drv.REVIEW_PROMPT
+    assert "next assistant message that asks the user to act" in text
+    assert "asks the user to do\nsomething" in drv.REVIEW_PROMPT or "asks the user to do something" in drv.REVIEW_PROMPT
+    assert "check-in" in text and "check-in" in drv.REVIEW_PROMPT
