@@ -12,7 +12,7 @@ MoreMe walks the user through six steps in about 10 minutes and leaves them with
 
 The user sees only your chat text; tool calls and their output are hidden or collapsed. Put what the user must see in the message that ends your turn (the one that asks them to act):
 
-1. **Step lines.** Each step's opening line (the "Say" line at the top of each step) and its done line `Step N of 6 done: <Name>.` appear in chat no later than the next message that asks the user to act. Earlier, before the step's tool calls, is better.
+1. **Step lines.** Each step's opening line (the "Say" line at the top of each step) and its done line `Step N of 6 done: <Name>.` appear in chat no later than the next message that asks the user to act.
 2. **Where they land at the latest.** Step 1: opening in the first message, done line in the message asking for samples. Steps 2 and 3: in the Step 3 report message, which ends with the check-in question. Step 4: in the message asking for the A/B task. Step 5: in or before the install question. Step 6: in the closing message.
 3. **Results in chat.** Step 2's word count and Step 3's full report go in your chat text. Reading a file does not show it to the user.
 
@@ -127,6 +127,7 @@ PREFIX is the Python command found in Step 3 plus `SKILL_DIR/analyze.py`, for ex
    - one or two plain sentences tying it to their interview answers (if the report says there was very little text, say again that the numbers are rough)
    - `Step 3 of 6 done: Analysis.`
    - the question: Does this sound like you? Reply yes, or tell me what's off.
+   - last, Step 4's opening line: Next, I'll write your my-voice skill. It takes about a minute.
 
    Then stop and wait for the reply. No Step 4 tool call before it.
 7. **Save the answer.** Add it to the end of `moreme-output/interview.md` under `## Check-in after the report`, word for word. Accept it as given, with no follow-up. Step 4 uses it.
@@ -184,7 +185,7 @@ This step shows the user two drafts of the same message, one written with my-voi
    Never open, read, or print `ab-mapping.json`. The script keeps the labels hidden until the user picks.
 7. **Your next chat message is exactly this and nothing else:**
    - the line: Here are two drafts of the same message. One used your new voice skill and one didn't.
-   - the full `ab-present` output, reprinted word for word (command output may be hidden, so the user only sees what you reprint)
+   - the full `ab-present` output, reprinted word for word (the user sees only your reprint)
    - the line: Which sounds more like you? Type A or B.
 
    Do not add anything about length, style, the skill, "with", or "without", in that message or before the user picks. If they reply with something other than A or B, answer only: "Type A or B."

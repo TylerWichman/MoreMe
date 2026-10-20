@@ -132,9 +132,10 @@ def test_step3_report_message_ends_turn_with_checkin():
     tie = s3.index("- one or two plain sentences tying it to their interview answers")
     done = s3.index("- `Step 3 of 6 done: Analysis.`")
     ask = s3.index("- the question: Does this sound like you? Reply yes, or tell me what's off.")
+    fwd = s3.index("- last, Step 4's opening line: Next, I'll write your my-voice skill. It takes about a minute.")
     stop = s3.index("Then stop and wait for the reply. No Step 4 tool call before it.")
     save = s3.index("7. **Save the answer.**")
-    assert read < msg < prev < lead < full < tie < done < ask < stop < save
+    assert read < msg < prev < lead < full < tie < done < ask < fwd < stop < save
     # The check-in sits before Step 4 starts.
     assert body.index("Does this sound like you?") < body.index("## Step 4 of 6:")
     assert "the user cannot see what Read returns" in s3
