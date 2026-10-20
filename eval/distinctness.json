@@ -1,0 +1,156 @@
+{
+ "schema_version": "1",
+ "metric": "delta_fw",
+ "rows": "train split of persona P",
+ "columns": "dev split of persona Q",
+ "reference_stats_created": "2026-10-20T09:43:24-04:00",
+ "personas": [
+  "era-c",
+  "era-d",
+  "era-e",
+  "era-f",
+  "modern-a",
+  "modern-b"
+ ],
+ "matrix": {
+  "era-c": {
+   "era-c": 0.4623,
+   "era-d": 0.7568,
+   "era-e": 0.7752,
+   "era-f": 0.9527,
+   "modern-a": 0.7725,
+   "modern-b": 0.8338
+  },
+  "era-d": {
+   "era-c": 0.5901,
+   "era-d": 0.6119,
+   "era-e": 0.7151,
+   "era-f": 0.9299,
+   "modern-a": 0.7857,
+   "modern-b": 0.8616
+  },
+  "era-e": {
+   "era-c": 0.6662,
+   "era-d": 0.7166,
+   "era-e": 0.563,
+   "era-f": 0.775,
+   "modern-a": 0.7186,
+   "modern-b": 0.8039
+  },
+  "era-f": {
+   "era-c": 0.841,
+   "era-d": 0.8313,
+   "era-e": 0.7024,
+   "era-f": 0.7032,
+   "modern-a": 0.7816,
+   "modern-b": 0.8066
+  },
+  "modern-a": {
+   "era-c": 0.7189,
+   "era-d": 0.7701,
+   "era-e": 0.7318,
+   "era-f": 0.8098,
+   "modern-a": 0.4961,
+   "modern-b": 0.5747
+  },
+  "modern-b": {
+   "era-c": 0.7662,
+   "era-d": 0.8268,
+   "era-e": 0.7202,
+   "era-f": 0.8298,
+   "modern-a": 0.5489,
+   "modern-b": 0.476
+  }
+ },
+ "within": {
+  "era-c": 0.4623,
+  "era-d": 0.6119,
+  "era-e": 0.563,
+  "era-f": 0.7032,
+  "modern-a": 0.4961,
+  "modern-b": 0.476
+ },
+ "nearest_other": {
+  "era-c": "era-d",
+  "era-d": "era-c",
+  "era-e": "era-c",
+  "era-f": "era-e",
+  "modern-a": "modern-b",
+  "modern-b": "modern-a"
+ },
+ "margin": {
+  "era-c": 0.2945,
+  "era-d": -0.0218,
+  "era-e": 0.1032,
+  "era-f": -0.0008,
+  "modern-a": 0.0786,
+  "modern-b": 0.0729
+ },
+ "passed": false,
+ "failures": [
+  "within(era-d)=0.6119 is not below cross(era-d, era-c)=0.5901",
+  "within(era-f)=0.7032 is not below cross(era-f, era-e)=0.7024"
+ ],
+ "supplementary_chunks": {
+  "unit": "1000-word train chunks, all pairs",
+  "mean_delta_fw": {
+   "era-c": {
+    "era-c": 0.8547,
+    "era-d": 0.9372,
+    "era-e": 0.9636,
+    "era-f": 1.1177,
+    "modern-a": 0.9734,
+    "modern-b": 1.004
+   },
+   "era-d": {
+    "era-c": 0.9372,
+    "era-d": 0.8898,
+    "era-e": 0.9452,
+    "era-f": 1.0713,
+    "modern-a": 0.9635,
+    "modern-b": 0.9969
+   },
+   "era-e": {
+    "era-c": 0.9636,
+    "era-d": 0.9452,
+    "era-e": 0.7982,
+    "era-f": 0.9711,
+    "modern-a": 0.9034,
+    "modern-b": 0.9342
+   },
+   "era-f": {
+    "era-c": 1.1177,
+    "era-d": 1.0713,
+    "era-e": 0.9711,
+    "era-f": 0.9092,
+    "modern-a": 0.9654,
+    "modern-b": 0.9943
+   },
+   "modern-a": {
+    "era-c": 0.9734,
+    "era-d": 0.9635,
+    "era-e": 0.9034,
+    "era-f": 0.9654,
+    "modern-a": 0.7275,
+    "modern-b": 0.7911
+   },
+   "modern-b": {
+    "era-c": 1.004,
+    "era-d": 0.9969,
+    "era-e": 0.9342,
+    "era-f": 0.9943,
+    "modern-a": 0.7911,
+    "modern-b": 0.754
+   }
+  },
+  "within_below_every_cross": {
+   "era-c": true,
+   "era-d": true,
+   "era-e": true,
+   "era-f": true,
+   "modern-a": true,
+   "modern-b": true
+  },
+  "all_personas": true
+ }
+}

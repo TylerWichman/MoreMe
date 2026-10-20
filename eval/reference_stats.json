@@ -1,0 +1,746 @@
+{
+  "schema_version": "1",
+  "analyze_version": "1.0.0",
+  "created": "2026-10-20T09:43:24-04:00",
+  "source": {
+    "split": "train",
+    "chunk_words": 1000,
+    "personas": [
+      "era-c",
+      "era-d",
+      "era-e",
+      "era-f",
+      "modern-a",
+      "modern-b"
+    ],
+    "chunks_per_persona": {
+      "era-c": 12,
+      "era-d": 8,
+      "era-e": 9,
+      "era-f": 9,
+      "modern-a": 8,
+      "modern-b": 11
+    },
+    "total_chunks": 57
+  },
+  "sd_type": "population",
+  "function_words": {
+    "the": {
+      "mean": 49.7368,
+      "sd": 12.931
+    },
+    "a": {
+      "mean": 21.9474,
+      "sd": 6.2223
+    },
+    "an": {
+      "mean": 2.8596,
+      "sd": 1.9774
+    },
+    "this": {
+      "mean": 5.3158,
+      "sd": 3.7518
+    },
+    "that": {
+      "mean": 14.807,
+      "sd": 7.0523
+    },
+    "these": {
+      "mean": 1.7895,
+      "sd": 2.0837
+    },
+    "those": {
+      "mean": 1.4737,
+      "sd": 1.8363
+    },
+    "some": {
+      "mean": 2.4912,
+      "sd": 1.9297
+    },
+    "any": {
+      "mean": 1.4211,
+      "sd": 1.6644
+    },
+    "each": {
+      "mean": 1.0,
+      "sd": 1.3765
+    },
+    "every": {
+      "mean": 1.6842,
+      "sd": 2.0703
+    },
+    "no": {
+      "mean": 2.386,
+      "sd": 2.1985
+    },
+    "all": {
+      "mean": 4.6491,
+      "sd": 2.9289
+    },
+    "both": {
+      "mean": 0.6667,
+      "sd": 1.0145
+    },
+    "either": {
+      "mean": 0.1754,
+      "sd": 0.3803
+    },
+    "neither": {
+      "mean": 0.1053,
+      "sd": 0.3595
+    },
+    "such": {
+      "mean": 1.2105,
+      "sd": 1.2942
+    },
+    "another": {
+      "mean": 0.6842,
+      "sd": 1.0622
+    },
+    "other": {
+      "mean": 2.0175,
+      "sd": 3.0636
+    },
+    "much": {
+      "mean": 1.3158,
+      "sd": 1.4037
+    },
+    "many": {
+      "mean": 1.5263,
+      "sd": 1.3259
+    },
+    "more": {
+      "mean": 3.1579,
+      "sd": 3.1108
+    },
+    "most": {
+      "mean": 1.2105,
+      "sd": 1.2668
+    },
+    "few": {
+      "mean": 0.8596,
+      "sd": 1.0832
+    },
+    "less": {
+      "mean": 0.2281,
+      "sd": 0.5625
+    },
+    "several": {
+      "mean": 0.2982,
+      "sd": 0.6479
+    },
+    "own": {
+      "mean": 0.7719,
+      "sd": 0.918
+    },
+    "same": {
+      "mean": 0.614,
+      "sd": 0.8325
+    },
+    "of": {
+      "mean": 24.5614,
+      "sd": 8.1327
+    },
+    "in": {
+      "mean": 18.193,
+      "sd": 7.4538
+    },
+    "to": {
+      "mean": 32.2982,
+      "sd": 9.5733
+    },
+    "for": {
+      "mean": 8.7368,
+      "sd": 4.2199
+    },
+    "with": {
+      "mean": 6.9825,
+      "sd": 3.1034
+    },
+    "on": {
+      "mean": 5.7719,
+      "sd": 3.3035
+    },
+    "at": {
+      "mean": 4.8596,
+      "sd": 2.7621
+    },
+    "by": {
+      "mean": 3.0,
+      "sd": 2.1275
+    },
+    "from": {
+      "mean": 3.2456,
+      "sd": 2.0966
+    },
+    "about": {
+      "mean": 2.0877,
+      "sd": 1.6252
+    },
+    "as": {
+      "mean": 7.2281,
+      "sd": 3.4029
+    },
+    "into": {
+      "mean": 1.8596,
+      "sd": 1.6161
+    },
+    "like": {
+      "mean": 1.7895,
+      "sd": 1.7141
+    },
+    "through": {
+      "mean": 0.6316,
+      "sd": 0.6108
+    },
+    "after": {
+      "mean": 1.3158,
+      "sd": 1.3657
+    },
+    "over": {
+      "mean": 1.2807,
+      "sd": 1.46
+    },
+    "between": {
+      "mean": 0.6491,
+      "sd": 0.9998
+    },
+    "out": {
+      "mean": 2.1228,
+      "sd": 1.697
+    },
+    "against": {
+      "mean": 0.2281,
+      "sd": 0.4962
+    },
+    "during": {
+      "mean": 0.2456,
+      "sd": 0.5706
+    },
+    "without": {
+      "mean": 0.7544,
+      "sd": 0.9418
+    },
+    "before": {
+      "mean": 1.386,
+      "sd": 1.46
+    },
+    "under": {
+      "mean": 0.386,
+      "sd": 0.8325
+    },
+    "around": {
+      "mean": 0.4211,
+      "sd": 0.674
+    },
+    "among": {
+      "mean": 0.2807,
+      "sd": 0.5216
+    },
+    "upon": {
+      "mean": 0.5614,
+      "sd": 0.7951
+    },
+    "within": {
+      "mean": 0.5439,
+      "sd": 1.3386
+    },
+    "along": {
+      "mean": 0.4737,
+      "sd": 0.6781
+    },
+    "across": {
+      "mean": 0.7193,
+      "sd": 1.472
+    },
+    "behind": {
+      "mean": 0.2105,
+      "sd": 0.5845
+    },
+    "beyond": {
+      "mean": 0.1228,
+      "sd": 0.3282
+    },
+    "toward": {
+      "mean": 0.1404,
+      "sd": 0.4368
+    },
+    "towards": {
+      "mean": 0.0702,
+      "sd": 0.3168
+    },
+    "above": {
+      "mean": 0.2632,
+      "sd": 0.547
+    },
+    "below": {
+      "mean": 0.0526,
+      "sd": 0.2233
+    },
+    "until": {
+      "mean": 0.614,
+      "sd": 0.8534
+    },
+    "since": {
+      "mean": 0.2456,
+      "sd": 0.5706
+    },
+    "off": {
+      "mean": 0.7018,
+      "sd": 0.9359
+    },
+    "up": {
+      "mean": 2.8772,
+      "sd": 2.1931
+    },
+    "down": {
+      "mean": 1.2456,
+      "sd": 1.4664
+    },
+    "near": {
+      "mean": 0.2456,
+      "sd": 0.5706
+    },
+    "onto": {
+      "mean": 0.0175,
+      "sd": 0.1313
+    },
+    "and": {
+      "mean": 34.4035,
+      "sd": 7.3815
+    },
+    "but": {
+      "mean": 5.5789,
+      "sd": 2.8281
+    },
+    "or": {
+      "mean": 3.5088,
+      "sd": 3.0615
+    },
+    "nor": {
+      "mean": 0.2105,
+      "sd": 0.4862
+    },
+    "so": {
+      "mean": 5.1579,
+      "sd": 3.955
+    },
+    "yet": {
+      "mean": 0.5088,
+      "sd": 0.8191
+    },
+    "if": {
+      "mean": 3.1754,
+      "sd": 2.7917
+    },
+    "because": {
+      "mean": 0.6842,
+      "sd": 0.8817
+    },
+    "although": {
+      "mean": 0.1579,
+      "sd": 0.4099
+    },
+    "though": {
+      "mean": 0.5088,
+      "sd": 1.0281
+    },
+    "while": {
+      "mean": 1.0,
+      "sd": 1.0596
+    },
+    "whether": {
+      "mean": 0.4035,
+      "sd": 0.6717
+    },
+    "unless": {
+      "mean": 0.2982,
+      "sd": 0.7
+    },
+    "than": {
+      "mean": 1.807,
+      "sd": 1.3693
+    },
+    "when": {
+      "mean": 3.5965,
+      "sd": 2.2153
+    },
+    "where": {
+      "mean": 1.4035,
+      "sd": 1.2263
+    },
+    "whereas": {
+      "mean": 0.0526,
+      "sd": 0.2233
+    },
+    "once": {
+      "mean": 0.4035,
+      "sd": 0.6717
+    },
+    "be": {
+      "mean": 6.1404,
+      "sd": 3.7577
+    },
+    "is": {
+      "mean": 12.0,
+      "sd": 7.1867
+    },
+    "am": {
+      "mean": 1.2456,
+      "sd": 1.5365
+    },
+    "are": {
+      "mean": 6.2632,
+      "sd": 4.979
+    },
+    "was": {
+      "mean": 8.4211,
+      "sd": 8.0021
+    },
+    "were": {
+      "mean": 3.1754,
+      "sd": 3.6376
+    },
+    "been": {
+      "mean": 2.8772,
+      "sd": 2.7278
+    },
+    "being": {
+      "mean": 0.7544,
+      "sd": 0.9784
+    },
+    "have": {
+      "mean": 7.0702,
+      "sd": 5.4479
+    },
+    "has": {
+      "mean": 2.9298,
+      "sd": 2.2931
+    },
+    "had": {
+      "mean": 6.3684,
+      "sd": 6.4933
+    },
+    "having": {
+      "mean": 0.2456,
+      "sd": 0.539
+    },
+    "do": {
+      "mean": 3.1053,
+      "sd": 3.1827
+    },
+    "does": {
+      "mean": 0.4561,
+      "sd": 0.7272
+    },
+    "did": {
+      "mean": 1.0175,
+      "sd": 1.4926
+    },
+    "will": {
+      "mean": 4.1579,
+      "sd": 5.4669
+    },
+    "would": {
+      "mean": 2.8246,
+      "sd": 3.304
+    },
+    "shall": {
+      "mean": 0.2807,
+      "sd": 0.585
+    },
+    "should": {
+      "mean": 1.3333,
+      "sd": 1.3551
+    },
+    "can": {
+      "mean": 2.7544,
+      "sd": 2.7611
+    },
+    "could": {
+      "mean": 2.2632,
+      "sd": 2.1726
+    },
+    "may": {
+      "mean": 0.9825,
+      "sd": 1.4448
+    },
+    "might": {
+      "mean": 0.7018,
+      "sd": 1.1542
+    },
+    "must": {
+      "mean": 1.3333,
+      "sd": 2.219
+    },
+    "ought": {
+      "mean": 0.2281,
+      "sd": 0.6758
+    },
+    "he": {
+      "mean": 6.4737,
+      "sd": 8.2401
+    },
+    "him": {
+      "mean": 2.2281,
+      "sd": 3.0894
+    },
+    "his": {
+      "mean": 2.5965,
+      "sd": 2.9845
+    },
+    "she": {
+      "mean": 4.0,
+      "sd": 6.54
+    },
+    "her": {
+      "mean": 3.3509,
+      "sd": 5.0593
+    },
+    "hers": {
+      "mean": 0.0175,
+      "sd": 0.1313
+    },
+    "it": {
+      "mean": 10.8772,
+      "sd": 5.9414
+    },
+    "its": {
+      "mean": 0.7193,
+      "sd": 1.0388
+    },
+    "they": {
+      "mean": 5.9474,
+      "sd": 4.4026
+    },
+    "them": {
+      "mean": 3.193,
+      "sd": 2.2356
+    },
+    "their": {
+      "mean": 3.0526,
+      "sd": 2.53
+    },
+    "theirs": {
+      "mean": 0.0351,
+      "sd": 0.184
+    },
+    "himself": {
+      "mean": 0.3333,
+      "sd": 0.7092
+    },
+    "herself": {
+      "mean": 0.1404,
+      "sd": 0.3946
+    },
+    "itself": {
+      "mean": 0.1053,
+      "sd": 0.3069
+    },
+    "themselves": {
+      "mean": 0.4211,
+      "sd": 0.9167
+    },
+    "who": {
+      "mean": 3.7018,
+      "sd": 3.8524
+    },
+    "whom": {
+      "mean": 0.2105,
+      "sd": 0.4862
+    },
+    "whose": {
+      "mean": 0.1754,
+      "sd": 0.424
+    },
+    "which": {
+      "mean": 3.4386,
+      "sd": 2.7339
+    },
+    "what": {
+      "mean": 2.7719,
+      "sd": 2.0944
+    },
+    "not": {
+      "mean": 6.8947,
+      "sd": 4.5332
+    },
+    "only": {
+      "mean": 1.5789,
+      "sd": 1.3885
+    },
+    "also": {
+      "mean": 1.1754,
+      "sd": 1.4645
+    },
+    "very": {
+      "mean": 1.4561,
+      "sd": 1.4274
+    },
+    "just": {
+      "mean": 1.807,
+      "sd": 1.6161
+    },
+    "then": {
+      "mean": 1.2982,
+      "sd": 1.242
+    },
+    "there": {
+      "mean": 3.193,
+      "sd": 1.9325
+    },
+    "here": {
+      "mean": 1.6842,
+      "sd": 2.8294
+    },
+    "now": {
+      "mean": 1.5263,
+      "sd": 1.5459
+    },
+    "even": {
+      "mean": 0.9298,
+      "sd": 0.9708
+    },
+    "still": {
+      "mean": 0.4211,
+      "sd": 0.7711
+    },
+    "too": {
+      "mean": 1.0175,
+      "sd": 1.192
+    },
+    "again": {
+      "mean": 0.2632,
+      "sd": 0.6077
+    },
+    "ever": {
+      "mean": 0.6316,
+      "sd": 0.8712
+    },
+    "never": {
+      "mean": 1.1404,
+      "sd": 1.5037
+    },
+    "always": {
+      "mean": 0.7018,
+      "sd": 1.1076
+    }
+  },
+  "exposed": {
+    "sentence_length_mean": {
+      "mean": 19.6761,
+      "sd": 3.8998
+    },
+    "sentence_length_sd": {
+      "mean": 11.526,
+      "sd": 3.6458
+    },
+    "sentence_length_p10": {
+      "mean": 7.0526,
+      "sd": 1.9684
+    },
+    "sentence_length_p50": {
+      "mean": 17.4035,
+      "sd": 3.8061
+    },
+    "sentence_length_p90": {
+      "mean": 35.3158,
+      "sd": 8.3501
+    },
+    "word_length_mean": {
+      "mean": 4.4279,
+      "sd": 0.4498
+    },
+    "paragraph_length_mean": {
+      "mean": 112.7815,
+      "sd": 56.1525
+    },
+    "comma_per_1k": {
+      "mean": 63.8596,
+      "sd": 13.8481
+    },
+    "semicolon_per_1k": {
+      "mean": 4.5789,
+      "sd": 5.1875
+    },
+    "colon_per_1k": {
+      "mean": 1.8947,
+      "sd": 2.5798
+    },
+    "exclamation_per_1k": {
+      "mean": 2.0526,
+      "sd": 4.2691
+    },
+    "question_per_1k": {
+      "mean": 1.807,
+      "sd": 2.8864
+    },
+    "ellipsis_per_1k": {
+      "mean": 0.3333,
+      "sd": 0.7335
+    },
+    "parenthesis_per_1k": {
+      "mean": 1.4737,
+      "sd": 2.5139
+    },
+    "em_dash_per_1k": {
+      "mean": 0.3158,
+      "sd": 1.2588
+    },
+    "en_dash_per_1k": {
+      "mean": 0.0877,
+      "sd": 0.539
+    },
+    "spaced_hyphen_per_1k": {
+      "mean": 2.4386,
+      "sd": 2.5889
+    },
+    "contraction_per_1k": {
+      "mean": 8.5439,
+      "sd": 9.0961
+    },
+    "first_person_singular_per_1k": {
+      "mean": 22.8772,
+      "sd": 15.9979
+    },
+    "first_person_plural_per_1k": {
+      "mean": 14.8947,
+      "sd": 12.0054
+    },
+    "second_person_per_1k": {
+      "mean": 13.2632,
+      "sd": 21.2492
+    },
+    "question_sentence_share": {
+      "mean": 0.0353,
+      "sd": 0.0652
+    },
+    "exclamation_sentence_share": {
+      "mean": 0.0379,
+      "sd": 0.0774
+    },
+    "type_token_ratio_mattr100": {
+      "mean": 0.7055,
+      "sd": 0.0393
+    },
+    "all_caps_word_per_1k": {
+      "mean": 2.0,
+      "sd": 4.7091
+    },
+    "lowercase_sentence_start_share": {
+      "mean": 0.0261,
+      "sd": 0.0223
+    },
+    "emoji_per_1k": {
+      "mean": 0.0,
+      "sd": 0.0
+    },
+    "sentence_opener_variety": {
+      "mean": 0.5752,
+      "sd": 0.1085
+    }
+  },
+  "excluded": [
+    "emoji_per_1k"
+  ]
+}
