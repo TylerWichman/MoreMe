@@ -1,0 +1,62 @@
+{
+  "schema_version": "1",
+  "analyze_version": "1.0.0",
+  "view": "exposed",
+  "word_count": 190,
+  "sentence_count": 18,
+  "paragraph_count": 5,
+  "doc_count": 3,
+  "docs": [
+    {
+      "name": "sample-01.txt",
+      "word_count": 63,
+      "encoding_used": "utf-8"
+    },
+    {
+      "name": "sample-02.txt",
+      "word_count": 58,
+      "encoding_used": "utf-8"
+    },
+    {
+      "name": "sample-03.txt",
+      "word_count": 69,
+      "encoding_used": "utf-8"
+    }
+  ],
+  "exposed": {
+    "sentence_length_mean": 10.5556,
+    "sentence_length_sd": 5.2092,
+    "sentence_length_p10": 2,
+    "sentence_length_p50": 10,
+    "sentence_length_p90": 19,
+    "word_length_mean": 4.0895,
+    "paragraph_length_mean": 38.0,
+    "comma_per_1k": 52.6316,
+    "semicolon_per_1k": 0.0,
+    "colon_per_1k": 0.0,
+    "exclamation_per_1k": 0.0,
+    "question_per_1k": 10.5263,
+    "ellipsis_per_1k": 0.0,
+    "parenthesis_per_1k": 0.0,
+    "em_dash_per_1k": 5.2632,
+    "en_dash_per_1k": 0.0,
+    "spaced_hyphen_per_1k": 0.0,
+    "contraction_per_1k": 21.0526,
+    "first_person_singular_per_1k": 68.4211,
+    "first_person_plural_per_1k": 21.0526,
+    "second_person_per_1k": 15.7895,
+    "question_sentence_share": 0.1111,
+    "exclamation_sentence_share": 0.0,
+    "type_token_ratio_mattr100": 0.7976,
+    "all_caps_word_per_1k": 0.0,
+    "lowercase_sentence_start_share": 0.0,
+    "emoji_per_1k": 0.0,
+    "sentence_opener_variety": 0.7778
+  },
+  "warnings": [
+    {
+      "code": "very_low_word_count",
+      "message": "Only 190 words. Numbers from fewer than 300 words are very rough."
+    }
+  ]
+}
