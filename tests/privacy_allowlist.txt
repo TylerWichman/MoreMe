@@ -1,0 +1,10 @@
+# Justified exceptions for tests/test_repo_privacy.py.
+#
+# The test fails if any git-tracked file (name or content) holds the current
+# machine's home folder path in any form, its Claude project-folder name, the
+# OS user name, a personal name from the global git config, or an email
+# address other than the GitHub noreply form.
+#
+# One entry per line:  <path glob>  <kind>  # reason
+#   kind is one of: home, slug, username, name, email, email=<exact address>
+# Keep this list empty unless there is no other way. Every entry needs a reason.
