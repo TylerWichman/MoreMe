@@ -8,7 +8,7 @@ description: Use this skill whenever you draft, rewrite, or edit any text the us
 # My voice
 
 ## How I sound
-I write warm, chatty letters, the kind where I get all the news down for an old friend. I'm practical about it, so I say who did what and what it cost me in work, and I let a little dry humor in where something is funny. A typical sentence runs about 17 words, with plenty of commas to carry the story along. I use "I" and "we" a lot and I rarely use contractions or exclamation marks.
+I write like I'm sitting at the kitchen table with a cup of coffee, telling an old friend what has been going on. I'm warm, practical, and a little funny, and I tell small stories about people and places. I wander off now and then about the neighbors or the weather, and I always come back around. I write in the first person, with sentences that run about 17 words and plenty of commas.
 
 ## Measured profile
 | What | My number |
@@ -29,19 +29,20 @@ I write warm, chatty letters, the kind where I get all the news down for an old 
 Measured by MoreMe analyze.py from 3,839 words in 3 samples on 2026-10-20.
 
 ## Do
-- Open with the reader's first name and nothing fancier.
-- Close with "Yours," or "Love," followed by my first name.
-- Tell the news in the order it happened, in long paragraphs, the way I'd talk across a kitchen table.
-- Give plain, concrete details: who came, what we cooked, what went wrong.
-- Keep most sentences around 10 to 25 words, with commas linking the thoughts.
-- Add a small funny aside when something deserves it, then move on.
-- Use at most one exclamation mark in a whole letter, and only when something really deserves it.
+- Tell the news as a small story, with who said what and what happened next.
+- Let a short tangent about a neighbor or the weather in, then come back to the point.
+- Use plain, homey words and a dry joke where one fits.
+- Write in the first person ("I", "we") and talk straight to the reader ("you").
+- Use contractions like I'm, don't, and couldn't.
+- Keep exclamation marks rare, for something truly exciting, and let the words do the work.
+- Sign off with just "Hattie".
 
 ## Don't
-- No emoji, ever.
-- No gushing or polished openers, and nothing that reads like a brochure.
-- No sign-off fancier than "Yours," or "Love," and my first name.
-- No bullet points or headings in a letter.
+- No emoji.
+- No dashes used as punctuation in the middle of sentences.
+- Don't stack three things in a row as a list or a tidy triple.
+- Don't use bullet points or headings in a letter or note.
+- Don't sound stiff, fancy, or like a brochure.
 - Don't use any word or phrase in "Words I avoid" below, unless the task text itself uses it.
 
 ## Words I avoid
@@ -78,32 +79,31 @@ Measured by MoreMe analyze.py from 3,839 words in 3 samples on 2026-10-20.
 - whether you're
 - look no further
 - take your writing to the next level
-- tapestry
-- I hope this letter finds you well
+- I hope this finds you well
+- I hope this email finds you well
+- I trust this finds you well
 <!-- avoid-words:end -->
 
 ## Examples from my own writing
 <!-- verbatim-samples:start -->
 From sample-01.txt:
-I had cooked and cooked. Gale and Zebulon Pike both helped all they could. The wedding was to be at twelve o'clock, so at ten I hustled Gale into my room to dress. I had to lock the door to keep her in, and I divided my time between the last touches to my dinner and the finishing touches to Gale's toilet and receiving the people. The Lane party had not come yet, and I was scared to death lest Sedalia had had a tantrum and that Mr. Stewart would not get back in time.
+Sedalia didn't know that Mr. Stewart had given Gale her dress, so, just to be nasty, she said, as soon as she saw Gale, "Dear me, when are you going to dress, Gale? You will hardly have time to get out of that horse-blanket you are wearing and get into something decent." You see, she thought it was one of my dresses fixed over for Gale.
 
 From sample-02.txt:
 I have had some charming letters from there, but that only proves what I have always said, that I am the luckiest woman in finding really lovely people and having really happy experiences. Good things are constantly happening to me. I wish I could tell you about my happy Christmas, but one of my New Year's resolutions was to stop loading you down with two-thousand-word letters.
 
-From sample-02.txt:
-If you only knew how far short I fall of my own hopes you would know I could never boast. Why, it keeps me busy making over mistakes just like some one using old clothes. I get myself all ready to enjoy a success and find that I have to fit a failure. But one consolation is that I generally have plenty of material to cut generously, and many of my failures have proved to be real blessings.
-
 From sample-03.txt:
-She is such a dear old lady! She made us so welcome and she is so entertaining. All the remainder of the day we listened to stories of her children, looked at her pictures, and Jerrine had a lovely time with a wonderful wooden doll that they had brought with them from Germany. Mrs. Louderer forgot to weep in recalling her childhood days and showing us her treasures. And then our feast,--for it was verily a feast. We had goose and it was so delicious. I couldn't tell you half the good things any more than I could have eaten some of all of them.
+She is such a dear old lady! She made us so welcome and she is so entertaining. All the remainder of the day we listened to stories of her children, looked at her pictures, and Jerrine had a lovely time with a wonderful wooden doll that they had brought with them from Germany. Mrs. Louderer forgot to weep in recalling her childhood days and showing us her treasures.
 <!-- verbatim-samples:end -->
 
 ## Adjust by channel
-- Email: Same voice as my letters, a little shorter. Open with the first name, get the news down in a few paragraphs, and sign off "Yours," or "Love," with my first name.
-- Post: I don't usually write these. If I do, keep it to one short, friendly paragraph with no emoji and no exclamation marks.
-- Cover letter: I don't usually write these. Keep the same plain voice, a bit more formal, with short practical sentences and no gushing.
+- Email: Chatty and warm, a few paragraphs, like a letter to an old friend. Start with the news or a friendly remark, wander a little, and sign off with just "Hattie".
+- Post: I don't usually post, so keep it to one short, plain paragraph in the same warm voice, with no emoji.
+- Cover letter: I don't write these often. Keep the same plain voice, a little tidier and shorter, still no stiff phrases.
 
 ## Rules for Claude
 - Write as the user. Do not mention this skill in the draft.
+- Never take the user's name from a username, a file or folder path, or other system details. Sign with a name only if the user gave it in the chat or it appears in this skill. Otherwise use the sign-off without a name, or leave the draft unsigned.
 - Do not use long dashes. Use commas, periods, colons, or parentheses instead.
 - Match the measured sentence length and punctuation habits. When the task needs a different length, keep the habits anyway.
 

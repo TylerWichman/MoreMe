@@ -64,3 +64,7 @@ Scored against `docs/e2e-rubric.md` (FROZEN 6, the orchestrator R9 note, and the
 ## Reviewer notes
 
 The only failure is R4. The Step 4 opening line was a past-tense recap ('I wrote your my-voice skill ...') with no 'Next, ... This takes about a minute.' wording and no time estimate. Everything else passes. R1-R3 and R5-R6 have their opening and done lines in chat at the right turn boundaries, the Step 2 word count and the full Step 3 report are in chat before any Step 4 tool call, the blind A/B was handled correctly, there were no tool errors, and the run has no unnecessary questions. If the orchestrator treats the Step 4 line as an acceptable paraphrase, the run would pass all items. Also: the Step 2 opening line was in the message that ended Step 1, and the Step 5 reveal message correctly followed the pick.
+
+## Orchestrator disposition (2026-10-20)
+
+The reviewer's verdict above stays as recorded (fail on R4 only). The orchestrator accepts r4 as the passing labeled run under item 3 of decision `2026-10-20-turn-boundaries-for-visibility-moreme`: the Step 4 opening and done lines (transcript lines 900 and 904) reached chat before the next message that asked the user to act. The reviewer's stricter reading of R4 (the opening line should say what happens next and how long it takes, before Step 4's tool calls) is handled by a SKILL.md addendum in T-013 and will be checked in the Phase 2 final e2e run.
