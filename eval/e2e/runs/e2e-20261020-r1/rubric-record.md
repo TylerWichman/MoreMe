@@ -2,6 +2,8 @@
 
 # Rubric record: e2e-20261020-r1
 
+> Home folder path replaced with ~ by tools/sanitize_artifacts.py (the OS user name, personal names, and email addresses are also replaced: [user], [name], [email]).
+
 Scored against `docs/e2e-rubric.md` (FROZEN 6 plus the orchestrator R9 note) by a clean-room reviewer agent (`claude -p`, tools Read, Glob, Grep only, in a scratch folder holding only SKILL.md, the rubric, the transcript, and the output folder). Raw verdict: `review.json`. Line numbers refer to `transcript.md` in this folder.
 
 | Field | Value |

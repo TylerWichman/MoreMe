@@ -2,7 +2,7 @@
 
 # MoreMe end-to-end run: e2e-20261020-r1 (headless)
 
-> Interviewee simulated by an AI agent; writing samples are public-domain texts by Elinore Pruitt Stewart (Letters of a Woman Homesteader, 1914, Project Gutenberg eBook #16623). The A/B pick below is an AI agent's choice and is not evidence of quality.
+> Interviewee simulated by an AI agent; writing samples are public-domain texts by Elinore Pruitt Stewart (Letters of a Woman Homesteader, 1914, Project Gutenberg eBook #16623). The A/B pick below is an AI agent's choice and is not evidence of quality. Home folder path replaced with ~ by tools/sanitize_artifacts.py (the OS user name, personal names, and email addresses are also replaced: [user], [name], [email]).
 
 Every turn below is verbatim: user messages, assistant text, tool calls, and tool output, rendered from the stream-json logs in `logs/`. This is a headless Claude Code run (`claude -p`), not a screen capture.
 
@@ -508,10 +508,14 @@ Python 3.11.9
 **Tool result** (for toolu_012Fxj2aDJVVVDmhsqSKAzDP):
 
 ```text
-{
-  "analyze_version": "1.0.0",
-  "schema_version": "1",
-  "python": "3.11.9"
+{
+
+  "analyze_version": "1.0.0",
+
+  "schema_version": "1",
+
+  "python": "3.11.9"
+
 }
 ```
 
@@ -535,15 +539,24 @@ Python 3.11.9
 **Tool result** (for toolu_01AsUVoRuq9hAp3XeMzRP82n):
 
 ```text
-{
-  "ok": true,
-  "out": "moreme-output/profile.json",
-  "warnings": []
-}
-{
-  "ok": true,
-  "out": "moreme-output/report.txt",
-  "warnings": []
+{
+
+  "ok": true,
+
+  "out": "moreme-output/profile.json",
+
+  "warnings": []
+
+}
+
+{
+
+  "ok": true,
+
+  "out": "moreme-output/report.txt",
+
+  "warnings": []
+
 }
 ```
 
@@ -763,12 +776,18 @@ File created successfully at: ~\AppData\Local\Temp\moreme-e2e\e2e-20261020-r1\mo
 **Tool result** (for toolu_01XvBVsi2ZBzfzfsrYwuqh6Y):
 
 ```text
-{
-  "ok": true,
-  "skill_dir": "moreme-output\\my-voice",
-  "zip": "moreme-output\\my-voice.zip",
-  "errors": [],
-  "warnings": []
+{
+
+  "ok": true,
+
+  "skill_dir": "moreme-output\\my-voice",
+
+  "zip": "moreme-output\\my-voice.zip",
+
+  "errors": [],
+
+  "warnings": []
+
 }
 ```
 
@@ -1144,35 +1163,64 @@ File created successfully at: ~\AppData\Local\Temp\moreme-e2e\e2e-20261020-r1\mo
 **Tool result** (for toolu_01QFgeffuGVrqH2Zethu1Ues):
 
 ```text
-{
-  "labels": [
-    "A",
-    "B"
-  ],
-  "warnings": []
-}
-Draft A
-
-Margaret,
-
-Well, the first snow came early this year, and it caught me with the porch chairs still out and the woodpile only half stacked. It was about four inches by Sunday morning, soft and wet, and I spent most of the day hauling things under cover and grumbling about it. By evening I had a fire going and the whole house smelled of wet wool and soup, so I can't say it was a bad trade.
-
-That's the news from here, and I've gone and used up most of my page on the weather. How is your winter going so far? Tell me about the cold, and whether you've found a good way to keep warm, and what the days are like for you now. I'd like to hear all of it.
-
-Love,
-[name]
-
-Draft B
-
-Dear Margaret,
-
-The first snow came early this year. I woke up Sunday to a white yard and a very quiet street, and I stood at the window with my coffee far longer than I'd like to admit. It melted by afternoon, but it felt like a little announcement that winter is on its way.
-
-It made me think of you, and of all those cold walks we used to take when we swore we'd never get tired of them. How is your winter going so far? Are you keeping warm and finding cozy things to fill the dark evenings?
-
-Write back when you have a moment. I'd love to hear everything.
-
-Warmly,
+{
+
+  "labels": [
+
+    "A",
+
+    "B"
+
+  ],
+
+  "warnings": []
+
+}
+
+Draft A
+
+
+
+Margaret,
+
+
+
+Well, the first snow came early this year, and it caught me with the porch chairs still out and the woodpile only half stacked. It was about four inches by Sunday morning, soft and wet, and I spent most of the day hauling things under cover and grumbling about it. By evening I had a fire going and the whole house smelled of wet wool and soup, so I can't say it was a bad trade.
+
+
+
+That's the news from here, and I've gone and used up most of my page on the weather. How is your winter going so far? Tell me about the cold, and whether you've found a good way to keep warm, and what the days are like for you now. I'd like to hear all of it.
+
+
+
+Love,
+
+[name]
+
+
+
+Draft B
+
+
+
+Dear Margaret,
+
+
+
+The first snow came early this year. I woke up Sunday to a white yard and a very quiet street, and I stood at the window with my coffee far longer than I'd like to admit. It melted by afternoon, but it felt like a little announcement that winter is on its way.
+
+
+
+It made me think of you, and of all those cold walks we used to take when we swore we'd never get tired of them. How is your winter going so far? Are you keeping warm and finding cozy things to fill the dark evenings?
+
+
+
+Write back when you have a moment. I'd love to hear everything.
+
+
+
+Warmly,
+
 [name]
 ```
 
@@ -1228,16 +1276,26 @@ A
 **Tool result** (for toolu_01G18KA4Lr6qYDM5suJxyHMp):
 
 ```text
-{
-  "schema_version": "1",
-  "picked": "A",
-  "picked_arm": "with",
-  "mapping": {
-    "A": "with",
-    "B": "without"
-  },
-  "revealed": "2026-10-20T10:10:24-04:00",
-  "warnings": []
+{
+
+  "schema_version": "1",
+
+  "picked": "A",
+
+  "picked_arm": "with",
+
+  "mapping": {
+
+    "A": "with",
+
+    "B": "without"
+
+  },
+
+  "revealed": "2026-10-20T10:10:24-04:00",
+
+  "warnings": []
+
 }
 ```
 
@@ -1290,11 +1348,16 @@ Project folder.
 **Tool result** (for toolu_01FxT888n2fAZKGESdq54vqz):
 
 ```text
-{
-  "ok": true,
-  "installed": "~\\AppData\\Local\\Temp\\moreme-e2e\\e2e-20261020-r1\\.claude\\skills\\my-voice",
-  "route": "project",
-  "warnings": []
+{
+
+  "ok": true,
+
+  "installed": "~\\AppData\\Local\\Temp\\moreme-e2e\\e2e-20261020-r1\\.claude\\skills\\my-voice",
+
+  "route": "project",
+
+  "warnings": []
+
 }
 ```
 

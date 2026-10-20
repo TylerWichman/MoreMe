@@ -5,3 +5,10 @@ __pycache__/
 venv*/
 .env/
 *.egg-info/
+
+# Raw run evidence lives outside the repo (eval/lib/artifacts.py)
+.evidence/
+eval/e2e/calls.jsonl
+eval/e2e/runs/*/logs/
+eval/e2e/runs/*/output/
+*.console.txt
