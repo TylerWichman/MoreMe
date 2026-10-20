@@ -1111,6 +1111,58 @@ WARNING_TEXT = {
 }
 
 
+def _not_measured_line(heading):
+    return "{0}: {1}.".format(heading, NOT_MEASURED)
+
+
+def _group_line(e, heading, template, keys):
+    """One report line for a group of values. When nothing in the group was measured, say so
+    once instead of writing "not measured" after every label."""
+    values = [e.get(k) for k in keys]
+    if all(v is None for v in values):
+        return _not_measured_line(heading)
+    return template.format(*[display_value(k, v) for k, v in zip(keys, values)])
+
+
+def _sentences_line(e):
+    if e.get("sentence_length_p50") is None:
+        return _not_measured_line("Sentences")
+    text = "Sentences: a typical sentence is {0}. Short ones are about {1} and long ones about {2}. " \
+           "The average is {3}".format(
+               _words(e.get("sentence_length_p50")),
+               _words(e.get("sentence_length_p10")),
+               _words(e.get("sentence_length_p90")),
+               _one("sentence_length_mean", e.get("sentence_length_mean"), " words"),
+           )
+    sd = e.get("sentence_length_sd")
+    if sd is None:
+        return text + ". There is too little text to say how much the length varies."
+    return text + ", and length varies by about {0}.".format(_one("sentence_length_sd", sd, " words"))
+
+
+def _words_line(e):
+    word = e.get("word_length_mean")
+    para = e.get("paragraph_length_mean")
+    ttr = e.get("type_token_ratio_mattr100")
+    if word is None and para is None and ttr is None:
+        return _not_measured_line("Words and paragraphs")
+    parts = []
+    if word is None:
+        parts.append("average word length is " + NOT_MEASURED + ".")
+    else:
+        parts.append("the average word is {0} long.".format(_one("word_length_mean", word, " letters")))
+    if para is None:
+        parts.append("Paragraph length is " + NOT_MEASURED + ".")
+    else:
+        parts.append("A typical paragraph is {0}.".format(_words(para)))
+    if ttr is None:
+        parts.append("Word variety is " + NOT_MEASURED + ".")
+    else:
+        parts.append("Word variety is {0} (share of different words in each run of 100 words).".format(
+            _one("type_token_ratio_mattr100", ttr)))
+    return "Words and paragraphs: " + " ".join(parts)
+
+
 def build_report(profile):
     e = profile["exposed"]
     wc = profile.get("word_count", 0)
@@ -1119,45 +1171,34 @@ def build_report(profile):
         "Your writing, measured by MoreMe",
         "Based on {0:,} {1} in {2} {3}.".format(wc, plural(wc, "word", "words"), dc, plural(dc, "sample", "samples")),
         "",
-        "Sentences: a typical sentence is {0}. Short ones are about {1} and long ones about {2}. "
-        "The average is {3}, and length varies by about {4}.".format(
-            _words(e.get("sentence_length_p50")),
-            _words(e.get("sentence_length_p10")),
-            _words(e.get("sentence_length_p90")),
-            _one("sentence_length_mean", e.get("sentence_length_mean"), " words"),
-            _one("sentence_length_sd", e.get("sentence_length_sd"), " words"),
-        ),
-        "Words and paragraphs: the average word is {0} long. A typical paragraph is {1}. "
-        "Word variety is {2} (share of different words in each run of 100 words).".format(
-            _one("word_length_mean", e.get("word_length_mean"), " letters"),
-            _words(e.get("paragraph_length_mean")),
-            _one("type_token_ratio_mattr100", e.get("type_token_ratio_mattr100")),
-        ),
-        "Punctuation per 1,000 words: commas {0}, semicolons {1}, colons {2}, exclamation marks {3}, "
-        "question marks {4}, ellipses {5}, opening parentheses {6}.".format(
-            *[display_value(k, e.get(k)) for k in (
-                "comma_per_1k", "semicolon_per_1k", "colon_per_1k", "exclamation_per_1k",
-                "question_per_1k", "ellipsis_per_1k", "parenthesis_per_1k")]
-        ),
-        "Dashes per 1,000 words: long dashes {0}, medium dashes {1}, spaced hyphens used as dashes {2}.".format(
-            *[display_value(k, e.get(k)) for k in ("em_dash_per_1k", "en_dash_per_1k", "spaced_hyphen_per_1k")]
-        ),
-        "Contractions and pronouns per 1,000 words: contractions like I'm and don't {0}; "
-        "I, me, my {1}; we, us, our {2}; you, your {3}.".format(
-            *[display_value(k, e.get(k)) for k in (
-                "contraction_per_1k", "first_person_singular_per_1k", "first_person_plural_per_1k",
-                "second_person_per_1k")]
-        ),
-        "Kinds of sentences: questions {0}, sentences ending in an exclamation mark {1}, "
-        "sentences that start lowercase {2}. Different first words: {3} of sentences.".format(
-            *[display_value(k, e.get(k)) for k in (
-                "question_sentence_share", "exclamation_sentence_share", "lowercase_sentence_start_share",
-                "sentence_opener_variety")]
-        ),
-        "Capitals and emoji per 1,000 words: words in ALL CAPS {0}, emoji {1}.".format(
-            display_value("all_caps_word_per_1k", e.get("all_caps_word_per_1k")),
-            display_value("emoji_per_1k", e.get("emoji_per_1k")),
-        ),
+        _sentences_line(e),
+        _words_line(e),
+        _group_line(
+            e, "Punctuation per 1,000 words",
+            "Punctuation per 1,000 words: commas {0}, semicolons {1}, colons {2}, exclamation marks {3}, "
+            "question marks {4}, ellipses {5}, opening parentheses {6}.",
+            ("comma_per_1k", "semicolon_per_1k", "colon_per_1k", "exclamation_per_1k",
+             "question_per_1k", "ellipsis_per_1k", "parenthesis_per_1k")),
+        _group_line(
+            e, "Dashes per 1,000 words",
+            "Dashes per 1,000 words: long dashes {0}, medium dashes {1}, spaced hyphens used as dashes {2}.",
+            ("em_dash_per_1k", "en_dash_per_1k", "spaced_hyphen_per_1k")),
+        _group_line(
+            e, "Contractions and pronouns per 1,000 words",
+            "Contractions and pronouns per 1,000 words: contractions like I'm and don't {0}; "
+            "I, me, my {1}; we, us, our {2}; you, your {3}.",
+            ("contraction_per_1k", "first_person_singular_per_1k", "first_person_plural_per_1k",
+             "second_person_per_1k")),
+        _group_line(
+            e, "Kinds of sentences",
+            "Kinds of sentences: questions {0}, sentences ending in an exclamation mark {1}, "
+            "sentences that start lowercase {2}. Different first words: {3} of sentences.",
+            ("question_sentence_share", "exclamation_sentence_share", "lowercase_sentence_start_share",
+             "sentence_opener_variety")),
+        _group_line(
+            e, "Capitals and emoji per 1,000 words",
+            "Capitals and emoji per 1,000 words: words in ALL CAPS {0}, emoji {1}.",
+            ("all_caps_word_per_1k", "emoji_per_1k")),
     ]
     seen = []
     for item in profile.get("warnings") or []:
@@ -1638,7 +1679,47 @@ def placeholder_values(profile, notes, samples_text, date_text):
     return values
 
 
+UNIT_AFTER_RE = re.compile(
+    r"(\{\{\s*(exposed\.[a-z0-9_]+)\s*\}\})"
+    r"( to \{\{\s*(exposed\.[a-z0-9_]+)\s*\}\})?"
+    r"( words| letters| per 1,000 words)?"
+)
+COUNT_NOUN_RE = re.compile(r"(\{\{\s*(meta\.word_count|meta\.doc_count)\s*\}\}) (words|samples)\b")
+
+
+def fit_display_text(template, values):
+    """Adjust the fixed text next to number placeholders so missing values read naturally.
+
+    The template writes a unit after each number ("{{exposed.x}} words"). When a value is
+    not measured, the unit is dropped, and a range ("{{a}} to {{b}} words") becomes one
+    "not measured" phrase. A count of exactly 1 takes the singular noun ("1 sample").
+    Display text only: the values themselves follow the FROZEN 3 display rules unchanged.
+    """
+
+    def missing(key):
+        return values.get(key) == NOT_MEASURED
+
+    def units(match):
+        first, key, rng, key2, unit = match.groups()
+        if rng:
+            if missing(key) or missing(key2):
+                return first if missing(key) else "{{" + key2 + "}}"
+            return match.group(0)
+        if missing(key):
+            return first
+        return match.group(0)
+
+    def nouns(match):
+        placeholder, key, noun = match.groups()
+        if values.get(key) == "1":
+            return placeholder + " " + noun[:-1]
+        return match.group(0)
+
+    return COUNT_NOUN_RE.sub(nouns, UNIT_AFTER_RE.sub(units, template))
+
+
 def render_template(template, values):
+    template = fit_display_text(template, values)
     unknown = []
 
     def replace(match):
