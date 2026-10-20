@@ -1,0 +1,37 @@
+With this parliament drawing to a close, it’s time to take what we’ve learned over the last few years and work out how to pick up the pace of digital transformation in the years to come.
+
+As Mike Beaven said yesterday, the exemplar programme has wrapped up. I want to join him in congratulating everyone who has made things better for users around the UK. It’s been astonishing to watch it unfold.
+
+The most important thing we’ve taken from it? Siloed approaches to transformation don’t work. Reinventing the wheel every single time we build a service has led to far too much duplication and waste. That’s not good enough.
+
+We want to fix that by building Government as a Platform.
+
+Government as a Platform is a new vision for digital government; a common core infrastructure of shared digital systems, technology and processes on which it’s easy to build brilliant, user-centric government services.
+
+Government as a Platform is a phrase coined by Tim O’Reilly in a 2010 paper, although there are differences between the environment he describes and the one we face in the UK. Last autumn we made this video to explain the concept. Our thinking has moved on a bit since then, but it’s simple illustration of the kind of thing we mean.
+
+The world we’re in now, where each service has its own way of doing common things – like taking payments or sending reminders – is hugely inefficient. It’s making things more difficult for users and much more expensive for government.
+
+We aren’t starting from scratch. We’ve already built platforms that are delivering better services at a much lower cost.
+
+GOV.UK, the single domain, is a platform for publishing. It’s used by hundreds of departments and agencies, and replacing DirectGov and Business Link alone saved more than £60m a year.
+
+And, more recently, we have GOV.UK Verify – a platform for identity. A new way for citizens to prove who they are when they use government services (and the first of its kind in the world). Teams at HMRC, DEFRA and BIS are already using it as they build new services.
+
+In our early conversations with departments we’ve found there are probably thirty more platforms that would radically change the speed and cost of building new services.
+
+The Corporate Management Board of the Civil Service and HM Treasury have asked us to explore the concept further. We’re working with departments to unpick what platforms will have the most impact, both for users and in terms of the cost to government. In particular we're looking at;
+
+how to speed up the roll out of better technology for civil servants
+
+what platform services could do to improve the way departments and agencies work
+
+We’re also starting to build prototypes. Payment processing, for example, was one potential platform cited by many as an area to explore and we’ve already started to do some discovery work on what that might look like. Other examples include case management and appointment bookings – common services used all around government.
+
+The new ways of working, the new skills we’re bringing to government, and the relentless focus on meeting user needs all demand a solid digital infrastructure. There are teams in departments now capable of building world-leading digital services who need core platforms, and robust, secure canonical datasets to build on.
+
+Over the next few months we’ll be working out how to do that.
+
+While the next wave of platforms has yet to be finalised, what is clear is the enthusiasm government has for the concept; taking a join-up approach to service provision that’s going to be genuinely transformational. I’m excited for what’s to come.
+
+Onwards!

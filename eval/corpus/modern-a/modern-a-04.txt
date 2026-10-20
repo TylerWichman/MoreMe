@@ -1,0 +1,39 @@
+In 2011, while gearing up to take on my current role, I discussed with the Minister for the Cabinet Office, Francis Maude, the strategy I recommended we adopt for all things digital. The strategy was to be disarmingly simple: to deliver. Often, iteratively and repetitively.
+
+Here’s my take on why delivery is such an attractive digital strategy in Whitehall. Ministers are inundated with policy directives and advice, most of it of the risk-averse variety. When it comes to digital, the voices of security and the voices of procurement dominate policy recommendations. The voice of the user barely gets a look-in. (Which also explains much of the poor internal IT, but that really is another story.)
+
+There are two inarguable truths about the creation of policy. Firstly, there’s far too much of it, especially in relation to subsequent delivery. A 2009 Institute for Government report (PDF), claims 19,436 civil servants were employed in ‘policy delivery’ in 2009, while each government department produces around 171 policy or strategy documents on average each year.
+
+One of the many lessons in my 18 months in Government has been to watch the endless policy cycles and revisions accrue - revision upon revision of carefully controlled Word documents, replete with disastrous styling. Subs to Ministers, private office communications, correspondence across departments and occasional harvesting of consultation feedback all go into the mix.
+
+Rarely, if ever, do users get a look-in. User need, if referenced at all, is self-reinforcing, in that the internal user needs dominate those of users of public services. I’ve lost count of the times when, in attempting to explain a poorly performing transaction or service, an explanation comes back along the lines of ‘Well, the department needs are different...’ How the needs of a department or an agency can trump the needs of the users of public services is beyond me.
+
+It’s usually the way with all large, rules-based organisations, that more time and effort is spent on internal logic and process than on listening to and understanding real user needs. But in the case of public service provision, it is too often a completely closed loop, the ultimate insider job. There are many better analysts of why this occurs, but a lot is to do with motivation of those inside the system, and Le Grand (PDF) is possibly the best place to start that discussion.
+
+The second policy fact is that when it comes to digital strategy, and technology related issues in general, the absence of knowledgeable input from those delivering services is obvious. In 2009, the Public Administration Select Committee criticised the policymaking process in general as hurried, hyperactive, and insufficiently informed by practical experience (Public Administration Select Committee, Good Government, HC 97-I, 2009, pp.21-25). My italics, because it’s this characteristic which is the killer for the digital agenda.
+
+The people who can ‘find the quick do’ as one of my business cards says, would much rather actually deliver than try and influence policy makers. While many digital issues require clear policies, many more do not. What they require is very quick delivery of a working version of the product. Throughout the creation of GOV.UK in 2012, time and again, we encountered issues where it was just quicker, cheaper and more efficient to build, rent or throw together a new product, or at least a minimum viable product, than go through the twin horrors of an elongated policy process followed by a long procurement.
+
+Back in 2011 I took time to meet several previous holders of exalted job titles such as mine. From e-envoys to CIO’s, Executive Directors to corporate change agents, Whitehall has a glittering track record of giving ambiguous but eye-catching job titles to newly arrived reformers, especially in the technology field. I should thank them firstly for giving their time and thoughtful advice. Many of these people I count as friends, and I will spare them all direct references. While many of them banked some high-profile achievements, the collective reflection was frustration with and at the system. As one candidly put it, ‘the strategy was flawless, but I couldn’t get anything done.’ And there’s the rub. Delivery is too often the poor relation to policy.
+
+Since we started the Government Digital Service we have at all times tried to make user needs the driver for all decisions. Delivery based on user need is like kryptonite to policy makers and existing suppliers, as it creates rapid feedback loops and mitigates against vendor lock-in.
+
+Looking at the highlights of what we have delivered, it is notable that delivery of services, whether they be information or transactional, has come before strategy.
+
+Apr: Budget commitments (PDF): Digital Strategies and Cost Per Transactions
+
+May: Social Media Guidelines and delivered alpha service for Office of Public Guardian (Lasting Powers of Attorney) with Ministry of Justice
+
+Jun: Digital Performance Framework and digital throughout the Civil Service Reform Plan (PDF) plus we joined OIX
+
+Sep: Delivered alpha of Student Loans Company service.
+
+Nov: Release the Govt Digital Strategy and Inside Government, and launched GOV.UK
+
+Dec: FCO, DfT and AGO join GOV.UK. All government departments release their digital strategies
+
+What we will do in 2013 is to continue to deliver. All Government departments will migrate onto GOV.UK by April, with hundreds of agencies set to follow through the next financial year. Our identity platform will allow third-party validation of users for some Government transactions. An increasing number of transactions will be transformed to become digital by default. Our commissioning and partnership development will continue to open up the supply chain in ways the Government Cloudstore has demonstrated.
+
+Delivery will be more distributed across Government than in 2012, which gives us more challenges to co-ordinate and support across agencies and departments. But deliver we must. Late last year I presented a digital view to Sir Bob Kerslake, Sir Jeremy Heywood and all the other permanent secretaries, many of whom have been very supportive of our digital ambition. As you can see, there is no backing away from the delivery challenge. And we can only do it together, by placing user needs at the forefront of our thinking.
+
+You can read a longer version of this on my blog, at www.mikebracken.com

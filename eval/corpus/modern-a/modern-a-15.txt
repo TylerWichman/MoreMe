@@ -1,0 +1,21 @@
+A little rant, if you’ll forgive the indulgence. It includes a confession, to make up for the ranting.
+
+You might have heard talk about new project management methodologies that try to combine bits of agile and bits of non-agile into one unified thing. I don’t think that’s a good idea, and I want to explain why.
+
+We’ve been doing a lot of talking about agile recently. We’ve always said we’re pragmatic, not dogmatic, about it. Each team uses agile in the way that suits them best.
+
+Of course there are different approaches to project management. Waterfall is one. So now’s the time for the confession: believe it or not, I am a qualified PRINCE2 Practitioner. I got my certificate back in 2007. I suspect it’s lapsed by now. The point is: it has its place. We’ve all used roads and ports built this way, all of them useful pieces of infrastructure.
+
+Digital public services are infrastructure too, but of a different kind. When they’re live, they’re just that - live. We’re not building software projects that can just be signed off: we’re delivering ongoing, maintained services. Services whose users will have needs that will change over time. We shall keep updating and iterating, because we don’t need services to match a prospectus that a project manager, however well-meaning, wrote years ago. User needs should be written into the DNA of a service, not spliced in as an afterthought.
+
+Combining agile and non-agile into a jerry-rigged mishmash misses the point of working in an agile way. Teaching people about agile and agile terms doesn’t need a newfangled management-speak hybrid. Traveling around the country to visit the 25 exemplar services, I saw people who had traditional project manager backgrounds but who had seen the benefits of agile. Agile isn’t just a set of rules, it’s a mindset. An approach to solving problems and meeting user needs. Let’s not lose sight of that.
+
+Being agile doesn’t mean you give up on governance or deadlines. The idea that agile somehow “needs” a waterfall-type methodology to give it control and governance is nonsense. When you work in an agile way, governance is built into every step of what you do. You build and iterate based on ongoing user research. You build what users need, not what you guessed might be a good idea before you even started building. That means spending money throughout the lifecycle of a service. Not throwing a lot of money at a project upfront, without knowing if it’s going to be useful. Or not.
+
+As for control? I guess you have to ask yourself what you mean by control. Does control mean that you build something, on time, on budget, focussed entirely on what you’ve decided at the beginning, before you even started building? Regardless of whatever that might mean for users - today, or in ten years time? We know that people simply aren’t very good at working out what might be needed or what might go wrong before they start a project. You might be lucky, and indeed build the right thing. But that doesn’t sound much like control to me. Listen to what Alan Eccles, the Public Guardian, says about control in this short film we made about his organisation’s adoption of agile: “I have more control now,” he says.
+
+In my view, formalising a mishmash approach is going to end up giving you the worst of both worlds. You won’t get the thing you planned on the date you planned it, and you won’t get something that meets user needs either. You’ll end up with something that fails on both counts.
+
+Agile accepts that the scope of the project will change over time. And we know that will happen in government. We know the thing we start working on will not be the same as the thing we get at the end. Requirements will change, budgets will change, the scope will change. Agile lets us deal with all of that, efficiently and gracefully.
+
+So: if you’re working on digital public services, just go with agile in the first place. You’ll save yourself - and most importantly your users - a lot of grief and heartache later on.

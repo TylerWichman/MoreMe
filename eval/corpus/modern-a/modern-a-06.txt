@@ -1,0 +1,35 @@
+Today we’re publishing our second quarterly progress report on the commitments made in the Government Digital Strategy.
+
+In 2011 the first challenge we faced was the creation of a central digital estate in the form of the Government Digital Service. The next challenge was to fix publishing. Launched in October 2012, GOV.UK is now an award-winning digital service which will continue to grow as over 270 more government agencies and bodies migrate onto it in the next twelve months.
+
+Since January 2013 our primary focus has been on the third challenge: fix transactions.
+
+That means digital transformation - rebuilding government services for the way people live today. Put simply, it should be as easy to manage your tax online as it is to bank online, and as easy to transfer ownership of a car online as it is to sell a car online.
+
+We've started work on redesigning 25 of the biggest and most-used transactional public services - we call them exemplars, leading the way for others to follow. At Sprint Alpha today Ministers, Civil Service Leaders and teams from all over the country are showcasing some of the features we’re already built for those services. People are seeing the live, working software that’s already making government services Digital by Default.
+
+We are running this programme of continual iteration in the open. You can follow our progress at www.gov.uk/transformation, where we’re regularly publishing information about every exemplar. You’ll see performance data, screenshots and status reports of where each service is at, and we’re going to add more to it as each service progresses. It’s in beta, so send us any thoughts, suggestions or errors you see.
+
+You can find lots more detail in the report, but some of the biggest successes of the last three months include:
+
+attracting digital skills to government - so far we’ve recruited to 11 digital specialist posts for DWP, been involved in recruitment processes for 29 senior technology posts, started running an induction and development programme for service managers, and advised 3 of the 7 major transactional departments on organisational design needed to make digital transformation happen
+
+publishing the Digital by Default Service Standard and its accompanying manual
+
+moving the 25 digital exemplars forward - by the end of June, 13 were in discovery phase, 6 were in alpha, 5 in beta, and elements of 1 were live
+
+moving 6 more ministerial department websites to GOV.UK, and started work on moving across hundreds more websites of other government agencies and public bodies
+
+announcing that HMRC would be the first government department to use the new Identity Assurance reference hub, from autumn 2013 onwards
+
+reforming IT Governance in government - this includes creating definitions of new skills needed; closing moribund boards and reporting structures
+
+delivering savings of more than £500m - mostly as a result of IT spend controls and moving government services and transactions to digital platforms, including an almost 70% cost reduction by replacing Directgov and BusinessLink with GOV.UK
+
+It’s important that we continue to publish these updates in public, that we report on the services we’re transforming, and that we blog about our progress. Publishing this means more of our colleagues can see what’s happening and what part they play in the process. It’s also the best way to make sure that we’re accountable for the things we build. As our design principles say, if we make things open, we make things better.
+
+You’re going to hear more about the transformation programme from Mike Beaven tomorrow. We’ll also be posting more updates on some of the work we’ve completed so far, including footage from the Land Registry’s ‘alpha in a day’ and updates from some of the teams we’re working with across the country.
+
+There’s still a huge amount of work to do, but we’ll tell you more about it week by week as the transformation of government services continues.
+
+Onwards.

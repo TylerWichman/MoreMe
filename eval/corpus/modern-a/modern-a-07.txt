@@ -1,0 +1,25 @@
+We’ve published a couple of big updates, both to the Digital Strategy and to the transformation programme. Between them, they’ll give you a picture of just how much we’ve achieved in the last twelve months.
+
+When we first published the digital strategy last year, we’d just launched GOV.UK and were finding out how valuable a user-centred, agile organisation at the heart of government could be. Many of the actions were designed to embed that way of working throughout the civil service.
+
+We’re now adding two further actions to the strategy that will open that work up even further.
+
+The first is about getting more people online. We welcomed the Digital Inclusion team into GDS this summer, and their strategy - to be published early in the new year - will show some of the work we’re doing across the public, private and voluntary sector to get more people online, alongside a set of digital inclusion principles.
+
+The second new action is about opening up what we build. That means APIs and syndication tools for people to access our information and services in more ways. We’ll never be able to imagine all the uses people might have for government information in different contexts and different environments, but we can provide services that make it easier for other people to build those things.
+
+Meanwhile, there are updates on all the work of the last few months, things regular readers of this blog will be familiar with. Lots more work on infrastructure and capability, major breakthroughs for the Identity Assurance team and the technology team, plus the Digital Services Store and the move of more websites over to GOV.UK.
+
+The transformation team have continued work with colleagues all over the country to complete discovery on every single exemplar. Congratulations to everyone involved in that because it really is a tremendous achievement.
+
+This has given every team an understanding of what their users' needs are, and the direction required to make alphas and betas a reality. In one case, it’s revealed that the service isn’t ready for transformation right now. We’ve identified a replacement though, and will share more updates on how that’s going in the new year.
+
+We’ve also been helping our colleagues build and develop those alphas and betas. As mentioned by DWP last week, we completed work on a digital strategic solution of the Universal Credit service on October 3rd. That included a proof of concept - tested with real users - and an outline of the operating model and any dependent technology required. With that delivered, we’re supporting DWP while they develop the digital skills needed to build and operate the full service.
+
+What’s next?
+
+2014 will see more public betas, more live services, and huge leaps forward for teams here and across government. Identity, measurement and analytics, capability within the civil service, levelling the playing field for technology and digital suppliers of all shapes and sizes, not to mention support for those who need help getting online and using the services we’re building.
+
+At the Code for America summit, I said that all this work isn’t about changing government websites, it’s about changing government. All of this work will make it simpler, clearer and faster for people to do the things they need to do with government. We’ve got a lot to do, but I think we can be proud of what we’ve achieved over the last twelve months.
+
+Onwards!

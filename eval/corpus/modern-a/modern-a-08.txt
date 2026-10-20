@@ -1,0 +1,25 @@
+Every time you save a document on your computer, there’s a short string of characters at the end of the filename - the stuff you see suffixed after the dot.
+
+Those letters perform an important task. They tell the computer what format the file is saved in, so that your chosen application can open it. So if your computer sees a file with a ".pdf" suffix, it knows it's a document, and opens it in an application that can read it when you double-click.
+
+Today, we're making an announcement about the formats government uses by default. Government documents will use what are known as open standards for document formats. Word processor files will be saved with ".odt" suffixes, rather than ".doc". It's a different format, but it does a similar job. These formats are open in the sense that you don’t need any specialist software to use them. If your existing software doesn’t understand them, you can download software that does for free.
+
+We're making this switch because we want:
+
+users to have a choice about the software they use to read government documents
+
+to make it easier and cheaper to do business with government (no-one should have to pay for specialist software just to send us some information)
+
+This isn't a decision we've taken lightly. We've spent a lot of time recently asking for feedback from the people who are most likely to be affected. Responses on our Standards Hub (over 500 of them) were overwhelmingly positive. Thanks to everyone who took the time to comment.
+
+This is a big step for government, and things won't change overnight. We have to make sure that the switch is managed properly. We shall work with departments to make the transition as smooth as possible, and ensure that the burden stays with government and not users.
+
+You can read more details about:
+
+open formats for documents: what publishers to GOV.UK need to know
+
+open formats for documents: what this means for Technology Leaders in government
+
+And we’ll keep blogging about our progress in implementing open standards on the Government Technology blog.
+
+Update: I made an error in this post, conflating the concepts of file suffixes and media types. My aim was to simplify things for the general reader, but the experts among you have (quite rightly) pulled me up on it. The purpose and behaviour of file types, MIME types and file extensions is very complicated and varies depending on the context and the computer you're using. For those readers who want to find out more, start at this Wikipedia page about Internet media types and go from there. Apologies - and I hope the error doesn't detract from the more important message about open standards.

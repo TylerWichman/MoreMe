@@ -1,0 +1,25 @@
+As some of you might have seen earlier in the week, I've just been appointed as the government's first Chief Data Officer. I am honoured, and I think that it’s right that we have a CDO now, but I’ll continue as Executive Director of GDS in addition to my new responsibilities. Here’s why: in many of the areas of data we work across in Government, I believe we are doing outstanding work.
+
+Many organisations such as the Office for National Statistics under the leadership of John Pullinger, Paul Maltby’s Government Innovation Group, the Data Science Partnership convened by Melanie Dawes and Richard Sargeant who leads GDS’s work on the Performance Platform and Data Science, have been doing excellent work on data in government. It’s important this work continues. I intend to connect the strong foundations they have laid.
+
+The UK government has never had a Chief Data Officer before. So why does it need one now? Because, despite all the great work that is going on to improve government’s use of data, we’ve lacked the central coordination needed to really move the data agenda forward. Much of the work so far has been delivered as discrete projects, and we need to align our efforts so that we’re as effective as possible in using public data for the benefit of citizens and businesses.
+
+My work at GDS over the last few years has given me the opportunity to speak with many of those working on the data agenda in government, at both the operational and legislative ends of the spectrum. In many of those discussions, the need for government-wide data standards and a mechanism for enforcing them was a recurring theme. Many also recognised that the skills required to make the best use of government data aren’t yet distributed throughout public services, and that there is still work to be done to make our open datasets more useable. These are some of the things I’ll be focusing on in my new role.
+
+Now we've started making public services digital by default and moving towards Government as a Platform, the need for clear and consistently applied data standards is even more clear. Just as we talk about "software as a public service", we should talk about "data as a public asset".
+
+What does a Chief Data Officer do?
+
+In this role I’ll be responsible for:
+
+transforming the management and use of data within Government, by setting standards and principles and opening up data flows across Government
+
+championing open data, and opening up existing government data wherever possible
+
+driving the use of data as a tool for making decisions in government, including developing data skills and professional capacity
+
+The role has come about after a consultation with over 50 parts of Government, nearly all of whom recommended a central convening and standard setting function. One of my first tasks will be to consult even more widely. I want to have deeper discussions with people I’ve already spoken to and with people I’ve not yet met. I’ll be looking to make the connection between operational realities and data policy stronger.
+
+Over the next few months I want to draw the map so that we can then plan the route towards public data as the foundation for Government as a Platform: better services for citizens at lower cost to the taxpayer.
+
+To everyone and anyone in government who handles or manages data, or has a view about how that should happen: don't hesitate to get in touch. I’m counting on your help.

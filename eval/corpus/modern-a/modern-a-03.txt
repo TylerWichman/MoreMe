@@ -1,0 +1,33 @@
+These include a full scale digitisation of motoring services at DVLA, a new platform for farm information and agriculture agencies, profound changes to the digital tax products, digital by default products in the Ministry of Justice and other services from the Land Registry, Student Loans and the Insolvency Service.
+
+Tom Loosemore has selected several of these for further analysis to show the scale of our collective ambition.
+
+The journey to this point started with Martha’s report, and the simple but powerful observation that most interactions with Government are transactional, and it’s at that point where users are repeatedly failed by the state.
+
+This failure to transact creates huge duplication inside Government - the cost of this failure waste is astonishing. It also wastes our users' time and money, and detracts from their trust in Government generally.
+
+While high-profile policy lapses are occasionally pointed at as examples of how users trust in Government is being damaged, I believe the repeated failure to complete transactions quickly and easily causes sedimentary layers of distrust.
+
+In early 2011 it was simply not possible to start with transactional reform.
+
+Firstly we had to create a digital estate at the heart of Government, then show we could run a cross Government platform. GOV.UK, and the way it was created (agile, with policy and technology specialists working together) created the trust in departments that transactions could be reformed digitally.
+
+The savings from GOV.UK and our ability to create new transactional services for the Ministry of Justice, HMRC, Cabinet Office and for general users such as e-petitions demonstrated that transactions could now be created in a fraction of the time, and at a fraction of the cost than that need to produce the documentation required to procure 'large IT' versions of the same product.
+
+It was vital that the strategies were both a commitment made in the Budget in April and the Civil Service Reform Plan in June. And underpinning all of this was having a shared estimation of the size of the prize. Publishing the number and type of transactions, their volume and the potential efficiency savings was the final piece of the puzzle.
+
+All these steps, however painful at the time, have raised the belief inside a deeply risk-averse system that profound change is both possible and desirable, both for users and for those administering the public finances.
+
+While this is a huge journey of trust and belief inside Government, we must not forget that we serve everyone, so today we've also published the government's approach to assisted digital giving more detail on how we will make sure those who can't access digital services are not excluded. Rebecca Kemp, Mark McLeod and Lena Casey from GDS (as well as Felicity Singleton before them) and staff from across departments deserve special praise.
+
+The process of drafting and agreeing such profound changes is never easy. I'd like to take the opportunity to pay tribute to everyone involved across Whitehall, and in particular the Digital Leaders who lead the process in each department and set the standard for collaboration and mutual support. Time and again they have pushed their own departments and agencies, often delivering some difficult challenges and uncomfortable messages to their colleagues. They are the embodiment of cross-government collaboration.
+
+Our Digital Advisory Board has been hugely influential in helping raise the ambition level. Through a combination of personal appearances, working with key departmental leaders and even Ministers, hosting the Digital Leaders and generally adding support at each and every turn, they have been magnificent. Special mention among them to Kip Meek, who gave much of his valuable time to set the course for the digital strategy creation. Rarely can something so complex be made so simple, and to have strategic thinking of that quality on hand is invaluable.
+
+Finally, I'd like to thank the team here in GDS who worked so diligently to coordinate what has been a significant endeavour. Kathy Settle, Tom Loosemore, Sheila Bennett and Andrew Francis in GDS have been unstinting in their efforts to encourage, support, lead and occasionally push departments to raise their ambition statements.
+
+We would not be able to achieve this without the ongoing backing and support from Francis Maude, Richard Heaton and Stephen Kelly, and all our colleagues in the Efficiency and Reform Group and wider Cabinet Office.
+
+That the digital ambition for Government is no less than the major transformation of 23 of our top 50 most used services in the next two years is their achievement.
+
+Now we have to sprint for the line.

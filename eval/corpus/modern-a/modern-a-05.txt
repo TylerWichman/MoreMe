@@ -1,0 +1,23 @@
+Today we announced some small but important changes in governance. The detail is here but the upshot is: we won’t have a cross-government Chief Information Officer (CIO) any more, nor a Head of Profession for Information and Communications Technology (ICT). We are moving responsibility for these capabilities to the Government Digital Service and we are closing some cross-government boards in various technology areas and reviewing the rest in order to make sure we are set up as efficiently as possible.
+
+Why's this important enough to merit a blog post? Every industry and business constantly needs to adapt its internal processes and governance to accommodate digital disruption. We are no different in government, so don’t expect this to be the last of these small changes.
+
+However, as we are government and, rightly, come under public scrutiny, and also because there is an active technology industry which follows us closely, let me expand on why we are doing this and what it means. Notably, I want to pick out the major issue which underpins these changes: our dominant culture.
+
+As we move away from a large procurement approach to technology and become adept at commissioning and co-delivering digital public services our capability profile needs to change technically, and culturally. In the last few months, in GDS and in other departments, we are hiring and commissioning roles including:
+
+And to ensure that all these roles can operate to their full potential, the people and organisations with which we work must be imbued by the culture and ethos of the web generation. This means they understand that what used to be hard is easier, and what used to be expensive is cheap and becoming cheaper. But above all they must understand that the challenge now is not about information technology, but about designing, developing and delivering great, user-centred digital services.
+
+The CIO moniker to me was a natural development from the elevation of the technology function to a board role. While Chief Technology Officers (CTOs) deliver the technology, CIOs are expected to use the flows of information and data from that technology and across business systems to inform strategy. And this is why we need to address the CIO issue in government as, by definition, it is tough to be a CIO in government with so much of that information and data residing in outsourced services and proprietary software.
+
+Unfortunately, this means that many of our CIOs are performing as quasi-procurement and contract managers, rather than really driving business performance based on meeting user needs. The result? An uneven playing field, with the CIO role in government varying hugely by department and agency.
+
+There is no better time to be in a senior digital role if information and data flows can be harnessed into creating great digital services, but to do that we have to put digital leaders and Chief Operating Officers (COOs) in the driving seat across government. In Justice, DEFRA and elsewhere we are already seeing huge changes as a result.
+
+This is why the governance model we need now is more analogous to service design than procurement of technology. We need helpful web services, appropriate tools to iterate and develop new features, outstanding data analysis and resources like https://www.gov.uk/performance. We need fewer meetings between large budget holders to discuss procurement, and more stand-up meetings and daily releases based on user need. Or in short, we can do much more, more quickly by using the web, and digital tools and services internally, to collaborate.
+
+Today we published the Digital by Default Service Standard, a guide for all involved in the delivery of digital services. This is governance writ large: inclusive, transparent and requiring collaboration and regular input and learning. Compared with existing governance models which are paper-based, hierarchical, exclusive and slow to change, this is a long overdue shift. Governance is central to upholding a culture, so ours should be web-based, user-focused, and participative.
+
+In short, we are not just on the web, but of the web. And our culture and governance must reflect that.
+
+There will be more to follow. The service manual for CTOs is in alpha, being reviewed with colleagues across the government’s estate. The team will report back in the next 30 days with our view on governance structures and boards - but do expect our future governance to be web based, in beta and open to subsequent change.

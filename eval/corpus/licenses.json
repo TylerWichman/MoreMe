@@ -1,0 +1,54 @@
+{
+  "schema_version": "1",
+  "comment": "Per-persona license and the exact header line every derived file must carry. See LICENSE-CORPUS.md.",
+  "personas": {
+    "modern-a": {
+      "era": "modern",
+      "license": "OGL-3.0",
+      "license_url": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
+      "public_domain": false,
+      "demo_candidate": false,
+      "header": "Corpus-derived content (persona modern-a). Contains public sector information licensed under the Open Government Licence v3.0 (https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/). Sources and changes: eval/corpus/PROVENANCE.md"
+    },
+    "modern-b": {
+      "era": "modern",
+      "license": "CC-BY-SA-4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "public_domain": false,
+      "demo_candidate": false,
+      "header": "Corpus-derived content (persona modern-b). Adapted from works licensed under CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/); this file is licensed under CC BY-SA 4.0. Attribution, sources, and changes: eval/corpus/PROVENANCE.md"
+    },
+    "era-c": {
+      "era": "era-diverse",
+      "license": "US-PD",
+      "license_url": null,
+      "public_domain": true,
+      "demo_candidate": true,
+      "header": "Corpus-derived content (persona era-c). Source texts are in the public domain in the USA. Sources: eval/corpus/PROVENANCE.md"
+    },
+    "era-d": {
+      "era": "era-diverse",
+      "license": "US-PD",
+      "license_url": null,
+      "public_domain": true,
+      "demo_candidate": false,
+      "header": "Corpus-derived content (persona era-d). Source texts are in the public domain in the USA. Sources: eval/corpus/PROVENANCE.md"
+    },
+    "era-e": {
+      "era": "era-diverse",
+      "license": "US-PD",
+      "license_url": null,
+      "public_domain": true,
+      "demo_candidate": false,
+      "header": "Corpus-derived content (persona era-e). Source texts are in the public domain in the USA. Sources: eval/corpus/PROVENANCE.md"
+    },
+    "era-f": {
+      "era": "era-diverse",
+      "license": "US-PD",
+      "license_url": null,
+      "public_domain": true,
+      "demo_candidate": false,
+      "header": "Corpus-derived content (persona era-f). Source texts are in the public domain in the USA. Sources: eval/corpus/PROVENANCE.md"
+    }
+  }
+}

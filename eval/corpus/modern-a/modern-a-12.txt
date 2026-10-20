@@ -1,0 +1,33 @@
+Walking around the Office of the Public Guardian (OPG) in Birmingham, it struck me that this is digital transformation done right. There’s an alchemy that makes great teams better than the sum of their parts. When you talk to the digital team at OPG, you can see that dynamic at work.
+
+Before the exemplar programme kicked off in 2013, the OPG had no online presence. They’ve not only delivered a great exemplar, the Lasting Power of Attorney digital service, but also put digital at the heart of what the agency does.
+
+Indeed. That’s the best part of digital by default.
+
+Working in co-located, multi-disciplinary, agile teams like that is part of what helps an agency reap the benefits of digital transformation. Beyond that, though, there are a couple of other important lessons that I’ve seen around the country during my visits to the exemplars that OPG have done very well.
+
+There’s a long list of what the team at OPG have built. The Lasting Power of Attorney exemplar is live, and being continuously updated.
+
+They’re replacing their existing case management system with an internal digital service based on open standards and open source technology. This will give their staff the same great user experience they give their external users.
+
+They’re launching an alpha of a second digital service, for the deputies they supervise, and they’re planning a third external service in summer 2015. No surprise that their GDS transformation lead Mark O’Neill looks so relaxed; they’re well on their way to not needing his expertise anymore.
+
+One of the things I often hear about working in an agile way in government is that you risk costs running away with you. The first argument against this is that you run the risk of big costs and failures with waterfall projects too - you just find out about those failures when it’s too late to fix them.
+
+Simon Manby, product owner, showed me a case management system that OPG digital have built in-house. Doing things this way means getting away from proprietary software and licence costs, bringing great skills into government, and writing code that we in the rest of government can use to solve similar problems. At the same time they’ve reduced the running costs of their business by working with SMEs, taking control of their own software, hosting in the cloud and enabling continuous deployment.
+
+But agile governance is also about knowing how to fail fast, rather than sticking to a supplier or idea that doesn’t work. We still have to deliver services to users, but we can make sure that we don’t fall in love with past ideas or projects. This depends on government being a better, more intelligent commissioner of digital skills and services from outside.
+
+That sort of know-how is invaluable. We can’t build everything in-house, but we owe it to ourselves and the taxpayers to fail fast, fail small, and to know what we’re buying.
+
+You can’t build great things without a great team, but great teams deserve visionary leadership - people that believe in them and help clear the way so they can get on with their jobs, rather than get in their way.
+
+You have a couple of great examples of that at OPG. First, you have the Public Guardian himself, Alan Eccles, who early on saw the potential of digital and who has smoothed the way for the digital transformation of OPG and been a real champion of agile ways of working.
+
+Then there’s Kit Collingwood-Richardson, who has built a team of immensely dedicated people. That comes from having a clear vision of what they’re doing and how, and working with and for someone who shares that with her team. Recruiting digital talent is a challenge that everyone faces, but it was heartening to see that Kit and her team have brought in people who have backgrounds working in operations, like Kaz Hufton, who used to work in OPG’s contact centre, came in for some user research, impressed the team by finding a bug in what they’d built, and who in the last few years has become the product owner of LPA. In OPG, the product development people and the people in charge of running the services work together. By committing to give internal staff the best possible user experience, Kit’s team is showing that digital is not just an external channel. That’s what running a digital service is all about.
+
+They’ve also put this down in writing. OPG’s digital strategy is just 9 pages long. That increases the likelihood that people will actually read it, think about it, and do something about it. It includes 8 actions, 4 of them effective cultural values.
+
+You also see this sort of leadership with people like Lorena Sutherland, the head of content, who explained to me that they’ve adopted a plain English policy across the OPG. But they haven’t just written this policy: they’re living it, delivering ‘Get It Write’ plain English workshops to every OPG staff member. But they’re turning the tanker, and that’s great to see.
+
+One of the criticisms you might hear about doing great work at the OPG is that it’s easy because it’s a smallish agency. While that’s true, everything they’re doing is scaleable - the lessons learned at OPG can be used across government. That’s something OPG’s digital team is already doing - sharing with other agencies across government - and that means we can all benefit from their journey.

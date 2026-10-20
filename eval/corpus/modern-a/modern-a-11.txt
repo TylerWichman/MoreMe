@@ -1,0 +1,39 @@
+Last week, we held an event: Sprint 15. It marked the culmination of the two-year transformation project that began with Sprint 13, when we made our plan clear: there were 400 days to transform government.
+
+Here we are, 2 years and roughly 400 (working) days later. What have we achieved? Let’s make a list.
+
+We transitioned 350 websites to GOV.UK. A single website on a single domain, meeting thousands of user needs. We trained over 1,200 people to write and publish on GOV.UK.
+
+We revolutionised the IT profession in government. The Office of the Chief Technology Officer (OCTO) has re-shaped how government uses and buys technology. We’ve replaced the old IT governance arrangements, which looked like this:
+
+... replaced them with a simpler governance system that looks like this:
+
+… and established the Technology Leaders Network to oversee it all. We simplified the IT procurement process, and begun giving civil servants better technology that's at least as good as the devices they have at home. The Cabinet Office Technology Transformation project delivered better IT for over 2,000 civil servants, and sets the standard for further roll-out in other departments.
+
+We put new emphasis on people and digital skills. We redesigned the Digital and Technology Fast Stream that brings talented young people into government. We hired 89 senior people (directors, CTOs, CDOs), and we’ve put 91 more digital specialists in place through the transformation programme. We trained 200 service managers to run digital services in the long term - people who understand service design, users, and user needs.
+
+New digital teams are springing up all over the UK. From the Ministry of Justice in London, DVLA and its connections with TechHub in Swansea, Companies House in Newport, to HMRC's Digital Delivery Centre in Newcastle and DWP's Digital Academy in Leeds. These local centres are just the beginning. I foresee many more coming soon.
+
+Our exemplar programme is a great success, with 17 out of 25 projects now live or in public beta phase. The transformed services have already seen 5.8 million user transactions. The work continues, even for services that have gone live - there’s always more user research to be done, more to learn, more to improve.
+
+We worked closely with search engines so that sites reportedly scamming consumers – or claiming to act on behalf of government – were removed from search results. We also ran a short #startatgovuk campaign, directing users of those services to the right place.
+
+We’ve been working with colleagues to ensure that help is in place for those people who lack digital skills and can’t - for any reason - use government digital services independently. The work is divided into three closely related fields - assisted digital, digital inclusion, and digital take-up. We designed the digital inclusion scale to help service design teams measure and compare digital skills. Last December, we published the UK Digital Inclusion Charter and Government Digital Inclusion Strategy. Just a few weeks ago, we hosted the Digital Inclusion Forum event to improve communications with the many partners we’re working with. This work isn’t easy; these are crunchy, hard-to-fix problems. There’s still a long way to go, but I’m proud of what the team has accomplished to date.
+
+The UK has become a world leader in digital government. In December 2014, GDS hosted D5, the first summit for an international network of the most digitally advanced governments in the world: the United Kingdom, South Korea, Estonia, Israel and New Zealand. Soon afterwards, the USA announced the creation of the US Digital Service, closely modeled on GDS. Now the Australians have set up their own Digital Transformation Office. The word is spreading.
+
+We’ve started building platforms: GOV.UK is one, and the Performance Platform is another. It opens up government service data like never before. It’s an essential tool for service managers (who love the full-screen views - here’s one for Carer’s allowance) and a source of useful data for everyone else. Government shouldn’t guess, or act on hunches. It should act on data. The Performance Platform captures, collates and presents that data more clearly than ever before.
+
+The Digital Marketplace is also a platform. It’s there to help the people transforming public services buy what they need, from a greater variety of suppliers both large and small. The G-Cloud 6 framework just went live on it last week, bringing the total number of suppliers to 1,852 - and 87% of them are SMEs. Between them, 19,966 services are on offer to the public sector. If you want to see the effect the Marketplace is having, just take a look at the sales data graphs, which are climbing ever upwards.
+
+There’s nothing like GOV.UK Verify anywhere else in the world. Yet. It’s a new way to prove who you are online. Verify has been one of our toughest challenges. It’s taken two years of very hard work (and a great deal of user research), but it’s really exciting to see it slowly emerge into the public eye. HMRC’s Mark Dearnley gave a great example of Verify in action during his presentation at Sprint 15: this year a massive 11,000 people filed their self-assessment returns using GOV.UK Verify. That got a well-deserved round of applause.
+
+We have built some great services, we’ve started building great platforms - our new goal is government as a platform. Common services should be built, designed and shared in common, right across the public sector. No single department should have to solve problems that are applicable to many, or to all.
+
+Our plan is to explore platforms further. We have a list of about 30 things we think could become platforms. Early in the next Parliament, we’d like to develop prototypes for three of them. We’ll share more detail about that in the near future.
+
+We’ve learnt such a lot in the last 2 years. We know that focusing on user needs works. We know that we can work in an agile way, even in government. It’s been hard work, by more people than I can name. Thank you, all of you, for your enthusiasm and your determination. Your work is world-renowned, and rightly so.
+
+It's important to understand that the "we" I’m talking about throughout this post isn't just GDS. It isn't just Cabinet Office, of which GDS is one small part. It's all of us, everyone working in government. Change is happening faster in some places than in others, but it is happening: I see it on the walls and the desks everywhere I go in Whitehall and beyond. It’s visible and tangible. We’re changing how we do our work and how we think about the people we're here for: the users.
+
+This video says it all. "Users first" isn't just a throwaway catchphrase: it's the core around which all this change has begun. Users are why we’re here.

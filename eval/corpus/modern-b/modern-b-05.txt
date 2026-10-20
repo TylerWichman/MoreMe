@@ -1,0 +1,93 @@
+The problem with energy costs is that most people don't think about them. They just look at their overall bill without considering how the energy was used. By monitoring and measuring energy use through sensors in very specific locations, energy waste can be made transparent and reduced.
+
+That's the premise of the book Reinventing Fire: Bold Business Solutions for the New Energy Era, which offers methods to eliminate the use of fossil fuels by 2050 through energy waste reduction. It's also the premise of a story I began in an earlier article about two retired utilities salespeople-turned-consultants who started an open organization community to reduce energy waste in their region, which they call the "Reinventing Fire Community." Their work depends on the open organization principles of Community, Transparency, Collaboration, Inclusivity, and Adaptability.
+
+In that article, I talked about actions one of my imaginary consultants recommended for home and commercial building owners. In this article, I discuss the other fictional consultant, who sold electricity to factories.
+
+It may be surprising how much energy is wasted in factories. The fact is, there aren't enough energy specialists available right now, and most production managers have their attention on other things, particularly production volume. Too many top managers look at sales, profit margins, and gross profit and miss "boring" expenses. In addition, small savings are hard to see until they're multiplied hundreds of times.
+
+In addition, most operations managers look at each process separately and individually. They can't see the overall energy waste picture until it's pointed out. This is where transparency and collaboration between people in all plant processes are essential. There might be countless duplications of processes where cooperation could be very beneficial. Real rewards may take 3-5 years to materialize, and unfortunately, many people only look at short-term gains.
+
+In this hypothetical case study, the factory energy consultant goes to factories, starting with their previous electricity users. They offer suggestions on how to reduce yearly energy expenses by at least 10-50%. If equipment investment is required, the consultant promises that the equipment will pay for itself in 3-5 years of savings.
+
+The consultant sets the following conditions for working together:
+
+The factory operator must be as transparent as possible about current energy use and expenses.
+
+The consultant will not give anyone this information except trusted partners they are working with to generate the very best proposals.
+
+There is no charge for the consulting, as they only want to reduce energy use in the community, and at this stage the consultants don't know how valuable they will be.
+
+The consultant would like a performance report and a general testimonial letter at the end of 2 years explaining how much the energy user's bill has been reduced.
+
+How can this consultant use all the principles of Community, Transparency, Collaboration, Inclusion, and Adaptability?
+
+First, the factory energy consultant makes an appointment with their most trusted electricity-using manufacturing company and explains that they can help the company save money, with a target of saving 27% of primary energy by 2050 while maintaining current production levels. This will save the company money and reduce the impact of volatile price changes or power failures.
+
+The consultant explains the chart below to provide perspective on where energy waste can be avoided.
+
+In manufacturing, 40% of the primary energy (energy that comes directly from the source, such as coal, gas, oil, and so on) is used for heating, and another 40% is used for rotating shafts on machines. The remaining 20% goes to a wide range of processes like smelting, cutting, grinding, boring, lighting, and space conditioning. Those are the areas the consultant wants to explore.
+
+Secondary energy is converted to electricity and delivered. There is loss during this conversion, as illustrated in the bar chart below. Electricity-system losses use nearly as much primary energy as process heat does.
+
+The consultant explains that there are two main areas to look at regarding energy-use reduction: heat and pressure. Where is extremely high temperature applied in the manufacturing process? Where is high pressure applied? Also, how can waste in one process become a raw material input for another? This includes excess heat and excess pressure. Sometimes these two are produced and used jointly, called combined heat and power (CHP). Those two can sometimes generate electricity from primary high heat and pressure and other times from leftover lower heat and pressure from a given process.
+
+The consultant explains four areas where energy is used and can be reduced in any factory:
+
+Level 1: Reduce manufacturing processing energy use. Sometimes this can be accomplished by using sensors and controls to stop equipment from running when not needed. Fine-tuning pressure controls and giving notifications when maintenance is needed to maintain ideal performance are other means of reducing energy use at this level.
+
+Level 2: Reduce energy delivery losses. This can be achieved by insulating pipes, maintaining steam traps and air filters, and so on. Changing wiring can also reduce electrical energy loss. Old wires were developed only to prevent fires, but new versions are designed to save energy, cutting waste significantly. The consultant mentions that they should review the age and energy delivery efficiency of all wiring. Air compressors could be checked for energy-wasting leaks. Just making these changes could pay for itself in six months.
+
+Level 3: Get better at generating in-house energy through better devices. Motors run drill presses, chillers, grinders, mixers, and blowers. The cost of running them for only a few weeks could be the same as entirely replacing the power motor itself. The consultant asks several questions: When are these motors running? Are they the right size and specifications for their use right now? Are there devices on the machines that measure energy use? Can variable-speed control be installed to reduce wasted RPMs? What is the age of the motors? These questions also apply to pumps, fans, furnaces, compressors, chillers, blowers, and boilers. The consultant explains that in most factories today, almost all boilers lack smart controls that reduce start-up and shutdown energy waste.
+
+Level 4: Put energy waste to use. Waste heat and excess pressure can be either useless or a valuable energy source. Repeated cycles of heating and cooling take energy. In most factories, fuel is converted one-third into electricity and two-thirds into heat. That heat very often is thrown away. The amount of energy loss in US factories is equal to the amount of energy Japan uses for everything. That is a huge waste. Could that heat be transported to another process? The consultant might have to include a specialist from the Rocky Mountain Institute to address this topic.
+
+The consultant adds that the four levels above can play off each other. Super-efficient boilers, ultrasound-aided drying systems, and other energy-saving devices are now available. The Industrial Assessment Centers from the US Department of Energy is a great source. There, US companies can learn where to reduce energy for free. The US Energy Information System could also be helpful.
+
+Another thing to look at is industrial waste. Could what they throw away be converted into a byproduct?
+
+[ Related read 4 reasons IT leaders should champion sustainability ]
+
+When analyzing energy waste, start where the energy is applied and work backward to the power generation location. Reinventing Fire gives an example of a datacenter in the diagram below:
+
+Notice it starts on the left with the energy needed for computing, then reflects the process of energy loss through the datacenter, server, applications, and business process. Is that computation needed? Is the software efficient? Next, look at the IT equipment. Is it suitable for that type of work? Next, look at the cooling and power supply. Is it appropriate? This same type of questioning should be done for each process in the factory operations manager's facility.
+
+The consultant mentions that starting at the use point is also helpful for piping and air/fluid flow. Generally, smaller pipes require more energy to pump fluid/air/gas through them and require larger pumps. This is true for curves in the piping as well. The less the curve angle, the better. First, design the piping size and curves, then select the pump required. The fatter and straighter, the smaller the pump requirement. Doing this right saves over half the energy required.
+
+Many factories were designed when fuel was cheap, so these cost savings were not considered. The consultant gives the below example:
+
+Notice that most energy is lost right in the power station where the electricity is generated. Then, there is loss in getting the electricity to the location, to operate the motor, to run the drivetrain, pump and values and finally, the fluid going through the pipes. All those losses should be looked at. Therefore, the consultant asks the operations manager to explain all factory piping and air/fluid flow systems.
+
+Assume they find areas that waste a lot of energy and retrofit the entire flow system. What about the size of the pumping equipment? Is it now too large for the process? Equipment is usually purchased to have the capacity to supply maximum demand. When that maximum demand is no longer needed, the motor should also be downsized, even if it has life in it. Motor choice, life, sizing, controls, maintenance, and associated electrical and mechanical elements interact intricately. Now, with a reduction in the requirement, the motors could be replaced with more efficient and smaller ones.
+
+Over and above reduced pumping demand, equipment refurbishing can sometimes pay for itself in less than a few years. For example, bearing quality has improved over the years. That alone could generate significant savings.
+
+The consultant asks about any furnaces in the factory, a major energy user. They mention that reverberatory furnaces to melt aluminum can be replaced by electric heaters with ceramic coatings. This is called isothermal melting, which saves energy and floor space. Solar heating is another major power source for industry, with falling prices and higher efficiency.
+
+Items used for production go through a lifecycle, and old equipment need not be thrown away. Before they are declared as a total waste, resources could be:
+
+Recovered (brought out of retirement and used again)
+
+Reused (moved from a main process to a backup process)
+
+Repaired (just fixed with upgraded parts)
+
+Remanufactured (reshape for continued use)
+
+Recycled (break down raw materials for added use)
+
+The consultant asks about the age and life of all the production equipment. How many years of life does each piece of equipment have? What is the recycling program?
+
+Whether for buildings, homes, or factories, energy sourcing will change greatly from centralized supply to distributed supply in the years ahead. The consultant recommends they look over the entire factory and ask where solar panels and mini wind-power generators might be installed. Additionally, they ask about any community energy grid projects in the region.
+
+Furthermore, they ask about the vehicle fleet (including delivery trucks and forklifts) and internal-combustion-powered generators, cranes, and any material-moving equipment. Could they be powered by electricity? If so, they might be a potential power source as well.
+
+After reviewing all these energy-saving measures, the consultant mentions that looking at energy waste isn't just about processes. It's about employee attention too. Issues of energy waste, transparency, collaboration, and adaptation must be inclusive to all front-line workers. They should be included and encouraged to form their own "Reinventing Fire Communities" so they can see waste firsthand. The consultant mentions that many companies have drawn employees' attention to energy waste by introducing competitions between divisions, comparing waste reduction percentages from their current energy consumption benchmarks. A wide range of incentives, raffles, games, contests, and awards can may also attract employee interest.
+
+To ensure expertise develops as quickly and efficiently as possible, the factory energy efficiency consultant and the building consultant in the previous article discuss and collaborate on how their meetings with energy users went. They also kept the Rocky Mountain Institute in the loop. That way, everyone can learn from each other's experiences. For total transparency, their meeting reporting system is interconnected.
+
+With many successes in reducing energy waste in factories, buildings, and homes, they gathered many testimonial letters on how they have helped individual families and companies. With those letters and experiences, the two fictional consultants decided to carefully expand their community and purpose to consult for warehouses, stores, shopping malls, industrial park developers and operators (not involved in manufacturing), and distribution centers. For this expansion, they started looking for consultants as dedicated to reducing energy waste as they are.
+
+Those were equally successful, so they discussed whether these projects could be monetized and opened discussions of establishing a start-up company in the area.
+
+This has been a theoretical case study largely informed by Reinventing Fire: Bold Business Solutions for the New Energy Era. But you can see the critical role open organization principles have played in this scenario. Energy waste is reduced. Companies and families save a great deal of money. Lifestyles have not changed, but quality of life has improved. And lastly, a potentially viable business model is created that could spread both nationally and possibly globally.

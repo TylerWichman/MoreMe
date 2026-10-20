@@ -1,0 +1,27 @@
+We are hiring. And we want more world-class digital talent in Government.
+
+It’s been a pleasant surprise to find outstanding digital talent across Government. From the Technology in Business Fast Stream to the excellent work done to make technology procurement easier by John Collington and the Government Procurement Service, there is too much digital change occurring to list here. It’s a great time to be working in Government, and I believe all new applicants will be entering a perfect storm. The demand for innovation, focus on the user and a move away from long-term, gold-plated IT projects means that a digital generation can transform public services to cater for changing user demand.
+
+Yet the reason we are looking to bring people into the GDS is a cautionary tale, but one which bears re-telling. Over the last 15 years or more, across Government we have engineered digital products and services using risk aversion and long-term programme management as our guiding principles. Now that it is clear that rapid, user-led development using open source technologies, agile approaches to delivery and cloud-based infrastructure is the order of the day, we find ourselves badly in need of the talent to engineer ourselves out of our torpor. In short, with long-term contracts giving programme managers and departments only one lever to pull in order to change or create digital services, it’s never been more important that there is a choice within Government.
+
+While there have been a few raised eyebrows at hiring in these straitened times, let me be clear that we need digital talent all across Government. In policy, legal, procurement and service delivery, deep digital experience in Government is scarce. So I would recommend that we see this drive not just a one-off recruitment campaign for GDS, but the start of the digital transformation of all Government services. As well as hiring, I spend large amounts of my time looking to help transform existing people and processes.
+
+Yet in my three months in Whitehall, I have lost count of the number of times I have been asked to provide digital resources to ‘take a look’ at a project or ‘help make sense’ of a supplier quote and proposal. We are making substantial changes within the system, which I will reveal in due course. But it is self-evident that we need more talent, and equally obvious that this talent will pay for itself many times over as new platforms, products and services reduce the taxpayer bill for digital services.
+
+(You will have to trust me on the numbers for now, but our first cut across Government services shows that the potential savings on moving transactions to digital make this type of recruitment cost insignificant. An example: in 2009/10 Government services excluding PCTs received at least 693 million telephone calls, at an average cost call of over £6 each, and over 150m of these calls were self-reported as avoidable. If we can move a fraction of these to compelling, digital transactional services with very high completion rates, the savings are quite clear.)
+
+Right now, we are looking for the following positions to complement the team in GDS. Over the last 3 months we have worked hard to transform the teams at DirectGov, the Single Government Domain team, Digital Engagement, Innovation and the Identity Assurance team into the GDS. We aren’t there yet, and I will write about our new home soon, but for now we need to attract more talent. We are looking for talent in these areas right now:
+
+Developers - The engine room of transformation, we are embedding a developer-led digital culture at the heart of Government.
+
+Product Management - Introducing this discipline across high-volume Government services is a huge change in approach.
+
+Interaction Designers - World-class interaction design is a critical component in the digital-by-default vision.
+
+Web Ops - The crucial link between developers and architecture, ensuring we make the right technology choices and scale appropriately.
+
+Technology Architecture - The challenge here could not be greater. Whether identity management or transactional process, the creation of an architectural framework across Government services is the goal.
+
+Digital Engagement - The key to transforming the Government culture.
+
+For new people, this is the start of a fascinating and exciting journey to transform digital services.

@@ -1,0 +1,35 @@
+We have released the beta of GOV.UK, testing a simpler way to get to government services and information…
+
+The beta of GOV.UK is now live.
+
+Back in late summer last year, I wrote that ‘we exist to make public services digital by default, and we are relentlessly focused on user needs.’ About 10 minutes ago we released the next step on our journey toward a single domain for government - and it has been driven entirely by focusing on user needs: creating simpler, quicker, easier to find information and transactions.
+
+That journey started with Martha Lane Fox’s report demanding that government improve its services on the web and Francis Maude’s affirmative reply. This led to the formation of our organisation - the Government Digital Service (GDS) and to the GOV.UK alpha just a few months ago. And now we’ve released the beta.
+
+What is GOV.UK?
+
+This is our first big platform. It aims to deliver simpler, clearer, faster services for users and savings and innovation for government, all on a single domain.
+
+Up to now, we’ve been in a world like this:
+
+Two big areas of centralised content - Directgov and Business Link - plus hundreds of other websites from central government departments and agencies.
+
+Getting to that was a tremendous achievement, and the era of web convergence under Directgov has readied Government and users for a single, centralised publishing model based on user need. However, this 8-year old model is starting to show its age and cause significant problems. It’s expensive and difficult to maintain, experiences for users can be confusing and inconsistent and it’s hard to manage effectively where people end up when they look for government information and services on search engines. Above all it’s insufficiently focused on users and their needs.
+
+So we’re planning a model more like this:
+
+Many, but not all, of the same needs met, but with a product that is redesigned, rewritten and rethought to offer a simpler, clearer, more consistent design, properly managed search and a user-focused service experience.
+
+What is the GOV.UK beta?
+
+The beta is just the next step on the journey, but it’s a significant one.
+
+It’s a version of the design and coding work we’ve been doing since the alpha, putting some of those ideas into practise at a significant scale. It addresses 667 of the most common and important mainstream user needs, made simpler, clearer and faster for users. So it’s not everything but it’s the most important content to start with. We’ll be improving and tweaking this on a daily basis - responding to your feedback and studying how people use the site.
+
+Then in a few weeks we’ll be launching a similar beta of the ‘corporate’ aspects of GOV.UK (information that government departments publish about their activities) and later in the year we’ll be addressing the specific needs of business-related users.
+
+This beta is here to be improved, it’ll get better based on your feedback. If you have any thoughts, ideas or issues please let us know via the feedback page, and keep checking here for updates. Now we have a platform in place which we drive according to user need and feedback, we can and will iterate wildly at no extra cost.
+
+Read more about the beta of GOV.UK in Tom Loosemore's post here and in the slides below:
+
+What is the GOV.UK Beta?
