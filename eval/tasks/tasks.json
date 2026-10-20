@@ -1,0 +1,981 @@
+{
+ "schema_version": "1",
+ "prompt_template": "Write {channel_phrase} about {topic}. Aim for about {words} words. Reply with the {noun} only.",
+ "channels": {
+  "email": [
+   "an email to a colleague",
+   "email"
+  ],
+  "post": [
+   "a short blog post",
+   "post"
+  ],
+  "note": [
+   "a note to a friend",
+   "note"
+  ]
+ },
+ "length_rule": "median held-out document word count from eval/split.json, clamped to 120-400",
+ "tasks": [
+  {
+   "id": "modern-a-dev-01",
+   "persona": "modern-a",
+   "split": "dev",
+   "channel": "email",
+   "topic": "why your team exists and what it is for",
+   "topic_source": "dev-title",
+   "target_words": 400,
+   "prompt": "Write an email to a colleague about why your team exists and what it is for. Aim for about 400 words. Reply with the email only."
+  },
+  {
+   "id": "modern-a-dev-02",
+   "persona": "modern-a",
+   "split": "dev",
+   "channel": "post",
+   "topic": "moving from publishing information to running transactions online",
+   "topic_source": "dev-title",
+   "target_words": 400,
+   "prompt": "Write a short blog post about moving from publishing information to running transactions online. Aim for about 400 words. Reply with the post only."
+  },
+  {
+   "id": "modern-a-dev-03",
+   "persona": "modern-a",
+   "split": "dev",
+   "channel": "note",
+   "topic": "working in the open",
+   "topic_source": "dev-title",
+   "target_words": 400,
+   "prompt": "Write a note to a friend about working in the open. Aim for about 400 words. Reply with the note only."
+  },
+  {
+   "id": "modern-a-dev-04",
+   "persona": "modern-a",
+   "split": "dev",
+   "channel": "email",
+   "topic": "working together across departments",
+   "topic_source": "dev-title",
+   "target_words": 400,
+   "prompt": "Write an email to a colleague about working together across departments. Aim for about 400 words. Reply with the email only."
+  },
+  {
+   "id": "modern-a-dev-05",
+   "persona": "modern-a",
+   "split": "dev",
+   "channel": "post",
+   "topic": "a progress update on a digital project",
+   "topic_source": "register",
+   "target_words": 400,
+   "prompt": "Write a short blog post about a progress update on a digital project. Aim for about 400 words. Reply with the post only."
+  },
+  {
+   "id": "modern-a-dev-06",
+   "persona": "modern-a",
+   "split": "dev",
+   "channel": "note",
+   "topic": "hiring people with digital skills",
+   "topic_source": "register",
+   "target_words": 400,
+   "prompt": "Write a note to a friend about hiring people with digital skills. Aim for about 400 words. Reply with the note only."
+  },
+  {
+   "id": "modern-a-dev-07",
+   "persona": "modern-a",
+   "split": "dev",
+   "channel": "email",
+   "topic": "asking colleagues to try a new way of working",
+   "topic_source": "register",
+   "target_words": 400,
+   "prompt": "Write an email to a colleague about asking colleagues to try a new way of working. Aim for about 400 words. Reply with the email only."
+  },
+  {
+   "id": "modern-a-dev-08",
+   "persona": "modern-a",
+   "split": "dev",
+   "channel": "post",
+   "topic": "what you learned from a project that went wrong",
+   "topic_source": "register",
+   "target_words": 400,
+   "prompt": "Write a short blog post about what you learned from a project that went wrong. Aim for about 400 words. Reply with the post only."
+  },
+  {
+   "id": "modern-a-heldout-01",
+   "persona": "modern-a",
+   "split": "heldout",
+   "channel": "email",
+   "topic": "the anniversary of a public website your team runs",
+   "topic_source": "heldout-title",
+   "target_words": 400,
+   "prompt": "Write an email to a colleague about the anniversary of a public website your team runs. Aim for about 400 words. Reply with the email only."
+  },
+  {
+   "id": "modern-a-heldout-02",
+   "persona": "modern-a",
+   "split": "heldout",
+   "channel": "post",
+   "topic": "replacing an old paper-based payments process with a digital service",
+   "topic_source": "heldout-title",
+   "target_words": 400,
+   "prompt": "Write a short blog post about replacing an old paper-based payments process with a digital service. Aim for about 400 words. Reply with the post only."
+  },
+  {
+   "id": "modern-a-heldout-03",
+   "persona": "modern-a",
+   "split": "heldout",
+   "channel": "note",
+   "topic": "what your team delivered over the last year and a bit",
+   "topic_source": "heldout-title",
+   "target_words": 400,
+   "prompt": "Write a note to a friend about what your team delivered over the last year and a bit. Aim for about 400 words. Reply with the note only."
+  },
+  {
+   "id": "modern-a-heldout-04",
+   "persona": "modern-a",
+   "split": "heldout",
+   "channel": "email",
+   "topic": "how to change a large, slow organization",
+   "topic_source": "heldout-title",
+   "target_words": 400,
+   "prompt": "Write an email to a colleague about how to change a large, slow organization. Aim for about 400 words. Reply with the email only."
+  },
+  {
+   "id": "modern-a-heldout-05",
+   "persona": "modern-a",
+   "split": "heldout",
+   "channel": "post",
+   "topic": "why services should be built around users, not around the org chart",
+   "topic_source": "register",
+   "target_words": 400,
+   "prompt": "Write a short blog post about why services should be built around users, not around the org chart. Aim for about 400 words. Reply with the post only."
+  },
+  {
+   "id": "modern-a-heldout-06",
+   "persona": "modern-a",
+   "split": "heldout",
+   "channel": "note",
+   "topic": "lessons from rebuilding a service people depend on every day",
+   "topic_source": "register",
+   "target_words": 400,
+   "prompt": "Write a note to a friend about lessons from rebuilding a service people depend on every day. Aim for about 400 words. Reply with the note only."
+  },
+  {
+   "id": "modern-a-heldout-07",
+   "persona": "modern-a",
+   "split": "heldout",
+   "channel": "email",
+   "topic": "thanking a team after a big launch",
+   "topic_source": "register",
+   "target_words": 400,
+   "prompt": "Write an email to a colleague about thanking a team after a big launch. Aim for about 400 words. Reply with the email only."
+  },
+  {
+   "id": "modern-a-heldout-08",
+   "persona": "modern-a",
+   "split": "heldout",
+   "channel": "post",
+   "topic": "what comes next for your digital team",
+   "topic_source": "register",
+   "target_words": 400,
+   "prompt": "Write a short blog post about what comes next for your digital team. Aim for about 400 words. Reply with the post only."
+  },
+  {
+   "id": "era-c-dev-01",
+   "persona": "era-c",
+   "split": "dev",
+   "channel": "email",
+   "topic": "an outing you enjoyed last weekend",
+   "topic_source": "register",
+   "target_words": 400,
+   "prompt": "Write an email to a colleague about an outing you enjoyed last weekend. Aim for about 400 words. Reply with the email only."
+  },
+  {
+   "id": "era-c-dev-02",
+   "persona": "era-c",
+   "split": "dev",
+   "channel": "post",
+   "topic": "the garden this season",
+   "topic_source": "register",
+   "target_words": 400,
+   "prompt": "Write a short blog post about the garden this season. Aim for about 400 words. Reply with the post only."
+  },
+  {
+   "id": "era-c-dev-03",
+   "persona": "era-c",
+   "split": "dev",
+   "channel": "note",
+   "topic": "an old friend you ran into",
+   "topic_source": "register",
+   "target_words": 400,
+   "prompt": "Write a note to a friend about an old friend you ran into. Aim for about 400 words. Reply with the note only."
+  },
+  {
+   "id": "era-c-dev-04",
+   "persona": "era-c",
+   "split": "dev",
+   "channel": "email",
+   "topic": "a meal you cooked for guests",
+   "topic_source": "register",
+   "target_words": 400,
+   "prompt": "Write an email to a colleague about a meal you cooked for guests. Aim for about 400 words. Reply with the email only."
+  },
+  {
+   "id": "era-c-dev-05",
+   "persona": "era-c",
+   "split": "dev",
+   "channel": "post",
+   "topic": "a long walk in the country",
+   "topic_source": "register",
+   "target_words": 400,
+   "prompt": "Write a short blog post about a long walk in the country. Aim for about 400 words. Reply with the post only."
+  },
+  {
+   "id": "era-c-dev-06",
+   "persona": "era-c",
+   "split": "dev",
+   "channel": "note",
+   "topic": "a letter you received that made you laugh",
+   "topic_source": "register",
+   "target_words": 400,
+   "prompt": "Write a note to a friend about a letter you received that made you laugh. Aim for about 400 words. Reply with the note only."
+  },
+  {
+   "id": "era-c-dev-07",
+   "persona": "era-c",
+   "split": "dev",
+   "channel": "email",
+   "topic": "plans for the holidays",
+   "topic_source": "register",
+   "target_words": 400,
+   "prompt": "Write an email to a colleague about plans for the holidays. Aim for about 400 words. Reply with the email only."
+  },
+  {
+   "id": "era-c-dev-08",
+   "persona": "era-c",
+   "split": "dev",
+   "channel": "post",
+   "topic": "an animal that has been causing trouble",
+   "topic_source": "register",
+   "target_words": 400,
+   "prompt": "Write a short blog post about an animal that has been causing trouble. Aim for about 400 words. Reply with the post only."
+  },
+  {
+   "id": "era-c-heldout-01",
+   "persona": "era-c",
+   "split": "heldout",
+   "channel": "email",
+   "topic": "a recent trip to town and who you met there",
+   "topic_source": "register",
+   "target_words": 400,
+   "prompt": "Write an email to a colleague about a recent trip to town and who you met there. Aim for about 400 words. Reply with the email only."
+  },
+  {
+   "id": "era-c-heldout-02",
+   "persona": "era-c",
+   "split": "heldout",
+   "channel": "post",
+   "topic": "the weather and how it has changed your plans",
+   "topic_source": "register",
+   "target_words": 400,
+   "prompt": "Write a short blog post about the weather and how it has changed your plans. Aim for about 400 words. Reply with the post only."
+  },
+  {
+   "id": "era-c-heldout-03",
+   "persona": "era-c",
+   "split": "heldout",
+   "channel": "note",
+   "topic": "a funny thing that happened with a neighbor",
+   "topic_source": "register",
+   "target_words": 400,
+   "prompt": "Write a note to a friend about a funny thing that happened with a neighbor. Aim for about 400 words. Reply with the note only."
+  },
+  {
+   "id": "era-c-heldout-04",
+   "persona": "era-c",
+   "split": "heldout",
+   "channel": "email",
+   "topic": "a new hobby you have taken up",
+   "topic_source": "register",
+   "target_words": 400,
+   "prompt": "Write an email to a colleague about a new hobby you have taken up. Aim for about 400 words. Reply with the email only."
+  },
+  {
+   "id": "era-c-heldout-05",
+   "persona": "era-c",
+   "split": "heldout",
+   "channel": "post",
+   "topic": "news about your family",
+   "topic_source": "register",
+   "target_words": 400,
+   "prompt": "Write a short blog post about news about your family. Aim for about 400 words. Reply with the post only."
+  },
+  {
+   "id": "era-c-heldout-06",
+   "persona": "era-c",
+   "split": "heldout",
+   "channel": "note",
+   "topic": "a book you have been reading",
+   "topic_source": "register",
+   "target_words": 400,
+   "prompt": "Write a note to a friend about a book you have been reading. Aim for about 400 words. Reply with the note only."
+  },
+  {
+   "id": "era-c-heldout-07",
+   "persona": "era-c",
+   "split": "heldout",
+   "channel": "email",
+   "topic": "a visit you are planning",
+   "topic_source": "register",
+   "target_words": 400,
+   "prompt": "Write an email to a colleague about a visit you are planning. Aim for about 400 words. Reply with the email only."
+  },
+  {
+   "id": "era-c-heldout-08",
+   "persona": "era-c",
+   "split": "heldout",
+   "channel": "post",
+   "topic": "a small mishap around the house",
+   "topic_source": "register",
+   "target_words": 400,
+   "prompt": "Write a short blog post about a small mishap around the house. Aim for about 400 words. Reply with the post only."
+  },
+  {
+   "id": "modern-b-dev-01",
+   "persona": "modern-b",
+   "split": "dev",
+   "channel": "email",
+   "topic": "how communities form around a shared interest and who connects people",
+   "topic_source": "dev-title",
+   "target_words": 400,
+   "prompt": "Write an email to a colleague about how communities form around a shared interest and who connects people. Aim for about 400 words. Reply with the email only."
+  },
+  {
+   "id": "modern-b-dev-02",
+   "persona": "modern-b",
+   "split": "dev",
+   "channel": "post",
+   "topic": "examples of the sharing economy in daily life",
+   "topic_source": "dev-title",
+   "target_words": 400,
+   "prompt": "Write a short blog post about examples of the sharing economy in daily life. Aim for about 400 words. Reply with the post only."
+  },
+  {
+   "id": "modern-b-dev-03",
+   "persona": "modern-b",
+   "split": "dev",
+   "channel": "note",
+   "topic": "why transparency helps a team",
+   "topic_source": "register",
+   "target_words": 400,
+   "prompt": "Write a note to a friend about why transparency helps a team. Aim for about 400 words. Reply with the note only."
+  },
+  {
+   "id": "modern-b-dev-04",
+   "persona": "modern-b",
+   "split": "dev",
+   "channel": "email",
+   "topic": "a lesson from working with people from another culture",
+   "topic_source": "register",
+   "target_words": 400,
+   "prompt": "Write an email to a colleague about a lesson from working with people from another culture. Aim for about 400 words. Reply with the email only."
+  },
+  {
+   "id": "modern-b-dev-05",
+   "persona": "modern-b",
+   "split": "dev",
+   "channel": "post",
+   "topic": "running a meeting where everyone speaks up",
+   "topic_source": "register",
+   "target_words": 400,
+   "prompt": "Write a short blog post about running a meeting where everyone speaks up. Aim for about 400 words. Reply with the post only."
+  },
+  {
+   "id": "modern-b-dev-06",
+   "persona": "modern-b",
+   "split": "dev",
+   "channel": "note",
+   "topic": "what motivates people at work besides pay",
+   "topic_source": "register",
+   "target_words": 400,
+   "prompt": "Write a note to a friend about what motivates people at work besides pay. Aim for about 400 words. Reply with the note only."
+  },
+  {
+   "id": "modern-b-dev-07",
+   "persona": "modern-b",
+   "split": "dev",
+   "channel": "email",
+   "topic": "a simple framework you use to think about teams",
+   "topic_source": "register",
+   "target_words": 400,
+   "prompt": "Write an email to a colleague about a simple framework you use to think about teams. Aim for about 400 words. Reply with the email only."
+  },
+  {
+   "id": "modern-b-dev-08",
+   "persona": "modern-b",
+   "split": "dev",
+   "channel": "post",
+   "topic": "keeping energy up during a long project",
+   "topic_source": "register",
+   "target_words": 400,
+   "prompt": "Write a short blog post about keeping energy up during a long project. Aim for about 400 words. Reply with the post only."
+  },
+  {
+   "id": "modern-b-heldout-01",
+   "persona": "modern-b",
+   "split": "heldout",
+   "channel": "email",
+   "topic": "how the falling cost of making things might change why people work",
+   "topic_source": "heldout-title",
+   "target_words": 400,
+   "prompt": "Write an email to a colleague about how the falling cost of making things might change why people work. Aim for about 400 words. Reply with the email only."
+  },
+  {
+   "id": "modern-b-heldout-02",
+   "persona": "modern-b",
+   "split": "heldout",
+   "channel": "post",
+   "topic": "using open organization principles to cut energy use in a factory",
+   "topic_source": "heldout-title",
+   "target_words": 400,
+   "prompt": "Write a short blog post about using open organization principles to cut energy use in a factory. Aim for about 400 words. Reply with the post only."
+  },
+  {
+   "id": "modern-b-heldout-03",
+   "persona": "modern-b",
+   "split": "heldout",
+   "channel": "note",
+   "topic": "what the sharing economy means for how companies are run",
+   "topic_source": "heldout-title",
+   "target_words": 400,
+   "prompt": "Write a note to a friend about what the sharing economy means for how companies are run. Aim for about 400 words. Reply with the note only."
+  },
+  {
+   "id": "modern-b-heldout-04",
+   "persona": "modern-b",
+   "split": "heldout",
+   "channel": "email",
+   "topic": "a business book you read recently and what your team can take from it",
+   "topic_source": "register",
+   "target_words": 400,
+   "prompt": "Write an email to a colleague about a business book you read recently and what your team can take from it. Aim for about 400 words. Reply with the email only."
+  },
+  {
+   "id": "modern-b-heldout-05",
+   "persona": "modern-b",
+   "split": "heldout",
+   "channel": "post",
+   "topic": "building trust in a team that works across countries",
+   "topic_source": "register",
+   "target_words": 400,
+   "prompt": "Write a short blog post about building trust in a team that works across countries. Aim for about 400 words. Reply with the post only."
+  },
+  {
+   "id": "modern-b-heldout-06",
+   "persona": "modern-b",
+   "split": "heldout",
+   "channel": "note",
+   "topic": "how managers can share decisions with their teams",
+   "topic_source": "register",
+   "target_words": 400,
+   "prompt": "Write a note to a friend about how managers can share decisions with their teams. Aim for about 400 words. Reply with the note only."
+  },
+  {
+   "id": "modern-b-heldout-07",
+   "persona": "modern-b",
+   "split": "heldout",
+   "channel": "email",
+   "topic": "encouraging people to share what they know at work",
+   "topic_source": "register",
+   "target_words": 400,
+   "prompt": "Write an email to a colleague about encouraging people to share what they know at work. Aim for about 400 words. Reply with the email only."
+  },
+  {
+   "id": "modern-b-heldout-08",
+   "persona": "modern-b",
+   "split": "heldout",
+   "channel": "post",
+   "topic": "helping a company adapt to fast change",
+   "topic_source": "register",
+   "target_words": 400,
+   "prompt": "Write a short blog post about helping a company adapt to fast change. Aim for about 400 words. Reply with the post only."
+  },
+  {
+   "id": "era-d-dev-01",
+   "persona": "era-d",
+   "split": "dev",
+   "channel": "email",
+   "topic": "a restless day spent waiting for news",
+   "topic_source": "register",
+   "target_words": 400,
+   "prompt": "Write an email to a colleague about a restless day spent waiting for news. Aim for about 400 words. Reply with the email only."
+  },
+  {
+   "id": "era-d-dev-02",
+   "persona": "era-d",
+   "split": "dev",
+   "channel": "post",
+   "topic": "an evening of music with family",
+   "topic_source": "register",
+   "target_words": 400,
+   "prompt": "Write a short blog post about an evening of music with family. Aim for about 400 words. Reply with the post only."
+  },
+  {
+   "id": "era-d-dev-03",
+   "persona": "era-d",
+   "split": "dev",
+   "channel": "note",
+   "topic": "a walk in the rain",
+   "topic_source": "register",
+   "target_words": 400,
+   "prompt": "Write a note to a friend about a walk in the rain. Aim for about 400 words. Reply with the note only."
+  },
+  {
+   "id": "era-d-dev-04",
+   "persona": "era-d",
+   "split": "dev",
+   "channel": "email",
+   "topic": "reading late at night",
+   "topic_source": "register",
+   "target_words": 400,
+   "prompt": "Write an email to a colleague about reading late at night. Aim for about 400 words. Reply with the email only."
+  },
+  {
+   "id": "era-d-dev-05",
+   "persona": "era-d",
+   "split": "dev",
+   "channel": "post",
+   "topic": "a conversation that stayed with you",
+   "topic_source": "register",
+   "target_words": 400,
+   "prompt": "Write a short blog post about a conversation that stayed with you. Aim for about 400 words. Reply with the post only."
+  },
+  {
+   "id": "era-d-dev-06",
+   "persona": "era-d",
+   "split": "dev",
+   "channel": "note",
+   "topic": "a small celebration",
+   "topic_source": "register",
+   "target_words": 400,
+   "prompt": "Write a note to a friend about a small celebration. Aim for about 400 words. Reply with the note only."
+  },
+  {
+   "id": "era-d-dev-07",
+   "persona": "era-d",
+   "split": "dev",
+   "channel": "email",
+   "topic": "feeling homesick",
+   "topic_source": "register",
+   "target_words": 400,
+   "prompt": "Write an email to a colleague about feeling homesick. Aim for about 400 words. Reply with the email only."
+  },
+  {
+   "id": "era-d-dev-08",
+   "persona": "era-d",
+   "split": "dev",
+   "channel": "post",
+   "topic": "a day when nothing went right",
+   "topic_source": "register",
+   "target_words": 400,
+   "prompt": "Write a short blog post about a day when nothing went right. Aim for about 400 words. Reply with the post only."
+  },
+  {
+   "id": "era-d-heldout-01",
+   "persona": "era-d",
+   "split": "heldout",
+   "channel": "email",
+   "topic": "a day of worrying news and how you coped",
+   "topic_source": "register",
+   "target_words": 400,
+   "prompt": "Write an email to a colleague about a day of worrying news and how you coped. Aim for about 400 words. Reply with the email only."
+  },
+  {
+   "id": "era-d-heldout-02",
+   "persona": "era-d",
+   "split": "heldout",
+   "channel": "post",
+   "topic": "a visit from friends",
+   "topic_source": "register",
+   "target_words": 400,
+   "prompt": "Write a short blog post about a visit from friends. Aim for about 400 words. Reply with the post only."
+  },
+  {
+   "id": "era-d-heldout-03",
+   "persona": "era-d",
+   "split": "heldout",
+   "channel": "note",
+   "topic": "a sleepless night",
+   "topic_source": "register",
+   "target_words": 400,
+   "prompt": "Write a note to a friend about a sleepless night. Aim for about 400 words. Reply with the note only."
+  },
+  {
+   "id": "era-d-heldout-04",
+   "persona": "era-d",
+   "split": "heldout",
+   "channel": "email",
+   "topic": "rumors going around town",
+   "topic_source": "register",
+   "target_words": 400,
+   "prompt": "Write an email to a colleague about rumors going around town. Aim for about 400 words. Reply with the email only."
+  },
+  {
+   "id": "era-d-heldout-05",
+   "persona": "era-d",
+   "split": "heldout",
+   "channel": "post",
+   "topic": "sewing and chores on a quiet day",
+   "topic_source": "register",
+   "target_words": 400,
+   "prompt": "Write a short blog post about sewing and chores on a quiet day. Aim for about 400 words. Reply with the post only."
+  },
+  {
+   "id": "era-d-heldout-06",
+   "persona": "era-d",
+   "split": "heldout",
+   "channel": "note",
+   "topic": "a quarrel and making up afterward",
+   "topic_source": "register",
+   "target_words": 400,
+   "prompt": "Write a note to a friend about a quarrel and making up afterward. Aim for about 400 words. Reply with the note only."
+  },
+  {
+   "id": "era-d-heldout-07",
+   "persona": "era-d",
+   "split": "heldout",
+   "channel": "email",
+   "topic": "missing someone who is far away",
+   "topic_source": "register",
+   "target_words": 400,
+   "prompt": "Write an email to a colleague about missing someone who is far away. Aim for about 400 words. Reply with the email only."
+  },
+  {
+   "id": "era-d-heldout-08",
+   "persona": "era-d",
+   "split": "heldout",
+   "channel": "post",
+   "topic": "a sudden change of plans",
+   "topic_source": "register",
+   "target_words": 400,
+   "prompt": "Write a short blog post about a sudden change of plans. Aim for about 400 words. Reply with the post only."
+  },
+  {
+   "id": "era-e-dev-01",
+   "persona": "era-e",
+   "split": "dev",
+   "channel": "email",
+   "topic": "getting the soil ready in spring",
+   "topic_source": "register",
+   "target_words": 400,
+   "prompt": "Write an email to a colleague about getting the soil ready in spring. Aim for about 400 words. Reply with the email only."
+  },
+  {
+   "id": "era-e-dev-02",
+   "persona": "era-e",
+   "split": "dev",
+   "channel": "post",
+   "topic": "a vegetable that refused to grow",
+   "topic_source": "register",
+   "target_words": 400,
+   "prompt": "Write a short blog post about a vegetable that refused to grow. Aim for about 400 words. Reply with the post only."
+  },
+  {
+   "id": "era-e-dev-03",
+   "persona": "era-e",
+   "split": "dev",
+   "channel": "note",
+   "topic": "birds in the garden",
+   "topic_source": "register",
+   "target_words": 400,
+   "prompt": "Write a note to a friend about birds in the garden. Aim for about 400 words. Reply with the note only."
+  },
+  {
+   "id": "era-e-dev-04",
+   "persona": "era-e",
+   "split": "dev",
+   "channel": "email",
+   "topic": "watering during a dry spell",
+   "topic_source": "register",
+   "target_words": 400,
+   "prompt": "Write an email to a colleague about watering during a dry spell. Aim for about 400 words. Reply with the email only."
+  },
+  {
+   "id": "era-e-dev-05",
+   "persona": "era-e",
+   "split": "dev",
+   "channel": "post",
+   "topic": "a cat that keeps digging in the beds",
+   "topic_source": "register",
+   "target_words": 400,
+   "prompt": "Write a short blog post about a cat that keeps digging in the beds. Aim for about 400 words. Reply with the post only."
+  },
+  {
+   "id": "era-e-dev-06",
+   "persona": "era-e",
+   "split": "dev",
+   "channel": "note",
+   "topic": "reading seed catalogs in winter",
+   "topic_source": "register",
+   "target_words": 400,
+   "prompt": "Write a note to a friend about reading seed catalogs in winter. Aim for about 400 words. Reply with the note only."
+  },
+  {
+   "id": "era-e-dev-07",
+   "persona": "era-e",
+   "split": "dev",
+   "channel": "email",
+   "topic": "giving away too many tomatoes",
+   "topic_source": "register",
+   "target_words": 400,
+   "prompt": "Write an email to a colleague about giving away too many tomatoes. Aim for about 400 words. Reply with the email only."
+  },
+  {
+   "id": "era-e-dev-08",
+   "persona": "era-e",
+   "split": "dev",
+   "channel": "post",
+   "topic": "the end of the growing season",
+   "topic_source": "register",
+   "target_words": 400,
+   "prompt": "Write a short blog post about the end of the growing season. Aim for about 400 words. Reply with the post only."
+  },
+  {
+   "id": "era-e-heldout-01",
+   "persona": "era-e",
+   "split": "heldout",
+   "channel": "email",
+   "topic": "the first week of planting a vegetable garden",
+   "topic_source": "register",
+   "target_words": 400,
+   "prompt": "Write an email to a colleague about the first week of planting a vegetable garden. Aim for about 400 words. Reply with the email only."
+  },
+  {
+   "id": "era-e-heldout-02",
+   "persona": "era-e",
+   "split": "heldout",
+   "channel": "post",
+   "topic": "battling weeds",
+   "topic_source": "register",
+   "target_words": 400,
+   "prompt": "Write a short blog post about battling weeds. Aim for about 400 words. Reply with the post only."
+  },
+  {
+   "id": "era-e-heldout-03",
+   "persona": "era-e",
+   "split": "heldout",
+   "channel": "note",
+   "topic": "a neighbor's advice about your garden",
+   "topic_source": "register",
+   "target_words": 400,
+   "prompt": "Write a note to a friend about a neighbor's advice about your garden. Aim for about 400 words. Reply with the note only."
+  },
+  {
+   "id": "era-e-heldout-04",
+   "persona": "era-e",
+   "split": "heldout",
+   "channel": "email",
+   "topic": "pests eating the vegetables",
+   "topic_source": "register",
+   "target_words": 400,
+   "prompt": "Write an email to a colleague about pests eating the vegetables. Aim for about 400 words. Reply with the email only."
+  },
+  {
+   "id": "era-e-heldout-05",
+   "persona": "era-e",
+   "split": "heldout",
+   "channel": "post",
+   "topic": "the first harvest of the year",
+   "topic_source": "register",
+   "target_words": 400,
+   "prompt": "Write a short blog post about the first harvest of the year. Aim for about 400 words. Reply with the post only."
+  },
+  {
+   "id": "era-e-heldout-06",
+   "persona": "era-e",
+   "split": "heldout",
+   "channel": "note",
+   "topic": "garden tools that never seem to work",
+   "topic_source": "register",
+   "target_words": 400,
+   "prompt": "Write a note to a friend about garden tools that never seem to work. Aim for about 400 words. Reply with the note only."
+  },
+  {
+   "id": "era-e-heldout-07",
+   "persona": "era-e",
+   "split": "heldout",
+   "channel": "email",
+   "topic": "the weather spoiling your garden plans",
+   "topic_source": "register",
+   "target_words": 400,
+   "prompt": "Write an email to a colleague about the weather spoiling your garden plans. Aim for about 400 words. Reply with the email only."
+  },
+  {
+   "id": "era-e-heldout-08",
+   "persona": "era-e",
+   "split": "heldout",
+   "channel": "post",
+   "topic": "why everyone should grow something",
+   "topic_source": "register",
+   "target_words": 400,
+   "prompt": "Write a short blog post about why everyone should grow something. Aim for about 400 words. Reply with the post only."
+  },
+  {
+   "id": "era-f-dev-01",
+   "persona": "era-f",
+   "split": "dev",
+   "channel": "email",
+   "topic": "the hard side and the pleasant side of life",
+   "topic_source": "dev-title",
+   "target_words": 400,
+   "prompt": "Write an email to a colleague about the hard side and the pleasant side of life. Aim for about 400 words. Reply with the email only."
+  },
+  {
+   "id": "era-f-dev-02",
+   "persona": "era-f",
+   "split": "dev",
+   "channel": "post",
+   "topic": "helping others",
+   "topic_source": "train-title",
+   "target_words": 400,
+   "prompt": "Write a short blog post about helping others. Aim for about 400 words. Reply with the post only."
+  },
+  {
+   "id": "era-f-dev-03",
+   "persona": "era-f",
+   "split": "dev",
+   "channel": "note",
+   "topic": "living simply",
+   "topic_source": "train-title",
+   "target_words": 400,
+   "prompt": "Write a note to a friend about living simply. Aim for about 400 words. Reply with the note only."
+  },
+  {
+   "id": "era-f-dev-04",
+   "persona": "era-f",
+   "split": "dev",
+   "channel": "email",
+   "topic": "setting a good example",
+   "topic_source": "train-title",
+   "target_words": 400,
+   "prompt": "Write an email to a colleague about setting a good example. Aim for about 400 words. Reply with the email only."
+  },
+  {
+   "id": "era-f-dev-05",
+   "persona": "era-f",
+   "split": "dev",
+   "channel": "post",
+   "topic": "doing your best",
+   "topic_source": "train-title",
+   "target_words": 400,
+   "prompt": "Write a short blog post about doing your best. Aim for about 400 words. Reply with the post only."
+  },
+  {
+   "id": "era-f-dev-06",
+   "persona": "era-f",
+   "split": "dev",
+   "channel": "note",
+   "topic": "saying plainly what things are",
+   "topic_source": "train-title",
+   "target_words": 400,
+   "prompt": "Write a note to a friend about saying plainly what things are. Aim for about 400 words. Reply with the note only."
+  },
+  {
+   "id": "era-f-dev-07",
+   "persona": "era-f",
+   "split": "dev",
+   "channel": "email",
+   "topic": "keeping your things clean and in order",
+   "topic_source": "register",
+   "target_words": 400,
+   "prompt": "Write an email to a colleague about keeping your things clean and in order. Aim for about 400 words. Reply with the email only."
+  },
+  {
+   "id": "era-f-dev-08",
+   "persona": "era-f",
+   "split": "dev",
+   "channel": "post",
+   "topic": "using your spare time well",
+   "topic_source": "register",
+   "target_words": 400,
+   "prompt": "Write a short blog post about using your spare time well. Aim for about 400 words. Reply with the post only."
+  },
+  {
+   "id": "era-f-heldout-01",
+   "persona": "era-f",
+   "split": "heldout",
+   "channel": "email",
+   "topic": "not being discouraged by setbacks",
+   "topic_source": "heldout-title",
+   "target_words": 400,
+   "prompt": "Write an email to a colleague about not being discouraged by setbacks. Aim for about 400 words. Reply with the email only."
+  },
+  {
+   "id": "era-f-heldout-02",
+   "persona": "era-f",
+   "split": "heldout",
+   "channel": "post",
+   "topic": "the value of owning a home",
+   "topic_source": "heldout-title",
+   "target_words": 400,
+   "prompt": "Write a short blog post about the value of owning a home. Aim for about 400 words. Reply with the post only."
+  },
+  {
+   "id": "era-f-heldout-03",
+   "persona": "era-f",
+   "split": "heldout",
+   "channel": "note",
+   "topic": "impressions from a trip abroad",
+   "topic_source": "heldout-title",
+   "target_words": 400,
+   "prompt": "Write a note to a friend about impressions from a trip abroad. Aim for about 400 words. Reply with the note only."
+  },
+  {
+   "id": "era-f-heldout-04",
+   "persona": "era-f",
+   "split": "heldout",
+   "channel": "email",
+   "topic": "doing every task well, however small",
+   "topic_source": "register",
+   "target_words": 400,
+   "prompt": "Write an email to a colleague about doing every task well, however small. Aim for about 400 words. Reply with the email only."
+  },
+  {
+   "id": "era-f-heldout-05",
+   "persona": "era-f",
+   "split": "heldout",
+   "channel": "post",
+   "topic": "the habit of saving money",
+   "topic_source": "register",
+   "target_words": 400,
+   "prompt": "Write a short blog post about the habit of saving money. Aim for about 400 words. Reply with the post only."
+  },
+  {
+   "id": "era-f-heldout-06",
+   "persona": "era-f",
+   "split": "heldout",
+   "channel": "note",
+   "topic": "good manners and why they matter",
+   "topic_source": "register",
+   "target_words": 400,
+   "prompt": "Write a note to a friend about good manners and why they matter. Aim for about 400 words. Reply with the note only."
+  },
+  {
+   "id": "era-f-heldout-07",
+   "persona": "era-f",
+   "split": "heldout",
+   "channel": "email",
+   "topic": "being honest when it costs you something",
+   "topic_source": "register",
+   "target_words": 400,
+   "prompt": "Write an email to a colleague about being honest when it costs you something. Aim for about 400 words. Reply with the email only."
+  },
+  {
+   "id": "era-f-heldout-08",
+   "persona": "era-f",
+   "split": "heldout",
+   "channel": "post",
+   "topic": "making the most of your time at school",
+   "topic_source": "register",
+   "target_words": 400,
+   "prompt": "Write a short blog post about making the most of your time at school. Aim for about 400 words. Reply with the post only."
+  }
+ ]
+}
