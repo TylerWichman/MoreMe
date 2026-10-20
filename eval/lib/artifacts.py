@@ -76,6 +76,23 @@ def write_committed(path, text, disclose=False):
     return p
 
 
+def add_license_header(text, header):
+    """Put a corpus license header (from eval/corpus/licenses.json) into a
+    Markdown or text file once. A file that starts with YAML frontmatter (a
+    SKILL.md) gets the header as an HTML comment right after the frontmatter,
+    so the skill still loads; any other file gets it as the first line."""
+    if header in text:
+        return text
+    line = "<!-- %s -->" % header
+    if text.startswith("---\n") or text.startswith("---\r\n"):
+        end = text.find("\n---", 3)
+        if end != -1:
+            stop = text.find("\n", end + 4)
+            stop = len(text) if stop == -1 else stop + 1
+            return text[:stop] + "\n" + line + "\n" + text[stop:]
+    return line + "\n\n" + text
+
+
 def write_committed_json(path, obj):
     import json
     return write_committed(path, json.dumps(sanitize_obj(obj), indent=2, ensure_ascii=False) + "\n")

@@ -3,6 +3,8 @@ name: my-voice
 description: Use this skill whenever you draft, rewrite, or edit any text the user will send or post as their own, including emails, messages, social posts, cover letters, and bios. It holds the user's writing voice, measured from their own samples, and says how to match it.
 ---
 
+<!-- Corpus-derived content (persona era-c). Source texts are in the public domain in the USA. Sources: eval/corpus/PROVENANCE.md -->
+
 # My voice
 
 ## How I sound
