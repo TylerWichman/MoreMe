@@ -1,0 +1,39 @@
+# MoreMe CI. Authored and checked locally (YAML parse); not run until the repo is pushed.
+# Python comes from astral-sh/setup-uv because actions/setup-python has no 3.8 build on
+# current Ubuntu runners.
+name: ci
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    name: pytest (${{ matrix.os }}, Python ${{ matrix.python-version }})
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest, windows-latest]
+        python-version: ["3.8", "3.11", "3.13"]
+    steps:
+      - name: Check out
+        uses: actions/checkout@v4
+
+      - name: Install uv and Python ${{ matrix.python-version }}
+        uses: astral-sh/setup-uv@v6
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: analyze.py runs with no packages installed
+        run: uv run --no-project --python ${{ matrix.python-version }} python moreme/analyze.py --version
+
+      - name: Run the test suite
+        run: uv run --no-project --python ${{ matrix.python-version }} --with "pytest<8.4" python -m pytest -q
+
+      - name: Prose check (no long dashes or banned words)
+        if: hashFiles('tools/check_prose.py') != ''
+        run: uv run --no-project --python ${{ matrix.python-version }} python tools/check_prose.py
