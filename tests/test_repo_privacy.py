@@ -21,6 +21,8 @@ REPO = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(REPO / "tools"))
 import sanitize_artifacts as sa  # noqa: E402
 
+AT = "@"  # example addresses are split so tracked files hold none
+
 ALLOWLIST = REPO / "tests" / "privacy_allowlist.txt"
 KINDS = {"home", "slug", "username", "name", "email"}
 
@@ -104,7 +106,7 @@ def test_scan_catches_every_kind(tmp_path):
         "b.txt": "/c/Users/zqxjones/x",
         "c.md": "C--Users-zqxjones-Documents",
         "d.md": "signed Brindleford",
-        "e.md": "mail me at [email]",
+        "e.md": "mail me at a.b" + AT + "example.org",
         "f.md": "run as zqxjones",
         "ok.md": "1+h@users.noreply.github.com and ZqxjonesBrindleford",
     }
@@ -114,5 +116,5 @@ def test_scan_catches_every_kind(tmp_path):
     flagged = sorted(set(p.split(":")[0] for p in probs))
     assert flagged == ["a.json", "b.txt", "c.md", "d.md", "e.md", "f.md"]
     assert scan(["zqxjones-notes.md"], s, [], root=tmp_path) == ["zqxjones-notes.md (file name): username"]
-    assert scan(["e.md"], s, [("*.md", "email", "[email]")], root=tmp_path) == []
-    assert scan(["e.md"], s, [("*.md", "email", "[email]")], root=tmp_path) != []
+    assert scan(["e.md"], s, [("*.md", "email", "a.b" + AT + "example.org")], root=tmp_path) == []
+    assert scan(["e.md"], s, [("*.md", "email", "x" + AT + "example.org")], root=tmp_path) != []

@@ -11,8 +11,10 @@ sys.path.insert(0, str(REPO / "eval"))
 import sanitize_artifacts as sa  # noqa: E402
 from lib import artifacts  # noqa: E402
 
+AT = "@"  # example addresses are split so tracked files hold none
+
 WIN = {"home": "C:\\Users\\zqxjones", "users": ["zqxjones"], "names": ["Zqxjones", "Brindleford"],
-       "emails": ["[email]"]}
+       "emails": ["zqx.private" + AT + "example.net"]}
 POSIX = {"home": "/home/zqxjones", "users": ["zqxjones"], "names": ["Zqxjones"], "emails": []}
 
 
@@ -59,14 +61,14 @@ def test_username_inside_other_word_is_kept(s):
 
 
 def test_emails(s):
-    out, counts = s.sanitize("a [email] b [email] c "
+    out, counts = s.sanitize("a zqx.private" + AT + "example.net b other" + AT + "mail.org c "
                              "123+handle@users.noreply.github.com d handle@users.noreply.github.com")
     assert out == "a [email] b [email] c 123+handle@users.noreply.github.com d handle@users.noreply.github.com"
     assert counts["email"] == 2
 
 
 def test_findings_match_sanitize(s):
-    raw = "C:\\Users\\zqxjones\\x Zqxjones zqxjones [email] C--Users-zqxjones-y"
+    raw = "C:\\Users\\zqxjones\\x Zqxjones zqxjones a" + AT + "b.io C--Users-zqxjones-y"
     kinds = sorted(k for k, _, _ in s.findings(raw))
     assert {"email", "home", "name", "slug", "username"} <= set(kinds)
     clean = s.sanitize(raw)[0]
@@ -74,7 +76,7 @@ def test_findings_match_sanitize(s):
 
 
 def test_sanitized_output_is_stable(s):
-    raw = "C:\\Users\\zqxjones\\x Zqxjones [email]"
+    raw = "C:\\Users\\zqxjones\\x Zqxjones a" + AT + "b.io"
     once = s.sanitize(raw)[0]
     assert s.sanitize(once)[0] == once
 
@@ -93,11 +95,11 @@ def test_posix_home():
 
 def test_discover_uses_runtime_values(monkeypatch):
     monkeypatch.setattr(sa, "_git_global", lambda key: {"user.name": "Zqx Brindleford",
-                                                        "user.email": "[email]"}[key])
+                                                        "user.email": "zqx" + AT + "example.net"}[key])
     t = sa.discover(home="C:\\Users\\zqxjones", user="zqxjones", env={"MOREME_PRIVATE_TOKENS": "Quillon, ab"})
     assert t["users"] == ["zqxjones"]
     assert t["names"] == ["Zqxjones", "Zqx", "Brindleford", "Quillon"]
-    assert t["emails"] == ["[email]"]
+    assert t["emails"] == ["zqx" + AT + "example.net"]
 
 
 def test_discover_skips_generic_ci_users_and_noreply(monkeypatch):
