@@ -1571,7 +1571,7 @@ def check_notes(sections, samples_dir):
             elif current is not None:
                 current[1].append(line)
         if not 3 <= len(excerpts) <= 5:
-            out_of_range("Examples has {0} {1}; give 3 to 5, each under a [sample-NN.txt] line.".format(
+            out_of_range("Examples has {0} {1}; give 3 to 5, each under a line naming the sample file, like [conversation.txt].".format(
                 len(excerpts), plural(len(excerpts), "excerpt", "excerpts")))
         parsed = []
         cache = {}
