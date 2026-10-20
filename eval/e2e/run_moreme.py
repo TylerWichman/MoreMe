@@ -440,12 +440,18 @@ def chat_visibility(turn_events, report_path=None):
         if end is not None and end < prev:
             in_order = False
         span = items[prev + 1:end] if end is not None else items[prev + 1:]
+        if prev >= 0:
+            # Text after the previous done line, in the same message, opens this stage.
+            line = "Step %d of 6 done: %s." % (n - 1, STAGE_NAMES[n - 2])
+            tail = items[prev][1].split(line, 1)[-1]
+            if tail.strip():
+                span = [("text", tail)] + span
         first_work = next((i for i, (k, v) in enumerate(span) if k == "tool" and v in WORK_TOOLS), None)
         before = span[:first_work] if first_work is not None else span
         st["opening"] = any(k == "text" for k, _ in before)
         texts = "\n".join(v for k, v in span if k == "text")
         if end is not None:
-            texts += "\n" + items[end][1]
+            texts += "\n" + items[end][1].split("Step %d of 6 done: %s." % (n, name), 1)[0]
         if n == 2:
             st["word_count"] = bool(WORDS_RE.search(texts))
         if n == 3:
@@ -638,7 +644,15 @@ def render(run_dir, logs_dir=None):
 
 
 def cmd_render(args):
-    print(render(RUNS / args.run_id))
+    """Rebuild transcript.md; also refresh the manifest's chat_visibility
+    cross-check when the raw logs are available."""
+    run_dir = RUNS / args.run_id
+    logs = logs_for(run_dir)
+    m = json.loads((run_dir / "manifest.json").read_text(encoding="utf-8"))
+    if logs.is_dir() and m.get("turns"):
+        m["chat_visibility"] = chat_visibility(load_turn_events(m, logs), output_for(run_dir) / "report.txt")
+        write_manifest(run_dir, m)
+    print(artifacts.sanitize_text(str(render(run_dir, logs))))
     return 0
 
 

@@ -216,6 +216,19 @@ def test_chat_visibility_fails_like_run_r1(tmp_path):
     assert st[3]["report_shown"] is False
 
 
+def test_chat_visibility_credits_opening_in_the_done_line_message(tmp_path):
+    """SKILL.md lets the next step's opening line follow the done line in the
+    same message; that text opens the next stage, and does not count for the
+    stage that just ended."""
+    t = [_a(_t("Step 1 of 6: questions."), _u("Write")),
+         _a(_t("Step 1 of 6 done: Interview.\n\nNext, paste three things. About 2 minutes."))]
+    t2 = [_a(_u("Write")), _a(_t("Step 2 of 6 done: Sample."))]
+    cv = drv.chat_visibility([("hi", t), ("files", t2)], None)
+    st = dict((s["stage"], s) for s in cv["stages"])
+    assert st[2]["opening"] and st[2]["done"]
+    assert st[3]["opening"] is False
+
+
 def test_chat_visibility_ignores_subagent_and_tool_text():
     sub = {"type": "assistant", "parent_tool_use_id": "x",
            "message": {"content": [_t("Step 1 of 6 done: Interview.")]}}
