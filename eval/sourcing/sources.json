@@ -1,0 +1,81 @@
+{
+  "comment": "Build-time source list for eval/corpus. Attribution (author, title, license text) lives in eval/corpus/PROVENANCE.md. pg_word_cap: Gutenberg documents are taken in book order until the persona reaches this many words; era-c uses 20000 because its letters are long (up to 4,000 words) and a 14,000 cap left too few documents to split near 60/15/25.",
+  "pg_word_cap": 14000,
+  "personas": [
+    {
+      "id": "modern-a",
+      "kind": "govuk",
+      "byline": "https://gds.blog.gov.uk/author/mike-bracken-former-director-general-government-digital-service/",
+      "urls": [
+        "https://gds.blog.gov.uk/2011/10/25/the-second-lever/",
+        "https://gds.blog.gov.uk/2012/01/31/this-is-why-we-are-here/",
+        "https://gds.blog.gov.uk/2012/12/21/the-end-of-the-beginning/",
+        "https://gds.blog.gov.uk/2013/01/06/digital-transformation-in-2013-the-strategy-is-delivery-again/",
+        "https://gds.blog.gov.uk/2013/03/14/of-the-web-not-on-the-web/",
+        "https://gds.blog.gov.uk/2013/07/17/the-pivot-from-publishing-to-transactions/",
+        "https://gds.blog.gov.uk/2013/12/10/strategy-and-delivery-one-year-on/",
+        "https://gds.blog.gov.uk/2014/07/22/making-things-open-making-things-better/",
+        "https://gds.blog.gov.uk/2014/10/17/happy-birthday-gov-uk/",
+        "https://gds.blog.gov.uk/2014/12/22/all-crayons-left-behind-building-digital-services-not-websites-for-rural-payments/",
+        "https://gds.blog.gov.uk/2015/02/10/that-was-400-days-of-delivery/",
+        "https://gds.blog.gov.uk/2015/03/27/turning-the-tanker-digital-transformation-done-right/",
+        "https://gds.blog.gov.uk/2015/03/28/data-as-a-public-asset/",
+        "https://gds.blog.gov.uk/2015/03/29/government-as-a-platform-the-next-phase-of-digital-transformation/",
+        "https://gds.blog.gov.uk/2015/07/10/you-cant-be-half-agile/",
+        "https://gds.blog.gov.uk/2015/07/24/hire-the-head-and-the-body-will-follow/",
+        "https://gds.blog.gov.uk/2015/08/03/onwards/",
+        "https://gds.blog.gov.uk/2015/09/10/its-not-about-us-its-about-collaboration/",
+        "https://gds.blog.gov.uk/2015/09/18/learning-and-doing-together/"
+      ]
+    },
+    {
+      "id": "modern-b",
+      "kind": "osc",
+      "byline": "ron-mcfarland",
+      "urls": [
+        "https://opensource.com/open-organization/19/8/energy-fatigue-burnout",
+        "https://opensource.com/open-organization/21/1/open-is-future-of-work",
+        "https://opensource.com/open-organization/21/8/leadership-cultural-social-norms",
+        "https://opensource.com/open-organization/22/5/near-zero-marginal-cost-societies-and-impact-why-we-work",
+        "https://opensource.com/open-organization/22/9/saving-factory-energy-open-organization-principles",
+        "https://opensource.com/article/22/10/innovative-open-organization-chart",
+        "https://opensource.com/article/22/10/innovative-open-organization-chart-works",
+        "https://opensource.com/article/23/1/community-leadership-introducer-chief",
+        "https://opensource.com/article/23/2/community-thinking-pattern",
+        "https://opensource.com/article/23/4/sharing-economy-open-organization",
+        "https://opensource.com/article/23/4/sharing-economy-examples",
+        "https://opensource.com/article/23/4/future-sharing-business-model"
+      ]
+    },
+    {
+      "id": "era-c",
+      "kind": "pg",
+      "pg_id": 16623,
+      "parser": "letters",
+      "demo_candidate": true,
+      "word_cap": 20000,
+      "published": "1914 (published)"
+    },
+    {
+      "id": "era-d",
+      "kind": "pg",
+      "pg_id": 25004,
+      "parser": "diary",
+      "published": "1913 (published)"
+    },
+    {
+      "id": "era-e",
+      "kind": "pg",
+      "pg_id": 3135,
+      "parser": "weeks",
+      "published": "1870 (published)"
+    },
+    {
+      "id": "era-f",
+      "kind": "pg",
+      "pg_id": 60484,
+      "parser": "talks",
+      "published": "1902 (published)"
+    }
+  ]
+}
