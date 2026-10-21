@@ -129,6 +129,7 @@ Iterations actually run: none. The template and SKILL.md were frozen as they sto
 ## Deviations after freezing
 
 - 2026-10-21, `eval/harness/runner.py`: the pre-batch usage check treated a rejected rate-limit event as permanent, so the run could never resume after a usage limit. It now blocks only until that event's `resetsAt` time. This changes when a batch may start, not prompts, arms, draft extraction, scoring, or analysis. Persona modern-a's 40 held-out drafts were made before this change; the rest after. The runner.py hash below was refreshed for this change only.
+- 2026-10-21, Claude Code auto-updated from 2.1.303 to 2.1.306 mid-run (the main install, not the child runs, which had auto-update off). The per-call check correctly rejected every later call, but the harness retried each one up to three times, spending about 230 calls without producing a draft. Changes: `eval/lib/childrun.py` reads the expected version from `MOREME_CLI_VERSION` (default 2.1.303), `eval/harness/runner.py` halts the batch on the first version mismatch instead of retrying, and `eval/harness/ledger.py` plus a `harness reopen` command append "reopen" rows so units that failed only on the version check run again (nothing is deleted from the ledger). The rest of the run uses Claude Code 2.1.306 with the same pinned model (`claude-sonnet-5-5`). The 32 valid modern-a drafts made on 2.1.303 are kept; every draft record and ledger row records the version that made it. No prompts, arms, extraction, scoring, or analysis changed.
 
 ## Hashes
 
@@ -143,17 +144,17 @@ status: frozen
 c97b54bf03279a7e26a025b72cca81180690eb46fbecf922eafbb20df3d3b136  eval/reference_stats.json
 d4a2eb7f0bb23b3db3d175438d97242c02e2c23153430714f8b2363c4756de49  eval/split.json
 b09442528547b65eb4ebc66cab28d50e8cb31b59b0d33dfae2acb41b6b996a27  eval/tasks/tasks.json
-06dbcfc5a4dbbfbb69de309512f358f3e5b44d51166810667a898cb61d176287  eval/lib/childrun.py
+8c098d2e4441ceaec8e4cb4e5180f02604236eec811494ef87316a082c2d3cb5  eval/lib/childrun.py
 2a5bf354a57bb402f3841f2b5ae896752c286c0657a7adbf2862b8fbe8de43e0  eval/harness/__init__.py
-4a8ca6dfafc8c5dac3cb479c99864876e67ba2f4111aa71a9030161e1c1568ca  eval/harness/__main__.py
+724935045d07bed153b9fcc10c5789d761195de627d99e3581182f8fa5baf895  eval/harness/__main__.py
 ed8db316735ae1ceaf8c4988ee69139eb773357ca5d1926ca38f425a5d0874cc  eval/harness/common.py
 ccf2783bf66c693713226b68cd0a7c15a4541ec1796d8933c312aded4b608074  eval/harness/evidence.py
 bdd768f5d1d239b17769bdbde564fd41a0f3d2048605f4223ce39421d56403eb  eval/harness/extraction.py
 d247facc05f4624ea006aa04a1c86e7c0465d0819b218c1646860f4a80d06aa6  eval/harness/leakage.py
-8084400ea43b625599f60beed5ebddf9743c2bd633e322eac8b7627fdeb4687e  eval/harness/ledger.py
+62d02480668a89fd30cfdf6670ae4e76408f04cf169e98627f8af6415a51ebcd  eval/harness/ledger.py
 03784699892832c09d3102f1c30369bf25a77d6351178b97a5b54774ab18fef6  eval/harness/prereg.py
 eb75d24bd4eb2e377e99180f50ef00a422c2c0146287fe65e61ed84f45c2278b  eval/harness/report.py
-96b47e370f39665cc54e5f3c8d9a7234501a06a50615f6881304b3e43aad478e  eval/harness/runner.py
+729480dd85ad15c0c3ada4276e4c7fd06810e7b7ee4f967e11b3ea6d07ab5cbe  eval/harness/runner.py
 b016e5ef1edb7f78e7fcd8064949525a6cdd68b05a753ead87d3bbd41bb87154  eval/harness/scoring.py
 3d9db0f72c9537e3f375b666c584ed8968baf70cd3d320d67decda6490156292  eval/harness/stats.py
 e9c9cd308670d27f8890fc54d268bb849dc12fca10e8ac3c2dd255dae64b0bee  eval/harness/tasks.py

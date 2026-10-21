@@ -44,7 +44,25 @@ class UnitLedger(object):
         return self.ledger.rows()
 
     def done_units(self):
-        return dict((r["unit"], r) for r in self.rows() if r.get("kind") == "done")
+        """Units whose latest done/reopen row is a done row. A "reopen" row (see
+        reopen()) makes a finished unit run again; nothing is deleted."""
+        out = {}
+        for r in self.rows():
+            if r.get("kind") == "done":
+                out[r["unit"]] = r
+            elif r.get("kind") == "reopen":
+                out.pop(r["unit"], None)
+        return out
+
+    def last_kind_by_unit(self):
+        out = {}
+        for r in self.rows():
+            if r.get("unit") and r.get("kind") in ("call", "done", "reopen"):
+                out[r["unit"]] = r["kind"]
+        return out
+
+    def reopen(self, unit, reason):
+        self.ledger.append({"kind": "reopen", "unit": unit, "reason": reason})
 
     def calls_by_unit(self):
         out = {}
@@ -54,8 +72,9 @@ class UnitLedger(object):
         return out
 
     def interrupted_units(self):
-        done = self.done_units()
-        return sorted(u for u in self.calls_by_unit() if u not in done)
+        # A call with no later done or reopen row: the run stopped mid-unit.
+        last = self.last_kind_by_unit()
+        return sorted(u for u, k in last.items() if k == "call")
 
     def mark_done(self, unit, valid, attempts, draft_file, reasons=None, interrupted_rerun=False):
         self.ledger.append({"kind": "done", "unit": unit, "valid": bool(valid), "attempts": attempts,
@@ -67,8 +86,9 @@ class UnitLedger(object):
 
     def summary(self):
         rows = self.rows()
-        done = [r for r in rows if r.get("kind") == "done"]
+        done = list(self.done_units().values())
         return {
+            "reopened": sum(1 for r in rows if r.get("kind") == "reopen"),
             "calls": sum(1 for r in rows if r.get("kind") == "call"),
             "units_done": len(done),
             "units_valid": sum(1 for r in done if r["valid"]),

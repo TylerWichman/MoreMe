@@ -34,7 +34,9 @@ import subprocess
 import time
 from pathlib import Path
 
-CLI_VERSION = "2.1.303"
+# Expected Claude Code version. MOREME_CLI_VERSION overrides it for a run when the
+# installed CLI has been updated (recorded per call; see PREREGISTRATION.md).
+CLI_VERSION = os.environ.get("MOREME_CLI_VERSION", "2.1.303")
 MODEL = "claude-sonnet-5-5"
 SCRATCH_KINDS = ("moreme-eval", "moreme-e2e")
 
@@ -78,6 +80,11 @@ class BudgetExceeded(RuntimeError):
 
 class GuardHit(RuntimeError):
     """A guarded name appeared in ~/.claude/skills or ~/.claude/commands."""
+
+
+class VersionChanged(RuntimeError):
+    """The installed Claude Code version differs from the expected one. Halt the
+    batch: a retry cannot fix it, so retrying would only spend calls."""
 
 
 class ScratchError(RuntimeError):

@@ -54,6 +54,28 @@ def cmd_leakage(argv):
     return 1 if hits else 0
 
 
+def cmd_reopen(argv):
+    """Append "reopen" rows for finished units whose only failure reasons are
+    Claude Code version mismatches, so a resumed run makes them again."""
+    from harness.ledger import UnitLedger
+    ap = argparse.ArgumentParser(prog="harness reopen")
+    ap.add_argument("--results", required=True)
+    ap.add_argument("--evidence-dir")
+    a = ap.parse_args(argv)
+    ev = Path(a.evidence_dir or common.evidence_dir("eval", Path(a.results).name))
+    led = UnitLedger(ev / "ledger.jsonl")
+    n = 0
+    for unit, row in sorted(led.done_units().items()):
+        if row.get("valid"):
+            continue
+        reasons = [x for h in (row.get("invalid_history") or []) for x in h.get("reasons", [])]
+        if reasons and all(x.startswith("init:claude_code_version=") for x in reasons):
+            led.reopen(unit, "claude_code_version mismatch only")
+            n += 1
+    print("reopened units: %d" % n)
+    return 0
+
+
 def main(argv=None):
     argv = list(sys.argv[1:] if argv is None else argv)
     if not argv:
@@ -64,6 +86,8 @@ def main(argv=None):
         return cmd_run(rest)
     if cmd == "leakage":
         return cmd_leakage(rest)
+    if cmd == "reopen":
+        return cmd_reopen(rest)
     if cmd == "gen-skill":
         from harness import persona_gen
         return persona_gen.main(rest)

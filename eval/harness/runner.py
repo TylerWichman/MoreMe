@@ -13,7 +13,8 @@ Where things go (AMEND-002):
   manifest. Every draft record carries its persona's license header.
 
 Exit codes of run_batch: 0 done, 3 usage limit (resume later from the ledger),
-4 call budget reached, 5 guard hit (halted), 6 seven-day window too full.
+4 call budget reached, 5 guard hit (halted), 6 seven-day window too full,
+7 Claude Code version changed (halted; set MOREME_CLI_VERSION and resume).
 """
 import random
 import re
@@ -27,7 +28,7 @@ from harness.ledger import MAX_ATTEMPTS, UnitLedger, unit_key
 cr = common.childrun
 
 SEVEN_DAY_MAX = 0.90
-EXIT_OK, EXIT_LIMIT, EXIT_BUDGET, EXIT_GUARD, EXIT_WINDOW = 0, 3, 4, 5, 6
+EXIT_OK, EXIT_LIMIT, EXIT_BUDGET, EXIT_GUARD, EXIT_WINDOW, EXIT_VERSION = 0, 3, 4, 5, 6, 7
 
 
 def unit_plan(persona, task_id, seed=common.ARM_ORDER_SEED):
@@ -108,6 +109,11 @@ def run_unit(ctx, persona, task, arm, rep, position, interrupted):
         ev = evidence.unit_evidence(out["events"], arm)
         reasons = list(out["invalid"]) + ev["problems"] + extraction.invalid_reasons(final, draft)
         reasons = sorted(set(reasons))
+        version_bad = [r for r in reasons if r.startswith("init:claude_code_version=")]
+        if version_bad:
+            # The unit stays undone in the ledger and resumes after the expected
+            # version is set; retrying now could never succeed.
+            raise cr.VersionChanged(version_bad[0])
         record = {
             "license_header": ctx["headers"][persona],
             "persona": persona, "task_id": task["id"], "split": task["split"], "arm": arm, "rep": rep,
@@ -179,6 +185,8 @@ def run_batch(personas, which, evidence_dir, results_dir, mode="auto", model=cr.
         code, stopped = EXIT_BUDGET, str(ex)
     except cr.GuardHit as ex:
         code, stopped = EXIT_GUARD, "guard hit (halted): %s" % common.scrub_paths(str(ex))
+    except cr.VersionChanged as ex:
+        code, stopped = EXIT_VERSION, "Claude Code version changed (halted, no retries): %s" % str(ex)
     spill_after = cr.spill_names(home_dir)
     write_manifest(results_dir, ledger, plan, mode, model, which, stopped,
                    sorted(spill_after - spill_before), spill_before, spill_after)
