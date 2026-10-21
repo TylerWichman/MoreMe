@@ -1,8 +1,6 @@
-# Eval pre-registration (DRAFT, not frozen)
+# Eval pre-registration (frozen)
 
-Status: draft. This file is frozen by a separate step after the Phase 1 dev smoke and any template iterations, and before any held-out text is scored. Until the hash block below says `status: frozen` and every hash matches, the harness refuses held-out drafting and held-out scoring (`eval/harness/prereg.py`, `require_frozen`).
-
-Items marked **open until freeze** are filled from dev-only results before freezing. Nothing here may change after the first held-out run starts.
+Status: frozen before any held-out text was drafted against or scored. The hash block below says `status: frozen`; the harness refuses held-out drafting and held-out scoring if any listed file's hash differs (`eval/harness/prereg.py`, `require_frozen`). Nothing here changed after the first held-out run started.
 
 ## Question
 
@@ -38,7 +36,7 @@ Each persona's my-voice skill is produced by the shipped `moreme/SKILL.md`, driv
 - Model: `claude-sonnet-5-5`, passed as `--model` on every call; the model id and Claude Code version reported by each init event are saved per draft.
 - Arm order: the 5 units of a task run in an order shuffled with `random.Random("moreme-arm-order-v1:<persona>:<task id>")`, saved in the run manifest.
 - Draft units are single-shot `claude -p` calls with `--no-session-persistence` under the AD-006 isolation profile (`eval/lib/childrun.py`).
-- Invocation mode: **auto** (unchanged prompt in every arm), decided in Phase 0. Switch check, **open until freeze**: if the dev smoke's invocation rate for the real generated my-voice is below 80%, the mode becomes explicit before this file is frozen: `with` prompts start with `Use my-voice skill:` and `without` and `samples-pasted` prompts start with the neutral prefix `Please do the task:` (same length). Measured dev rate: **open until freeze**. Mode in force: **open until freeze**.
+- Invocation mode: **auto** (unchanged prompt in every arm), decided in Phase 0. Switch check: if the dev smoke's invocation rate for the real generated my-voice is below 80%, the mode becomes explicit before this file is frozen: `with` prompts start with `Use my-voice skill:` and `without` and `samples-pasted` prompts start with the neutral prefix `Please do the task:` (same length). Measured dev rate: 16 of 16 `with` drafts invoked my-voice (100%), dev smoke on persona modern-a, 2026-10-20. That persona's skill was built with the earlier paste-based sample step; the later guided-writing step changes how samples are collected, not how the finished skill is invoked. Mode in force: **auto**.
 
 ## Per-call checks (a failed check makes the unit invalid; it is re-run, up to 3 attempts, and counted)
 
@@ -126,16 +124,18 @@ Pre-registered budget: about 690-710 child calls for the whole project, includin
 
 Up to 2 template iterations, judged only on dev-split attribution and `delta_fw`. Every iteration's numbers are kept in `eval/results/iterations/`. Negative results are reported, not dropped.
 
+Iterations actually run: none. The template and SKILL.md were frozen as they stood after the guided-writing change, without tuning on dev results.
+
 ## Hashes
 
 Files whose sha256 (line endings normalized to LF) must match before held-out scoring. Refreshed with `python -m harness prereg write-hashes` from `eval/`; frozen with `python -m harness prereg freeze`.
 
 <!-- prereg-hashes:start -->
 ```
-status: draft
-226779895282f478e5228df9fcaa7a04fee7cc21960cac2f469b65122279402d  moreme/SKILL.md
+status: frozen
+8f5bab84651b34213256a3b67cdf8e6ac131936a69b169fede35fd9a823baccd  moreme/SKILL.md
 27bf967ffff45f0d4237def7f6f0e82eb635492e5ea9693aa10c3a09bfa8d9cd  moreme/templates/my-voice/SKILL.md.tmpl
-7221286513190905c37cce8fda58d1c333116b49d832cc1180b5505a041d0033  moreme/analyze.py
+29cbb05b9d63e53adf8679f87f8fed686cfefadec98a739e83086340f2e987c1  moreme/analyze.py
 c97b54bf03279a7e26a025b72cca81180690eb46fbecf922eafbb20df3d3b136  eval/reference_stats.json
 d4a2eb7f0bb23b3db3d175438d97242c02e2c23153430714f8b2363c4756de49  eval/split.json
 b09442528547b65eb4ebc66cab28d50e8cb31b59b0d33dfae2acb41b6b996a27  eval/tasks/tasks.json

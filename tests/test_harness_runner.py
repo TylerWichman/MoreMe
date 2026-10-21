@@ -113,6 +113,11 @@ def test_usage_limit_stops_cleanly_and_resumes(tmp_path, monkeypatch):
 
 def test_heldout_refused_while_preregistration_is_draft(tmp_path, monkeypatch):
     claude, _ = S.make_fake(tmp_path, "ok", monkeypatch)
+    # The real file is frozen once the eval starts; check the refusal against a draft copy.
+    draft = tmp_path / "PREREGISTRATION.md"
+    draft.write_text(prereg.common.PREREG.read_text(encoding="utf-8").replace("status: frozen", "status: draft"),
+                     encoding="utf-8")
+    monkeypatch.setattr(prereg.common, "PREREG", draft)
     with pytest.raises(prereg.PreregError):
         runner.run_batch(["era-c"], "heldout", tmp_path / "evidence", tmp_path / "results",
                          **S.run_kwargs(tmp_path, claude))
