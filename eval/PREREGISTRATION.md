@@ -126,6 +126,10 @@ Up to 2 template iterations, judged only on dev-split attribution and `delta_fw`
 
 Iterations actually run: none. The template and SKILL.md were frozen as they stood after the guided-writing change, without tuning on dev results.
 
+## Deviations after freezing
+
+- 2026-10-21, `eval/harness/runner.py`: the pre-batch usage check treated a rejected rate-limit event as permanent, so the run could never resume after a usage limit. It now blocks only until that event's `resetsAt` time. This changes when a batch may start, not prompts, arms, draft extraction, scoring, or analysis. Persona modern-a's 40 held-out drafts were made before this change; the rest after. The runner.py hash below was refreshed for this change only.
+
 ## Hashes
 
 Files whose sha256 (line endings normalized to LF) must match before held-out scoring. Refreshed with `python -m harness prereg write-hashes` from `eval/`; frozen with `python -m harness prereg freeze`.
@@ -149,7 +153,7 @@ d247facc05f4624ea006aa04a1c86e7c0465d0819b218c1646860f4a80d06aa6  eval/harness/l
 8084400ea43b625599f60beed5ebddf9743c2bd633e322eac8b7627fdeb4687e  eval/harness/ledger.py
 03784699892832c09d3102f1c30369bf25a77d6351178b97a5b54774ab18fef6  eval/harness/prereg.py
 eb75d24bd4eb2e377e99180f50ef00a422c2c0146287fe65e61ed84f45c2278b  eval/harness/report.py
-009ee0db877e7054ff38e0ca74e9aadeed249d35fe6bf7756b70c40840bff2e1  eval/harness/runner.py
+96b47e370f39665cc54e5f3c8d9a7234501a06a50615f6881304b3e43aad478e  eval/harness/runner.py
 b016e5ef1edb7f78e7fcd8064949525a6cdd68b05a753ead87d3bbd41bb87154  eval/harness/scoring.py
 3d9db0f72c9537e3f375b666c584ed8968baf70cd3d320d67decda6490156292  eval/harness/stats.py
 e9c9cd308670d27f8890fc54d268bb849dc12fca10e8ac3c2dd255dae64b0bee  eval/harness/tasks.py

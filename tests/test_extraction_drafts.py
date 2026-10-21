@@ -78,12 +78,13 @@ def _committed_records():
 
 
 def test_committed_dev_drafts_follow_the_rule():
+    # Applies to every committed draft, dev or held-out: one extraction rule for all.
     recs = _committed_records()
     if not recs:
-        pytest.skip("no committed harness drafts yet (Phase 1 dev smoke not run)")
+        pytest.skip("no committed harness drafts yet")
     invalid = 0
     for f, r in recs:
-        assert r["split"] == "dev", "%s: no held-out drafts in Phase 1" % f.name
+        assert r["split"] in ("dev", "heldout"), f.name
         assert X(r["final_message"]) == r["draft"], f.name
         flagged = extraction.invalid_reasons(r["final_message"], r["draft"])
         if r["valid"]:

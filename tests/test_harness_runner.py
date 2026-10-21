@@ -124,6 +124,14 @@ def test_heldout_refused_while_preregistration_is_draft(tmp_path, monkeypatch):
     assert not (tmp_path / "evidence" / "ledger.jsonl").exists()
 
 
+def test_rejection_blocks_only_until_reset():
+    rej = [{"rate_limit_info": [{"status": "rejected", "resetsAt": 1000}]}]
+    assert not runner.window_ok(rej, now=999)[0]
+    assert runner.window_ok(rej, now=1000)[0]
+    no_reset = [{"rate_limit_info": [{"status": "rejected"}]}]
+    assert not runner.window_ok(no_reset, now=10 ** 12)[0]
+
+
 def test_seven_day_window_check():
     full = [{"rate_limit_info": [{"status": "allowed", "unifiedWindows": {"seven_day": {"utilization": 0.95}}}]}]
     ok = [{"rate_limit_info": [{"status": "allowed", "unifiedWindows": {"seven_day": {"utilization": 0.39}}}]}]

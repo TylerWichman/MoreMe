@@ -53,13 +53,21 @@ def last_rate_limit(rows):
     return None
 
 
-def window_ok(rows, seven_day_max=SEVEN_DAY_MAX):
-    """(ok, note) from the newest rate_limit_event seen in the ledger."""
+def window_ok(rows, seven_day_max=SEVEN_DAY_MAX, now=None):
+    """(ok, note) from the newest rate_limit_event seen in the ledger.
+
+    A rejected event blocks only until its resetsAt time; after that the window
+    has reset and the batch may start (2026-10-21 fix, see PREREGISTRATION.md).
+    """
     info = last_rate_limit(rows)
     if not info:
         return True, "no rate_limit_event seen yet"
     if info.get("status") == "rejected":
-        return False, "last rate_limit_event was rejected"
+        resets = info.get("resetsAt")
+        now = time.time() if now is None else now
+        if not resets or now < resets:
+            return False, "last rate_limit_event was rejected"
+        return True, "last rejection has reset"
     seven = ((info.get("unifiedWindows") or {}).get("seven_day") or {}).get("utilization")
     if seven is not None and seven >= seven_day_max:
         return False, "seven-day utilization %.2f >= %.2f" % (seven, seven_day_max)
