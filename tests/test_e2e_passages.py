@@ -58,7 +58,10 @@ def test_sample_composition_rule():
 
 def test_brief_keeps_interview_answers_short_and_one_passage():
     brief = drv.interviewee_brief("era-c")
-    assert "about 15 words at most" in brief
+    # Tightened by T-007 from "about 15": r6 met the corpus-share rule by 0.002.
+    assert drv.ANSWER_CAP_WORDS == 10
+    assert "one short sentence of 10 words at most" in brief
+    assert "about 15 words" not in brief
     assert "the one passage that fits" in brief and "old quotation" in brief
 
 

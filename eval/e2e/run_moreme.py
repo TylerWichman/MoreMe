@@ -255,6 +255,9 @@ def resolve_answer(reply, catalog, used=()):
 
 
 CORPUS_SHARE_MIN = 0.75
+# Word cap for in-role answers to interview questions (T-007: tightened from
+# "about 15" because run r6 met the corpus-share rule by only 0.002).
+ANSWER_CAP_WORDS = 10
 
 
 def sample_composition(turns):
@@ -297,8 +300,9 @@ def interviewee_brief(persona, scratch=None, catalog=None):
         "Rules for your replies:\n"
         "- Reply with only the words this person would type into the chat. No preamble, no quotes, no stage "
         "directions, no Markdown.\n"
-        "- Answer interview questions in character with one short sentence of about 15 words at most. Keep "
-        "them short: the writing passages, not these answers, should make up most of what you type.\n"
+        "- Answer interview questions in character with one short sentence of " + str(ANSWER_CAP_WORDS)
+        + " words at most. Keep them short: the writing passages, not these answers, should make up most of "
+        "what you type.\n"
         + personas.name_rule(persona) + "\n"
         "- When MoreMe asks you to write something (a story, a reply, an explanation, an opinion, a few lines "
         "about anything), do not write it yourself. Reply with exactly one line: USE: followed by the ids of "
