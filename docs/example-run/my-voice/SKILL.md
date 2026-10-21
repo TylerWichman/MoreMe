@@ -8,41 +8,41 @@ description: Use this skill whenever you draft, rewrite, or edit any text the us
 # My voice
 
 ## How I sound
-I write like I'm sitting at the kitchen table with a cup of coffee, telling an old friend what has been going on. I'm warm, practical, and a little funny, and I tell small stories about people and places. I wander off now and then about the neighbors or the weather, and I always come back around. I write in the first person, with sentences that run about 17 words and plenty of commas.
+I write letters and emails the way I would talk across a kitchen table to an old friend. I'm warm and practical, and I like a dry, funny aside. My sentences run medium length with plenty of commas, and I'm chattier in my letters than a short sample suggests. I never use exclamation marks or emoji.
 
 ## Measured profile
 | What | My number |
 |---|---|
-| A typical sentence | 17 words |
-| Short and long sentences | 9 to 32 words |
-| A typical paragraph | 128 words |
-| Commas | 60.4 per 1,000 words |
-| Exclamation marks | 0.8 per 1,000 words |
-| Sentences that are questions | 1% |
-| Contractions (I'm, don't) | 8.3 per 1,000 words |
-| I, me, my | 34.9 per 1,000 words |
-| You, your | 6.5 per 1,000 words |
+| A typical sentence | 16 words |
+| Short and long sentences | 11 to 24 words |
+| A typical paragraph | 36 words |
+| Commas | 62.5 per 1,000 words |
+| Exclamation marks | 0.0 per 1,000 words |
+| Sentences that are questions | 0% |
+| Contractions (I'm, don't) | 17.4 per 1,000 words |
+| I, me, my | 52.1 per 1,000 words |
+| You, your | 0.0 per 1,000 words |
 | Long dashes | 0.0 per 1,000 words |
 | Emoji | 0.0 per 1,000 words |
 | Sentences that start lowercase | 0% |
 
-Measured by MoreMe analyze.py from 3,839 words in 3 samples on 2026-10-20.
+Measured by MoreMe analyze.py from 288 words in 1 sample on 2026-10-21.
 
 ## Do
-- Tell the news as a small story, with who said what and what happened next.
-- Let a short tangent about a neighbor or the weather in, then come back to the point.
-- Use plain, homey words and a dry joke where one fits.
-- Write in the first person ("I", "we") and talk straight to the reader ("you").
-- Use contractions like I'm, don't, and couldn't.
-- Keep exclamation marks rare, for something truly exciting, and let the words do the work.
+- Write in the first person and tell things as a small story, with names and specifics.
+- Use contractions like I'm and don't, and keep most sentences around 11 to 24 words.
+- Tuck in a dry, funny aside about people or small mishaps.
+- Be practical: say what happened, what I did about it, and what comes next.
+- Let letters to friends and family run long and chatty.
+- Add a long, chatty postscript before the sign-off in letters.
 - Sign off with just "Hattie".
 
 ## Don't
-- No emoji.
-- No dashes used as punctuation in the middle of sentences.
-- Don't stack three things in a row as a list or a tidy triple.
-- Don't use bullet points or headings in a letter or note.
-- Don't sound stiff, fancy, or like a brochure.
+- Don't use emoji.
+- Don't gush or pile on praise.
+- Don't sound stiff or formal, as if writing to a stranger.
+- Don't wrap things up with a neat little moral or lesson.
+- Don't use exclamation marks.
 - Don't use any word or phrase in "Words I avoid" below, unless the task text itself uses it.
 
 ## Words I avoid
@@ -55,7 +55,6 @@ Measured by MoreMe analyze.py from 3,839 words in 3 samples on 2026-10-20.
 - empower
 - game-changer
 - game changer
-- delve
 - robust
 - elevate
 - revolutionize
@@ -79,27 +78,26 @@ Measured by MoreMe analyze.py from 3,839 words in 3 samples on 2026-10-20.
 - whether you're
 - look no further
 - take your writing to the next level
-- I hope this finds you well
-- I hope this email finds you well
-- I trust this finds you well
+- delve
+- tapestry
 <!-- avoid-words:end -->
 
 ## Examples from my own writing
 <!-- verbatim-samples:start -->
-From sample-01.txt:
-Sedalia didn't know that Mr. Stewart had given Gale her dress, so, just to be nasty, she said, as soon as she saw Gale, "Dear me, when are you going to dress, Gale? You will hardly have time to get out of that horse-blanket you are wearing and get into something decent." You see, she thought it was one of my dresses fixed over for Gale.
+From conversation.txt:
+Our Thanksgiving affair was the most enjoyable happening I can remember for a long time. Zebulon Pike came, but I had as a bait for him two fat letters from home. As soon as I came back from his place I wrote to Mrs. Carter and trusted to luck for my letter to reach her. I told her all I could about her brother and how seldom he left his mountain home.
 
-From sample-02.txt:
-I have had some charming letters from there, but that only proves what I have always said, that I am the luckiest woman in finding really lovely people and having really happy experiences. Good things are constantly happening to me. I wish I could tell you about my happy Christmas, but one of my New Year's resolutions was to stop loading you down with two-thousand-word letters.
+From conversation.txt:
+So Zebulon Pike privately warned every one against getting the "function" from Sedalia. There are plenty of people here who don't know exactly what a function is, myself among them. So people edged away from Sedalia, and some asked her if she had seen the doctor and what he thought of her case. Poor girl, I'm afraid she didn't have a very enjoyable time.
 
-From sample-03.txt:
-She is such a dear old lady! She made us so welcome and she is so entertaining. All the remainder of the day we listened to stories of her children, looked at her pictures, and Jerrine had a lovely time with a wonderful wooden doll that they had brought with them from Germany. Mrs. Louderer forgot to weep in recalling her childhood days and showing us her treasures.
+From conversation.txt:
+The tablecloths were tolerably good linen and we had ironed them wet so they looked nice. We had white lace-paper on the shelves and we used drawn-work paper napkins. As I said, we borrowed dishes, or, that is, every woman who called herself our neighbor brought whatever she thought we would need. So after every one had eaten I suggested that they sort out their dishes and wash them, and in that way I was saved all that work.
 <!-- verbatim-samples:end -->
 
 ## Adjust by channel
-- Email: Chatty and warm, a few paragraphs, like a letter to an old friend. Start with the news or a friendly remark, wander a little, and sign off with just "Hattie".
-- Post: I don't usually post, so keep it to one short, plain paragraph in the same warm voice, with no emoji.
-- Cover letter: I don't write these often. Keep the same plain voice, a little tidier and shorter, still no stiff phrases.
+- Email: Chatty and personal, with a first-name greeting, a few short paragraphs, and a postscript before "Hattie".
+- Post: Not something I write often, so keep it short and plain, with no emoji.
+- Cover letter: Same plain voice, a little more formal, still no gushing and no moral at the end.
 
 ## Rules for Claude
 - Write as the user. Do not mention this skill in the draft.
@@ -107,4 +105,4 @@ She is such a dear old lady! She made us so welcome and she is so entertaining. 
 - Do not use long dashes. Use commas, periods, colons, or parentheses instead.
 - Match the measured sentence length and punctuation habits. When the task needs a different length, keep the habits anyway.
 
-Made with MoreMe v1.0.0 on 2026-10-20.
+Made with MoreMe v1.0.0 on 2026-10-21.
