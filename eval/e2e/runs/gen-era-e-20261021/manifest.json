@@ -1,0 +1,562 @@
+{
+  "run_id": "gen-era-e-20261021",
+  "persona": "era-e",
+  "started": "2026-10-21T09:37:10",
+  "cli_version": "2.1.303 (Claude Code)",
+  "model_pinned": "claude-sonnet-5-5",
+  "session_id": "473bfa2a-40e3-4ce4-a588-6b44f9213544",
+  "scratch": "~\\AppData\\Local\\Temp\\moreme-e2e\\gen-era-e-20261021",
+  "interviewee_scratch": "~\\AppData\\Local\\Temp\\moreme-e2e\\gen-era-e-20261021-iv",
+  "train_files_in_scratch": [],
+  "opener": "I'd like to make my voice skill",
+  "skill_flags_first": [
+    "--model",
+    "claude-sonnet-5-5",
+    "--session-id",
+    "473bfa2a-40e3-4ce4-a588-6b44f9213544",
+    "--setting-sources",
+    "project",
+    "--strict-mcp-config",
+    "--permission-mode",
+    "acceptEdits",
+    "--permission-prompts",
+    "none",
+    "--allowedTools=Skill(moreme),Bash(python --version),Bash(py -3 --version),Bash(python3 --version),Bash(python .claude/skills/moreme/analyze.py:*),Bash(py -3 .claude/skills/moreme/analyze.py:*)"
+  ],
+  "skill_flags_later": [
+    "--model",
+    "claude-sonnet-5-5",
+    "--resume",
+    "473bfa2a-40e3-4ce4-a588-6b44f9213544",
+    "--setting-sources",
+    "project",
+    "--strict-mcp-config",
+    "--permission-mode",
+    "acceptEdits",
+    "--permission-prompts",
+    "none",
+    "--allowedTools=Skill(moreme),Bash(python --version),Bash(py -3 --version),Bash(python3 --version),Bash(python .claude/skills/moreme/analyze.py:*),Bash(py -3 .claude/skills/moreme/analyze.py:*)"
+  ],
+  "interviewee_flags": [
+    "--model",
+    "claude-sonnet-5-5",
+    "--no-session-persistence",
+    "--tools",
+    "",
+    "--setting-sources",
+    "project",
+    "--strict-mcp-config"
+  ],
+  "allowed_tools": [
+    "Skill(moreme)",
+    "Bash(python --version)",
+    "Bash(py -3 --version)",
+    "Bash(python3 --version)",
+    "Bash(python .claude/skills/moreme/analyze.py:*)",
+    "Bash(py -3 .claude/skills/moreme/analyze.py:*)"
+  ],
+  "env_removed": "every variable starting with CLAUDE (any case) and AI_AGENT",
+  "env_set_after_scrub": {
+    "DISABLE_AUTOUPDATER": "1",
+    "CLAUDE_CODE_DISABLE_AUTO_MEMORY": "1",
+    "MOREME_TEST_GUARD": "1"
+  },
+  "scratch_settings": {
+    "enabledPlugins": {
+      "cc-plugin-agents-md@builtin": false,
+      "cc-plugin-telemetry@builtin": false,
+      "cc-plugin-plugin-authoring@builtin": false
+    },
+    "disableBundledSkills": true,
+    "skillOverrides": {
+      "design": "off",
+      "doctor": "off"
+    },
+    "autoMemoryEnabled": false,
+    "permissions": {
+      "deny": [
+        "Edit(~/.claude/**)",
+        "Write(~/.claude/**)",
+        "Edit(~/.claude/**)",
+        "Write(~/.claude/**)"
+      ]
+    }
+  },
+  "license_header": "Corpus-derived content (persona era-e). Source texts are in the public domain in the USA. Sources: eval/corpus/PROVENANCE.md",
+  "banner_source": "public-domain humorous essays on keeping a vegetable garden, 1870 (Project Gutenberg)",
+  "persona_first_name": "Walter",
+  "evidence_dir": "~\\Documents\\OneShot\\vault\\clients\\operator\\snapshots\\moreme-public-release\\evidence\\e2e\\runs\\gen-era-e-20261021",
+  "sample_method": "Answers to MoreMe's writing prompts are verbatim passages from those texts, picked by the simulated interviewee to fit each prompt (whole paragraphs or whole sentences, never reworded); answers to interview questions and other replies were written in role by the agent.",
+  "passage_catalog_size": 47,
+  "passage_sources": [
+    "era-e/era-e-01.txt",
+    "era-e/era-e-07.txt",
+    "era-e/era-e-08.txt"
+  ],
+  "turns": [
+    {
+      "turn": 0,
+      "role": "skill",
+      "label": "skill-t00",
+      "user": "I'd like to make my voice skill",
+      "latency_s": 7.14,
+      "wall_start": 1792589830.6735268,
+      "expected_skills": [
+        "moreme"
+      ],
+      "invalid": [],
+      "steps_done": [],
+      "num_turns": 3,
+      "is_error": false
+    },
+    {
+      "turn": 1,
+      "role": "interviewee",
+      "label": "interviewee-t01",
+      "answer": "I'm Walter, and mostly notes, letters, and short posts about my garden.",
+      "answer_kind": "in_role",
+      "passage_ids": [],
+      "latency_s": 2.17,
+      "wall_start": 1792589837.8434925,
+      "invalid": []
+    },
+    {
+      "turn": 1,
+      "role": "skill",
+      "label": "skill-t01",
+      "user": "I'm Walter, and mostly notes, letters, and short posts about my garden.",
+      "latency_s": 11.55,
+      "wall_start": 1792589840.0618827,
+      "expected_skills": [
+        "moreme"
+      ],
+      "invalid": [],
+      "steps_done": [],
+      "num_turns": 3,
+      "is_error": false
+    },
+    {
+      "turn": 2,
+      "role": "interviewee",
+      "label": "interviewee-t02",
+      "answer": "Mostly my neighbors, my wife, and a few long-suffering readers of my garden posts.",
+      "answer_kind": "in_role",
+      "passage_ids": [],
+      "latency_s": 2.9,
+      "wall_start": 1792589851.6417994,
+      "invalid": []
+    },
+    {
+      "turn": 2,
+      "role": "skill",
+      "label": "skill-t02",
+      "user": "Mostly my neighbors, my wife, and a few long-suffering readers of my garden posts.",
+      "latency_s": 2.86,
+      "wall_start": 1792589854.5851343,
+      "expected_skills": [
+        "moreme"
+      ],
+      "invalid": [],
+      "steps_done": [],
+      "num_turns": 1,
+      "is_error": false
+    },
+    {
+      "turn": 3,
+      "role": "interviewee",
+      "label": "interviewee-t03",
+      "answer": "Dry, wry, and fond of mock-solemn asides.",
+      "answer_kind": "in_role",
+      "passage_ids": [],
+      "latency_s": 4.47,
+      "wall_start": 1792589857.4845371,
+      "invalid": []
+    },
+    {
+      "turn": 3,
+      "role": "skill",
+      "label": "skill-t03",
+      "user": "Dry, wry, and fond of mock-solemn asides.",
+      "latency_s": 2.7,
+      "wall_start": 1792589862.0025108,
+      "expected_skills": [
+        "moreme"
+      ],
+      "invalid": [],
+      "steps_done": [],
+      "num_turns": 1,
+      "is_error": false
+    },
+    {
+      "turn": 4,
+      "role": "interviewee",
+      "label": "interviewee-t04",
+      "answer": "They announce my \"journey\" and call everything \"delightful,\" which no garden has ever been.",
+      "answer_kind": "in_role",
+      "passage_ids": [],
+      "latency_s": 2.91,
+      "wall_start": 1792589864.7334416,
+      "invalid": []
+    },
+    {
+      "turn": 4,
+      "role": "skill",
+      "label": "skill-t04",
+      "user": "They announce my \"journey\" and call everything \"delightful,\" which no garden has ever been.",
+      "latency_s": 6.0,
+      "wall_start": 1792589867.6797235,
+      "expected_skills": [
+        "moreme"
+      ],
+      "invalid": [],
+      "steps_done": [],
+      "num_turns": 1,
+      "is_error": false
+    },
+    {
+      "turn": 5,
+      "role": "interviewee",
+      "label": "interviewee-t05",
+      "answer": "No emoji, ever, and I sign my notes Walter, with exclamation marks rationed like zucchini.",
+      "answer_kind": "in_role",
+      "passage_ids": [],
+      "latency_s": 6.12,
+      "wall_start": 1792589873.7158518,
+      "invalid": []
+    },
+    {
+      "turn": 5,
+      "role": "skill",
+      "label": "skill-t05",
+      "user": "No emoji, ever, and I sign my notes Walter, with exclamation marks rationed like zucchini.",
+      "latency_s": 8.7,
+      "wall_start": 1792589879.882809,
+      "expected_skills": [
+        "moreme"
+      ],
+      "invalid": [],
+      "steps_done": [
+        "1"
+      ],
+      "num_turns": 4,
+      "is_error": false
+    },
+    {
+      "turn": 6,
+      "role": "interviewee",
+      "label": "interviewee-t06",
+      "answer": "But with no effect. The killing of birds went on, to my great regret and shame.\n\nThe other day I went to my garden to get a mess of peas. I had seen, the day before, that they were just ready to pick. How I had lined the ground, planted, hoed, bushed them! The bushes were very fine,--seven feet high, and of good wood.",
+      "answer_kind": "passages",
+      "passage_ids": [
+        "p20"
+      ],
+      "latency_s": 3.76,
+      "wall_start": 1792589888.618319,
+      "invalid": []
+    },
+    {
+      "turn": 6,
+      "role": "skill",
+      "label": "skill-t06",
+      "user": "But with no effect. The killing of birds went on, to my great regret and shame.\n\nThe other day I went to my garden to get a mess of peas. I had seen, the day before, that they were just ready to pick. How I had lined the ground, planted, hoed, bushed them! The bushes were very fine,--seven feet high, and of good wood.",
+      "latency_s": 7.72,
+      "wall_start": 1792589892.4215147,
+      "expected_skills": [
+        "moreme"
+      ],
+      "invalid": [],
+      "steps_done": [],
+      "num_turns": 2,
+      "is_error": false
+    },
+    {
+      "turn": 7,
+      "role": "interviewee",
+      "label": "interviewee-t07",
+      "answer": "As to this hoe, I do not mind saying that it has changed my view of the desirableness and value of human life. It has, in fact, made life a holiday to me. It is made on the principle that man is an upright, sensible, reasonable being, and not a groveling wretch. It does away with the necessity of the hinge in the back.",
+      "answer_kind": "passages",
+      "passage_ids": [
+        "p13"
+      ],
+      "latency_s": 6.99,
+      "wall_start": 1792589900.18263,
+      "invalid": []
+    },
+    {
+      "turn": 7,
+      "role": "skill",
+      "label": "skill-t07",
+      "user": "As to this hoe, I do not mind saying that it has changed my view of the desirableness and value of human life. It has, in fact, made life a holiday to me. It is made on the principle that man is an upright, sensible, reasonable being, and not a groveling wretch. It does away with the necessity of the hinge in the back.",
+      "latency_s": 11.58,
+      "wall_start": 1792589907.2047002,
+      "expected_skills": [
+        "moreme"
+      ],
+      "invalid": [],
+      "steps_done": [],
+      "num_turns": 2,
+      "is_error": false
+    },
+    {
+      "turn": 8,
+      "role": "interviewee",
+      "label": "interviewee-t08",
+      "answer": "Somebody has sent me a new sort of hoe, with the wish that I should speak favorably of it, if I can consistently. I willingly do so, but with the understanding that I am to be at liberty to speak just as courteously of any other hoe which I may receive. If I understand religious morals, this is the position of the religious press with regard to bitters and wringing-machines.",
+      "answer_kind": "passages",
+      "passage_ids": [
+        "p11"
+      ],
+      "latency_s": 5.66,
+      "wall_start": 1792589918.8455222,
+      "invalid": []
+    },
+    {
+      "turn": 8,
+      "role": "skill",
+      "label": "skill-t08",
+      "user": "Somebody has sent me a new sort of hoe, with the wish that I should speak favorably of it, if I can consistently. I willingly do so, but with the understanding that I am to be at liberty to speak just as courteously of any other hoe which I may receive. If I understand religious morals, this is the position of the religious press with regard to bitters and wringing-machines.",
+      "latency_s": 5.89,
+      "wall_start": 1792589924.5427816,
+      "expected_skills": [
+        "moreme"
+      ],
+      "invalid": [],
+      "steps_done": [],
+      "num_turns": 2,
+      "is_error": false
+    },
+    {
+      "turn": 9,
+      "role": "interviewee",
+      "label": "interviewee-t09",
+      "answer": "It is a pleasure to eat of the fruit of one's toil, if it be nothing more than a head of lettuce or an ear of corn. One cultivates a lawn even with great satisfaction; for there is nothing more beautiful than grass and turf in our latitude. The tropics may have their delights, but they have not turf: and the world without turf is a dreary desert.",
+      "answer_kind": "passages",
+      "passage_ids": [
+        "p6"
+      ],
+      "latency_s": 5.12,
+      "wall_start": 1792589930.463275,
+      "invalid": []
+    },
+    {
+      "turn": 9,
+      "role": "skill",
+      "label": "skill-t09",
+      "user": "It is a pleasure to eat of the fruit of one's toil, if it be nothing more than a head of lettuce or an ear of corn. One cultivates a lawn even with great satisfaction; for there is nothing more beautiful than grass and turf in our latitude. The tropics may have their delights, but they have not turf: and the world without turf is a dreary desert.",
+      "latency_s": 21.62,
+      "wall_start": 1792589935.6060274,
+      "expected_skills": [
+        "moreme"
+      ],
+      "invalid": [],
+      "steps_done": [
+        "2",
+        "3"
+      ],
+      "num_turns": 7,
+      "is_error": false
+    },
+    {
+      "turn": 10,
+      "role": "interviewee",
+      "label": "interviewee-t10",
+      "answer": "Yes, though I am chattier in letters than the numbers suggest, and rather fonder of the semicolon.",
+      "answer_kind": "in_role",
+      "passage_ids": [],
+      "latency_s": 3.79,
+      "wall_start": 1792589957.2668617,
+      "invalid": []
+    },
+    {
+      "turn": 10,
+      "role": "skill",
+      "label": "skill-t10",
+      "user": "Yes, though I am chattier in letters than the numbers suggest, and rather fonder of the semicolon.",
+      "latency_s": 42.72,
+      "wall_start": 1792589961.097579,
+      "expected_skills": [
+        "moreme"
+      ],
+      "invalid": [],
+      "steps_done": [
+        "4"
+      ],
+      "num_turns": 10,
+      "is_error": false
+    },
+    {
+      "turn": 11,
+      "role": "interviewee",
+      "label": "interviewee-t11",
+      "answer": "A short note to my neighbor thanking him for the seeds and warning him about the beetles.",
+      "answer_kind": "in_role",
+      "passage_ids": [],
+      "latency_s": 5.49,
+      "wall_start": 1792590003.8538501,
+      "invalid": []
+    },
+    {
+      "turn": 11,
+      "role": "skill",
+      "label": "skill-t11",
+      "user": "A short note to my neighbor thanking him for the seeds and warning him about the beetles.",
+      "latency_s": 18.31,
+      "wall_start": 1792590009.3974204,
+      "expected_skills": [
+        "moreme"
+      ],
+      "invalid": [],
+      "steps_done": [],
+      "num_turns": 6,
+      "is_error": false
+    },
+    {
+      "turn": 12,
+      "role": "interviewee",
+      "label": "interviewee-t12",
+      "answer": "B",
+      "answer_kind": "in_role",
+      "passage_ids": [],
+      "latency_s": 4.47,
+      "wall_start": 1792590027.7600331,
+      "invalid": []
+    },
+    {
+      "turn": 12,
+      "role": "skill",
+      "label": "skill-t12",
+      "user": "B",
+      "latency_s": 8.18,
+      "wall_start": 1792590032.2757747,
+      "expected_skills": [
+        "moreme"
+      ],
+      "invalid": [],
+      "steps_done": [
+        "5"
+      ],
+      "num_turns": 3,
+      "is_error": false
+    },
+    {
+      "turn": 13,
+      "role": "interviewee",
+      "label": "interviewee-t13",
+      "answer": "Project folder.",
+      "answer_kind": "in_role",
+      "passage_ids": [],
+      "latency_s": 3.23,
+      "wall_start": 1792590040.4776978,
+      "invalid": []
+    },
+    {
+      "turn": 13,
+      "role": "skill",
+      "label": "skill-t13",
+      "user": "Project folder.",
+      "latency_s": 14.74,
+      "wall_start": 1792590043.7827482,
+      "expected_skills": [
+        "moreme"
+      ],
+      "invalid": [],
+      "steps_done": [
+        "6"
+      ],
+      "num_turns": 3,
+      "is_error": false
+    }
+  ],
+  "status": "completed",
+  "finished": "2026-10-21T09:40:58",
+  "spill_new": [
+    "HOME-AppData-Local-Temp-moreme-e2e-gen-era-e-20261021"
+  ],
+  "installed_skill_md_exists": false,
+  "validate_skill": {
+    "ok": true,
+    "errors": [],
+    "warnings": []
+  },
+  "stage_timings": [
+    {
+      "stage": 1,
+      "seconds": 57.9
+    },
+    {
+      "stage": 2,
+      "seconds": 68.6
+    },
+    {
+      "stage": 3,
+      "seconds": 0.0
+    },
+    {
+      "stage": 4,
+      "seconds": 46.6
+    },
+    {
+      "stage": 5,
+      "seconds": 36.6
+    },
+    {
+      "stage": 6,
+      "seconds": 18.1
+    }
+  ],
+  "sample_composition": {
+    "corpus_words": 266,
+    "roleplay_words": 62,
+    "total_words": 328,
+    "corpus_share": 0.811,
+    "min_share": 0.75,
+    "meets_rule": true
+  },
+  "chat_visibility": {
+    "ok": true,
+    "done_lines_in_order": true,
+    "stages": [
+      {
+        "stage": 1,
+        "done": true,
+        "opening": true,
+        "done_timely": true
+      },
+      {
+        "stage": 2,
+        "done": true,
+        "opening": true,
+        "done_timely": true,
+        "word_count": true
+      },
+      {
+        "stage": 3,
+        "done": true,
+        "opening": true,
+        "done_timely": true,
+        "report_lines_shown": "7/7",
+        "report_shown": true
+      },
+      {
+        "stage": 4,
+        "done": true,
+        "opening": true,
+        "done_timely": true
+      },
+      {
+        "stage": 5,
+        "done": true,
+        "opening": true,
+        "done_timely": true
+      },
+      {
+        "stage": 6,
+        "done": true,
+        "opening": true,
+        "done_timely": true
+      }
+    ],
+    "rule": "lines visible no later than the next message that asks the user to act",
+    "note": "Mechanical cross-check only; the clean-room reviewer decides R1-R6."
+  }
+}

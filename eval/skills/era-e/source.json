@@ -1,0 +1,36 @@
+{
+  "license_header": "Corpus-derived content (persona era-e). Source texts are in the public domain in the USA. Sources: eval/corpus/PROVENANCE.md",
+  "persona": "era-e",
+  "run_id": "gen-era-e-20261021",
+  "generated_by": "moreme/SKILL.md via eval/e2e/run_moreme.py run",
+  "sample_method": "Answers to MoreMe's writing prompts are verbatim passages from those texts, picked by the simulated interviewee to fit each prompt (whole paragraphs or whole sentences, never reworded); answers to interview questions and other replies were written in role by the agent.",
+  "sample_composition": {
+    "corpus_words": 266,
+    "roleplay_words": 62,
+    "total_words": 328,
+    "corpus_share": 0.811,
+    "min_share": 0.75,
+    "meets_rule": true
+  },
+  "generation_attempts": [
+    {
+      "run_id": "gen-era-e-20261021",
+      "usable": true,
+      "reason": "ok",
+      "sample_composition": {
+        "corpus_words": 266,
+        "roleplay_words": 62,
+        "total_words": 328,
+        "corpus_share": 0.811,
+        "min_share": 0.75,
+        "meets_rule": true
+      }
+    }
+  ],
+  "committed_run_dir": "eval/e2e/runs/gen-era-e-20261021/",
+  "validate_skill": {
+    "ok": true,
+    "errors": [],
+    "warnings": []
+  }
+}

@@ -1,0 +1,564 @@
+{
+  "run_id": "gen-modern-a-20261021",
+  "persona": "modern-a",
+  "started": "2026-10-21T09:26:16",
+  "cli_version": "2.1.303 (Claude Code)",
+  "model_pinned": "claude-sonnet-5-5",
+  "session_id": "622e74ec-62f3-4734-9bee-0cb6fa64a34a",
+  "scratch": "~\\AppData\\Local\\Temp\\moreme-e2e\\gen-modern-a-20261021",
+  "interviewee_scratch": "~\\AppData\\Local\\Temp\\moreme-e2e\\gen-modern-a-20261021-iv",
+  "train_files_in_scratch": [],
+  "opener": "I'd like to make my voice skill",
+  "skill_flags_first": [
+    "--model",
+    "claude-sonnet-5-5",
+    "--session-id",
+    "622e74ec-62f3-4734-9bee-0cb6fa64a34a",
+    "--setting-sources",
+    "project",
+    "--strict-mcp-config",
+    "--permission-mode",
+    "acceptEdits",
+    "--permission-prompts",
+    "none",
+    "--allowedTools=Skill(moreme),Bash(python --version),Bash(py -3 --version),Bash(python3 --version),Bash(python .claude/skills/moreme/analyze.py:*),Bash(py -3 .claude/skills/moreme/analyze.py:*)"
+  ],
+  "skill_flags_later": [
+    "--model",
+    "claude-sonnet-5-5",
+    "--resume",
+    "622e74ec-62f3-4734-9bee-0cb6fa64a34a",
+    "--setting-sources",
+    "project",
+    "--strict-mcp-config",
+    "--permission-mode",
+    "acceptEdits",
+    "--permission-prompts",
+    "none",
+    "--allowedTools=Skill(moreme),Bash(python --version),Bash(py -3 --version),Bash(python3 --version),Bash(python .claude/skills/moreme/analyze.py:*),Bash(py -3 .claude/skills/moreme/analyze.py:*)"
+  ],
+  "interviewee_flags": [
+    "--model",
+    "claude-sonnet-5-5",
+    "--no-session-persistence",
+    "--tools",
+    "",
+    "--setting-sources",
+    "project",
+    "--strict-mcp-config"
+  ],
+  "allowed_tools": [
+    "Skill(moreme)",
+    "Bash(python --version)",
+    "Bash(py -3 --version)",
+    "Bash(python3 --version)",
+    "Bash(python .claude/skills/moreme/analyze.py:*)",
+    "Bash(py -3 .claude/skills/moreme/analyze.py:*)"
+  ],
+  "env_removed": "every variable starting with CLAUDE (any case) and AI_AGENT",
+  "env_set_after_scrub": {
+    "DISABLE_AUTOUPDATER": "1",
+    "CLAUDE_CODE_DISABLE_AUTO_MEMORY": "1",
+    "MOREME_TEST_GUARD": "1"
+  },
+  "scratch_settings": {
+    "enabledPlugins": {
+      "cc-plugin-agents-md@builtin": false,
+      "cc-plugin-telemetry@builtin": false,
+      "cc-plugin-plugin-authoring@builtin": false
+    },
+    "disableBundledSkills": true,
+    "skillOverrides": {
+      "design": "off",
+      "doctor": "off"
+    },
+    "autoMemoryEnabled": false,
+    "permissions": {
+      "deny": [
+        "Edit(~/.claude/**)",
+        "Write(~/.claude/**)",
+        "Edit(~/.claude/**)",
+        "Write(~/.claude/**)"
+      ]
+    }
+  },
+  "license_header": "Corpus-derived content (persona modern-a). Contains public sector information licensed under the Open Government Licence v3.0 (https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/). Sources and changes: eval/corpus/PROVENANCE.md",
+  "banner_source": "posts by Mike Bracken on the GDS blog (UK Government Digital Service, 2011 to 2015), Open Government Licence v3.0",
+  "persona_first_name": "Graham",
+  "evidence_dir": "~\\Documents\\OneShot\\vault\\clients\\operator\\snapshots\\moreme-public-release\\evidence\\e2e\\runs\\gen-modern-a-20261021",
+  "sample_method": "Answers to MoreMe's writing prompts are verbatim passages from those texts, picked by the simulated interviewee to fit each prompt (whole paragraphs or whole sentences, never reworded); answers to interview questions and other replies were written in role by the agent.",
+  "passage_catalog_size": 32,
+  "passage_sources": [
+    "modern-a/modern-a-04.txt",
+    "modern-a/modern-a-05.txt",
+    "modern-a/modern-a-15.txt"
+  ],
+  "turns": [
+    {
+      "turn": 0,
+      "role": "skill",
+      "label": "skill-t00",
+      "user": "I'd like to make my voice skill",
+      "latency_s": 8.71,
+      "wall_start": 1792589176.760067,
+      "expected_skills": [
+        "moreme"
+      ],
+      "invalid": [],
+      "steps_done": [],
+      "num_turns": 3,
+      "is_error": false
+    },
+    {
+      "turn": 1,
+      "role": "interviewee",
+      "label": "interviewee-t01",
+      "answer": "I'm Graham. Team updates, emails to colleagues, and blog posts.",
+      "answer_kind": "in_role",
+      "passage_ids": [],
+      "latency_s": 3.66,
+      "wall_start": 1792589185.5007873,
+      "invalid": []
+    },
+    {
+      "turn": 1,
+      "role": "skill",
+      "label": "skill-t01",
+      "user": "I'm Graham. Team updates, emails to colleagues, and blog posts.",
+      "latency_s": 8.92,
+      "wall_start": 1792589189.2321887,
+      "expected_skills": [
+        "moreme"
+      ],
+      "invalid": [],
+      "steps_done": [],
+      "num_turns": 3,
+      "is_error": false
+    },
+    {
+      "turn": 2,
+      "role": "interviewee",
+      "label": "interviewee-t02",
+      "answer": "Colleagues across the team, plus the public who use our services.",
+      "answer_kind": "in_role",
+      "passage_ids": [],
+      "latency_s": 4.08,
+      "wall_start": 1792589198.1990175,
+      "invalid": []
+    },
+    {
+      "turn": 2,
+      "role": "skill",
+      "label": "skill-t02",
+      "user": "Colleagues across the team, plus the public who use our services.",
+      "latency_s": 4.44,
+      "wall_start": 1792589202.320142,
+      "expected_skills": [
+        "moreme"
+      ],
+      "invalid": [],
+      "steps_done": [],
+      "num_turns": 1,
+      "is_error": false
+    },
+    {
+      "turn": 3,
+      "role": "interviewee",
+      "label": "interviewee-t03",
+      "answer": "Direct, upbeat, plain-spoken.",
+      "answer_kind": "in_role",
+      "passage_ids": [],
+      "latency_s": 4.26,
+      "wall_start": 1792589206.8004205,
+      "invalid": []
+    },
+    {
+      "turn": 3,
+      "role": "skill",
+      "label": "skill-t03",
+      "user": "Direct, upbeat, plain-spoken.",
+      "latency_s": 3.75,
+      "wall_start": 1792589211.0930307,
+      "expected_skills": [
+        "moreme"
+      ],
+      "invalid": [],
+      "steps_done": [],
+      "num_turns": 1,
+      "is_error": false
+    },
+    {
+      "turn": 4,
+      "role": "interviewee",
+      "label": "interviewee-t04",
+      "answer": "Waffle, jargon, and anything that sounds like a corporate press release.",
+      "answer_kind": "in_role",
+      "passage_ids": [],
+      "latency_s": 5.23,
+      "wall_start": 1792589214.88775,
+      "invalid": []
+    },
+    {
+      "turn": 4,
+      "role": "skill",
+      "label": "skill-t04",
+      "user": "Waffle, jargon, and anything that sounds like a corporate press release.",
+      "latency_s": 2.93,
+      "wall_start": 1792589220.1527174,
+      "expected_skills": [
+        "moreme"
+      ],
+      "invalid": [],
+      "steps_done": [],
+      "num_turns": 1,
+      "is_error": false
+    },
+    {
+      "turn": 5,
+      "role": "interviewee",
+      "label": "interviewee-t05",
+      "answer": "No emoji, ever. Short sentences, and I sign off as Graham.",
+      "answer_kind": "in_role",
+      "passage_ids": [],
+      "latency_s": 2.99,
+      "wall_start": 1792589223.1353407,
+      "invalid": []
+    },
+    {
+      "turn": 5,
+      "role": "skill",
+      "label": "skill-t05",
+      "user": "No emoji, ever. Short sentences, and I sign off as Graham.",
+      "latency_s": 13.43,
+      "wall_start": 1792589226.1750567,
+      "expected_skills": [
+        "moreme"
+      ],
+      "invalid": [],
+      "steps_done": [
+        "1"
+      ],
+      "num_turns": 5,
+      "is_error": false
+    },
+    {
+      "turn": 6,
+      "role": "interviewee",
+      "label": "interviewee-t06",
+      "answer": "Today we announced some small but important changes in governance. The detail is here but the upshot is: we won’t have a cross-government Chief Information Officer (CIO) any more, nor a Head of Profession for Information and Communications Technology (ICT). We are moving responsibility for these capabilities to the Government Digital Service and we are closing some cross-government boards in various technology areas and reviewing the rest in order to make sure we are set up as efficiently as possible.",
+      "answer_kind": "passages",
+      "passage_ids": [
+        "p14"
+      ],
+      "latency_s": 2.58,
+      "wall_start": 1792589239.6555464,
+      "invalid": []
+    },
+    {
+      "turn": 6,
+      "role": "skill",
+      "label": "skill-t06",
+      "user": "Today we announced some small but important changes in governance. The detail is here but the upshot is: we won’t have a cross-government Chief Information Officer (CIO) any more, nor a Head of Profession for Information and Communications Technology (ICT). We are moving responsibility for these capabilities to the Government Digital Service and we are closing some cross-government boards in various technology areas and reviewing the rest in order to make sure we are set up as efficiently as possible.",
+      "latency_s": 10.77,
+      "wall_start": 1792589242.3136322,
+      "expected_skills": [
+        "moreme"
+      ],
+      "invalid": [],
+      "steps_done": [],
+      "num_turns": 3,
+      "is_error": false
+    },
+    {
+      "turn": 7,
+      "role": "interviewee",
+      "label": "interviewee-t07",
+      "answer": "And we know that will happen in government. We know the thing we start working on will not be the same as the thing we get at the end. Requirements will change, budgets will change, the scope will change. Agile lets us deal with all of that, efficiently and gracefully.\n\nSo: if you’re working on digital public services, just go with agile in the first place.",
+      "answer_kind": "passages",
+      "passage_ids": [
+        "p32"
+      ],
+      "latency_s": 6.19,
+      "wall_start": 1792589253.1256113,
+      "invalid": []
+    },
+    {
+      "turn": 7,
+      "role": "skill",
+      "label": "skill-t07",
+      "user": "And we know that will happen in government. We know the thing we start working on will not be the same as the thing we get at the end. Requirements will change, budgets will change, the scope will change. Agile lets us deal with all of that, efficiently and gracefully.\n\nSo: if you’re working on digital public services, just go with agile in the first place.",
+      "latency_s": 6.03,
+      "wall_start": 1792589259.3714242,
+      "expected_skills": [
+        "moreme"
+      ],
+      "invalid": [],
+      "steps_done": [],
+      "num_turns": 2,
+      "is_error": false
+    },
+    {
+      "turn": 8,
+      "role": "interviewee",
+      "label": "interviewee-t08",
+      "answer": "In Justice, DEFRA and elsewhere we are already seeing huge changes as a result.\n\nThis is why the governance model we need now is more analogous to service design than procurement of technology. We need helpful web services, appropriate tools to iterate and develop new features, outstanding data analysis and resources like https://www.gov.uk/performance. We need fewer meetings between large budget holders to discuss procurement, and more stand-up meetings and daily releases based on user need.",
+      "answer_kind": "passages",
+      "passage_ids": [
+        "p20"
+      ],
+      "latency_s": 7.85,
+      "wall_start": 1792589265.4571466,
+      "invalid": []
+    },
+    {
+      "turn": 8,
+      "role": "skill",
+      "label": "skill-t08",
+      "user": "In Justice, DEFRA and elsewhere we are already seeing huge changes as a result.\n\nThis is why the governance model we need now is more analogous to service design than procurement of technology. We need helpful web services, appropriate tools to iterate and develop new features, outstanding data analysis and resources like https://www.gov.uk/performance. We need fewer meetings between large budget holders to discuss procurement, and more stand-up meetings and daily releases based on user need.",
+      "latency_s": 6.96,
+      "wall_start": 1792589273.3619945,
+      "expected_skills": [
+        "moreme"
+      ],
+      "invalid": [],
+      "steps_done": [],
+      "num_turns": 2,
+      "is_error": false
+    },
+    {
+      "turn": 9,
+      "role": "interviewee",
+      "label": "interviewee-t09",
+      "answer": "The point is: it has its place. We’ve all used roads and ports built this way, all of them useful pieces of infrastructure.\n\nDigital public services are infrastructure too, but of a different kind. When they’re live, they’re just that - live. We’re not building software projects that can just be signed off: we’re delivering ongoing, maintained services. Services whose users will have needs that will change over time.",
+      "answer_kind": "passages",
+      "passage_ids": [
+        "p25"
+      ],
+      "latency_s": 2.28,
+      "wall_start": 1792589280.378066,
+      "invalid": []
+    },
+    {
+      "turn": 9,
+      "role": "skill",
+      "label": "skill-t09",
+      "user": "The point is: it has its place. We’ve all used roads and ports built this way, all of them useful pieces of infrastructure.\n\nDigital public services are infrastructure too, but of a different kind. When they’re live, they’re just that - live. We’re not building software projects that can just be signed off: we’re delivering ongoing, maintained services. Services whose users will have needs that will change over time.",
+      "latency_s": 27.93,
+      "wall_start": 1792589282.708719,
+      "expected_skills": [
+        "moreme"
+      ],
+      "invalid": [],
+      "steps_done": [
+        "2",
+        "3"
+      ],
+      "num_turns": 8,
+      "is_error": false
+    },
+    {
+      "turn": 10,
+      "role": "interviewee",
+      "label": "interviewee-t10",
+      "answer": "Yes, that sounds like me. I use \"we\" a lot.",
+      "answer_kind": "in_role",
+      "passage_ids": [],
+      "latency_s": 2.99,
+      "wall_start": 1792589310.6951416,
+      "invalid": []
+    },
+    {
+      "turn": 10,
+      "role": "skill",
+      "label": "skill-t10",
+      "user": "Yes, that sounds like me. I use \"we\" a lot.",
+      "latency_s": 34.08,
+      "wall_start": 1792589313.7336228,
+      "expected_skills": [
+        "moreme"
+      ],
+      "invalid": [],
+      "steps_done": [
+        "4"
+      ],
+      "num_turns": 7,
+      "is_error": false
+    },
+    {
+      "turn": 11,
+      "role": "interviewee",
+      "label": "interviewee-t11",
+      "answer": "A short post for our team blog saying the new online booking service is live and thanking everyone who tested it.",
+      "answer_kind": "in_role",
+      "passage_ids": [],
+      "latency_s": 4.72,
+      "wall_start": 1792589347.8753839,
+      "invalid": []
+    },
+    {
+      "turn": 11,
+      "role": "skill",
+      "label": "skill-t11",
+      "user": "A short post for our team blog saying the new online booking service is live and thanking everyone who tested it.",
+      "latency_s": 29.63,
+      "wall_start": 1792589352.647726,
+      "expected_skills": [
+        "moreme"
+      ],
+      "invalid": [],
+      "steps_done": [
+        "4"
+      ],
+      "num_turns": 8,
+      "is_error": false
+    },
+    {
+      "turn": 12,
+      "role": "interviewee",
+      "label": "interviewee-t12",
+      "answer": "A",
+      "answer_kind": "in_role",
+      "passage_ids": [],
+      "latency_s": 2.77,
+      "wall_start": 1792589382.355159,
+      "invalid": []
+    },
+    {
+      "turn": 12,
+      "role": "skill",
+      "label": "skill-t12",
+      "user": "A",
+      "latency_s": 17.95,
+      "wall_start": 1792589385.2099164,
+      "expected_skills": [
+        "moreme"
+      ],
+      "invalid": [],
+      "steps_done": [
+        "5"
+      ],
+      "num_turns": 4,
+      "is_error": false
+    },
+    {
+      "turn": 13,
+      "role": "interviewee",
+      "label": "interviewee-t13",
+      "answer": "Project folder.",
+      "answer_kind": "in_role",
+      "passage_ids": [],
+      "latency_s": 3.14,
+      "wall_start": 1792589403.2257009,
+      "invalid": []
+    },
+    {
+      "turn": 13,
+      "role": "skill",
+      "label": "skill-t13",
+      "user": "Project folder.",
+      "latency_s": 15.59,
+      "wall_start": 1792589406.422968,
+      "expected_skills": [
+        "moreme"
+      ],
+      "invalid": [],
+      "steps_done": [
+        "6"
+      ],
+      "num_turns": 5,
+      "is_error": false
+    }
+  ],
+  "status": "completed",
+  "finished": "2026-10-21T09:30:22",
+  "spill_new": [
+    "HOME-AppData-Local-Temp-moreme-e2e-gen-modern-a-20261021"
+  ],
+  "installed_skill_md_exists": true,
+  "validate_skill": {
+    "ok": true,
+    "errors": [],
+    "warnings": []
+  },
+  "stage_timings": [
+    {
+      "stage": 1,
+      "seconds": 62.8
+    },
+    {
+      "stage": 2,
+      "seconds": 71.0
+    },
+    {
+      "stage": 3,
+      "seconds": 0.0
+    },
+    {
+      "stage": 4,
+      "seconds": 37.2
+    },
+    {
+      "stage": 5,
+      "seconds": 55.3
+    },
+    {
+      "stage": 6,
+      "seconds": 18.9
+    }
+  ],
+  "sample_composition": {
+    "corpus_words": 290,
+    "roleplay_words": 46,
+    "total_words": 336,
+    "corpus_share": 0.863,
+    "min_share": 0.75,
+    "meets_rule": true
+  },
+  "chat_visibility": {
+    "ok": true,
+    "done_lines_in_order": true,
+    "stages": [
+      {
+        "stage": 1,
+        "done": true,
+        "opening": true,
+        "done_timely": true
+      },
+      {
+        "stage": 2,
+        "done": true,
+        "opening": true,
+        "done_timely": true,
+        "word_count": true
+      },
+      {
+        "stage": 3,
+        "done": true,
+        "opening": true,
+        "done_timely": true,
+        "report_lines_shown": "11/11",
+        "report_shown": true
+      },
+      {
+        "stage": 4,
+        "done": true,
+        "opening": true,
+        "done_timely": true
+      },
+      {
+        "stage": 5,
+        "done": true,
+        "opening": true,
+        "done_timely": true
+      },
+      {
+        "stage": 6,
+        "done": true,
+        "opening": true,
+        "done_timely": true
+      }
+    ],
+    "rule": "lines visible no later than the next message that asks the user to act",
+    "note": "Mechanical cross-check only; the clean-room reviewer decides R1-R6."
+  }
+}

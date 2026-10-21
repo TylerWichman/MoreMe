@@ -1,0 +1,36 @@
+{
+  "license_header": "Corpus-derived content (persona modern-b). Adapted from works licensed under CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/); this file is licensed under CC BY-SA 4.0. Attribution, sources, and changes: eval/corpus/PROVENANCE.md",
+  "persona": "modern-b",
+  "run_id": "gen-modern-b-20261021",
+  "generated_by": "moreme/SKILL.md via eval/e2e/run_moreme.py run",
+  "sample_method": "Answers to MoreMe's writing prompts are verbatim passages from those texts, picked by the simulated interviewee to fit each prompt (whole paragraphs or whole sentences, never reworded); answers to interview questions and other replies were written in role by the agent.",
+  "sample_composition": {
+    "corpus_words": 281,
+    "roleplay_words": 49,
+    "total_words": 330,
+    "corpus_share": 0.852,
+    "min_share": 0.75,
+    "meets_rule": true
+  },
+  "generation_attempts": [
+    {
+      "run_id": "gen-modern-b-20261021",
+      "usable": true,
+      "reason": "ok",
+      "sample_composition": {
+        "corpus_words": 281,
+        "roleplay_words": 49,
+        "total_words": 330,
+        "corpus_share": 0.852,
+        "min_share": 0.75,
+        "meets_rule": true
+      }
+    }
+  ],
+  "committed_run_dir": "eval/e2e/runs/gen-modern-b-20261021/",
+  "validate_skill": {
+    "ok": true,
+    "errors": [],
+    "warnings": []
+  }
+}

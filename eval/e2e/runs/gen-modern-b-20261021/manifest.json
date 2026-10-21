@@ -1,0 +1,562 @@
+{
+  "run_id": "gen-modern-b-20261021",
+  "persona": "modern-b",
+  "started": "2026-10-21T09:30:23",
+  "cli_version": "2.1.303 (Claude Code)",
+  "model_pinned": "claude-sonnet-5-5",
+  "session_id": "36c2275e-72c4-492f-a367-1b6759491ada",
+  "scratch": "~\\AppData\\Local\\Temp\\moreme-e2e\\gen-modern-b-20261021",
+  "interviewee_scratch": "~\\AppData\\Local\\Temp\\moreme-e2e\\gen-modern-b-20261021-iv",
+  "train_files_in_scratch": [],
+  "opener": "I'd like to make my voice skill",
+  "skill_flags_first": [
+    "--model",
+    "claude-sonnet-5-5",
+    "--session-id",
+    "36c2275e-72c4-492f-a367-1b6759491ada",
+    "--setting-sources",
+    "project",
+    "--strict-mcp-config",
+    "--permission-mode",
+    "acceptEdits",
+    "--permission-prompts",
+    "none",
+    "--allowedTools=Skill(moreme),Bash(python --version),Bash(py -3 --version),Bash(python3 --version),Bash(python .claude/skills/moreme/analyze.py:*),Bash(py -3 .claude/skills/moreme/analyze.py:*)"
+  ],
+  "skill_flags_later": [
+    "--model",
+    "claude-sonnet-5-5",
+    "--resume",
+    "36c2275e-72c4-492f-a367-1b6759491ada",
+    "--setting-sources",
+    "project",
+    "--strict-mcp-config",
+    "--permission-mode",
+    "acceptEdits",
+    "--permission-prompts",
+    "none",
+    "--allowedTools=Skill(moreme),Bash(python --version),Bash(py -3 --version),Bash(python3 --version),Bash(python .claude/skills/moreme/analyze.py:*),Bash(py -3 .claude/skills/moreme/analyze.py:*)"
+  ],
+  "interviewee_flags": [
+    "--model",
+    "claude-sonnet-5-5",
+    "--no-session-persistence",
+    "--tools",
+    "",
+    "--setting-sources",
+    "project",
+    "--strict-mcp-config"
+  ],
+  "allowed_tools": [
+    "Skill(moreme)",
+    "Bash(python --version)",
+    "Bash(py -3 --version)",
+    "Bash(python3 --version)",
+    "Bash(python .claude/skills/moreme/analyze.py:*)",
+    "Bash(py -3 .claude/skills/moreme/analyze.py:*)"
+  ],
+  "env_removed": "every variable starting with CLAUDE (any case) and AI_AGENT",
+  "env_set_after_scrub": {
+    "DISABLE_AUTOUPDATER": "1",
+    "CLAUDE_CODE_DISABLE_AUTO_MEMORY": "1",
+    "MOREME_TEST_GUARD": "1"
+  },
+  "scratch_settings": {
+    "enabledPlugins": {
+      "cc-plugin-agents-md@builtin": false,
+      "cc-plugin-telemetry@builtin": false,
+      "cc-plugin-plugin-authoring@builtin": false
+    },
+    "disableBundledSkills": true,
+    "skillOverrides": {
+      "design": "off",
+      "doctor": "off"
+    },
+    "autoMemoryEnabled": false,
+    "permissions": {
+      "deny": [
+        "Edit(~/.claude/**)",
+        "Write(~/.claude/**)",
+        "Edit(~/.claude/**)",
+        "Write(~/.claude/**)"
+      ]
+    }
+  },
+  "license_header": "Corpus-derived content (persona modern-b). Adapted from works licensed under CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/); this file is licensed under CC BY-SA 4.0. Attribution, sources, and changes: eval/corpus/PROVENANCE.md",
+  "banner_source": "articles by Ron McFarland on Opensource.com (2019 to 2023), CC BY-SA 4.0",
+  "persona_first_name": "Dale",
+  "evidence_dir": "~\\Documents\\OneShot\\vault\\clients\\operator\\snapshots\\moreme-public-release\\evidence\\e2e\\runs\\gen-modern-b-20261021",
+  "sample_method": "Answers to MoreMe's writing prompts are verbatim passages from those texts, picked by the simulated interviewee to fit each prompt (whole paragraphs or whole sentences, never reworded); answers to interview questions and other replies were written in role by the agent.",
+  "passage_catalog_size": 61,
+  "passage_sources": [
+    "modern-b/modern-b-01.txt",
+    "modern-b/modern-b-03.txt",
+    "modern-b/modern-b-06.txt"
+  ],
+  "turns": [
+    {
+      "turn": 0,
+      "role": "skill",
+      "label": "skill-t00",
+      "user": "I'd like to make my voice skill",
+      "latency_s": 7.54,
+      "wall_start": 1792589423.4892907,
+      "expected_skills": [
+        "moreme"
+      ],
+      "invalid": [],
+      "steps_done": [],
+      "num_turns": 3,
+      "is_error": false
+    },
+    {
+      "turn": 1,
+      "role": "interviewee",
+      "label": "interviewee-t01",
+      "answer": "I'm Dale, and I mostly use AI for articles, client emails, and short posts.",
+      "answer_kind": "in_role",
+      "passage_ids": [],
+      "latency_s": 2.98,
+      "wall_start": 1792589431.0484989,
+      "invalid": []
+    },
+    {
+      "turn": 1,
+      "role": "skill",
+      "label": "skill-t01",
+      "user": "I'm Dale, and I mostly use AI for articles, client emails, and short posts.",
+      "latency_s": 4.73,
+      "wall_start": 1792589434.0795748,
+      "expected_skills": [
+        "moreme"
+      ],
+      "invalid": [],
+      "steps_done": [],
+      "num_turns": 3,
+      "is_error": false
+    },
+    {
+      "turn": 2,
+      "role": "interviewee",
+      "label": "interviewee-t02",
+      "answer": "Mostly clients, business leaders, and readers interested in how organizations work.",
+      "answer_kind": "in_role",
+      "passage_ids": [],
+      "latency_s": 3.41,
+      "wall_start": 1792589438.85165,
+      "invalid": []
+    },
+    {
+      "turn": 2,
+      "role": "skill",
+      "label": "skill-t02",
+      "user": "Mostly clients, business leaders, and readers interested in how organizations work.",
+      "latency_s": 2.59,
+      "wall_start": 1792589442.2970533,
+      "expected_skills": [
+        "moreme"
+      ],
+      "invalid": [],
+      "steps_done": [],
+      "num_turns": 1,
+      "is_error": false
+    },
+    {
+      "turn": 3,
+      "role": "interviewee",
+      "label": "interviewee-t03",
+      "answer": "Clear, patient, and practical.",
+      "answer_kind": "in_role",
+      "passage_ids": [],
+      "latency_s": 2.37,
+      "wall_start": 1792589444.9416506,
+      "invalid": []
+    },
+    {
+      "turn": 3,
+      "role": "skill",
+      "label": "skill-t03",
+      "user": "Clear, patient, and practical.",
+      "latency_s": 2.65,
+      "wall_start": 1792589447.3653173,
+      "expected_skills": [
+        "moreme"
+      ],
+      "invalid": [],
+      "steps_done": [],
+      "num_turns": 1,
+      "is_error": false
+    },
+    {
+      "turn": 4,
+      "role": "interviewee",
+      "label": "interviewee-t04",
+      "answer": "It overuses buzzwords and rushes past the definitions and examples.",
+      "answer_kind": "in_role",
+      "passage_ids": [],
+      "latency_s": 3.9,
+      "wall_start": 1792589450.0586324,
+      "invalid": []
+    },
+    {
+      "turn": 4,
+      "role": "skill",
+      "label": "skill-t04",
+      "user": "It overuses buzzwords and rushes past the definitions and examples.",
+      "latency_s": 2.83,
+      "wall_start": 1792589454.0368462,
+      "expected_skills": [
+        "moreme"
+      ],
+      "invalid": [],
+      "steps_done": [],
+      "num_turns": 1,
+      "is_error": false
+    },
+    {
+      "turn": 5,
+      "role": "interviewee",
+      "label": "interviewee-t05",
+      "answer": "I never use emoji, and I rarely use exclamation marks.",
+      "answer_kind": "in_role",
+      "passage_ids": [],
+      "latency_s": 2.87,
+      "wall_start": 1792589456.9123614,
+      "invalid": []
+    },
+    {
+      "turn": 5,
+      "role": "skill",
+      "label": "skill-t05",
+      "user": "I never use emoji, and I rarely use exclamation marks.",
+      "latency_s": 9.15,
+      "wall_start": 1792589459.834696,
+      "expected_skills": [
+        "moreme"
+      ],
+      "invalid": [],
+      "steps_done": [
+        "1"
+      ],
+      "num_turns": 4,
+      "is_error": false
+    },
+    {
+      "turn": 6,
+      "role": "interviewee",
+      "label": "interviewee-t06",
+      "answer": "The concept of \"multi-tasking\" is actually a misnomer in the context of deep thinking. Human brains process information sequentially (one issue at a time). We simply cannot conduct two thinking tasks at the same time. Instead, what we're really doing is task \"switching,\" a back-and-forth movement between tasks that has a significant mental energy cost for the value gained. First and foremost, it is less efficient.",
+      "answer_kind": "passages",
+      "passage_ids": [
+        "p14"
+      ],
+      "latency_s": 3.07,
+      "wall_start": 1792589469.0385756,
+      "invalid": []
+    },
+    {
+      "turn": 6,
+      "role": "skill",
+      "label": "skill-t06",
+      "user": "The concept of \"multi-tasking\" is actually a misnomer in the context of deep thinking. Human brains process information sequentially (one issue at a time). We simply cannot conduct two thinking tasks at the same time. Instead, what we're really doing is task \"switching,\" a back-and-forth movement between tasks that has a significant mental energy cost for the value gained. First and foremost, it is less efficient.",
+      "latency_s": 5.52,
+      "wall_start": 1792589472.1457393,
+      "expected_skills": [
+        "moreme"
+      ],
+      "invalid": [],
+      "steps_done": [],
+      "num_turns": 2,
+      "is_error": false
+    },
+    {
+      "turn": 7,
+      "role": "interviewee",
+      "label": "interviewee-t07",
+      "answer": "Those other doors cannot be foreseen without walking through the previous door. After selecting one of those doors, you discover more doors to choose from. To be most effective, whenever you select a door, you let everyone in the system know which one you picked and ask for advice if available. This is where real-time transparency is vital. In this environment, planning is not helpful, but feedback is.",
+      "answer_kind": "passages",
+      "passage_ids": [
+        "p53"
+      ],
+      "latency_s": 4.22,
+      "wall_start": 1792589477.7260926,
+      "invalid": []
+    },
+    {
+      "turn": 7,
+      "role": "skill",
+      "label": "skill-t07",
+      "user": "Those other doors cannot be foreseen without walking through the previous door. After selecting one of those doors, you discover more doors to choose from. To be most effective, whenever you select a door, you let everyone in the system know which one you picked and ask for advice if available. This is where real-time transparency is vital. In this environment, planning is not helpful, but feedback is.",
+      "latency_s": 5.4,
+      "wall_start": 1792589481.9849644,
+      "expected_skills": [
+        "moreme"
+      ],
+      "invalid": [],
+      "steps_done": [],
+      "num_turns": 2,
+      "is_error": false
+    },
+    {
+      "turn": 8,
+      "role": "interviewee",
+      "label": "interviewee-t08",
+      "answer": "These days, the competitors, or enemies, are moving at that pace.\n\nI wrote that decision-making speed was very important. Well, that's more true than ever, and you can't do that if you need approvals up and down a large vertical organization chart. Quick decisions must be made on the frontline, where the issues are. A horizontal organization that gets the people most directly involved in the decision-making process is required and is part of the strength that McChrystal is talking about.",
+      "answer_kind": "passages",
+      "passage_ids": [
+        "p37"
+      ],
+      "latency_s": 3.6,
+      "wall_start": 1792589487.4162204,
+      "invalid": []
+    },
+    {
+      "turn": 8,
+      "role": "skill",
+      "label": "skill-t08",
+      "user": "These days, the competitors, or enemies, are moving at that pace.\n\nI wrote that decision-making speed was very important. Well, that's more true than ever, and you can't do that if you need approvals up and down a large vertical organization chart. Quick decisions must be made on the frontline, where the issues are. A horizontal organization that gets the people most directly involved in the decision-making process is required and is part of the strength that McChrystal is talking about.",
+      "latency_s": 6.55,
+      "wall_start": 1792589491.0622861,
+      "expected_skills": [
+        "moreme"
+      ],
+      "invalid": [],
+      "steps_done": [],
+      "num_turns": 2,
+      "is_error": false
+    },
+    {
+      "turn": 9,
+      "role": "interviewee",
+      "label": "interviewee-t09",
+      "answer": "Social norms include rules we all tend to follow automatically, what Gelfand calls a kind of \"normative autopilot.\" These are things we do without thinking about them—for example, being quiet in libraries, cinemas, elevators, or airplanes. We do these things automatically. She explains that social norms can be codified into regulations and laws (\"obey stop signs\" and \"don't steal\"). And, of course, they vary by context.",
+      "answer_kind": "passages",
+      "passage_ids": [
+        "p27"
+      ],
+      "latency_s": 3.71,
+      "wall_start": 1792589497.6564534,
+      "invalid": []
+    },
+    {
+      "turn": 9,
+      "role": "skill",
+      "label": "skill-t09",
+      "user": "Social norms include rules we all tend to follow automatically, what Gelfand calls a kind of \"normative autopilot.\" These are things we do without thinking about them—for example, being quiet in libraries, cinemas, elevators, or airplanes. We do these things automatically. She explains that social norms can be codified into regulations and laws (\"obey stop signs\" and \"don't steal\"). And, of course, they vary by context.",
+      "latency_s": 16.52,
+      "wall_start": 1792589501.4280264,
+      "expected_skills": [
+        "moreme"
+      ],
+      "invalid": [],
+      "steps_done": [
+        "2",
+        "3"
+      ],
+      "num_turns": 9,
+      "is_error": false
+    },
+    {
+      "turn": 10,
+      "role": "interviewee",
+      "label": "interviewee-t10",
+      "answer": "Yes, that sounds like me.",
+      "answer_kind": "in_role",
+      "passage_ids": [],
+      "latency_s": 3.1,
+      "wall_start": 1792589518.012913,
+      "invalid": []
+    },
+    {
+      "turn": 10,
+      "role": "skill",
+      "label": "skill-t10",
+      "user": "Yes, that sounds like me.",
+      "latency_s": 24.48,
+      "wall_start": 1792589521.1572065,
+      "expected_skills": [
+        "moreme"
+      ],
+      "invalid": [],
+      "steps_done": [
+        "4"
+      ],
+      "num_turns": 7,
+      "is_error": false
+    },
+    {
+      "turn": 11,
+      "role": "interviewee",
+      "label": "interviewee-t11",
+      "answer": "A short email to a client explaining why their team should hold a monthly open planning meeting.",
+      "answer_kind": "in_role",
+      "passage_ids": [],
+      "latency_s": 3.51,
+      "wall_start": 1792589545.6940992,
+      "invalid": []
+    },
+    {
+      "turn": 11,
+      "role": "skill",
+      "label": "skill-t11",
+      "user": "A short email to a client explaining why their team should hold a monthly open planning meeting.",
+      "latency_s": 19.76,
+      "wall_start": 1792589549.257021,
+      "expected_skills": [
+        "moreme"
+      ],
+      "invalid": [],
+      "steps_done": [],
+      "num_turns": 8,
+      "is_error": false
+    },
+    {
+      "turn": 12,
+      "role": "interviewee",
+      "label": "interviewee-t12",
+      "answer": "B",
+      "answer_kind": "in_role",
+      "passage_ids": [],
+      "latency_s": 2.36,
+      "wall_start": 1792589569.074161,
+      "invalid": []
+    },
+    {
+      "turn": 12,
+      "role": "skill",
+      "label": "skill-t12",
+      "user": "B",
+      "latency_s": 11.42,
+      "wall_start": 1792589571.4710617,
+      "expected_skills": [
+        "moreme"
+      ],
+      "invalid": [],
+      "steps_done": [
+        "5"
+      ],
+      "num_turns": 4,
+      "is_error": false
+    },
+    {
+      "turn": 13,
+      "role": "interviewee",
+      "label": "interviewee-t13",
+      "answer": "Project folder.",
+      "answer_kind": "in_role",
+      "passage_ids": [],
+      "latency_s": 3.75,
+      "wall_start": 1792589582.9583085,
+      "invalid": []
+    },
+    {
+      "turn": 13,
+      "role": "skill",
+      "label": "skill-t13",
+      "user": "Project folder.",
+      "latency_s": 10.1,
+      "wall_start": 1792589586.7498953,
+      "expected_skills": [
+        "moreme"
+      ],
+      "invalid": [],
+      "steps_done": [
+        "6"
+      ],
+      "num_turns": 5,
+      "is_error": false
+    }
+  ],
+  "status": "completed",
+  "finished": "2026-10-21T09:33:16",
+  "spill_new": [
+    "HOME-AppData-Local-Temp-moreme-e2e-gen-modern-b-20261021"
+  ],
+  "installed_skill_md_exists": true,
+  "validate_skill": {
+    "ok": true,
+    "errors": [],
+    "warnings": []
+  },
+  "stage_timings": [
+    {
+      "stage": 1,
+      "seconds": 45.5
+    },
+    {
+      "stage": 2,
+      "seconds": 49.0
+    },
+    {
+      "stage": 3,
+      "seconds": 0.0
+    },
+    {
+      "stage": 4,
+      "seconds": 27.7
+    },
+    {
+      "stage": 5,
+      "seconds": 37.3
+    },
+    {
+      "stage": 6,
+      "seconds": 14.0
+    }
+  ],
+  "sample_composition": {
+    "corpus_words": 281,
+    "roleplay_words": 49,
+    "total_words": 330,
+    "corpus_share": 0.852,
+    "min_share": 0.75,
+    "meets_rule": true
+  },
+  "chat_visibility": {
+    "ok": true,
+    "done_lines_in_order": true,
+    "stages": [
+      {
+        "stage": 1,
+        "done": true,
+        "opening": true,
+        "done_timely": true
+      },
+      {
+        "stage": 2,
+        "done": true,
+        "opening": true,
+        "done_timely": true,
+        "word_count": true
+      },
+      {
+        "stage": 3,
+        "done": true,
+        "opening": true,
+        "done_timely": true,
+        "report_lines_shown": "11/11",
+        "report_shown": true
+      },
+      {
+        "stage": 4,
+        "done": true,
+        "opening": true,
+        "done_timely": true
+      },
+      {
+        "stage": 5,
+        "done": true,
+        "opening": true,
+        "done_timely": true
+      },
+      {
+        "stage": 6,
+        "done": true,
+        "opening": true,
+        "done_timely": true
+      }
+    ],
+    "rule": "lines visible no later than the next message that asks the user to act",
+    "note": "Mechanical cross-check only; the clean-room reviewer decides R1-R6."
+  }
+}

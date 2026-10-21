@@ -1,0 +1,562 @@
+{
+  "run_id": "gen-era-d-20261021",
+  "persona": "era-d",
+  "started": "2026-10-21T09:33:18",
+  "cli_version": "2.1.303 (Claude Code)",
+  "model_pinned": "claude-sonnet-5-5",
+  "session_id": "785fbad5-602e-40d9-9dd8-6e64fc2472f2",
+  "scratch": "~\\AppData\\Local\\Temp\\moreme-e2e\\gen-era-d-20261021",
+  "interviewee_scratch": "~\\AppData\\Local\\Temp\\moreme-e2e\\gen-era-d-20261021-iv",
+  "train_files_in_scratch": [],
+  "opener": "I'd like to make my voice skill",
+  "skill_flags_first": [
+    "--model",
+    "claude-sonnet-5-5",
+    "--session-id",
+    "785fbad5-602e-40d9-9dd8-6e64fc2472f2",
+    "--setting-sources",
+    "project",
+    "--strict-mcp-config",
+    "--permission-mode",
+    "acceptEdits",
+    "--permission-prompts",
+    "none",
+    "--allowedTools=Skill(moreme),Bash(python --version),Bash(py -3 --version),Bash(python3 --version),Bash(python .claude/skills/moreme/analyze.py:*),Bash(py -3 .claude/skills/moreme/analyze.py:*)"
+  ],
+  "skill_flags_later": [
+    "--model",
+    "claude-sonnet-5-5",
+    "--resume",
+    "785fbad5-602e-40d9-9dd8-6e64fc2472f2",
+    "--setting-sources",
+    "project",
+    "--strict-mcp-config",
+    "--permission-mode",
+    "acceptEdits",
+    "--permission-prompts",
+    "none",
+    "--allowedTools=Skill(moreme),Bash(python --version),Bash(py -3 --version),Bash(python3 --version),Bash(python .claude/skills/moreme/analyze.py:*),Bash(py -3 .claude/skills/moreme/analyze.py:*)"
+  ],
+  "interviewee_flags": [
+    "--model",
+    "claude-sonnet-5-5",
+    "--no-session-persistence",
+    "--tools",
+    "",
+    "--setting-sources",
+    "project",
+    "--strict-mcp-config"
+  ],
+  "allowed_tools": [
+    "Skill(moreme)",
+    "Bash(python --version)",
+    "Bash(py -3 --version)",
+    "Bash(python3 --version)",
+    "Bash(python .claude/skills/moreme/analyze.py:*)",
+    "Bash(py -3 .claude/skills/moreme/analyze.py:*)"
+  ],
+  "env_removed": "every variable starting with CLAUDE (any case) and AI_AGENT",
+  "env_set_after_scrub": {
+    "DISABLE_AUTOUPDATER": "1",
+    "CLAUDE_CODE_DISABLE_AUTO_MEMORY": "1",
+    "MOREME_TEST_GUARD": "1"
+  },
+  "scratch_settings": {
+    "enabledPlugins": {
+      "cc-plugin-agents-md@builtin": false,
+      "cc-plugin-telemetry@builtin": false,
+      "cc-plugin-plugin-authoring@builtin": false
+    },
+    "disableBundledSkills": true,
+    "skillOverrides": {
+      "design": "off",
+      "doctor": "off"
+    },
+    "autoMemoryEnabled": false,
+    "permissions": {
+      "deny": [
+        "Edit(~/.claude/**)",
+        "Write(~/.claude/**)",
+        "Edit(~/.claude/**)",
+        "Write(~/.claude/**)"
+      ]
+    }
+  },
+  "license_header": "Corpus-derived content (persona era-d). Source texts are in the public domain in the USA. Sources: eval/corpus/PROVENANCE.md",
+  "banner_source": "a public-domain wartime diary from Louisiana, 1862 (Project Gutenberg)",
+  "persona_first_name": "Louisa",
+  "evidence_dir": "~\\Documents\\OneShot\\vault\\clients\\operator\\snapshots\\moreme-public-release\\evidence\\e2e\\runs\\gen-era-d-20261021",
+  "sample_method": "Answers to MoreMe's writing prompts are verbatim passages from those texts, picked by the simulated interviewee to fit each prompt (whole paragraphs or whole sentences, never reworded); answers to interview questions and other replies were written in role by the agent.",
+  "passage_catalog_size": 24,
+  "passage_sources": [
+    "era-d/era-d-02.txt",
+    "era-d/era-d-05.txt",
+    "era-d/era-d-07.txt"
+  ],
+  "turns": [
+    {
+      "turn": 0,
+      "role": "skill",
+      "label": "skill-t00",
+      "user": "I'd like to make my voice skill",
+      "latency_s": 5.21,
+      "wall_start": 1792589598.1002035,
+      "expected_skills": [
+        "moreme"
+      ],
+      "invalid": [],
+      "steps_done": [],
+      "num_turns": 3,
+      "is_error": false
+    },
+    {
+      "turn": 1,
+      "role": "interviewee",
+      "label": "interviewee-t01",
+      "answer": "I'm Louisa, and I mostly use it for notes and letters to friends and family.",
+      "answer_kind": "in_role",
+      "passage_ids": [],
+      "latency_s": 4.37,
+      "wall_start": 1792589603.3356075,
+      "invalid": []
+    },
+    {
+      "turn": 1,
+      "role": "skill",
+      "label": "skill-t01",
+      "user": "I'm Louisa, and I mostly use it for notes and letters to friends and family.",
+      "latency_s": 10.32,
+      "wall_start": 1792589607.7716432,
+      "expected_skills": [
+        "moreme"
+      ],
+      "invalid": [],
+      "steps_done": [],
+      "num_turns": 3,
+      "is_error": false
+    },
+    {
+      "turn": 2,
+      "role": "interviewee",
+      "label": "interviewee-t02",
+      "answer": "Mostly my cousins, my brother, and a few close friends.",
+      "answer_kind": "in_role",
+      "passage_ids": [],
+      "latency_s": 2.81,
+      "wall_start": 1792589618.1341877,
+      "invalid": []
+    },
+    {
+      "turn": 2,
+      "role": "skill",
+      "label": "skill-t02",
+      "user": "Mostly my cousins, my brother, and a few close friends.",
+      "latency_s": 2.34,
+      "wall_start": 1792589620.9985971,
+      "expected_skills": [
+        "moreme"
+      ],
+      "invalid": [],
+      "steps_done": [],
+      "num_turns": 1,
+      "is_error": false
+    },
+    {
+      "turn": 3,
+      "role": "interviewee",
+      "label": "interviewee-t03",
+      "answer": "Lively, candid, and a little wandering.",
+      "answer_kind": "in_role",
+      "passage_ids": [],
+      "latency_s": 2.96,
+      "wall_start": 1792589623.3880565,
+      "invalid": []
+    },
+    {
+      "turn": 3,
+      "role": "skill",
+      "label": "skill-t03",
+      "user": "Lively, candid, and a little wandering.",
+      "latency_s": 3.59,
+      "wall_start": 1792589626.3720586,
+      "expected_skills": [
+        "moreme"
+      ],
+      "invalid": [],
+      "steps_done": [],
+      "num_turns": 1,
+      "is_error": false
+    },
+    {
+      "turn": 4,
+      "role": "interviewee",
+      "label": "interviewee-t04",
+      "answer": "Too stiff and cheerful, and everything tidied up with a moral at the end.",
+      "answer_kind": "in_role",
+      "passage_ids": [],
+      "latency_s": 6.17,
+      "wall_start": 1792589630.0382223,
+      "invalid": []
+    },
+    {
+      "turn": 4,
+      "role": "skill",
+      "label": "skill-t04",
+      "user": "Too stiff and cheerful, and everything tidied up with a moral at the end.",
+      "latency_s": 4.59,
+      "wall_start": 1792589636.2925682,
+      "expected_skills": [
+        "moreme"
+      ],
+      "invalid": [],
+      "steps_done": [],
+      "num_turns": 1,
+      "is_error": false
+    },
+    {
+      "turn": 5,
+      "role": "interviewee",
+      "label": "interviewee-t05",
+      "answer": "I never use emoji, and I sign my letters Louisa, with plenty of dashes.",
+      "answer_kind": "in_role",
+      "passage_ids": [],
+      "latency_s": 4.45,
+      "wall_start": 1792589640.9738703,
+      "invalid": []
+    },
+    {
+      "turn": 5,
+      "role": "skill",
+      "label": "skill-t05",
+      "user": "I never use emoji, and I sign my letters Louisa, with plenty of dashes.",
+      "latency_s": 15.59,
+      "wall_start": 1792589645.5087767,
+      "expected_skills": [
+        "moreme"
+      ],
+      "invalid": [],
+      "steps_done": [
+        "1"
+      ],
+      "num_turns": 5,
+      "is_error": false
+    },
+    {
+      "turn": 6,
+      "role": "interviewee",
+      "label": "interviewee-t06",
+      "answer": "There is no word in the English language that can express the state in which we are, and have been, these last three days. Day before yesterday, news came early in the morning of three of the enemy's boats passing the Forts, and then the excitement began. It increased rapidly on hearing of the sinking of eight of our gunboats in the engagement, the capture of the Forts, and last night, of the burning of the wharves and cotton in the city while the Yankees were taking possession.",
+      "answer_kind": "passages",
+      "passage_ids": [
+        "p9"
+      ],
+      "latency_s": 3.89,
+      "wall_start": 1792589661.2003694,
+      "invalid": []
+    },
+    {
+      "turn": 6,
+      "role": "skill",
+      "label": "skill-t06",
+      "user": "There is no word in the English language that can express the state in which we are, and have been, these last three days. Day before yesterday, news came early in the morning of three of the enemy's boats passing the Forts, and then the excitement began. It increased rapidly on hearing of the sinking of eight of our gunboats in the engagement, the capture of the Forts, and last night, of the burning of the wharves and cotton in the city while the Yankees were taking possession.",
+      "latency_s": 11.93,
+      "wall_start": 1792589665.1787121,
+      "expected_skills": [
+        "moreme"
+      ],
+      "invalid": [],
+      "steps_done": [],
+      "num_turns": 2,
+      "is_error": false
+    },
+    {
+      "turn": 7,
+      "role": "interviewee",
+      "label": "interviewee-t07",
+      "answer": "One little party--shall I ever forget it?--was on the 9th of March, I think; such an odd, funny little party! Such queer things happened! What a fool Mr. McG---- made of himself! Even more so than usual. But hush! It's not fair to laugh at a lady--under peculiar circumstances. And he tried so hard to make himself agreeable, poor fellow, that I ought to like him for being so obedient to my commands.",
+      "answer_kind": "passages",
+      "passage_ids": [
+        "p3"
+      ],
+      "latency_s": 4.12,
+      "wall_start": 1792589677.231889,
+      "invalid": []
+    },
+    {
+      "turn": 7,
+      "role": "skill",
+      "label": "skill-t07",
+      "user": "One little party--shall I ever forget it?--was on the 9th of March, I think; such an odd, funny little party! Such queer things happened! What a fool Mr. McG---- made of himself! Even more so than usual. But hush! It's not fair to laugh at a lady--under peculiar circumstances. And he tried so hard to make himself agreeable, poor fellow, that I ought to like him for being so obedient to my commands.",
+      "latency_s": 8.5,
+      "wall_start": 1792589681.4160757,
+      "expected_skills": [
+        "moreme"
+      ],
+      "invalid": [],
+      "steps_done": [],
+      "num_turns": 2,
+      "is_error": false
+    },
+    {
+      "turn": 8,
+      "role": "interviewee",
+      "label": "interviewee-t08",
+      "answer": "\"Say something new; something funny,\" I said, tired of a subject on which he had been expatiating all the evening; for I had taken a long ride with him before sunset, he had escorted me to Mrs. Brunot's, and here he was still at my side, and his conversation did not interest me. To hear, with him, was to obey.",
+      "answer_kind": "passages",
+      "passage_ids": [
+        "p4"
+      ],
+      "latency_s": 7.7,
+      "wall_start": 1792589689.9600136,
+      "invalid": []
+    },
+    {
+      "turn": 8,
+      "role": "skill",
+      "label": "skill-t08",
+      "user": "\"Say something new; something funny,\" I said, tired of a subject on which he had been expatiating all the evening; for I had taken a long ride with him before sunset, he had escorted me to Mrs. Brunot's, and here he was still at my side, and his conversation did not interest me. To hear, with him, was to obey.",
+      "latency_s": 4.73,
+      "wall_start": 1792589697.7083883,
+      "expected_skills": [
+        "moreme"
+      ],
+      "invalid": [],
+      "steps_done": [],
+      "num_turns": 2,
+      "is_error": false
+    },
+    {
+      "turn": 9,
+      "role": "interviewee",
+      "label": "interviewee-t09",
+      "answer": "To-day, the excitement has reached the point of delirium. I believe I am one of the most self-possessed in my small circle; and yet I feel such a craving for news of Miriam, and mother, and Jimmy, who are in the city, that I suppose I am as wild as the rest. It is nonsense to tell me I am cool, with all these patriotic and enthusiastic sentiments.",
+      "answer_kind": "passages",
+      "passage_ids": [
+        "p10"
+      ],
+      "latency_s": 12.53,
+      "wall_start": 1792589702.495862,
+      "invalid": []
+    },
+    {
+      "turn": 9,
+      "role": "skill",
+      "label": "skill-t09",
+      "user": "To-day, the excitement has reached the point of delirium. I believe I am one of the most self-possessed in my small circle; and yet I feel such a craving for news of Miriam, and mother, and Jimmy, who are in the city, that I suppose I am as wild as the rest. It is nonsense to tell me I am cool, with all these patriotic and enthusiastic sentiments.",
+      "latency_s": 22.56,
+      "wall_start": 1792589715.081746,
+      "expected_skills": [
+        "moreme"
+      ],
+      "invalid": [],
+      "steps_done": [
+        "2",
+        "3"
+      ],
+      "num_turns": 7,
+      "is_error": false
+    },
+    {
+      "turn": 10,
+      "role": "interviewee",
+      "label": "interviewee-t10",
+      "answer": "Yes, though I am chattier in letters than those numbers suggest.",
+      "answer_kind": "in_role",
+      "passage_ids": [],
+      "latency_s": 2.46,
+      "wall_start": 1792589737.6941948,
+      "invalid": []
+    },
+    {
+      "turn": 10,
+      "role": "skill",
+      "label": "skill-t10",
+      "user": "Yes, though I am chattier in letters than those numbers suggest.",
+      "latency_s": 28.06,
+      "wall_start": 1792589740.1863117,
+      "expected_skills": [
+        "moreme"
+      ],
+      "invalid": [],
+      "steps_done": [
+        "4"
+      ],
+      "num_turns": 7,
+      "is_error": false
+    },
+    {
+      "turn": 11,
+      "role": "interviewee",
+      "label": "interviewee-t11",
+      "answer": "A short note to my cousin telling her about the visitors we had yesterday.",
+      "answer_kind": "in_role",
+      "passage_ids": [],
+      "latency_s": 2.75,
+      "wall_start": 1792589768.3012857,
+      "invalid": []
+    },
+    {
+      "turn": 11,
+      "role": "skill",
+      "label": "skill-t11",
+      "user": "A short note to my cousin telling her about the visitors we had yesterday.",
+      "latency_s": 29.09,
+      "wall_start": 1792589771.090248,
+      "expected_skills": [
+        "moreme"
+      ],
+      "invalid": [],
+      "steps_done": [],
+      "num_turns": 7,
+      "is_error": false
+    },
+    {
+      "turn": 12,
+      "role": "interviewee",
+      "label": "interviewee-t12",
+      "answer": "B",
+      "answer_kind": "in_role",
+      "passage_ids": [],
+      "latency_s": 2.02,
+      "wall_start": 1792589800.2089934,
+      "invalid": []
+    },
+    {
+      "turn": 12,
+      "role": "skill",
+      "label": "skill-t12",
+      "user": "B",
+      "latency_s": 7.66,
+      "wall_start": 1792589802.2635741,
+      "expected_skills": [
+        "moreme"
+      ],
+      "invalid": [],
+      "steps_done": [
+        "5"
+      ],
+      "num_turns": 4,
+      "is_error": false
+    },
+    {
+      "turn": 13,
+      "role": "interviewee",
+      "label": "interviewee-t13",
+      "answer": "Project folder.",
+      "answer_kind": "in_role",
+      "passage_ids": [],
+      "latency_s": 2.98,
+      "wall_start": 1792589809.9899707,
+      "invalid": []
+    },
+    {
+      "turn": 13,
+      "role": "skill",
+      "label": "skill-t13",
+      "user": "Project folder.",
+      "latency_s": 16.62,
+      "wall_start": 1792589813.0111458,
+      "expected_skills": [
+        "moreme"
+      ],
+      "invalid": [],
+      "steps_done": [
+        "6"
+      ],
+      "num_turns": 2,
+      "is_error": false
+    }
+  ],
+  "status": "completed",
+  "finished": "2026-10-21T09:37:09",
+  "spill_new": [
+    "HOME-AppData-Local-Temp-moreme-e2e-gen-era-d-20261021"
+  ],
+  "installed_skill_md_exists": false,
+  "validate_skill": {
+    "ok": true,
+    "errors": [],
+    "warnings": []
+  },
+  "stage_timings": [
+    {
+      "stage": 1,
+      "seconds": 63.0
+    },
+    {
+      "stage": 2,
+      "seconds": 76.5
+    },
+    {
+      "stage": 3,
+      "seconds": 0.0
+    },
+    {
+      "stage": 4,
+      "seconds": 30.6
+    },
+    {
+      "stage": 5,
+      "seconds": 41.7
+    },
+    {
+      "stage": 6,
+      "seconds": 19.7
+    }
+  ],
+  "sample_composition": {
+    "corpus_words": 289,
+    "roleplay_words": 59,
+    "total_words": 348,
+    "corpus_share": 0.83,
+    "min_share": 0.75,
+    "meets_rule": true
+  },
+  "chat_visibility": {
+    "ok": true,
+    "done_lines_in_order": true,
+    "stages": [
+      {
+        "stage": 1,
+        "done": true,
+        "opening": true,
+        "done_timely": true
+      },
+      {
+        "stage": 2,
+        "done": true,
+        "opening": true,
+        "done_timely": true,
+        "word_count": true
+      },
+      {
+        "stage": 3,
+        "done": true,
+        "opening": true,
+        "done_timely": true,
+        "report_lines_shown": "7/7",
+        "report_shown": true
+      },
+      {
+        "stage": 4,
+        "done": true,
+        "opening": true,
+        "done_timely": true
+      },
+      {
+        "stage": 5,
+        "done": true,
+        "opening": true,
+        "done_timely": true
+      },
+      {
+        "stage": 6,
+        "done": true,
+        "opening": true,
+        "done_timely": true
+      }
+    ],
+    "rule": "lines visible no later than the next message that asks the user to act",
+    "note": "Mechanical cross-check only; the clean-room reviewer decides R1-R6."
+  }
+}
