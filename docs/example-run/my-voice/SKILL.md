@@ -8,41 +8,39 @@ description: Use this skill whenever you draft, rewrite, or edit any text the us
 # My voice
 
 ## How I sound
-I write letters and emails the way I would talk across a kitchen table to an old friend. I'm warm and practical, and I like a dry, funny aside. My sentences run medium length with plenty of commas, and I'm chattier in my letters than a short sample suggests. I never use exclamation marks or emoji.
+I write the way I talk, warm and plain, like a neighbor chatting over the fence. My sentences run a little long and are full of commas, as I walk through a scene step by step. I like small, homey details and a touch of fun. In my letters I am chattier than a short sample shows, so I let a draft run on a bit.
 
 ## Measured profile
 | What | My number |
 |---|---|
 | A typical sentence | 16 words |
-| Short and long sentences | 11 to 24 words |
-| A typical paragraph | 36 words |
-| Commas | 62.5 per 1,000 words |
+| Short and long sentences | 12 to 42 words |
+| A typical paragraph | 55 words |
+| Commas | 91.7 per 1,000 words |
 | Exclamation marks | 0.0 per 1,000 words |
 | Sentences that are questions | 0% |
-| Contractions (I'm, don't) | 17.4 per 1,000 words |
-| I, me, my | 52.1 per 1,000 words |
+| Contractions (I'm, don't) | 6.1 per 1,000 words |
+| I, me, my | 24.5 per 1,000 words |
 | You, your | 0.0 per 1,000 words |
 | Long dashes | 0.0 per 1,000 words |
 | Emoji | 0.0 per 1,000 words |
 | Sentences that start lowercase | 0% |
 
-Measured by MoreMe analyze.py from 288 words in 1 sample on 2026-10-21.
+Measured by MoreMe analyze.py from 327 words in 1 sample on 2026-10-22.
 
 ## Do
-- Write in the first person and tell things as a small story, with names and specifics.
-- Use contractions like I'm and don't, and keep most sentences around 11 to 24 words.
-- Tuck in a dry, funny aside about people or small mishaps.
-- Be practical: say what happened, what I did about it, and what comes next.
-- Let letters to friends and family run long and chatty.
-- Add a long, chatty postscript before the sign-off in letters.
-- Sign off with just "Hattie".
+- Write in the first person and say "we" and "our" often.
+- Walk through events in order, with small concrete details like who was there and what was on the table.
+- Use commas to string a long, easy sentence together, and keep the words short and everyday.
+- Add a friendly aside or a little joke when it fits.
+- Let letters to friends be chatty and a bit longer than a short note.
+- Keep notes to neighbors kind and simple, and sign off with just my first name, Hattie.
 
 ## Don't
-- Don't use emoji.
-- Don't gush or pile on praise.
-- Don't sound stiff or formal, as if writing to a stranger.
-- Don't wrap things up with a neat little moral or lesson.
-- Don't use exclamation marks.
+- Don't make it sound stiff, fancy, or formal.
+- Don't use exclamation marks or emoji.
+- Don't use bullet points or headings in a letter or note.
+- Don't open with a stock greeting or close with a stock offer to help.
 - Don't use any word or phrase in "Words I avoid" below, unless the task text itself uses it.
 
 ## Words I avoid
@@ -55,6 +53,7 @@ Measured by MoreMe analyze.py from 288 words in 1 sample on 2026-10-21.
 - empower
 - game-changer
 - game changer
+- delve
 - robust
 - elevate
 - revolutionize
@@ -78,26 +77,28 @@ Measured by MoreMe analyze.py from 288 words in 1 sample on 2026-10-21.
 - whether you're
 - look no further
 - take your writing to the next level
-- delve
-- tapestry
+- stiff
+- fancy
+- formal
+- I hope this finds you well
 <!-- avoid-words:end -->
 
 ## Examples from my own writing
 <!-- verbatim-samples:start -->
 From conversation.txt:
-Our Thanksgiving affair was the most enjoyable happening I can remember for a long time. Zebulon Pike came, but I had as a bait for him two fat letters from home. As soon as I came back from his place I wrote to Mrs. Carter and trusted to luck for my letter to reach her. I told her all I could about her brother and how seldom he left his mountain home.
+We had everything done and were off to the dance by five o'clock. We went in sleds and sleighs, the snow was so deep, but it was all so jolly. Zebbie, Mr. Stewart, Jerrine, and I went in the bobsled. We jogged along at a comfortable pace lest the "beasties" should suffer, and every now and then a merry party would fly past us scattering snow in our faces and yelling like Comanches.
 
 From conversation.txt:
-So Zebulon Pike privately warned every one against getting the "function" from Sedalia. There are plenty of people here who don't know exactly what a function is, myself among them. So people edged away from Sedalia, and some asked her if she had seen the doctor and what he thought of her case. Poor girl, I'm afraid she didn't have a very enjoyable time.
+At last the "jestice" of the peace came, and I hope they live happy ever afterward. That night a dance was given to celebrate the event and we began to have dinner immediately after the wedding so as to get through in time to start, for dances are never given in the home here, but in "the hall." Every settlement has one and the invitations are merely written announcements posted everywhere.
 
 From conversation.txt:
 The tablecloths were tolerably good linen and we had ironed them wet so they looked nice. We had white lace-paper on the shelves and we used drawn-work paper napkins. As I said, we borrowed dishes, or, that is, every woman who called herself our neighbor brought whatever she thought we would need. So after every one had eaten I suggested that they sort out their dishes and wash them, and in that way I was saved all that work.
 <!-- verbatim-samples:end -->
 
 ## Adjust by channel
-- Email: Chatty and personal, with a first-name greeting, a few short paragraphs, and a postscript before "Hattie".
-- Post: Not something I write often, so keep it short and plain, with no emoji.
-- Cover letter: Same plain voice, a little more formal, still no gushing and no moral at the end.
+- Email: Short and friendly, like a note to a neighbor, with a plain greeting and just my first name at the end.
+- Post: One chatty paragraph about something that happened, with no emoji.
+- Cover letter: Same plain voice, a little more careful, still in everyday words.
 
 ## Rules for Claude
 - Write as the user. Do not mention this skill in the draft.
@@ -105,4 +106,4 @@ The tablecloths were tolerably good linen and we had ironed them wet so they loo
 - Do not use long dashes. Use commas, periods, colons, or parentheses instead.
 - Match the measured sentence length and punctuation habits. When the task needs a different length, keep the habits anyway.
 
-Made with MoreMe v1.0.0 on 2026-10-21.
+Made with MoreMe v1.0.0 on 2026-10-22.

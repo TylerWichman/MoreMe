@@ -1,0 +1,491 @@
+{
+  "run_id": "e2e-20261022-r8",
+  "persona": "era-c",
+  "started": "2026-10-22T10:40:05",
+  "cli_version": "2.1.306 (Claude Code)",
+  "model_pinned": "claude-sonnet-5-5",
+  "session_id": "949048b6-f922-4bdd-833e-73f27d1aeb0f",
+  "scratch": "~\\AppData\\Local\\Temp\\moreme-e2e\\e2e-20261022-r8",
+  "interviewee_scratch": "~\\AppData\\Local\\Temp\\moreme-e2e\\e2e-20261022-r8-iv",
+  "train_files_in_scratch": [],
+  "opener": "I'd like to make my voice skill",
+  "skill_flags_first": [
+    "--model",
+    "claude-sonnet-5-5",
+    "--session-id",
+    "949048b6-f922-4bdd-833e-73f27d1aeb0f",
+    "--setting-sources",
+    "project",
+    "--strict-mcp-config",
+    "--permission-mode",
+    "acceptEdits",
+    "--permission-prompts",
+    "none",
+    "--allowedTools=Skill(moreme),Bash(python --version),Bash(py -3 --version),Bash(python3 --version),Bash(python .claude/skills/moreme/analyze.py:*),Bash(py -3 .claude/skills/moreme/analyze.py:*),PowerShell(python --version),PowerShell(py -3 --version),PowerShell(python3 --version),PowerShell(python .claude/skills/moreme/analyze.py:*),PowerShell(py -3 .claude/skills/moreme/analyze.py:*)"
+  ],
+  "skill_flags_later": [
+    "--model",
+    "claude-sonnet-5-5",
+    "--resume",
+    "949048b6-f922-4bdd-833e-73f27d1aeb0f",
+    "--setting-sources",
+    "project",
+    "--strict-mcp-config",
+    "--permission-mode",
+    "acceptEdits",
+    "--permission-prompts",
+    "none",
+    "--allowedTools=Skill(moreme),Bash(python --version),Bash(py -3 --version),Bash(python3 --version),Bash(python .claude/skills/moreme/analyze.py:*),Bash(py -3 .claude/skills/moreme/analyze.py:*),PowerShell(python --version),PowerShell(py -3 --version),PowerShell(python3 --version),PowerShell(python .claude/skills/moreme/analyze.py:*),PowerShell(py -3 .claude/skills/moreme/analyze.py:*)"
+  ],
+  "interviewee_flags": [
+    "--model",
+    "claude-sonnet-5-5",
+    "--no-session-persistence",
+    "--tools",
+    "",
+    "--setting-sources",
+    "project",
+    "--strict-mcp-config"
+  ],
+  "allowed_tools": [
+    "Skill(moreme)",
+    "Bash(python --version)",
+    "Bash(py -3 --version)",
+    "Bash(python3 --version)",
+    "Bash(python .claude/skills/moreme/analyze.py:*)",
+    "Bash(py -3 .claude/skills/moreme/analyze.py:*)",
+    "PowerShell(python --version)",
+    "PowerShell(py -3 --version)",
+    "PowerShell(python3 --version)",
+    "PowerShell(python .claude/skills/moreme/analyze.py:*)",
+    "PowerShell(py -3 .claude/skills/moreme/analyze.py:*)"
+  ],
+  "env_removed": "every variable starting with CLAUDE (any case) and AI_AGENT",
+  "env_set_after_scrub": {
+    "DISABLE_AUTOUPDATER": "1",
+    "CLAUDE_CODE_DISABLE_AUTO_MEMORY": "1",
+    "MOREME_TEST_GUARD": "1"
+  },
+  "scratch_settings": {
+    "enabledPlugins": {
+      "cc-plugin-agents-md@builtin": false,
+      "cc-plugin-telemetry@builtin": false,
+      "cc-plugin-plugin-authoring@builtin": false
+    },
+    "disableBundledSkills": true,
+    "skillOverrides": {
+      "design": "off",
+      "doctor": "off"
+    },
+    "autoMemoryEnabled": false,
+    "permissions": {
+      "deny": [
+        "Edit(~/.claude/**)",
+        "Write(~/.claude/**)",
+        "Edit(~/.claude/**)",
+        "Write(~/.claude/**)"
+      ]
+    }
+  },
+  "license_header": "Corpus-derived content (persona era-c). Source texts are in the public domain in the USA. Sources: eval/corpus/PROVENANCE.md",
+  "banner_source": "public-domain texts by Elinore Pruitt Stewart (Letters of a Woman Homesteader, 1914, Project Gutenberg eBook #16623)",
+  "persona_first_name": "Hattie",
+  "evidence_dir": "~\\Documents\\OneShot\\vault\\clients\\operator\\snapshots\\moreme-public-release\\evidence\\e2e\\runs\\e2e-20261022-r8",
+  "sample_method": "Answers to MoreMe's topic and follow-up questions are verbatim passages from those texts, picked by the simulated interviewee to fit each question (whole paragraphs or whole sentences, never reworded); answers to interview questions and other replies were written in role by the agent.",
+  "passage_catalog_size": 50,
+  "passage_sources": [
+    "era-c/era-c-06.txt",
+    "era-c/era-c-07.txt",
+    "era-c/era-c-08.txt"
+  ],
+  "turns": [
+    {
+      "turn": 0,
+      "role": "skill",
+      "label": "skill-t00",
+      "user": "I'd like to make my voice skill",
+      "latency_s": 8.12,
+      "wall_start": 1792680005.234517,
+      "expected_skills": [
+        "moreme"
+      ],
+      "invalid": [],
+      "steps_done": [],
+      "num_turns": 3,
+      "is_error": false
+    },
+    {
+      "turn": 1,
+      "role": "interviewee",
+      "label": "interviewee-t01",
+      "answer": "I'm Hattie, and I mostly use it for letters to friends and notes to neighbors.",
+      "answer_kind": "in_role",
+      "passage_ids": [],
+      "latency_s": 4.07,
+      "wall_start": 1792680013.4887516,
+      "invalid": []
+    },
+    {
+      "turn": 1,
+      "role": "skill",
+      "label": "skill-t01",
+      "user": "I'm Hattie, and I mostly use it for letters to friends and notes to neighbors.",
+      "latency_s": 8.38,
+      "wall_start": 1792680017.7069013,
+      "expected_skills": [
+        "moreme"
+      ],
+      "invalid": [],
+      "steps_done": [],
+      "num_turns": 3,
+      "is_error": false
+    },
+    {
+      "turn": 2,
+      "role": "interviewee",
+      "label": "interviewee-t02",
+      "answer": "They make everything sound stiff and fancy, nothing like how I talk.",
+      "answer_kind": "in_role",
+      "passage_ids": [],
+      "latency_s": 5.78,
+      "wall_start": 1792680026.2068357,
+      "invalid": []
+    },
+    {
+      "turn": 2,
+      "role": "skill",
+      "label": "skill-t02",
+      "user": "They make everything sound stiff and fancy, nothing like how I talk.",
+      "latency_s": 9.81,
+      "wall_start": 1792680032.1197162,
+      "expected_skills": [
+        "moreme"
+      ],
+      "invalid": [],
+      "steps_done": [
+        "1"
+      ],
+      "num_turns": 5,
+      "is_error": false
+    },
+    {
+      "turn": 3,
+      "role": "interviewee",
+      "label": "interviewee-t03",
+      "answer": "We had everything done and were off to the dance by five o'clock. We went in sleds and sleighs, the snow was so deep, but it was all so jolly. Zebbie, Mr. Stewart, Jerrine, and I went in the bobsled. We jogged along at a comfortable pace lest the \"beasties\" should suffer, and every now and then a merry party would fly past us scattering snow in our faces and yelling like Comanches.",
+      "answer_kind": "passages",
+      "passage_ids": [
+        "p11"
+      ],
+      "latency_s": 5.18,
+      "wall_start": 1792680042.0433898,
+      "invalid": []
+    },
+    {
+      "turn": 3,
+      "role": "skill",
+      "label": "skill-t03",
+      "user": "We had everything done and were off to the dance by five o'clock. We went in sleds and sleighs, the snow was so deep, but it was all so jolly. Zebbie, Mr. Stewart, Jerrine, and I went in the bobsled. We jogged along at a comfortable pace lest the \"beasties\" should suffer, and every now and then a merry party would fly past us scattering snow in our faces and yelling like Comanches.",
+      "latency_s": 7.03,
+      "wall_start": 1792680047.3182068,
+      "expected_skills": [
+        "moreme"
+      ],
+      "invalid": [],
+      "steps_done": [],
+      "num_turns": 2,
+      "is_error": false
+    },
+    {
+      "turn": 4,
+      "role": "interviewee",
+      "label": "interviewee-t04",
+      "answer": "At last the \"jestice\" of the peace came, and I hope they live happy ever afterward. That night a dance was given to celebrate the event and we began to have dinner immediately after the wedding so as to get through in time to start, for dances are never given in the home here, but in \"the hall.\" Every settlement has one and the invitations are merely written announcements posted everywhere.",
+      "answer_kind": "passages",
+      "passage_ids": [
+        "p7"
+      ],
+      "latency_s": 3.13,
+      "wall_start": 1792680054.4904504,
+      "invalid": []
+    },
+    {
+      "turn": 4,
+      "role": "skill",
+      "label": "skill-t04",
+      "user": "At last the \"jestice\" of the peace came, and I hope they live happy ever afterward. That night a dance was given to celebrate the event and we began to have dinner immediately after the wedding so as to get through in time to start, for dances are never given in the home here, but in \"the hall.\" Every settlement has one and the invitations are merely written announcements posted everywhere.",
+      "latency_s": 11.05,
+      "wall_start": 1792680057.748241,
+      "expected_skills": [
+        "moreme"
+      ],
+      "invalid": [],
+      "steps_done": [],
+      "num_turns": 2,
+      "is_error": false
+    },
+    {
+      "turn": 5,
+      "role": "interviewee",
+      "label": "interviewee-t05",
+      "answer": "Of course we had to borrow dishes, but we couldn't think of seating every one; so we set one table for twenty-four and had three other long tables, on one of which we placed all the meats, pickles, and sauces, on another the vegetables, soup, and coffee, and on the third the pie, cakes, ice-cream, and other desserts. We had two big, long shelves, one above the other, on which were the dishes.",
+      "answer_kind": "passages",
+      "passage_ids": [
+        "p8"
+      ],
+      "latency_s": 4.72,
+      "wall_start": 1792680068.9150286,
+      "invalid": []
+    },
+    {
+      "turn": 5,
+      "role": "skill",
+      "label": "skill-t05",
+      "user": "Of course we had to borrow dishes, but we couldn't think of seating every one; so we set one table for twenty-four and had three other long tables, on one of which we placed all the meats, pickles, and sauces, on another the vegetables, soup, and coffee, and on the third the pie, cakes, ice-cream, and other desserts. We had two big, long shelves, one above the other, on which were the dishes.",
+      "latency_s": 9.13,
+      "wall_start": 1792680073.767885,
+      "expected_skills": [
+        "moreme"
+      ],
+      "invalid": [],
+      "steps_done": [],
+      "num_turns": 2,
+      "is_error": false
+    },
+    {
+      "turn": 6,
+      "role": "interviewee",
+      "label": "interviewee-t06",
+      "answer": "The tablecloths were tolerably good linen and we had ironed them wet so they looked nice. We had white lace-paper on the shelves and we used drawn-work paper napkins. As I said, we borrowed dishes, or, that is, every woman who called herself our neighbor brought whatever she thought we would need. So after every one had eaten I suggested that they sort out their dishes and wash them, and in that way I was saved all that work.",
+      "answer_kind": "passages",
+      "passage_ids": [
+        "p10"
+      ],
+      "latency_s": 3.8,
+      "wall_start": 1792680083.0272062,
+      "invalid": []
+    },
+    {
+      "turn": 6,
+      "role": "skill",
+      "label": "skill-t06",
+      "user": "The tablecloths were tolerably good linen and we had ironed them wet so they looked nice. We had white lace-paper on the shelves and we used drawn-work paper napkins. As I said, we borrowed dishes, or, that is, every woman who called herself our neighbor brought whatever she thought we would need. So after every one had eaten I suggested that they sort out their dishes and wash them, and in that way I was saved all that work.",
+      "latency_s": 31.5,
+      "wall_start": 1792680086.9552767,
+      "expected_skills": [
+        "moreme"
+      ],
+      "invalid": [],
+      "steps_done": [
+        "2",
+        "3"
+      ],
+      "num_turns": 8,
+      "is_error": false
+    },
+    {
+      "turn": 7,
+      "role": "interviewee",
+      "label": "interviewee-t07",
+      "answer": "Yes, that sounds like me, though I'm a good deal chattier in my letters than a few little numbers would let on.",
+      "answer_kind": "in_role",
+      "passage_ids": [],
+      "latency_s": 5.12,
+      "wall_start": 1792680118.631154,
+      "invalid": []
+    },
+    {
+      "turn": 7,
+      "role": "skill",
+      "label": "skill-t07",
+      "user": "Yes, that sounds like me, though I'm a good deal chattier in my letters than a few little numbers would let on.",
+      "latency_s": 42.38,
+      "wall_start": 1792680123.889656,
+      "expected_skills": [
+        "moreme"
+      ],
+      "invalid": [],
+      "steps_done": [
+        "4"
+      ],
+      "num_turns": 7,
+      "is_error": false
+    },
+    {
+      "turn": 8,
+      "role": "interviewee",
+      "label": "interviewee-t08",
+      "answer": "A short letter to my old friend telling her the first snow came early this year and asking how her winter is going.",
+      "answer_kind": "in_role",
+      "passage_ids": [],
+      "latency_s": 5.19,
+      "wall_start": 1792680166.4120917,
+      "invalid": []
+    },
+    {
+      "turn": 8,
+      "role": "skill",
+      "label": "skill-t08",
+      "user": "A short letter to my old friend telling her the first snow came early this year and asking how her winter is going.",
+      "latency_s": 29.74,
+      "wall_start": 1792680171.7656403,
+      "expected_skills": [
+        "moreme"
+      ],
+      "invalid": [],
+      "steps_done": [
+        "4"
+      ],
+      "num_turns": 8,
+      "is_error": false
+    },
+    {
+      "turn": 9,
+      "role": "interviewee",
+      "label": "interviewee-t09",
+      "answer": "B",
+      "answer_kind": "in_role",
+      "passage_ids": [],
+      "latency_s": 3.65,
+      "wall_start": 1792680201.673159,
+      "invalid": []
+    },
+    {
+      "turn": 9,
+      "role": "skill",
+      "label": "skill-t09",
+      "user": "B",
+      "latency_s": 10.46,
+      "wall_start": 1792680205.4601362,
+      "expected_skills": [
+        "moreme"
+      ],
+      "invalid": [],
+      "steps_done": [
+        "5"
+      ],
+      "num_turns": 4,
+      "is_error": false
+    },
+    {
+      "turn": 10,
+      "role": "interviewee",
+      "label": "interviewee-t10",
+      "answer": "Project folder.",
+      "answer_kind": "in_role",
+      "passage_ids": [],
+      "latency_s": 6.67,
+      "wall_start": 1792680216.0770133,
+      "invalid": []
+    },
+    {
+      "turn": 10,
+      "role": "skill",
+      "label": "skill-t10",
+      "user": "Project folder.",
+      "latency_s": 22.14,
+      "wall_start": 1792680222.9050055,
+      "expected_skills": [
+        "moreme"
+      ],
+      "invalid": [],
+      "steps_done": [
+        "6"
+      ],
+      "num_turns": 5,
+      "is_error": false
+    }
+  ],
+  "status": "completed",
+  "finished": "2026-10-22T10:44:05",
+  "spill_new": [
+    "HOME-AppData-Local-Temp-moreme-e2e-e2e-20261022-r8"
+  ],
+  "installed_skill_md_exists": true,
+  "validate_skill": {
+    "ok": true,
+    "errors": [],
+    "warnings": []
+  },
+  "stage_timings": [
+    {
+      "stage": 1,
+      "seconds": 36.7
+    },
+    {
+      "stage": 2,
+      "seconds": 76.5
+    },
+    {
+      "stage": 3,
+      "seconds": 0.0
+    },
+    {
+      "stage": 4,
+      "seconds": 47.8
+    },
+    {
+      "stage": 5,
+      "seconds": 49.7
+    },
+    {
+      "stage": 6,
+      "seconds": 29.1
+    }
+  ],
+  "sample_composition": {
+    "corpus_words": 296,
+    "roleplay_words": 27,
+    "total_words": 323,
+    "corpus_share": 0.916,
+    "min_share": 0.75,
+    "meets_rule": true
+  },
+  "chat_visibility": {
+    "ok": true,
+    "done_lines_in_order": true,
+    "stages": [
+      {
+        "stage": 1,
+        "done": true,
+        "opening": true,
+        "done_timely": true
+      },
+      {
+        "stage": 2,
+        "done": true,
+        "opening": true,
+        "done_timely": true,
+        "word_count": true
+      },
+      {
+        "stage": 3,
+        "done": true,
+        "opening": true,
+        "done_timely": true,
+        "report_lines_shown": "11/11",
+        "report_shown": true
+      },
+      {
+        "stage": 4,
+        "done": true,
+        "opening": true,
+        "done_timely": true
+      },
+      {
+        "stage": 5,
+        "done": true,
+        "opening": true,
+        "done_timely": true
+      },
+      {
+        "stage": 6,
+        "done": true,
+        "opening": true,
+        "done_timely": true
+      }
+    ],
+    "rule": "lines visible no later than the next message that asks the user to act",
+    "note": "Mechanical cross-check only; the clean-room reviewer decides R1-R6."
+  }
+}

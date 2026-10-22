@@ -1,0 +1,478 @@
+{
+  "run_id": "e2e-20261022-r9",
+  "persona": "era-c",
+  "started": "2026-10-22T10:45:58",
+  "cli_version": "2.1.306 (Claude Code)",
+  "model_pinned": "claude-sonnet-5-5",
+  "session_id": "e43111f4-1a72-4ec3-97a9-be253e5ffa53",
+  "scratch": "~\\AppData\\Local\\Temp\\moreme-e2e\\e2e-20261022-r9",
+  "interviewee_scratch": "~\\AppData\\Local\\Temp\\moreme-e2e\\e2e-20261022-r9-iv",
+  "train_files_in_scratch": [],
+  "opener": "I'd like to make my voice skill",
+  "skill_flags_first": [
+    "--model",
+    "claude-sonnet-5-5",
+    "--session-id",
+    "e43111f4-1a72-4ec3-97a9-be253e5ffa53",
+    "--setting-sources",
+    "project",
+    "--strict-mcp-config",
+    "--permission-mode",
+    "acceptEdits",
+    "--permission-prompts",
+    "none",
+    "--allowedTools=Skill(moreme),Bash(python --version),Bash(py -3 --version),Bash(python3 --version),Bash(python .claude/skills/moreme/analyze.py:*),Bash(py -3 .claude/skills/moreme/analyze.py:*),PowerShell(python --version),PowerShell(py -3 --version),PowerShell(python3 --version),PowerShell(python .claude/skills/moreme/analyze.py:*),PowerShell(py -3 .claude/skills/moreme/analyze.py:*)"
+  ],
+  "skill_flags_later": [
+    "--model",
+    "claude-sonnet-5-5",
+    "--resume",
+    "e43111f4-1a72-4ec3-97a9-be253e5ffa53",
+    "--setting-sources",
+    "project",
+    "--strict-mcp-config",
+    "--permission-mode",
+    "acceptEdits",
+    "--permission-prompts",
+    "none",
+    "--allowedTools=Skill(moreme),Bash(python --version),Bash(py -3 --version),Bash(python3 --version),Bash(python .claude/skills/moreme/analyze.py:*),Bash(py -3 .claude/skills/moreme/analyze.py:*),PowerShell(python --version),PowerShell(py -3 --version),PowerShell(python3 --version),PowerShell(python .claude/skills/moreme/analyze.py:*),PowerShell(py -3 .claude/skills/moreme/analyze.py:*)"
+  ],
+  "interviewee_flags": [
+    "--model",
+    "claude-sonnet-5-5",
+    "--no-session-persistence",
+    "--tools",
+    "",
+    "--setting-sources",
+    "project",
+    "--strict-mcp-config"
+  ],
+  "allowed_tools": [
+    "Skill(moreme)",
+    "Bash(python --version)",
+    "Bash(py -3 --version)",
+    "Bash(python3 --version)",
+    "Bash(python .claude/skills/moreme/analyze.py:*)",
+    "Bash(py -3 .claude/skills/moreme/analyze.py:*)",
+    "PowerShell(python --version)",
+    "PowerShell(py -3 --version)",
+    "PowerShell(python3 --version)",
+    "PowerShell(python .claude/skills/moreme/analyze.py:*)",
+    "PowerShell(py -3 .claude/skills/moreme/analyze.py:*)"
+  ],
+  "env_removed": "every variable starting with CLAUDE (any case) and AI_AGENT",
+  "env_set_after_scrub": {
+    "DISABLE_AUTOUPDATER": "1",
+    "CLAUDE_CODE_DISABLE_AUTO_MEMORY": "1",
+    "MOREME_TEST_GUARD": "1"
+  },
+  "scratch_settings": {
+    "enabledPlugins": {
+      "cc-plugin-agents-md@builtin": false,
+      "cc-plugin-telemetry@builtin": false,
+      "cc-plugin-plugin-authoring@builtin": false
+    },
+    "disableBundledSkills": true,
+    "skillOverrides": {
+      "design": "off",
+      "doctor": "off"
+    },
+    "autoMemoryEnabled": false,
+    "permissions": {
+      "deny": [
+        "Edit(~/.claude/**)",
+        "Write(~/.claude/**)",
+        "Edit(~/.claude/**)",
+        "Write(~/.claude/**)"
+      ]
+    }
+  },
+  "license_header": "Corpus-derived content (persona era-c). Source texts are in the public domain in the USA. Sources: eval/corpus/PROVENANCE.md",
+  "banner_source": "public-domain texts by Elinore Pruitt Stewart (Letters of a Woman Homesteader, 1914, Project Gutenberg eBook #16623)",
+  "persona_first_name": "Hattie",
+  "evidence_dir": "~\\Documents\\OneShot\\vault\\clients\\operator\\snapshots\\moreme-public-release\\evidence\\e2e\\runs\\e2e-20261022-r9",
+  "sample_method": "Answers to MoreMe's topic and follow-up questions are verbatim passages from those texts, picked by the simulated interviewee to fit each question (whole paragraphs or whole sentences, never reworded); answers to interview questions and other replies were written in role by the agent.",
+  "passage_catalog_size": 50,
+  "passage_sources": [
+    "era-c/era-c-06.txt",
+    "era-c/era-c-07.txt",
+    "era-c/era-c-08.txt"
+  ],
+  "turns": [
+    {
+      "turn": 0,
+      "role": "skill",
+      "label": "skill-t00",
+      "user": "I'd like to make my voice skill",
+      "latency_s": 5.68,
+      "wall_start": 1792680358.820034,
+      "expected_skills": [
+        "moreme"
+      ],
+      "invalid": [],
+      "steps_done": [],
+      "num_turns": 3,
+      "is_error": false
+    },
+    {
+      "turn": 1,
+      "role": "interviewee",
+      "label": "interviewee-t01",
+      "answer": "I'm Hattie, and I mostly write letters and emails to friends and family.",
+      "answer_kind": "in_role",
+      "passage_ids": [],
+      "latency_s": 3.52,
+      "wall_start": 1792680364.5803533,
+      "invalid": []
+    },
+    {
+      "turn": 1,
+      "role": "skill",
+      "label": "skill-t01",
+      "user": "I'm Hattie, and I mostly write letters and emails to friends and family.",
+      "latency_s": 5.06,
+      "wall_start": 1792680368.2177222,
+      "expected_skills": [
+        "moreme"
+      ],
+      "invalid": [],
+      "steps_done": [],
+      "num_turns": 3,
+      "is_error": false
+    },
+    {
+      "turn": 2,
+      "role": "interviewee",
+      "label": "interviewee-t02",
+      "answer": "It always sounds stiff and too polished, nothing like how I actually talk.",
+      "answer_kind": "in_role",
+      "passage_ids": [],
+      "latency_s": 10.56,
+      "wall_start": 1792680373.3925579,
+      "invalid": []
+    },
+    {
+      "turn": 2,
+      "role": "skill",
+      "label": "skill-t02",
+      "user": "It always sounds stiff and too polished, nothing like how I actually talk.",
+      "latency_s": 6.04,
+      "wall_start": 1792680384.0675218,
+      "expected_skills": [
+        "moreme"
+      ],
+      "invalid": [],
+      "steps_done": [
+        "1"
+      ],
+      "num_turns": 4,
+      "is_error": false
+    },
+    {
+      "turn": 3,
+      "role": "interviewee",
+      "label": "interviewee-t03",
+      "answer": "I saved all the butter I could spare for the sheep-herders; they never have any. That and some jars of gooseberry jelly was all I could give them. I cooked plenty for the people here, and two days before Christmas I had a chance to go down to Mrs. Louderer's in a buggy, so we went. We found her up to her ears in cooking, and such sights and smells I could never describe.",
+      "answer_kind": "passages",
+      "passage_ids": [
+        "p32"
+      ],
+      "latency_s": 7.45,
+      "wall_start": 1792680390.261409,
+      "invalid": []
+    },
+    {
+      "turn": 3,
+      "role": "skill",
+      "label": "skill-t03",
+      "user": "I saved all the butter I could spare for the sheep-herders; they never have any. That and some jars of gooseberry jelly was all I could give them. I cooked plenty for the people here, and two days before Christmas I had a chance to go down to Mrs. Louderer's in a buggy, so we went. We found her up to her ears in cooking, and such sights and smells I could never describe.",
+      "latency_s": 6.05,
+      "wall_start": 1792680397.8094618,
+      "expected_skills": [
+        "moreme"
+      ],
+      "invalid": [],
+      "steps_done": [],
+      "num_turns": 2,
+      "is_error": false
+    },
+    {
+      "turn": 4,
+      "role": "interviewee",
+      "label": "interviewee-t04",
+      "answer": "She was so glad I came early, for she needed help. I never worked so hard in my life or had a pleasanter time.\n\nMrs. Louderer had sent a man out several days before to find out how many camps there were and where they were located. There were twelve camps and that means twenty-four men. We roasted six geese, boiled three small hams and three hens.",
+      "answer_kind": "passages",
+      "passage_ids": [
+        "p33"
+      ],
+      "latency_s": 2.94,
+      "wall_start": 1792680403.9873533,
+      "invalid": []
+    },
+    {
+      "turn": 4,
+      "role": "skill",
+      "label": "skill-t04",
+      "user": "She was so glad I came early, for she needed help. I never worked so hard in my life or had a pleasanter time.\n\nMrs. Louderer had sent a man out several days before to find out how many camps there were and where they were located. There were twelve camps and that means twenty-four men. We roasted six geese, boiled three small hams and three hens.",
+      "latency_s": 4.73,
+      "wall_start": 1792680407.0699077,
+      "expected_skills": [
+        "moreme"
+      ],
+      "invalid": [],
+      "steps_done": [],
+      "num_turns": 2,
+      "is_error": false
+    },
+    {
+      "turn": 5,
+      "role": "interviewee",
+      "label": "interviewee-t05",
+      "answer": "Before it was day the man came to feed and to get our horses ready. We were up betimes and had breakfast. The last speck was wiped from the shining stove, the kitchen floor was scrubbed, and the last small thing put in order. The man had four horses harnessed and hitched to the sled, on which was placed a wagon-box filled with straw, hot rocks, and blankets.",
+      "answer_kind": "passages",
+      "passage_ids": [
+        "p36"
+      ],
+      "latency_s": 2.96,
+      "wall_start": 1792680411.9564247,
+      "invalid": []
+    },
+    {
+      "turn": 5,
+      "role": "skill",
+      "label": "skill-t05",
+      "user": "Before it was day the man came to feed and to get our horses ready. We were up betimes and had breakfast. The last speck was wiped from the shining stove, the kitchen floor was scrubbed, and the last small thing put in order. The man had four horses harnessed and hitched to the sled, on which was placed a wagon-box filled with straw, hot rocks, and blankets.",
+      "latency_s": 5.06,
+      "wall_start": 1792680415.0664532,
+      "expected_skills": [
+        "moreme"
+      ],
+      "invalid": [],
+      "steps_done": [],
+      "num_turns": 2,
+      "is_error": false
+    },
+    {
+      "turn": 6,
+      "role": "interviewee",
+      "label": "interviewee-t06",
+      "answer": "Our twelve apostles--that is what we called our twelve boxes--were lifted in and tied firmly into place. Then we clambered in and away we went. Mrs. Louderer drove, and Tam O'Shanter and Paul Revere were snails compared to us. We didn't follow any road either, but went sweeping along across country. No one else in the world could have done it unless they were drunk.",
+      "answer_kind": "passages",
+      "passage_ids": [
+        "p37"
+      ],
+      "latency_s": 3.54,
+      "wall_start": 1792680420.2455432,
+      "invalid": []
+    },
+    {
+      "turn": 6,
+      "role": "skill",
+      "label": "skill-t06",
+      "user": "Our twelve apostles--that is what we called our twelve boxes--were lifted in and tied firmly into place. Then we clambered in and away we went. Mrs. Louderer drove, and Tam O'Shanter and Paul Revere were snails compared to us. We didn't follow any road either, but went sweeping along across country. No one else in the world could have done it unless they were drunk.",
+      "latency_s": 19.56,
+      "wall_start": 1792680423.9123263,
+      "expected_skills": [
+        "moreme"
+      ],
+      "invalid": [],
+      "steps_done": [],
+      "num_turns": 9,
+      "is_error": false
+    },
+    {
+      "turn": 7,
+      "role": "interviewee",
+      "label": "interviewee-t07",
+      "answer": "Yes, that sounds like me, though I'm a good deal chattier in my real letters than numbers can show.",
+      "answer_kind": "in_role",
+      "passage_ids": [],
+      "latency_s": 7.22,
+      "wall_start": 1792680443.5779014,
+      "invalid": []
+    },
+    {
+      "turn": 7,
+      "role": "skill",
+      "label": "skill-t07",
+      "user": "Yes, that sounds like me, though I'm a good deal chattier in my real letters than numbers can show.",
+      "latency_s": 25.49,
+      "wall_start": 1792680450.9282455,
+      "expected_skills": [
+        "moreme"
+      ],
+      "invalid": [],
+      "steps_done": [
+        "4"
+      ],
+      "num_turns": 8,
+      "is_error": false
+    },
+    {
+      "turn": 8,
+      "role": "interviewee",
+      "label": "interviewee-t08",
+      "answer": "A short letter to my old friend telling her the first snow came early this year and asking how her winter is going.",
+      "answer_kind": "in_role",
+      "passage_ids": [],
+      "latency_s": 5.84,
+      "wall_start": 1792680476.576739,
+      "invalid": []
+    },
+    {
+      "turn": 8,
+      "role": "skill",
+      "label": "skill-t08",
+      "user": "A short letter to my old friend telling her the first snow came early this year and asking how her winter is going.",
+      "latency_s": 24.8,
+      "wall_start": 1792680482.567754,
+      "expected_skills": [
+        "moreme"
+      ],
+      "invalid": [],
+      "steps_done": [],
+      "num_turns": 8,
+      "is_error": false
+    },
+    {
+      "turn": 9,
+      "role": "interviewee",
+      "label": "interviewee-t09",
+      "answer": "A",
+      "answer_kind": "in_role",
+      "passage_ids": [],
+      "latency_s": 5.34,
+      "wall_start": 1792680507.551527,
+      "invalid": []
+    },
+    {
+      "turn": 9,
+      "role": "skill",
+      "label": "skill-t09",
+      "user": "A",
+      "latency_s": 14.21,
+      "wall_start": 1792680513.1141665,
+      "expected_skills": [
+        "moreme"
+      ],
+      "invalid": [],
+      "steps_done": [
+        "5"
+      ],
+      "num_turns": 4,
+      "is_error": false
+    },
+    {
+      "turn": 10,
+      "role": "interviewee",
+      "label": "interviewee-t10",
+      "answer": "Project folder.",
+      "answer_kind": "in_role",
+      "passage_ids": [],
+      "latency_s": 3.91,
+      "wall_start": 1792680527.5715866,
+      "invalid": []
+    },
+    {
+      "turn": 10,
+      "role": "skill",
+      "label": "skill-t10",
+      "user": "Project folder.",
+      "latency_s": 8.49,
+      "wall_start": 1792680531.60869,
+      "expected_skills": [
+        "moreme"
+      ],
+      "invalid": [],
+      "steps_done": [
+        "6"
+      ],
+      "num_turns": 5,
+      "is_error": false
+    }
+  ],
+  "status": "completed",
+  "finished": "2026-10-22T10:49:00",
+  "spill_new": [
+    "HOME-AppData-Local-Temp-moreme-e2e-e2e-20261022-r9"
+  ],
+  "installed_skill_md_exists": true,
+  "validate_skill": {
+    "ok": true,
+    "errors": [],
+    "warnings": []
+  },
+  "stage_timings": [
+    {
+      "stage": 1,
+      "seconds": 31.3
+    },
+    {
+      "stage": 4,
+      "seconds": 86.3
+    },
+    {
+      "stage": 5,
+      "seconds": 50.9
+    },
+    {
+      "stage": 6,
+      "seconds": 12.8
+    }
+  ],
+  "sample_composition": {
+    "corpus_words": 274,
+    "roleplay_words": 71,
+    "total_words": 345,
+    "corpus_share": 0.794,
+    "min_share": 0.75,
+    "meets_rule": true
+  },
+  "chat_visibility": {
+    "ok": false,
+    "done_lines_in_order": true,
+    "stages": [
+      {
+        "stage": 1,
+        "done": true,
+        "opening": true,
+        "done_timely": true
+      },
+      {
+        "stage": 2,
+        "done": false,
+        "opening": true,
+        "done_timely": false,
+        "word_count": false
+      },
+      {
+        "stage": 3,
+        "done": false,
+        "opening": true,
+        "done_timely": false,
+        "report_lines_shown": "0/11",
+        "report_shown": false
+      },
+      {
+        "stage": 4,
+        "done": true,
+        "opening": true,
+        "done_timely": true
+      },
+      {
+        "stage": 5,
+        "done": true,
+        "opening": true,
+        "done_timely": true
+      },
+      {
+        "stage": 6,
+        "done": true,
+        "opening": true,
+        "done_timely": true
+      }
+    ],
+    "rule": "lines visible no later than the next message that asks the user to act",
+    "note": "Mechanical cross-check only; the clean-room reviewer decides R1-R6."
+  }
+}

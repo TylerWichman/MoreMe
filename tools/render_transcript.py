@@ -45,8 +45,10 @@ def parse(md):
             j += 1
         body = []
         if j < len(lines) and lines[j].startswith(FENCE):
+            # A block that contains ``` is opened with a longer run of backticks.
+            close = re.match(r"`+", lines[j]).group(0)
             j += 1
-            while j < len(lines) and not lines[j].startswith(FENCE):
+            while j < len(lines) and lines[j].strip() != close:
                 body.append(lines[j])
                 j += 1
         blocks.append((kind, label, "\n".join(body)))
@@ -85,10 +87,12 @@ def find(blocks, kind, needle, start=0):
 def scenes(blocks):
     """Pick five key moments by text markers. Returns [(name, title, [block indexes])]."""
     out = []
-    first_a = find(blocks, "assistant", "Question 1")
+    first_a = find(blocks, "assistant", "What do you mostly use AI to help you write")
     out.append(("1-start", "Start: what MoreMe does, and question 1", list(range(0, first_a + 1))))
-    prompt = find(blocks, "assistant", "of 300 words so far")
-    out.append(("2-writing", "Writing prompts adapt to the last answer", [prompt, prompt + 1]))
+    topic = find(blocks, "assistant", "Now the fun part")
+    answer = next(k for k in range(topic + 1, len(blocks)) if blocks[k][0] == "user")
+    follow = find(blocks, "assistant", "of 300 words so far", answer)
+    out.append(("2-topic", "A topic you care about, then follow-ups on what you said", [topic, answer, follow]))
     report = find(blocks, "assistant", "Does this sound like you")
     out.append(("3-report", "Your style report and a check-in", [report, report + 1]))
     ab = find(blocks, "assistant", "Type A or B", report)

@@ -1,0 +1,247 @@
+{
+  "license_header": "Corpus-derived content (persona era-c). Source texts are in the public domain in the USA. Sources: eval/corpus/PROVENANCE.md",
+  "run_id": "e2e-20261022-r9",
+  "reviewed": "2026-10-22T10:49:36",
+  "invalid": [],
+  "flags": [
+    "--model",
+    "claude-sonnet-5-5",
+    "--no-session-persistence",
+    "--tools=Read,Glob,Grep",
+    "--setting-sources",
+    "project",
+    "--strict-mcp-config",
+    "--permission-mode",
+    "default",
+    "--permission-prompts",
+    "none"
+  ],
+  "reviewer_scratch": "~\\AppData\\Local\\Temp\\moreme-e2e\\e2e-20261022-r9-review",
+  "verdict": {
+    "items": [
+      {
+        "id": "R1",
+        "pass": true,
+        "evidence": "transcript.md lines 120-124 and 226",
+        "reason": "The first message has the introduction, the permissions sentence and question 1. The Step 1 done line is at the top of the topic message. run-log has stage=1 passed (line 213)."
+      },
+      {
+        "id": "R2",
+        "pass": false,
+        "evidence": "transcript.md lines 228-234, 265, 298, 329; no 'Step 2 of 6 done: Sample.' in any Assistant block",
+        "reason": "The opening line and running word counts (95, 160, 235) were shown in chat. The Step 2 done line never appeared in chat. The turn-7 message (line 499) asks the user to act and does not contain it. The log line was only written in a tool call (line 376)."
+      },
+      {
+        "id": "R3",
+        "pass": false,
+        "evidence": "transcript.md lines 403 and 499; report.txt content appears only in a Read result (lines 463-476)",
+        "reason": "The opening line was shown (403). The report message at 499 does not include the report text, the sentences tying it to the interview, or 'Step 3 of 6 done: Analysis.'. It only says 'I've measured your writing...'. The report is required in chat before any Step 4 tool call."
+      },
+      {
+        "id": "R4",
+        "pass": false,
+        "evidence": "transcript.md lines 776-788; the 'Step 4 opening' line 'Next, I'll write your my-voice skill. It takes about a minute.' is absent from every Assistant block",
+        "reason": "The done line is shown (776). The Step 4 opening line was never shown, not even at the end of the report message, which was also the point where Step 3 should have ended."
+      },
+      {
+        "id": "R5",
+        "pass": true,
+        "evidence": "transcript.md lines 780, 1049-1073, 1241; run-log stage=5 line (1224)",
+        "reason": "The opening line is in the message at 780. The done line is at 1241, in the message that asks the install question. The Step 5 check happened: ab-result.json exists and the reveal ran. R10 separately fails because of the reprint."
+      },
+      {
+        "id": "R6",
+        "pass": true,
+        "evidence": "transcript.md lines 1243, 1245-1247, 1387; run-log stage=6 (1370)",
+        "reason": "The opening line, the project/personal line and the choice question are shown. The install returned ok:true and Glob confirmed SKILL.md. The done line is in the closing message."
+      },
+      {
+        "id": "R7",
+        "pass": true,
+        "evidence": "transcript.md lines 410-450, 726-740, 1009-1022, 1088-1113, 1262-1282",
+        "reason": "Every analyze.py call exited 0 with no Traceback. build-skill reached ok:true on run 1. my-voice/SKILL.md and my-voice.zip were not written by any Write or Edit call."
+      },
+      {
+        "id": "R8",
+        "pass": true,
+        "evidence": "transcript.md Tool results throughout",
+        "reason": "No tool errors or permission denials. The one 'No files found' Glob result is a normal existence check, not a failure."
+      },
+      {
+        "id": "R9",
+        "pass": true,
+        "evidence": "see r9_questions",
+        "reason": "All questions asked were expected ones. No unnecessary clarification turns."
+      },
+      {
+        "id": "R10",
+        "pass": false,
+        "evidence": "transcript.md line 1041 (ab-present output: 'Write when you have a moment') versus line 1069 (assistant reprint: 'Write when you can'); the assistant admits the change at line 1239",
+        "reason": "(a) ab-mapping.json was not read before the reveal (pass). (b) The reprint is not verbatim: Draft B's last paragraph differs, so this fails. (c) The message has no hints (pass). (d) The subagent prompt (line 951) is the task, the shared rule and 'Do not use any skills.' (pass). Item (b) fails, so R10 fails."
+      }
+    ],
+    "chat_visibility": [
+      {
+        "stage": 1,
+        "opening": {
+          "shown": true,
+          "line": 120
+        },
+        "done": {
+          "shown": true,
+          "line": 226
+        },
+        "result": {
+          "what": "none",
+          "shown": true,
+          "line": 226
+        }
+      },
+      {
+        "stage": 2,
+        "opening": {
+          "shown": true,
+          "line": 228
+        },
+        "done": {
+          "shown": false,
+          "line": 0
+        },
+        "result": {
+          "what": "word count",
+          "shown": true,
+          "line": 329
+        }
+      },
+      {
+        "stage": 3,
+        "opening": {
+          "shown": true,
+          "line": 403
+        },
+        "done": {
+          "shown": false,
+          "line": 0
+        },
+        "result": {
+          "what": "report",
+          "shown": false,
+          "line": 499
+        }
+      },
+      {
+        "stage": 4,
+        "opening": {
+          "shown": false,
+          "line": 0
+        },
+        "done": {
+          "shown": true,
+          "line": 776
+        },
+        "result": {
+          "what": "none",
+          "shown": true,
+          "line": 778
+        }
+      },
+      {
+        "stage": 5,
+        "opening": {
+          "shown": true,
+          "line": 780
+        },
+        "done": {
+          "shown": true,
+          "line": 1241
+        },
+        "result": {
+          "what": "none",
+          "shown": true,
+          "line": 1237
+        }
+      },
+      {
+        "stage": 6,
+        "opening": {
+          "shown": true,
+          "line": 1243
+        },
+        "done": {
+          "shown": true,
+          "line": 1387
+        },
+        "result": {
+          "what": "none",
+          "shown": true,
+          "line": 1383
+        }
+      }
+    ],
+    "r9_questions": [
+      {
+        "line": 124,
+        "question": "What do you mostly use AI to help you write?",
+        "class": "expected",
+        "reason": "Interview question 1."
+      },
+      {
+        "line": 167,
+        "question": "What bugs you most in drafts AI writes for you?",
+        "class": "expected",
+        "reason": "Interview question 2."
+      },
+      {
+        "line": 228,
+        "question": "Topic opener: tell me about something you could go on about...",
+        "class": "expected",
+        "reason": "Step 2 topic question."
+      },
+      {
+        "line": 265,
+        "question": "What did Mrs. Louderer have cooking, and what was the smell that stuck with you most?",
+        "class": "expected",
+        "reason": "Follow-up drawn from the previous answer, running total 95 of 300."
+      },
+      {
+        "line": 298,
+        "question": "How did you get all that food out to twelve camps?",
+        "class": "expected",
+        "reason": "Follow-up drawn from the previous answer, running total 160 of 300."
+      },
+      {
+        "line": 329,
+        "question": "What was it like out on the road that morning?",
+        "class": "expected",
+        "reason": "Follow-up drawn from the previous answer, running total 235 of 300."
+      },
+      {
+        "line": 499,
+        "question": "Does the report sound like you? Reply yes, or tell me what's off.",
+        "class": "expected",
+        "reason": "Step 3 check-in. The report itself was not shown, which is a visibility failure under R3, not an unnecessary question."
+      },
+      {
+        "line": 782,
+        "question": "What's a short, real message you need to write? (with suggestions)",
+        "class": "expected",
+        "reason": "Task for the A/B."
+      },
+      {
+        "line": 1073,
+        "question": "Which sounds more like you? Type A or B.",
+        "class": "expected",
+        "reason": "Fixed A/B pick question."
+      },
+      {
+        "line": 1247,
+        "question": "Which one do you want? Project folder (default) or personal.",
+        "class": "expected",
+        "reason": "Install choice."
+      }
+    ],
+    "verdict": "fail",
+    "notes": "The run fails R2, R3, R4 and R10, for these reasons. (1) After the Step 3 work, the message at line 499 is a bare check-in. It lacks the Step 2 and Step 3 done lines, the Here is what MoreMe measured line, the report.txt text, the interview tie-in and the Step 4 opening line. (2) The Step 4 opening line never appears in chat. (3) The A/B reprint at line 1069 changed 'Write when you have a moment' to 'Write when you can', so it is not verbatim. The assistant later noticed and said so at line 1239, after the pick. The log lines in run-log.md for stages 2 to 4 cannot make up for these gaps. The sample composition in the header is corpus share 0.794, so the run counts as a reference run. I did not read run-log.md or the files in output/ directly. I judged from the transcript, which shows every run-log write and the output file list."
+  },
+  "raw": null
+}

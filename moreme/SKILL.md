@@ -181,7 +181,7 @@ This step shows the user two drafts of the same message, one written with my-voi
    ```
 
    Never open, read, or print `ab-mapping.json`. The script keeps the labels hidden until the user picks.
-7. **Your next chat message is exactly this and nothing else:**
+7. **Your next chat message is exactly this and nothing else (no step lines):**
    - the line: Here are two drafts of the same message. One used your new voice skill and one didn't.
    - the full `ab-present` output, reprinted word for word (the user sees only your reprint)
    - the line: Which sounds more like you? Type A or B.

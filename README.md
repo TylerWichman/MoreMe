@@ -100,6 +100,7 @@ Full drafts: [without](eval/results/heldout/drafts/modern-b-heldout-04-without-r
 - **Tested headless, with simulated writers.** The end-to-end tests drove Claude Code from a script, with an AI agent playing the user and answering MoreMe's questions with real passages from public-domain and openly licensed writers. No real person was timed, so "12 to 15 minutes" is an estimate.
 - **Only Windows was run.** Tests pass on Windows with Python 3.8, 3.11, and 3.12. A CI workflow for macOS, Linux, and Windows is included but has not run yet.
 - **Claude only, for now.** ChatGPT and Gemini support is future work.
+- **Runs vary.** In the reference test run (`e2e-20261022-r8`) every step worked, with one formatting slip in the A/B message, since fixed. In the next run (`r9`) Claude skipped showing the style report in chat. Both are in `eval/e2e/runs/`.
 - Two small known issues: the running word count in the writing step can be off by 10 to 15%, and a short internal note can sometimes show up in the chat.
 
 ## How it was tested
