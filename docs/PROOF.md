@@ -37,7 +37,7 @@ The suite includes a privacy check on every tracked file (`tests/test_repo_priva
 | With the skill | 35% |
 | Writer's own passages added to every prompt | 52% |
 
-Pre-registered headline: with the skill, a style measure the skill never saw picked the right writer for 35% of drafts, compared with 21% without it (difference 14.6 points, 95% CI 4.2 to 26.0; chance is 17%). The skill was used in 94 of 96 drafts where it was installed. Deviations (a Claude Code update mid-run, a rate-limit check fix, a call budget overrun) and changes made after scoring are listed in the preregistration.
+Pre-registered headline: with the skill, a style measure the skill never saw picked the right writer for 35% of drafts, compared with 21% without it (difference 14.6 points, 95% CI 4.2 to 26.0; chance is 17%). The skill was used in 94 of 96 drafts where it was installed. Deviations (a Claude Code update mid-run, a rate-limit check fix, a call budget overrun: about 990 calls against 690 to 710 planned) and changes made after scoring are listed in the preregistration.
 
 ## Generated my-voice skill
 

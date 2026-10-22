@@ -83,7 +83,7 @@ Full drafts: [without](eval/results/heldout/drafts/modern-b-heldout-04-without-r
 ### What went differently from the plan
 
 - Claude Code updated itself from 2.1.303 to 2.1.306 during the run. 32 drafts came from the old version and 208 from the new one. The harness now stops when the version changes instead of retrying.
-- That retry bug, plus a rate-limit check that stayed blocked after the limit had reset, wasted about 235 calls. The whole project used about 920 model calls against a plan of 690 to 710.
+- That retry bug, plus a rate-limit check that stayed blocked after the limit had reset, wasted about 235 calls. The whole project used about 990 model calls against a plan of 690 to 710.
 - Both fixes are logged in the "Deviations after freezing" section of the preregistration.
 - The eval skills were built with an earlier version of the writing step, which asked for short pieces of writing (a story, a reply, an opinion) instead of a topic you pick. The current version finds a topic you care about and follows up on what you say. It was checked end to end but not re-scored.
 
@@ -101,7 +101,7 @@ Full drafts: [without](eval/results/heldout/drafts/modern-b-heldout-04-without-r
 - **Only Windows was run.** Tests pass on Windows with Python 3.8, 3.11, and 3.12. A CI workflow for macOS, Linux, and Windows is included but has not run yet.
 - **Claude only, for now.** ChatGPT and Gemini support is future work.
 - **Runs vary.** In the reference test run (`e2e-20261022-r8`) every step worked, with one formatting slip in the A/B message, since fixed. In the next run (`r9`) Claude skipped showing the style report in chat. Both are in `eval/e2e/runs/`.
-- Two small known issues: the running word count in the writing step can be off by 10 to 15%, and a short internal note can sometimes show up in the chat.
+- Two small known issues: the running word count in the talking step can be off by 10 to 15%, and a short internal note can sometimes show up in the chat.
 
 ## How it was tested
 
