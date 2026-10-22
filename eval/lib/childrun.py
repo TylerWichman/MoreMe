@@ -51,6 +51,12 @@ MOREME_ALLOWED_TOOLS = [
     "Bash(python3 --version)",
     "Bash(python .claude/skills/moreme/analyze.py:*)",
     "Bash(py -3 .claude/skills/moreme/analyze.py:*)",
+    # Claude Code 2.1.306 on Windows may run commands through its PowerShell tool.
+    "PowerShell(python --version)",
+    "PowerShell(py -3 --version)",
+    "PowerShell(python3 --version)",
+    "PowerShell(python .claude/skills/moreme/analyze.py:*)",
+    "PowerShell(py -3 .claude/skills/moreme/analyze.py:*)",
 ]
 
 BUILTIN_PLUGINS = [

@@ -11,12 +11,20 @@ REPO = Path(__file__).resolve().parents[1]
 SKILL = REPO / "moreme" / "SKILL.md"
 REFERENCE = REPO / "moreme" / "reference"
 
-FROZEN_ALLOWED_TOOLS = (
-    "Bash(python --version), Bash(py -3 --version), Bash(python3 --version), "
-    "Bash(python .claude/skills/moreme/analyze.py:*), Bash(py -3 .claude/skills/moreme/analyze.py:*), "
-    "Bash(python3 .claude/skills/moreme/analyze.py:*), Bash(python ~/.claude/skills/moreme/analyze.py:*), "
-    "Bash(py -3 ~/.claude/skills/moreme/analyze.py:*), Bash(python3 ~/.claude/skills/moreme/analyze.py:*), "
-    "Write(moreme-output/**), Edit(moreme-output/**)"
+_SHELL_PATTERNS = (
+    "python --version",
+    "py -3 --version",
+    "python3 --version",
+    "python .claude/skills/moreme/analyze.py:*",
+    "py -3 .claude/skills/moreme/analyze.py:*",
+    "python3 .claude/skills/moreme/analyze.py:*",
+    "python ~/.claude/skills/moreme/analyze.py:*",
+    "py -3 ~/.claude/skills/moreme/analyze.py:*",
+    "python3 ~/.claude/skills/moreme/analyze.py:*",
+)
+FROZEN_ALLOWED_TOOLS = ", ".join(
+    ["Bash(%s)" % p for p in _SHELL_PATTERNS] + ["PowerShell(%s)" % p for p in _SHELL_PATTERNS]
+    + ["Write(moreme-output/**)", "Edit(moreme-output/**)"]
 )
 
 PERMISSION_CLAUDE_CODE = (
@@ -82,9 +90,9 @@ def test_allowed_tools_exact_and_narrow():
     assert fm["allowed-tools"] == FROZEN_ALLOWED_TOOLS
     entries = [e.strip() for e in fm["allowed-tools"].split(",")]
     for e in entries:
-        assert e not in ("Bash", "Bash(*)", "Bash(python:*)", "Bash(py:*)", "Bash(python3:*)")
-        if e.startswith("Bash("):
-            inner = e[5:-1]
+        assert e not in ("Bash", "Bash(*)", "Bash(python:*)", "Bash(py:*)", "Bash(python3:*)", "PowerShell")
+        if e.startswith(("Bash(", "PowerShell(")):
+            inner = e[e.index("(") + 1:-1]
             assert inner.endswith("--version") or "analyze.py:" in inner, e
 
 
@@ -98,7 +106,7 @@ def test_six_stages_in_order():
     heads = re.findall(r"^## Step (\d) of 6: (.+?) \(about (\d) minutes?\)$", body, re.M)
     assert [int(h[0]) for h in heads] == [1, 2, 3, 4, 5, 6]
     assert [h[1] for h in heads] == STAGES
-    assert sum(int(h[2]) for h in heads) == 13  # about 12 to 15 minutes (AMEND-003)
+    assert sum(int(h[2]) for h in heads) == 14  # about 12 to 15 minutes (AMEND-005)
 
 
 def test_stage_exit_lines_documented():

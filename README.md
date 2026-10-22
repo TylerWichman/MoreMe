@@ -2,7 +2,7 @@
 
 MoreMe is a Claude skill that learns how you write and turns it into a second skill, called **my-voice**. After that, when you ask Claude to draft an email, a post, or a cover letter, it writes the way you do.
 
-It takes about 12 to 15 minutes. You answer a few questions, type a few short answers to writing prompts, and pick between two drafts.
+It takes about 12 to 15 minutes. You answer two quick questions, talk about something you care about for a few minutes, and pick between two drafts.
 
 ![A MoreMe run, scene by scene](docs/demo/moreme-demo.gif)
 
@@ -10,8 +10,8 @@ It takes about 12 to 15 minutes. You answer a few questions, type a few short an
 
 ## What happens
 
-1. **Interview.** Five short questions: what you write, who reads it, how you want to sound, what bugs you in AI drafts, and your habits.
-2. **Writing.** A few short prompts, each one following from your last answer. You type until you reach about 300 words. Your interview answers count too. You never paste old writing.
+1. **Interview.** Two quick questions: what you mostly use AI to write, and what bugs you in drafts AI writes for you.
+2. **Talking.** MoreMe asks about something you could go on about (a team, a hobby, a show, something that happened this week), then asks follow-up questions about what you said. You type until you reach about 300 words. Your interview answers count too. You never paste old writing.
 3. **Analysis.** A small script that ships with MoreMe measures your style: sentence length, punctuation, contractions, how you start sentences, and more. You see a plain-language report and get to say if it sounds like you.
 4. **Your skill.** MoreMe writes `my-voice`: a summary of how you sound, your real numbers in plain words, do and don't rules, and short examples taken from what you typed.
 5. **Blind A/B.** Claude writes the same message twice, once with your new skill and once without. You pick the one that sounds more like you before you learn which is which.
@@ -85,7 +85,7 @@ Full drafts: [without](eval/results/heldout/drafts/modern-b-heldout-04-without-r
 - Claude Code updated itself from 2.1.303 to 2.1.306 during the run. 32 drafts came from the old version and 208 from the new one. The harness now stops when the version changes instead of retrying.
 - That retry bug, plus a rate-limit check that stayed blocked after the limit had reset, wasted about 235 calls. The whole project used about 920 model calls against a plan of 690 to 710.
 - Both fixes are logged in the "Deviations after freezing" section of the preregistration.
-- The eval skills were built with an earlier version of the writing step, which used fixed prompts. The current version finds a topic you care about and follows up on what you say. It was checked end to end but not re-scored.
+- The eval skills were built with an earlier version of the writing step, which asked for short pieces of writing (a story, a reply, an opinion) instead of a topic you pick. The current version finds a topic you care about and follows up on what you say. It was checked end to end but not re-scored.
 
 ## Privacy
 
@@ -97,7 +97,7 @@ Full drafts: [without](eval/results/heldout/drafts/modern-b-heldout-04-without-r
 
 - **It learns how you type to Claude.** The sample is what you write in the chat. That can be more casual than an email you would polish.
 - **About 300 words is a small sample.** The numbers are a rough picture, and the report says so when the sample is short.
-- **Tested headless, with simulated writers.** The end-to-end tests drove Claude Code from a script, with an AI agent playing the user and answering writing prompts with real passages from public-domain and openly licensed writers. No real person was timed, so "12 to 15 minutes" is an estimate.
+- **Tested headless, with simulated writers.** The end-to-end tests drove Claude Code from a script, with an AI agent playing the user and answering MoreMe's questions with real passages from public-domain and openly licensed writers. No real person was timed, so "12 to 15 minutes" is an estimate.
 - **Only Windows was run.** Tests pass on Windows with Python 3.8, 3.11, and 3.12. A CI workflow for macOS, Linux, and Windows is included but has not run yet.
 - **Claude only, for now.** ChatGPT and Gemini support is future work.
 - Two small known issues: the running word count in the writing step can be off by 10 to 15%, and a short internal note can sometimes show up in the chat.

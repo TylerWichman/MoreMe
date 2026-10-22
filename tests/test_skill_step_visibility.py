@@ -52,7 +52,7 @@ def test_visibility_rules_use_turn_ending_messages():
     assert "Put what the user must see in the message that ends your turn" in sec
     assert ("appear in chat no later than the next message that asks the user to act") in sec
     where = sec[sec.index("**Where they land at the latest.**"):]
-    for phrase in ("Step 1: opening in the first message, done line in the first writing prompt.",
+    for phrase in ("Step 1: opening in the first message, done line in the topic message.",
                    "Steps 2 and 3: in the Step 3 report message, which ends with the check-in question.",
                    "Step 4: in the message asking for the A/B task.",
                    "Step 5: in or before the install question.",
@@ -88,7 +88,7 @@ def test_stage_exit_order_documented():
 
 def test_step2_progress_cue_shown_in_chat():
     s2 = _flat(_steps(_body())[2])
-    assert "Start each prompt with the running total" in s2
+    assert "Start each question with the running total" in s2
     assert "Step 2's progress cue and Step 3's full report go in your chat text" in _flat(_body())
 
 
@@ -97,7 +97,7 @@ def test_step1_first_turn_uses_no_tools():
     item1 = s1[s1.index("1. "):s1.index("2. **After the user's first answer:**")]
     assert item1.startswith("1. **First reply: no tools at all.**")
     assert "about 12 to 15 minutes" in item1
-    intro = item1.index("MoreMe asks five short questions")
+    intro = item1.index("MoreMe asks two quick questions")
     perm_ref = item1.index("then the permissions sentence below, word for word")
     q1 = item1.index("then question 1 (item 3). End your turn there.")
     perm = item1.index("Claude Code may ask your permission a few times")
@@ -114,7 +114,7 @@ def test_glob_and_gitignore_after_first_answer():
     assert ("**Earlier run:** right after the user's first answer (never before it), Glob for "
             "`moreme-output/run-log.md`.") in rules
     s1 = _flat(_steps(_body())[1])
-    item2 = s1[s1.index("2. **After the user's first answer:**"):s1.index("3. Ask these five questions")]
+    item2 = s1[s1.index("2. **After the user's first answer:**"):s1.index("3. Ask these two questions")]
     assert item2.index("Glob for an earlier run") < item2.index("Write `moreme-output/.gitignore`") < item2.index(
         "Then ask question 2.")
     ts = _flat((REPO / "moreme" / "reference" / "troubleshooting.md").read_text(encoding="utf-8"))

@@ -65,8 +65,9 @@ def test_allowed_tools_are_narrow():
     allowed = childrun.MOREME_ALLOWED_TOOLS
     assert "Skill(moreme)" in allowed
     for a in allowed:
-        assert a not in ("Bash", "Bash(python:*)", "Bash(py:*)", "Bash(python3:*)")
-        if a.startswith("Bash(") and a.endswith(":*)"):
+        assert a not in ("Bash", "Bash(python:*)", "Bash(py:*)", "Bash(python3:*)", "PowerShell",
+                         "PowerShell(python:*)", "PowerShell(py:*)", "PowerShell(python3:*)")
+        if a.startswith(("Bash(", "PowerShell(")) and a.endswith(":*)"):
             assert "analyze.py" in a
 
 

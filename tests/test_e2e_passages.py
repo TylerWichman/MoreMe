@@ -62,7 +62,8 @@ def test_brief_keeps_interview_answers_short_and_one_passage():
     assert drv.ANSWER_CAP_WORDS == 10
     assert "one short sentence of 10 words at most" in brief
     assert "about 15 words" not in brief
-    assert "the one passage that fits" in brief and "old quotation" in brief
+    assert "the id of the one passage that best answers it" in brief and "old quotation" in brief
+    assert "For every topic question and follow-up" in brief
 
 
 def test_catalog_is_verbatim_train_text_with_exact_spans():

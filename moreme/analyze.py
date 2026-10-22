@@ -1303,8 +1303,11 @@ def split_tool_list(value):
     return [i for i in items if i]
 
 
+SHELL_TOOLS = ("Bash", "PowerShell")
+
+
 def bash_pattern_ok(entry):
-    match = re.match(r"^Bash\((.*)\)$", entry.strip())
+    match = re.match(r"^(?:Bash|PowerShell)\((.*)\)$", entry.strip())
     if not match:
         return False
     pattern = match.group(1).strip()
@@ -1395,7 +1398,7 @@ def validate_skill_text(text):
         tools = fields.get("allowed-tools")
         if tools:
             for entry in split_tool_list(tools):
-                if entry == "Bash" or (entry.startswith("Bash") and not bash_pattern_ok(entry)):
+                if entry in SHELL_TOOLS or (entry.startswith(SHELL_TOOLS) and not bash_pattern_ok(entry)):
                     errors.append(error(
                         "allowed_tools_too_broad",
                         "This allowed-tools entry is too broad: {0}. Use an exact --version probe or a "

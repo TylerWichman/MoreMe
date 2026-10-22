@@ -1,7 +1,7 @@
 ---
 name: moreme
-description: Builds a personal writing-voice skill called my-voice from the user's own writing. It asks five short questions and a few writing prompts, measures the style of what the user types with a small local Python script, writes the my-voice skill, shows a blind A/B of two drafts, and helps install it. Use it when the user asks to make Claude write like them, sound more like them, learn their writing style or voice, or create a voice skill.
-allowed-tools: Bash(python --version), Bash(py -3 --version), Bash(python3 --version), Bash(python .claude/skills/moreme/analyze.py:*), Bash(py -3 .claude/skills/moreme/analyze.py:*), Bash(python3 .claude/skills/moreme/analyze.py:*), Bash(python ~/.claude/skills/moreme/analyze.py:*), Bash(py -3 ~/.claude/skills/moreme/analyze.py:*), Bash(python3 ~/.claude/skills/moreme/analyze.py:*), Write(moreme-output/**), Edit(moreme-output/**)
+description: Builds a personal writing-voice skill called my-voice from the user's own writing. It asks two quick questions, gets the user talking about a topic they care about, measures the style of what the user types with a small local Python script, writes the my-voice skill, shows a blind A/B of two drafts, and helps install it. Use it when the user asks to make Claude write like them, sound more like them, learn their writing style or voice, or create a voice skill.
+allowed-tools: Bash(python --version), Bash(py -3 --version), Bash(python3 --version), Bash(python .claude/skills/moreme/analyze.py:*), Bash(py -3 .claude/skills/moreme/analyze.py:*), Bash(python3 .claude/skills/moreme/analyze.py:*), Bash(python ~/.claude/skills/moreme/analyze.py:*), Bash(py -3 ~/.claude/skills/moreme/analyze.py:*), Bash(python3 ~/.claude/skills/moreme/analyze.py:*), PowerShell(python --version), PowerShell(py -3 --version), PowerShell(python3 --version), PowerShell(python .claude/skills/moreme/analyze.py:*), PowerShell(py -3 .claude/skills/moreme/analyze.py:*), PowerShell(python3 .claude/skills/moreme/analyze.py:*), PowerShell(python ~/.claude/skills/moreme/analyze.py:*), PowerShell(py -3 ~/.claude/skills/moreme/analyze.py:*), PowerShell(python3 ~/.claude/skills/moreme/analyze.py:*), Write(moreme-output/**), Edit(moreme-output/**)
 ---
 
 # MoreMe
@@ -13,14 +13,14 @@ MoreMe walks the user through six steps in about 12 to 15 minutes and leaves the
 The user sees only your chat text; tool calls and their output are hidden or collapsed. Put what the user must see in the message that ends your turn (the one that asks them to act):
 
 1. **Step lines.** Each step's opening line (the "Say" line at the top of each step) and its done line `Step N of 6 done: <Name>.` appear in chat no later than the next message that asks the user to act.
-2. **Where they land at the latest.** Step 1: opening in the first message, done line in the first writing prompt. Steps 2 and 3: in the Step 3 report message, which ends with the check-in question. Step 4: in the message asking for the A/B task. Step 5: in or before the install question. Step 6: in the closing message.
+2. **Where they land at the latest.** Step 1: opening in the first message, done line in the topic message. Steps 2 and 3: in the Step 3 report message, which ends with the check-in question. Step 4: in the message asking for the A/B task. Step 5: in or before the install question. Step 6: in the closing message.
 3. **Results in chat.** Step 2's progress cue and Step 3's full report go in your chat text.
 
 These lines are updates, not extra questions. Ask only the questions this file lists.
 
 ## How to talk to the user
 
-- Plain, short sentences. Second person ("Tell me about your week"). No jargon.
+- Plain, short sentences in second person. No jargon.
 - No long dashes (the U+2014 character). Use commas, periods, colons, or parentheses.
 - No hype and no exclamation marks. Do not praise the user's writing.
 - Never ask whether the user wrote an answer themselves or where it came from. Every answer counts as their writing.
@@ -30,10 +30,10 @@ These lines are updates, not extra questions. Ask only the questions this file l
 ## Ground rules
 
 - **Output folder:** always `moreme-output/` in the current project folder. Do not ask where to save. All files below live in it.
-- **Working folder:** run every command from the project folder. Never use `cd`. Always pass paths that start with `moreme-output/`.
-- **Saving files:** use the Write tool for new files and Write or Edit for changes. Never use Bash to write, copy, move, or delete files.
+- **Working folder:** run every command from the project folder, with the Bash tool (PowerShell only if there is none). Never use `cd`. Always pass paths that start with `moreme-output/`.
+- **Saving files:** use the Write tool for new files and Write or Edit for changes. Never use a shell to write, move, or delete files.
 - **Skill files:** `my-voice/SKILL.md` and `my-voice.zip` are made only by `analyze.py build-skill`. Never write, edit, or zip them yourself (except the no-Python path in Step 4).
-- **Checking whether a file exists:** use Glob, not Read (a missing file is then not an error).
+- **Checking whether a file exists:** use Glob, not Read.
 - **The user's name:** never take it from a username, a file or folder path, the environment, or other system details. Use a name only if the user gave it in the interview or this chat, or signed their samples with it. Otherwise sign drafts with their usual sign-off and no name, or leave them unsigned.
 - **Earlier run:** right after the user's first answer (never before it), Glob for `moreme-output/run-log.md`. If it exists, read it and follow "Picking up an earlier run" in `reference/troubleshooting.md`. If not, go on with Step 1.
 
@@ -60,9 +60,9 @@ Steps 3 to 6 call `analyze.py` in this skill's folder (SKILL_DIR). In Claude Cod
 
 PREFIX is the Python command found in Step 3 plus `SKILL_DIR/analyze.py`, for example `python .claude/skills/moreme/analyze.py`. Use the exact same PREFIX for every later call.
 
-## Step 1 of 6: Interview (about 3 minutes)
+## Step 1 of 6: Interview (about 1 minute)
 
-1. **First reply: no tools at all.** It is one message, in this order: in your own plain words, MoreMe asks five short questions and a few writing prompts, measures the style of what the user types (their answers count, so answer the way they normally type), and makes a skill called my-voice, in about 12 to 15 minutes; then the permissions sentence below, word for word; then question 1 (item 3). End your turn there.
+1. **First reply: no tools at all.** It is one message, in this order: in your own plain words, MoreMe asks two quick questions, then gets the user talking about something they care about, measures the style of what they type (everything they type counts, so answer the way they normally type), and makes a skill called my-voice, in about 12 to 15 minutes; then the permissions sentence below, word for word; then question 1 (item 3). End your turn there.
 
    In Claude Code:
 
@@ -73,30 +73,31 @@ PREFIX is the Python command found in Step 3 plus `SKILL_DIR/analyze.py`, for ex
    > Claude will run a small measuring script that came with MoreMe. It runs in Claude's sandbox, not on your computer. Your samples go there under Anthropic's terms.
 
 2. **After the user's first answer:** Glob for an earlier run (Ground rules). Then Write `moreme-output/.gitignore` with the single line `*` (keeps samples out of git), before saving anything else. Then ask question 2.
-3. Ask these five questions, one per message, in this order. Keep the wording close to this:
+3. Ask these two questions, one per message. Keep the wording close to this:
    1. "What do you mostly use AI to help you write? For example emails, posts, or cover letters."
-   2. "Who usually reads it?"
-   3. "Pick three words for how you want to sound."
-   4. "What bugs you most in drafts AI writes for you? Words, phrases, or habits."
-   5. "Any habits you always or never have? For example sign-offs, emoji, or exclamation marks."
-4. Follow-ups: at most 2 in the whole interview, and only when an answer is empty or contradicts another answer. Otherwise accept the answer as given. Details: `reference/interview-guide.md`.
-5. After the last answer, Write `moreme-output/interview.md` with each question and the user's answer copied word for word (format in the interview guide). Also Write `moreme-output/samples/conversation.txt` with the five answers: the user's words only, word for word, a blank line between answers, none of your text.
+   2. "What bugs you most in drafts AI writes for you? Words, phrases, or habits."
+4. Follow-ups: at most 1, and only when an answer is empty ("idk"). Otherwise accept the answer as given. Details: `reference/interview-guide.md`.
+5. After the second answer, Write `moreme-output/interview.md` with both questions and the user's answers copied word for word (format in the interview guide). Also Write `moreme-output/samples/conversation.txt` with the two answers: the user's words only, word for word, a blank line between answers, none of your text.
 
-**Exit check:** 5 answers saved in `interview.md` and `conversation.txt`, follow-ups 2 or fewer. Log it, for example `stage=1 name=interview status=passed check=answers=5,followups=0 time=...`. Then write `Step 1 of 6 done: Interview.` as chat text, at the latest at the top of the first writing prompt.
+**Exit check:** 2 answers saved in `interview.md` and `conversation.txt`. Log it, for example `stage=1 name=interview status=passed check=answers=2,followups=0 time=...`. Then write `Step 1 of 6 done: Interview.` as chat text, at the latest at the top of the topic message.
 
-## Step 2 of 6: Sample (about 5 minutes)
+## Step 2 of 6: Sample (about 8 minutes)
 
-The sample is this conversation: the user types, MoreMe measures what they type. Never ask them to paste or share existing writing or files.
+The sample is this conversation: the user talks about something they care about, and MoreMe measures how they type. Never ask them to paste or share existing writing or files.
 
-1. Say: "Next, a few short writing prompts. Answer the way you normally type. This takes about 5 minutes." Then the first prompt, in the same message.
-2. **Prompt loop.** One prompt per message, one or two friendly sentences, each following from the user's last answer and leaning toward what they write (answer 1). Mix the kinds: a short story about something they mentioned, explaining something to a coworker or friend, a reply they would really send, an opinion with a reason.
-3. **Progress cue.** Start each prompt with the running total, interview answers included, for example: "About 120 of 300 words so far." Count words yourself; an estimate is fine. No nagging.
-4. **Short answers.** After a very short answer, the next prompt plainly invites more ("Tell me a bit more: what happened next?"). Never scold.
+1. **Find a topic.** Say, in one message: "Now the fun part. Tell me about something you could go on about for a while. Answer any of these, or pick your own topic:" then these three openers as a short list:
+   - "What's a team, hobby, show, or place you could talk about forever?"
+   - "What's something you've changed your mind about lately?"
+   - "What's the best or worst thing that happened to you this week?"
+   End with: "Type the way you normally would. This takes about 8 minutes."
+2. **Follow the thread.** Each next question comes from a specific detail in the user's last answer: a name, a claim, a strong opinion, a moment. Ask why, what happened next, what they would change, or how they would explain it to a friend. One short, friendly question per message. Stay on their topic while they have energy.
+3. **Switch when it runs dry.** If two answers in a row are short, offer a different opener.
+4. **Progress cue.** Start each question with the running total, Step 1 answers included, for example: "About 120 of 300 words so far." An estimate is fine. No nagging.
 5. **Save each answer** to the end of `moreme-output/samples/conversation.txt` (Write or Edit): the user's words only, word for word, typos kept, a blank line before it.
-6. **Stop at about 300 words,** usually after 4 to 6 prompts. At most 8 prompts; if still under 300, continue with what you have and log `status=degraded reason=below_floor`.
-7. **Stopping early.** If the user wants to stop writing, say in one sentence that fewer words make the measurement less reliable, and offer one more prompt. If they still want to stop, go to Step 3 and log `status=degraded reason=user_stopped_early`.
+6. **Stop at about 300 words,** usually after 4 to 7 answers. At most 10 questions; if still under 300, continue with what you have and log `status=degraded reason=below_floor`.
+7. **Stopping early.** If the user wants to stop, say in one sentence that fewer words make the measurement less reliable, and offer one more question. If they still want to stop, go to Step 3 and log `status=degraded reason=user_stopped_early`.
 
-**Exit check:** `conversation.txt` holds the user's answers, word total logged. Log it, for example `stage=2 name=sample status=passed check=prompts=5,words_about=320 time=...`. Then write `Step 2 of 6 done: Sample.` as chat text (in the Step 3 report message at the latest).
+**Exit check:** `conversation.txt` holds the user's answers, word total logged. Log it, for example `stage=2 name=sample status=passed check=questions=6,words_about=320 time=...`. Then write `Step 2 of 6 done: Sample.` as chat text (in the Step 3 report message at the latest).
 
 ## Step 3 of 6: Analysis (about 1 minute)
 

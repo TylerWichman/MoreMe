@@ -67,6 +67,8 @@ def test_validate_missing_skill_md(cli, tmp_path):
         ("---\nname: ok\ndescription: d\nallowed-tools: Bash(python *)\n---\n", "allowed_tools_too_broad"),
         ("---\nname: ok\ndescription: d\nallowed-tools: Bash(python other.py:*)\n---\n", "allowed_tools_too_broad"),
         ("---\nname: ok\ndescription: d\nallowed-tools:\n  - Bash(python -c:*)\n---\n", "allowed_tools_too_broad"),
+        ("---\nname: ok\ndescription: d\nallowed-tools: PowerShell\n---\n", "allowed_tools_too_broad"),
+        ("---\nname: ok\ndescription: d\nallowed-tools: PowerShell(python:*)\n---\n", "allowed_tools_too_broad"),
     ],
 )
 def test_validate_error_codes(cli, tmp_path, text, code):
@@ -420,3 +422,10 @@ def test_install_invalid_skill_exit_2(cli, tmp_path, fake_home):
     res = cli("install", skill, "--project", project)
     assert res.code == 2 and "validate-skill" in res.err
     assert not (project / ".claude").exists()
+
+
+def test_validate_accepts_scoped_powershell_entries(cli, tmp_path):
+    text = ("---\nname: ok\ndescription: d\nallowed-tools: PowerShell(python --version), "
+            "PowerShell(py -3 .claude/skills/moreme/analyze.py:*)\n---\nbody\n")
+    res = cli("validate-skill", make_skill(tmp_path, text))
+    assert "allowed_tools_too_broad" not in error_codes(res.json)

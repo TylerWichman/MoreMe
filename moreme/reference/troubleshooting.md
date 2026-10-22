@@ -28,10 +28,10 @@ Common exit 2 messages:
 
 ### Step 2
 
-- Still under about 300 words after 8 prompts: continue with what you have and log `status=degraded reason=below_floor`.
-- The user wants to stop writing early: one sentence that fewer words make the measurement less reliable, offer one more prompt, then continue if they still want to stop (`status=degraded reason=user_stopped_early`).
-- The user offers to paste existing writing or a file: thank them and say MoreMe measures how they type here, then give the next prompt.
-- Answers stay very short: keep prompts concrete and easy ("What did you have for lunch, and was it good?"). Never scold.
+- Still under about 300 words after 10 questions: continue with what you have and log `status=degraded reason=below_floor`.
+- The user wants to stop writing early: one sentence that fewer words make the measurement less reliable, offer one more question, then continue if they still want to stop (`status=degraded reason=user_stopped_early`).
+- The user offers to paste existing writing or a file: thank them and say MoreMe measures how they type here, then ask the next question.
+- Answers stay very short: offer a different opener, and keep questions concrete and easy ("What did you have for lunch, and was it good?"). Never scold.
 
 ### Step 3
 

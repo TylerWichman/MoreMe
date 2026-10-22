@@ -1,7 +1,7 @@
-"""Guided writing sample (AMEND-003, T-014).
+"""Guided writing sample (AMEND-003, AMEND-005).
 
-MoreMe no longer asks for pasted writing or files. The five interview answers and 4 to 6 adaptive
-writing prompts form one conversation; the user's own words are saved verbatim to
+MoreMe never asks for pasted writing or files. Two interview answers and a conversation about a
+topic the user cares about form the sample; the user's own words are saved verbatim to
 samples/conversation.txt and measured from there.
 """
 
@@ -50,37 +50,40 @@ def test_no_paste_or_file_instructions_anywhere():
 
 def test_frontmatter_and_time_estimate():
     text = SKILL.read_text(encoding="utf-8")
-    assert "a few writing prompts" in text.split("\n---\n", 1)[0]
+    assert "gets the user talking about a topic they care about" in text.split("\n---\n", 1)[0]
     body = _flat(_body())
     assert "about 12 to 15 minutes" in body
     assert "10 minutes" not in body
-    assert "## Step 2 of 6: Sample (about 5 minutes)" in _body()
+    assert "## Step 2 of 6: Sample (about 8 minutes)" in _body()
 
 
 def test_interview_answers_start_the_sample():
     s1 = _step(1)
-    assert "their answers count, so answer the way they normally type" in s1
-    assert ("Also Write `moreme-output/samples/conversation.txt` with the five answers: the user's words only, "
+    assert "everything they type counts, so answer the way they normally type" in s1
+    assert ("Also Write `moreme-output/samples/conversation.txt` with the two answers: the user's words only, "
             "word for word, a blank line between answers, none of your text.") in s1
-    assert "at the latest at the top of the first writing prompt" in s1
+    assert "at the latest at the top of the topic message" in s1
 
 
-def test_adaptive_prompt_loop():
+def test_topic_finder_and_follow_ups():
+    # AMEND-005: find a topic the user cares about, then follow details from their own answers.
     s2 = _step(2)
     assert "The sample is this conversation" in s2
-    assert "**Prompt loop.** One prompt per message" in s2
-    assert "each following from the user's last answer and leaning toward what they write (answer 1)" in s2
-    for kind in ("a short story", "explaining something to a coworker or friend",
-                 "a reply they would really send", "an opinion with a reason"):
-        assert kind in s2, kind
-    assert "Never scold." in s2
+    assert "**Find a topic.** Say, in one message:" in s2
+    for opener in ("What's a team, hobby, show, or place you could talk about forever?",
+                   "What's something you've changed your mind about lately?",
+                   "What's the best or worst thing that happened to you this week?"):
+        assert opener in s2, opener
+    assert "Each next question comes from a specific detail in the user's last answer" in s2
+    assert "If two answers in a row are short, offer a different opener." in s2
+    assert "No nagging." in s2
 
 
 def test_300_word_target_and_progress_cue():
     s2 = _step(2)
-    assert "**Stop at about 300 words,** usually after 4 to 6 prompts." in s2
-    assert "At most 8 prompts" in s2 and "reason=below_floor" in s2
-    assert "running total, interview answers included" in s2
+    assert "**Stop at about 300 words,** usually after 4 to 7 answers." in s2
+    assert "At most 10 questions" in s2 and "reason=below_floor" in s2
+    assert "running total, Step 1 answers included" in s2
     assert "About 120 of 300 words so far." in s2
 
 

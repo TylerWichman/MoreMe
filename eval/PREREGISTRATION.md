@@ -132,6 +132,14 @@ Iterations actually run: none. The template and SKILL.md were frozen as they sto
 - 2026-10-21, Claude Code auto-updated from 2.1.303 to 2.1.306 mid-run (the main install, not the child runs, which had auto-update off). The per-call check correctly rejected every later call, but the harness retried each one up to three times, spending about 230 calls without producing a draft. Changes: `eval/lib/childrun.py` reads the expected version from `MOREME_CLI_VERSION` (default 2.1.303), `eval/harness/runner.py` halts the batch on the first version mismatch instead of retrying, and `eval/harness/ledger.py` plus a `harness reopen` command append "reopen" rows so units that failed only on the version check run again (nothing is deleted from the ledger). The rest of the run uses Claude Code 2.1.306 with the same pinned model (`claude-sonnet-5-5`). The 32 valid modern-a drafts made on 2.1.303 are kept; every draft record and ledger row records the version that made it. No prompts, arms, extraction, scoring, or analysis changed.
 - 2026-10-22, call budget: the held-out run used 475 calls for 240 units (all valid), and the whole project about 920 child calls (ledgers: 40 spike, 73 dev smoke, 336 end-to-end and persona skill generation, 475 held-out), against the planned 690-710. The overrun is the version-retry loss above plus end-to-end reruns for the turn-boundary and privacy fixes.
 
+## Changes after held-out scoring
+
+The hashes below match the files that made and scored the held-out drafts, as of the commit "Add held-out eval results and README". Three hashed files changed after that, so `prereg check` now reports a mismatch on purpose. Scored results were not regenerated.
+
+- `moreme/SKILL.md` (and its reference files): the writing step now finds a topic the user cares about and follows up on what they say (AMEND-005), and commands run with the Bash tool, or PowerShell when there is no Bash tool. The eval's persona skills were built with the earlier version.
+- `moreme/analyze.py`: `validate-skill` checks `PowerShell(...)` allowed-tools entries the same way as `Bash(...)` entries.
+- `eval/lib/childrun.py`: the end-to-end allow list adds the same commands under `PowerShell(...)`, because Claude Code 2.1.306 on Windows can run commands through its PowerShell tool.
+
 ## Hashes
 
 Files whose sha256 (line endings normalized to LF) must match before held-out scoring. Refreshed with `python -m harness prereg write-hashes` from `eval/`; frozen with `python -m harness prereg freeze`.

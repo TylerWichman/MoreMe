@@ -11,7 +11,7 @@ Six `##` headings, exactly these, in this order. Text outside them is ignored.
 | `## How I sound` | Plain sentences in the first person, from the interview and the report | 3 to 5 sentences |
 | `## Do` | Lines starting with `- `, each concrete and checkable | 5 to 8 lines |
 | `## Don't` | Lines starting with `- ` | 3 to 6 lines |
-| `## Avoid words` | One word or short phrase per line: the user's pet peeves from question 4 | 0 to 20 lines |
+| `## Avoid words` | One word or short phrase per line: the user's pet peeves from interview question 2 | 0 to 20 lines |
 | `## Examples` | `[conversation.txt]` on its own line, then an excerpt copied exactly from that file | 3 to 5 excerpts, 40 to 120 words each |
 | `## Adjust by channel` | Lines starting `Email:`, `Post:`, `Cover letter:` | 1 to 3 sentences each |
 

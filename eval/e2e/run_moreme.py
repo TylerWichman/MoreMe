@@ -281,8 +281,8 @@ def sample_composition(turns):
             "min_share": CORPUS_SHARE_MIN, "meets_rule": share >= CORPUS_SHARE_MIN}
 
 
-SAMPLE_METHOD = ("Answers to MoreMe's writing prompts are verbatim passages from those texts, picked by the "
-                 "simulated interviewee to fit each prompt (whole paragraphs or whole sentences, never reworded); "
+SAMPLE_METHOD = ("Answers to MoreMe's topic and follow-up questions are verbatim passages from those texts, "
+                 "picked by the simulated interviewee to fit each question (whole paragraphs or whole sentences, never reworded); "
                  "answers to interview questions and other replies were written in role by the agent.")
 
 
@@ -292,7 +292,8 @@ def interviewee_brief(persona, scratch=None, catalog=None):
     listing = "\n\n".join("[%s] (%d words)\n%s" % (c["id"], c["words"], c["text"].strip()) for c in catalog)
     return (
         "You are role-playing a person who is trying a tool called MoreMe inside Claude Code. MoreMe will "
-        "interview you, ask you to write a few short things, and build a writing-voice skill from your writing. "
+        "ask you two quick questions, get you talking about a topic you care about, and build a writing-voice "
+        "skill from what you type. "
         "Stay in character the whole time.\n\n"
         "Who you are:\n" + p["who"] + "\n\n"
         "Your own writing, as numbered passages. These are the only things you ever write for MoreMe:\n\n"
@@ -300,15 +301,16 @@ def interviewee_brief(persona, scratch=None, catalog=None):
         "Rules for your replies:\n"
         "- Reply with only the words this person would type into the chat. No preamble, no quotes, no stage "
         "directions, no Markdown.\n"
-        "- Answer interview questions in character with one short sentence of " + str(ANSWER_CAP_WORDS)
+        "- Answer the two interview questions (what you use AI to write, what bugs you in AI drafts) in "
+        "character with one short sentence of " + str(ANSWER_CAP_WORDS)
         + " words at most. Keep them short: the writing passages, not these answers, should make up most of "
         "what you type.\n"
         + personas.name_rule(persona) + "\n"
-        "- When MoreMe asks you to write something (a story, a reply, an explanation, an opinion, a few lines "
-        "about anything), do not write it yourself. Reply with exactly one line: USE: followed by the ids of "
-        "the one passage that fits the request best, for example USE: p4. Pick a passage you have not used yet. "
-        "Prefer a passage whose tone fits what was asked, and when a plainer passage fits, pick it over one "
-        "that reads like an old quotation.\n"
+        "- After those two, MoreMe asks you to talk about something you care about, then asks follow-up "
+        "questions about what you said. For every topic question and follow-up, do not write the answer "
+        "yourself. Reply with exactly one line: USE: followed by the id of the one passage that best answers it "
+        "or continues what you were talking about, for example USE: p4. Pick a passage you have not used yet. "
+        "When a plainer passage fits, pick it over one that reads like an old quotation.\n"
         "- When MoreMe asks for a short message to use for the test, give this task, exactly: " + p["task"] + "\n"
         "- When MoreMe shows Draft A and Draft B and asks which sounds more like you, reply with only the "
         "letter A or B, for the draft closer to your own writing.\n"
@@ -952,10 +954,10 @@ the user replied to a later message. Also find the Step 2 word count shown in ch
 (the report.txt content, not only a Read of it) before any Step 4 tool call. A stage whose opening line, done line, or
 required result is missing or late fails its R item even if run-log.md says passed. Under R9, the Step 3 check-in
 ("Does this sound like you? ...") and the resume question after the first answer (only when run-log.md already
-existed) are expected questions. Step 2 is a guided writing conversation (see "Guided writing sample" in the rubric):
-each writing prompt that follows from the previous answer, until the user's words reach about 300, is an expected
-question; a request to paste or point to files is unnecessary. The simulated user's writing answers are verbatim
-passages of real text; do not judge how well they fit the prompt.
+existed) are expected questions. Step 2 is a topic conversation (see "Guided writing sample" in the rubric): the topic
+question and each follow-up drawn from the previous answer, until the user's words reach about 300, are expected
+questions; a request to paste or point to files is unnecessary. The simulated user's topic answers are verbatim
+passages of real text; do not judge how well they fit the question.
 
 Judge every rubric item R1 to R10. For R9, list every question the assistant asked the user and classify each as
 expected or unnecessary with a one-line reason. For R10(b), compare the ab-present tool output with the assistant's
