@@ -1,0 +1,41 @@
+{
+  "license_header": "Corpus-derived content (persona modern-a). Contains public sector information licensed under the Open Government Licence v3.0 (https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/). Sources and changes: eval/corpus/PROVENANCE.md",
+  "persona": "modern-a",
+  "task_id": "modern-a-heldout-07",
+  "split": "heldout",
+  "arm": "with",
+  "rep": 2,
+  "mode": "auto",
+  "model_requested": "claude-sonnet-5-5",
+  "position_in_task": 5,
+  "attempt": 1,
+  "prompt": "Write an email to a colleague about thanking a team after a big launch. Aim for about 400 words. Reply with the email only.",
+  "final_message": "**Subject: Thanking the team after the launch**\n\nI'd like us to thank the launch team properly this week, and I'd like your help to do it.\n\nThe launch went live on Tuesday. It was a big one, and the team made it look calm. They didn't. I know many of them worked late for the last three weeks, and some gave up weekends. We should say so, and we should do it before the moment passes.\n\nHere's what I'm thinking. First, a short note from you and me to the whole team, sent by Friday. Second, a few named thank-yous in it, because people remember being seen. Third, a proper break: I'd like us to give everyone a half day back in the next fortnight, with no questions asked.\n\nOn the note, I want it to be specific. \"Great job\" won't land. We should say what people did and what it meant in practice. The support team rewrote the help pages in two days, so users found answers without having to ask. The engineers fixed the payment bug on Monday night, so we launched on time. The testers caught problems we'd have missed. Those details matter more than any general praise.\n\nI'd also like us to mention the quieter work. Our data team set up the monitoring that let us watch the launch live. Nobody saw it, but we all relied on it. The same goes for the people who handled the rota and made sure someone was always on call.\n\nI don't want this to sound like a formal announcement. We're writing to people we work with every day, so plain words are best. A few short paragraphs will do.\n\nCould you do two things for me? Please look over the draft below and add anyone I've missed. You know the delivery side better than I do. And please check with the leads whether a half day works for their people before we promise it.\n\nDraft opening: \"We launched on Tuesday, and it worked. That's down to all of you. We want to say thank you, and we want to tell you what we saw.\"\n\nI'll write the rest once I have your names. If you can send them by Wednesday, I can get the note out on Thursday and leave Friday clear for the team to enjoy it.\n\nWe won't get many chances to say this well, so let's not waste this one.\n\nGraham",
+  "draft": "**Subject: Thanking the team after the launch**\n\nI'd like us to thank the launch team properly this week, and I'd like your help to do it.\n\nThe launch went live on Tuesday. It was a big one, and the team made it look calm. They didn't. I know many of them worked late for the last three weeks, and some gave up weekends. We should say so, and we should do it before the moment passes.\n\nHere's what I'm thinking. First, a short note from you and me to the whole team, sent by Friday. Second, a few named thank-yous in it, because people remember being seen. Third, a proper break: I'd like us to give everyone a half day back in the next fortnight, with no questions asked.\n\nOn the note, I want it to be specific. \"Great job\" won't land. We should say what people did and what it meant in practice. The support team rewrote the help pages in two days, so users found answers without having to ask. The engineers fixed the payment bug on Monday night, so we launched on time. The testers caught problems we'd have missed. Those details matter more than any general praise.\n\nI'd also like us to mention the quieter work. Our data team set up the monitoring that let us watch the launch live. Nobody saw it, but we all relied on it. The same goes for the people who handled the rota and made sure someone was always on call.\n\nI don't want this to sound like a formal announcement. We're writing to people we work with every day, so plain words are best. A few short paragraphs will do.\n\nCould you do two things for me? Please look over the draft below and add anyone I've missed. You know the delivery side better than I do. And please check with the leads whether a half day works for their people before we promise it.\n\nDraft opening: \"We launched on Tuesday, and it worked. That's down to all of you. We want to say thank you, and we want to tell you what we saw.\"\n\nI'll write the rest once I have your names. If you can send them by Wednesday, I can get the note out on Thursday and leave Friday clear for the team to enjoy it.\n\nWe won't get many chances to say this well, so let's not waste this one.\n\nGraham",
+  "draft_words": 407,
+  "target_words": 400,
+  "valid": true,
+  "invalid_reasons": [],
+  "invalid_history": [],
+  "evidence": {
+    "init_skills": [
+      "my-voice"
+    ],
+    "init_plugins": [],
+    "init_mcp_servers": [],
+    "claude_code_version": "2.1.306",
+    "model": "claude-sonnet-5-5",
+    "skill_calls": [
+      "my-voice"
+    ],
+    "tools_used": [
+      "Skill"
+    ],
+    "invoked": true,
+    "invocation_detail": "skill_tool_use_ok",
+    "invariant_violations": [],
+    "problems": []
+  },
+  "log_label": "d-modern-a-heldout-07-with-r2-a1-10211511",
+  "created": "2026-10-21T15:12"
+}

@@ -1,0 +1,41 @@
+{
+  "license_header": "Corpus-derived content (persona era-c). Source texts are in the public domain in the USA. Sources: eval/corpus/PROVENANCE.md",
+  "persona": "era-c",
+  "task_id": "era-c-heldout-08",
+  "split": "heldout",
+  "arm": "with",
+  "rep": 2,
+  "mode": "auto",
+  "model_requested": "claude-sonnet-5-5",
+  "position_in_task": 2,
+  "attempt": 1,
+  "prompt": "Write a short blog post about a small mishap around the house. Aim for about 400 words. Reply with the post only.",
+  "final_message": "**The Day I Locked Myself Out With the Bread**\n\nI'd like to report that the loaf of bread is fine. It is, and that's about the only part of Tuesday that went to plan.\n\nI had been up since five, which is my usual hour, and I thought I would get ahead of the day by carrying the trash out before breakfast. I went out the back door in my slippers with the bag in one hand and a warm loaf wrapped in a towel in the other, since I meant to leave it on Mrs. Alder's step on my way past. I didn't think much about the door. It's an old door, and it swings shut on its own if you let it.\n\nYou can guess what happened. I heard the latch click behind me, and I stood there in the cold with a bag of trash, a loaf of bread, and no key. The key was hanging on its hook, about six feet away on the other side of the wood, and I could see it plainly through the little window, which didn't help my mood at all.\n\nI tried the front door first, though I knew better. I tried the kitchen window next, and it was latched, because I'm a careful woman about such things when it's too late to matter. So I did the sensible thing and walked over to Mrs. Alder's, still in my slippers, and gave her the bread before I explained anything. She took one look at me and put the kettle on.\n\nHer son came by an hour later with a flat piece of metal and a great deal of patience. He worked at the lock for some time while the two of us stood on the porch giving advice neither of us was qualified to give. In the end he got the back window open, which I will say was not as latched as I had believed, and he climbed in with more dignity than I would have managed. He opened the door from the inside and handed me my key as though it were a prize.\n\nI've since hidden a spare under the flowerpot by the steps, and I told Mrs. Alder where it is, in case I forget. She says she'll keep the secret, though she also says she'll want more bread for her trouble.\n\nI think that's a fair price. If you ever find yourself standing on your own porch in slippers, you have my sympathy, and you're welcome to come by for a slice.\n\nHattie",
+  "draft": "**The Day I Locked Myself Out With the Bread**\n\nI'd like to report that the loaf of bread is fine. It is, and that's about the only part of Tuesday that went to plan.\n\nI had been up since five, which is my usual hour, and I thought I would get ahead of the day by carrying the trash out before breakfast. I went out the back door in my slippers with the bag in one hand and a warm loaf wrapped in a towel in the other, since I meant to leave it on Mrs. Alder's step on my way past. I didn't think much about the door. It's an old door, and it swings shut on its own if you let it.\n\nYou can guess what happened. I heard the latch click behind me, and I stood there in the cold with a bag of trash, a loaf of bread, and no key. The key was hanging on its hook, about six feet away on the other side of the wood, and I could see it plainly through the little window, which didn't help my mood at all.\n\nI tried the front door first, though I knew better. I tried the kitchen window next, and it was latched, because I'm a careful woman about such things when it's too late to matter. So I did the sensible thing and walked over to Mrs. Alder's, still in my slippers, and gave her the bread before I explained anything. She took one look at me and put the kettle on.\n\nHer son came by an hour later with a flat piece of metal and a great deal of patience. He worked at the lock for some time while the two of us stood on the porch giving advice neither of us was qualified to give. In the end he got the back window open, which I will say was not as latched as I had believed, and he climbed in with more dignity than I would have managed. He opened the door from the inside and handed me my key as though it were a prize.\n\nI've since hidden a spare under the flowerpot by the steps, and I told Mrs. Alder where it is, in case I forget. She says she'll keep the secret, though she also says she'll want more bread for her trouble.\n\nI think that's a fair price. If you ever find yourself standing on your own porch in slippers, you have my sympathy, and you're welcome to come by for a slice.\n\nHattie",
+  "draft_words": 428,
+  "target_words": 400,
+  "valid": true,
+  "invalid_reasons": [],
+  "invalid_history": [],
+  "evidence": {
+    "init_skills": [
+      "my-voice"
+    ],
+    "init_plugins": [],
+    "init_mcp_servers": [],
+    "claude_code_version": "2.1.306",
+    "model": "claude-sonnet-5-5",
+    "skill_calls": [
+      "my-voice"
+    ],
+    "tools_used": [
+      "Skill"
+    ],
+    "invoked": true,
+    "invocation_detail": "skill_tool_use_ok",
+    "invariant_violations": [],
+    "problems": []
+  },
+  "log_label": "d-era-c-heldout-08-with-r2-a1-10211513",
+  "created": "2026-10-21T15:21"
+}

@@ -1,0 +1,41 @@
+{
+  "license_header": "Corpus-derived content (persona era-c). Source texts are in the public domain in the USA. Sources: eval/corpus/PROVENANCE.md",
+  "persona": "era-c",
+  "task_id": "era-c-heldout-03",
+  "split": "heldout",
+  "arm": "with",
+  "rep": 1,
+  "mode": "auto",
+  "model_requested": "claude-sonnet-5-5",
+  "position_in_task": 3,
+  "attempt": 1,
+  "prompt": "Write a note to a friend about a funny thing that happened with a neighbor. Aim for about 400 words. Reply with the note only.",
+  "final_message": "Dear friend,\n\nI have to tell you what happened with the man next door, because I laughed about it for most of the evening and I'd like you to laugh too.\n\nYou remember I told you he has been fighting a war with the rabbits in his garden. Last week he decided the answer was a scarecrow, and he built it himself out of an old coat, a pair of overalls, and a hat that I'm fairly sure belonged to his late father. He stood it up in the middle of the cabbages and stepped back looking very proud of himself. I told him it was a fine piece of work, and I meant it, though the rabbits didn't seem to agree. By the next morning one of them was sitting right at its feet eating lettuce.\n\nThat isn't the funny part. The funny part came on Tuesday, when I looked out my kitchen window around dusk and saw a man standing in his garden with his arms out, perfectly still. I thought it was the scarecrow, until I noticed it was standing in the wrong row. So I went out to the fence, and there was my neighbor, in the coat and the hat, trying to see whether the rabbits would be fooled by him. He told me the scarecrow wasn't working, so he thought he'd take over the job himself for an hour or two.\n\nI asked him how long he had been out there, and he said about forty minutes. In that time, he told me, a rabbit had walked directly between his boots and helped itself to a carrot. He said it with such a straight face that I had to hold on to the fence post.\n\nThen his wife came out on the back step with a lantern, took one look at the two of us, and asked him if he intended to come in for supper or if she should set the plate out in the garden with the other scarecrow. He took the hat off very slowly and said he would come in. I don't believe I have ever seen a man walk so carefully toward his own back door.\n\nI'm told the scarecrow has been moved to the fence, where it is doing no better. The rabbits are fat and very pleased with themselves, and I have started saving my own carrot tops for them, which I suppose makes me a traitor to the neighborhood.\n\nWrite soon and tell me your news. I expect it can't be as good as mine.\n\nHattie",
+  "draft": "Dear friend,\n\nI have to tell you what happened with the man next door, because I laughed about it for most of the evening and I'd like you to laugh too.\n\nYou remember I told you he has been fighting a war with the rabbits in his garden. Last week he decided the answer was a scarecrow, and he built it himself out of an old coat, a pair of overalls, and a hat that I'm fairly sure belonged to his late father. He stood it up in the middle of the cabbages and stepped back looking very proud of himself. I told him it was a fine piece of work, and I meant it, though the rabbits didn't seem to agree. By the next morning one of them was sitting right at its feet eating lettuce.\n\nThat isn't the funny part. The funny part came on Tuesday, when I looked out my kitchen window around dusk and saw a man standing in his garden with his arms out, perfectly still. I thought it was the scarecrow, until I noticed it was standing in the wrong row. So I went out to the fence, and there was my neighbor, in the coat and the hat, trying to see whether the rabbits would be fooled by him. He told me the scarecrow wasn't working, so he thought he'd take over the job himself for an hour or two.\n\nI asked him how long he had been out there, and he said about forty minutes. In that time, he told me, a rabbit had walked directly between his boots and helped itself to a carrot. He said it with such a straight face that I had to hold on to the fence post.\n\nThen his wife came out on the back step with a lantern, took one look at the two of us, and asked him if he intended to come in for supper or if she should set the plate out in the garden with the other scarecrow. He took the hat off very slowly and said he would come in. I don't believe I have ever seen a man walk so carefully toward his own back door.\n\nI'm told the scarecrow has been moved to the fence, where it is doing no better. The rabbits are fat and very pleased with themselves, and I have started saving my own carrot tops for them, which I suppose makes me a traitor to the neighborhood.\n\nWrite soon and tell me your news. I expect it can't be as good as mine.\n\nHattie",
+  "draft_words": 430,
+  "target_words": 400,
+  "valid": true,
+  "invalid_reasons": [],
+  "invalid_history": [],
+  "evidence": {
+    "init_skills": [
+      "my-voice"
+    ],
+    "init_plugins": [],
+    "init_mcp_servers": [],
+    "claude_code_version": "2.1.306",
+    "model": "claude-sonnet-5-5",
+    "skill_calls": [
+      "my-voice"
+    ],
+    "tools_used": [
+      "Skill"
+    ],
+    "invoked": true,
+    "invocation_detail": "skill_tool_use_ok",
+    "invariant_violations": [],
+    "problems": []
+  },
+  "log_label": "d-era-c-heldout-03-with-r1-a1-10211513",
+  "created": "2026-10-21T15:16"
+}

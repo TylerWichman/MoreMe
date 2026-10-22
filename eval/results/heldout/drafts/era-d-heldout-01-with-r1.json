@@ -1,0 +1,41 @@
+{
+  "license_header": "Corpus-derived content (persona era-d). Source texts are in the public domain in the USA. Sources: eval/corpus/PROVENANCE.md",
+  "persona": "era-d",
+  "task_id": "era-d-heldout-01",
+  "split": "heldout",
+  "arm": "with",
+  "rep": 1,
+  "mode": "auto",
+  "model_requested": "claude-sonnet-5-5",
+  "position_in_task": 1,
+  "attempt": 1,
+  "prompt": "Write an email to a colleague about a day of worrying news and how you coped. Aim for about 400 words. Reply with the email only.",
+  "final_message": "Subject: Yesterday, and how I got through it\n\nDear Marianne,\n\nI owe you a proper note, because you caught me in the corridor yesterday looking like a ghost and I only mumbled something about \"a lot going on.\" Here is the longer version.\n\nIt started at about seven, before I'd even had my tea. First the budget email, the one that said \"realignment\" four times and nothing else, which in my experience means somebody's job is about to be the thing that gets realigned. Then, by nine, the rumor about the second floor. By lunch half the building was whispering in the kitchen, and I'll admit I was whispering right along with them -- I'm not above it, and neither are you, so don't pretend. Then came the news from home that Aunt Bett's test results were being \"reviewed,\" and I ask you, what is one supposed to do with a word like that? Reviewed! As if she were a restaurant.\n\nI was frankly useless by two o'clock. I read the same paragraph of the vendor report five times and could not have told you a word of it. I believe I refreshed my inbox some forty times, as if the answer might arrive if I only looked hard enough. Very sensible, very cool-headed. Ask anyone.\n\nWhat finally helped was almost embarrassingly small. I shut the laptop at four, put on my coat, and walked the long way round the reservoir, the muddy path nobody uses. It was cold and grey and the geese were behaving as though they owned the place, and one of them chased a man in a suit, which I enjoyed far more than I should have. I didn't solve anything out there. I just stopped feeding the worry for forty minutes, and it turned out to be a good deal smaller when I came back to it, or at least it had stopped shouting.\n\nThen I called Aunt Bett, who told me not to fuss and that she'd already ordered a new hat for the occasion. So that's where we are. No word yet from anyone about anything. I still don't know about the second floor, and I still don't love the word \"realignment,\" but I slept better than I expected.\n\nCome and have lunch with me Thursday, if you can bear it -- I'll let you do the whispering this time, and I'll just nod gravely and look informed.\n\nLouisa",
+  "draft": "Subject: Yesterday, and how I got through it\n\nDear Marianne,\n\nI owe you a proper note, because you caught me in the corridor yesterday looking like a ghost and I only mumbled something about \"a lot going on.\" Here is the longer version.\n\nIt started at about seven, before I'd even had my tea. First the budget email, the one that said \"realignment\" four times and nothing else, which in my experience means somebody's job is about to be the thing that gets realigned. Then, by nine, the rumor about the second floor. By lunch half the building was whispering in the kitchen, and I'll admit I was whispering right along with them -- I'm not above it, and neither are you, so don't pretend. Then came the news from home that Aunt Bett's test results were being \"reviewed,\" and I ask you, what is one supposed to do with a word like that? Reviewed! As if she were a restaurant.\n\nI was frankly useless by two o'clock. I read the same paragraph of the vendor report five times and could not have told you a word of it. I believe I refreshed my inbox some forty times, as if the answer might arrive if I only looked hard enough. Very sensible, very cool-headed. Ask anyone.\n\nWhat finally helped was almost embarrassingly small. I shut the laptop at four, put on my coat, and walked the long way round the reservoir, the muddy path nobody uses. It was cold and grey and the geese were behaving as though they owned the place, and one of them chased a man in a suit, which I enjoyed far more than I should have. I didn't solve anything out there. I just stopped feeding the worry for forty minutes, and it turned out to be a good deal smaller when I came back to it, or at least it had stopped shouting.\n\nThen I called Aunt Bett, who told me not to fuss and that she'd already ordered a new hat for the occasion. So that's where we are. No word yet from anyone about anything. I still don't know about the second floor, and I still don't love the word \"realignment,\" but I slept better than I expected.\n\nCome and have lunch with me Thursday, if you can bear it -- I'll let you do the whispering this time, and I'll just nod gravely and look informed.\n\nLouisa",
+  "draft_words": 405,
+  "target_words": 400,
+  "valid": true,
+  "invalid_reasons": [],
+  "invalid_history": [],
+  "evidence": {
+    "init_skills": [
+      "my-voice"
+    ],
+    "init_plugins": [],
+    "init_mcp_servers": [],
+    "claude_code_version": "2.1.306",
+    "model": "claude-sonnet-5-5",
+    "skill_calls": [
+      "my-voice"
+    ],
+    "tools_used": [
+      "Skill"
+    ],
+    "invoked": true,
+    "invocation_detail": "skill_tool_use_ok",
+    "invariant_violations": [],
+    "problems": []
+  },
+  "log_label": "d-era-d-heldout-01-with-r1-a1-10211529",
+  "created": "2026-10-21T15:29"
+}

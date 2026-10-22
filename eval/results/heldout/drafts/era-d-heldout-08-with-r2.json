@@ -1,0 +1,41 @@
+{
+  "license_header": "Corpus-derived content (persona era-d). Source texts are in the public domain in the USA. Sources: eval/corpus/PROVENANCE.md",
+  "persona": "era-d",
+  "task_id": "era-d-heldout-08",
+  "split": "heldout",
+  "arm": "with",
+  "rep": 2,
+  "mode": "auto",
+  "model_requested": "claude-sonnet-5-5",
+  "position_in_task": 1,
+  "attempt": 1,
+  "prompt": "Write a short blog post about a sudden change of plans. Aim for about 400 words. Reply with the post only.",
+  "final_message": "# We Were Going to the Coast\n\nWe were going to the coast. I want that on the record, because by Thursday evening everyone in the family was acting as though the coast had been my idea all along and I'd simply wandered off from it.\n\nThe plan was settled weeks ago. Three days at the little rented house with the crooked porch, the one where the kitchen tap only runs hot, which nobody has ever fixed and which we've all decided is a feature. I had bought the good bread. I had packed two books I won't read. I had even, heaven help me, ironed something.\n\nThen Thursday afternoon the phone rang, and it was my aunt -- not the sensible one, the other one -- announcing that the roof had given way over her back bedroom. Not entirely, she said, which is exactly the kind of thing she says. \"Not entirely\" turned out to mean a ceiling in the bed, a basin on the stairs, and a cat who refused to come down from the wardrobe on principle.\n\nSo now I ask you: what does one do? One could say, \"How dreadful, I do hope the cat recovers,\" and go on to the sea. I thought about it, I'll admit. I thought about it for nearly a full minute, standing in the hall with the bread under my arm like a fool. But my brother was already putting his boots on, and when he does that there's no use arguing, because he gets that look, the one he's had since he was nine and decided to rescue a goose.\n\nWe drove out in the dark, the three of us and a borrowed ladder that stuck out of the back window and made a dreadful whistling noise above forty miles an hour. Nobody said much. Somewhere past the cement works my brother started laughing and couldn't stop, and then I did too, and I couldn't tell you quite why, except that the bread was on my lap and the sea was going on without us somewhere in the other direction.\n\nThe roof, by the way, is a good deal worse than \"not entirely.\" I won't go into it. There was a bucket brigade involved, and a neighbor in a dressing gown who has opinions about flashing, and at one point I held a torch in my teeth. The cat came down at about two in the morning, looked at all of us, and went straight back up.\n\nI did eat the good bread, at least. Standing up, in a kitchen that smelled of wet plaster, off a chipped saucer.\n\nThe porch is still crooked, I suppose. We'll see about the coast -- maybe in the spring, maybe not.\n\nLouisa",
+  "draft": "# We Were Going to the Coast\n\nWe were going to the coast. I want that on the record, because by Thursday evening everyone in the family was acting as though the coast had been my idea all along and I'd simply wandered off from it.\n\nThe plan was settled weeks ago. Three days at the little rented house with the crooked porch, the one where the kitchen tap only runs hot, which nobody has ever fixed and which we've all decided is a feature. I had bought the good bread. I had packed two books I won't read. I had even, heaven help me, ironed something.\n\nThen Thursday afternoon the phone rang, and it was my aunt -- not the sensible one, the other one -- announcing that the roof had given way over her back bedroom. Not entirely, she said, which is exactly the kind of thing she says. \"Not entirely\" turned out to mean a ceiling in the bed, a basin on the stairs, and a cat who refused to come down from the wardrobe on principle.\n\nSo now I ask you: what does one do? One could say, \"How dreadful, I do hope the cat recovers,\" and go on to the sea. I thought about it, I'll admit. I thought about it for nearly a full minute, standing in the hall with the bread under my arm like a fool. But my brother was already putting his boots on, and when he does that there's no use arguing, because he gets that look, the one he's had since he was nine and decided to rescue a goose.\n\nWe drove out in the dark, the three of us and a borrowed ladder that stuck out of the back window and made a dreadful whistling noise above forty miles an hour. Nobody said much. Somewhere past the cement works my brother started laughing and couldn't stop, and then I did too, and I couldn't tell you quite why, except that the bread was on my lap and the sea was going on without us somewhere in the other direction.\n\nThe roof, by the way, is a good deal worse than \"not entirely.\" I won't go into it. There was a bucket brigade involved, and a neighbor in a dressing gown who has opinions about flashing, and at one point I held a torch in my teeth. The cat came down at about two in the morning, looked at all of us, and went straight back up.\n\nI did eat the good bread, at least. Standing up, in a kitchen that smelled of wet plaster, off a chipped saucer.\n\nThe porch is still crooked, I suppose. We'll see about the coast -- maybe in the spring, maybe not.\n\nLouisa",
+  "draft_words": 456,
+  "target_words": 400,
+  "valid": true,
+  "invalid_reasons": [],
+  "invalid_history": [],
+  "evidence": {
+    "init_skills": [
+      "my-voice"
+    ],
+    "init_plugins": [],
+    "init_mcp_servers": [],
+    "claude_code_version": "2.1.306",
+    "model": "claude-sonnet-5-5",
+    "skill_calls": [
+      "my-voice"
+    ],
+    "tools_used": [
+      "Skill"
+    ],
+    "invoked": true,
+    "invocation_detail": "skill_tool_use_ok",
+    "invariant_violations": [],
+    "problems": []
+  },
+  "log_label": "d-era-d-heldout-08-with-r2-a1-10220953",
+  "created": "2026-10-22T09:59"
+}

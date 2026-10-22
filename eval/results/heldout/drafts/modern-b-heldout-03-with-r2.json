@@ -1,0 +1,41 @@
+{
+  "license_header": "Corpus-derived content (persona modern-b). Adapted from works licensed under CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/); this file is licensed under CC BY-SA 4.0. Attribution, sources, and changes: eval/corpus/PROVENANCE.md",
+  "persona": "modern-b",
+  "task_id": "modern-b-heldout-03",
+  "split": "heldout",
+  "arm": "with",
+  "rep": 2,
+  "mode": "auto",
+  "model_requested": "claude-sonnet-5-5",
+  "position_in_task": 2,
+  "attempt": 1,
+  "prompt": "Write a note to a friend about what the sharing economy means for how companies are run. Aim for about 400 words. Reply with the note only.",
+  "final_message": "Hi,\n\nYou asked what the sharing economy means for how companies are run. Here's my answer.\n\nFirst, a definition. The \"sharing economy\" is a set of businesses that let people rent out things they already own, like a spare room, a car, or a few free hours. Airbnb and Uber are the best-known examples. The company doesn't own the rooms or the cars. It runs the platform that connects the two sides.\n\nThat changes what a manager actually manages. In a traditional firm, you control assets and employees. In a platform firm, you control the rules, the ratings, and the matching. Airbnb never has to build a hotel. It has to make sure a stranger will trust a host, and that's a different job.\n\nSecond, the org chart gets flatter. Thousands of hosts and drivers make small decisions all day, and no one can approve them from the top. So the company sets clear guardrails (pricing tools, review systems, insurance) and lets the people closest to each transaction decide. Quick decisions happen where the issues are.\n\nThird, feedback replaces planning. A platform learns from every ride and every stay. Reviews and usage data tell the company what to fix, often within days. Planning for a year ahead matters less than listening well right now.\n\nThere's a cost, though. When workers are independent contractors, the company gives up some control and some responsibility. That's why courts and regulators keep asking whether a driver is really a \"partner\" or an employee. Companies have to answer that question honestly, and it affects pay, benefits, and training.\n\nSo the lesson I take is this. You can run a large business with very few assets and very few layers, but only if you earn trust and share information openly. Your platform is only as good as the confidence people have in it.\n\nI'd like to hear what you think. You've used these services more than I have, so I'm curious whether the trust part matches your experience.\n\nTalk soon.",
+  "draft": "Hi,\n\nYou asked what the sharing economy means for how companies are run. Here's my answer.\n\nFirst, a definition. The \"sharing economy\" is a set of businesses that let people rent out things they already own, like a spare room, a car, or a few free hours. Airbnb and Uber are the best-known examples. The company doesn't own the rooms or the cars. It runs the platform that connects the two sides.\n\nThat changes what a manager actually manages. In a traditional firm, you control assets and employees. In a platform firm, you control the rules, the ratings, and the matching. Airbnb never has to build a hotel. It has to make sure a stranger will trust a host, and that's a different job.\n\nSecond, the org chart gets flatter. Thousands of hosts and drivers make small decisions all day, and no one can approve them from the top. So the company sets clear guardrails (pricing tools, review systems, insurance) and lets the people closest to each transaction decide. Quick decisions happen where the issues are.\n\nThird, feedback replaces planning. A platform learns from every ride and every stay. Reviews and usage data tell the company what to fix, often within days. Planning for a year ahead matters less than listening well right now.\n\nThere's a cost, though. When workers are independent contractors, the company gives up some control and some responsibility. That's why courts and regulators keep asking whether a driver is really a \"partner\" or an employee. Companies have to answer that question honestly, and it affects pay, benefits, and training.\n\nSo the lesson I take is this. You can run a large business with very few assets and very few layers, but only if you earn trust and share information openly. Your platform is only as good as the confidence people have in it.\n\nI'd like to hear what you think. You've used these services more than I have, so I'm curious whether the trust part matches your experience.\n\nTalk soon.",
+  "draft_words": 335,
+  "target_words": 400,
+  "valid": true,
+  "invalid_reasons": [],
+  "invalid_history": [],
+  "evidence": {
+    "init_skills": [
+      "my-voice"
+    ],
+    "init_plugins": [],
+    "init_mcp_servers": [],
+    "claude_code_version": "2.1.306",
+    "model": "claude-sonnet-5-5",
+    "skill_calls": [
+      "my-voice"
+    ],
+    "tools_used": [
+      "Skill"
+    ],
+    "invoked": true,
+    "invocation_detail": "skill_tool_use_ok",
+    "invariant_violations": [],
+    "problems": []
+  },
+  "log_label": "d-modern-b-heldout-03-with-r2-a1-10211521",
+  "created": "2026-10-21T15:24"
+}

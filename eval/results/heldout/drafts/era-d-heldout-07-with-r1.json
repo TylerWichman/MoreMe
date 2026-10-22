@@ -1,0 +1,41 @@
+{
+  "license_header": "Corpus-derived content (persona era-d). Source texts are in the public domain in the USA. Sources: eval/corpus/PROVENANCE.md",
+  "persona": "era-d",
+  "task_id": "era-d-heldout-07",
+  "split": "heldout",
+  "arm": "with",
+  "rep": 1,
+  "mode": "auto",
+  "model_requested": "claude-sonnet-5-5",
+  "position_in_task": 4,
+  "attempt": 1,
+  "prompt": "Write an email to a colleague about missing someone who is far away. Aim for about 400 words. Reply with the email only.",
+  "final_message": "Subject: Thinking about distance (and my sister, mostly)\n\nHi Dana,\n\nI know this is a strange note to get from someone who usually writes you about spreadsheets and deadlines, but you asked me last week why I'd gone so quiet in the break room, and I gave you some nonsense about being tired. I wasn't tired. Well, I was, but that wasn't it. I've been missing my sister, who is eleven time zones away and has been for almost a year now, and it has crept up on me in the most ridiculous ways.\n\nTake Tuesday. I was standing in the grocery store, perfectly sane, holding a jar of the pickled plums she's always going on about, and I very nearly bought it. Then I remembered that she can't taste it from there, and I'd have had to eat the whole jar myself -- which, to be fair, I considered. Then the whole thing turned me quite grumpy, and I put it back and bought bread instead. Bread! As if that solves anything.\n\nThe worst of it is the clock. When I'm finishing lunch she's going to bed, and when I'm winding down for the evening she's just sitting down to her first coffee. We try to talk, and we do manage it, but it's always a bit like shouting across a river. Somebody's too sleepy, somebody's distracted, the connection freezes right on the punchline of a story -- and I'm left staring at her frozen face with her mouth half open, which she would hate me saying. I laugh anyway. Then I feel dreadful about laughing, because that frozen face is nearly all I've got of her some weeks.\n\nI don't want to be dramatic about it. She's well, she's busy, she loves where she is, and I'd never ask her to come back just so I could have somebody to bicker with over the last slice of cake. (I'd think it, though. Frequently.) It's just that nobody warns you how small the missing is. It isn't tears and long train stations. It's a jar of plums, and a joke you save up and then forget, and the odd habit of turning round to say something to a person who isn't there.\n\nAnyway, that's the real reason for the quiet. I thought you'd rather know than keep guessing, and I suspect you've got someone like that too, somewhere. Don't answer if you'd rather not -- though if you've got a good trick for the evenings, I'm all ears. Or if you just want to come and get coffee and tell me about your weekend, I'd like that very much.\n\nLouisa",
+  "draft": "Subject: Thinking about distance (and my sister, mostly)\n\nHi Dana,\n\nI know this is a strange note to get from someone who usually writes you about spreadsheets and deadlines, but you asked me last week why I'd gone so quiet in the break room, and I gave you some nonsense about being tired. I wasn't tired. Well, I was, but that wasn't it. I've been missing my sister, who is eleven time zones away and has been for almost a year now, and it has crept up on me in the most ridiculous ways.\n\nTake Tuesday. I was standing in the grocery store, perfectly sane, holding a jar of the pickled plums she's always going on about, and I very nearly bought it. Then I remembered that she can't taste it from there, and I'd have had to eat the whole jar myself -- which, to be fair, I considered. Then the whole thing turned me quite grumpy, and I put it back and bought bread instead. Bread! As if that solves anything.\n\nThe worst of it is the clock. When I'm finishing lunch she's going to bed, and when I'm winding down for the evening she's just sitting down to her first coffee. We try to talk, and we do manage it, but it's always a bit like shouting across a river. Somebody's too sleepy, somebody's distracted, the connection freezes right on the punchline of a story -- and I'm left staring at her frozen face with her mouth half open, which she would hate me saying. I laugh anyway. Then I feel dreadful about laughing, because that frozen face is nearly all I've got of her some weeks.\n\nI don't want to be dramatic about it. She's well, she's busy, she loves where she is, and I'd never ask her to come back just so I could have somebody to bicker with over the last slice of cake. (I'd think it, though. Frequently.) It's just that nobody warns you how small the missing is. It isn't tears and long train stations. It's a jar of plums, and a joke you save up and then forget, and the odd habit of turning round to say something to a person who isn't there.\n\nAnyway, that's the real reason for the quiet. I thought you'd rather know than keep guessing, and I suspect you've got someone like that too, somewhere. Don't answer if you'd rather not -- though if you've got a good trick for the evenings, I'm all ears. Or if you just want to come and get coffee and tell me about your weekend, I'd like that very much.\n\nLouisa",
+  "draft_words": 438,
+  "target_words": 400,
+  "valid": true,
+  "invalid_reasons": [],
+  "invalid_history": [],
+  "evidence": {
+    "init_skills": [
+      "my-voice"
+    ],
+    "init_plugins": [],
+    "init_mcp_servers": [],
+    "claude_code_version": "2.1.306",
+    "model": "claude-sonnet-5-5",
+    "skill_calls": [
+      "my-voice"
+    ],
+    "tools_used": [
+      "Skill"
+    ],
+    "invoked": true,
+    "invocation_detail": "skill_tool_use_ok",
+    "invariant_violations": [],
+    "problems": []
+  },
+  "log_label": "d-era-d-heldout-07-with-r1-a1-10220953",
+  "created": "2026-10-22T09:59"
+}

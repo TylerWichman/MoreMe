@@ -1,0 +1,41 @@
+{
+  "license_header": "Corpus-derived content (persona era-f). Source texts are in the public domain in the USA. Sources: eval/corpus/PROVENANCE.md",
+  "persona": "era-f",
+  "task_id": "era-f-heldout-06",
+  "split": "heldout",
+  "arm": "with",
+  "rep": 1,
+  "mode": "auto",
+  "model_requested": "claude-sonnet-5-5",
+  "position_in_task": 4,
+  "attempt": 1,
+  "prompt": "Write a note to a friend about good manners and why they matter. Aim for about 400 words. Reply with the note only.",
+  "final_message": "Dear friend,\n\nI have been thinking about good manners lately, and I want to share what I have come to believe. Manners are not about being fancy. They are about how you treat the people near you.\n\nA simple \"please\" or \"thank you\" costs you nothing. Yet it tells the other person that you see them and that their time and effort matter to you. Few things are worth more than that.\n\nGood manners also make life easier for everyone. When you arrive on time, listen while others speak, and keep your word, people know they can count on you. Trust grows from small habits like these.\n\nYou may think small courtesies go unnoticed. They do not. People remember who held the door, who said hello, and who waited their turn. They also remember who did not.\n\nManners matter most when you are tired, upset, or in a hurry. Anyone can be kind when it is easy. Your character shows when you stay polite while things are hard.\n\nI do not mean you should hide how you feel. You can disagree with someone and still speak to them with respect. In fact, people will listen to you more closely when you do.\n\nGood manners are also a way of helping others. If you make a room a little warmer, a little calmer, someone in it will feel better because of you. The more you give this way, the more you receive in return.\n\nNobody gets this right every day. I certainly do not. What counts is that you notice your mistakes, say you are sorry when you need to, and try to do better tomorrow than you did today.\n\nSo here is what I ask of you. Pick one small habit this week. Maybe it is putting your phone away at dinner, or thanking the person who serves you. Practice it until it feels natural, then add another.\n\nYou already have a good heart. Good manners are simply the way that heart shows itself to the world. Keep working at it, and you will find that doors open for you and friendships last.\n\nI am proud of the person you are becoming, and I am glad to count you as my friend. Write to me soon and tell me how you are getting on.\n\nSamuel",
+  "draft": "Dear friend,\n\nI have been thinking about good manners lately, and I want to share what I have come to believe. Manners are not about being fancy. They are about how you treat the people near you.\n\nA simple \"please\" or \"thank you\" costs you nothing. Yet it tells the other person that you see them and that their time and effort matter to you. Few things are worth more than that.\n\nGood manners also make life easier for everyone. When you arrive on time, listen while others speak, and keep your word, people know they can count on you. Trust grows from small habits like these.\n\nYou may think small courtesies go unnoticed. They do not. People remember who held the door, who said hello, and who waited their turn. They also remember who did not.\n\nManners matter most when you are tired, upset, or in a hurry. Anyone can be kind when it is easy. Your character shows when you stay polite while things are hard.\n\nI do not mean you should hide how you feel. You can disagree with someone and still speak to them with respect. In fact, people will listen to you more closely when you do.\n\nGood manners are also a way of helping others. If you make a room a little warmer, a little calmer, someone in it will feel better because of you. The more you give this way, the more you receive in return.\n\nNobody gets this right every day. I certainly do not. What counts is that you notice your mistakes, say you are sorry when you need to, and try to do better tomorrow than you did today.\n\nSo here is what I ask of you. Pick one small habit this week. Maybe it is putting your phone away at dinner, or thanking the person who serves you. Practice it until it feels natural, then add another.\n\nYou already have a good heart. Good manners are simply the way that heart shows itself to the world. Keep working at it, and you will find that doors open for you and friendships last.\n\nI am proud of the person you are becoming, and I am glad to count you as my friend. Write to me soon and tell me how you are getting on.\n\nSamuel",
+  "draft_words": 385,
+  "target_words": 400,
+  "valid": true,
+  "invalid_reasons": [],
+  "invalid_history": [],
+  "evidence": {
+    "init_skills": [
+      "my-voice"
+    ],
+    "init_plugins": [],
+    "init_mcp_servers": [],
+    "claude_code_version": "2.1.306",
+    "model": "claude-sonnet-5-5",
+    "skill_calls": [
+      "my-voice"
+    ],
+    "tools_used": [
+      "Skill"
+    ],
+    "invoked": true,
+    "invocation_detail": "skill_tool_use_ok",
+    "invariant_violations": [],
+    "problems": []
+  },
+  "log_label": "d-era-f-heldout-06-with-r1-a1-10221009",
+  "created": "2026-10-22T10:14"
+}

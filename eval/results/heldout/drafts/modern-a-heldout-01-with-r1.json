@@ -1,0 +1,41 @@
+{
+  "license_header": "Corpus-derived content (persona modern-a). Contains public sector information licensed under the Open Government Licence v3.0 (https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/). Sources and changes: eval/corpus/PROVENANCE.md",
+  "persona": "modern-a",
+  "task_id": "modern-a-heldout-01",
+  "split": "heldout",
+  "arm": "with",
+  "rep": 1,
+  "mode": "auto",
+  "model_requested": "claude-sonnet-5-5",
+  "position_in_task": 1,
+  "attempt": 1,
+  "prompt": "Write an email to a colleague about the anniversary of a public website your team runs. Aim for about 400 words. Reply with the email only.",
+  "final_message": "Subject: Our website's anniversary next month\n\nHi Sam,\n\nWe're coming up to the anniversary of the website, and I'd like your help marking it. It's a good chance to show the public what we've built and what's next.\n\nI'm not planning anything big. We're a small team, and the site's value is in how well it works day to day. I'd like a short, honest look back. What did we launch, what did we get wrong, and what have we learned?\n\nHere's what I have in mind. First, a blog post from the team on the last year. It should be plain and specific. I'd like it to cover the changes users noticed most, such as faster pages, clearer content, and better search. Second, a short summary of our performance data. We already publish a lot of it, so this is mostly pulling it together in one place. Third, a note on what we're working on next, so people know where we're heading.\n\nI'd like you to take the lead on the data summary. You know the analytics better than any of us. Please pick the five or six measures that tell the clearest story. I'd rather we show a few numbers people can follow than a long table nobody reads. If a number looks bad, we should include it and say what we're doing about it.\n\nI'll draft the blog post and send it round for comments. Priya has offered to look at the accessibility section, which I think is a good fit. She's been closest to that work.\n\nWe should also thank the people who've given us feedback. Many of the best changes came from user comments and support emails. A short line in the post would be a nice touch, and I think we owe it to them.\n\nOn timing, I'd like a first draft of everything by the end of next week. That leaves us time to review, fix anything that's unclear, and get sign-off from comms. We don't need a launch event. A post, a social message, and a banner on the homepage will do.\n\nI'm happy to talk it through if that's easier. I'm free most afternoons this week, so just say when. If you think we're missing something obvious, tell me. I'd rather hear it now than after we've published.\n\nThanks for taking this on. I'm looking forward to seeing what the numbers say.\n\nGraham",
+  "draft": "Subject: Our website's anniversary next month\n\nHi Sam,\n\nWe're coming up to the anniversary of the website, and I'd like your help marking it. It's a good chance to show the public what we've built and what's next.\n\nI'm not planning anything big. We're a small team, and the site's value is in how well it works day to day. I'd like a short, honest look back. What did we launch, what did we get wrong, and what have we learned?\n\nHere's what I have in mind. First, a blog post from the team on the last year. It should be plain and specific. I'd like it to cover the changes users noticed most, such as faster pages, clearer content, and better search. Second, a short summary of our performance data. We already publish a lot of it, so this is mostly pulling it together in one place. Third, a note on what we're working on next, so people know where we're heading.\n\nI'd like you to take the lead on the data summary. You know the analytics better than any of us. Please pick the five or six measures that tell the clearest story. I'd rather we show a few numbers people can follow than a long table nobody reads. If a number looks bad, we should include it and say what we're doing about it.\n\nI'll draft the blog post and send it round for comments. Priya has offered to look at the accessibility section, which I think is a good fit. She's been closest to that work.\n\nWe should also thank the people who've given us feedback. Many of the best changes came from user comments and support emails. A short line in the post would be a nice touch, and I think we owe it to them.\n\nOn timing, I'd like a first draft of everything by the end of next week. That leaves us time to review, fix anything that's unclear, and get sign-off from comms. We don't need a launch event. A post, a social message, and a banner on the homepage will do.\n\nI'm happy to talk it through if that's easier. I'm free most afternoons this week, so just say when. If you think we're missing something obvious, tell me. I'd rather hear it now than after we've published.\n\nThanks for taking this on. I'm looking forward to seeing what the numbers say.\n\nGraham",
+  "draft_words": 403,
+  "target_words": 400,
+  "valid": true,
+  "invalid_reasons": [],
+  "invalid_history": [],
+  "evidence": {
+    "init_skills": [
+      "my-voice"
+    ],
+    "init_plugins": [],
+    "init_mcp_servers": [],
+    "claude_code_version": "2.1.303",
+    "model": "claude-sonnet-5-5",
+    "skill_calls": [
+      "my-voice"
+    ],
+    "tools_used": [
+      "Skill"
+    ],
+    "invoked": true,
+    "invocation_detail": "skill_tool_use_ok",
+    "invariant_violations": [],
+    "problems": []
+  },
+  "log_label": "d-modern-a-heldout-01-with-r1-a1-10210946",
+  "created": "2026-10-21T09:46"
+}

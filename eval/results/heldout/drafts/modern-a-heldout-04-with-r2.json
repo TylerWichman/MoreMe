@@ -1,0 +1,41 @@
+{
+  "license_header": "Corpus-derived content (persona modern-a). Contains public sector information licensed under the Open Government Licence v3.0 (https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/). Sources and changes: eval/corpus/PROVENANCE.md",
+  "persona": "modern-a",
+  "task_id": "modern-a-heldout-04",
+  "split": "heldout",
+  "arm": "with",
+  "rep": 2,
+  "mode": "auto",
+  "model_requested": "claude-sonnet-5-5",
+  "position_in_task": 4,
+  "attempt": 1,
+  "prompt": "Write an email to a colleague about how to change a large, slow organization. Aim for about 400 words. Reply with the email only.",
+  "final_message": "Subject: How we change a big, slow organisation\n\nHere's my advice on changing a large organisation that moves slowly. It's what we've learned the hard way, and I think it will help with your project.\n\nDon't start with the grand plan. Big plans take months to approve, and by then the facts have changed. We start small, with one team and one real problem. Then we show it working.\n\nFind the people who already want the change. Every organisation has them. They're usually close to the work, and they're tired of the old way. Give them support and cover. Their results will persuade more people than any slide deck we write.\n\nTalk about users, not structures. Arguments about boards, budgets and reporting lines go nowhere. Arguments about what a person needs from the service are much harder to dismiss. When we can show a real person struggling with a real form, the room tends to go quiet.\n\nExpect the work to change as you do it. Requirements will shift, budgets will move, and the scope won't stay put. That's normal. So we should release small pieces often and learn from each one. It's faster than waiting for a perfect version that nobody has tested.\n\nRemove things as well as adding them. Slow organisations are usually slow because of what's piled up: extra approvals, duplicate meetings, boards that no one remembers setting up. Each time we start something new, we should ask what we can stop. If we only add, we make the problem worse.\n\nBe honest about the pace. Some changes will take years. I'd rather we say that plainly than promise a quick win and lose trust. Small wins along the way help, as long as we're clear they're steps and not the finish line.\n\nKeep senior people close, but don't wait on them. We need a sponsor who can clear blockers and speak up for us. We don't need sign-off for every decision. Share progress regularly and in plain words, and they'll back us more readily.\n\nFinally, look after the team. Change is tiring, and the pushback can feel personal. I'd like us to check in with each other often and celebrate what's working.\n\nIf it helps, I'm happy to walk through your plan and point out where I think we'd hit resistance. I've got time on Thursday afternoon.\n\nGraham",
+  "draft": "Subject: How we change a big, slow organisation\n\nHere's my advice on changing a large organisation that moves slowly. It's what we've learned the hard way, and I think it will help with your project.\n\nDon't start with the grand plan. Big plans take months to approve, and by then the facts have changed. We start small, with one team and one real problem. Then we show it working.\n\nFind the people who already want the change. Every organisation has them. They're usually close to the work, and they're tired of the old way. Give them support and cover. Their results will persuade more people than any slide deck we write.\n\nTalk about users, not structures. Arguments about boards, budgets and reporting lines go nowhere. Arguments about what a person needs from the service are much harder to dismiss. When we can show a real person struggling with a real form, the room tends to go quiet.\n\nExpect the work to change as you do it. Requirements will shift, budgets will move, and the scope won't stay put. That's normal. So we should release small pieces often and learn from each one. It's faster than waiting for a perfect version that nobody has tested.\n\nRemove things as well as adding them. Slow organisations are usually slow because of what's piled up: extra approvals, duplicate meetings, boards that no one remembers setting up. Each time we start something new, we should ask what we can stop. If we only add, we make the problem worse.\n\nBe honest about the pace. Some changes will take years. I'd rather we say that plainly than promise a quick win and lose trust. Small wins along the way help, as long as we're clear they're steps and not the finish line.\n\nKeep senior people close, but don't wait on them. We need a sponsor who can clear blockers and speak up for us. We don't need sign-off for every decision. Share progress regularly and in plain words, and they'll back us more readily.\n\nFinally, look after the team. Change is tiring, and the pushback can feel personal. I'd like us to check in with each other often and celebrate what's working.\n\nIf it helps, I'm happy to walk through your plan and point out where I think we'd hit resistance. I've got time on Thursday afternoon.\n\nGraham",
+  "draft_words": 393,
+  "target_words": 400,
+  "valid": true,
+  "invalid_reasons": [],
+  "invalid_history": [],
+  "evidence": {
+    "init_skills": [
+      "my-voice"
+    ],
+    "init_plugins": [],
+    "init_mcp_servers": [],
+    "claude_code_version": "2.1.303",
+    "model": "claude-sonnet-5-5",
+    "skill_calls": [
+      "my-voice"
+    ],
+    "tools_used": [
+      "Skill"
+    ],
+    "invoked": true,
+    "invocation_detail": "skill_tool_use_ok",
+    "invariant_violations": [],
+    "problems": []
+  },
+  "log_label": "d-modern-a-heldout-04-with-r2-a1-10210946",
+  "created": "2026-10-21T09:50"
+}

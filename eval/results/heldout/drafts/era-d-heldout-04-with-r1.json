@@ -1,0 +1,41 @@
+{
+  "license_header": "Corpus-derived content (persona era-d). Source texts are in the public domain in the USA. Sources: eval/corpus/PROVENANCE.md",
+  "persona": "era-d",
+  "task_id": "era-d-heldout-04",
+  "split": "heldout",
+  "arm": "with",
+  "rep": 1,
+  "mode": "auto",
+  "model_requested": "claude-sonnet-5-5",
+  "position_in_task": 5,
+  "attempt": 1,
+  "prompt": "Write an email to a colleague about rumors going around town. Aim for about 400 words. Reply with the email only.",
+  "final_message": "Subject: You will never guess what I heard\n\nDear Margaret,\n\nI have been bursting to tell you this since Tuesday, and I held off only because I wanted to be sure I wasn't repeating something silly. I'm still not sure. But after the third person told me the same thing in the same hushed voice, I decided it was either true or very well rehearsed.\n\nThe rumor, in case it hasn't reached your corner of the building yet, is that the east office is being closed at the end of the year and all of us are to be folded into the main branch. Mr. Hallworth was supposedly seen walking the second floor with a man carrying a tape measure -- a tape measure! -- and you know how the whole town reads a tape measure. By Wednesday noon it had grown into layoffs, and by supper it was a sale of the whole building to the people who want to put in a hotel. I give it until Friday before somebody says it's to become a skating rink.\n\nNow, I don't believe the half of it. The man with the tape measure might easily have been there about the windows, which haven't shut properly since the winter before last, and which I have complained about so often that I'm surprised they haven't sent someone just to quiet me. But I'll admit that when Mrs. Pruitt told me, in the stairwell, that her cousin's husband \"has it on good authority,\" I felt my stomach do something unpleasant. She says that about everything, mind you. She had it on good authority that the bakery was closing, and it has been closing for three years and still sells the best rolls on the street.\n\nWhat I can't decide is whether to ask Mr. Hallworth straight out. Part of me thinks it would be the honest thing, and part of me thinks he would give me that look over his spectacles and say something perfectly smooth that tells me nothing at all. He is very good at that. I have watched him do it to better people than me.\n\nSo here is what I'd like from you. You sit nearer to his door than I do, and you hear things I don't. Have you noticed anything? Any odd visitors, any closed doors that are usually open, any sudden fondness for paperwork? Don't spare me if it's bad, but do not tell me if it's only Mrs. Pruitt again, because I shall never hear the end of it from myself.\n\nWrite back soon, or find me at the tea urn tomorrow. I'll be the one pretending not to look worried.\n\nLouisa",
+  "draft": "Subject: You will never guess what I heard\n\nDear Margaret,\n\nI have been bursting to tell you this since Tuesday, and I held off only because I wanted to be sure I wasn't repeating something silly. I'm still not sure. But after the third person told me the same thing in the same hushed voice, I decided it was either true or very well rehearsed.\n\nThe rumor, in case it hasn't reached your corner of the building yet, is that the east office is being closed at the end of the year and all of us are to be folded into the main branch. Mr. Hallworth was supposedly seen walking the second floor with a man carrying a tape measure -- a tape measure! -- and you know how the whole town reads a tape measure. By Wednesday noon it had grown into layoffs, and by supper it was a sale of the whole building to the people who want to put in a hotel. I give it until Friday before somebody says it's to become a skating rink.\n\nNow, I don't believe the half of it. The man with the tape measure might easily have been there about the windows, which haven't shut properly since the winter before last, and which I have complained about so often that I'm surprised they haven't sent someone just to quiet me. But I'll admit that when Mrs. Pruitt told me, in the stairwell, that her cousin's husband \"has it on good authority,\" I felt my stomach do something unpleasant. She says that about everything, mind you. She had it on good authority that the bakery was closing, and it has been closing for three years and still sells the best rolls on the street.\n\nWhat I can't decide is whether to ask Mr. Hallworth straight out. Part of me thinks it would be the honest thing, and part of me thinks he would give me that look over his spectacles and say something perfectly smooth that tells me nothing at all. He is very good at that. I have watched him do it to better people than me.\n\nSo here is what I'd like from you. You sit nearer to his door than I do, and you hear things I don't. Have you noticed anything? Any odd visitors, any closed doors that are usually open, any sudden fondness for paperwork? Don't spare me if it's bad, but do not tell me if it's only Mrs. Pruitt again, because I shall never hear the end of it from myself.\n\nWrite back soon, or find me at the tea urn tomorrow. I'll be the one pretending not to look worried.\n\nLouisa",
+  "draft_words": 445,
+  "target_words": 400,
+  "valid": true,
+  "invalid_reasons": [],
+  "invalid_history": [],
+  "evidence": {
+    "init_skills": [
+      "my-voice"
+    ],
+    "init_plugins": [],
+    "init_mcp_servers": [],
+    "claude_code_version": "2.1.306",
+    "model": "claude-sonnet-5-5",
+    "skill_calls": [
+      "my-voice"
+    ],
+    "tools_used": [
+      "Skill"
+    ],
+    "invoked": true,
+    "invocation_detail": "skill_tool_use_ok",
+    "invariant_violations": [],
+    "problems": []
+  },
+  "log_label": "d-era-d-heldout-04-with-r1-a1-10220953",
+  "created": "2026-10-22T09:56"
+}

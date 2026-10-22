@@ -1,0 +1,41 @@
+{
+  "license_header": "Corpus-derived content (persona modern-a). Contains public sector information licensed under the Open Government Licence v3.0 (https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/). Sources and changes: eval/corpus/PROVENANCE.md",
+  "persona": "modern-a",
+  "task_id": "modern-a-heldout-02",
+  "split": "heldout",
+  "arm": "with",
+  "rep": 1,
+  "mode": "auto",
+  "model_requested": "claude-sonnet-5-5",
+  "position_in_task": 5,
+  "attempt": 1,
+  "prompt": "Write a short blog post about replacing an old paper-based payments process with a digital service. Aim for about 400 words. Reply with the post only.",
+  "final_message": "# We've replaced the paper payment form\n\nWe've retired the paper form people used to pay for their licence. Everyone can now pay online, in about three minutes.\n\nThe old process worked, but only just. People printed a form, filled it in by hand and posted it with a cheque. Our team opened the post, keyed in the details and banked the money. A payment could take two weeks to show up on someone's record. Around one in six forms came back because of a missing signature or an unreadable number.\n\nThat's a lot of effort for everyone involved. So we started with the people who use the service.\n\nWe spent the first month sitting with the staff who handle the post. We also called users and asked them to talk us through the last time they paid. We learned three things. People didn't know what the fee was until they'd found the right leaflet. They worried that the cheque had got lost. And they hated waiting to find out whether it had worked.\n\nSo we built the simplest thing that could help. Users now see the fee on the first page. They pay by card or bank transfer. They get a confirmation straight away, by email and on screen. If something goes wrong, the error message tells them what to fix.\n\nWe didn't switch everything off on day one. For eight weeks we ran both routes side by side. That let us watch what happened and fix problems early. We found, for instance, that the confirmation email was landing in some people's spam folders. We changed the sender details and the problem went away.\n\nWe also kept a phone line open for anyone who can't use the online service. Going digital shouldn't leave people behind. About 4% of users still call us, and we're happy to help them.\n\nHere's what changed in practice:\n\n- Payments now show on a record the same day, not after two weeks.\n- Rejected submissions have fallen from one in six to fewer than one in fifty.\n- Our team has stopped keying in data and now spends that time helping people with complex cases.\n\nI'm proud of how the team handled this. Nobody wanted to scrap something that people relied on without a plan. We tested it, listened to feedback and changed our minds more than once.\n\nThe takeaway is simple. Start with what users actually struggle with, not with the technology. Build a small version, run it alongside the old one, and keep improving it. Paper can go once the digital route works better for everyone.\n\nGraham",
+  "draft": "# We've replaced the paper payment form\n\nWe've retired the paper form people used to pay for their licence. Everyone can now pay online, in about three minutes.\n\nThe old process worked, but only just. People printed a form, filled it in by hand and posted it with a cheque. Our team opened the post, keyed in the details and banked the money. A payment could take two weeks to show up on someone's record. Around one in six forms came back because of a missing signature or an unreadable number.\n\nThat's a lot of effort for everyone involved. So we started with the people who use the service.\n\nWe spent the first month sitting with the staff who handle the post. We also called users and asked them to talk us through the last time they paid. We learned three things. People didn't know what the fee was until they'd found the right leaflet. They worried that the cheque had got lost. And they hated waiting to find out whether it had worked.\n\nSo we built the simplest thing that could help. Users now see the fee on the first page. They pay by card or bank transfer. They get a confirmation straight away, by email and on screen. If something goes wrong, the error message tells them what to fix.\n\nWe didn't switch everything off on day one. For eight weeks we ran both routes side by side. That let us watch what happened and fix problems early. We found, for instance, that the confirmation email was landing in some people's spam folders. We changed the sender details and the problem went away.\n\nWe also kept a phone line open for anyone who can't use the online service. Going digital shouldn't leave people behind. About 4% of users still call us, and we're happy to help them.\n\nHere's what changed in practice:\n\n- Payments now show on a record the same day, not after two weeks.\n- Rejected submissions have fallen from one in six to fewer than one in fifty.\n- Our team has stopped keying in data and now spends that time helping people with complex cases.\n\nI'm proud of how the team handled this. Nobody wanted to scrap something that people relied on without a plan. We tested it, listened to feedback and changed our minds more than once.\n\nThe takeaway is simple. Start with what users actually struggle with, not with the technology. Build a small version, run it alongside the old one, and keep improving it. Paper can go once the digital route works better for everyone.\n\nGraham",
+  "draft_words": 430,
+  "target_words": 400,
+  "valid": true,
+  "invalid_reasons": [],
+  "invalid_history": [],
+  "evidence": {
+    "init_skills": [
+      "my-voice"
+    ],
+    "init_plugins": [],
+    "init_mcp_servers": [],
+    "claude_code_version": "2.1.303",
+    "model": "claude-sonnet-5-5",
+    "skill_calls": [
+      "my-voice"
+    ],
+    "tools_used": [
+      "Skill"
+    ],
+    "invoked": true,
+    "invocation_detail": "skill_tool_use_ok",
+    "invariant_violations": [],
+    "problems": []
+  },
+  "log_label": "d-modern-a-heldout-02-with-r1-a1-10210946",
+  "created": "2026-10-21T09:48"
+}

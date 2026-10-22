@@ -1,0 +1,41 @@
+{
+  "license_header": "Corpus-derived content (persona modern-b). Adapted from works licensed under CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/); this file is licensed under CC BY-SA 4.0. Attribution, sources, and changes: eval/corpus/PROVENANCE.md",
+  "persona": "modern-b",
+  "task_id": "modern-b-heldout-08",
+  "split": "heldout",
+  "arm": "with",
+  "rep": 1,
+  "mode": "auto",
+  "model_requested": "claude-sonnet-5-5",
+  "position_in_task": 5,
+  "attempt": 1,
+  "prompt": "Write a short blog post about helping a company adapt to fast change. Aim for about 400 words. Reply with the post only.",
+  "final_message": "# Helping a Company Adapt to Fast Change\n\nA few years ago, I worked with a mid-sized distribution company whose market shifted almost overnight. Their largest customers changed how they ordered, and the old planning cycle couldn't keep up. Leadership wanted a new five-year plan. I suggested something smaller.\n\nLet me define the problem first. \"Adaptation\" is the ability to notice a change, decide what to do, and act before the window closes. Most companies are good at the first step and slow at the other two.\n\nHere's what I mean. At this company, the sales team saw the shift in March. The warehouse managers felt it in April. But the decision to change purchasing rules didn't come until July, because it had to pass through four layers of approval. By then, competitors had already moved.\n\nThe fix wasn't a better plan. Plans assume you can see the road ahead, and in fast change you can't. Each choice reveals the next set of choices (like walking through a door and finding three more). What helps is feedback, not forecasting.\n\nSo we made three changes.\n\nFirst, we moved decisions closer to the problem. Warehouse leads could now adjust purchasing within set limits, without waiting for sign-off. They knew the facts. The executives didn't need to.\n\nSecond, we made information visible to everyone. A simple weekly summary showed orders, delays, and customer complaints. When a team made a choice, they posted it where others could see it and ask questions. That's real-time transparency, and it prevented two teams from solving the same problem in opposite ways.\n\nThird, we shortened the loop. Instead of annual reviews, we held fifteen-minute check-ins every week. Each one asked the same questions. What changed? What did we try? What should we adjust?\n\nNone of this was dramatic. Within three months, the company's response time dropped from weeks to days. People also seemed calmer, which surprised me at first. But it makes sense. Uncertainty feels worse when you have no way to respond to it.\n\nIf your company is facing fast change, I'd start with one question: where does a decision get stuck? Find that spot, and you've probably found your biggest delay. You don't need to redesign the whole organization. You need to move one decision closer to the people who understand it best, and then watch what happens.\n\nSpeed isn't about working harder. It's about removing the waiting.",
+  "draft": "# Helping a Company Adapt to Fast Change\n\nA few years ago, I worked with a mid-sized distribution company whose market shifted almost overnight. Their largest customers changed how they ordered, and the old planning cycle couldn't keep up. Leadership wanted a new five-year plan. I suggested something smaller.\n\nLet me define the problem first. \"Adaptation\" is the ability to notice a change, decide what to do, and act before the window closes. Most companies are good at the first step and slow at the other two.\n\nHere's what I mean. At this company, the sales team saw the shift in March. The warehouse managers felt it in April. But the decision to change purchasing rules didn't come until July, because it had to pass through four layers of approval. By then, competitors had already moved.\n\nThe fix wasn't a better plan. Plans assume you can see the road ahead, and in fast change you can't. Each choice reveals the next set of choices (like walking through a door and finding three more). What helps is feedback, not forecasting.\n\nSo we made three changes.\n\nFirst, we moved decisions closer to the problem. Warehouse leads could now adjust purchasing within set limits, without waiting for sign-off. They knew the facts. The executives didn't need to.\n\nSecond, we made information visible to everyone. A simple weekly summary showed orders, delays, and customer complaints. When a team made a choice, they posted it where others could see it and ask questions. That's real-time transparency, and it prevented two teams from solving the same problem in opposite ways.\n\nThird, we shortened the loop. Instead of annual reviews, we held fifteen-minute check-ins every week. Each one asked the same questions. What changed? What did we try? What should we adjust?\n\nNone of this was dramatic. Within three months, the company's response time dropped from weeks to days. People also seemed calmer, which surprised me at first. But it makes sense. Uncertainty feels worse when you have no way to respond to it.\n\nIf your company is facing fast change, I'd start with one question: where does a decision get stuck? Find that spot, and you've probably found your biggest delay. You don't need to redesign the whole organization. You need to move one decision closer to the people who understand it best, and then watch what happens.\n\nSpeed isn't about working harder. It's about removing the waiting.",
+  "draft_words": 407,
+  "target_words": 400,
+  "valid": true,
+  "invalid_reasons": [],
+  "invalid_history": [],
+  "evidence": {
+    "init_skills": [
+      "my-voice"
+    ],
+    "init_plugins": [],
+    "init_mcp_servers": [],
+    "claude_code_version": "2.1.306",
+    "model": "claude-sonnet-5-5",
+    "skill_calls": [
+      "my-voice"
+    ],
+    "tools_used": [
+      "Skill"
+    ],
+    "invoked": true,
+    "invocation_detail": "skill_tool_use_ok",
+    "invariant_violations": [],
+    "problems": []
+  },
+  "log_label": "d-modern-b-heldout-08-with-r1-a1-10211521",
+  "created": "2026-10-21T15:29"
+}

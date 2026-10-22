@@ -1,0 +1,41 @@
+{
+  "license_header": "Corpus-derived content (persona era-f). Source texts are in the public domain in the USA. Sources: eval/corpus/PROVENANCE.md",
+  "persona": "era-f",
+  "task_id": "era-f-heldout-04",
+  "split": "heldout",
+  "arm": "with",
+  "rep": 2,
+  "mode": "auto",
+  "model_requested": "claude-sonnet-5-5",
+  "position_in_task": 2,
+  "attempt": 1,
+  "prompt": "Write an email to a colleague about doing every task well, however small. Aim for about 400 words. Reply with the email only.",
+  "final_message": "Subject: Doing every task well\n\nDear colleague,\n\nI have been thinking about how we treat the small jobs on our desks. I want to share one idea with you: every task deserves our best effort, however small it looks.\n\nThink about the notes we send home, the attendance sheet, or the five minutes we spend tidying a room before class. Nobody will praise you for these things. Still, each one shows what kind of worker you are.\n\nA person who does the small thing carelessly will soon do the large thing carelessly too. Habits do not stay in their own corner. If you rush a short reply to a parent, you will find it easier to rush a lesson plan next week.\n\nThe reverse is also true. When you take care with a simple task, you build a habit of care. That habit will be there when the hard work arrives, and it will carry you through.\n\nI also believe small work matters to the people who receive it. A clear note saves a parent a phone call. A clean worksheet helps a student focus on the lesson instead of the smudges. A room set in good order tells a student that someone expected them to come and learn.\n\nI do not ask you to be perfect. I ask you to do each job as well as you can today, and then a little better tomorrow. If you copied a form carelessly this week, copy the next one with more attention. That is all it takes to improve.\n\nYou may say that you have too much to do already. I understand, and I feel the same pressure myself. But I have found that doing a task well the first time usually takes less time than fixing it later. Careful work saves effort in the end.\n\nTry this for one week. Pick the smallest job you do each day and give it your full attention. Notice how you feel when it is done. I think you will find a quiet satisfaction in it, and I think others will notice the change in you before long.\n\nYou have already shown that you care about our students. This is one more way to show it. Let me know how the week goes, and I would be glad to hear what you learn.\n\nSamuel",
+  "draft": "Subject: Doing every task well\n\nDear colleague,\n\nI have been thinking about how we treat the small jobs on our desks. I want to share one idea with you: every task deserves our best effort, however small it looks.\n\nThink about the notes we send home, the attendance sheet, or the five minutes we spend tidying a room before class. Nobody will praise you for these things. Still, each one shows what kind of worker you are.\n\nA person who does the small thing carelessly will soon do the large thing carelessly too. Habits do not stay in their own corner. If you rush a short reply to a parent, you will find it easier to rush a lesson plan next week.\n\nThe reverse is also true. When you take care with a simple task, you build a habit of care. That habit will be there when the hard work arrives, and it will carry you through.\n\nI also believe small work matters to the people who receive it. A clear note saves a parent a phone call. A clean worksheet helps a student focus on the lesson instead of the smudges. A room set in good order tells a student that someone expected them to come and learn.\n\nI do not ask you to be perfect. I ask you to do each job as well as you can today, and then a little better tomorrow. If you copied a form carelessly this week, copy the next one with more attention. That is all it takes to improve.\n\nYou may say that you have too much to do already. I understand, and I feel the same pressure myself. But I have found that doing a task well the first time usually takes less time than fixing it later. Careful work saves effort in the end.\n\nTry this for one week. Pick the smallest job you do each day and give it your full attention. Notice how you feel when it is done. I think you will find a quiet satisfaction in it, and I think others will notice the change in you before long.\n\nYou have already shown that you care about our students. This is one more way to show it. Let me know how the week goes, and I would be glad to hear what you learn.\n\nSamuel",
+  "draft_words": 390,
+  "target_words": 400,
+  "valid": true,
+  "invalid_reasons": [],
+  "invalid_history": [],
+  "evidence": {
+    "init_skills": [
+      "my-voice"
+    ],
+    "init_plugins": [],
+    "init_mcp_servers": [],
+    "claude_code_version": "2.1.306",
+    "model": "claude-sonnet-5-5",
+    "skill_calls": [
+      "my-voice"
+    ],
+    "tools_used": [
+      "Skill"
+    ],
+    "invoked": true,
+    "invocation_detail": "skill_tool_use_ok",
+    "invariant_violations": [],
+    "problems": []
+  },
+  "log_label": "d-era-f-heldout-04-with-r2-a1-10221009",
+  "created": "2026-10-22T10:12"
+}

@@ -1,0 +1,41 @@
+{
+  "license_header": "Corpus-derived content (persona era-c). Source texts are in the public domain in the USA. Sources: eval/corpus/PROVENANCE.md",
+  "persona": "era-c",
+  "task_id": "era-c-heldout-04",
+  "split": "heldout",
+  "arm": "with",
+  "rep": 1,
+  "mode": "auto",
+  "model_requested": "claude-sonnet-5-5",
+  "position_in_task": 4,
+  "attempt": 1,
+  "prompt": "Write an email to a colleague about a new hobby you have taken up. Aim for about 400 words. Reply with the email only.",
+  "final_message": "Subject: My new hobby\n\nDear Marcus,\n\nI have taken up bread baking, and I wanted to tell you before you hear it from someone else in the office and assume I've gone peculiar. It started three weeks ago when my sister sent me a jar of sourdough starter in the mail, along with a note that said only \"Good luck.\" I should have read more into that.\n\nThe starter lives on my kitchen counter now, and I have named it Gerald. He needs feeding every morning, and if I forget, he lets me know by smelling a little like old socks. I have never been so attached to something that sulks on a schedule.\n\nMy first loaf was a brick. I mean that kindly, because it was a very good brick. It was pale and heavy, and it sat on the cutting board looking quite pleased with itself. My husband tried to slice it and the knife bounced. We ended up using it as a doorstop for a day, and I will admit it did the job better than the bread would have done.\n\nThe second loaf was better, and the third was nearly right. What I have learned so far is that bread cares a great deal about patience, and I have never had much of that. You mix the dough, then you wait. You fold it, then you wait some more. Last Saturday I spent most of the afternoon walking past a bowl and peeking under a towel, like a woman expecting a telegram.\n\nWhat surprises me is how much I like it. After a week of spreadsheets and meetings that could have been emails, it is a relief to do something with my hands where the result is plain to see. The loaf either rose or it didn't, and nobody has to write a report about it.\n\nI brought the fourth attempt to the neighbors last Sunday, and they ate every crumb, which I choose to believe is a good sign and not simple politeness. Mrs. Dunn has asked for the recipe, so now I feel a responsibility to keep improving.\n\nIf you ever want to come by, I would be glad to send you home with a loaf, or at least with a jar of Gerald's cousins. He has been growing faster than we can use him. Let me know how you're getting on, and whether you have found anything to fill your weekends besides the garden.\n\nHattie",
+  "draft": "Subject: My new hobby\n\nDear Marcus,\n\nI have taken up bread baking, and I wanted to tell you before you hear it from someone else in the office and assume I've gone peculiar. It started three weeks ago when my sister sent me a jar of sourdough starter in the mail, along with a note that said only \"Good luck.\" I should have read more into that.\n\nThe starter lives on my kitchen counter now, and I have named it Gerald. He needs feeding every morning, and if I forget, he lets me know by smelling a little like old socks. I have never been so attached to something that sulks on a schedule.\n\nMy first loaf was a brick. I mean that kindly, because it was a very good brick. It was pale and heavy, and it sat on the cutting board looking quite pleased with itself. My husband tried to slice it and the knife bounced. We ended up using it as a doorstop for a day, and I will admit it did the job better than the bread would have done.\n\nThe second loaf was better, and the third was nearly right. What I have learned so far is that bread cares a great deal about patience, and I have never had much of that. You mix the dough, then you wait. You fold it, then you wait some more. Last Saturday I spent most of the afternoon walking past a bowl and peeking under a towel, like a woman expecting a telegram.\n\nWhat surprises me is how much I like it. After a week of spreadsheets and meetings that could have been emails, it is a relief to do something with my hands where the result is plain to see. The loaf either rose or it didn't, and nobody has to write a report about it.\n\nI brought the fourth attempt to the neighbors last Sunday, and they ate every crumb, which I choose to believe is a good sign and not simple politeness. Mrs. Dunn has asked for the recipe, so now I feel a responsibility to keep improving.\n\nIf you ever want to come by, I would be glad to send you home with a loaf, or at least with a jar of Gerald's cousins. He has been growing faster than we can use him. Let me know how you're getting on, and whether you have found anything to fill your weekends besides the garden.\n\nHattie",
+  "draft_words": 412,
+  "target_words": 400,
+  "valid": true,
+  "invalid_reasons": [],
+  "invalid_history": [],
+  "evidence": {
+    "init_skills": [
+      "my-voice"
+    ],
+    "init_plugins": [],
+    "init_mcp_servers": [],
+    "claude_code_version": "2.1.306",
+    "model": "claude-sonnet-5-5",
+    "skill_calls": [
+      "my-voice"
+    ],
+    "tools_used": [
+      "Skill"
+    ],
+    "invoked": true,
+    "invocation_detail": "skill_tool_use_ok",
+    "invariant_violations": [],
+    "problems": []
+  },
+  "log_label": "d-era-c-heldout-04-with-r1-a1-10211513",
+  "created": "2026-10-21T15:17"
+}

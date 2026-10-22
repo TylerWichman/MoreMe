@@ -1,0 +1,41 @@
+{
+  "license_header": "Corpus-derived content (persona era-f). Source texts are in the public domain in the USA. Sources: eval/corpus/PROVENANCE.md",
+  "persona": "era-f",
+  "task_id": "era-f-heldout-07",
+  "split": "heldout",
+  "arm": "with",
+  "rep": 1,
+  "mode": "auto",
+  "model_requested": "claude-sonnet-5-5",
+  "position_in_task": 4,
+  "attempt": 1,
+  "prompt": "Write an email to a colleague about being honest when it costs you something. Aim for about 400 words. Reply with the email only.",
+  "final_message": "Subject: On telling the truth when it costs you\n\nDear colleague,\n\nI have been thinking about honesty lately, and I want to share a few thoughts with you. It is easy to be honest when it costs nothing. The test comes when the truth will make your day harder.\n\nLast week I made a mistake in a grade report. A student was marked lower than he had earned. Nobody noticed, and nobody would have. I could have let it pass. Instead I told the office and fixed it. It was a small thing, and it still took an hour and an awkward conversation.\n\nI tell you this because I know you face the same choices. You may have to tell a parent something they do not want to hear. You may have to admit that a lesson did not work, or that you were wrong in a meeting. Each time, there is a quiet pull to say the easier thing.\n\nHere is what I have learned. The cost of honesty is real, but it is paid once, and it is usually smaller than you fear. The cost of dishonesty keeps growing. You have to remember what you said, protect it, and carry it with you.\n\nThere is another reason. Students watch us closely. They learn more from what we do than from what we say. If you want them to own their mistakes, you must show them how it looks when you own yours.\n\nI do not ask you to be harsh. Honesty and kindness work well together. You can tell a hard truth gently, and you can choose your words with care. What you cannot do is leave the truth out because it is inconvenient.\n\nSo when you find yourself in that moment, when the honest answer will cost you time, comfort, or a little pride, I hope you will pay the price. You will be glad you did. Your students will trust you more, and so will the rest of us.\n\nIf you ever want to talk through a hard conversation before you have it, come and find me. I would be glad to help you think it over. I have needed that help myself more than once.\n\nThank you for the good work you do every day. Keep at it, and keep telling the truth.\n\nSamuel",
+  "draft": "Subject: On telling the truth when it costs you\n\nDear colleague,\n\nI have been thinking about honesty lately, and I want to share a few thoughts with you. It is easy to be honest when it costs nothing. The test comes when the truth will make your day harder.\n\nLast week I made a mistake in a grade report. A student was marked lower than he had earned. Nobody noticed, and nobody would have. I could have let it pass. Instead I told the office and fixed it. It was a small thing, and it still took an hour and an awkward conversation.\n\nI tell you this because I know you face the same choices. You may have to tell a parent something they do not want to hear. You may have to admit that a lesson did not work, or that you were wrong in a meeting. Each time, there is a quiet pull to say the easier thing.\n\nHere is what I have learned. The cost of honesty is real, but it is paid once, and it is usually smaller than you fear. The cost of dishonesty keeps growing. You have to remember what you said, protect it, and carry it with you.\n\nThere is another reason. Students watch us closely. They learn more from what we do than from what we say. If you want them to own their mistakes, you must show them how it looks when you own yours.\n\nI do not ask you to be harsh. Honesty and kindness work well together. You can tell a hard truth gently, and you can choose your words with care. What you cannot do is leave the truth out because it is inconvenient.\n\nSo when you find yourself in that moment, when the honest answer will cost you time, comfort, or a little pride, I hope you will pay the price. You will be glad you did. Your students will trust you more, and so will the rest of us.\n\nIf you ever want to talk through a hard conversation before you have it, come and find me. I would be glad to help you think it over. I have needed that help myself more than once.\n\nThank you for the good work you do every day. Keep at it, and keep telling the truth.\n\nSamuel",
+  "draft_words": 389,
+  "target_words": 400,
+  "valid": true,
+  "invalid_reasons": [],
+  "invalid_history": [],
+  "evidence": {
+    "init_skills": [
+      "my-voice"
+    ],
+    "init_plugins": [],
+    "init_mcp_servers": [],
+    "claude_code_version": "2.1.306",
+    "model": "claude-sonnet-5-5",
+    "skill_calls": [
+      "my-voice"
+    ],
+    "tools_used": [
+      "Skill"
+    ],
+    "invoked": true,
+    "invocation_detail": "skill_tool_use_ok",
+    "invariant_violations": [],
+    "problems": []
+  },
+  "log_label": "d-era-f-heldout-07-with-r1-a1-10221009",
+  "created": "2026-10-22T10:15"
+}

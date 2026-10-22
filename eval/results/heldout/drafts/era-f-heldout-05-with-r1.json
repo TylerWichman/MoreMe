@@ -1,0 +1,41 @@
+{
+  "license_header": "Corpus-derived content (persona era-f). Source texts are in the public domain in the USA. Sources: eval/corpus/PROVENANCE.md",
+  "persona": "era-f",
+  "task_id": "era-f-heldout-05",
+  "split": "heldout",
+  "arm": "with",
+  "rep": 1,
+  "mode": "auto",
+  "model_requested": "claude-sonnet-5-5",
+  "position_in_task": 1,
+  "attempt": 1,
+  "prompt": "Write a short blog post about the habit of saving money. Aim for about 400 words. Reply with the post only.",
+  "final_message": "# The Habit of Saving Money\n\nSaving money is not a gift some people are born with. It is a habit, and like any habit, you build it a little at a time. Start small and keep going.\n\nMany people wait until they earn more before they begin to save. That day rarely comes. When your income grows, your spending usually grows with it. The best time to start is now, with what you have.\n\nPick an amount you can set aside each week. It may be five dollars or ten. The size matters less than the act. What counts is that you do it every week, without fail.\n\nPut the money away the moment you are paid. Do not wait to see what is left at the end of the month, because there is seldom anything left. Pay yourself first, and then spend what remains.\n\nKeep your savings apart from the money you use each day. A separate account makes it harder to dip into it for a small want. When the money is out of sight, you will spend it less often.\n\nYou should also look closely at where your money goes. Write down what you spend for one month. Most people are surprised by what they find. Small purchases add up, and a few of them are not worth what you paid.\n\nThis does not mean you must give up every pleasure. A life with no joy in it is hard to keep up. It means you choose with care, and you spend on what matters most to you.\n\nDo not be discouraged if you slip. Everyone has a month when the car breaks down or a bill comes due. Take what you need from your savings, and then begin again. Starting over is part of the habit.\n\nOver time, something changes. You begin to feel calm about money. You know a surprise will not ruin you, because you have a cushion. That peace of mind is worth more than the things you did not buy.\n\nYour savings also give you choices. You can change jobs, go back to school, or help someone in need, and you can do it without fear. Money saved today buys you freedom tomorrow.\n\nSo begin this week. Choose your amount, open your account, and make your first deposit. Then do it again next week, and the week after that. A year from now, you will be glad you started.",
+  "draft": "# The Habit of Saving Money\n\nSaving money is not a gift some people are born with. It is a habit, and like any habit, you build it a little at a time. Start small and keep going.\n\nMany people wait until they earn more before they begin to save. That day rarely comes. When your income grows, your spending usually grows with it. The best time to start is now, with what you have.\n\nPick an amount you can set aside each week. It may be five dollars or ten. The size matters less than the act. What counts is that you do it every week, without fail.\n\nPut the money away the moment you are paid. Do not wait to see what is left at the end of the month, because there is seldom anything left. Pay yourself first, and then spend what remains.\n\nKeep your savings apart from the money you use each day. A separate account makes it harder to dip into it for a small want. When the money is out of sight, you will spend it less often.\n\nYou should also look closely at where your money goes. Write down what you spend for one month. Most people are surprised by what they find. Small purchases add up, and a few of them are not worth what you paid.\n\nThis does not mean you must give up every pleasure. A life with no joy in it is hard to keep up. It means you choose with care, and you spend on what matters most to you.\n\nDo not be discouraged if you slip. Everyone has a month when the car breaks down or a bill comes due. Take what you need from your savings, and then begin again. Starting over is part of the habit.\n\nOver time, something changes. You begin to feel calm about money. You know a surprise will not ruin you, because you have a cushion. That peace of mind is worth more than the things you did not buy.\n\nYour savings also give you choices. You can change jobs, go back to school, or help someone in need, and you can do it without fear. Money saved today buys you freedom tomorrow.\n\nSo begin this week. Choose your amount, open your account, and make your first deposit. Then do it again next week, and the week after that. A year from now, you will be glad you started.",
+  "draft_words": 407,
+  "target_words": 400,
+  "valid": true,
+  "invalid_reasons": [],
+  "invalid_history": [],
+  "evidence": {
+    "init_skills": [
+      "my-voice"
+    ],
+    "init_plugins": [],
+    "init_mcp_servers": [],
+    "claude_code_version": "2.1.306",
+    "model": "claude-sonnet-5-5",
+    "skill_calls": [
+      "my-voice"
+    ],
+    "tools_used": [
+      "Skill"
+    ],
+    "invoked": true,
+    "invocation_detail": "skill_tool_use_ok",
+    "invariant_violations": [],
+    "problems": []
+  },
+  "log_label": "d-era-f-heldout-05-with-r1-a1-10221009",
+  "created": "2026-10-22T10:13"
+}

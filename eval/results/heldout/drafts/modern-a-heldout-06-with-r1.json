@@ -1,0 +1,41 @@
+{
+  "license_header": "Corpus-derived content (persona modern-a). Contains public sector information licensed under the Open Government Licence v3.0 (https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/). Sources and changes: eval/corpus/PROVENANCE.md",
+  "persona": "modern-a",
+  "task_id": "modern-a-heldout-06",
+  "split": "heldout",
+  "arm": "with",
+  "rep": 1,
+  "mode": "auto",
+  "model_requested": "claude-sonnet-5-5",
+  "position_in_task": 5,
+  "attempt": 1,
+  "prompt": "Write a note to a friend about lessons from rebuilding a service people depend on every day. Aim for about 400 words. Reply with the note only.",
+  "final_message": "We finished rebuilding the service last month, and I wanted to tell you what I'd do differently. Millions of people use it every day, so the lessons have stuck.\n\nFirst, don't switch everything over in one go. We moved users across in small groups. Each group found problems we'd missed. If we'd done a big launch, those problems would have hit everyone at once.\n\nSecond, talk to the people who use it, early and often. We thought we knew what mattered. We didn't. Watching someone use the old service on a bad phone connection changed our plan. The things we cared about most were rarely the things they cared about.\n\nThird, keep the old service running longer than feels comfortable. It's tempting to switch it off and call the job done. But the old system is your safety net. When the new one wobbled in week two, we rolled back in minutes. That saved us.\n\nFourth, measure the boring things. We track how long a page takes to load, how many people give up halfway, and how many call the helpline. Those numbers told us more than any opinion in a meeting. When one dropped, we knew we'd got something right. When one rose, we fixed it fast.\n\nFifth, expect the scope to change. It will. Requirements shift, budgets shift, and priorities move. We worked in short cycles and released small changes often. That let us adjust without drama. A big plan agreed on day one would have been wrong by month three.\n\nSixth, look after the team. Rebuilding something people depend on is stressful. We kept the on-call rota fair, we wrote down what we learned, and we said thank you when things went well. A tired team makes risky choices.\n\nLast, be honest when it breaks. It did break, twice. We told users what happened, what we were doing, and when it would be fixed. People forgave the outage. They wouldn't have forgiven silence.\n\nIf I had to boil it down: go slowly, listen closely, and keep your escape route open. None of it's glamorous, but it works.\n\nI'd love to hear how your own project is going. If you're planning something similar, I'm happy to share our notes and the mistakes we made along the way. We wrote most of it down, so it won't take long.\n\nGraham",
+  "draft": "We finished rebuilding the service last month, and I wanted to tell you what I'd do differently. Millions of people use it every day, so the lessons have stuck.\n\nFirst, don't switch everything over in one go. We moved users across in small groups. Each group found problems we'd missed. If we'd done a big launch, those problems would have hit everyone at once.\n\nSecond, talk to the people who use it, early and often. We thought we knew what mattered. We didn't. Watching someone use the old service on a bad phone connection changed our plan. The things we cared about most were rarely the things they cared about.\n\nThird, keep the old service running longer than feels comfortable. It's tempting to switch it off and call the job done. But the old system is your safety net. When the new one wobbled in week two, we rolled back in minutes. That saved us.\n\nFourth, measure the boring things. We track how long a page takes to load, how many people give up halfway, and how many call the helpline. Those numbers told us more than any opinion in a meeting. When one dropped, we knew we'd got something right. When one rose, we fixed it fast.\n\nFifth, expect the scope to change. It will. Requirements shift, budgets shift, and priorities move. We worked in short cycles and released small changes often. That let us adjust without drama. A big plan agreed on day one would have been wrong by month three.\n\nSixth, look after the team. Rebuilding something people depend on is stressful. We kept the on-call rota fair, we wrote down what we learned, and we said thank you when things went well. A tired team makes risky choices.\n\nLast, be honest when it breaks. It did break, twice. We told users what happened, what we were doing, and when it would be fixed. People forgave the outage. They wouldn't have forgiven silence.\n\nIf I had to boil it down: go slowly, listen closely, and keep your escape route open. None of it's glamorous, but it works.\n\nI'd love to hear how your own project is going. If you're planning something similar, I'm happy to share our notes and the mistakes we made along the way. We wrote most of it down, so it won't take long.\n\nGraham",
+  "draft_words": 392,
+  "target_words": 400,
+  "valid": true,
+  "invalid_reasons": [],
+  "invalid_history": [],
+  "evidence": {
+    "init_skills": [
+      "my-voice"
+    ],
+    "init_plugins": [],
+    "init_mcp_servers": [],
+    "claude_code_version": "2.1.303",
+    "model": "claude-sonnet-5-5",
+    "skill_calls": [
+      "my-voice"
+    ],
+    "tools_used": [
+      "Skill"
+    ],
+    "invoked": true,
+    "invocation_detail": "skill_tool_use_ok",
+    "invariant_violations": [],
+    "problems": []
+  },
+  "log_label": "d-modern-a-heldout-06-with-r1-a1-10210946",
+  "created": "2026-10-21T09:52"
+}

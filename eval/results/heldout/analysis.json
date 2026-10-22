@@ -1,0 +1,291 @@
+{
+  "schema_version": "1",
+  "primary": "attribution",
+  "outcome": "gain",
+  "sentences": [
+    "With the skill, a style measure the skill never saw picked the right writer for 35% of drafts, compared with 21% without it (difference 14.6 points, 95% CI 4.2 to 26.0; chance is 17%)."
+  ],
+  "analysis": {
+    "arm_means": {
+      "correct": {
+        "with": 0.3541666666666667,
+        "without": 0.20833333333333334,
+        "samples-pasted": 0.5208333333333334
+      },
+      "delta_fw": {
+        "with": 1.0234604166666663,
+        "without": 1.0272906250000005,
+        "samples-pasted": 0.9889770833333335
+      },
+      "char3_cosine": {
+        "with": 0.19833958333333335,
+        "without": 0.21190833333333334,
+        "samples-pasted": 0.16304166666666664
+      },
+      "exposed_distance": {
+        "with": 0.9289010416666668,
+        "without": 1.106494791666667,
+        "samples-pasted": 0.7896645833333334
+      }
+    },
+    "with_vs_without": {
+      "correct": {
+        "n_tasks": 48,
+        "estimate": 0.14583333333333334,
+        "lo": 0.04166666666666666,
+        "hi": 0.26041666666666663,
+        "resamples": 10000,
+        "seed": 20261019,
+        "stratified_by": "persona"
+      },
+      "delta_fw": {
+        "n_tasks": 48,
+        "estimate": -0.0038302083333341397,
+        "lo": -0.021262057291667445,
+        "hi": 0.013995989583332978,
+        "resamples": 10000,
+        "seed": 20261019,
+        "stratified_by": "persona"
+      },
+      "char3_cosine": {
+        "n_tasks": 48,
+        "estimate": -0.01356874999999999,
+        "lo": -0.021841875000000063,
+        "hi": -0.005785338541666571,
+        "resamples": 10000,
+        "seed": 20261019,
+        "stratified_by": "persona"
+      },
+      "exposed_distance": {
+        "n_tasks": 48,
+        "estimate": -0.17759375000000022,
+        "lo": -0.2068390885416669,
+        "hi": -0.1483829947916669,
+        "resamples": 10000,
+        "seed": 20261019,
+        "stratified_by": "persona"
+      },
+      "delta_fw_pct": {
+        "n_tasks": 48,
+        "estimate": -0.37284564271518955,
+        "lo": -2.058162096430492,
+        "hi": 1.3707638725248033,
+        "resamples": 10000,
+        "seed": 20261019,
+        "stratified_by": "persona"
+      }
+    },
+    "with_vs_without_per_protocol": {
+      "correct": {
+        "n_tasks": 47,
+        "estimate": 0.15957446808510642,
+        "lo": 0.05319148936170215,
+        "hi": 0.26595744680851063,
+        "resamples": 10000,
+        "seed": 20261019,
+        "stratified_by": "persona"
+      },
+      "delta_fw": {
+        "n_tasks": 47,
+        "estimate": -0.0034553191489368196,
+        "lo": -0.021559627659575253,
+        "hi": 0.014880239361701613,
+        "resamples": 10000,
+        "seed": 20261019,
+        "stratified_by": "persona"
+      },
+      "char3_cosine": {
+        "n_tasks": 47,
+        "estimate": -0.013992553191489343,
+        "lo": -0.02241279255319144,
+        "hi": -0.006043617021276592,
+        "resamples": 10000,
+        "seed": 20261019,
+        "stratified_by": "persona"
+      },
+      "exposed_distance": {
+        "n_tasks": 47,
+        "estimate": -0.18083936170212778,
+        "lo": -0.20903938829787236,
+        "hi": -0.1532988563829789,
+        "resamples": 10000,
+        "seed": 20261019,
+        "stratified_by": "persona"
+      }
+    },
+    "with_vs_samples": {
+      "correct": {
+        "n_tasks": 48,
+        "estimate": -0.16666666666666669,
+        "lo": -0.3125,
+        "hi": -0.020833333333333315,
+        "resamples": 10000,
+        "seed": 20261019,
+        "stratified_by": "persona"
+      },
+      "delta_fw": {
+        "n_tasks": 48,
+        "estimate": 0.034483333333332866,
+        "lo": 0.01232489583333248,
+        "hi": 0.05740752604166602,
+        "resamples": 10000,
+        "seed": 20261019,
+        "stratified_by": "persona"
+      },
+      "char3_cosine": {
+        "n_tasks": 48,
+        "estimate": 0.03529791666666671,
+        "lo": 0.026958307291666723,
+        "hi": 0.043787630208333476,
+        "resamples": 10000,
+        "seed": 20261019,
+        "stratified_by": "persona"
+      },
+      "exposed_distance": {
+        "n_tasks": 48,
+        "estimate": 0.1392364583333333,
+        "lo": 0.10035604166666659,
+        "hi": 0.1787386197916668,
+        "resamples": 10000,
+        "seed": 20261019,
+        "stratified_by": "persona"
+      }
+    },
+    "per_persona": {
+      "era-c": {
+        "correct": {
+          "with": 0.4375,
+          "without": 0.3125,
+          "samples-pasted": 0.75
+        },
+        "delta_fw": {
+          "with": 1.00611875,
+          "without": 0.983425,
+          "samples-pasted": 0.918275
+        },
+        "char3_cosine": {
+          "with": 0.15886875,
+          "without": 0.19146875,
+          "samples-pasted": 0.14001249999999998
+        },
+        "exposed_distance": {
+          "with": 0.65145,
+          "without": 0.95473125,
+          "samples-pasted": 0.5627
+        }
+      },
+      "era-d": {
+        "correct": {
+          "with": 0.25,
+          "without": 0.0,
+          "samples-pasted": 0.25
+        },
+        "delta_fw": {
+          "with": 1.0713687500000002,
+          "without": 1.0880687500000001,
+          "samples-pasted": 1.104775
+        },
+        "char3_cosine": {
+          "with": 0.15536875,
+          "without": 0.19639375000000003,
+          "samples-pasted": 0.1513625
+        },
+        "exposed_distance": {
+          "with": 1.015075,
+          "without": 1.2716125,
+          "samples-pasted": 0.8557
+        }
+      },
+      "era-e": {
+        "correct": {
+          "with": 0.5,
+          "without": 0.0,
+          "samples-pasted": 0.625
+        },
+        "delta_fw": {
+          "with": 0.9867499999999999,
+          "without": 1.0030812500000001,
+          "samples-pasted": 0.9701749999999999
+        },
+        "char3_cosine": {
+          "with": 0.12679375,
+          "without": 0.18374374999999998,
+          "samples-pasted": 0.11598750000000002
+        },
+        "exposed_distance": {
+          "with": 0.6859500000000001,
+          "without": 1.16544375,
+          "samples-pasted": 0.7386874999999999
+        }
+      },
+      "era-f": {
+        "correct": {
+          "with": 0.0,
+          "without": 0.0,
+          "samples-pasted": 0.5
+        },
+        "delta_fw": {
+          "with": 1.1447874999999998,
+          "without": 1.10818125,
+          "samples-pasted": 1.0691249999999999
+        },
+        "char3_cosine": {
+          "with": 0.26730624999999997,
+          "without": 0.22469375000000003,
+          "samples-pasted": 0.1654375
+        },
+        "exposed_distance": {
+          "with": 1.13851875,
+          "without": 1.31729375,
+          "samples-pasted": 0.779325
+        }
+      },
+      "modern-a": {
+        "correct": {
+          "with": 0.8125,
+          "without": 0.8125,
+          "samples-pasted": 0.875
+        },
+        "delta_fw": {
+          "with": 0.92865625,
+          "without": 0.968425,
+          "samples-pasted": 0.9050125000000001
+        },
+        "char3_cosine": {
+          "with": 0.21640624999999997,
+          "without": 0.22878749999999998,
+          "samples-pasted": 0.1677125
+        },
+        "exposed_distance": {
+          "with": 1.16508125,
+          "without": 1.0177500000000002,
+          "samples-pasted": 0.9798
+        }
+      },
+      "modern-b": {
+        "correct": {
+          "with": 0.125,
+          "without": 0.125,
+          "samples-pasted": 0.125
+        },
+        "delta_fw": {
+          "with": 1.0030812500000001,
+          "without": 1.0125625,
+          "samples-pasted": 0.9665000000000001
+        },
+        "char3_cosine": {
+          "with": 0.26529375,
+          "without": 0.24636250000000004,
+          "samples-pasted": 0.23773750000000002
+        },
+        "exposed_distance": {
+          "with": 0.9173312499999999,
+          "without": 0.9121374999999999,
+          "samples-pasted": 0.8217750000000001
+        }
+      }
+    }
+  },
+  "invocation": 0.9791666666666666,
+  "created": "2026-10-22T10:17"
+}

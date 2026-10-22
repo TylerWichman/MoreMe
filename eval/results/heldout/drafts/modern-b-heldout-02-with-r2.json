@@ -1,0 +1,41 @@
+{
+  "license_header": "Corpus-derived content (persona modern-b). Adapted from works licensed under CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/); this file is licensed under CC BY-SA 4.0. Attribution, sources, and changes: eval/corpus/PROVENANCE.md",
+  "persona": "modern-b",
+  "task_id": "modern-b-heldout-02",
+  "split": "heldout",
+  "arm": "with",
+  "rep": 2,
+  "mode": "auto",
+  "model_requested": "claude-sonnet-5-5",
+  "position_in_task": 4,
+  "attempt": 1,
+  "prompt": "Write a short blog post about using open organization principles to cut energy use in a factory. Aim for about 400 words. Reply with the post only.",
+  "final_message": "# Cutting Factory Energy Use by Opening the Floor\n\nAn \"open organization\" is one that shares information widely, invites everyone to contribute, and lets decisions be made close to the work. Those ideas aren't just for software teams. They can lower the power bill in a factory.\n\nHere's the main point. The people who run the machines usually know where energy is wasted. Management rarely hears about it, because the information has to travel up a long chain first.\n\nConsider compressed air. Many plants lose a large share of it to small leaks. An operator hears a hiss every shift, but no one asked, so nothing changes. In an open organization, that operator can tag the leak and fix it the same day (or flag it for maintenance in one step).\n\nThe first principle is transparency. Post energy data where people can see it, such as a screen at each line showing kilowatt-hours per shift. A number nobody sees can't be acted on. A number everyone sees starts conversations.\n\nThe second principle is inclusivity, which means asking people from every role for ideas. Invite operators, maintenance staff, and schedulers to a short monthly meeting. Each group sees a different part of the problem. Schedulers may notice that running two half-empty ovens costs more than one full oven.\n\nThe third is adaptability. Don't try to plan every change in advance. Pick one small experiment, such as shutting down idle conveyors during breaks. Measure the result, share it, and decide what to try next. In this setting, feedback is more useful than a perfect plan.\n\nThe fourth is community. Let teams borrow ideas from one another. When the night shift finds a way to cut idle time, tell the day shift the same week. Good ideas shouldn't stay in one corner of the plant.\n\nNone of this requires new equipment. It does require trust, and it requires leaders who are willing to let the frontline act on what it knows. Start small. Choose one line, share its energy numbers, and ask the people there what they'd change.\n\nYou may be surprised by how much they already know.",
+  "draft": "# Cutting Factory Energy Use by Opening the Floor\n\nAn \"open organization\" is one that shares information widely, invites everyone to contribute, and lets decisions be made close to the work. Those ideas aren't just for software teams. They can lower the power bill in a factory.\n\nHere's the main point. The people who run the machines usually know where energy is wasted. Management rarely hears about it, because the information has to travel up a long chain first.\n\nConsider compressed air. Many plants lose a large share of it to small leaks. An operator hears a hiss every shift, but no one asked, so nothing changes. In an open organization, that operator can tag the leak and fix it the same day (or flag it for maintenance in one step).\n\nThe first principle is transparency. Post energy data where people can see it, such as a screen at each line showing kilowatt-hours per shift. A number nobody sees can't be acted on. A number everyone sees starts conversations.\n\nThe second principle is inclusivity, which means asking people from every role for ideas. Invite operators, maintenance staff, and schedulers to a short monthly meeting. Each group sees a different part of the problem. Schedulers may notice that running two half-empty ovens costs more than one full oven.\n\nThe third is adaptability. Don't try to plan every change in advance. Pick one small experiment, such as shutting down idle conveyors during breaks. Measure the result, share it, and decide what to try next. In this setting, feedback is more useful than a perfect plan.\n\nThe fourth is community. Let teams borrow ideas from one another. When the night shift finds a way to cut idle time, tell the day shift the same week. Good ideas shouldn't stay in one corner of the plant.\n\nNone of this requires new equipment. It does require trust, and it requires leaders who are willing to let the frontline act on what it knows. Start small. Choose one line, share its energy numbers, and ask the people there what they'd change.\n\nYou may be surprised by how much they already know.",
+  "draft_words": 356,
+  "target_words": 400,
+  "valid": true,
+  "invalid_reasons": [],
+  "invalid_history": [],
+  "evidence": {
+    "init_skills": [
+      "my-voice"
+    ],
+    "init_plugins": [],
+    "init_mcp_servers": [],
+    "claude_code_version": "2.1.306",
+    "model": "claude-sonnet-5-5",
+    "skill_calls": [
+      "my-voice"
+    ],
+    "tools_used": [
+      "Skill"
+    ],
+    "invoked": true,
+    "invocation_detail": "skill_tool_use_ok",
+    "invariant_violations": [],
+    "problems": []
+  },
+  "log_label": "d-modern-b-heldout-02-with-r2-a1-10211521",
+  "created": "2026-10-21T15:23"
+}

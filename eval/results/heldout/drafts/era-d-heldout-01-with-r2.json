@@ -1,0 +1,41 @@
+{
+  "license_header": "Corpus-derived content (persona era-d). Source texts are in the public domain in the USA. Sources: eval/corpus/PROVENANCE.md",
+  "persona": "era-d",
+  "task_id": "era-d-heldout-01",
+  "split": "heldout",
+  "arm": "with",
+  "rep": 2,
+  "mode": "auto",
+  "model_requested": "claude-sonnet-5-5",
+  "position_in_task": 5,
+  "attempt": 1,
+  "prompt": "Write an email to a colleague about a day of worrying news and how you coped. Aim for about 400 words. Reply with the email only.",
+  "final_message": "Subject: Yesterday, and how I got through it\n\nDear Marcus,\n\nI owe you a proper note, because you caught me at my worst in the corridor yesterday and all I managed was a grunt and a wave. I'd like to say it was the coffee, but it wasn't. It was the news. Three separate bits of it, all before ten in the morning, and each one worse than the last.\n\nFirst came the email about the budget freeze, which I read standing up, in my coat, with one glove still on. Then the rumor about the restructuring -- and you know how those go, nobody knows anything and everybody knows everything. Then, just to be thorough, the call from my sister about Dad's test results, which are not terrible, but not good either, and \"not good either\" is a very hard thing to carry into a meeting about quarterly reports. I sat through that meeting nodding at the right moments and I could not tell you one number that was said. Someone asked me a direct question and I answered something about the weather. I think. Please don't confirm.\n\nBy noon I had decided I was perfectly calm, a sensible person handling things sensibly. This is nonsense, of course. A sensible person does not eat an entire sleeve of crackers over her keyboard and then reorganize the stationery cupboard, which is what I did. It was very well organized when I finished, I'll say that for it.\n\nWhat actually helped, if you want to know, was dull. I walked out at lunch, no phone, around the block three times because the first two didn't take. There's a woman on Fenwick Street who has a very fat, very offended little dog in a raincoat, and I stood there like a fool and laughed at it until my eyes ran. Poor dog. Poor me, really. Then I called my sister back and we talked about nothing for twenty minutes, and then about Dad for ten more, and somehow the second part was easier for the first.\n\nI don't think anything is solved. The freeze is still a freeze and the rumor is still a rumor, and Dad still has appointments I'm dreading. But I slept last night, which I hadn't expected, and this morning the stationery cupboard was still tidy, so there's that.\n\nHow did the news land with you? You looked rather pale yourself by the lifts, and I was too wrapped up in my own business to ask. Let's get lunch on Thursday, if the world hasn't ended by then -- and if it has, we can still try the soup place.\n\nLouisa",
+  "draft": "Subject: Yesterday, and how I got through it\n\nDear Marcus,\n\nI owe you a proper note, because you caught me at my worst in the corridor yesterday and all I managed was a grunt and a wave. I'd like to say it was the coffee, but it wasn't. It was the news. Three separate bits of it, all before ten in the morning, and each one worse than the last.\n\nFirst came the email about the budget freeze, which I read standing up, in my coat, with one glove still on. Then the rumor about the restructuring -- and you know how those go, nobody knows anything and everybody knows everything. Then, just to be thorough, the call from my sister about Dad's test results, which are not terrible, but not good either, and \"not good either\" is a very hard thing to carry into a meeting about quarterly reports. I sat through that meeting nodding at the right moments and I could not tell you one number that was said. Someone asked me a direct question and I answered something about the weather. I think. Please don't confirm.\n\nBy noon I had decided I was perfectly calm, a sensible person handling things sensibly. This is nonsense, of course. A sensible person does not eat an entire sleeve of crackers over her keyboard and then reorganize the stationery cupboard, which is what I did. It was very well organized when I finished, I'll say that for it.\n\nWhat actually helped, if you want to know, was dull. I walked out at lunch, no phone, around the block three times because the first two didn't take. There's a woman on Fenwick Street who has a very fat, very offended little dog in a raincoat, and I stood there like a fool and laughed at it until my eyes ran. Poor dog. Poor me, really. Then I called my sister back and we talked about nothing for twenty minutes, and then about Dad for ten more, and somehow the second part was easier for the first.\n\nI don't think anything is solved. The freeze is still a freeze and the rumor is still a rumor, and Dad still has appointments I'm dreading. But I slept last night, which I hadn't expected, and this morning the stationery cupboard was still tidy, so there's that.\n\nHow did the news land with you? You looked rather pale yourself by the lifts, and I was too wrapped up in my own business to ask. Let's get lunch on Thursday, if the world hasn't ended by then -- and if it has, we can still try the soup place.\n\nLouisa",
+  "draft_words": 441,
+  "target_words": 400,
+  "valid": true,
+  "invalid_reasons": [],
+  "invalid_history": [],
+  "evidence": {
+    "init_skills": [
+      "my-voice"
+    ],
+    "init_plugins": [],
+    "init_mcp_servers": [],
+    "claude_code_version": "2.1.306",
+    "model": "claude-sonnet-5-5",
+    "skill_calls": [
+      "my-voice"
+    ],
+    "tools_used": [
+      "Skill"
+    ],
+    "invoked": true,
+    "invocation_detail": "skill_tool_use_ok",
+    "invariant_violations": [],
+    "problems": []
+  },
+  "log_label": "d-era-d-heldout-01-with-r2-a1-10211529",
+  "created": "2026-10-21T15:30"
+}

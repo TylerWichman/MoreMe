@@ -1,0 +1,41 @@
+{
+  "license_header": "Corpus-derived content (persona era-e). Source texts are in the public domain in the USA. Sources: eval/corpus/PROVENANCE.md",
+  "persona": "era-e",
+  "task_id": "era-e-heldout-04",
+  "split": "heldout",
+  "arm": "with",
+  "rep": 2,
+  "mode": "auto",
+  "model_requested": "claude-sonnet-5-5",
+  "position_in_task": 2,
+  "attempt": 1,
+  "prompt": "Write an email to a colleague about pests eating the vegetables. Aim for about 400 words. Reply with the email only.",
+  "final_message": "Subject: The vegetable situation\n\nDear Martin,\n\nI write with news of the garden, none of it good. Something has been eating my vegetables, and I have lately come to suspect that it is several somethings, working in shifts.\n\nThe first offender is the cabbage worm, a pale green creature of modest size and immodest appetite. It has reduced my broccoli to a sort of lace, which would be admirable in a tablecloth but is of limited use at dinner. The second is a slug, or possibly a regiment of them. I never see them at work; I see only the silver trails in the morning, like the marks left by a tiny and very dull army. The third, and I fear the worst, is whatever has been at the zucchini. Every other year I have had more zucchini than any household could decently use, and was reduced to leaving them on neighbors' porches under cover of darkness. This year I have had two. I do not know who is responsible, but I suspect the squash bug, and I intend to treat the matter with the gravity of a court of inquiry.\n\nI have tried the usual remedies. I picked the worms off by hand, one at a time, which took the better part of a Saturday and taught me more about the underside of a cabbage leaf than any man needs to know. I set out saucers of beer for the slugs; they came, they drank, and I am told they died happy, which is more than I can say for the broccoli. My wife has suggested that I net the whole bed. I have pointed out that this would make the garden look like a fishing operation, and she has pointed out that a fishing operation would at least catch something.\n\nSince you have kept a garden longer than I have, and with better results, I would value your advice. Do you have any trusted method for the squash bug? I have read that one may lay a board on the ground at night and collect the bugs beneath it in the morning; this sounds either very clever or very foolish, and I cannot yet tell which. I have also heard that marigolds keep off all manner of pests, though the marigolds I planted last spring were eaten before they could discourage anyone.\n\nIf you are free next week, come and look at the patch yourself. I will provide tea, and you may provide a second opinion; it is a fair exchange. Bring a hat, as the sun is still strong in the afternoon, and a stout pair of shoes, as the slugs are not particular about where they leave their calling cards.\n\nYours in the matter of the cabbage,\n\nWalter",
+  "draft": "Subject: The vegetable situation\n\nDear Martin,\n\nI write with news of the garden, none of it good. Something has been eating my vegetables, and I have lately come to suspect that it is several somethings, working in shifts.\n\nThe first offender is the cabbage worm, a pale green creature of modest size and immodest appetite. It has reduced my broccoli to a sort of lace, which would be admirable in a tablecloth but is of limited use at dinner. The second is a slug, or possibly a regiment of them. I never see them at work; I see only the silver trails in the morning, like the marks left by a tiny and very dull army. The third, and I fear the worst, is whatever has been at the zucchini. Every other year I have had more zucchini than any household could decently use, and was reduced to leaving them on neighbors' porches under cover of darkness. This year I have had two. I do not know who is responsible, but I suspect the squash bug, and I intend to treat the matter with the gravity of a court of inquiry.\n\nI have tried the usual remedies. I picked the worms off by hand, one at a time, which took the better part of a Saturday and taught me more about the underside of a cabbage leaf than any man needs to know. I set out saucers of beer for the slugs; they came, they drank, and I am told they died happy, which is more than I can say for the broccoli. My wife has suggested that I net the whole bed. I have pointed out that this would make the garden look like a fishing operation, and she has pointed out that a fishing operation would at least catch something.\n\nSince you have kept a garden longer than I have, and with better results, I would value your advice. Do you have any trusted method for the squash bug? I have read that one may lay a board on the ground at night and collect the bugs beneath it in the morning; this sounds either very clever or very foolish, and I cannot yet tell which. I have also heard that marigolds keep off all manner of pests, though the marigolds I planted last spring were eaten before they could discourage anyone.\n\nIf you are free next week, come and look at the patch yourself. I will provide tea, and you may provide a second opinion; it is a fair exchange. Bring a hat, as the sun is still strong in the afternoon, and a stout pair of shoes, as the slugs are not particular about where they leave their calling cards.\n\nYours in the matter of the cabbage,\n\nWalter",
+  "draft_words": 462,
+  "target_words": 400,
+  "valid": true,
+  "invalid_reasons": [],
+  "invalid_history": [],
+  "evidence": {
+    "init_skills": [
+      "my-voice"
+    ],
+    "init_plugins": [],
+    "init_mcp_servers": [],
+    "claude_code_version": "2.1.306",
+    "model": "claude-sonnet-5-5",
+    "skill_calls": [
+      "my-voice"
+    ],
+    "tools_used": [
+      "Skill"
+    ],
+    "invoked": true,
+    "invocation_detail": "skill_tool_use_ok",
+    "invariant_violations": [],
+    "problems": []
+  },
+  "log_label": "d-era-e-heldout-04-with-r2-a1-10221000",
+  "created": "2026-10-22T10:04"
+}

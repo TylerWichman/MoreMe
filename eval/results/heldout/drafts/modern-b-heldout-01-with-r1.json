@@ -1,0 +1,41 @@
+{
+  "license_header": "Corpus-derived content (persona modern-b). Adapted from works licensed under CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/); this file is licensed under CC BY-SA 4.0. Attribution, sources, and changes: eval/corpus/PROVENANCE.md",
+  "persona": "modern-b",
+  "task_id": "modern-b-heldout-01",
+  "split": "heldout",
+  "arm": "with",
+  "rep": 1,
+  "mode": "auto",
+  "model_requested": "claude-sonnet-5-5",
+  "position_in_task": 5,
+  "attempt": 1,
+  "prompt": "Write an email to a colleague about how the falling cost of making things might change why people work. Aim for about 400 words. Reply with the email only.",
+  "final_message": "Subject: How cheaper making might change why we work\n\nHi Sam,\n\nI've been thinking about what happens to work as the cost of making things keeps falling. My short answer is that the reason people work will shift, even if the need to work doesn't disappear.\n\nLet me define what I mean. \"Cost of making\" is the total effort, time, and money it takes to turn an idea into something people can use. Software, writing, design, and basic analysis are all getting cheaper to produce. Ten years ago, a small team needed months to build a simple app. Today one person can build a rough version in a weekend.\n\nSo where does the value go? I think it moves away from production and toward judgment. When anyone can make a thing, the hard part is deciding which thing is worth making. That means knowing what a customer really needs, what's worth the risk, and when to stop.\n\nThis changes motivation in a few ways. First, work will lean less on output and more on responsibility. People will be paid to stand behind a decision, not to turn out a deliverable. Second, craft may matter more for its own sake. Think of what happened to woodworking after factories took over furniture. Most chairs are now made by machine, yet people still pay well for a chair someone made by hand, because they care about the maker.\n\nThird, I expect more people to work on problems they care about. If a good prototype costs almost nothing, the barrier to trying something drops. A nurse with an idea for better shift handoffs can test it without raising money. That's a real change in who gets to build.\n\nThere's a downside, and I don't want to skip it. Some people draw their sense of worth from the tasks that are getting cheaper. If the task goes, the identity can go with it. Organizations will need to be honest about this and help people move toward the judgment-heavy work, instead of just announcing that roles are \"evolving.\"\n\nI don't think any of this is settled. But I'd like your view, especially on whether you see the craft effect showing up in your own teams yet. Do you have time for a call next week? I'd enjoy comparing notes.\n\nBest,",
+  "draft": "Subject: How cheaper making might change why we work\n\nHi Sam,\n\nI've been thinking about what happens to work as the cost of making things keeps falling. My short answer is that the reason people work will shift, even if the need to work doesn't disappear.\n\nLet me define what I mean. \"Cost of making\" is the total effort, time, and money it takes to turn an idea into something people can use. Software, writing, design, and basic analysis are all getting cheaper to produce. Ten years ago, a small team needed months to build a simple app. Today one person can build a rough version in a weekend.\n\nSo where does the value go? I think it moves away from production and toward judgment. When anyone can make a thing, the hard part is deciding which thing is worth making. That means knowing what a customer really needs, what's worth the risk, and when to stop.\n\nThis changes motivation in a few ways. First, work will lean less on output and more on responsibility. People will be paid to stand behind a decision, not to turn out a deliverable. Second, craft may matter more for its own sake. Think of what happened to woodworking after factories took over furniture. Most chairs are now made by machine, yet people still pay well for a chair someone made by hand, because they care about the maker.\n\nThird, I expect more people to work on problems they care about. If a good prototype costs almost nothing, the barrier to trying something drops. A nurse with an idea for better shift handoffs can test it without raising money. That's a real change in who gets to build.\n\nThere's a downside, and I don't want to skip it. Some people draw their sense of worth from the tasks that are getting cheaper. If the task goes, the identity can go with it. Organizations will need to be honest about this and help people move toward the judgment-heavy work, instead of just announcing that roles are \"evolving.\"\n\nI don't think any of this is settled. But I'd like your view, especially on whether you see the craft effect showing up in your own teams yet. Do you have time for a call next week? I'd enjoy comparing notes.\n\nBest,",
+  "draft_words": 385,
+  "target_words": 400,
+  "valid": true,
+  "invalid_reasons": [],
+  "invalid_history": [],
+  "evidence": {
+    "init_skills": [
+      "my-voice"
+    ],
+    "init_plugins": [],
+    "init_mcp_servers": [],
+    "claude_code_version": "2.1.306",
+    "model": "claude-sonnet-5-5",
+    "skill_calls": [
+      "my-voice"
+    ],
+    "tools_used": [
+      "Skill"
+    ],
+    "invoked": true,
+    "invocation_detail": "skill_tool_use_ok",
+    "invariant_violations": [],
+    "problems": []
+  },
+  "log_label": "d-modern-b-heldout-01-with-r1-a1-10211521",
+  "created": "2026-10-21T15:22"
+}

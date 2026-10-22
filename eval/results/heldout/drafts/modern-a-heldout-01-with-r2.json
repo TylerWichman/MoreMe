@@ -1,0 +1,41 @@
+{
+  "license_header": "Corpus-derived content (persona modern-a). Contains public sector information licensed under the Open Government Licence v3.0 (https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/). Sources and changes: eval/corpus/PROVENANCE.md",
+  "persona": "modern-a",
+  "task_id": "modern-a-heldout-01",
+  "split": "heldout",
+  "arm": "with",
+  "rep": 2,
+  "mode": "auto",
+  "model_requested": "claude-sonnet-5-5",
+  "position_in_task": 3,
+  "attempt": 1,
+  "prompt": "Write an email to a colleague about the anniversary of a public website your team runs. Aim for about 400 words. Reply with the email only.",
+  "final_message": "Subject: Our website turns five next month\n\nThe website turns five on 18 November, and I'd like us to mark it properly.\n\nWe don't need a big event. I'd like a short, useful look back at what the site has done, and a clear view of what's next. Here's what I have in mind.\n\nFirst, a few numbers. We should pull the main figures for the five years: visits, most used pages, and how many people finished the tasks they came for. I'd rather we show real use than count page views. Can you take the analytics side? I'll gather the feedback we've had from users and from the support team.\n\nSecond, a short blog post. It should say what we've learned, what we got wrong, and what we changed because of it. We've made plenty of changes based on user research, and the public should see that. I'll write the first draft and send it round by the end of next week. I'd like you and the rest of the team to edit it freely.\n\nThird, a thank you. Many people have worked on the site over the years, including people who've since moved on. I'd like to name them in the post, or at least thank them as a group. We should check with each person first.\n\nFourth, a plan for the sixth year. An anniversary is a good moment to be honest about the gaps. We still have old content that needs a rewrite. Some forms are harder to use than they should be. Our accessibility fixes are not finished. I'd like us to pick three priorities and say so publicly. That keeps us accountable and gives the team a clear focus.\n\nOn timing, here's what I suggest:\n\n- By 30 October: figures and feedback gathered.\n- By 6 November: blog post drafted and reviewed.\n- By 13 November: priorities agreed with the wider team.\n- 18 November: publish.\n\nI'm keeping the budget at zero. No cake order, no merchandise. If the team wants cake, we'll bring our own.\n\nPlease tell me if the dates don't work, or if you'd cut anything. I'm happy to drop the fourth item if it feels like too much. I think it's the most valuable part, though, so I'd like to keep it if we can.\n\nThanks for your help with this. Five years of steady work from this team is worth a few hours of our time.\n\nGraham",
+  "draft": "Subject: Our website turns five next month\n\nThe website turns five on 18 November, and I'd like us to mark it properly.\n\nWe don't need a big event. I'd like a short, useful look back at what the site has done, and a clear view of what's next. Here's what I have in mind.\n\nFirst, a few numbers. We should pull the main figures for the five years: visits, most used pages, and how many people finished the tasks they came for. I'd rather we show real use than count page views. Can you take the analytics side? I'll gather the feedback we've had from users and from the support team.\n\nSecond, a short blog post. It should say what we've learned, what we got wrong, and what we changed because of it. We've made plenty of changes based on user research, and the public should see that. I'll write the first draft and send it round by the end of next week. I'd like you and the rest of the team to edit it freely.\n\nThird, a thank you. Many people have worked on the site over the years, including people who've since moved on. I'd like to name them in the post, or at least thank them as a group. We should check with each person first.\n\nFourth, a plan for the sixth year. An anniversary is a good moment to be honest about the gaps. We still have old content that needs a rewrite. Some forms are harder to use than they should be. Our accessibility fixes are not finished. I'd like us to pick three priorities and say so publicly. That keeps us accountable and gives the team a clear focus.\n\nOn timing, here's what I suggest:\n\n- By 30 October: figures and feedback gathered.\n- By 6 November: blog post drafted and reviewed.\n- By 13 November: priorities agreed with the wider team.\n- 18 November: publish.\n\nI'm keeping the budget at zero. No cake order, no merchandise. If the team wants cake, we'll bring our own.\n\nPlease tell me if the dates don't work, or if you'd cut anything. I'm happy to drop the fourth item if it feels like too much. I think it's the most valuable part, though, so I'd like to keep it if we can.\n\nThanks for your help with this. Five years of steady work from this team is worth a few hours of our time.\n\nGraham",
+  "draft_words": 399,
+  "target_words": 400,
+  "valid": true,
+  "invalid_reasons": [],
+  "invalid_history": [],
+  "evidence": {
+    "init_skills": [
+      "my-voice"
+    ],
+    "init_plugins": [],
+    "init_mcp_servers": [],
+    "claude_code_version": "2.1.303",
+    "model": "claude-sonnet-5-5",
+    "skill_calls": [
+      "my-voice"
+    ],
+    "tools_used": [
+      "Skill"
+    ],
+    "invoked": true,
+    "invocation_detail": "skill_tool_use_ok",
+    "invariant_violations": [],
+    "problems": []
+  },
+  "log_label": "d-modern-a-heldout-01-with-r2-a1-10210946",
+  "created": "2026-10-21T09:47"
+}

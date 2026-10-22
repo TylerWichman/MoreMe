@@ -1,0 +1,41 @@
+{
+  "license_header": "Corpus-derived content (persona era-d). Source texts are in the public domain in the USA. Sources: eval/corpus/PROVENANCE.md",
+  "persona": "era-d",
+  "task_id": "era-d-heldout-02",
+  "split": "heldout",
+  "arm": "with",
+  "rep": 1,
+  "mode": "auto",
+  "model_requested": "claude-sonnet-5-5",
+  "position_in_task": 3,
+  "attempt": 1,
+  "prompt": "Write a short blog post about a visit from friends. Aim for about 400 words. Reply with the post only.",
+  "final_message": "Well, they came, and the house has not yet recovered.\n\nI'd been warned for weeks. Miriam wrote that they would arrive \"sometime Saturday,\" which in her language means anywhere between breakfast and midnight, so I did what any sensible person does and cleaned everything twice, then sat on the porch pretending I hadn't. They turned up at four, all three of them, in a car that was making a noise I didn't like at all. Jimmy swore it had been making it since Tuesday and that it was \"just thinking.\"\n\nThe first hour was pure confusion -- bags in the hall, someone's hat on the cat, everybody talking at once and nobody listening. I had a whole speech prepared about how glad I was to see them, and I never got to give it. Probably just as well. It was a rather good speech, too.\n\nThen supper, which I will not describe in any detail, except to say that I made a pie and Jimmy ate half of it before it had even cooled, and when I scolded him he said it was a compliment to the cook. Which is exactly the sort of thing he says, and exactly the sort of thing that makes it impossible to stay cross. Poor fellow, he has been getting away with that since he was six.\n\nWe stayed up far too late. Miriam had news -- real news, the kind you lean in for -- about a neighbor of theirs who has, it seems, been writing letters to the newspaper under a false name, and everyone in town knows it, and nobody has the heart to say so. I laughed until I had to put my cup down. It isn't kind to laugh, I know. But hush, it was very funny, and I'm not sorry.\n\nSunday we walked down to the creek, and it was one of those odd soft afternoons when nobody much wants to say anything. The water was low. Jimmy skipped stones badly and blamed the stones. Miriam picked up a handful of something green and held onto it the whole way back, and I never did find out what it was. I keep meaning to ask.\n\nThey left Monday morning, earlier than I'd hoped, because of the car and its thinking. I stood at the gate a while after the dust settled. The house was very quiet. There was a hat still on the hall chair, and I can't decide whether it's Jimmy's or Miriam's, and I rather like not knowing yet.\n\nI suppose I ought to write and tell them about the hat. Or maybe I'll just keep it a few days and see who asks.\n\nLouisa",
+  "draft": "Well, they came, and the house has not yet recovered.\n\nI'd been warned for weeks. Miriam wrote that they would arrive \"sometime Saturday,\" which in her language means anywhere between breakfast and midnight, so I did what any sensible person does and cleaned everything twice, then sat on the porch pretending I hadn't. They turned up at four, all three of them, in a car that was making a noise I didn't like at all. Jimmy swore it had been making it since Tuesday and that it was \"just thinking.\"\n\nThe first hour was pure confusion -- bags in the hall, someone's hat on the cat, everybody talking at once and nobody listening. I had a whole speech prepared about how glad I was to see them, and I never got to give it. Probably just as well. It was a rather good speech, too.\n\nThen supper, which I will not describe in any detail, except to say that I made a pie and Jimmy ate half of it before it had even cooled, and when I scolded him he said it was a compliment to the cook. Which is exactly the sort of thing he says, and exactly the sort of thing that makes it impossible to stay cross. Poor fellow, he has been getting away with that since he was six.\n\nWe stayed up far too late. Miriam had news -- real news, the kind you lean in for -- about a neighbor of theirs who has, it seems, been writing letters to the newspaper under a false name, and everyone in town knows it, and nobody has the heart to say so. I laughed until I had to put my cup down. It isn't kind to laugh, I know. But hush, it was very funny, and I'm not sorry.\n\nSunday we walked down to the creek, and it was one of those odd soft afternoons when nobody much wants to say anything. The water was low. Jimmy skipped stones badly and blamed the stones. Miriam picked up a handful of something green and held onto it the whole way back, and I never did find out what it was. I keep meaning to ask.\n\nThey left Monday morning, earlier than I'd hoped, because of the car and its thinking. I stood at the gate a while after the dust settled. The house was very quiet. There was a hat still on the hall chair, and I can't decide whether it's Jimmy's or Miriam's, and I rather like not knowing yet.\n\nI suppose I ought to write and tell them about the hat. Or maybe I'll just keep it a few days and see who asks.\n\nLouisa",
+  "draft_words": 446,
+  "target_words": 400,
+  "valid": true,
+  "invalid_reasons": [],
+  "invalid_history": [],
+  "evidence": {
+    "init_skills": [
+      "my-voice"
+    ],
+    "init_plugins": [],
+    "init_mcp_servers": [],
+    "claude_code_version": "2.1.306",
+    "model": "claude-sonnet-5-5",
+    "skill_calls": [
+      "my-voice"
+    ],
+    "tools_used": [
+      "Skill"
+    ],
+    "invoked": true,
+    "invocation_detail": "skill_tool_use_ok",
+    "invariant_violations": [],
+    "problems": []
+  },
+  "log_label": "d-era-d-heldout-02-with-r1-a1-10220953",
+  "created": "2026-10-22T09:53"
+}

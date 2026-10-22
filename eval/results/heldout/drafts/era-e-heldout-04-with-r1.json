@@ -1,0 +1,41 @@
+{
+  "license_header": "Corpus-derived content (persona era-e). Source texts are in the public domain in the USA. Sources: eval/corpus/PROVENANCE.md",
+  "persona": "era-e",
+  "task_id": "era-e-heldout-04",
+  "split": "heldout",
+  "arm": "with",
+  "rep": 1,
+  "mode": "auto",
+  "model_requested": "claude-sonnet-5-5",
+  "position_in_task": 4,
+  "attempt": 1,
+  "prompt": "Write an email to a colleague about pests eating the vegetables. Aim for about 400 words. Reply with the email only.",
+  "final_message": "Subject: The vegetables, and who is eating them\n\nDear Colleague,\n\nI write with news from the garden, and it is not the good kind. Something has been eating the vegetables; I have not yet established what, but I have my suspects, and I intend to question each of them in turn.\n\nThe first casualty was the lettuce. I had seen on Tuesday that it was just ready to cut, and I went out on Wednesday with a bowl and a certain amount of confidence. The bowl came back empty. The lettuce had been reduced to a sort of green lace, which is handsome in a curtain but of little use in a salad. The beans fared little better; their leaves are now so full of holes that they resemble a map of some archipelago.\n\nThe evidence so far points in two directions. There are slugs, certainly, for the silver trails across the path are as good as a signed confession. But slugs do not account for the squash, whose stems have been gnawed through at the base, a piece of work that requires either teeth or a grudge. I am inclined to blame a rabbit, though the neighbor insists it is a groundhog, and we have agreed to disagree with the cool formality of two nations disputing a border.\n\nI have tried the usual remedies. A saucer of beer, set out for the slugs, was drained by morning; I counted this a partial success, as the slugs did at least die happy. I have also scattered crushed eggshells, which are said to discourage them. They have not been discouraged. If anything, they seem to regard the shells as a pleasant sort of gravel drive leading directly to the cabbages.\n\nI am told that you had a similar trouble with your own plot a few seasons ago, and that you won the contest in the end. I would be grateful for the details of your method, whether it was netting, traps, a dog, or some arrangement I have not thought of. I am prepared to try nearly anything short of a formal treaty with the groundhog.\n\nIf you have an hour free this weekend, come and look at the damage yourself. I will provide the coffee, and you may provide the expert opinion; the vegetables, what is left of them, will provide the evidence.\n\nWith thanks in advance,\n\nWalter",
+  "draft": "Subject: The vegetables, and who is eating them\n\nDear Colleague,\n\nI write with news from the garden, and it is not the good kind. Something has been eating the vegetables; I have not yet established what, but I have my suspects, and I intend to question each of them in turn.\n\nThe first casualty was the lettuce. I had seen on Tuesday that it was just ready to cut, and I went out on Wednesday with a bowl and a certain amount of confidence. The bowl came back empty. The lettuce had been reduced to a sort of green lace, which is handsome in a curtain but of little use in a salad. The beans fared little better; their leaves are now so full of holes that they resemble a map of some archipelago.\n\nThe evidence so far points in two directions. There are slugs, certainly, for the silver trails across the path are as good as a signed confession. But slugs do not account for the squash, whose stems have been gnawed through at the base, a piece of work that requires either teeth or a grudge. I am inclined to blame a rabbit, though the neighbor insists it is a groundhog, and we have agreed to disagree with the cool formality of two nations disputing a border.\n\nI have tried the usual remedies. A saucer of beer, set out for the slugs, was drained by morning; I counted this a partial success, as the slugs did at least die happy. I have also scattered crushed eggshells, which are said to discourage them. They have not been discouraged. If anything, they seem to regard the shells as a pleasant sort of gravel drive leading directly to the cabbages.\n\nI am told that you had a similar trouble with your own plot a few seasons ago, and that you won the contest in the end. I would be grateful for the details of your method, whether it was netting, traps, a dog, or some arrangement I have not thought of. I am prepared to try nearly anything short of a formal treaty with the groundhog.\n\nIf you have an hour free this weekend, come and look at the damage yourself. I will provide the coffee, and you may provide the expert opinion; the vegetables, what is left of them, will provide the evidence.\n\nWith thanks in advance,\n\nWalter",
+  "draft_words": 398,
+  "target_words": 400,
+  "valid": true,
+  "invalid_reasons": [],
+  "invalid_history": [],
+  "evidence": {
+    "init_skills": [
+      "my-voice"
+    ],
+    "init_plugins": [],
+    "init_mcp_servers": [],
+    "claude_code_version": "2.1.306",
+    "model": "claude-sonnet-5-5",
+    "skill_calls": [
+      "my-voice"
+    ],
+    "tools_used": [
+      "Skill"
+    ],
+    "invoked": true,
+    "invocation_detail": "skill_tool_use_ok",
+    "invariant_violations": [],
+    "problems": []
+  },
+  "log_label": "d-era-e-heldout-04-with-r1-a1-10221000",
+  "created": "2026-10-22T10:04"
+}

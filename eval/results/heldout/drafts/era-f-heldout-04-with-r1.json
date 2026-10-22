@@ -1,0 +1,41 @@
+{
+  "license_header": "Corpus-derived content (persona era-f). Source texts are in the public domain in the USA. Sources: eval/corpus/PROVENANCE.md",
+  "persona": "era-f",
+  "task_id": "era-f-heldout-04",
+  "split": "heldout",
+  "arm": "with",
+  "rep": 1,
+  "mode": "auto",
+  "model_requested": "claude-sonnet-5-5",
+  "position_in_task": 1,
+  "attempt": 1,
+  "prompt": "Write an email to a colleague about doing every task well, however small. Aim for about 400 words. Reply with the email only.",
+  "final_message": "Subject: Why the small jobs matter\n\nHi Daniel,\n\nI want to share something I have been thinking about this week. How you do the small tasks tells people more about you than how you do the big ones. Anyone can rise to a large project when everyone is watching. The habit shows in the quiet work that nobody checks.\n\nTake the weekly attendance report, or the short reply to a parent, or the room you tidy before you leave. Each one is small. But if you do it as well as you can, you build a habit. If you do it carelessly, you build that habit too. The habit follows you into the large jobs, whether you want it to or not.\n\nI do not mean you should spend hours on every note. I mean you should finish each task the way you would be proud to have someone read it. Check the numbers once more. Read the message aloud before you send it. Put the tools back where you found them. These things take a few minutes, and they are noticed more than you think.\n\nTry it for one week. Pick a small task you usually rush, and do it a little better each day than you did the day before. By Friday I think you will see a change in the work, and in how you feel about it. There is real satisfaction in doing a plain job well.\n\nYou have already shown me that you care about the students and the school. This is only one more way to show it. If you want to talk it over, I am glad to sit down with you any afternoon.\n\nSamuel",
+  "draft": "Subject: Why the small jobs matter\n\nHi Daniel,\n\nI want to share something I have been thinking about this week. How you do the small tasks tells people more about you than how you do the big ones. Anyone can rise to a large project when everyone is watching. The habit shows in the quiet work that nobody checks.\n\nTake the weekly attendance report, or the short reply to a parent, or the room you tidy before you leave. Each one is small. But if you do it as well as you can, you build a habit. If you do it carelessly, you build that habit too. The habit follows you into the large jobs, whether you want it to or not.\n\nI do not mean you should spend hours on every note. I mean you should finish each task the way you would be proud to have someone read it. Check the numbers once more. Read the message aloud before you send it. Put the tools back where you found them. These things take a few minutes, and they are noticed more than you think.\n\nTry it for one week. Pick a small task you usually rush, and do it a little better each day than you did the day before. By Friday I think you will see a change in the work, and in how you feel about it. There is real satisfaction in doing a plain job well.\n\nYou have already shown me that you care about the students and the school. This is only one more way to show it. If you want to talk it over, I am glad to sit down with you any afternoon.\n\nSamuel",
+  "draft_words": 282,
+  "target_words": 400,
+  "valid": true,
+  "invalid_reasons": [],
+  "invalid_history": [],
+  "evidence": {
+    "init_skills": [
+      "my-voice"
+    ],
+    "init_plugins": [],
+    "init_mcp_servers": [],
+    "claude_code_version": "2.1.306",
+    "model": "claude-sonnet-5-5",
+    "skill_calls": [
+      "my-voice"
+    ],
+    "tools_used": [
+      "Skill"
+    ],
+    "invoked": true,
+    "invocation_detail": "skill_tool_use_ok",
+    "invariant_violations": [],
+    "problems": []
+  },
+  "log_label": "d-era-f-heldout-04-with-r1-a1-10221009",
+  "created": "2026-10-22T10:12"
+}

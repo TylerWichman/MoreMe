@@ -1,0 +1,41 @@
+{
+  "license_header": "Corpus-derived content (persona modern-b). Adapted from works licensed under CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/); this file is licensed under CC BY-SA 4.0. Attribution, sources, and changes: eval/corpus/PROVENANCE.md",
+  "persona": "modern-b",
+  "task_id": "modern-b-heldout-01",
+  "split": "heldout",
+  "arm": "with",
+  "rep": 2,
+  "mode": "auto",
+  "model_requested": "claude-sonnet-5-5",
+  "position_in_task": 2,
+  "attempt": 1,
+  "prompt": "Write an email to a colleague about how the falling cost of making things might change why people work. Aim for about 400 words. Reply with the email only.",
+  "final_message": "Subject: How cheaper making might change why we work\n\nHi,\n\nI've been thinking about what happens to work as the cost of making things keeps falling. My short answer is this: the reason people work will matter more than the work itself.\n\nLet me define the term first. By \"cost of making,\" I mean everything it takes to turn an idea into something real. That includes materials, labor, tools, and time. AI, automation, and better software are all pushing that number down.\n\nFor most of history, work was mainly about producing things. A baker baked because bread was scarce, and people paid for it. When making gets cheap, scarcity moves somewhere else. Think about writing a first draft of a report. A few years ago, it took a day. Now it takes minutes. The draft isn't the valuable part anymore. Knowing what the report should say, and for whom, is.\n\nI see three shifts coming.\n\nFirst, work will lean toward judgment. When anyone can produce a decent result, the person who decides what's worth producing becomes more useful. That's a different skill from making, and many of us haven't practiced it much.\n\nSecond, people will want more meaning from their jobs. If pay is no longer tied to scarce output, the question \"why am I doing this?\" gets louder. I expect more people to choose work because it matters to them, or because it connects them to others.\n\nThird, trust and relationships will carry more weight. A machine can produce a proposal, but a client still wants to know who will stand behind it. That's the human part, and it can't be copied cheaply.\n\nI don't want to oversell this. Cheaper production also means some jobs will disappear, and the change won't be even. Some people will have time to adjust, and others won't. That's a real concern, and I don't have a tidy answer for it.\n\nStill, I think it's worth planning for now. In our own work, we could ask which tasks are really about making and which are about deciding. The second group is where I'd invest.\n\nI'd like to hear where you think I'm wrong. Do you have time for a call next week?\n\nBest,",
+  "draft": "Subject: How cheaper making might change why we work\n\nHi,\n\nI've been thinking about what happens to work as the cost of making things keeps falling. My short answer is this: the reason people work will matter more than the work itself.\n\nLet me define the term first. By \"cost of making,\" I mean everything it takes to turn an idea into something real. That includes materials, labor, tools, and time. AI, automation, and better software are all pushing that number down.\n\nFor most of history, work was mainly about producing things. A baker baked because bread was scarce, and people paid for it. When making gets cheap, scarcity moves somewhere else. Think about writing a first draft of a report. A few years ago, it took a day. Now it takes minutes. The draft isn't the valuable part anymore. Knowing what the report should say, and for whom, is.\n\nI see three shifts coming.\n\nFirst, work will lean toward judgment. When anyone can produce a decent result, the person who decides what's worth producing becomes more useful. That's a different skill from making, and many of us haven't practiced it much.\n\nSecond, people will want more meaning from their jobs. If pay is no longer tied to scarce output, the question \"why am I doing this?\" gets louder. I expect more people to choose work because it matters to them, or because it connects them to others.\n\nThird, trust and relationships will carry more weight. A machine can produce a proposal, but a client still wants to know who will stand behind it. That's the human part, and it can't be copied cheaply.\n\nI don't want to oversell this. Cheaper production also means some jobs will disappear, and the change won't be even. Some people will have time to adjust, and others won't. That's a real concern, and I don't have a tidy answer for it.\n\nStill, I think it's worth planning for now. In our own work, we could ask which tasks are really about making and which are about deciding. The second group is where I'd invest.\n\nI'd like to hear where you think I'm wrong. Do you have time for a call next week?\n\nBest,",
+  "draft_words": 369,
+  "target_words": 400,
+  "valid": true,
+  "invalid_reasons": [],
+  "invalid_history": [],
+  "evidence": {
+    "init_skills": [
+      "my-voice"
+    ],
+    "init_plugins": [],
+    "init_mcp_servers": [],
+    "claude_code_version": "2.1.306",
+    "model": "claude-sonnet-5-5",
+    "skill_calls": [
+      "my-voice"
+    ],
+    "tools_used": [
+      "Skill"
+    ],
+    "invoked": true,
+    "invocation_detail": "skill_tool_use_ok",
+    "invariant_violations": [],
+    "problems": []
+  },
+  "log_label": "d-modern-b-heldout-01-with-r2-a1-10211521",
+  "created": "2026-10-21T15:22"
+}

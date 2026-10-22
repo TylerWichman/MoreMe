@@ -1,0 +1,41 @@
+{
+  "license_header": "Corpus-derived content (persona era-d). Source texts are in the public domain in the USA. Sources: eval/corpus/PROVENANCE.md",
+  "persona": "era-d",
+  "task_id": "era-d-heldout-05",
+  "split": "heldout",
+  "arm": "with",
+  "rep": 2,
+  "mode": "auto",
+  "model_requested": "claude-sonnet-5-5",
+  "position_in_task": 1,
+  "attempt": 1,
+  "prompt": "Write a short blog post about sewing and chores on a quiet day. Aim for about 400 words. Reply with the post only.",
+  "final_message": "**A Quiet Day, Mostly Spent With a Needle**\n\nNothing happened today, and I mean that kindly. The house was so still that I could hear the clock in the hall, which I usually pretend isn't there, and the rain kept up a dull little tapping at the window as if it wanted to be let in. So of course I did what I always do when there is no excuse for anything better: I got out the sewing basket and told myself I would \"just\" mend a few things. Just! As if that word has ever once been true in this house. I started with the blue dress, the one with the hem that has been coming down since March -- I am not proud of that -- and I had it nearly finished when I found the button box under it, upside down, and spilled the whole lot across the floor. There were buttons from dresses I no longer own, buttons from I cannot think what, and one enormous brass one that must have come off a coat of Papa's, though why anyone saved it is beyond me. I sat there sorting them by color for a full half hour and called it work. Then the stockings wanted darning, and the stockings, I must say, were in a worse temper than I was. Somewhere in the middle of all this I remembered the chores I had promised myself, the dusting and the lamp wicks and the dreadful drawer in the pantry, and I decided, quite calmly, that they could keep until the light got better. It's remarkable how much sewing can be done while avoiding the sweeping. I did get up once to see to the kettle, and once to shoo the cat off the hem I had just finished, which she had chosen as her new bed with great confidence and no apology whatever. The strange part is that I wasn't restless at all, which is not like me; usually a quiet day makes me want to rearrange the furniture or write a dozen letters or quarrel with somebody, just to keep my hand in. But today the thread went through the cloth, one stitch and then the next, and my thoughts wandered off on their own errands and came back with nothing much, and that seemed to be quite enough. Toward evening I swept after all, badly, and found two more buttons under the sofa. I put them in the box with the others. The rain is still going, and the lamp wants trimming, and I believe there is a sleeve I have forgotten about.\n\nLouisa",
+  "draft": "**A Quiet Day, Mostly Spent With a Needle**\n\nNothing happened today, and I mean that kindly. The house was so still that I could hear the clock in the hall, which I usually pretend isn't there, and the rain kept up a dull little tapping at the window as if it wanted to be let in. So of course I did what I always do when there is no excuse for anything better: I got out the sewing basket and told myself I would \"just\" mend a few things. Just! As if that word has ever once been true in this house. I started with the blue dress, the one with the hem that has been coming down since March -- I am not proud of that -- and I had it nearly finished when I found the button box under it, upside down, and spilled the whole lot across the floor. There were buttons from dresses I no longer own, buttons from I cannot think what, and one enormous brass one that must have come off a coat of Papa's, though why anyone saved it is beyond me. I sat there sorting them by color for a full half hour and called it work. Then the stockings wanted darning, and the stockings, I must say, were in a worse temper than I was. Somewhere in the middle of all this I remembered the chores I had promised myself, the dusting and the lamp wicks and the dreadful drawer in the pantry, and I decided, quite calmly, that they could keep until the light got better. It's remarkable how much sewing can be done while avoiding the sweeping. I did get up once to see to the kettle, and once to shoo the cat off the hem I had just finished, which she had chosen as her new bed with great confidence and no apology whatever. The strange part is that I wasn't restless at all, which is not like me; usually a quiet day makes me want to rearrange the furniture or write a dozen letters or quarrel with somebody, just to keep my hand in. But today the thread went through the cloth, one stitch and then the next, and my thoughts wandered off on their own errands and came back with nothing much, and that seemed to be quite enough. Toward evening I swept after all, badly, and found two more buttons under the sofa. I put them in the box with the others. The rain is still going, and the lamp wants trimming, and I believe there is a sleeve I have forgotten about.\n\nLouisa",
+  "draft_words": 437,
+  "target_words": 400,
+  "valid": true,
+  "invalid_reasons": [],
+  "invalid_history": [],
+  "evidence": {
+    "init_skills": [
+      "my-voice"
+    ],
+    "init_plugins": [],
+    "init_mcp_servers": [],
+    "claude_code_version": "2.1.306",
+    "model": "claude-sonnet-5-5",
+    "skill_calls": [
+      "my-voice"
+    ],
+    "tools_used": [
+      "Skill"
+    ],
+    "invoked": true,
+    "invocation_detail": "skill_tool_use_ok",
+    "invariant_violations": [],
+    "problems": []
+  },
+  "log_label": "d-era-d-heldout-05-with-r2-a1-10220953",
+  "created": "2026-10-22T09:56"
+}

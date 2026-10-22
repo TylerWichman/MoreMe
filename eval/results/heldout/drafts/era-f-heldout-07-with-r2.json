@@ -1,0 +1,41 @@
+{
+  "license_header": "Corpus-derived content (persona era-f). Source texts are in the public domain in the USA. Sources: eval/corpus/PROVENANCE.md",
+  "persona": "era-f",
+  "task_id": "era-f-heldout-07",
+  "split": "heldout",
+  "arm": "with",
+  "rep": 2,
+  "mode": "auto",
+  "model_requested": "claude-sonnet-5-5",
+  "position_in_task": 1,
+  "attempt": 1,
+  "prompt": "Write an email to a colleague about being honest when it costs you something. Aim for about 400 words. Reply with the email only.",
+  "final_message": "Subject: On being honest when it costs you\n\nDear colleague,\n\nI want to write to you about something small that has stayed on my mind this week. It is easy to be honest when nothing is at stake. The test comes when the truth will cost you something, such as a little pride, a good opinion, or an easy afternoon.\n\nYou will meet these moments more often than you think. A student asks if the work is good enough, and the kind answer is yes, but the true answer is not yet. A mistake is yours, and nobody else has noticed it. You can stay quiet and the day will go on as before. I have done this myself, and I never felt better for it afterward.\n\nHere is what I have learned. The cost of honesty is paid once, and it is usually smaller than you feared. The cost of hiding the truth keeps growing, and it takes your peace along with it. People also trust you more when you say the hard thing plainly. A student who hears the truth from you today will believe your praise tomorrow.\n\nSo I ask you to try this: the next time you feel the pull to soften or skip the truth, say it anyway, and say it kindly. You do not need to be harsh. You only need to be clear. Then watch what happens. I think you will find, as I have, that you are stronger for it, and that those around you are too.\n\nPlease come and talk with me if you want to think any of this through. I would be glad to hear how it goes for you.\n\nSamuel",
+  "draft": "Subject: On being honest when it costs you\n\nDear colleague,\n\nI want to write to you about something small that has stayed on my mind this week. It is easy to be honest when nothing is at stake. The test comes when the truth will cost you something, such as a little pride, a good opinion, or an easy afternoon.\n\nYou will meet these moments more often than you think. A student asks if the work is good enough, and the kind answer is yes, but the true answer is not yet. A mistake is yours, and nobody else has noticed it. You can stay quiet and the day will go on as before. I have done this myself, and I never felt better for it afterward.\n\nHere is what I have learned. The cost of honesty is paid once, and it is usually smaller than you feared. The cost of hiding the truth keeps growing, and it takes your peace along with it. People also trust you more when you say the hard thing plainly. A student who hears the truth from you today will believe your praise tomorrow.\n\nSo I ask you to try this: the next time you feel the pull to soften or skip the truth, say it anyway, and say it kindly. You do not need to be harsh. You only need to be clear. Then watch what happens. I think you will find, as I have, that you are stronger for it, and that those around you are too.\n\nPlease come and talk with me if you want to think any of this through. I would be glad to hear how it goes for you.\n\nSamuel",
+  "draft_words": 282,
+  "target_words": 400,
+  "valid": true,
+  "invalid_reasons": [],
+  "invalid_history": [],
+  "evidence": {
+    "init_skills": [
+      "my-voice"
+    ],
+    "init_plugins": [],
+    "init_mcp_servers": [],
+    "claude_code_version": "2.1.306",
+    "model": "claude-sonnet-5-5",
+    "skill_calls": [
+      "my-voice"
+    ],
+    "tools_used": [
+      "Skill"
+    ],
+    "invoked": true,
+    "invocation_detail": "skill_tool_use_ok",
+    "invariant_violations": [],
+    "problems": []
+  },
+  "log_label": "d-era-f-heldout-07-with-r2-a1-10221009",
+  "created": "2026-10-22T10:15"
+}

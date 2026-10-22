@@ -1,0 +1,41 @@
+{
+  "license_header": "Corpus-derived content (persona era-e). Source texts are in the public domain in the USA. Sources: eval/corpus/PROVENANCE.md",
+  "persona": "era-e",
+  "task_id": "era-e-heldout-05",
+  "split": "heldout",
+  "arm": "with",
+  "rep": 2,
+  "mode": "auto",
+  "model_requested": "claude-sonnet-5-5",
+  "position_in_task": 5,
+  "attempt": 1,
+  "prompt": "Write a short blog post about the first harvest of the year. Aim for about 400 words. Reply with the post only.",
+  "final_message": "# The First Harvest\n\nThe first harvest of the year arrived on a Tuesday, and it consisted of eleven radishes. I mention the number because I intend to be accurate about this; the garden has been the subject of a good deal of optimistic talk since March, and the radishes are the first hard evidence.\n\nI pulled them in the early evening, when the light is kind and the neighbors are indoors. A man likes to be unobserved when he carries eleven radishes across a lawn as though they were the crown jewels. I rinsed them at the spigot, set them on a plate, and regarded them for some time. They were red, round, and slightly crooked, which is more than can be said for most of the seedlings that preceded them.\n\nIt should be understood that the radish is not a serious vegetable. It is up in three weeks and gone in four; it asks nothing of the soil and gives back a modest sharpness, like a minor official who does his duty and expects no ceremony. Yet it is the first thing to come out of the ground, and so it receives honors well beyond its rank. Nobody remembers who fired the first shot of a great war; everybody remembers the first radish.\n\nMy wife ate two, with salt, and pronounced them \"fine.\" I have been married long enough to know that this is high praise, roughly equal to a medal. The remaining nine I ate myself over the next two days, standing at the kitchen counter, which is the proper place for eating one's own produce. A dining table lends the matter a gravity it cannot support.\n\nThe peas, I am told by the peas themselves, are a fortnight off. The lettuce is thinking it over. The zucchini has made no statement, but I have learned not to trust its silence; by August it will be leaving bags of itself on the porches of people who never asked, and I will be one of those people on the giving end, wearing an expression of great innocence.\n\nFor now there is the matter of the empty row where the radishes stood. A gardener is never idle for long; the hole must be filled, and the hoe is already leaning against the fence with the look of a tool that has been underemployed. I shall sow carrots there tomorrow, and I shall expect them to do better than their reputation.\n\nEleven radishes is not a harvest by any reasonable measure. But I have stood in that garden since spring with nothing to show but turned earth and a firm belief in the calendar, and I will take my evidence where I find it. Tuesday was the day the belief paid something back; it paid in small red coin, and I counted every piece.",
+  "draft": "# The First Harvest\n\nThe first harvest of the year arrived on a Tuesday, and it consisted of eleven radishes. I mention the number because I intend to be accurate about this; the garden has been the subject of a good deal of optimistic talk since March, and the radishes are the first hard evidence.\n\nI pulled them in the early evening, when the light is kind and the neighbors are indoors. A man likes to be unobserved when he carries eleven radishes across a lawn as though they were the crown jewels. I rinsed them at the spigot, set them on a plate, and regarded them for some time. They were red, round, and slightly crooked, which is more than can be said for most of the seedlings that preceded them.\n\nIt should be understood that the radish is not a serious vegetable. It is up in three weeks and gone in four; it asks nothing of the soil and gives back a modest sharpness, like a minor official who does his duty and expects no ceremony. Yet it is the first thing to come out of the ground, and so it receives honors well beyond its rank. Nobody remembers who fired the first shot of a great war; everybody remembers the first radish.\n\nMy wife ate two, with salt, and pronounced them \"fine.\" I have been married long enough to know that this is high praise, roughly equal to a medal. The remaining nine I ate myself over the next two days, standing at the kitchen counter, which is the proper place for eating one's own produce. A dining table lends the matter a gravity it cannot support.\n\nThe peas, I am told by the peas themselves, are a fortnight off. The lettuce is thinking it over. The zucchini has made no statement, but I have learned not to trust its silence; by August it will be leaving bags of itself on the porches of people who never asked, and I will be one of those people on the giving end, wearing an expression of great innocence.\n\nFor now there is the matter of the empty row where the radishes stood. A gardener is never idle for long; the hole must be filled, and the hoe is already leaning against the fence with the look of a tool that has been underemployed. I shall sow carrots there tomorrow, and I shall expect them to do better than their reputation.\n\nEleven radishes is not a harvest by any reasonable measure. But I have stood in that garden since spring with nothing to show but turned earth and a firm belief in the calendar, and I will take my evidence where I find it. Tuesday was the day the belief paid something back; it paid in small red coin, and I counted every piece.",
+  "draft_words": 473,
+  "target_words": 400,
+  "valid": true,
+  "invalid_reasons": [],
+  "invalid_history": [],
+  "evidence": {
+    "init_skills": [
+      "my-voice"
+    ],
+    "init_plugins": [],
+    "init_mcp_servers": [],
+    "claude_code_version": "2.1.306",
+    "model": "claude-sonnet-5-5",
+    "skill_calls": [
+      "my-voice"
+    ],
+    "tools_used": [
+      "Skill"
+    ],
+    "invoked": true,
+    "invocation_detail": "skill_tool_use_ok",
+    "invariant_violations": [],
+    "problems": []
+  },
+  "log_label": "d-era-e-heldout-05-with-r2-a1-10221000",
+  "created": "2026-10-22T10:05"
+}

@@ -1,0 +1,41 @@
+{
+  "license_header": "Corpus-derived content (persona era-e). Source texts are in the public domain in the USA. Sources: eval/corpus/PROVENANCE.md",
+  "persona": "era-e",
+  "task_id": "era-e-heldout-03",
+  "split": "heldout",
+  "arm": "with",
+  "rep": 2,
+  "mode": "auto",
+  "model_requested": "claude-sonnet-5-5",
+  "position_in_task": 1,
+  "attempt": 1,
+  "prompt": "Write a note to a friend about a neighbor's advice about your garden. Aim for about 400 words. Reply with the note only.",
+  "final_message": "Dear Harold,\n\nYou asked how the garden is coming along, and I must report that it is coming along under supervision. Our neighbor, Mr. Pruitt, has taken a close interest in it this season; he leans on the fence most evenings with the air of a man inspecting a colony.\n\nHis first piece of advice concerned the tomatoes. I had planted them eighteen inches apart, which I considered generous. He looked at them for some time, sighed, and said they wanted three feet; that a tomato, like a statesman, does poorly when crowded by its colleagues. I have since moved four of them, and they sulked for a week before resuming business. I am obliged to admit that the ones left in their proper places are now better than the ones I had crowded, and I have told no one but you.\n\nHis second piece of advice was that I water in the morning and never at night. I had been doing the reverse, on the principle that evening is when a gardener has leisure and a conscience. He says night watering invites mildew; the leaves stay damp, and a damp leaf is an open door. I now rise at an hour that my wife describes as \"theatrical,\" and stand in the yard with the hose while the birds look on with open contempt. The mildew, so far, has not appeared. I cannot prove it was ever coming.\n\nHis third piece of advice I have declined. He holds that the zucchini should be pinched back, and that I am allowing it to run wild. I have planted zucchini before, and I know what it does when left alone: it produces more than any household can eat, and then it produces more. Pinching it back would only be a small act of mercy toward the neighbors, who by August begin locking their cars. I mean to let it run, and to take the consequences like a man.\n\nI should add, in fairness, that Mr. Pruitt's own garden is a model of order; his rows are straight enough to survey a county by, and not a weed dares show its face in them. This is a little hard to forgive. Still, one cannot argue with turf like his, and I have stopped trying. A man who can grow grass of that quality has earned the right to an opinion about peas.\n\nCome in September if you can. There will be tomatoes, correctly spaced, and a quantity of zucchini that I will press upon you with some firmness.\n\nWalter",
+  "draft": "Dear Harold,\n\nYou asked how the garden is coming along, and I must report that it is coming along under supervision. Our neighbor, Mr. Pruitt, has taken a close interest in it this season; he leans on the fence most evenings with the air of a man inspecting a colony.\n\nHis first piece of advice concerned the tomatoes. I had planted them eighteen inches apart, which I considered generous. He looked at them for some time, sighed, and said they wanted three feet; that a tomato, like a statesman, does poorly when crowded by its colleagues. I have since moved four of them, and they sulked for a week before resuming business. I am obliged to admit that the ones left in their proper places are now better than the ones I had crowded, and I have told no one but you.\n\nHis second piece of advice was that I water in the morning and never at night. I had been doing the reverse, on the principle that evening is when a gardener has leisure and a conscience. He says night watering invites mildew; the leaves stay damp, and a damp leaf is an open door. I now rise at an hour that my wife describes as \"theatrical,\" and stand in the yard with the hose while the birds look on with open contempt. The mildew, so far, has not appeared. I cannot prove it was ever coming.\n\nHis third piece of advice I have declined. He holds that the zucchini should be pinched back, and that I am allowing it to run wild. I have planted zucchini before, and I know what it does when left alone: it produces more than any household can eat, and then it produces more. Pinching it back would only be a small act of mercy toward the neighbors, who by August begin locking their cars. I mean to let it run, and to take the consequences like a man.\n\nI should add, in fairness, that Mr. Pruitt's own garden is a model of order; his rows are straight enough to survey a county by, and not a weed dares show its face in them. This is a little hard to forgive. Still, one cannot argue with turf like his, and I have stopped trying. A man who can grow grass of that quality has earned the right to an opinion about peas.\n\nCome in September if you can. There will be tomatoes, correctly spaced, and a quantity of zucchini that I will press upon you with some firmness.\n\nWalter",
+  "draft_words": 426,
+  "target_words": 400,
+  "valid": true,
+  "invalid_reasons": [],
+  "invalid_history": [],
+  "evidence": {
+    "init_skills": [
+      "my-voice"
+    ],
+    "init_plugins": [],
+    "init_mcp_servers": [],
+    "claude_code_version": "2.1.306",
+    "model": "claude-sonnet-5-5",
+    "skill_calls": [
+      "my-voice"
+    ],
+    "tools_used": [
+      "Skill"
+    ],
+    "invoked": true,
+    "invocation_detail": "skill_tool_use_ok",
+    "invariant_violations": [],
+    "problems": []
+  },
+  "log_label": "d-era-e-heldout-03-with-r2-a1-10221000",
+  "created": "2026-10-22T10:03"
+}

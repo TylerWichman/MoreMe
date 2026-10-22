@@ -1,0 +1,41 @@
+{
+  "license_header": "Corpus-derived content (persona era-d). Source texts are in the public domain in the USA. Sources: eval/corpus/PROVENANCE.md",
+  "persona": "era-d",
+  "task_id": "era-d-heldout-08",
+  "split": "heldout",
+  "arm": "with",
+  "rep": 1,
+  "mode": "auto",
+  "model_requested": "claude-sonnet-5-5",
+  "position_in_task": 5,
+  "attempt": 1,
+  "prompt": "Write a short blog post about a sudden change of plans. Aim for about 400 words. Reply with the post only.",
+  "final_message": "**The Day the Plans Fell Through**\n\nWe were going to the lake on Saturday. I want that on record, because by Friday night everyone in my house was already calling it \"the trip that never was,\" as though it had been written up in a history book.\n\nEverything was packed. The cooler sat by the door, the good towels were folded (I do not fold towels for just anyone), and my brother had sent three separate texts about which road to take. Three! The road has one turn in it. But that's Jamie for you -- he treats a map the way other people treat a sacred text.\n\nThen at about nine o'clock the phone rang, and it was Aunt Dell, who never calls after eight unless somebody has died or the dog has gotten out. This time it was the dog. Biscuit, in a burst of what I can only call ambition, had pushed through the back gate and was last seen trotting down Maple Street like a man late for a train. Could we come? Of course we could. Nobody says no to Aunt Dell, partly from love and partly because she remembers everything.\n\nSo the lake was off. Just like that. I stood in the kitchen with a bag of pretzels in my hand and felt, I'll admit, a little sulky about it. I had wanted that water. I'd been thinking about it all week, through two dull meetings and one truly awful dentist appointment.\n\nBut here's the funny part, and I'm not sure I can explain it. We spent the whole of Saturday morning walking up and down streets I haven't properly looked at in years, calling out for a beagle who plainly did not wish to be found. Mrs. Okafor from the corner house joined us in her bathrobe and slippers. A boy of about nine offered to help in exchange for \"a reasonable fee,\" and Jamie, who had been sulking even harder than I had, negotiated him down to two pretzels and a fair amount of respect.\n\nWe found Biscuit at eleven-fifteen, asleep under the porch of a house with a very fine hydrangea. He looked wholly unrepentant. Aunt Dell cried, and then scolded him, and then cried again, and then made us all stay for pancakes, which were burned on one side, as they always are.\n\nI still haven't been to the lake. Jamie says next weekend, but he said that about the last three weekends too, and I've started to suspect the road with the one turn is simply a bad influence on him. The towels are still folded, anyway. I haven't had the heart to touch them.\n\nLouisa",
+  "draft": "**The Day the Plans Fell Through**\n\nWe were going to the lake on Saturday. I want that on record, because by Friday night everyone in my house was already calling it \"the trip that never was,\" as though it had been written up in a history book.\n\nEverything was packed. The cooler sat by the door, the good towels were folded (I do not fold towels for just anyone), and my brother had sent three separate texts about which road to take. Three! The road has one turn in it. But that's Jamie for you -- he treats a map the way other people treat a sacred text.\n\nThen at about nine o'clock the phone rang, and it was Aunt Dell, who never calls after eight unless somebody has died or the dog has gotten out. This time it was the dog. Biscuit, in a burst of what I can only call ambition, had pushed through the back gate and was last seen trotting down Maple Street like a man late for a train. Could we come? Of course we could. Nobody says no to Aunt Dell, partly from love and partly because she remembers everything.\n\nSo the lake was off. Just like that. I stood in the kitchen with a bag of pretzels in my hand and felt, I'll admit, a little sulky about it. I had wanted that water. I'd been thinking about it all week, through two dull meetings and one truly awful dentist appointment.\n\nBut here's the funny part, and I'm not sure I can explain it. We spent the whole of Saturday morning walking up and down streets I haven't properly looked at in years, calling out for a beagle who plainly did not wish to be found. Mrs. Okafor from the corner house joined us in her bathrobe and slippers. A boy of about nine offered to help in exchange for \"a reasonable fee,\" and Jamie, who had been sulking even harder than I had, negotiated him down to two pretzels and a fair amount of respect.\n\nWe found Biscuit at eleven-fifteen, asleep under the porch of a house with a very fine hydrangea. He looked wholly unrepentant. Aunt Dell cried, and then scolded him, and then cried again, and then made us all stay for pancakes, which were burned on one side, as they always are.\n\nI still haven't been to the lake. Jamie says next weekend, but he said that about the last three weekends too, and I've started to suspect the road with the one turn is simply a bad influence on him. The towels are still folded, anyway. I haven't had the heart to touch them.\n\nLouisa",
+  "draft_words": 447,
+  "target_words": 400,
+  "valid": true,
+  "invalid_reasons": [],
+  "invalid_history": [],
+  "evidence": {
+    "init_skills": [
+      "my-voice"
+    ],
+    "init_plugins": [],
+    "init_mcp_servers": [],
+    "claude_code_version": "2.1.306",
+    "model": "claude-sonnet-5-5",
+    "skill_calls": [
+      "my-voice"
+    ],
+    "tools_used": [
+      "Skill"
+    ],
+    "invoked": true,
+    "invocation_detail": "skill_tool_use_ok",
+    "invariant_violations": [],
+    "problems": []
+  },
+  "log_label": "d-era-d-heldout-08-with-r1-a1-10220953",
+  "created": "2026-10-22T10:00"
+}

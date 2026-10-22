@@ -1,0 +1,41 @@
+{
+  "license_header": "Corpus-derived content (persona era-f). Source texts are in the public domain in the USA. Sources: eval/corpus/PROVENANCE.md",
+  "persona": "era-f",
+  "task_id": "era-f-heldout-08",
+  "split": "heldout",
+  "arm": "with",
+  "rep": 1,
+  "mode": "auto",
+  "model_requested": "claude-sonnet-5-5",
+  "position_in_task": 2,
+  "attempt": 1,
+  "prompt": "Write a short blog post about making the most of your time at school. Aim for about 400 words. Reply with the post only.",
+  "final_message": "# Making the Most of Your Time at School\n\nYour years at school pass faster than you expect. One day you are finding your way to the first class, and soon after you are packing up to leave. What you do with the time in between matters.\n\nStart with the work in front of you. Do each assignment as well as you can, and then do the next one a little better. Small gains add up over a term, and over a year they become real skill.\n\nShow up on time and ready to learn. Most of what you gain at school comes from simple habits. Sit near the front, listen closely, and take notes in your own words so you can understand them later.\n\nAsk for help when you need it. Your teachers want you to succeed, and they are glad when you come to them. No one expects you to know everything. They only expect you to try.\n\nUse your free time with care. An hour here and there seems small, but over a school year it is a great deal of time. Read a good book, practice a skill, or finish your work early so your evenings are free.\n\nLearn from the people around you. Your classmates come from different homes and have different strengths. Listen to them, work with them, and you will find that you learn as much from them as from any textbook.\n\nLook for ways to help others. I have found that the more you do for somebody else, the more satisfied you feel yourself. Tutor a younger student, join a club, or simply offer a hand when someone is struggling.\n\nTake care of yourself as well. Sleep enough, eat well, and spend some time outdoors. You cannot do good work when you are worn out, and a rested mind learns far more than a tired one.\n\nDo not worry too much about mistakes. Every student makes them, and they are part of learning. What counts is that you look at the error, understand it, and do better the next time.\n\nThink about where you are going. You are not at school only to pass tests. You are there to become strong, thoughtful, and useful to others. Keep that purpose in mind on the hard days.\n\nFinally, be patient with yourself. Progress is often slow, and you may not see it from one week to the next. Look back over a few months, and you will be surprised by how far you have come.\n\nMake each day count. Work hard, stay kind, and keep improving. When you leave school, you will be glad of the effort you put in.",
+  "draft": "# Making the Most of Your Time at School\n\nYour years at school pass faster than you expect. One day you are finding your way to the first class, and soon after you are packing up to leave. What you do with the time in between matters.\n\nStart with the work in front of you. Do each assignment as well as you can, and then do the next one a little better. Small gains add up over a term, and over a year they become real skill.\n\nShow up on time and ready to learn. Most of what you gain at school comes from simple habits. Sit near the front, listen closely, and take notes in your own words so you can understand them later.\n\nAsk for help when you need it. Your teachers want you to succeed, and they are glad when you come to them. No one expects you to know everything. They only expect you to try.\n\nUse your free time with care. An hour here and there seems small, but over a school year it is a great deal of time. Read a good book, practice a skill, or finish your work early so your evenings are free.\n\nLearn from the people around you. Your classmates come from different homes and have different strengths. Listen to them, work with them, and you will find that you learn as much from them as from any textbook.\n\nLook for ways to help others. I have found that the more you do for somebody else, the more satisfied you feel yourself. Tutor a younger student, join a club, or simply offer a hand when someone is struggling.\n\nTake care of yourself as well. Sleep enough, eat well, and spend some time outdoors. You cannot do good work when you are worn out, and a rested mind learns far more than a tired one.\n\nDo not worry too much about mistakes. Every student makes them, and they are part of learning. What counts is that you look at the error, understand it, and do better the next time.\n\nThink about where you are going. You are not at school only to pass tests. You are there to become strong, thoughtful, and useful to others. Keep that purpose in mind on the hard days.\n\nFinally, be patient with yourself. Progress is often slow, and you may not see it from one week to the next. Look back over a few months, and you will be surprised by how far you have come.\n\nMake each day count. Work hard, stay kind, and keep improving. When you leave school, you will be glad of the effort you put in.",
+  "draft_words": 445,
+  "target_words": 400,
+  "valid": true,
+  "invalid_reasons": [],
+  "invalid_history": [],
+  "evidence": {
+    "init_skills": [
+      "my-voice"
+    ],
+    "init_plugins": [],
+    "init_mcp_servers": [],
+    "claude_code_version": "2.1.306",
+    "model": "claude-sonnet-5-5",
+    "skill_calls": [
+      "my-voice"
+    ],
+    "tools_used": [
+      "Skill"
+    ],
+    "invoked": true,
+    "invocation_detail": "skill_tool_use_ok",
+    "invariant_violations": [],
+    "problems": []
+  },
+  "log_label": "d-era-f-heldout-08-with-r1-a1-10221009",
+  "created": "2026-10-22T10:16"
+}

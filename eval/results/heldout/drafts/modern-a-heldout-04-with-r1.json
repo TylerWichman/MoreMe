@@ -1,0 +1,41 @@
+{
+  "license_header": "Corpus-derived content (persona modern-a). Contains public sector information licensed under the Open Government Licence v3.0 (https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/). Sources and changes: eval/corpus/PROVENANCE.md",
+  "persona": "modern-a",
+  "task_id": "modern-a-heldout-04",
+  "split": "heldout",
+  "arm": "with",
+  "rep": 1,
+  "mode": "auto",
+  "model_requested": "claude-sonnet-5-5",
+  "position_in_task": 2,
+  "attempt": 1,
+  "prompt": "Write an email to a colleague about how to change a large, slow organization. Aim for about 400 words. Reply with the email only.",
+  "final_message": "Subject: How we change a big, slow organisation\n\nHi,\n\nYou asked how we get anything to shift in an organisation this size. Here's what I've learned, and what I'd do in your position.\n\nStart small and real. Don't launch a grand programme. Pick one team with a real problem and help them fix it. A working example persuades people far better than a slide deck. When someone asks \"does this actually work here?\", you can point at it.\n\nFind the people who already want change. Every large organisation has them. They're usually mid-level, a bit frustrated, and waiting for permission. Give them cover and a bit of support. They'll do more than any central team could.\n\nGet a senior sponsor, but don't wait for one. You need someone who can clear blockers and speak up when it matters. You don't need them to run the work. Keep them informed with short, honest updates, and bring them problems early.\n\nMake the old way harder and the new way easier. People follow the path of least effort. If a new process takes three approvals and the old one takes one, nobody will switch. So we should remove steps, not add guidance.\n\nChange the rules that drive behaviour. Governance, budgets and reporting lines shape what people do every day. If those stay the same, the culture won't move. Some of our best results came from simply closing a board that no longer earned its place.\n\nExpect requirements to change. The plan we write now won't match what we deliver. That's fine. Work in small steps, release often and listen to the people who use the service. Then adjust.\n\nBe patient, but keep moving. Big organisations take years, not months. Show progress every few weeks so people can see it's real. Celebrate the wins quietly and share the lessons openly, including the failures.\n\nI'm happy to talk through your own situation. If you tell me where you're stuck, we can pick a first small step together. Grab me for half an hour this week.\n\nGraham",
+  "draft": "Subject: How we change a big, slow organisation\n\nHi,\n\nYou asked how we get anything to shift in an organisation this size. Here's what I've learned, and what I'd do in your position.\n\nStart small and real. Don't launch a grand programme. Pick one team with a real problem and help them fix it. A working example persuades people far better than a slide deck. When someone asks \"does this actually work here?\", you can point at it.\n\nFind the people who already want change. Every large organisation has them. They're usually mid-level, a bit frustrated, and waiting for permission. Give them cover and a bit of support. They'll do more than any central team could.\n\nGet a senior sponsor, but don't wait for one. You need someone who can clear blockers and speak up when it matters. You don't need them to run the work. Keep them informed with short, honest updates, and bring them problems early.\n\nMake the old way harder and the new way easier. People follow the path of least effort. If a new process takes three approvals and the old one takes one, nobody will switch. So we should remove steps, not add guidance.\n\nChange the rules that drive behaviour. Governance, budgets and reporting lines shape what people do every day. If those stay the same, the culture won't move. Some of our best results came from simply closing a board that no longer earned its place.\n\nExpect requirements to change. The plan we write now won't match what we deliver. That's fine. Work in small steps, release often and listen to the people who use the service. Then adjust.\n\nBe patient, but keep moving. Big organisations take years, not months. Show progress every few weeks so people can see it's real. Celebrate the wins quietly and share the lessons openly, including the failures.\n\nI'm happy to talk through your own situation. If you tell me where you're stuck, we can pick a first small step together. Grab me for half an hour this week.\n\nGraham",
+  "draft_words": 342,
+  "target_words": 400,
+  "valid": true,
+  "invalid_reasons": [],
+  "invalid_history": [],
+  "evidence": {
+    "init_skills": [
+      "my-voice"
+    ],
+    "init_plugins": [],
+    "init_mcp_servers": [],
+    "claude_code_version": "2.1.303",
+    "model": "claude-sonnet-5-5",
+    "skill_calls": [
+      "my-voice"
+    ],
+    "tools_used": [
+      "Skill"
+    ],
+    "invoked": true,
+    "invocation_detail": "skill_tool_use_ok",
+    "invariant_violations": [],
+    "problems": []
+  },
+  "log_label": "d-modern-a-heldout-04-with-r1-a1-10210946",
+  "created": "2026-10-21T09:50"
+}

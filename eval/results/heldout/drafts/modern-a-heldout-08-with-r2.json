@@ -1,0 +1,41 @@
+{
+  "license_header": "Corpus-derived content (persona modern-a). Contains public sector information licensed under the Open Government Licence v3.0 (https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/). Sources and changes: eval/corpus/PROVENANCE.md",
+  "persona": "modern-a",
+  "task_id": "modern-a-heldout-08",
+  "split": "heldout",
+  "arm": "with",
+  "rep": 2,
+  "mode": "auto",
+  "model_requested": "claude-sonnet-5-5",
+  "position_in_task": 4,
+  "attempt": 1,
+  "prompt": "Write a short blog post about what comes next for your digital team. Aim for about 400 words. Reply with the post only.",
+  "final_message": "# What comes next for our digital team\n\nOver the next year, we're going to do fewer things and do them better. That's the short version.\n\nWe've spent a lot of time building new services. Some of them work well. Others need more care than we've given them. So we're shifting our focus from launching to improving.\n\n## What this means in practice\n\nWe'll pick a small number of services and stay with them. Each one will have a dedicated team, a clear owner, and a regular release cycle. If something isn't working for users, we'll fix it in days, not months.\n\nWe'll also close some projects. That's not a failure. It's a sign we're being honest about where our effort does the most good.\n\n## Why we're doing it\n\nOur users don't care how many services we've built. They care whether the one they need works. When we spread ourselves thin, the basics suffer. Forms break. Pages go stale. Support queues grow.\n\nWe know requirements will keep changing. Budgets will shift and priorities will move. Working in small steps lets us deal with that without losing months of effort. So we'll keep agile as our default, and we won't treat it as an option.\n\n## Three things we're committing to\n\n**Research first.** Every change starts with what users tell us. We'll sit with people who use our services, watch where they get stuck, and build from there.\n\n**Shared tools.** We're going to stop rebuilding the same things in different corners of the organisation. Where a common component exists, we'll use it. Where it doesn't, we'll build one and share it.\n\n**Open data on performance.** We'll publish how our services are doing, including the bad news. It's easier to improve when everyone can see the numbers.\n\n## What we need from colleagues\n\nI'm asking for two things. First, tell us what's not working. We can't fix what we don't hear about. Second, be patient with the changes in how we plan. Some of our current boards and approval steps will go, or shrink. That should mean fewer meetings and faster decisions.\n\nWe'll review the new setup in six months. If parts of it aren't helping, we'll change them.\n\n## The takeaway\n\nWe're building less and caring for more. Our aim is simple: services that work, for the people who rely on them.\n\nI'm looking forward to getting on with it, and I'll share updates as we go.\n\nGraham",
+  "draft": "# What comes next for our digital team\n\nOver the next year, we're going to do fewer things and do them better. That's the short version.\n\nWe've spent a lot of time building new services. Some of them work well. Others need more care than we've given them. So we're shifting our focus from launching to improving.\n\n## What this means in practice\n\nWe'll pick a small number of services and stay with them. Each one will have a dedicated team, a clear owner, and a regular release cycle. If something isn't working for users, we'll fix it in days, not months.\n\nWe'll also close some projects. That's not a failure. It's a sign we're being honest about where our effort does the most good.\n\n## Why we're doing it\n\nOur users don't care how many services we've built. They care whether the one they need works. When we spread ourselves thin, the basics suffer. Forms break. Pages go stale. Support queues grow.\n\nWe know requirements will keep changing. Budgets will shift and priorities will move. Working in small steps lets us deal with that without losing months of effort. So we'll keep agile as our default, and we won't treat it as an option.\n\n## Three things we're committing to\n\n**Research first.** Every change starts with what users tell us. We'll sit with people who use our services, watch where they get stuck, and build from there.\n\n**Shared tools.** We're going to stop rebuilding the same things in different corners of the organisation. Where a common component exists, we'll use it. Where it doesn't, we'll build one and share it.\n\n**Open data on performance.** We'll publish how our services are doing, including the bad news. It's easier to improve when everyone can see the numbers.\n\n## What we need from colleagues\n\nI'm asking for two things. First, tell us what's not working. We can't fix what we don't hear about. Second, be patient with the changes in how we plan. Some of our current boards and approval steps will go, or shrink. That should mean fewer meetings and faster decisions.\n\nWe'll review the new setup in six months. If parts of it aren't helping, we'll change them.\n\n## The takeaway\n\nWe're building less and caring for more. Our aim is simple: services that work, for the people who rely on them.\n\nI'm looking forward to getting on with it, and I'll share updates as we go.\n\nGraham",
+  "draft_words": 402,
+  "target_words": 400,
+  "valid": true,
+  "invalid_reasons": [],
+  "invalid_history": [],
+  "evidence": {
+    "init_skills": [
+      "my-voice"
+    ],
+    "init_plugins": [],
+    "init_mcp_servers": [],
+    "claude_code_version": "2.1.306",
+    "model": "claude-sonnet-5-5",
+    "skill_calls": [
+      "my-voice"
+    ],
+    "tools_used": [
+      "Skill"
+    ],
+    "invoked": true,
+    "invocation_detail": "skill_tool_use_ok",
+    "invariant_violations": [],
+    "problems": []
+  },
+  "log_label": "d-modern-a-heldout-08-with-r2-a1-10211511",
+  "created": "2026-10-21T15:13"
+}

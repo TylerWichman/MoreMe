@@ -1,0 +1,41 @@
+{
+  "license_header": "Corpus-derived content (persona era-d). Source texts are in the public domain in the USA. Sources: eval/corpus/PROVENANCE.md",
+  "persona": "era-d",
+  "task_id": "era-d-heldout-05",
+  "split": "heldout",
+  "arm": "with",
+  "rep": 1,
+  "mode": "auto",
+  "model_requested": "claude-sonnet-5-5",
+  "position_in_task": 3,
+  "attempt": 1,
+  "prompt": "Write a short blog post about sewing and chores on a quiet day. Aim for about 400 words. Reply with the post only.",
+  "final_message": "# A Quiet Day, a Basket of Mending\n\nNothing happened today, and I mean that as a compliment. No callers, no errands that couldn't wait, and the sky has been the color of dishwater since breakfast -- the kind of weather that gives you permission to stay put.\n\nSo I did what I always do on days like this, which is tell myself I'll sew and then do the chores first. It's a ridiculous habit. The mending basket has been sitting by the window for nearly two weeks, and I have walked past it with my nose in the air like a duchess who has noticed a stain on the carpet. But the floor wanted sweeping, and the kettle wanted scouring, and somehow I found myself rearranging the spoons. The spoons! Nobody has ever been improved by rearranging spoons.\n\nStill, there is something to be said for the chores on a quiet day, because they don't feel like chores. Nobody is waiting for the bread to be done, so you can stand in the kitchen and watch the dough sulk and rise, and you don't mind it. I hung the wash on the line in the one hour it stopped threatening rain, and I even enjoyed it, which I would deny under oath.\n\nBy the afternoon I'd run out of excuses and finally sat down with the basket. It was worse than I remembered. Two buttons gone from my brother's good waistcoat (he will say he doesn't know how, and I will say I do, and we will leave it there), a hem coming down on the blue skirt, and a sock so far gone that I held it up to the light and seriously considered a funeral.\n\nI started with the buttons, because they're the easy win. Thread the needle -- and why does the thread always find a way to fray at the exact moment you've got the end to the eye? -- and then it's just the small steady stitches, in and out, over and over. My mind wandered, as it does, to nothing in particular. I thought about whether the neighbor's hens are laying, and whether I ought to write to Miriam, and what on earth I said at the last dinner party that made Mrs. P---- look at me like that. Probably something I thought was funny.\n\nThe hem is half done. The sock is still waiting, and I've decided it can wait a bit longer, since the light is nearly gone and the kettle, I notice, wants filling again--\n\nLouisa",
+  "draft": "# A Quiet Day, a Basket of Mending\n\nNothing happened today, and I mean that as a compliment. No callers, no errands that couldn't wait, and the sky has been the color of dishwater since breakfast -- the kind of weather that gives you permission to stay put.\n\nSo I did what I always do on days like this, which is tell myself I'll sew and then do the chores first. It's a ridiculous habit. The mending basket has been sitting by the window for nearly two weeks, and I have walked past it with my nose in the air like a duchess who has noticed a stain on the carpet. But the floor wanted sweeping, and the kettle wanted scouring, and somehow I found myself rearranging the spoons. The spoons! Nobody has ever been improved by rearranging spoons.\n\nStill, there is something to be said for the chores on a quiet day, because they don't feel like chores. Nobody is waiting for the bread to be done, so you can stand in the kitchen and watch the dough sulk and rise, and you don't mind it. I hung the wash on the line in the one hour it stopped threatening rain, and I even enjoyed it, which I would deny under oath.\n\nBy the afternoon I'd run out of excuses and finally sat down with the basket. It was worse than I remembered. Two buttons gone from my brother's good waistcoat (he will say he doesn't know how, and I will say I do, and we will leave it there), a hem coming down on the blue skirt, and a sock so far gone that I held it up to the light and seriously considered a funeral.\n\nI started with the buttons, because they're the easy win. Thread the needle -- and why does the thread always find a way to fray at the exact moment you've got the end to the eye? -- and then it's just the small steady stitches, in and out, over and over. My mind wandered, as it does, to nothing in particular. I thought about whether the neighbor's hens are laying, and whether I ought to write to Miriam, and what on earth I said at the last dinner party that made Mrs. P---- look at me like that. Probably something I thought was funny.\n\nThe hem is half done. The sock is still waiting, and I've decided it can wait a bit longer, since the light is nearly gone and the kettle, I notice, wants filling again--\n\nLouisa",
+  "draft_words": 422,
+  "target_words": 400,
+  "valid": true,
+  "invalid_reasons": [],
+  "invalid_history": [],
+  "evidence": {
+    "init_skills": [
+      "my-voice"
+    ],
+    "init_plugins": [],
+    "init_mcp_servers": [],
+    "claude_code_version": "2.1.306",
+    "model": "claude-sonnet-5-5",
+    "skill_calls": [
+      "my-voice"
+    ],
+    "tools_used": [
+      "Skill"
+    ],
+    "invoked": true,
+    "invocation_detail": "skill_tool_use_ok",
+    "invariant_violations": [],
+    "problems": []
+  },
+  "log_label": "d-era-d-heldout-05-with-r1-a1-10220953",
+  "created": "2026-10-22T09:57"
+}

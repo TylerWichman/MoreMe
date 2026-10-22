@@ -1,0 +1,41 @@
+{
+  "license_header": "Corpus-derived content (persona era-e). Source texts are in the public domain in the USA. Sources: eval/corpus/PROVENANCE.md",
+  "persona": "era-e",
+  "task_id": "era-e-heldout-02",
+  "split": "heldout",
+  "arm": "with",
+  "rep": 1,
+  "mode": "auto",
+  "model_requested": "claude-sonnet-5-5",
+  "position_in_task": 3,
+  "attempt": 1,
+  "prompt": "Write a short blog post about battling weeds. Aim for about 400 words. Reply with the post only.",
+  "final_message": "# On the Conduct of a War Against Weeds\n\nI have been at war with the weeds for some years now, and I am prepared to report that the weeds are winning. They do not say so; they are too well bred for that. They simply appear overnight in the bean row, looking as though they had been invited.\n\nThe first principle of the campaign is that a weed is merely a plant that has not been introduced to the right people. This is a comforting thought for about a minute. Then one notices that the purslane has taken over the path, and that the crabgrass has treaties with the neighboring lawn. At that point charity gives way to the hoe.\n\nI am an advocate of the hoe. It is the one tool in the shed that allows a man to stand upright and think well of himself while he works. A sharp hoe, drawn through the soil on a dry morning, will do more damage to a weed than a whole afternoon of pulling; the sun finishes what the blade begins. A weed cut down in the morning and left on the surface is, by evening, a very sorry weed indeed. I find this satisfying in a way I would not care to explain to a stranger.\n\nThe second principle is timing. Weeds are creatures of habit, and they keep a calendar more exact than mine. The small ones are easy; they come away with a flick of the wrist and no argument. The large ones have roots, opinions, and a good deal of seed, and they must be dealt with in the manner of a treaty negotiation: slowly, firmly, and with a trowel. Let a dandelion go to seed, and you will spend the next three summers regretting a single afternoon's leniency.\n\nThe third principle is mulch. A thick layer of straw or shredded leaves over the bare ground will discourage most of the enemy before it has properly arrived. It is the garden equivalent of a closed gate; nothing is stopped entirely, but the visitors must at least put in some effort. My wife, who watches these operations from the porch with a patience I do not deserve, points out that I have been \"about to mulch\" since April. She is correct, and I have decided not to dispute the record.\n\nI should add that I have tried the vinegar, the boiling water, and the newspaper. Each worked a little, and each made me feel clever for exactly one week. The weeds, I suspect, hold a meeting in the compost heap every Sunday to review my methods, and adjust.\n\nStill, there is a quiet dignity in a clean row of onions, and I will not give it up. The war goes on; the hoe is sharp; the tea is hot. If the purslane wishes to negotiate, it knows where to find me.",
+  "draft": "# On the Conduct of a War Against Weeds\n\nI have been at war with the weeds for some years now, and I am prepared to report that the weeds are winning. They do not say so; they are too well bred for that. They simply appear overnight in the bean row, looking as though they had been invited.\n\nThe first principle of the campaign is that a weed is merely a plant that has not been introduced to the right people. This is a comforting thought for about a minute. Then one notices that the purslane has taken over the path, and that the crabgrass has treaties with the neighboring lawn. At that point charity gives way to the hoe.\n\nI am an advocate of the hoe. It is the one tool in the shed that allows a man to stand upright and think well of himself while he works. A sharp hoe, drawn through the soil on a dry morning, will do more damage to a weed than a whole afternoon of pulling; the sun finishes what the blade begins. A weed cut down in the morning and left on the surface is, by evening, a very sorry weed indeed. I find this satisfying in a way I would not care to explain to a stranger.\n\nThe second principle is timing. Weeds are creatures of habit, and they keep a calendar more exact than mine. The small ones are easy; they come away with a flick of the wrist and no argument. The large ones have roots, opinions, and a good deal of seed, and they must be dealt with in the manner of a treaty negotiation: slowly, firmly, and with a trowel. Let a dandelion go to seed, and you will spend the next three summers regretting a single afternoon's leniency.\n\nThe third principle is mulch. A thick layer of straw or shredded leaves over the bare ground will discourage most of the enemy before it has properly arrived. It is the garden equivalent of a closed gate; nothing is stopped entirely, but the visitors must at least put in some effort. My wife, who watches these operations from the porch with a patience I do not deserve, points out that I have been \"about to mulch\" since April. She is correct, and I have decided not to dispute the record.\n\nI should add that I have tried the vinegar, the boiling water, and the newspaper. Each worked a little, and each made me feel clever for exactly one week. The weeds, I suspect, hold a meeting in the compost heap every Sunday to review my methods, and adjust.\n\nStill, there is a quiet dignity in a clean row of onions, and I will not give it up. The war goes on; the hoe is sharp; the tea is hot. If the purslane wishes to negotiate, it knows where to find me.",
+  "draft_words": 484,
+  "target_words": 400,
+  "valid": true,
+  "invalid_reasons": [],
+  "invalid_history": [],
+  "evidence": {
+    "init_skills": [
+      "my-voice"
+    ],
+    "init_plugins": [],
+    "init_mcp_servers": [],
+    "claude_code_version": "2.1.306",
+    "model": "claude-sonnet-5-5",
+    "skill_calls": [
+      "my-voice"
+    ],
+    "tools_used": [
+      "Skill"
+    ],
+    "invoked": true,
+    "invocation_detail": "skill_tool_use_ok",
+    "invariant_violations": [],
+    "problems": []
+  },
+  "log_label": "d-era-e-heldout-02-with-r1-a1-10221000",
+  "created": "2026-10-22T10:02"
+}

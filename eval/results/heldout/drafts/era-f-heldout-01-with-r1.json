@@ -1,0 +1,41 @@
+{
+  "license_header": "Corpus-derived content (persona era-f). Source texts are in the public domain in the USA. Sources: eval/corpus/PROVENANCE.md",
+  "persona": "era-f",
+  "task_id": "era-f-heldout-01",
+  "split": "heldout",
+  "arm": "with",
+  "rep": 1,
+  "mode": "auto",
+  "model_requested": "claude-sonnet-5-5",
+  "position_in_task": 5,
+  "attempt": 1,
+  "prompt": "Write an email to a colleague about not being discouraged by setbacks. Aim for about 400 words. Reply with the email only.",
+  "final_message": "Subject: Keep going\n\nDear colleague,\n\nI heard about the trouble with your project last week, and I want to write to you about it. Setbacks hurt, and I know you put a great deal of care into this work. It is fine to feel disappointed for a day or two. What matters is what you do after that.\n\nI have had my share of failures over the years. Some of them seemed large at the time. When I look back now, I see that I learned more from those hard days than from the easy ones. A setback shows you what you did not yet know. It points to the place where you need to grow, and that is a useful thing to learn early.\n\nThink of a man who lays bricks. If one wall falls, he does not give up the trade. He finds out why it fell, and he lays the next wall better than the last. You can do the same. Look at what went wrong, write down two or three lessons, and use them tomorrow. Then do a little better the day after that.\n\nI also want you to remember that you are not alone in this. Your students and your fellow teachers value what you bring to the school. They see your effort, even when the result is not what you hoped for. If you want help, ask for it. I would be glad to sit down with you, go over the plan, and think about the next step together.\n\nThe people who do the most good are rarely the ones who never fail. They are the ones who keep working, keep learning, and keep trying to be of use to others. You are one of those people, and I am sure of it.\n\nTake a little time to rest this week, and then come find me. We will start again, and we will do it well.\n\nSamuel",
+  "draft": "Subject: Keep going\n\nDear colleague,\n\nI heard about the trouble with your project last week, and I want to write to you about it. Setbacks hurt, and I know you put a great deal of care into this work. It is fine to feel disappointed for a day or two. What matters is what you do after that.\n\nI have had my share of failures over the years. Some of them seemed large at the time. When I look back now, I see that I learned more from those hard days than from the easy ones. A setback shows you what you did not yet know. It points to the place where you need to grow, and that is a useful thing to learn early.\n\nThink of a man who lays bricks. If one wall falls, he does not give up the trade. He finds out why it fell, and he lays the next wall better than the last. You can do the same. Look at what went wrong, write down two or three lessons, and use them tomorrow. Then do a little better the day after that.\n\nI also want you to remember that you are not alone in this. Your students and your fellow teachers value what you bring to the school. They see your effort, even when the result is not what you hoped for. If you want help, ask for it. I would be glad to sit down with you, go over the plan, and think about the next step together.\n\nThe people who do the most good are rarely the ones who never fail. They are the ones who keep working, keep learning, and keep trying to be of use to others. You are one of those people, and I am sure of it.\n\nTake a little time to rest this week, and then come find me. We will start again, and we will do it well.\n\nSamuel",
+  "draft_words": 323,
+  "target_words": 400,
+  "valid": true,
+  "invalid_reasons": [],
+  "invalid_history": [],
+  "evidence": {
+    "init_skills": [
+      "my-voice"
+    ],
+    "init_plugins": [],
+    "init_mcp_servers": [],
+    "claude_code_version": "2.1.306",
+    "model": "claude-sonnet-5-5",
+    "skill_calls": [
+      "my-voice"
+    ],
+    "tools_used": [
+      "Skill"
+    ],
+    "invoked": true,
+    "invocation_detail": "skill_tool_use_ok",
+    "invariant_violations": [],
+    "problems": []
+  },
+  "log_label": "d-era-f-heldout-01-with-r1-a1-10221009",
+  "created": "2026-10-22T10:10"
+}

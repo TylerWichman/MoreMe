@@ -1,0 +1,107 @@
+{
+  "schema_version": "1",
+  "split": "heldout",
+  "mode": "auto",
+  "model_requested": "claude-sonnet-5-5",
+  "models_observed": [
+    "claude-sonnet-5-5"
+  ],
+  "claude_code_versions": [
+    "2.1.303",
+    "2.1.306"
+  ],
+  "arm_order_seed": "moreme-arm-order-v1",
+  "samples_seed": "moreme-samples-pasted-v1",
+  "reps": {
+    "with": 2,
+    "without": 2,
+    "samples-pasted": 1
+  },
+  "unit_order": {
+    "era-f-heldout-01": [
+      "without-r1",
+      "with-r2",
+      "samples-pasted-r1",
+      "without-r2",
+      "with-r1"
+    ],
+    "era-f-heldout-02": [
+      "with-r2",
+      "without-r2",
+      "without-r1",
+      "with-r1",
+      "samples-pasted-r1"
+    ],
+    "era-f-heldout-03": [
+      "samples-pasted-r1",
+      "without-r1",
+      "without-r2",
+      "with-r2",
+      "with-r1"
+    ],
+    "era-f-heldout-04": [
+      "with-r1",
+      "with-r2",
+      "without-r1",
+      "samples-pasted-r1",
+      "without-r2"
+    ],
+    "era-f-heldout-05": [
+      "with-r1",
+      "without-r1",
+      "without-r2",
+      "with-r2",
+      "samples-pasted-r1"
+    ],
+    "era-f-heldout-06": [
+      "samples-pasted-r1",
+      "with-r2",
+      "without-r1",
+      "with-r1",
+      "without-r2"
+    ],
+    "era-f-heldout-07": [
+      "with-r2",
+      "samples-pasted-r1",
+      "without-r1",
+      "with-r1",
+      "without-r2"
+    ],
+    "era-f-heldout-08": [
+      "samples-pasted-r1",
+      "with-r1",
+      "with-r2",
+      "without-r2",
+      "without-r1"
+    ]
+  },
+  "ledger": {
+    "reopened": 77,
+    "calls": 475,
+    "units_done": 240,
+    "units_valid": 240,
+    "invalid_attempts": 1,
+    "interrupted_reruns": 1,
+    "quarantined_lines": 0
+  },
+  "invocation": {
+    "rate": 0.9791666666666666,
+    "invoked": 94,
+    "valid_with_units": 96,
+    "threshold": 0.8,
+    "below_threshold": false
+  },
+  "invalid_units": 0,
+  "units_with_reruns": 1,
+  "skill_invariant_failures": 0,
+  "init_assertion_failures": 0,
+  "session_spill": {
+    "new_folders_this_batch": 0,
+    "new_folders_total": 0,
+    "matching_folders_before": 13,
+    "matching_folders_after": 13,
+    "method": "names-only listing of ~/.claude/projects entries containing moreme-eval or moreme-e2e"
+  },
+  "stopped": null,
+  "updated": "2026-10-22T10:17"
+}

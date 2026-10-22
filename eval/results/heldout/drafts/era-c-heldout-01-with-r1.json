@@ -1,0 +1,41 @@
+{
+  "license_header": "Corpus-derived content (persona era-c). Source texts are in the public domain in the USA. Sources: eval/corpus/PROVENANCE.md",
+  "persona": "era-c",
+  "task_id": "era-c-heldout-01",
+  "split": "heldout",
+  "arm": "with",
+  "rep": 1,
+  "mode": "auto",
+  "model_requested": "claude-sonnet-5-5",
+  "position_in_task": 3,
+  "attempt": 1,
+  "prompt": "Write an email to a colleague about a recent trip to town and who you met there. Aim for about 400 words. Reply with the email only.",
+  "final_message": "Subject: My trip to town\n\nDear Martin,\n\nI got back from town on Tuesday evening, and I wanted to tell you about it before the details slip away from me. The short of it is that the trip was worth the long ride, mostly because of the people I happened to meet.\n\nThe first was Mr. Abbott, who keeps the feed store on Main Street. I went in to price some seed and stayed nearly an hour. He knows every family within thirty miles and has opinions about all of them, though he gives them kindly. He told me the creek bridge will be mended before the first snow, and I'll believe it when I see the boards go down. He also said the new schoolteacher boards with the Pruitts, which explains why the Pruitt boys have been so well scrubbed lately.\n\nThe second was a woman named Mrs. Lindqvist, whom I met on the steps of the post office. She had a parcel too big for her arms, so I carried half of it to the corner. She turns out to be the sister of someone you know, the Carter who works at the county office. She says her brother talks of you often and thinks you work too hard. I told her I agreed with him, and she laughed and said that was the first sensible thing she had heard all week.\n\nI also had supper at the boarding house with a surveyor who is passing through on his way north. He was a quiet man, but once he warmed up he told me a good deal about the new road. If he's right, it will come within two miles of us by spring, and that would change our mail and our market days. I took notes on the back of my ticket, and I'll copy them out for you when I'm settled.\n\nThe ride home was cold and the wagon rattled the whole way, but I didn't mind it. I had a basket of apples from Mr. Abbott, a promise of tea from Mrs. Lindqvist, and a good deal to think about. I do wish you had come along, since you would have liked every one of them.\n\nWrite when you have a spare hour, and tell me how the work is going on your side. I'd like to hear that you're getting some rest.\n\nHattie",
+  "draft": "Subject: My trip to town\n\nDear Martin,\n\nI got back from town on Tuesday evening, and I wanted to tell you about it before the details slip away from me. The short of it is that the trip was worth the long ride, mostly because of the people I happened to meet.\n\nThe first was Mr. Abbott, who keeps the feed store on Main Street. I went in to price some seed and stayed nearly an hour. He knows every family within thirty miles and has opinions about all of them, though he gives them kindly. He told me the creek bridge will be mended before the first snow, and I'll believe it when I see the boards go down. He also said the new schoolteacher boards with the Pruitts, which explains why the Pruitt boys have been so well scrubbed lately.\n\nThe second was a woman named Mrs. Lindqvist, whom I met on the steps of the post office. She had a parcel too big for her arms, so I carried half of it to the corner. She turns out to be the sister of someone you know, the Carter who works at the county office. She says her brother talks of you often and thinks you work too hard. I told her I agreed with him, and she laughed and said that was the first sensible thing she had heard all week.\n\nI also had supper at the boarding house with a surveyor who is passing through on his way north. He was a quiet man, but once he warmed up he told me a good deal about the new road. If he's right, it will come within two miles of us by spring, and that would change our mail and our market days. I took notes on the back of my ticket, and I'll copy them out for you when I'm settled.\n\nThe ride home was cold and the wagon rattled the whole way, but I didn't mind it. I had a basket of apples from Mr. Abbott, a promise of tea from Mrs. Lindqvist, and a good deal to think about. I do wish you had come along, since you would have liked every one of them.\n\nWrite when you have a spare hour, and tell me how the work is going on your side. I'd like to hear that you're getting some rest.\n\nHattie",
+  "draft_words": 399,
+  "target_words": 400,
+  "valid": true,
+  "invalid_reasons": [],
+  "invalid_history": [],
+  "evidence": {
+    "init_skills": [
+      "my-voice"
+    ],
+    "init_plugins": [],
+    "init_mcp_servers": [],
+    "claude_code_version": "2.1.306",
+    "model": "claude-sonnet-5-5",
+    "skill_calls": [
+      "my-voice"
+    ],
+    "tools_used": [
+      "Skill"
+    ],
+    "invoked": true,
+    "invocation_detail": "skill_tool_use_ok",
+    "invariant_violations": [],
+    "problems": []
+  },
+  "log_label": "d-era-c-heldout-01-with-r1-a1-10211513",
+  "created": "2026-10-21T15:14"
+}

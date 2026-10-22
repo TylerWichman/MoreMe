@@ -1,0 +1,41 @@
+{
+  "license_header": "Corpus-derived content (persona era-c). Source texts are in the public domain in the USA. Sources: eval/corpus/PROVENANCE.md",
+  "persona": "era-c",
+  "task_id": "era-c-heldout-04",
+  "split": "heldout",
+  "arm": "with",
+  "rep": 2,
+  "mode": "auto",
+  "model_requested": "claude-sonnet-5-5",
+  "position_in_task": 5,
+  "attempt": 1,
+  "prompt": "Write an email to a colleague about a new hobby you have taken up. Aim for about 400 words. Reply with the email only.",
+  "final_message": "Subject: A new hobby, and a jar on my counter\n\nHi Dana,\n\nI wanted to tell you about something I've taken up, since you were kind enough to listen to me complain about my weekends last month. I've started baking sourdough bread. I know half the country did this a few years ago and I'm late to the party, but I'm here now and I have flour on the floor to prove it.\n\nIt began when my neighbor gave me a jar of her starter, which is a bubbly paste of flour and water that you have to feed like a very small pet. She handed it over and said it was nearly impossible to kill. I'd like her to know I came close. The first week I forgot it on the counter for three days, and I was sure I'd ruined it. It sulked for a bit and then came right back, which is more than I can say for most of my houseplants.\n\nMy first loaf came out about as dense as a doorstop. I sliced it anyway and ate a piece with butter, and I'll admit it tasted better than it had any right to. The second loaf was a little better, and the third rose properly and had a crust that crackled when I set it on the rack. I stood in the kitchen listening to it for a good minute, feeling very pleased with myself.\n\nWhat I like most is that it can't be hurried. You mix things in the evening, leave them alone overnight, and shape the dough in the morning. There's a lot of waiting, and I've found I don't mind it. I used to fill every spare minute with something, and now I sit with my coffee and let the dough do its work. My husband says the house smells like a bakery, which I take as high praise, since he usually only notices the smell of burnt toast.\n\nI'm no expert, and I make plenty of mistakes. I still can't get the slashes on top to look like the pictures in the books. Mine come out looking more like a scribble than a pattern. But the bread is good, and I'm learning something each time.\n\nI'd like to bring you a loaf on Friday, if you'll have it. I'll warn you that it may be a lopsided one, but it will be a warm one, and I promise it won't be the doorstop.\n\nHattie",
+  "draft": "Subject: A new hobby, and a jar on my counter\n\nHi Dana,\n\nI wanted to tell you about something I've taken up, since you were kind enough to listen to me complain about my weekends last month. I've started baking sourdough bread. I know half the country did this a few years ago and I'm late to the party, but I'm here now and I have flour on the floor to prove it.\n\nIt began when my neighbor gave me a jar of her starter, which is a bubbly paste of flour and water that you have to feed like a very small pet. She handed it over and said it was nearly impossible to kill. I'd like her to know I came close. The first week I forgot it on the counter for three days, and I was sure I'd ruined it. It sulked for a bit and then came right back, which is more than I can say for most of my houseplants.\n\nMy first loaf came out about as dense as a doorstop. I sliced it anyway and ate a piece with butter, and I'll admit it tasted better than it had any right to. The second loaf was a little better, and the third rose properly and had a crust that crackled when I set it on the rack. I stood in the kitchen listening to it for a good minute, feeling very pleased with myself.\n\nWhat I like most is that it can't be hurried. You mix things in the evening, leave them alone overnight, and shape the dough in the morning. There's a lot of waiting, and I've found I don't mind it. I used to fill every spare minute with something, and now I sit with my coffee and let the dough do its work. My husband says the house smells like a bakery, which I take as high praise, since he usually only notices the smell of burnt toast.\n\nI'm no expert, and I make plenty of mistakes. I still can't get the slashes on top to look like the pictures in the books. Mine come out looking more like a scribble than a pattern. But the bread is good, and I'm learning something each time.\n\nI'd like to bring you a loaf on Friday, if you'll have it. I'll warn you that it may be a lopsided one, but it will be a warm one, and I promise it won't be the doorstop.\n\nHattie",
+  "draft_words": 413,
+  "target_words": 400,
+  "valid": true,
+  "invalid_reasons": [],
+  "invalid_history": [],
+  "evidence": {
+    "init_skills": [
+      "my-voice"
+    ],
+    "init_plugins": [],
+    "init_mcp_servers": [],
+    "claude_code_version": "2.1.306",
+    "model": "claude-sonnet-5-5",
+    "skill_calls": [
+      "my-voice"
+    ],
+    "tools_used": [
+      "Skill"
+    ],
+    "invoked": true,
+    "invocation_detail": "skill_tool_use_ok",
+    "invariant_violations": [],
+    "problems": []
+  },
+  "log_label": "d-era-c-heldout-04-with-r2-a1-10211513",
+  "created": "2026-10-21T15:17"
+}

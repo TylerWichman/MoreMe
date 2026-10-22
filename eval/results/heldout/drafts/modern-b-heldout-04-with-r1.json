@@ -1,0 +1,41 @@
+{
+  "license_header": "Corpus-derived content (persona modern-b). Adapted from works licensed under CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/); this file is licensed under CC BY-SA 4.0. Attribution, sources, and changes: eval/corpus/PROVENANCE.md",
+  "persona": "modern-b",
+  "task_id": "modern-b-heldout-04",
+  "split": "heldout",
+  "arm": "with",
+  "rep": 1,
+  "mode": "auto",
+  "model_requested": "claude-sonnet-5-5",
+  "position_in_task": 3,
+  "attempt": 1,
+  "prompt": "Write an email to a colleague about a business book you read recently and what your team can take from it. Aim for about 400 words. Reply with the email only.",
+  "final_message": "Subject: A book worth your time, and what we can use from it\n\nHi Sam,\n\nI finished *Team of Teams* by Stanley McChrystal last week. I think our team can use several of its ideas right away.\n\nThe main point is simple. Large organizations built around strict chains of command are good at efficiency, but they're slow to adapt. McChrystal learned this in Iraq, where his task force was well trained and well equipped and still kept losing ground to a faster, looser network. Speed of learning mattered more than size.\n\nTwo ideas stood out to me.\n\nThe first is \"shared consciousness,\" which means everyone sees the same picture of what's going on. In the book, this meant daily briefings open to hundreds of people, not just senior leaders. The reasoning is that people can't make good calls on information they never see. For us, a smaller version might be a weekly fifteen-minute update where each group shares what it's working on and what's blocking it.\n\nThe second is moving decisions to the people closest to the problem. McChrystal calls this pushing authority to \"the edge.\" Before this, a request had to climb several levels and wait for approval. That worked when conditions were stable, but it can't keep up when conditions change daily. A good example from our own work is client escalations. Right now, a simple fix can wait two or three days for sign-off. If we set a clear limit (say, anything under a certain cost), the account lead could decide on the spot.\n\nI should be honest about one limit. The book describes a military unit under extreme pressure, and our situation is much calmer. Some of the author's methods, such as embedding liaison officers in other teams, would be too heavy for a group our size. I'd borrow the principles and skip the machinery.\n\nHere's what I'd suggest we try over the next quarter:\n\n1. Start the weekly cross-team update and keep it short.\n2. Pick two or three common decisions and write down who can make them without approval.\n3. Review in three months and keep only what's helping.\n\nNone of this requires new tools or budget. It mostly requires us to trust each other with more information and more authority than we do today.\n\nI have a spare copy and I'm happy to lend it to you. Chapters 6 and 7 cover the two ideas above and are the best place to start if you're short on time. Let me know if you'd like to talk it through before our next planning meeting.\n\nBest,",
+  "draft": "Subject: A book worth your time, and what we can use from it\n\nHi Sam,\n\nI finished *Team of Teams* by Stanley McChrystal last week. I think our team can use several of its ideas right away.\n\nThe main point is simple. Large organizations built around strict chains of command are good at efficiency, but they're slow to adapt. McChrystal learned this in Iraq, where his task force was well trained and well equipped and still kept losing ground to a faster, looser network. Speed of learning mattered more than size.\n\nTwo ideas stood out to me.\n\nThe first is \"shared consciousness,\" which means everyone sees the same picture of what's going on. In the book, this meant daily briefings open to hundreds of people, not just senior leaders. The reasoning is that people can't make good calls on information they never see. For us, a smaller version might be a weekly fifteen-minute update where each group shares what it's working on and what's blocking it.\n\nThe second is moving decisions to the people closest to the problem. McChrystal calls this pushing authority to \"the edge.\" Before this, a request had to climb several levels and wait for approval. That worked when conditions were stable, but it can't keep up when conditions change daily. A good example from our own work is client escalations. Right now, a simple fix can wait two or three days for sign-off. If we set a clear limit (say, anything under a certain cost), the account lead could decide on the spot.\n\nI should be honest about one limit. The book describes a military unit under extreme pressure, and our situation is much calmer. Some of the author's methods, such as embedding liaison officers in other teams, would be too heavy for a group our size. I'd borrow the principles and skip the machinery.\n\nHere's what I'd suggest we try over the next quarter:\n\n1. Start the weekly cross-team update and keep it short.\n2. Pick two or three common decisions and write down who can make them without approval.\n3. Review in three months and keep only what's helping.\n\nNone of this requires new tools or budget. It mostly requires us to trust each other with more information and more authority than we do today.\n\nI have a spare copy and I'm happy to lend it to you. Chapters 6 and 7 cover the two ideas above and are the best place to start if you're short on time. Let me know if you'd like to talk it through before our next planning meeting.\n\nBest,",
+  "draft_words": 429,
+  "target_words": 400,
+  "valid": true,
+  "invalid_reasons": [],
+  "invalid_history": [],
+  "evidence": {
+    "init_skills": [
+      "my-voice"
+    ],
+    "init_plugins": [],
+    "init_mcp_servers": [],
+    "claude_code_version": "2.1.306",
+    "model": "claude-sonnet-5-5",
+    "skill_calls": [
+      "my-voice"
+    ],
+    "tools_used": [
+      "Skill"
+    ],
+    "invoked": true,
+    "invocation_detail": "skill_tool_use_ok",
+    "invariant_violations": [],
+    "problems": []
+  },
+  "log_label": "d-modern-b-heldout-04-with-r1-a1-10211521",
+  "created": "2026-10-21T15:25"
+}

@@ -1,0 +1,41 @@
+{
+  "license_header": "Corpus-derived content (persona era-d). Source texts are in the public domain in the USA. Sources: eval/corpus/PROVENANCE.md",
+  "persona": "era-d",
+  "task_id": "era-d-heldout-03",
+  "split": "heldout",
+  "arm": "with",
+  "rep": 2,
+  "mode": "auto",
+  "model_requested": "claude-sonnet-5-5",
+  "position_in_task": 4,
+  "attempt": 1,
+  "prompt": "Write a note to a friend about a sleepless night. Aim for about 400 words. Reply with the note only.",
+  "final_message": "Dear Nell,\n\nI'm writing to you at ten past four in the morning, which tells you most of what you need to know. I went to bed at eleven like a sensible person, and by midnight I was lying there composing a speech to the ceiling about the thing Aunt Cora said at dinner. You know the one. Yes, that one.\n\nThen the clock in the hall struck one, and I counted every stroke, as though it might change its mind. It didn't.\n\nI tried everything. I turned the pillow over, which works for about four minutes. I opened the window and then shut it, because the dog next door has opinions about the moon and shares them freely. I tried counting backwards from a hundred, and I got to sixty-three and started wondering whether I'd ever returned your blue book -- I haven't, have I? It's on my shelf. I can see it from here, looking quite smug about it.\n\nAround two I gave up and went down to the kitchen in my stocking feet, feeling very much like a burglar in my own house. I ate three biscuits standing at the pantry door and told myself it was medicinal. Then I sat on the stairs for a good while, which is a ridiculous place to sit, with the draught coming under the front door, and thought about everything at once. Mother's cough. Whether Jimmy will actually write this month. That dreadful green hat I let myself be talked into. Isn't it odd how a worry that looks perfectly small at noon swells up to the size of a house when there's nobody awake to argue with it?\n\nThe strange part is that I don't feel wretched exactly. Tired, yes, and a little cross, and my eyes have that sandy feeling. But there's something rather pleasant about being the only one awake in a whole sleeping house. Everything sounds so much louder and so much kinder than it does in the daytime. The stairs creak like old friends. Even the dog has given up and gone quiet.\n\nIt's getting grey at the edges of the curtains now, and I can already hear the milk cart, so I suppose that's that. I shall look dreadful at breakfast and Aunt Cora will say something about it, and this time I shall have the speech ready, though I rather suspect I'll have forgotten every word by then.\n\nDo write and tell me you slept like a log, so I can be properly jealous. And don't let me forget your book.\n\nLouisa",
+  "draft": "Dear Nell,\n\nI'm writing to you at ten past four in the morning, which tells you most of what you need to know. I went to bed at eleven like a sensible person, and by midnight I was lying there composing a speech to the ceiling about the thing Aunt Cora said at dinner. You know the one. Yes, that one.\n\nThen the clock in the hall struck one, and I counted every stroke, as though it might change its mind. It didn't.\n\nI tried everything. I turned the pillow over, which works for about four minutes. I opened the window and then shut it, because the dog next door has opinions about the moon and shares them freely. I tried counting backwards from a hundred, and I got to sixty-three and started wondering whether I'd ever returned your blue book -- I haven't, have I? It's on my shelf. I can see it from here, looking quite smug about it.\n\nAround two I gave up and went down to the kitchen in my stocking feet, feeling very much like a burglar in my own house. I ate three biscuits standing at the pantry door and told myself it was medicinal. Then I sat on the stairs for a good while, which is a ridiculous place to sit, with the draught coming under the front door, and thought about everything at once. Mother's cough. Whether Jimmy will actually write this month. That dreadful green hat I let myself be talked into. Isn't it odd how a worry that looks perfectly small at noon swells up to the size of a house when there's nobody awake to argue with it?\n\nThe strange part is that I don't feel wretched exactly. Tired, yes, and a little cross, and my eyes have that sandy feeling. But there's something rather pleasant about being the only one awake in a whole sleeping house. Everything sounds so much louder and so much kinder than it does in the daytime. The stairs creak like old friends. Even the dog has given up and gone quiet.\n\nIt's getting grey at the edges of the curtains now, and I can already hear the milk cart, so I suppose that's that. I shall look dreadful at breakfast and Aunt Cora will say something about it, and this time I shall have the speech ready, though I rather suspect I'll have forgotten every word by then.\n\nDo write and tell me you slept like a log, so I can be properly jealous. And don't let me forget your book.\n\nLouisa",
+  "draft_words": 429,
+  "target_words": 400,
+  "valid": true,
+  "invalid_reasons": [],
+  "invalid_history": [],
+  "evidence": {
+    "init_skills": [
+      "my-voice"
+    ],
+    "init_plugins": [],
+    "init_mcp_servers": [],
+    "claude_code_version": "2.1.306",
+    "model": "claude-sonnet-5-5",
+    "skill_calls": [
+      "my-voice"
+    ],
+    "tools_used": [
+      "Skill"
+    ],
+    "invoked": true,
+    "invocation_detail": "skill_tool_use_ok",
+    "invariant_violations": [],
+    "problems": []
+  },
+  "log_label": "d-era-d-heldout-03-with-r2-a1-10220953",
+  "created": "2026-10-22T09:55"
+}

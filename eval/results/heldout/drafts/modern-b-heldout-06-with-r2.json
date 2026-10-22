@@ -1,0 +1,41 @@
+{
+  "license_header": "Corpus-derived content (persona modern-b). Adapted from works licensed under CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/); this file is licensed under CC BY-SA 4.0. Attribution, sources, and changes: eval/corpus/PROVENANCE.md",
+  "persona": "modern-b",
+  "task_id": "modern-b-heldout-06",
+  "split": "heldout",
+  "arm": "with",
+  "rep": 2,
+  "mode": "auto",
+  "model_requested": "claude-sonnet-5-5",
+  "position_in_task": 3,
+  "attempt": 1,
+  "prompt": "Write a note to a friend about how managers can share decisions with their teams. Aim for about 400 words. Reply with the note only.",
+  "final_message": "Hi,\n\nYou asked how I think managers should share decisions with their teams. Here's my short answer: decide who should own each decision, and say so out loud.\n\nLet me define what I mean. \"Sharing a decision\" doesn't mean a vote on everything. It means the people closest to the problem make the call, and the manager makes sure they have what they need to do it well.\n\nHere's an example. Say a support team keeps getting the same complaint about a billing screen. The manager could collect the facts, think it over, and send down a fix. That takes a week or more. Or the manager could let the two agents who handle those calls pick the fix and try it. They know the customers. They'll likely be right, and they'll be done in a day.\n\nSpeed matters here. Approvals that climb up and down a tall chart are slow, and the issue has often changed by the time an answer comes back. Quick decisions belong on the frontline, where the issues are.\n\nI'd start with three habits.\n\nFirst, name the type of decision. Some are yours alone, some need advice, and some belong to the team. People get frustrated when they can't tell which is which. A simple sentence like \"this one is yours, and I'll back whatever you choose\" clears it up.\n\nSecond, set the limits before you step back. Give the budget, the deadline, and anything that can't change. Inside those limits, the team has real freedom. Without them, people will either freeze or guess.\n\nThird, keep everyone informed as choices get made. When someone picks a path, they should tell the rest of the group what they chose and why (a short message is enough). That's real-time transparency, and it lets others spot problems early. In my experience, feedback is more useful than a detailed plan.\n\nOne warning. If you hand over a decision and then overrule it, the team learns that it was never theirs. Overrule only when a limit has been crossed, and explain it plainly. Otherwise, live with the result, even if you'd have chosen differently.\n\nStart small. Pick one low-risk decision this week and hand it over. Then see what happens. I think you'll be surprised.\n\nTalk soon,",
+  "draft": "Hi,\n\nYou asked how I think managers should share decisions with their teams. Here's my short answer: decide who should own each decision, and say so out loud.\n\nLet me define what I mean. \"Sharing a decision\" doesn't mean a vote on everything. It means the people closest to the problem make the call, and the manager makes sure they have what they need to do it well.\n\nHere's an example. Say a support team keeps getting the same complaint about a billing screen. The manager could collect the facts, think it over, and send down a fix. That takes a week or more. Or the manager could let the two agents who handle those calls pick the fix and try it. They know the customers. They'll likely be right, and they'll be done in a day.\n\nSpeed matters here. Approvals that climb up and down a tall chart are slow, and the issue has often changed by the time an answer comes back. Quick decisions belong on the frontline, where the issues are.\n\nI'd start with three habits.\n\nFirst, name the type of decision. Some are yours alone, some need advice, and some belong to the team. People get frustrated when they can't tell which is which. A simple sentence like \"this one is yours, and I'll back whatever you choose\" clears it up.\n\nSecond, set the limits before you step back. Give the budget, the deadline, and anything that can't change. Inside those limits, the team has real freedom. Without them, people will either freeze or guess.\n\nThird, keep everyone informed as choices get made. When someone picks a path, they should tell the rest of the group what they chose and why (a short message is enough). That's real-time transparency, and it lets others spot problems early. In my experience, feedback is more useful than a detailed plan.\n\nOne warning. If you hand over a decision and then overrule it, the team learns that it was never theirs. Overrule only when a limit has been crossed, and explain it plainly. Otherwise, live with the result, even if you'd have chosen differently.\n\nStart small. Pick one low-risk decision this week and hand it over. Then see what happens. I think you'll be surprised.\n\nTalk soon,",
+  "draft_words": 379,
+  "target_words": 400,
+  "valid": true,
+  "invalid_reasons": [],
+  "invalid_history": [],
+  "evidence": {
+    "init_skills": [
+      "my-voice"
+    ],
+    "init_plugins": [],
+    "init_mcp_servers": [],
+    "claude_code_version": "2.1.306",
+    "model": "claude-sonnet-5-5",
+    "skill_calls": [
+      "my-voice"
+    ],
+    "tools_used": [
+      "Skill"
+    ],
+    "invoked": true,
+    "invocation_detail": "skill_tool_use_ok",
+    "invariant_violations": [],
+    "problems": []
+  },
+  "log_label": "d-modern-b-heldout-06-with-r2-a1-10211521",
+  "created": "2026-10-21T15:27"
+}

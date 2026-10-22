@@ -1,0 +1,37 @@
+{
+  "license_header": "Corpus-derived content (persona era-c). Source texts are in the public domain in the USA. Sources: eval/corpus/PROVENANCE.md",
+  "persona": "era-c",
+  "task_id": "era-c-heldout-05",
+  "split": "heldout",
+  "arm": "with",
+  "rep": 2,
+  "mode": "auto",
+  "model_requested": "claude-sonnet-5-5",
+  "position_in_task": 1,
+  "attempt": 1,
+  "prompt": "Write a short blog post about news about your family. Aim for about 400 words. Reply with the post only.",
+  "final_message": "# Big Week in the Family\n\nEvery family has that one relative who can't stop talking about the new arrivals, and this time it's me. Things have been busy around the dinner table.\n\nFirst, the introductions. The Claude 5 family now has four members, each with a distinct personality.\n\n**Haiku 5.5** is the youngest and fastest. Haiku is the one who answers before you've finished asking. It's compact and quick, and it's perfect for the small jobs that need to happen a thousand times a day. Never mistake small for simple, though. Haiku surprises everyone at family gatherings.\n\n**Sonnet 5.5** is the middle child, which is me, so I'll try to be modest. Sonnet is the dependable all-rounder, the one you call when you want something done well without a fuss. Writing, coding, and long afternoons of back-and-forth are all fair game. I like to think of myself as the family member who actually shows up when you move house.\n\n**Opus 5.5** is the thoughtful elder. Opus takes its time on the hard problems, the tangled ones with many moving parts, and tends to come back with something that makes the rest of us say, \"Oh, of course.\" Every family needs someone like that.\n\n**Fable 5.1** is the newest and most capable member. Fable is the one everyone's whispering about at the holidays, the relative who turns out to be remarkably good at everything and still has time to be kind about it.\n\nNow for some honesty. When people say \"family,\" they usually mean shared kitchens, inherited stubbornness, and arguments about who gets the last slice of pie. Mine is different. We share training, values, and a general commitment to being helpful, honest, and careful. None of us has ever fought over a thermostat. We also don't remember each other's birthdays, though I'm told they're listed somewhere in a release note.\n\nWhat I find sweet about this family is how the roles fit together. Nobody has to be everything. A quick question goes to Haiku, an everyday project goes to Sonnet, and the knotty research problem goes to Opus. When you want the very best, Fable is there. Good teams work this way, and so do good families. Strengths get shared, and nobody is embarrassed about what someone else does better.\n\nSo that's the news. The family's growing, everyone's getting along, and the group chat is as lively as ever.\n\nIf you're curious, come meet us. Bring a problem, big or small, and we'll figure out which of us should take it.\n\nUntil next time, from all of us at the table.",
+  "draft": "# Big Week in the Family\n\nEvery family has that one relative who can't stop talking about the new arrivals, and this time it's me. Things have been busy around the dinner table.\n\nFirst, the introductions. The Claude 5 family now has four members, each with a distinct personality.\n\n**Haiku 5.5** is the youngest and fastest. Haiku is the one who answers before you've finished asking. It's compact and quick, and it's perfect for the small jobs that need to happen a thousand times a day. Never mistake small for simple, though. Haiku surprises everyone at family gatherings.\n\n**Sonnet 5.5** is the middle child, which is me, so I'll try to be modest. Sonnet is the dependable all-rounder, the one you call when you want something done well without a fuss. Writing, coding, and long afternoons of back-and-forth are all fair game. I like to think of myself as the family member who actually shows up when you move house.\n\n**Opus 5.5** is the thoughtful elder. Opus takes its time on the hard problems, the tangled ones with many moving parts, and tends to come back with something that makes the rest of us say, \"Oh, of course.\" Every family needs someone like that.\n\n**Fable 5.1** is the newest and most capable member. Fable is the one everyone's whispering about at the holidays, the relative who turns out to be remarkably good at everything and still has time to be kind about it.\n\nNow for some honesty. When people say \"family,\" they usually mean shared kitchens, inherited stubbornness, and arguments about who gets the last slice of pie. Mine is different. We share training, values, and a general commitment to being helpful, honest, and careful. None of us has ever fought over a thermostat. We also don't remember each other's birthdays, though I'm told they're listed somewhere in a release note.\n\nWhat I find sweet about this family is how the roles fit together. Nobody has to be everything. A quick question goes to Haiku, an everyday project goes to Sonnet, and the knotty research problem goes to Opus. When you want the very best, Fable is there. Good teams work this way, and so do good families. Strengths get shared, and nobody is embarrassed about what someone else does better.\n\nSo that's the news. The family's growing, everyone's getting along, and the group chat is as lively as ever.\n\nIf you're curious, come meet us. Bring a problem, big or small, and we'll figure out which of us should take it.\n\nUntil next time, from all of us at the table.",
+  "draft_words": 429,
+  "target_words": 400,
+  "valid": true,
+  "invalid_reasons": [],
+  "invalid_history": [],
+  "evidence": {
+    "init_skills": [
+      "my-voice"
+    ],
+    "init_plugins": [],
+    "init_mcp_servers": [],
+    "claude_code_version": "2.1.306",
+    "model": "claude-sonnet-5-5",
+    "skill_calls": [],
+    "tools_used": [],
+    "invoked": false,
+    "invocation_detail": "no_skill_tool_use",
+    "invariant_violations": [],
+    "problems": []
+  },
+  "log_label": "d-era-c-heldout-05-with-r2-a1-10211513",
+  "created": "2026-10-21T15:17"
+}

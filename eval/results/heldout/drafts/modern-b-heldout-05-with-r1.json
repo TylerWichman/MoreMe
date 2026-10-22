@@ -1,0 +1,41 @@
+{
+  "license_header": "Corpus-derived content (persona modern-b). Adapted from works licensed under CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/); this file is licensed under CC BY-SA 4.0. Attribution, sources, and changes: eval/corpus/PROVENANCE.md",
+  "persona": "modern-b",
+  "task_id": "modern-b-heldout-05",
+  "split": "heldout",
+  "arm": "with",
+  "rep": 1,
+  "mode": "auto",
+  "model_requested": "claude-sonnet-5-5",
+  "position_in_task": 1,
+  "attempt": 1,
+  "prompt": "Write a short blog post about building trust in a team that works across countries. Aim for about 400 words. Reply with the post only.",
+  "final_message": "# Trust Travels Slowly, So Build It on Purpose\n\nWhen a team sits in one office, trust grows by accident. You share a coffee, overhear a call, and see a colleague stay late to fix a problem. A team spread across countries doesn't get those moments for free. We have to build trust on purpose.\n\nLet me define the term first. Trust, in a team, is the belief that a colleague will do what they said and will tell you early if they can't. That's all. It's not friendship, and it doesn't require agreement.\n\nThe first step is to make work visible. When people can't see each other, they fill the gap with guesses. A teammate in Lisbon doesn't answer for a day, and someone in Chicago starts to wonder. A shared task board fixes much of this. If everyone can see who owns what and where it stands, silence stops looking like neglect.\n\nThe second step is to respect time zones as a real cost. Someone is always taking the odd hour. If the same person always joins the 10 p.m. call, resentment builds quietly. Rotate the inconvenient meeting times (even if it feels clumsy) so the burden is shared. Fairness is one of the fastest ways to earn trust.\n\nThe third step is to say things plainly. Cultures differ in how direct feedback should be. In one country, \"this could be improved\" is a polite warning. In another, it means the work is nearly done. Don't assume your meaning will cross the border unchanged. Write down what you expect, give an example of good work, and ask the other person to restate it in their own words.\n\nThen keep your small promises. If you say you'll send the notes by Friday, send them by Friday. Distance makes small promises matter more, because they're most of what colleagues can observe. Ten kept promises tell a teammate more about you than one good speech.\n\nFinally, make room for people, not only tasks. Start meetings with two minutes of ordinary talk. Ask about the weather, a holiday, or a local dish. It sounds minor, but it's how you learn who you're working with.\n\nNone of this is complicated. It does take repetition. Trust across countries is built the same way it is anywhere else, one kept promise at a time. The difference is that you have to notice each one, because no one else in the hallway will.",
+  "draft": "# Trust Travels Slowly, So Build It on Purpose\n\nWhen a team sits in one office, trust grows by accident. You share a coffee, overhear a call, and see a colleague stay late to fix a problem. A team spread across countries doesn't get those moments for free. We have to build trust on purpose.\n\nLet me define the term first. Trust, in a team, is the belief that a colleague will do what they said and will tell you early if they can't. That's all. It's not friendship, and it doesn't require agreement.\n\nThe first step is to make work visible. When people can't see each other, they fill the gap with guesses. A teammate in Lisbon doesn't answer for a day, and someone in Chicago starts to wonder. A shared task board fixes much of this. If everyone can see who owns what and where it stands, silence stops looking like neglect.\n\nThe second step is to respect time zones as a real cost. Someone is always taking the odd hour. If the same person always joins the 10 p.m. call, resentment builds quietly. Rotate the inconvenient meeting times (even if it feels clumsy) so the burden is shared. Fairness is one of the fastest ways to earn trust.\n\nThe third step is to say things plainly. Cultures differ in how direct feedback should be. In one country, \"this could be improved\" is a polite warning. In another, it means the work is nearly done. Don't assume your meaning will cross the border unchanged. Write down what you expect, give an example of good work, and ask the other person to restate it in their own words.\n\nThen keep your small promises. If you say you'll send the notes by Friday, send them by Friday. Distance makes small promises matter more, because they're most of what colleagues can observe. Ten kept promises tell a teammate more about you than one good speech.\n\nFinally, make room for people, not only tasks. Start meetings with two minutes of ordinary talk. Ask about the weather, a holiday, or a local dish. It sounds minor, but it's how you learn who you're working with.\n\nNone of this is complicated. It does take repetition. Trust across countries is built the same way it is anywhere else, one kept promise at a time. The difference is that you have to notice each one, because no one else in the hallway will.",
+  "draft_words": 406,
+  "target_words": 400,
+  "valid": true,
+  "invalid_reasons": [],
+  "invalid_history": [],
+  "evidence": {
+    "init_skills": [
+      "my-voice"
+    ],
+    "init_plugins": [],
+    "init_mcp_servers": [],
+    "claude_code_version": "2.1.306",
+    "model": "claude-sonnet-5-5",
+    "skill_calls": [
+      "my-voice"
+    ],
+    "tools_used": [
+      "Skill"
+    ],
+    "invoked": true,
+    "invocation_detail": "skill_tool_use_ok",
+    "invariant_violations": [],
+    "problems": []
+  },
+  "log_label": "d-modern-b-heldout-05-with-r1-a1-10211521",
+  "created": "2026-10-21T15:25"
+}

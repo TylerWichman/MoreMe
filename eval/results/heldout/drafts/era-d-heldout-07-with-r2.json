@@ -1,0 +1,41 @@
+{
+  "license_header": "Corpus-derived content (persona era-d). Source texts are in the public domain in the USA. Sources: eval/corpus/PROVENANCE.md",
+  "persona": "era-d",
+  "task_id": "era-d-heldout-07",
+  "split": "heldout",
+  "arm": "with",
+  "rep": 2,
+  "mode": "auto",
+  "model_requested": "claude-sonnet-5-5",
+  "position_in_task": 5,
+  "attempt": 1,
+  "prompt": "Write an email to a colleague about missing someone who is far away. Aim for about 400 words. Reply with the email only.",
+  "final_message": "Subject: Thinking of you, and of someone who isn't here\n\nDear Marcus,\n\nI hope your week has been kinder than mine. You asked me the other day how I was getting on, and I said \"fine,\" which was true in the way that \"fine\" is always true, meaning not quite. So here is the longer answer, since you're one of the few people I can give it to without apology.\n\nI miss my sister. She has been gone four months now, off to Lisbon for that job she swore she'd only take for a year, and I keep catching myself in the silliest places. Yesterday I was in the grocery store, standing in front of the jam, and I nearly picked up my phone to ask which kind she liked. Which kind she liked! As if I'd forgotten that I have eaten the same plum jam for ten years, and she never touched it. You see how far gone I am. I was ready to call across an ocean over preserves.\n\nThe odd part is that we talk nearly every week. We have the video calls, and the endless chain of photos, and she sends me voice messages that run about eleven minutes each, which I adore and also resent, because they are exactly like her and not at all like her being here. The time difference is its own small cruelty. When I'm making my morning coffee she is already well into her afternoon, and when I finally have something to tell her she is half asleep. We keep missing each other by an hour or two -- it's like trying to pass a dish across a table that someone keeps sliding away.\n\nI didn't expect it to be the little things. I thought the big occasions would hurt, and they do a bit, but it's the ordinary Tuesday-evening nothing that gets me: no one to groan at the television with, no one to tell me my shirt is the wrong color. She was always right about the shirt, which is the most annoying part.\n\nI'm not telling you all this to be gloomy, honestly. Well, perhaps a little. Mostly I think I just wanted to say it out loud to someone who'd understand, and you have that long-distance look about you lately, so I suspect you do. Is it your brother? Tell me if I've guessed wrong, and tell me anyway if I've guessed right.\n\nAnyway, there's a plane ticket I keep opening on my laptop and closing again. I haven't decided. Ask me next week.\n\nLouisa",
+  "draft": "Subject: Thinking of you, and of someone who isn't here\n\nDear Marcus,\n\nI hope your week has been kinder than mine. You asked me the other day how I was getting on, and I said \"fine,\" which was true in the way that \"fine\" is always true, meaning not quite. So here is the longer answer, since you're one of the few people I can give it to without apology.\n\nI miss my sister. She has been gone four months now, off to Lisbon for that job she swore she'd only take for a year, and I keep catching myself in the silliest places. Yesterday I was in the grocery store, standing in front of the jam, and I nearly picked up my phone to ask which kind she liked. Which kind she liked! As if I'd forgotten that I have eaten the same plum jam for ten years, and she never touched it. You see how far gone I am. I was ready to call across an ocean over preserves.\n\nThe odd part is that we talk nearly every week. We have the video calls, and the endless chain of photos, and she sends me voice messages that run about eleven minutes each, which I adore and also resent, because they are exactly like her and not at all like her being here. The time difference is its own small cruelty. When I'm making my morning coffee she is already well into her afternoon, and when I finally have something to tell her she is half asleep. We keep missing each other by an hour or two -- it's like trying to pass a dish across a table that someone keeps sliding away.\n\nI didn't expect it to be the little things. I thought the big occasions would hurt, and they do a bit, but it's the ordinary Tuesday-evening nothing that gets me: no one to groan at the television with, no one to tell me my shirt is the wrong color. She was always right about the shirt, which is the most annoying part.\n\nI'm not telling you all this to be gloomy, honestly. Well, perhaps a little. Mostly I think I just wanted to say it out loud to someone who'd understand, and you have that long-distance look about you lately, so I suspect you do. Is it your brother? Tell me if I've guessed wrong, and tell me anyway if I've guessed right.\n\nAnyway, there's a plane ticket I keep opening on my laptop and closing again. I haven't decided. Ask me next week.\n\nLouisa",
+  "draft_words": 430,
+  "target_words": 400,
+  "valid": true,
+  "invalid_reasons": [],
+  "invalid_history": [],
+  "evidence": {
+    "init_skills": [
+      "my-voice"
+    ],
+    "init_plugins": [],
+    "init_mcp_servers": [],
+    "claude_code_version": "2.1.306",
+    "model": "claude-sonnet-5-5",
+    "skill_calls": [
+      "my-voice"
+    ],
+    "tools_used": [
+      "Skill"
+    ],
+    "invoked": true,
+    "invocation_detail": "skill_tool_use_ok",
+    "invariant_violations": [],
+    "problems": []
+  },
+  "log_label": "d-era-d-heldout-07-with-r2-a1-10220953",
+  "created": "2026-10-22T09:59"
+}

@@ -1,0 +1,41 @@
+{
+  "license_header": "Corpus-derived content (persona era-c). Source texts are in the public domain in the USA. Sources: eval/corpus/PROVENANCE.md",
+  "persona": "era-c",
+  "task_id": "era-c-heldout-01",
+  "split": "heldout",
+  "arm": "with",
+  "rep": 2,
+  "mode": "auto",
+  "model_requested": "claude-sonnet-5-5",
+  "position_in_task": 1,
+  "attempt": 1,
+  "prompt": "Write an email to a colleague about a recent trip to town and who you met there. Aim for about 400 words. Reply with the email only.",
+  "final_message": "Subject: My trip into town\n\nDear Marcus,\n\nI got back from town on Thursday evening, and I wanted to tell you about it before the details slip away from me. The short of it is that the trip was worth the bumpy road, mostly because of the people I happened to run into.\n\nI went in to see the supplier about the delayed order, and I'm glad to say that's settled. They will ship the full lot by the end of next week, and the manager put it in writing, which I asked for twice so he would know I meant it. He was a pleasant man, a little worn down, and I think he'd had a long week of people like me.\n\nThe better part came afterward. I stopped at the little café across from the post office to wait out the rain, and a woman at the next table struck up a conversation about my umbrella, which is the sorriest thing you ever saw. Her name was Judith Abernathy, and it turned out she runs the county records office. We talked for the better part of an hour. She told me they're finally putting the old land deeds into a searchable file, and she said we're welcome to come and use it whenever the project needs it. I know you've been wanting those boundary records for months, so I took her card and promised I'd pass it along.\n\nLater I met her nephew, a young fellow named Peter, who was fixing the café's front step and had plenty to say about the state of the roads. He knows the back way to the east valley, which would save us nearly forty minutes on the days we have to visit the farms. He drew me a map on a paper napkin, and I have it here on my desk if you want to see it. His spelling is poor, but his sense of direction seems fine.\n\nI also bumped into old Mr. Haskell from the hardware store, who asked after you and said you still owe him a conversation about that gate latch. I told him I would deliver the message, so consider yourself delivered to.\n\nI came home tired, with wet shoes and a full notebook, and I think the week will go more smoothly for it. If you have time on Monday, I'd like to sit down with you and go over the records office plan, since Judith said the sooner we ask, the sooner we get a place in line.\n\nGive my best to your family, and tell the children I haven't forgotten the peppermints.\n\nHattie",
+  "draft": "Subject: My trip into town\n\nDear Marcus,\n\nI got back from town on Thursday evening, and I wanted to tell you about it before the details slip away from me. The short of it is that the trip was worth the bumpy road, mostly because of the people I happened to run into.\n\nI went in to see the supplier about the delayed order, and I'm glad to say that's settled. They will ship the full lot by the end of next week, and the manager put it in writing, which I asked for twice so he would know I meant it. He was a pleasant man, a little worn down, and I think he'd had a long week of people like me.\n\nThe better part came afterward. I stopped at the little café across from the post office to wait out the rain, and a woman at the next table struck up a conversation about my umbrella, which is the sorriest thing you ever saw. Her name was Judith Abernathy, and it turned out she runs the county records office. We talked for the better part of an hour. She told me they're finally putting the old land deeds into a searchable file, and she said we're welcome to come and use it whenever the project needs it. I know you've been wanting those boundary records for months, so I took her card and promised I'd pass it along.\n\nLater I met her nephew, a young fellow named Peter, who was fixing the café's front step and had plenty to say about the state of the roads. He knows the back way to the east valley, which would save us nearly forty minutes on the days we have to visit the farms. He drew me a map on a paper napkin, and I have it here on my desk if you want to see it. His spelling is poor, but his sense of direction seems fine.\n\nI also bumped into old Mr. Haskell from the hardware store, who asked after you and said you still owe him a conversation about that gate latch. I told him I would deliver the message, so consider yourself delivered to.\n\nI came home tired, with wet shoes and a full notebook, and I think the week will go more smoothly for it. If you have time on Monday, I'd like to sit down with you and go over the records office plan, since Judith said the sooner we ask, the sooner we get a place in line.\n\nGive my best to your family, and tell the children I haven't forgotten the peppermints.\n\nHattie",
+  "draft_words": 440,
+  "target_words": 400,
+  "valid": true,
+  "invalid_reasons": [],
+  "invalid_history": [],
+  "evidence": {
+    "init_skills": [
+      "my-voice"
+    ],
+    "init_plugins": [],
+    "init_mcp_servers": [],
+    "claude_code_version": "2.1.306",
+    "model": "claude-sonnet-5-5",
+    "skill_calls": [
+      "my-voice"
+    ],
+    "tools_used": [
+      "Skill"
+    ],
+    "invoked": true,
+    "invocation_detail": "skill_tool_use_ok",
+    "invariant_violations": [],
+    "problems": []
+  },
+  "log_label": "d-era-c-heldout-01-with-r2-a1-10211513",
+  "created": "2026-10-21T15:13"
+}

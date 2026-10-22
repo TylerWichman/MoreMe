@@ -1,0 +1,41 @@
+{
+  "license_header": "Corpus-derived content (persona era-e). Source texts are in the public domain in the USA. Sources: eval/corpus/PROVENANCE.md",
+  "persona": "era-e",
+  "task_id": "era-e-heldout-01",
+  "split": "heldout",
+  "arm": "with",
+  "rep": 2,
+  "mode": "auto",
+  "model_requested": "claude-sonnet-5-5",
+  "position_in_task": 4,
+  "attempt": 1,
+  "prompt": "Write an email to a colleague about the first week of planting a vegetable garden. Aim for about 400 words. Reply with the email only.",
+  "final_message": "Subject: Week one in the vegetable garden\n\nDear Marcus,\n\nYou asked how the garden was coming along, so here is a full report. I will say at the outset that it has been a week of modest triumphs and one minor insurrection.\n\nThe first three days went to the ground itself. The bed I had chosen was, until last Sunday, a respectable piece of turf, and turf does not give up its position without a struggle. I cut it out in strips, turned the soil, and discovered a quantity of stones that I can only assume were left there on purpose. The soil underneath is better than I had feared: dark, crumbly, and with a fair number of worms, who seemed to regard my arrival as an intrusion on their administration. I worked in some compost, raked the whole bed level, and stood back to admire it, which is the part of the work I find least tiring.\n\nPlanting came on Wednesday. In went the peas first, along a row of brush I had been saving since spring; then lettuce, radishes, and two rows of carrots, which I have sown with the optimism of a man who has never yet had a carrot do what he expected. The tomato and pepper seedlings are still on the windowsill; I am told they dislike a cold night, and I see no reason to start a quarrel with them this early. The zucchini will wait as well. One zucchini plant is enough for a household; three is a municipal supply, and I have learned to be firm with myself.\n\nThe insurrection was staged by the neighbor's cat, who decided on Thursday that the freshly raked bed was the finest litter box in the county. I have since laid a few twigs across the rows, and so far the matter has gone to a truce. The radishes, I note, have already shown their faces, which strikes me as rather forward of them.\n\nThe rain held off until Friday evening, then came down gently and for hours, as though it had read the instructions. I could not have ordered it better, though I did try.\n\nIf you are still thinking of putting in a few rows yourself, I would say start with lettuce and radishes; they reward a beginner quickly and forgive most errors. I will report again when the carrots have either appeared or disgraced themselves. Come by on Saturday if you are free; I have a spare hoe, and it is a very good one.\n\nWalter",
+  "draft": "Subject: Week one in the vegetable garden\n\nDear Marcus,\n\nYou asked how the garden was coming along, so here is a full report. I will say at the outset that it has been a week of modest triumphs and one minor insurrection.\n\nThe first three days went to the ground itself. The bed I had chosen was, until last Sunday, a respectable piece of turf, and turf does not give up its position without a struggle. I cut it out in strips, turned the soil, and discovered a quantity of stones that I can only assume were left there on purpose. The soil underneath is better than I had feared: dark, crumbly, and with a fair number of worms, who seemed to regard my arrival as an intrusion on their administration. I worked in some compost, raked the whole bed level, and stood back to admire it, which is the part of the work I find least tiring.\n\nPlanting came on Wednesday. In went the peas first, along a row of brush I had been saving since spring; then lettuce, radishes, and two rows of carrots, which I have sown with the optimism of a man who has never yet had a carrot do what he expected. The tomato and pepper seedlings are still on the windowsill; I am told they dislike a cold night, and I see no reason to start a quarrel with them this early. The zucchini will wait as well. One zucchini plant is enough for a household; three is a municipal supply, and I have learned to be firm with myself.\n\nThe insurrection was staged by the neighbor's cat, who decided on Thursday that the freshly raked bed was the finest litter box in the county. I have since laid a few twigs across the rows, and so far the matter has gone to a truce. The radishes, I note, have already shown their faces, which strikes me as rather forward of them.\n\nThe rain held off until Friday evening, then came down gently and for hours, as though it had read the instructions. I could not have ordered it better, though I did try.\n\nIf you are still thinking of putting in a few rows yourself, I would say start with lettuce and radishes; they reward a beginner quickly and forgive most errors. I will report again when the carrots have either appeared or disgraced themselves. Come by on Saturday if you are free; I have a spare hoe, and it is a very good one.\n\nWalter",
+  "draft_words": 423,
+  "target_words": 400,
+  "valid": true,
+  "invalid_reasons": [],
+  "invalid_history": [],
+  "evidence": {
+    "init_skills": [
+      "my-voice"
+    ],
+    "init_plugins": [],
+    "init_mcp_servers": [],
+    "claude_code_version": "2.1.306",
+    "model": "claude-sonnet-5-5",
+    "skill_calls": [
+      "my-voice"
+    ],
+    "tools_used": [
+      "Skill"
+    ],
+    "invoked": true,
+    "invocation_detail": "skill_tool_use_ok",
+    "invariant_violations": [],
+    "problems": []
+  },
+  "log_label": "d-era-e-heldout-01-with-r2-a1-10221000",
+  "created": "2026-10-22T10:01"
+}

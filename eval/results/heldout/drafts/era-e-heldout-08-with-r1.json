@@ -1,0 +1,41 @@
+{
+  "license_header": "Corpus-derived content (persona era-e). Source texts are in the public domain in the USA. Sources: eval/corpus/PROVENANCE.md",
+  "persona": "era-e",
+  "task_id": "era-e-heldout-08",
+  "split": "heldout",
+  "arm": "with",
+  "rep": 1,
+  "mode": "auto",
+  "model_requested": "claude-sonnet-5-5",
+  "position_in_task": 4,
+  "attempt": 1,
+  "prompt": "Write a short blog post about why everyone should grow something. Aim for about 400 words. Reply with the post only.",
+  "final_message": "# Grow Something\n\nEveryone should grow something; I hold this view with the calm of a man who has been wrong about tomatoes for years and has not let it affect his convictions. It does not matter much what the something is. A pot of basil on a windowsill will do, as will a row of peas, or a patch of turf, provided it is tended and not merely admired through the glass.\n\nThe first reason is that it corrects one's sense of proportion. A person who has watched a seed take nine days to produce two leaves will never again be impatient with a slow elevator. Nations are built in less time than it takes a squash to decide whether it intends to bear. The garden keeps its own calendar, and it does not consult yours.\n\nThe second reason is humility, which is a good thing to have and a difficult thing to acquire by other means. I have lined the ground, planted, hoed, and staked, and then watched a rabbit hold a private banquet at my expense. No lecture, however well delivered, has taught me as much about the limits of human planning as that rabbit. I bear him no ill will; he was thorough.\n\nThe third reason is the eating. It is a pleasure to eat of the fruit of one's own toil, if it be nothing more than a head of lettuce. A store-bought lettuce is a perfectly respectable vegetable, but it arrives without a history. Your own has one, and you know every chapter of it, including the part where you forgot to water it for a week and it forgave you anyway.\n\nThere is also the matter of the body, which was not designed to spend its days bent over a screen. A good hoe, used by an upright and reasonable person, does away with the necessity of the hinge in the back. An hour with one will leave you tired in a way that sitting never does; this is the honest sort of tired, and it improves the sleep considerably.\n\nFinally, a garden gives one something to say to the neighbors. Conversation across a fence is a lost art, and zucchini is its last defender. Nobody has ever grown only one zucchini; the plant does not permit it. You will therefore be obliged to give some away, and in this fashion the whole street becomes acquainted.\n\nSo find a pot, or a corner, or a strip of ground that nobody is using. Put something in it and keep it alive. If it dies, you will have learned something; if it lives, you will have dinner. Either result is better than the one you get by staying indoors.",
+  "draft": "# Grow Something\n\nEveryone should grow something; I hold this view with the calm of a man who has been wrong about tomatoes for years and has not let it affect his convictions. It does not matter much what the something is. A pot of basil on a windowsill will do, as will a row of peas, or a patch of turf, provided it is tended and not merely admired through the glass.\n\nThe first reason is that it corrects one's sense of proportion. A person who has watched a seed take nine days to produce two leaves will never again be impatient with a slow elevator. Nations are built in less time than it takes a squash to decide whether it intends to bear. The garden keeps its own calendar, and it does not consult yours.\n\nThe second reason is humility, which is a good thing to have and a difficult thing to acquire by other means. I have lined the ground, planted, hoed, and staked, and then watched a rabbit hold a private banquet at my expense. No lecture, however well delivered, has taught me as much about the limits of human planning as that rabbit. I bear him no ill will; he was thorough.\n\nThe third reason is the eating. It is a pleasure to eat of the fruit of one's own toil, if it be nothing more than a head of lettuce. A store-bought lettuce is a perfectly respectable vegetable, but it arrives without a history. Your own has one, and you know every chapter of it, including the part where you forgot to water it for a week and it forgave you anyway.\n\nThere is also the matter of the body, which was not designed to spend its days bent over a screen. A good hoe, used by an upright and reasonable person, does away with the necessity of the hinge in the back. An hour with one will leave you tired in a way that sitting never does; this is the honest sort of tired, and it improves the sleep considerably.\n\nFinally, a garden gives one something to say to the neighbors. Conversation across a fence is a lost art, and zucchini is its last defender. Nobody has ever grown only one zucchini; the plant does not permit it. You will therefore be obliged to give some away, and in this fashion the whole street becomes acquainted.\n\nSo find a pot, or a corner, or a strip of ground that nobody is using. Put something in it and keep it alive. If it dies, you will have learned something; if it lives, you will have dinner. Either result is better than the one you get by staying indoors.",
+  "draft_words": 454,
+  "target_words": 400,
+  "valid": true,
+  "invalid_reasons": [],
+  "invalid_history": [],
+  "evidence": {
+    "init_skills": [
+      "my-voice"
+    ],
+    "init_plugins": [],
+    "init_mcp_servers": [],
+    "claude_code_version": "2.1.306",
+    "model": "claude-sonnet-5-5",
+    "skill_calls": [
+      "my-voice"
+    ],
+    "tools_used": [
+      "Skill"
+    ],
+    "invoked": true,
+    "invocation_detail": "skill_tool_use_ok",
+    "invariant_violations": [],
+    "problems": []
+  },
+  "log_label": "d-era-e-heldout-08-with-r1-a1-10221000",
+  "created": "2026-10-22T10:08"
+}

@@ -1,0 +1,41 @@
+{
+  "license_header": "Corpus-derived content (persona era-d). Source texts are in the public domain in the USA. Sources: eval/corpus/PROVENANCE.md",
+  "persona": "era-d",
+  "task_id": "era-d-heldout-06",
+  "split": "heldout",
+  "arm": "with",
+  "rep": 2,
+  "mode": "auto",
+  "model_requested": "claude-sonnet-5-5",
+  "position_in_task": 1,
+  "attempt": 1,
+  "prompt": "Write a note to a friend about a quarrel and making up afterward. Aim for about 400 words. Reply with the note only.",
+  "final_message": "Dear Nell,\n\nI have been meaning to write since Thursday, and I kept putting it off because I wasn't sure what to say -- which is silly, since you always know exactly what I mean even when I don't. So here I am, pen in hand, being brave.\n\nFirst, I was horrid on Sunday. I won't pretend otherwise. When you said the thing about my taking over the whole dinner and never letting anyone else so much as stir the gravy, I went stiff as a poker and said something I'm ashamed of. You know what it was. I will not repeat it, not even on paper, not even to you. The worst of it is that you were partly right, and nothing makes me crosser than that. I stood in the hall with my gloves half on, feeling very wronged, and then I walked home the long way round so that nobody could see how wronged I felt. (The cat saw. The cat was unmoved.)\n\nMonday I decided I was in the right after all. Tuesday I decided I was in the wrong. By Wednesday I had stopped deciding anything and simply felt wretched, and went about the house straightening things that were already straight. Mother asked whether I was ill. I said no, only thinking, and she gave me one of her looks and said that thinking was very hard on the furniture. She has a point. I have dusted the same shelf three times.\n\nThen yesterday, when I was sure you must be furious with me and would be for a month at least, your little note came, the one with the pressed violet that had gone nearly flat, and I laughed out loud right there at the door. Out loud! The postman looked quite alarmed. You wrote only three lines, and one of them was about the violet being squashed, and not one word was about the gravy. That is so exactly like you that I had to sit down on the stairs.\n\nSo -- I am sorry. Truly, and without a single \"but,\" which for me is a feat. I should like to come on Saturday, if you will have me, and I promise to sit on my hands while you do whatever you like with the dinner. You may burn it. I will say it is delicious. I may need some sort of task to keep my fingers busy, though, so do tell me whether you'd rather I peel the potatoes or simply stay out of the kitchen altogether, because I honestly can't tell which would be safer for both of us.\n\nWrite soon, and tell me how your aunt's cough is getting on.\n\nLouisa",
+  "draft": "Dear Nell,\n\nI have been meaning to write since Thursday, and I kept putting it off because I wasn't sure what to say -- which is silly, since you always know exactly what I mean even when I don't. So here I am, pen in hand, being brave.\n\nFirst, I was horrid on Sunday. I won't pretend otherwise. When you said the thing about my taking over the whole dinner and never letting anyone else so much as stir the gravy, I went stiff as a poker and said something I'm ashamed of. You know what it was. I will not repeat it, not even on paper, not even to you. The worst of it is that you were partly right, and nothing makes me crosser than that. I stood in the hall with my gloves half on, feeling very wronged, and then I walked home the long way round so that nobody could see how wronged I felt. (The cat saw. The cat was unmoved.)\n\nMonday I decided I was in the right after all. Tuesday I decided I was in the wrong. By Wednesday I had stopped deciding anything and simply felt wretched, and went about the house straightening things that were already straight. Mother asked whether I was ill. I said no, only thinking, and she gave me one of her looks and said that thinking was very hard on the furniture. She has a point. I have dusted the same shelf three times.\n\nThen yesterday, when I was sure you must be furious with me and would be for a month at least, your little note came, the one with the pressed violet that had gone nearly flat, and I laughed out loud right there at the door. Out loud! The postman looked quite alarmed. You wrote only three lines, and one of them was about the violet being squashed, and not one word was about the gravy. That is so exactly like you that I had to sit down on the stairs.\n\nSo -- I am sorry. Truly, and without a single \"but,\" which for me is a feat. I should like to come on Saturday, if you will have me, and I promise to sit on my hands while you do whatever you like with the dinner. You may burn it. I will say it is delicious. I may need some sort of task to keep my fingers busy, though, so do tell me whether you'd rather I peel the potatoes or simply stay out of the kitchen altogether, because I honestly can't tell which would be safer for both of us.\n\nWrite soon, and tell me how your aunt's cough is getting on.\n\nLouisa",
+  "draft_words": 449,
+  "target_words": 400,
+  "valid": true,
+  "invalid_reasons": [],
+  "invalid_history": [],
+  "evidence": {
+    "init_skills": [
+      "my-voice"
+    ],
+    "init_plugins": [],
+    "init_mcp_servers": [],
+    "claude_code_version": "2.1.306",
+    "model": "claude-sonnet-5-5",
+    "skill_calls": [
+      "my-voice"
+    ],
+    "tools_used": [
+      "Skill"
+    ],
+    "invoked": true,
+    "invocation_detail": "skill_tool_use_ok",
+    "invariant_violations": [],
+    "problems": []
+  },
+  "log_label": "d-era-d-heldout-06-with-r2-a1-10220953",
+  "created": "2026-10-22T09:57"
+}

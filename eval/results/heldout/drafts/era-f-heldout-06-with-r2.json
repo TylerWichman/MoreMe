@@ -1,0 +1,41 @@
+{
+  "license_header": "Corpus-derived content (persona era-f). Source texts are in the public domain in the USA. Sources: eval/corpus/PROVENANCE.md",
+  "persona": "era-f",
+  "task_id": "era-f-heldout-06",
+  "split": "heldout",
+  "arm": "with",
+  "rep": 2,
+  "mode": "auto",
+  "model_requested": "claude-sonnet-5-5",
+  "position_in_task": 2,
+  "attempt": 1,
+  "prompt": "Write a note to a friend about good manners and why they matter. Aim for about 400 words. Reply with the note only.",
+  "final_message": "Dear friend,\n\nI want to write to you about good manners, because I think they matter more than most people give them credit for.\n\nGood manners are simple things. You say please and thank you. You listen when someone is speaking. You arrive on time, and you keep your word. None of this is hard, but it shows the people around you that you see them and that you value them.\n\nSome people think manners are only for show, a set of rules for formal dinners. I don't agree. Manners are a way of being kind in small, daily ways. When you hold a door, or wait your turn, or thank the person who serves your meal, you make their day a little lighter. Those small acts add up.\n\nManners also build trust. If you treat people with respect, they will trust you, and they will want to work with you and help you. A person who is rude may get what they want for a day or two, but sooner or later others stop wanting to be near them. A person who is courteous finds that doors open, and that people are glad to see them come.\n\nThere is something in it for you as well. When you practice good manners, you learn to think of others before yourself. The more you do to make somebody else comfortable, the more comfortable you will feel in return. You become calmer, more steady, and more sure of yourself, because you know you are acting as you should.\n\nGood manners cost nothing. You do not need money or a special talent to have them. You only need to pay attention and to care. Start with one small habit this week. Look people in the eye, say thank you and mean it, and see what happens.\n\nI know you already have a kind heart, and I think you will find that these habits come easily to you. Keep at them, and do them a little better each day.\n\nYour friend,\nSamuel",
+  "draft": "Dear friend,\n\nI want to write to you about good manners, because I think they matter more than most people give them credit for.\n\nGood manners are simple things. You say please and thank you. You listen when someone is speaking. You arrive on time, and you keep your word. None of this is hard, but it shows the people around you that you see them and that you value them.\n\nSome people think manners are only for show, a set of rules for formal dinners. I don't agree. Manners are a way of being kind in small, daily ways. When you hold a door, or wait your turn, or thank the person who serves your meal, you make their day a little lighter. Those small acts add up.\n\nManners also build trust. If you treat people with respect, they will trust you, and they will want to work with you and help you. A person who is rude may get what they want for a day or two, but sooner or later others stop wanting to be near them. A person who is courteous finds that doors open, and that people are glad to see them come.\n\nThere is something in it for you as well. When you practice good manners, you learn to think of others before yourself. The more you do to make somebody else comfortable, the more comfortable you will feel in return. You become calmer, more steady, and more sure of yourself, because you know you are acting as you should.\n\nGood manners cost nothing. You do not need money or a special talent to have them. You only need to pay attention and to care. Start with one small habit this week. Look people in the eye, say thank you and mean it, and see what happens.\n\nI know you already have a kind heart, and I think you will find that these habits come easily to you. Keep at them, and do them a little better each day.\n\nYour friend,\nSamuel",
+  "draft_words": 338,
+  "target_words": 400,
+  "valid": true,
+  "invalid_reasons": [],
+  "invalid_history": [],
+  "evidence": {
+    "init_skills": [
+      "my-voice"
+    ],
+    "init_plugins": [],
+    "init_mcp_servers": [],
+    "claude_code_version": "2.1.306",
+    "model": "claude-sonnet-5-5",
+    "skill_calls": [
+      "my-voice"
+    ],
+    "tools_used": [
+      "Skill"
+    ],
+    "invoked": true,
+    "invocation_detail": "skill_tool_use_ok",
+    "invariant_violations": [],
+    "problems": []
+  },
+  "log_label": "d-era-f-heldout-06-with-r2-a1-10221009",
+  "created": "2026-10-22T10:14"
+}

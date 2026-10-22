@@ -1,0 +1,41 @@
+{
+  "license_header": "Corpus-derived content (persona era-f). Source texts are in the public domain in the USA. Sources: eval/corpus/PROVENANCE.md",
+  "persona": "era-f",
+  "task_id": "era-f-heldout-02",
+  "split": "heldout",
+  "arm": "with",
+  "rep": 2,
+  "mode": "auto",
+  "model_requested": "claude-sonnet-5-5",
+  "position_in_task": 1,
+  "attempt": 1,
+  "prompt": "Write a short blog post about the value of owning a home. Aim for about 400 words. Reply with the post only.",
+  "final_message": "# Why Owning a Home Is Worth It\n\nOwning a home is one of the most useful things you can work toward. It is not easy, and it takes years of effort, but the reward is real.\n\nThe first reason is stability. When you own your home, no landlord can raise the rent or ask you to leave. You know where you will live next year, and the year after that.\n\nThe second reason is that you build something. Each payment on a mortgage adds to what you own. Rent goes to someone else, but a mortgage payment slowly turns into your own property.\n\nOver time, most homes also grow in value. This is not certain, and some years are slow. Still, people who hold a home for ten or twenty years usually find it worth more than they paid.\n\nYou also gain the freedom to make the place your own. You can paint a wall, plant a garden, or fix the porch. Work like this feels different when you know the benefit stays with you.\n\nA home gives you a settled place in your community. You get to know your neighbors, and they get to know you. Children do well when they can stay in one school and make lasting friends.\n\nI will not tell you that owning is easy. You must save for a down payment, and you must plan for repairs. A leaking roof will not wait until you have extra money.\n\nFor that reason, you should start with a plan. Look at what you earn and what you spend, and set aside a little each month. Small amounts add up faster than you think.\n\nBe patient with yourself. Many people try to buy too much house too soon, and then they struggle with the cost. Pick a home you can afford today, not one you hope to afford someday.\n\nIt also helps to learn as you go. Talk with people who already own homes, and ask them what they wish they had known. Most are glad to share, and their advice can save you real money.\n\nKeep your goal in view when the saving feels slow. Each month you stay on the path, you get closer to a place that belongs to you.\n\nA home is more than a building. It is a base from which you can work, rest, and help the people around you. If you want that kind of life, begin preparing now, and keep at it until you get there.",
+  "draft": "# Why Owning a Home Is Worth It\n\nOwning a home is one of the most useful things you can work toward. It is not easy, and it takes years of effort, but the reward is real.\n\nThe first reason is stability. When you own your home, no landlord can raise the rent or ask you to leave. You know where you will live next year, and the year after that.\n\nThe second reason is that you build something. Each payment on a mortgage adds to what you own. Rent goes to someone else, but a mortgage payment slowly turns into your own property.\n\nOver time, most homes also grow in value. This is not certain, and some years are slow. Still, people who hold a home for ten or twenty years usually find it worth more than they paid.\n\nYou also gain the freedom to make the place your own. You can paint a wall, plant a garden, or fix the porch. Work like this feels different when you know the benefit stays with you.\n\nA home gives you a settled place in your community. You get to know your neighbors, and they get to know you. Children do well when they can stay in one school and make lasting friends.\n\nI will not tell you that owning is easy. You must save for a down payment, and you must plan for repairs. A leaking roof will not wait until you have extra money.\n\nFor that reason, you should start with a plan. Look at what you earn and what you spend, and set aside a little each month. Small amounts add up faster than you think.\n\nBe patient with yourself. Many people try to buy too much house too soon, and then they struggle with the cost. Pick a home you can afford today, not one you hope to afford someday.\n\nIt also helps to learn as you go. Talk with people who already own homes, and ask them what they wish they had known. Most are glad to share, and their advice can save you real money.\n\nKeep your goal in view when the saving feels slow. Each month you stay on the path, you get closer to a place that belongs to you.\n\nA home is more than a building. It is a base from which you can work, rest, and help the people around you. If you want that kind of life, begin preparing now, and keep at it until you get there.",
+  "draft_words": 417,
+  "target_words": 400,
+  "valid": true,
+  "invalid_reasons": [],
+  "invalid_history": [],
+  "evidence": {
+    "init_skills": [
+      "my-voice"
+    ],
+    "init_plugins": [],
+    "init_mcp_servers": [],
+    "claude_code_version": "2.1.306",
+    "model": "claude-sonnet-5-5",
+    "skill_calls": [
+      "my-voice"
+    ],
+    "tools_used": [
+      "Skill"
+    ],
+    "invoked": true,
+    "invocation_detail": "skill_tool_use_ok",
+    "invariant_violations": [],
+    "problems": []
+  },
+  "log_label": "d-era-f-heldout-02-with-r2-a1-10221009",
+  "created": "2026-10-22T10:10"
+}

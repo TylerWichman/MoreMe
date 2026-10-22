@@ -1,0 +1,41 @@
+{
+  "license_header": "Corpus-derived content (persona era-f). Source texts are in the public domain in the USA. Sources: eval/corpus/PROVENANCE.md",
+  "persona": "era-f",
+  "task_id": "era-f-heldout-08",
+  "split": "heldout",
+  "arm": "with",
+  "rep": 2,
+  "mode": "auto",
+  "model_requested": "claude-sonnet-5-5",
+  "position_in_task": 3,
+  "attempt": 1,
+  "prompt": "Write a short blog post about making the most of your time at school. Aim for about 400 words. Reply with the post only.",
+  "final_message": "# Making the Most of Your Time at School\n\nYour years at school pass faster than you expect. Each day gives you a chance to learn something, build a habit, or help another person. The main point is simple: use each day well.\n\n## Do your work as well as you can\n\nWhatever task is in front of you, do it with care. Do not hurry through it just to be done. A student who learns to do small things well will do large things well later.\n\nThen try to do a little better tomorrow than you did today. Better work next week than this week. That steady climb matters more than any single grade.\n\n## Make a plan for your hours\n\nTime slips away when you have no plan for it. Take five minutes each evening and write down what must be done the next day. Put the hardest task first, while your mind is fresh.\n\nYou will find that a short list gives you a calm head. You stop worrying about what you might forget, and you can give your full attention to the work.\n\n## Ask for help early\n\nMany students wait too long to ask a teacher for help. They hope the trouble will go away. It rarely does, and it usually grows.\n\nYour teachers are glad to help you. Go to them when you first feel lost, and you will save yourself many hours of struggle.\n\n## Learn from the people around you\n\nYour classmates know things you do not. Listen to them. Work with them on hard problems, and explain what you know when they are stuck. Teaching someone else is one of the best ways to learn a subject yourself.\n\nBe kind in the way you treat others. The friendships you make now can stay with you for life.\n\n## Do something for somebody else\n\nSchool is not only about what you get. It is also about what you can give. Help a younger student with a lesson. Offer to carry a load, clean a room, or listen to a friend who is troubled.\n\nThe more you do to make others happy, the more happiness you will receive in turn. This is true, and you can test it for yourself this week.\n\n## Look after yourself\n\nYou cannot do good work if you are tired and hungry. Sleep enough, eat well, and spend some time outdoors. Rest is not wasted time. It gives you strength for the work ahead.\n\n## Keep going\n\nSome days will be hard, and some of your work will not turn out as you hoped. That is part of learning. Do not give up because of one poor day.\n\nCome back the next morning and try again. If you keep at it, you will leave school stronger, wiser, and ready to be of use to others. That is the best result any student can hope for, and it is within your reach.",
+  "draft": "# Making the Most of Your Time at School\n\nYour years at school pass faster than you expect. Each day gives you a chance to learn something, build a habit, or help another person. The main point is simple: use each day well.\n\n## Do your work as well as you can\n\nWhatever task is in front of you, do it with care. Do not hurry through it just to be done. A student who learns to do small things well will do large things well later.\n\nThen try to do a little better tomorrow than you did today. Better work next week than this week. That steady climb matters more than any single grade.\n\n## Make a plan for your hours\n\nTime slips away when you have no plan for it. Take five minutes each evening and write down what must be done the next day. Put the hardest task first, while your mind is fresh.\n\nYou will find that a short list gives you a calm head. You stop worrying about what you might forget, and you can give your full attention to the work.\n\n## Ask for help early\n\nMany students wait too long to ask a teacher for help. They hope the trouble will go away. It rarely does, and it usually grows.\n\nYour teachers are glad to help you. Go to them when you first feel lost, and you will save yourself many hours of struggle.\n\n## Learn from the people around you\n\nYour classmates know things you do not. Listen to them. Work with them on hard problems, and explain what you know when they are stuck. Teaching someone else is one of the best ways to learn a subject yourself.\n\nBe kind in the way you treat others. The friendships you make now can stay with you for life.\n\n## Do something for somebody else\n\nSchool is not only about what you get. It is also about what you can give. Help a younger student with a lesson. Offer to carry a load, clean a room, or listen to a friend who is troubled.\n\nThe more you do to make others happy, the more happiness you will receive in turn. This is true, and you can test it for yourself this week.\n\n## Look after yourself\n\nYou cannot do good work if you are tired and hungry. Sleep enough, eat well, and spend some time outdoors. Rest is not wasted time. It gives you strength for the work ahead.\n\n## Keep going\n\nSome days will be hard, and some of your work will not turn out as you hoped. That is part of learning. Do not give up because of one poor day.\n\nCome back the next morning and try again. If you keep at it, you will leave school stronger, wiser, and ready to be of use to others. That is the best result any student can hope for, and it is within your reach.",
+  "draft_words": 485,
+  "target_words": 400,
+  "valid": true,
+  "invalid_reasons": [],
+  "invalid_history": [],
+  "evidence": {
+    "init_skills": [
+      "my-voice"
+    ],
+    "init_plugins": [],
+    "init_mcp_servers": [],
+    "claude_code_version": "2.1.306",
+    "model": "claude-sonnet-5-5",
+    "skill_calls": [
+      "my-voice"
+    ],
+    "tools_used": [
+      "Skill"
+    ],
+    "invoked": true,
+    "invocation_detail": "skill_tool_use_ok",
+    "invariant_violations": [],
+    "problems": []
+  },
+  "log_label": "d-era-f-heldout-08-with-r2-a1-10221009",
+  "created": "2026-10-22T10:16"
+}

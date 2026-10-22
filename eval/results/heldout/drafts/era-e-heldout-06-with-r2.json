@@ -1,0 +1,41 @@
+{
+  "license_header": "Corpus-derived content (persona era-e). Source texts are in the public domain in the USA. Sources: eval/corpus/PROVENANCE.md",
+  "persona": "era-e",
+  "task_id": "era-e-heldout-06",
+  "split": "heldout",
+  "arm": "with",
+  "rep": 2,
+  "mode": "auto",
+  "model_requested": "claude-sonnet-5-5",
+  "position_in_task": 3,
+  "attempt": 1,
+  "prompt": "Write a note to a friend about garden tools that never seem to work. Aim for about 400 words. Reply with the note only.",
+  "final_message": "Dear friend,\n\nI write to report on the state of my garden tools, which is to say, their state of rest. I have come to suspect that a tool bought in March is designed to fail by June; it is a quiet arrangement, and nobody has ever admitted to it.\n\nConsider the hose. It was sold to me as kink-resistant. It has kinked in every place where kinking is possible, and a few where I would have said it was not. The water arrives at the far end only when I walk back to the tap to see what is the matter; at that moment the kink relaxes, and the nozzle, I am told, sprays me in the face. I regard this as a form of intelligence.\n\nThe pruning shears are no better. They were sharp for one afternoon, and I used that afternoon poorly, on a tangle of dead raspberry canes that did not need cutting. Since then they have chewed rather than cut. I have oiled them, and I have sharpened them with a stone of unknown origin; I have also spoken to them firmly. They remain unmoved, and so, I should add, do the branches.\n\nThe wheelbarrow has a tire that holds air for exactly as long as I am not looking at it. I fill it on Saturday; by Sunday morning it sits flat on the gravel like a small beast that has given up. My wife suggests that a new tire would cost less than the pump I have bought for it. She is correct, and I have asked her not to say so in front of the barrow.\n\nI should be fair and record one success: an old wooden-handled hoe, inherited from a neighbor, which has never once failed me. It is heavy, plain, and a little ugly; it has no features, no warranty, and no packaging that boasted of anything. I begin to think the two facts are related. The tools that promise the most are the first to go quiet in the shed, while the ones that promise nothing go on working, year after year, like an honest clerk.\n\nIf you are in the neighborhood, do come by, and bring a trowel. Not one of yours that works; I could not bear the comparison. Bring a bad one, and we shall sit among the peas and compare notes on our grievances.\n\nYours in the dirt,\n\nWalter",
+  "draft": "Dear friend,\n\nI write to report on the state of my garden tools, which is to say, their state of rest. I have come to suspect that a tool bought in March is designed to fail by June; it is a quiet arrangement, and nobody has ever admitted to it.\n\nConsider the hose. It was sold to me as kink-resistant. It has kinked in every place where kinking is possible, and a few where I would have said it was not. The water arrives at the far end only when I walk back to the tap to see what is the matter; at that moment the kink relaxes, and the nozzle, I am told, sprays me in the face. I regard this as a form of intelligence.\n\nThe pruning shears are no better. They were sharp for one afternoon, and I used that afternoon poorly, on a tangle of dead raspberry canes that did not need cutting. Since then they have chewed rather than cut. I have oiled them, and I have sharpened them with a stone of unknown origin; I have also spoken to them firmly. They remain unmoved, and so, I should add, do the branches.\n\nThe wheelbarrow has a tire that holds air for exactly as long as I am not looking at it. I fill it on Saturday; by Sunday morning it sits flat on the gravel like a small beast that has given up. My wife suggests that a new tire would cost less than the pump I have bought for it. She is correct, and I have asked her not to say so in front of the barrow.\n\nI should be fair and record one success: an old wooden-handled hoe, inherited from a neighbor, which has never once failed me. It is heavy, plain, and a little ugly; it has no features, no warranty, and no packaging that boasted of anything. I begin to think the two facts are related. The tools that promise the most are the first to go quiet in the shed, while the ones that promise nothing go on working, year after year, like an honest clerk.\n\nIf you are in the neighborhood, do come by, and bring a trowel. Not one of yours that works; I could not bear the comparison. Bring a bad one, and we shall sit among the peas and compare notes on our grievances.\n\nYours in the dirt,\n\nWalter",
+  "draft_words": 406,
+  "target_words": 400,
+  "valid": true,
+  "invalid_reasons": [],
+  "invalid_history": [],
+  "evidence": {
+    "init_skills": [
+      "my-voice"
+    ],
+    "init_plugins": [],
+    "init_mcp_servers": [],
+    "claude_code_version": "2.1.306",
+    "model": "claude-sonnet-5-5",
+    "skill_calls": [
+      "my-voice"
+    ],
+    "tools_used": [
+      "Skill"
+    ],
+    "invoked": true,
+    "invocation_detail": "skill_tool_use_ok",
+    "invariant_violations": [],
+    "problems": []
+  },
+  "log_label": "d-era-e-heldout-06-with-r2-a1-10221000",
+  "created": "2026-10-22T10:06"
+}

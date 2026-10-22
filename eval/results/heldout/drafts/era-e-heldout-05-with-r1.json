@@ -1,0 +1,41 @@
+{
+  "license_header": "Corpus-derived content (persona era-e). Source texts are in the public domain in the USA. Sources: eval/corpus/PROVENANCE.md",
+  "persona": "era-e",
+  "task_id": "era-e-heldout-05",
+  "split": "heldout",
+  "arm": "with",
+  "rep": 1,
+  "mode": "auto",
+  "model_requested": "claude-sonnet-5-5",
+  "position_in_task": 1,
+  "attempt": 1,
+  "prompt": "Write a short blog post about the first harvest of the year. Aim for about 400 words. Reply with the post only.",
+  "final_message": "**The First Harvest**\n\nThe first harvest of the year arrived on the ninth of June, and it consisted of eleven radishes. I mention the number because I counted them twice; a man who has waited since March for a return on his investment is entitled to an accurate ledger.\n\nThe radishes had been sown in a row along the east fence, where the soil is best and the neighbors can see. I will not pretend this was an accident. A garden is a modest enterprise, but it is not a private one, and there is a certain dignity in having the whole street observe that one's radishes are up before theirs. Nobody said anything, which I took as a form of concession.\n\nI pulled them in the early evening, when the light is kind to vegetables. They came out of the ground with a small, decisive sound, like a drawer closing in a well-made desk. Some were round and some were oblong; two were of a size that suggested they had been eating well and keeping their own counsel. I washed them under the hose, and I confess that I held them up to the light before doing anything else. One does not harvest a radish; one receives it, in the manner of a diploma.\n\nMy wife, who has watched me hoe that row with the attention usually reserved for a chess match, was invited to share in the occasion. She ate one, pronounced it \"sharp,\" and returned to her book. I have decided to treat this as high praise. In thirty years of marriage I have learned that the economy of her approval is much like the economy of the garden: what is given is small, but it is real, and it is not to be wasted by asking for more.\n\nThe radishes were, in fact, very good. They had the clean bite of something that has come up through cold ground and had no choice but to be honest about it. I ate the rest with a little salt and a slice of bread, standing at the fence, which is where such things ought to be eaten. The grand harvests of history, the wheat of Egypt and the vineyards of Burgundy, were doubtless celebrated with more ceremony; but I doubt they were enjoyed with more satisfaction, and I am quite sure they were not counted as carefully.\n\nThe peas are in flower, the lettuce is thinking about it, and the zucchini has begun to give off the faint air of menace it always does in midsummer. There will be more to report. For now I will say only that the year has been opened, the ledger has an entry in it, and eleven is a perfectly respectable number to begin with!\n\nWalter",
+  "draft": "**The First Harvest**\n\nThe first harvest of the year arrived on the ninth of June, and it consisted of eleven radishes. I mention the number because I counted them twice; a man who has waited since March for a return on his investment is entitled to an accurate ledger.\n\nThe radishes had been sown in a row along the east fence, where the soil is best and the neighbors can see. I will not pretend this was an accident. A garden is a modest enterprise, but it is not a private one, and there is a certain dignity in having the whole street observe that one's radishes are up before theirs. Nobody said anything, which I took as a form of concession.\n\nI pulled them in the early evening, when the light is kind to vegetables. They came out of the ground with a small, decisive sound, like a drawer closing in a well-made desk. Some were round and some were oblong; two were of a size that suggested they had been eating well and keeping their own counsel. I washed them under the hose, and I confess that I held them up to the light before doing anything else. One does not harvest a radish; one receives it, in the manner of a diploma.\n\nMy wife, who has watched me hoe that row with the attention usually reserved for a chess match, was invited to share in the occasion. She ate one, pronounced it \"sharp,\" and returned to her book. I have decided to treat this as high praise. In thirty years of marriage I have learned that the economy of her approval is much like the economy of the garden: what is given is small, but it is real, and it is not to be wasted by asking for more.\n\nThe radishes were, in fact, very good. They had the clean bite of something that has come up through cold ground and had no choice but to be honest about it. I ate the rest with a little salt and a slice of bread, standing at the fence, which is where such things ought to be eaten. The grand harvests of history, the wheat of Egypt and the vineyards of Burgundy, were doubtless celebrated with more ceremony; but I doubt they were enjoyed with more satisfaction, and I am quite sure they were not counted as carefully.\n\nThe peas are in flower, the lettuce is thinking about it, and the zucchini has begun to give off the faint air of menace it always does in midsummer. There will be more to report. For now I will say only that the year has been opened, the ledger has an entry in it, and eleven is a perfectly respectable number to begin with!\n\nWalter",
+  "draft_words": 465,
+  "target_words": 400,
+  "valid": true,
+  "invalid_reasons": [],
+  "invalid_history": [],
+  "evidence": {
+    "init_skills": [
+      "my-voice"
+    ],
+    "init_plugins": [],
+    "init_mcp_servers": [],
+    "claude_code_version": "2.1.306",
+    "model": "claude-sonnet-5-5",
+    "skill_calls": [
+      "my-voice"
+    ],
+    "tools_used": [
+      "Skill"
+    ],
+    "invoked": true,
+    "invocation_detail": "skill_tool_use_ok",
+    "invariant_violations": [],
+    "problems": []
+  },
+  "log_label": "d-era-e-heldout-05-with-r1-a1-10221000",
+  "created": "2026-10-22T10:05"
+}

@@ -1,0 +1,41 @@
+{
+  "license_header": "Corpus-derived content (persona modern-a). Contains public sector information licensed under the Open Government Licence v3.0 (https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/). Sources and changes: eval/corpus/PROVENANCE.md",
+  "persona": "modern-a",
+  "task_id": "modern-a-heldout-07",
+  "split": "heldout",
+  "arm": "with",
+  "rep": 1,
+  "mode": "auto",
+  "model_requested": "claude-sonnet-5-5",
+  "position_in_task": 2,
+  "attempt": 1,
+  "prompt": "Write an email to a colleague about thanking a team after a big launch. Aim for about 400 words. Reply with the email only.",
+  "final_message": "Subject: Thank you to the launch team\n\nHi Sam,\n\nI'd like your help making sure the launch team gets a proper thank you. They've earned it, and I don't want it to get lost in the rush to the next project.\n\nLast week we shipped the new service on schedule. It's live, it's stable, and early feedback from users has been good. That didn't happen by accident. It took months of steady work from people across several teams.\n\nI want to name a few of them. The engineers fixed a late performance problem over a weekend, and they didn't complain about it. The designers kept going back to users until the journey made sense. The content team rewrote the help pages three times, and it shows. Support staff trained up quickly and are already answering real questions with confidence.\n\nHere's what I'm suggesting. First, we send a short note to the whole group, signed by both of us. Second, we mention each team by name at Thursday's all-hands, with one specific thing they did. Third, we ask managers to pass on the thanks in one-to-ones, so it lands personally and not just as a broadcast.\n\nI'd also like us to give people time back. Several of them worked late in the final fortnight. We should tell them plainly that they can take a day off in lieu, and that nobody needs to ask twice.\n\nA thank you works best when it's specific. \"Great job\" is fine, but \"you caught the data bug before it reached users\" tells someone we noticed. I'm happy to draft the all-hands note if you can pull together a list of names and contributions from your side. I'll do the same from mine.\n\nWe should also be honest about what we learned. There were rough patches, and the team has good ideas about what to change next time. I'd like to run a short retro in the next couple of weeks and make clear it's about improving, not assigning blame.\n\nCan we talk through this on Wednesday? I'm free after lunch. If you've got a different plan for the thanks, I'm open to it. I just want to be sure it happens this week, while the launch is still fresh in everyone's mind.\n\nThanks for backing this from the start.\n\nGraham",
+  "draft": "Subject: Thank you to the launch team\n\nHi Sam,\n\nI'd like your help making sure the launch team gets a proper thank you. They've earned it, and I don't want it to get lost in the rush to the next project.\n\nLast week we shipped the new service on schedule. It's live, it's stable, and early feedback from users has been good. That didn't happen by accident. It took months of steady work from people across several teams.\n\nI want to name a few of them. The engineers fixed a late performance problem over a weekend, and they didn't complain about it. The designers kept going back to users until the journey made sense. The content team rewrote the help pages three times, and it shows. Support staff trained up quickly and are already answering real questions with confidence.\n\nHere's what I'm suggesting. First, we send a short note to the whole group, signed by both of us. Second, we mention each team by name at Thursday's all-hands, with one specific thing they did. Third, we ask managers to pass on the thanks in one-to-ones, so it lands personally and not just as a broadcast.\n\nI'd also like us to give people time back. Several of them worked late in the final fortnight. We should tell them plainly that they can take a day off in lieu, and that nobody needs to ask twice.\n\nA thank you works best when it's specific. \"Great job\" is fine, but \"you caught the data bug before it reached users\" tells someone we noticed. I'm happy to draft the all-hands note if you can pull together a list of names and contributions from your side. I'll do the same from mine.\n\nWe should also be honest about what we learned. There were rough patches, and the team has good ideas about what to change next time. I'd like to run a short retro in the next couple of weeks and make clear it's about improving, not assigning blame.\n\nCan we talk through this on Wednesday? I'm free after lunch. If you've got a different plan for the thanks, I'm open to it. I just want to be sure it happens this week, while the launch is still fresh in everyone's mind.\n\nThanks for backing this from the start.\n\nGraham",
+  "draft_words": 389,
+  "target_words": 400,
+  "valid": true,
+  "invalid_reasons": [],
+  "invalid_history": [],
+  "evidence": {
+    "init_skills": [
+      "my-voice"
+    ],
+    "init_plugins": [],
+    "init_mcp_servers": [],
+    "claude_code_version": "2.1.303",
+    "model": "claude-sonnet-5-5",
+    "skill_calls": [
+      "my-voice"
+    ],
+    "tools_used": [
+      "Skill"
+    ],
+    "invoked": true,
+    "invocation_detail": "skill_tool_use_ok",
+    "invariant_violations": [],
+    "problems": []
+  },
+  "log_label": "d-modern-a-heldout-07-with-r1-a1-10210946",
+  "created": "2026-10-21T09:53"
+}

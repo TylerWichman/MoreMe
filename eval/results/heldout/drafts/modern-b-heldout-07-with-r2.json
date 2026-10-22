@@ -1,0 +1,41 @@
+{
+  "license_header": "Corpus-derived content (persona modern-b). Adapted from works licensed under CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/); this file is licensed under CC BY-SA 4.0. Attribution, sources, and changes: eval/corpus/PROVENANCE.md",
+  "persona": "modern-b",
+  "task_id": "modern-b-heldout-07",
+  "split": "heldout",
+  "arm": "with",
+  "rep": 2,
+  "mode": "auto",
+  "model_requested": "claude-sonnet-5-5",
+  "position_in_task": 4,
+  "attempt": 1,
+  "prompt": "Write an email to a colleague about encouraging people to share what they know at work. Aim for about 400 words. Reply with the email only.",
+  "final_message": "Subject: Getting people to share what they know\n\nHi,\n\nI'd like your help with something I've been thinking about. We should encourage people on our teams to share what they know. Right now, too much of it sits in one person's head.\n\nLet me define what I mean. \"Knowledge sharing\" is the habit of passing along what you've learned so others don't have to learn it again from scratch. It can be a short note, a quick demo, or a five-minute answer to a question. It doesn't have to be a formal training session.\n\nHere's an example. Last month, one of our analysts spent two days fixing a reporting error. Someone on another team had solved the same problem in March. Nobody knew, because that fix lived in a private folder. Two days of work were repeated, and that's a real cost.\n\nI don't think people hold back because they're selfish. In my experience, there are usually three reasons:\n\n- They assume what they know is obvious to everyone else.\n- They're busy, and writing things down feels like extra work.\n- They worry that sharing mistakes will make them look bad.\n\nSo I'd like us to try a few small steps (nothing heavy).\n\nFirst, let's make it normal to share mid-project, not just at the end. A two-line update on what worked and what didn't is enough.\n\nSecond, let's thank people in public when they help. When someone's answer saves a colleague time, we should say so in the team channel. People repeat what gets noticed.\n\nThird, let's share our own mistakes first. If you and I talk openly about what went wrong on a recent project, others will feel safe doing the same. That's where the most useful lessons come from.\n\nFinally, let's set aside fifteen minutes in our weekly meeting for one person to share one thing they've learned. It's short enough that no one can say they don't have time.\n\nNone of this works if it's only an announcement. People need to see us do it, and they need to see that it's valued, not just allowed.\n\nCould we meet for thirty minutes this week to talk it through? I'd like your view on which of these steps fit your team, and which don't. You know your people better than I do.\n\nThanks,",
+  "draft": "Subject: Getting people to share what they know\n\nHi,\n\nI'd like your help with something I've been thinking about. We should encourage people on our teams to share what they know. Right now, too much of it sits in one person's head.\n\nLet me define what I mean. \"Knowledge sharing\" is the habit of passing along what you've learned so others don't have to learn it again from scratch. It can be a short note, a quick demo, or a five-minute answer to a question. It doesn't have to be a formal training session.\n\nHere's an example. Last month, one of our analysts spent two days fixing a reporting error. Someone on another team had solved the same problem in March. Nobody knew, because that fix lived in a private folder. Two days of work were repeated, and that's a real cost.\n\nI don't think people hold back because they're selfish. In my experience, there are usually three reasons:\n\n- They assume what they know is obvious to everyone else.\n- They're busy, and writing things down feels like extra work.\n- They worry that sharing mistakes will make them look bad.\n\nSo I'd like us to try a few small steps (nothing heavy).\n\nFirst, let's make it normal to share mid-project, not just at the end. A two-line update on what worked and what didn't is enough.\n\nSecond, let's thank people in public when they help. When someone's answer saves a colleague time, we should say so in the team channel. People repeat what gets noticed.\n\nThird, let's share our own mistakes first. If you and I talk openly about what went wrong on a recent project, others will feel safe doing the same. That's where the most useful lessons come from.\n\nFinally, let's set aside fifteen minutes in our weekly meeting for one person to share one thing they've learned. It's short enough that no one can say they don't have time.\n\nNone of this works if it's only an announcement. People need to see us do it, and they need to see that it's valued, not just allowed.\n\nCould we meet for thirty minutes this week to talk it through? I'd like your view on which of these steps fit your team, and which don't. You know your people better than I do.\n\nThanks,",
+  "draft_words": 387,
+  "target_words": 400,
+  "valid": true,
+  "invalid_reasons": [],
+  "invalid_history": [],
+  "evidence": {
+    "init_skills": [
+      "my-voice"
+    ],
+    "init_plugins": [],
+    "init_mcp_servers": [],
+    "claude_code_version": "2.1.306",
+    "model": "claude-sonnet-5-5",
+    "skill_calls": [
+      "my-voice"
+    ],
+    "tools_used": [
+      "Skill"
+    ],
+    "invoked": true,
+    "invocation_detail": "skill_tool_use_ok",
+    "invariant_violations": [],
+    "problems": []
+  },
+  "log_label": "d-modern-b-heldout-07-with-r2-a1-10211521",
+  "created": "2026-10-21T15:28"
+}

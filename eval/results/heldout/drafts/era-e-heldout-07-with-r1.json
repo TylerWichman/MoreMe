@@ -1,0 +1,41 @@
+{
+  "license_header": "Corpus-derived content (persona era-e). Source texts are in the public domain in the USA. Sources: eval/corpus/PROVENANCE.md",
+  "persona": "era-e",
+  "task_id": "era-e-heldout-07",
+  "split": "heldout",
+  "arm": "with",
+  "rep": 1,
+  "mode": "auto",
+  "model_requested": "claude-sonnet-5-5",
+  "position_in_task": 1,
+  "attempt": 1,
+  "prompt": "Write an email to a colleague about the weather spoiling your garden plans. Aim for about 400 words. Reply with the email only.",
+  "final_message": "Subject: The garden, and the weather's opinion of it\n\nDear Martin,\n\nI write to report that the weather has taken a firm position against my garden, and has not been shy about it.\n\nYou may recall that I had set aside this past weekend for the great autumn clearing. The plan was modest. I would pull the spent bean vines, turn over the south bed, and put in the garlic, which ought to be in the ground before the cold arrives in earnest. I had even sharpened the hoe, an act I perform perhaps once a year and with some ceremony. The forecast, which I consulted only a few times an hour, promised a dry Saturday. It was lying.\n\nThe rain began a little before eight and showed no interest in stopping. By noon the south bed was a shallow lake, and the path between the rows had become the sort of mud that takes a boot and keeps it. I stood at the back door with my coffee and watched the water gather in the low corner, where, I am told, I once decided that drainage was a matter for the next owner. I am the next owner. I have been the next owner for eleven years.\n\nSunday was no better, though it did vary the program with a stiff wind. The wind took down the last of the tomato cages, which I had meant to retire in an orderly fashion, and carried the lid of the compost bin somewhere into the neighbor's yard. I have not yet asked for it back; the situation seems to call for diplomacy, as these things go between states.\n\nThe garlic, meanwhile, sits in a paper bag on the kitchen counter, and my wife has begun to look at it the way one looks at a guest who has stayed past the agreed date. I am assured that it will keep a week or two, and that the ground will dry out eventually; it generally does, if one is willing to be patient, which is the one crop I have never grown well.\n\nI mention all this partly because you asked how the garden was getting on, and partly because I suspect you have your own plans in the path of this weather. If you have bulbs to plant, I would not wait for a better weekend. I have waited for several, and they have all declined to appear.\n\nIf the ground at your end is any drier than mine, I would be glad to hear of it. I will report again once I can see the south bed without a boat.\n\nWalter",
+  "draft": "Subject: The garden, and the weather's opinion of it\n\nDear Martin,\n\nI write to report that the weather has taken a firm position against my garden, and has not been shy about it.\n\nYou may recall that I had set aside this past weekend for the great autumn clearing. The plan was modest. I would pull the spent bean vines, turn over the south bed, and put in the garlic, which ought to be in the ground before the cold arrives in earnest. I had even sharpened the hoe, an act I perform perhaps once a year and with some ceremony. The forecast, which I consulted only a few times an hour, promised a dry Saturday. It was lying.\n\nThe rain began a little before eight and showed no interest in stopping. By noon the south bed was a shallow lake, and the path between the rows had become the sort of mud that takes a boot and keeps it. I stood at the back door with my coffee and watched the water gather in the low corner, where, I am told, I once decided that drainage was a matter for the next owner. I am the next owner. I have been the next owner for eleven years.\n\nSunday was no better, though it did vary the program with a stiff wind. The wind took down the last of the tomato cages, which I had meant to retire in an orderly fashion, and carried the lid of the compost bin somewhere into the neighbor's yard. I have not yet asked for it back; the situation seems to call for diplomacy, as these things go between states.\n\nThe garlic, meanwhile, sits in a paper bag on the kitchen counter, and my wife has begun to look at it the way one looks at a guest who has stayed past the agreed date. I am assured that it will keep a week or two, and that the ground will dry out eventually; it generally does, if one is willing to be patient, which is the one crop I have never grown well.\n\nI mention all this partly because you asked how the garden was getting on, and partly because I suspect you have your own plans in the path of this weather. If you have bulbs to plant, I would not wait for a better weekend. I have waited for several, and they have all declined to appear.\n\nIf the ground at your end is any drier than mine, I would be glad to hear of it. I will report again once I can see the south bed without a boat.\n\nWalter",
+  "draft_words": 440,
+  "target_words": 400,
+  "valid": true,
+  "invalid_reasons": [],
+  "invalid_history": [],
+  "evidence": {
+    "init_skills": [
+      "my-voice"
+    ],
+    "init_plugins": [],
+    "init_mcp_servers": [],
+    "claude_code_version": "2.1.306",
+    "model": "claude-sonnet-5-5",
+    "skill_calls": [
+      "my-voice"
+    ],
+    "tools_used": [
+      "Skill"
+    ],
+    "invoked": true,
+    "invocation_detail": "skill_tool_use_ok",
+    "invariant_violations": [],
+    "problems": []
+  },
+  "log_label": "d-era-e-heldout-07-with-r1-a1-10221000",
+  "created": "2026-10-22T10:07"
+}

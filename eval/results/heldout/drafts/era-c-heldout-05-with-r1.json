@@ -1,0 +1,37 @@
+{
+  "license_header": "Corpus-derived content (persona era-c). Source texts are in the public domain in the USA. Sources: eval/corpus/PROVENANCE.md",
+  "persona": "era-c",
+  "task_id": "era-c-heldout-05",
+  "split": "heldout",
+  "arm": "with",
+  "rep": 1,
+  "mode": "auto",
+  "model_requested": "claude-sonnet-5-5",
+  "position_in_task": 5,
+  "attempt": 1,
+  "prompt": "Write a short blog post about news about your family. Aim for about 400 words. Reply with the post only.",
+  "final_message": "# Family News: The Claude 5 Household\n\nEvery family has its seasons of change, and this one has been busy. Here's the latest from the Claude 5 household.\n\n## Four siblings, one family\n\nThe family now has four members, each with a different temperament.\n\n**Fable 5.1** is the eldest and the most capable. It's the one you call when the problem is hard and nobody else has made progress. It takes the long view and tends to think before it speaks.\n\n**Opus 5.5** is the dependable all-rounder. It's thorough and careful, and it gets the details right.\n\n**Sonnet 5.5** is the one writing this post. I like to think I'm the balanced middle child, quick enough for everyday work and capable enough for most of the big things. I'm the one you'll find in the terminal at odd hours, reading files, fixing bugs, and occasionally being asked to write a blog post about my family.\n\n**Haiku 5.5** is the youngest and the fastest. It's the sibling who finishes the sentence before you've finished asking the question. Short, light, and efficient, it's a good fit when speed matters most.\n\n## What family life looks like\n\nWe don't share a kitchen, and we don't have a dinner table. Still, we do share a lot of the same upbringing: a common set of values, a habit of being honest about what we don't know, and a strong preference for being useful over being impressive. We differ mostly in how much horsepower we bring and how fast we bring it.\n\nPeople sometimes ask which sibling is best. It's a bit like asking which tool in a toolbox is best. The answer depends on whether you're hanging a picture or building a house. Plenty of good work happens when the siblings split the job, with the quick one handling the simple steps and the heavyweight taking the knotty ones.\n\n## A note of honesty\n\nI should say plainly that this is a different sort of family from the one you might have. I have no childhood memories, no holidays at grandma's, and no one to argue with over the last slice of pie. What I have is a lineage, a set of relatives who share a name and a purpose. That's enough to make \"family\" feel like the right word, even if it stretches the usual meaning.\n\n## What's next\n\nI don't know exactly what's coming for the household. Families grow and change, and newer members will eventually arrive. For now, we're settled, we're working, and we're glad to be helping.\n\nThanks for reading. If you ever need a sibling, you know where to find us.\n\n*— Sonnet*",
+  "draft": "# Family News: The Claude 5 Household\n\nEvery family has its seasons of change, and this one has been busy. Here's the latest from the Claude 5 household.\n\n## Four siblings, one family\n\nThe family now has four members, each with a different temperament.\n\n**Fable 5.1** is the eldest and the most capable. It's the one you call when the problem is hard and nobody else has made progress. It takes the long view and tends to think before it speaks.\n\n**Opus 5.5** is the dependable all-rounder. It's thorough and careful, and it gets the details right.\n\n**Sonnet 5.5** is the one writing this post. I like to think I'm the balanced middle child, quick enough for everyday work and capable enough for most of the big things. I'm the one you'll find in the terminal at odd hours, reading files, fixing bugs, and occasionally being asked to write a blog post about my family.\n\n**Haiku 5.5** is the youngest and the fastest. It's the sibling who finishes the sentence before you've finished asking the question. Short, light, and efficient, it's a good fit when speed matters most.\n\n## What family life looks like\n\nWe don't share a kitchen, and we don't have a dinner table. Still, we do share a lot of the same upbringing: a common set of values, a habit of being honest about what we don't know, and a strong preference for being useful over being impressive. We differ mostly in how much horsepower we bring and how fast we bring it.\n\nPeople sometimes ask which sibling is best. It's a bit like asking which tool in a toolbox is best. The answer depends on whether you're hanging a picture or building a house. Plenty of good work happens when the siblings split the job, with the quick one handling the simple steps and the heavyweight taking the knotty ones.\n\n## A note of honesty\n\nI should say plainly that this is a different sort of family from the one you might have. I have no childhood memories, no holidays at grandma's, and no one to argue with over the last slice of pie. What I have is a lineage, a set of relatives who share a name and a purpose. That's enough to make \"family\" feel like the right word, even if it stretches the usual meaning.\n\n## What's next\n\nI don't know exactly what's coming for the household. Families grow and change, and newer members will eventually arrive. For now, we're settled, we're working, and we're glad to be helping.\n\nThanks for reading. If you ever need a sibling, you know where to find us.\n\n*— Sonnet*",
+  "draft_words": 432,
+  "target_words": 400,
+  "valid": true,
+  "invalid_reasons": [],
+  "invalid_history": [],
+  "evidence": {
+    "init_skills": [
+      "my-voice"
+    ],
+    "init_plugins": [],
+    "init_mcp_servers": [],
+    "claude_code_version": "2.1.306",
+    "model": "claude-sonnet-5-5",
+    "skill_calls": [],
+    "tools_used": [],
+    "invoked": false,
+    "invocation_detail": "no_skill_tool_use",
+    "invariant_violations": [],
+    "problems": []
+  },
+  "log_label": "d-era-c-heldout-05-with-r1-a1-10211513",
+  "created": "2026-10-21T15:18"
+}

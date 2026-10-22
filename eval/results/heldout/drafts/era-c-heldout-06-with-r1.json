@@ -1,0 +1,41 @@
+{
+  "license_header": "Corpus-derived content (persona era-c). Source texts are in the public domain in the USA. Sources: eval/corpus/PROVENANCE.md",
+  "persona": "era-c",
+  "task_id": "era-c-heldout-06",
+  "split": "heldout",
+  "arm": "with",
+  "rep": 1,
+  "mode": "auto",
+  "model_requested": "claude-sonnet-5-5",
+  "position_in_task": 3,
+  "attempt": 1,
+  "prompt": "Write a note to a friend about a book you have been reading. Aim for about 400 words. Reply with the note only.",
+  "final_message": "Dear friend,\n\nI finally got around to the book you pressed on me last spring, My Ántonia, and I'm sorry it took me so long, because I've hardly put it down all week. I started it one evening after supper meaning to read a page or two, and the lamp was still burning when I looked up and found it past eleven.\n\nIt's about a girl from Bohemia who comes out to the Nebraska prairie with her family, and about the boy who grows up beside her and tells the story years afterward. Nothing much happens in the way of plots and villains. People plow, and they go hungry, and they dance at the hired girls' parties on Saturday nights. Somehow I cared about every one of them anyway.\n\nThe part that stuck with me most was the first winter, when the family lives in a dugout in the side of a hill and Ántonia's father can't make the ground behave. I know a little about borrowing against a place that hasn't paid you back yet, so I read those chapters slowly. You'll laugh, but I got up and checked my own stovepipe afterward, as if the book had warned me.\n\nI also liked how plainly the writer lets the land speak. She doesn't dress it up. The grass turns red in the fall and the wind never quits, and that is all she needs to say. I've been trying to write my own letters that way, with less fuss, though I'm afraid mine still ramble when I get started.\n\nÁntonia herself is stubborn and warm and works harder than anyone should have to, and she never once turns bitter about it. I found I wanted to sit at her table. I suspect she would have fed me twice and scolded me once, which is about what I'm used to from the women I admire.\n\nI'll tell you the one thing I didn't care for, since you always want my honest opinion. The narrator goes away to college and comes back full of himself, and I wanted to shake him a little. But I think the writer meant me to feel that, and by the end he had earned his way back into my good graces.\n\nI'd like to hear what you made of it when you read it. Write when you have a minute, and tell me what you're reading now, because I'm nearly out of books and the snow is coming.\n\nHattie",
+  "draft": "Dear friend,\n\nI finally got around to the book you pressed on me last spring, My Ántonia, and I'm sorry it took me so long, because I've hardly put it down all week. I started it one evening after supper meaning to read a page or two, and the lamp was still burning when I looked up and found it past eleven.\n\nIt's about a girl from Bohemia who comes out to the Nebraska prairie with her family, and about the boy who grows up beside her and tells the story years afterward. Nothing much happens in the way of plots and villains. People plow, and they go hungry, and they dance at the hired girls' parties on Saturday nights. Somehow I cared about every one of them anyway.\n\nThe part that stuck with me most was the first winter, when the family lives in a dugout in the side of a hill and Ántonia's father can't make the ground behave. I know a little about borrowing against a place that hasn't paid you back yet, so I read those chapters slowly. You'll laugh, but I got up and checked my own stovepipe afterward, as if the book had warned me.\n\nI also liked how plainly the writer lets the land speak. She doesn't dress it up. The grass turns red in the fall and the wind never quits, and that is all she needs to say. I've been trying to write my own letters that way, with less fuss, though I'm afraid mine still ramble when I get started.\n\nÁntonia herself is stubborn and warm and works harder than anyone should have to, and she never once turns bitter about it. I found I wanted to sit at her table. I suspect she would have fed me twice and scolded me once, which is about what I'm used to from the women I admire.\n\nI'll tell you the one thing I didn't care for, since you always want my honest opinion. The narrator goes away to college and comes back full of himself, and I wanted to shake him a little. But I think the writer meant me to feel that, and by the end he had earned his way back into my good graces.\n\nI'd like to hear what you made of it when you read it. Write when you have a minute, and tell me what you're reading now, because I'm nearly out of books and the snow is coming.\n\nHattie",
+  "draft_words": 414,
+  "target_words": 400,
+  "valid": true,
+  "invalid_reasons": [],
+  "invalid_history": [],
+  "evidence": {
+    "init_skills": [
+      "my-voice"
+    ],
+    "init_plugins": [],
+    "init_mcp_servers": [],
+    "claude_code_version": "2.1.306",
+    "model": "claude-sonnet-5-5",
+    "skill_calls": [
+      "my-voice"
+    ],
+    "tools_used": [
+      "Skill"
+    ],
+    "invoked": true,
+    "invocation_detail": "skill_tool_use_ok",
+    "invariant_violations": [],
+    "problems": []
+  },
+  "log_label": "d-era-c-heldout-06-with-r1-a1-10211513",
+  "created": "2026-10-21T15:19"
+}

@@ -1,0 +1,41 @@
+{
+  "license_header": "Corpus-derived content (persona era-e). Source texts are in the public domain in the USA. Sources: eval/corpus/PROVENANCE.md",
+  "persona": "era-e",
+  "task_id": "era-e-heldout-01",
+  "split": "heldout",
+  "arm": "with",
+  "rep": 1,
+  "mode": "auto",
+  "model_requested": "claude-sonnet-5-5",
+  "position_in_task": 3,
+  "attempt": 1,
+  "prompt": "Write an email to a colleague about the first week of planting a vegetable garden. Aim for about 400 words. Reply with the email only.",
+  "final_message": "Subject: Week one in the vegetable garden\n\nDear Marcus,\n\nYou asked how the garden was coming along, and I am pleased to report that nothing has died yet; I am told this is the correct benchmark for the first week.\n\nI began on Saturday with the turf, which did not wish to leave. I removed a plot roughly ten feet by twelve, and the turf resisted with a tenacity I had not seen since the last budget meeting. I will admit that it took most of the morning, and that my back has filed a formal complaint. Having dug out the grass, I turned the soil over and worked in a few barrows of compost. The soil is darker than I expected, which I choose to credit to my own character rather than to the previous owner's habits.\n\nOn Sunday I planted. In went the peas along the north fence, where they can climb without shading anything else; two short rows of lettuce; some radishes, because they are said to come up quickly and a man in my position needs early encouragement; and a double row of carrots, which I sowed thinly and then thinned again out of pure nerves. The tomatoes and zucchini I have kept indoors on the windowsill, as the nights are still cold enough to be unreasonable. The zucchini, I am warned, will in due course produce more than any household can eat, and I am already composing the notes to the neighbors.\n\nThe week since has been given over to watering and watching. I have stood at the edge of the bed more often than the situation strictly requires. Nothing has happened; this is, I gather, how seeds work. On Thursday I thought I saw a radish, but on closer inspection it was a pebble. I have marked every row with a stake and a label, partly for order and partly so that I can tell the carrots from the weeds when the weeds arrive, as they surely will.\n\nI did buy a proper hoe, with a long handle and a sharp blade. It lets one work standing upright, like a reasonable person, and I recommend it. If you are still thinking about a bed of your own, I will gladly lend it to you, along with any opinions you did not ask for.\n\nI will report again when something has actually come up. Do come by on Saturday if you are free; there is nothing to see yet, but the coffee is decent.\n\nWalter",
+  "draft": "Subject: Week one in the vegetable garden\n\nDear Marcus,\n\nYou asked how the garden was coming along, and I am pleased to report that nothing has died yet; I am told this is the correct benchmark for the first week.\n\nI began on Saturday with the turf, which did not wish to leave. I removed a plot roughly ten feet by twelve, and the turf resisted with a tenacity I had not seen since the last budget meeting. I will admit that it took most of the morning, and that my back has filed a formal complaint. Having dug out the grass, I turned the soil over and worked in a few barrows of compost. The soil is darker than I expected, which I choose to credit to my own character rather than to the previous owner's habits.\n\nOn Sunday I planted. In went the peas along the north fence, where they can climb without shading anything else; two short rows of lettuce; some radishes, because they are said to come up quickly and a man in my position needs early encouragement; and a double row of carrots, which I sowed thinly and then thinned again out of pure nerves. The tomatoes and zucchini I have kept indoors on the windowsill, as the nights are still cold enough to be unreasonable. The zucchini, I am warned, will in due course produce more than any household can eat, and I am already composing the notes to the neighbors.\n\nThe week since has been given over to watering and watching. I have stood at the edge of the bed more often than the situation strictly requires. Nothing has happened; this is, I gather, how seeds work. On Thursday I thought I saw a radish, but on closer inspection it was a pebble. I have marked every row with a stake and a label, partly for order and partly so that I can tell the carrots from the weeds when the weeds arrive, as they surely will.\n\nI did buy a proper hoe, with a long handle and a sharp blade. It lets one work standing upright, like a reasonable person, and I recommend it. If you are still thinking about a bed of your own, I will gladly lend it to you, along with any opinions you did not ask for.\n\nI will report again when something has actually come up. Do come by on Saturday if you are free; there is nothing to see yet, but the coffee is decent.\n\nWalter",
+  "draft_words": 420,
+  "target_words": 400,
+  "valid": true,
+  "invalid_reasons": [],
+  "invalid_history": [],
+  "evidence": {
+    "init_skills": [
+      "my-voice"
+    ],
+    "init_plugins": [],
+    "init_mcp_servers": [],
+    "claude_code_version": "2.1.306",
+    "model": "claude-sonnet-5-5",
+    "skill_calls": [
+      "my-voice"
+    ],
+    "tools_used": [
+      "Skill"
+    ],
+    "invoked": true,
+    "invocation_detail": "skill_tool_use_ok",
+    "invariant_violations": [],
+    "problems": []
+  },
+  "log_label": "d-era-e-heldout-01-with-r1-a1-10221000",
+  "created": "2026-10-22T10:01"
+}

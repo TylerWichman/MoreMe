@@ -1,0 +1,41 @@
+{
+  "license_header": "Corpus-derived content (persona era-f). Source texts are in the public domain in the USA. Sources: eval/corpus/PROVENANCE.md",
+  "persona": "era-f",
+  "task_id": "era-f-heldout-01",
+  "split": "heldout",
+  "arm": "with",
+  "rep": 2,
+  "mode": "auto",
+  "model_requested": "claude-sonnet-5-5",
+  "position_in_task": 2,
+  "attempt": 1,
+  "prompt": "Write an email to a colleague about not being discouraged by setbacks. Aim for about 400 words. Reply with the email only.",
+  "final_message": "Subject: Keep going\n\nHello,\n\nI heard about the way the project review went last week, and I want you to know that I am not worried about you. One hard result does not tell the story of your work.\n\nEvery person who does good work has setbacks. I have had many of them myself. I have lost months of effort on a plan that did not work, and I felt sure at the time that I had wasted my time. I had not.\n\nWhat matters is what you do the next morning. If you do the work as well as you can today, and then a little better tomorrow, you will move forward. Progress comes from small steps, one after another.\n\nWhen something goes wrong, look at it plainly. Find out what happened and why. Write it down if that helps you. Then take one thing from it that you can use next time. A mistake you understand is worth more than a success you cannot explain.\n\nI also ask you not to carry the setback alone. Talk to someone you trust. Talk to me if you like. You will find that most of us have stood where you stand now, and we are glad to help. The more you share your trouble, the lighter it becomes, and the more you help the person who listens, because they learn from you in turn.\n\nDo not judge yourself by one bad week. You have shown real skill and real care in your work, and I have seen it. A single setback cannot take that away from you. Only giving up can do that, and I do not think you will give up.\n\nHere is what I suggest. Take a day to rest and think. Then pick one small piece of the project and do it well. When that is done, pick the next piece. Before long you will see that you have made more ground than you expected.\n\nI would like to sit down with you early next week and go over the plan together. Tell me which day suits you, and I will make the time. Bring your notes, and bring your ideas too, even the ones you think are not good enough. Some of the best work starts that way.\n\nYou are stronger than you feel right now. Keep your head up, keep working, and let the rest follow.\n\nSamuel",
+  "draft": "Subject: Keep going\n\nHello,\n\nI heard about the way the project review went last week, and I want you to know that I am not worried about you. One hard result does not tell the story of your work.\n\nEvery person who does good work has setbacks. I have had many of them myself. I have lost months of effort on a plan that did not work, and I felt sure at the time that I had wasted my time. I had not.\n\nWhat matters is what you do the next morning. If you do the work as well as you can today, and then a little better tomorrow, you will move forward. Progress comes from small steps, one after another.\n\nWhen something goes wrong, look at it plainly. Find out what happened and why. Write it down if that helps you. Then take one thing from it that you can use next time. A mistake you understand is worth more than a success you cannot explain.\n\nI also ask you not to carry the setback alone. Talk to someone you trust. Talk to me if you like. You will find that most of us have stood where you stand now, and we are glad to help. The more you share your trouble, the lighter it becomes, and the more you help the person who listens, because they learn from you in turn.\n\nDo not judge yourself by one bad week. You have shown real skill and real care in your work, and I have seen it. A single setback cannot take that away from you. Only giving up can do that, and I do not think you will give up.\n\nHere is what I suggest. Take a day to rest and think. Then pick one small piece of the project and do it well. When that is done, pick the next piece. Before long you will see that you have made more ground than you expected.\n\nI would like to sit down with you early next week and go over the plan together. Tell me which day suits you, and I will make the time. Bring your notes, and bring your ideas too, even the ones you think are not good enough. Some of the best work starts that way.\n\nYou are stronger than you feel right now. Keep your head up, keep working, and let the rest follow.\n\nSamuel",
+  "draft_words": 401,
+  "target_words": 400,
+  "valid": true,
+  "invalid_reasons": [],
+  "invalid_history": [],
+  "evidence": {
+    "init_skills": [
+      "my-voice"
+    ],
+    "init_plugins": [],
+    "init_mcp_servers": [],
+    "claude_code_version": "2.1.306",
+    "model": "claude-sonnet-5-5",
+    "skill_calls": [
+      "my-voice"
+    ],
+    "tools_used": [
+      "Skill"
+    ],
+    "invoked": true,
+    "invocation_detail": "skill_tool_use_ok",
+    "invariant_violations": [],
+    "problems": []
+  },
+  "log_label": "d-era-f-heldout-01-with-r2-a1-10221009",
+  "created": "2026-10-22T10:09"
+}

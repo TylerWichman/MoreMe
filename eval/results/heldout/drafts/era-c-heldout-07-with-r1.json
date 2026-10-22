@@ -1,0 +1,41 @@
+{
+  "license_header": "Corpus-derived content (persona era-c). Source texts are in the public domain in the USA. Sources: eval/corpus/PROVENANCE.md",
+  "persona": "era-c",
+  "task_id": "era-c-heldout-07",
+  "split": "heldout",
+  "arm": "with",
+  "rep": 1,
+  "mode": "auto",
+  "model_requested": "claude-sonnet-5-5",
+  "position_in_task": 5,
+  "attempt": 1,
+  "prompt": "Write an email to a colleague about a visit you are planning. Aim for about 400 words. Reply with the email only.",
+  "final_message": "Subject: My visit to your office next month\n\nDear Marcus,\n\nI'm planning to come out to see you the second week of November, and I wanted to give you plenty of notice so we can work around your calendar. My thought is to arrive on the Tuesday afternoon and stay through Thursday, though I can shift a day either way if that suits you better.\n\nThe main reason for the trip is to sit down with you and go over the new filing system in person. I've read your notes twice now, and I still think half of it would make more sense if I watched you use it. Letters and emails only carry us so far, and I'd rather ask my foolish questions across a desk than send them one at a time.\n\nIf you can spare an hour or two on Wednesday morning, I would like to meet the people who handle the records day to day. They know where the trouble spots are, and they will tell me things you are too polite to put in a report. I'll bring a notebook and try to stay out of the way.\n\nI'd also like to see the storage room you mentioned. You said it floods a little every spring, and I have some ideas about shelving that might help, though I won't know until I see the place for myself. I am no engineer, so please take my suggestions as a neighbor's advice and nothing more.\n\nAs for the practical side, I have booked a room at the small hotel two streets from your building, so you needn't worry about finding me a bed. I will take care of my own meals, but if you know a decent place for lunch, I would be glad of the recommendation. I'd happily buy yours, since you are giving up your time.\n\nOne more thing I should mention. I tend to arrive early and then wander about looking lost, so if you see me standing in the lobby with a suitcase and a map, please just wave me over. It has happened before, and I don't expect I've improved.\n\nCould you let me know which of those days would work, and whether anyone else should be included? Once I hear from you, I'll send a short plan so everyone knows what to expect. I am looking forward to seeing you and to finally putting faces to the names I've been reading for months.\n\nWith thanks and kind regards,\n\nHattie",
+  "draft": "Subject: My visit to your office next month\n\nDear Marcus,\n\nI'm planning to come out to see you the second week of November, and I wanted to give you plenty of notice so we can work around your calendar. My thought is to arrive on the Tuesday afternoon and stay through Thursday, though I can shift a day either way if that suits you better.\n\nThe main reason for the trip is to sit down with you and go over the new filing system in person. I've read your notes twice now, and I still think half of it would make more sense if I watched you use it. Letters and emails only carry us so far, and I'd rather ask my foolish questions across a desk than send them one at a time.\n\nIf you can spare an hour or two on Wednesday morning, I would like to meet the people who handle the records day to day. They know where the trouble spots are, and they will tell me things you are too polite to put in a report. I'll bring a notebook and try to stay out of the way.\n\nI'd also like to see the storage room you mentioned. You said it floods a little every spring, and I have some ideas about shelving that might help, though I won't know until I see the place for myself. I am no engineer, so please take my suggestions as a neighbor's advice and nothing more.\n\nAs for the practical side, I have booked a room at the small hotel two streets from your building, so you needn't worry about finding me a bed. I will take care of my own meals, but if you know a decent place for lunch, I would be glad of the recommendation. I'd happily buy yours, since you are giving up your time.\n\nOne more thing I should mention. I tend to arrive early and then wander about looking lost, so if you see me standing in the lobby with a suitcase and a map, please just wave me over. It has happened before, and I don't expect I've improved.\n\nCould you let me know which of those days would work, and whether anyone else should be included? Once I hear from you, I'll send a short plan so everyone knows what to expect. I am looking forward to seeing you and to finally putting faces to the names I've been reading for months.\n\nWith thanks and kind regards,\n\nHattie",
+  "draft_words": 418,
+  "target_words": 400,
+  "valid": true,
+  "invalid_reasons": [],
+  "invalid_history": [],
+  "evidence": {
+    "init_skills": [
+      "my-voice"
+    ],
+    "init_plugins": [],
+    "init_mcp_servers": [],
+    "claude_code_version": "2.1.306",
+    "model": "claude-sonnet-5-5",
+    "skill_calls": [
+      "my-voice"
+    ],
+    "tools_used": [
+      "Skill"
+    ],
+    "invoked": true,
+    "invocation_detail": "skill_tool_use_ok",
+    "invariant_violations": [],
+    "problems": []
+  },
+  "log_label": "d-era-c-heldout-07-with-r1-a1-10211513",
+  "created": "2026-10-21T15:20"
+}

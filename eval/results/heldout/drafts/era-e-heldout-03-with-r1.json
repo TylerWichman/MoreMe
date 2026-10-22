@@ -1,0 +1,41 @@
+{
+  "license_header": "Corpus-derived content (persona era-e). Source texts are in the public domain in the USA. Sources: eval/corpus/PROVENANCE.md",
+  "persona": "era-e",
+  "task_id": "era-e-heldout-03",
+  "split": "heldout",
+  "arm": "with",
+  "rep": 1,
+  "mode": "auto",
+  "model_requested": "claude-sonnet-5-5",
+  "position_in_task": 3,
+  "attempt": 1,
+  "prompt": "Write a note to a friend about a neighbor's advice about your garden. Aim for about 400 words. Reply with the note only.",
+  "final_message": "Dear Harold,\n\nYou will want to hear what Mr. Pruitt next door said about my garden, since you have been blamed for most of my gardening opinions and should be allowed to hear one that is not yours.\n\nHe leaned over the fence on Saturday, with the air of a physician who has already seen the chart, and informed me that I plant everything too close together. His view is that a tomato needs room to think. I pointed out that my tomatoes have never given the least sign of thinking, but he was not to be moved. He gave it as his settled opinion that two feet between plants is the minimum for a decent crop, and three is better; the beans, he allowed, might be forgiven a little crowding, being of a sociable nature.\n\nHis second piece of advice concerned watering. I have been sprinkling the beds a little each evening, in the manner of a man tipping a waiter he does not entirely trust. Mr. Pruitt says this is wrong. The roots, he says, grow lazy and stay near the top, waiting to be served; one should water deeply, and seldom, and make the plants go looking for it. There is something in this that appeals to me. It is the whole doctrine of the frontier applied to zucchini.\n\nI confess I took the advice with less grace than it deserved. A man does not enjoy being told his rows are crowded by someone whose own lawn has a bald patch the size of a card table. But I have measured since, with a yardstick and some private shame, and the tomatoes stand about eleven inches apart. The yardstick does not flatter anyone.\n\nSo I have moved four of them. They sit in their new places looking rather exposed, like guests who arrived early to a party; I expect them to recover. I have also begun the deep watering, once on Sunday and once again on Wednesday, and I will report whether the roots have gone looking, or merely sulked.\n\nI will tell you plainly that if the crop is better, I shall have to thank Mr. Pruitt, and I have not decided how to do it without encouraging him. Perhaps a basket of the first ripe ones left on his step, unsigned. It is the sort of gratitude a man can bear.\n\nCome and look at the rearranged beds when you are next out this way. Bring your own opinions; I seem to be collecting them.\n\nWalter",
+  "draft": "Dear Harold,\n\nYou will want to hear what Mr. Pruitt next door said about my garden, since you have been blamed for most of my gardening opinions and should be allowed to hear one that is not yours.\n\nHe leaned over the fence on Saturday, with the air of a physician who has already seen the chart, and informed me that I plant everything too close together. His view is that a tomato needs room to think. I pointed out that my tomatoes have never given the least sign of thinking, but he was not to be moved. He gave it as his settled opinion that two feet between plants is the minimum for a decent crop, and three is better; the beans, he allowed, might be forgiven a little crowding, being of a sociable nature.\n\nHis second piece of advice concerned watering. I have been sprinkling the beds a little each evening, in the manner of a man tipping a waiter he does not entirely trust. Mr. Pruitt says this is wrong. The roots, he says, grow lazy and stay near the top, waiting to be served; one should water deeply, and seldom, and make the plants go looking for it. There is something in this that appeals to me. It is the whole doctrine of the frontier applied to zucchini.\n\nI confess I took the advice with less grace than it deserved. A man does not enjoy being told his rows are crowded by someone whose own lawn has a bald patch the size of a card table. But I have measured since, with a yardstick and some private shame, and the tomatoes stand about eleven inches apart. The yardstick does not flatter anyone.\n\nSo I have moved four of them. They sit in their new places looking rather exposed, like guests who arrived early to a party; I expect them to recover. I have also begun the deep watering, once on Sunday and once again on Wednesday, and I will report whether the roots have gone looking, or merely sulked.\n\nI will tell you plainly that if the crop is better, I shall have to thank Mr. Pruitt, and I have not decided how to do it without encouraging him. Perhaps a basket of the first ripe ones left on his step, unsigned. It is the sort of gratitude a man can bear.\n\nCome and look at the rearranged beds when you are next out this way. Bring your own opinions; I seem to be collecting them.\n\nWalter",
+  "draft_words": 421,
+  "target_words": 400,
+  "valid": true,
+  "invalid_reasons": [],
+  "invalid_history": [],
+  "evidence": {
+    "init_skills": [
+      "my-voice"
+    ],
+    "init_plugins": [],
+    "init_mcp_servers": [],
+    "claude_code_version": "2.1.306",
+    "model": "claude-sonnet-5-5",
+    "skill_calls": [
+      "my-voice"
+    ],
+    "tools_used": [
+      "Skill"
+    ],
+    "invoked": true,
+    "invocation_detail": "skill_tool_use_ok",
+    "invariant_violations": [],
+    "problems": []
+  },
+  "log_label": "d-era-e-heldout-03-with-r1-a1-10221000",
+  "created": "2026-10-22T10:03"
+}

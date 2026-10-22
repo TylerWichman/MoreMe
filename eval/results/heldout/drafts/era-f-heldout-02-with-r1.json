@@ -1,0 +1,41 @@
+{
+  "license_header": "Corpus-derived content (persona era-f). Source texts are in the public domain in the USA. Sources: eval/corpus/PROVENANCE.md",
+  "persona": "era-f",
+  "task_id": "era-f-heldout-02",
+  "split": "heldout",
+  "arm": "with",
+  "rep": 1,
+  "mode": "auto",
+  "model_requested": "claude-sonnet-5-5",
+  "position_in_task": 4,
+  "attempt": 1,
+  "prompt": "Write a short blog post about the value of owning a home. Aim for about 400 words. Reply with the post only.",
+  "final_message": "**The Value of Owning a Home**\n\nOwning a home is one of the most useful things you can do for your future. It is not easy, and it takes patience, but the reward is real and it lasts.\n\nThe first value is stability. When you own your home, no one can raise your rent or ask you to leave. You know where you will live next year and the year after.\n\nThe second value is saving. Each month, part of your payment goes toward the house itself. Over time, that part grows, and you build something that belongs to you. Rent gives you a place to sleep, but it gives you nothing to keep.\n\nThe third value is freedom. You can paint the walls, plant a garden, or fix the porch. You do not need to ask anyone first. A home you can shape becomes a home you care about.\n\nThere is also the value of belonging. People who own homes tend to stay longer in one place. They know their neighbors, and they take part in the life of the street and the town. That kind of community is built slowly, and it helps everyone who lives there.\n\nI want to be honest with you, because owning a home also has costs. Roofs leak, pipes break, and taxes come due every year. You must be ready to pay for these things, and you must plan ahead. A home is a responsibility as much as it is a gift.\n\nSo start early. Spend less than you earn, and put a little aside each month, even when the amount feels small. Pay your bills on time, because a good record will help you when you ask for a loan. Learn what you can about how buying works, and ask questions of people who have done it well.\n\nDo not wait until you feel completely ready, since that day rarely comes. Get ready step by step, and do each step as well as you can. The person who saves carefully this year will be stronger next year, and stronger still the year after.\n\nA home will not solve every problem you have. It will give you a firm place to stand, and from there you can do more for your family and for others. If you want a life that is steady and useful, owning a home is a good goal to work toward. Begin today, and keep going.",
+  "draft": "**The Value of Owning a Home**\n\nOwning a home is one of the most useful things you can do for your future. It is not easy, and it takes patience, but the reward is real and it lasts.\n\nThe first value is stability. When you own your home, no one can raise your rent or ask you to leave. You know where you will live next year and the year after.\n\nThe second value is saving. Each month, part of your payment goes toward the house itself. Over time, that part grows, and you build something that belongs to you. Rent gives you a place to sleep, but it gives you nothing to keep.\n\nThe third value is freedom. You can paint the walls, plant a garden, or fix the porch. You do not need to ask anyone first. A home you can shape becomes a home you care about.\n\nThere is also the value of belonging. People who own homes tend to stay longer in one place. They know their neighbors, and they take part in the life of the street and the town. That kind of community is built slowly, and it helps everyone who lives there.\n\nI want to be honest with you, because owning a home also has costs. Roofs leak, pipes break, and taxes come due every year. You must be ready to pay for these things, and you must plan ahead. A home is a responsibility as much as it is a gift.\n\nSo start early. Spend less than you earn, and put a little aside each month, even when the amount feels small. Pay your bills on time, because a good record will help you when you ask for a loan. Learn what you can about how buying works, and ask questions of people who have done it well.\n\nDo not wait until you feel completely ready, since that day rarely comes. Get ready step by step, and do each step as well as you can. The person who saves carefully this year will be stronger next year, and stronger still the year after.\n\nA home will not solve every problem you have. It will give you a firm place to stand, and from there you can do more for your family and for others. If you want a life that is steady and useful, owning a home is a good goal to work toward. Begin today, and keep going.",
+  "draft_words": 407,
+  "target_words": 400,
+  "valid": true,
+  "invalid_reasons": [],
+  "invalid_history": [],
+  "evidence": {
+    "init_skills": [
+      "my-voice"
+    ],
+    "init_plugins": [],
+    "init_mcp_servers": [],
+    "claude_code_version": "2.1.306",
+    "model": "claude-sonnet-5-5",
+    "skill_calls": [
+      "my-voice"
+    ],
+    "tools_used": [
+      "Skill"
+    ],
+    "invoked": true,
+    "invocation_detail": "skill_tool_use_ok",
+    "invariant_violations": [],
+    "problems": []
+  },
+  "log_label": "d-era-f-heldout-02-with-r1-a1-10221009",
+  "created": "2026-10-22T10:10"
+}

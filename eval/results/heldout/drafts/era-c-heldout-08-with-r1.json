@@ -1,0 +1,41 @@
+{
+  "license_header": "Corpus-derived content (persona era-c). Source texts are in the public domain in the USA. Sources: eval/corpus/PROVENANCE.md",
+  "persona": "era-c",
+  "task_id": "era-c-heldout-08",
+  "split": "heldout",
+  "arm": "with",
+  "rep": 1,
+  "mode": "auto",
+  "model_requested": "claude-sonnet-5-5",
+  "position_in_task": 4,
+  "attempt": 1,
+  "prompt": "Write a short blog post about a small mishap around the house. Aim for about 400 words. Reply with the post only.",
+  "final_message": "**The Great Flour Flood**\n\nI had a small mishap in the kitchen on Tuesday, and I've decided to tell you about it because I'd rather you hear it from me than from the dog, who saw everything and is not a reliable witness.\n\nI was putting away the groceries, which I do in a hurry, mostly because the ice cream is always the last thing out of the bag and I worry about it. I reached up to push the new sack of flour onto the top shelf of the pantry. The shelf was already full, and I knew it was full, but I pushed anyway, trusting to luck. Luck had other plans.\n\nThe old flour canister tipped first. It's the big tin one my mother gave me, and it came down on the floor with a bang that made the dog leave the room. The lid popped off, the flour went up in a cloud, and then the new sack decided to follow it. I stood there with my arms still raised like I was surrendering to the pantry.\n\nWhen the dust settled, and it took some time to settle, the whole kitchen looked as if it had snowed. There was flour on the floor, on the counter, and on the cat, who had come in to see what the noise was about and now looked like a ghost. There was flour on my glasses, so for a moment I couldn't see any of it, which I'll admit was a mercy.\n\nNow, I've always been told that you shouldn't wipe up flour with a wet cloth, because it turns into a paste that you'll be scraping off for a week. I had forgotten this completely and gone straight for the dishrag. By the time I remembered, I'd made a sort of dough right there on the linoleum. I did think about baking something with it, but I decided that was going too far.\n\nSo I got the broom, then the dustpan, and then the vacuum, which coughed a little but did its duty. It took me the better part of an hour. I found flour in places I still can't explain, including the top of the refrigerator and inside the toaster.\n\nI've since moved the flour to a lower shelf, where it can't fall on anyone, and I've left the pantry a bit less crowded. The dog has come back in, though he keeps an eye on the shelves. I can't say I blame him, and if you come by this week, you may still find a little white on the baseboards. Please don't mention it.\n\nHattie",
+  "draft": "**The Great Flour Flood**\n\nI had a small mishap in the kitchen on Tuesday, and I've decided to tell you about it because I'd rather you hear it from me than from the dog, who saw everything and is not a reliable witness.\n\nI was putting away the groceries, which I do in a hurry, mostly because the ice cream is always the last thing out of the bag and I worry about it. I reached up to push the new sack of flour onto the top shelf of the pantry. The shelf was already full, and I knew it was full, but I pushed anyway, trusting to luck. Luck had other plans.\n\nThe old flour canister tipped first. It's the big tin one my mother gave me, and it came down on the floor with a bang that made the dog leave the room. The lid popped off, the flour went up in a cloud, and then the new sack decided to follow it. I stood there with my arms still raised like I was surrendering to the pantry.\n\nWhen the dust settled, and it took some time to settle, the whole kitchen looked as if it had snowed. There was flour on the floor, on the counter, and on the cat, who had come in to see what the noise was about and now looked like a ghost. There was flour on my glasses, so for a moment I couldn't see any of it, which I'll admit was a mercy.\n\nNow, I've always been told that you shouldn't wipe up flour with a wet cloth, because it turns into a paste that you'll be scraping off for a week. I had forgotten this completely and gone straight for the dishrag. By the time I remembered, I'd made a sort of dough right there on the linoleum. I did think about baking something with it, but I decided that was going too far.\n\nSo I got the broom, then the dustpan, and then the vacuum, which coughed a little but did its duty. It took me the better part of an hour. I found flour in places I still can't explain, including the top of the refrigerator and inside the toaster.\n\nI've since moved the flour to a lower shelf, where it can't fall on anyone, and I've left the pantry a bit less crowded. The dog has come back in, though he keeps an eye on the shelves. I can't say I blame him, and if you come by this week, you may still find a little white on the baseboards. Please don't mention it.\n\nHattie",
+  "draft_words": 438,
+  "target_words": 400,
+  "valid": true,
+  "invalid_reasons": [],
+  "invalid_history": [],
+  "evidence": {
+    "init_skills": [
+      "my-voice"
+    ],
+    "init_plugins": [],
+    "init_mcp_servers": [],
+    "claude_code_version": "2.1.306",
+    "model": "claude-sonnet-5-5",
+    "skill_calls": [
+      "my-voice"
+    ],
+    "tools_used": [
+      "Skill"
+    ],
+    "invoked": true,
+    "invocation_detail": "skill_tool_use_ok",
+    "invariant_violations": [],
+    "problems": []
+  },
+  "log_label": "d-era-c-heldout-08-with-r1-a1-10211513",
+  "created": "2026-10-21T15:21"
+}

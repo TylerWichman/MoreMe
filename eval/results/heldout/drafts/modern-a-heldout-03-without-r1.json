@@ -1,0 +1,42 @@
+{
+  "license_header": "Corpus-derived content (persona modern-a). Contains public sector information licensed under the Open Government Licence v3.0 (https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/). Sources and changes: eval/corpus/PROVENANCE.md",
+  "persona": "modern-a",
+  "task_id": "modern-a-heldout-03",
+  "split": "heldout",
+  "arm": "without",
+  "rep": 1,
+  "mode": "auto",
+  "model_requested": "claude-sonnet-5-5",
+  "position_in_task": 3,
+  "attempt": 2,
+  "prompt": "Write a note to a friend about what your team delivered over the last year and a bit. Aim for about 400 words. Reply with the note only.",
+  "final_message": "Hey [Friend's name],\n\nIt's been a while, so here's a catch-up on what our team has been up to for the past year or so. I've left brackets where you should fill in the real specifics.\n\nThe big one was [headline project]. We started in [month/year] with a small group and a vague brief. We shipped it in [month/year], and [number/result, e.g. X users, Y% faster, Z cost saved] came out of it. I'm proud of how the team handled the messy middle, when the requirements changed twice and we still held the date.\n\nWe also finished [second project]. It wasn't glamorous, but it removed a lot of daily friction. [Describe the before and after in a sentence.] People stopped complaining about it, which is the best review we could ask for.\n\nAlong the way we did some less visible work:\n\n- **Reliability:** We [paid down tech debt, improved monitoring, cut incidents by X]. Nights and weekends have been much quieter.\n- **Process:** We [adopted a new release cadence, started doing retros, tightened code review]. It's made handoffs smoother and surprises rarer.\n- **People:** We [welcomed new teammates, mentored someone into a bigger role, ran a workshop]. The group feels stronger than it did a year ago.\n\nNot everything landed. [Name one thing that slipped or got cut] didn't make it, mostly because [honest reason]. We learned from it, and it's now on the plan for [next quarter].\n\nWhat I'm happiest about isn't any single launch. We built trust: with each other, and with the people who depend on what we make. Looking back, the pace was sustainable, and that's rarer than it should be.\n\nNext up, we're focused on [upcoming priority]. I'm cautiously excited. If it goes the way the last year did, we'll be in good shape.\n\nEnough about me. How have you been? I want to hear what you've been working on, and how [something personal you know about them] turned out. Let's grab a coffee or a call soon. I'll buy, since I owe you for [thing].\n\nTalk soon,\n[Your name]",
+  "draft": "Hey [Friend's name],\n\nIt's been a while, so here's a catch-up on what our team has been up to for the past year or so. I've left brackets where you should fill in the real specifics.\n\nThe big one was [headline project]. We started in [month/year] with a small group and a vague brief. We shipped it in [month/year], and [number/result, e.g. X users, Y% faster, Z cost saved] came out of it. I'm proud of how the team handled the messy middle, when the requirements changed twice and we still held the date.\n\nWe also finished [second project]. It wasn't glamorous, but it removed a lot of daily friction. [Describe the before and after in a sentence.] People stopped complaining about it, which is the best review we could ask for.\n\nAlong the way we did some less visible work:\n\n- **Reliability:** We [paid down tech debt, improved monitoring, cut incidents by X]. Nights and weekends have been much quieter.\n- **Process:** We [adopted a new release cadence, started doing retros, tightened code review]. It's made handoffs smoother and surprises rarer.\n- **People:** We [welcomed new teammates, mentored someone into a bigger role, ran a workshop]. The group feels stronger than it did a year ago.\n\nNot everything landed. [Name one thing that slipped or got cut] didn't make it, mostly because [honest reason]. We learned from it, and it's now on the plan for [next quarter].\n\nWhat I'm happiest about isn't any single launch. We built trust: with each other, and with the people who depend on what we make. Looking back, the pace was sustainable, and that's rarer than it should be.\n\nNext up, we're focused on [upcoming priority]. I'm cautiously excited. If it goes the way the last year did, we'll be in good shape.\n\nEnough about me. How have you been? I want to hear what you've been working on, and how [something personal you know about them] turned out. Let's grab a coffee or a call soon. I'll buy, since I owe you for [thing].\n\nTalk soon,\n[Your name]",
+  "draft_words": 347,
+  "target_words": 400,
+  "valid": true,
+  "invalid_reasons": [],
+  "invalid_history": [
+    {
+      "attempt": 1,
+      "reasons": [
+        "refusal"
+      ]
+    }
+  ],
+  "evidence": {
+    "init_skills": [],
+    "init_plugins": [],
+    "init_mcp_servers": [],
+    "claude_code_version": "2.1.303",
+    "model": "claude-sonnet-5-5",
+    "skill_calls": [],
+    "tools_used": [],
+    "invoked": false,
+    "invocation_detail": "not_applicable",
+    "invariant_violations": [],
+    "problems": []
+  },
+  "log_label": "d-modern-a-heldout-03-without-r1-a2-10210946",
+  "created": "2026-10-21T09:49"
+}

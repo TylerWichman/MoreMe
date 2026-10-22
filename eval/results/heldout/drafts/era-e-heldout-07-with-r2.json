@@ -1,0 +1,41 @@
+{
+  "license_header": "Corpus-derived content (persona era-e). Source texts are in the public domain in the USA. Sources: eval/corpus/PROVENANCE.md",
+  "persona": "era-e",
+  "task_id": "era-e-heldout-07",
+  "split": "heldout",
+  "arm": "with",
+  "rep": 2,
+  "mode": "auto",
+  "model_requested": "claude-sonnet-5-5",
+  "position_in_task": 3,
+  "attempt": 1,
+  "prompt": "Write an email to a colleague about the weather spoiling your garden plans. Aim for about 400 words. Reply with the email only.",
+  "final_message": "Subject: The garden, and the weather's opinion of it\n\nDear Martin,\n\nYou asked on Monday how the garden was coming along. I gave a vague answer, partly because I was late for the meeting and partly because the truthful one required a seat. Here it is, with a chair provided.\n\nThe plan, drawn up in March with some ceremony, was this: peas in by the first of April, lettuce a fortnight after, and the zucchini held in reserve until the soil had warmed to a temperature I would call civil. It was a sound plan. It had the virtue of being written down, which in my experience is the most that can be said for any plan. The weather, however, was not consulted, and has since made its objections known in the plainest possible manner.\n\nIt began raining on the second of April and, as far as I can determine, has not stopped for any purpose other than to take breath. The bed where the peas were to go is now a shallow pond, and a heron (a real one, not a figure of speech) has taken to inspecting it in the mornings. I do not begrudge him; he is the only one getting any use out of the place. The turf, I will admit, is doing splendidly. There is nothing like a fortnight of rain to bring out the best in grass; it is the one crop that has never needed my encouragement, and it seems to resent being thanked for it.\n\nI did try to proceed. On the Saturday I went out with the hoe, which is a very good hoe and deserves better than what I asked of it, and attempted to turn a row. The soil came up in a single slab, like a cake that had been left in the oven by someone who had gone to lunch. I put it back, patted it down, and apologized to it. I cannot say it accepted.\n\nThe forecast now promises a dry spell beginning Thursday week. I have learned to treat forecasts as one treats the promises of a nephew: warmly received, and never relied upon for anything structural. Still, if the ground permits, I will sow the peas in the second week of May, which is late enough that they will think very little of me, and early enough that I may yet get a mess of them before the summer turns on us. The lettuce will follow, and the zucchini, as ever, will arrive in such numbers that I shall be leaving them anonymously on porches by August.\n\nI mention all this only so that you will not take my vague answer for indifference. The garden has been delayed, not abandoned; and a delay of this sort, I am told, is good for the character, though I notice that the person who told me was not the one standing in the pond.\n\nIf you have any spare optimism, or a pair of waders, I would be glad of either. Do tell me how your own beds are faring; I suspect you have the better drainage and the worse attitude.\n\nWalter",
+  "draft": "Subject: The garden, and the weather's opinion of it\n\nDear Martin,\n\nYou asked on Monday how the garden was coming along. I gave a vague answer, partly because I was late for the meeting and partly because the truthful one required a seat. Here it is, with a chair provided.\n\nThe plan, drawn up in March with some ceremony, was this: peas in by the first of April, lettuce a fortnight after, and the zucchini held in reserve until the soil had warmed to a temperature I would call civil. It was a sound plan. It had the virtue of being written down, which in my experience is the most that can be said for any plan. The weather, however, was not consulted, and has since made its objections known in the plainest possible manner.\n\nIt began raining on the second of April and, as far as I can determine, has not stopped for any purpose other than to take breath. The bed where the peas were to go is now a shallow pond, and a heron (a real one, not a figure of speech) has taken to inspecting it in the mornings. I do not begrudge him; he is the only one getting any use out of the place. The turf, I will admit, is doing splendidly. There is nothing like a fortnight of rain to bring out the best in grass; it is the one crop that has never needed my encouragement, and it seems to resent being thanked for it.\n\nI did try to proceed. On the Saturday I went out with the hoe, which is a very good hoe and deserves better than what I asked of it, and attempted to turn a row. The soil came up in a single slab, like a cake that had been left in the oven by someone who had gone to lunch. I put it back, patted it down, and apologized to it. I cannot say it accepted.\n\nThe forecast now promises a dry spell beginning Thursday week. I have learned to treat forecasts as one treats the promises of a nephew: warmly received, and never relied upon for anything structural. Still, if the ground permits, I will sow the peas in the second week of May, which is late enough that they will think very little of me, and early enough that I may yet get a mess of them before the summer turns on us. The lettuce will follow, and the zucchini, as ever, will arrive in such numbers that I shall be leaving them anonymously on porches by August.\n\nI mention all this only so that you will not take my vague answer for indifference. The garden has been delayed, not abandoned; and a delay of this sort, I am told, is good for the character, though I notice that the person who told me was not the one standing in the pond.\n\nIf you have any spare optimism, or a pair of waders, I would be glad of either. Do tell me how your own beds are faring; I suspect you have the better drainage and the worse attitude.\n\nWalter",
+  "draft_words": 525,
+  "target_words": 400,
+  "valid": true,
+  "invalid_reasons": [],
+  "invalid_history": [],
+  "evidence": {
+    "init_skills": [
+      "my-voice"
+    ],
+    "init_plugins": [],
+    "init_mcp_servers": [],
+    "claude_code_version": "2.1.306",
+    "model": "claude-sonnet-5-5",
+    "skill_calls": [
+      "my-voice"
+    ],
+    "tools_used": [
+      "Skill"
+    ],
+    "invoked": true,
+    "invocation_detail": "skill_tool_use_ok",
+    "invariant_violations": [],
+    "problems": []
+  },
+  "log_label": "d-era-e-heldout-07-with-r2-a1-10221000",
+  "created": "2026-10-22T10:07"
+}

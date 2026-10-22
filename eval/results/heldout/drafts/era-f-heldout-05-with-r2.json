@@ -1,0 +1,41 @@
+{
+  "license_header": "Corpus-derived content (persona era-f). Source texts are in the public domain in the USA. Sources: eval/corpus/PROVENANCE.md",
+  "persona": "era-f",
+  "task_id": "era-f-heldout-05",
+  "split": "heldout",
+  "arm": "with",
+  "rep": 2,
+  "mode": "auto",
+  "model_requested": "claude-sonnet-5-5",
+  "position_in_task": 4,
+  "attempt": 1,
+  "prompt": "Write a short blog post about the habit of saving money. Aim for about 400 words. Reply with the post only.",
+  "final_message": "# The Habit of Saving Money\n\nSaving money is not a gift you are born with. It is a habit, and like any habit, you build it one small step at a time. You can start today, no matter how little you have.\n\nMany people wait until they earn more before they begin to save. This is a mistake. If you cannot save a small amount now, you will not save a large amount later. The habit comes first, and the money follows.\n\nStart with a number you will hardly miss. It may be one dollar a day, or five dollars a week. The size matters far less than the fact that you do it every time, without fail.\n\nPay yourself first. When you receive money, set aside your savings before you spend anything else. If you wait until the end of the month to see what is left, you will usually find nothing.\n\nKeep your savings out of easy reach. Put the money in a separate account, and do not carry a card for it. When it is hard to spend, you will think twice before you touch it.\n\nWatch the small things, too. A coffee here and a snack there seem harmless, yet they add up to a surprising sum over a year. You do not need to give up every pleasure. You only need to know where your money goes.\n\nIt also helps to have a reason. Saving with no goal is dull work, and you will give it up. Decide what the money is for: a book, a trip, school fees, or a time when you may be out of work. A clear goal gives you strength on the days you want to spend.\n\nYou will slip now and then. Everyone does. Do not let one bad week convince you that you have failed. Pick up where you stopped and go on. What counts is the long run, not any single day.\n\nThere is another reward that has nothing to do with the amount. When you save, you learn to wait, to plan, and to say no to yourself when it is wise. These lessons will serve you in every part of your life, not only in how you handle money.\n\nSo begin now. Choose a small sum, set it aside today, and do the same tomorrow. In a year you will be glad you started, and you will be stronger for having kept your word to yourself.",
+  "draft": "# The Habit of Saving Money\n\nSaving money is not a gift you are born with. It is a habit, and like any habit, you build it one small step at a time. You can start today, no matter how little you have.\n\nMany people wait until they earn more before they begin to save. This is a mistake. If you cannot save a small amount now, you will not save a large amount later. The habit comes first, and the money follows.\n\nStart with a number you will hardly miss. It may be one dollar a day, or five dollars a week. The size matters far less than the fact that you do it every time, without fail.\n\nPay yourself first. When you receive money, set aside your savings before you spend anything else. If you wait until the end of the month to see what is left, you will usually find nothing.\n\nKeep your savings out of easy reach. Put the money in a separate account, and do not carry a card for it. When it is hard to spend, you will think twice before you touch it.\n\nWatch the small things, too. A coffee here and a snack there seem harmless, yet they add up to a surprising sum over a year. You do not need to give up every pleasure. You only need to know where your money goes.\n\nIt also helps to have a reason. Saving with no goal is dull work, and you will give it up. Decide what the money is for: a book, a trip, school fees, or a time when you may be out of work. A clear goal gives you strength on the days you want to spend.\n\nYou will slip now and then. Everyone does. Do not let one bad week convince you that you have failed. Pick up where you stopped and go on. What counts is the long run, not any single day.\n\nThere is another reward that has nothing to do with the amount. When you save, you learn to wait, to plan, and to say no to yourself when it is wise. These lessons will serve you in every part of your life, not only in how you handle money.\n\nSo begin now. Choose a small sum, set it aside today, and do the same tomorrow. In a year you will be glad you started, and you will be stronger for having kept your word to yourself.",
+  "draft_words": 411,
+  "target_words": 400,
+  "valid": true,
+  "invalid_reasons": [],
+  "invalid_history": [],
+  "evidence": {
+    "init_skills": [
+      "my-voice"
+    ],
+    "init_plugins": [],
+    "init_mcp_servers": [],
+    "claude_code_version": "2.1.306",
+    "model": "claude-sonnet-5-5",
+    "skill_calls": [
+      "my-voice"
+    ],
+    "tools_used": [
+      "Skill"
+    ],
+    "invoked": true,
+    "invocation_detail": "skill_tool_use_ok",
+    "invariant_violations": [],
+    "problems": []
+  },
+  "log_label": "d-era-f-heldout-05-with-r2-a1-10221009",
+  "created": "2026-10-22T10:13"
+}

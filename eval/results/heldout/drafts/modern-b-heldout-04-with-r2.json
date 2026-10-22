@@ -1,0 +1,41 @@
+{
+  "license_header": "Corpus-derived content (persona modern-b). Adapted from works licensed under CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/); this file is licensed under CC BY-SA 4.0. Attribution, sources, and changes: eval/corpus/PROVENANCE.md",
+  "persona": "modern-b",
+  "task_id": "modern-b-heldout-04",
+  "split": "heldout",
+  "arm": "with",
+  "rep": 2,
+  "mode": "auto",
+  "model_requested": "claude-sonnet-5-5",
+  "position_in_task": 4,
+  "attempt": 1,
+  "prompt": "Write an email to a colleague about a business book you read recently and what your team can take from it. Aim for about 400 words. Reply with the email only.",
+  "final_message": "Subject: A book worth your time: Team of Teams\n\nHi Jordan,\n\nI just finished *Team of Teams* by Stanley McChrystal, and I think our group can use it. The main point is simple. Speed and shared information matter more than a perfect plan.\n\nMcChrystal ran a military task force that was losing to a smaller, faster enemy. His team was well trained and well organized, but it was slow. Every decision moved up and down a chain of command. By the time an answer came back, the situation had changed.\n\nHis fix was what he calls \"shared consciousness,\" meaning everyone sees the same information at the same time. In practice, he held a daily briefing open to hundreds of people across units. Nobody had to ask permission to know what was happening.\n\nHe paired that with \"empowered execution.\" That means the people closest to a problem make the call, without waiting for approval. A small team on the frontline can act in hours, while a request sent up the chart takes days.\n\nHere's what I think we can take from it:\n\n- **Share more, earlier.** Our weekly status notes go only to leads. If we post them to the whole group, people can spot conflicts and overlaps on their own.\n- **Push decisions down.** Let's agree on a dollar limit and a scope for what each person can approve alone. Anything under that line doesn't need sign-off.\n- **Plan less, ask for feedback more.** The book argues that complex work can't be fully predicted. You pick a direction, take a step, and tell everyone what you chose. Then you adjust based on what comes back. That's more useful than a long plan that's out of date in a month.\n- **Connect the teams.** McChrystal placed liaisons (people who sit inside another team for a time) so groups stopped working in isolation. We could try this between sales and support, where handoffs often slip.\n\nI don't think we should copy everything. A military task force and our department are different, and some of his examples are extreme. Still, the core habits are small and cheap to test.\n\nCould we set aside 20 minutes at next week's meeting to discuss it? I'd suggest we pick one change and run it for a month. I'd start with the open status notes, since they ask the least of anyone.\n\nI'm happy to lend you my copy. The first three chapters give the clearest case for why the old model fails.\n\nBest,",
+  "draft": "Subject: A book worth your time: Team of Teams\n\nHi Jordan,\n\nI just finished *Team of Teams* by Stanley McChrystal, and I think our group can use it. The main point is simple. Speed and shared information matter more than a perfect plan.\n\nMcChrystal ran a military task force that was losing to a smaller, faster enemy. His team was well trained and well organized, but it was slow. Every decision moved up and down a chain of command. By the time an answer came back, the situation had changed.\n\nHis fix was what he calls \"shared consciousness,\" meaning everyone sees the same information at the same time. In practice, he held a daily briefing open to hundreds of people across units. Nobody had to ask permission to know what was happening.\n\nHe paired that with \"empowered execution.\" That means the people closest to a problem make the call, without waiting for approval. A small team on the frontline can act in hours, while a request sent up the chart takes days.\n\nHere's what I think we can take from it:\n\n- **Share more, earlier.** Our weekly status notes go only to leads. If we post them to the whole group, people can spot conflicts and overlaps on their own.\n- **Push decisions down.** Let's agree on a dollar limit and a scope for what each person can approve alone. Anything under that line doesn't need sign-off.\n- **Plan less, ask for feedback more.** The book argues that complex work can't be fully predicted. You pick a direction, take a step, and tell everyone what you chose. Then you adjust based on what comes back. That's more useful than a long plan that's out of date in a month.\n- **Connect the teams.** McChrystal placed liaisons (people who sit inside another team for a time) so groups stopped working in isolation. We could try this between sales and support, where handoffs often slip.\n\nI don't think we should copy everything. A military task force and our department are different, and some of his examples are extreme. Still, the core habits are small and cheap to test.\n\nCould we set aside 20 minutes at next week's meeting to discuss it? I'd suggest we pick one change and run it for a month. I'd start with the open status notes, since they ask the least of anyone.\n\nI'm happy to lend you my copy. The first three chapters give the clearest case for why the old model fails.\n\nBest,",
+  "draft_words": 413,
+  "target_words": 400,
+  "valid": true,
+  "invalid_reasons": [],
+  "invalid_history": [],
+  "evidence": {
+    "init_skills": [
+      "my-voice"
+    ],
+    "init_plugins": [],
+    "init_mcp_servers": [],
+    "claude_code_version": "2.1.306",
+    "model": "claude-sonnet-5-5",
+    "skill_calls": [
+      "my-voice"
+    ],
+    "tools_used": [
+      "Skill"
+    ],
+    "invoked": true,
+    "invocation_detail": "skill_tool_use_ok",
+    "invariant_violations": [],
+    "problems": []
+  },
+  "log_label": "d-modern-b-heldout-04-with-r2-a1-10211521",
+  "created": "2026-10-21T15:25"
+}

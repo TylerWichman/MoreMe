@@ -1,0 +1,41 @@
+{
+  "license_header": "Corpus-derived content (persona era-d). Source texts are in the public domain in the USA. Sources: eval/corpus/PROVENANCE.md",
+  "persona": "era-d",
+  "task_id": "era-d-heldout-03",
+  "split": "heldout",
+  "arm": "with",
+  "rep": 1,
+  "mode": "auto",
+  "model_requested": "claude-sonnet-5-5",
+  "position_in_task": 1,
+  "attempt": 1,
+  "prompt": "Write a note to a friend about a sleepless night. Aim for about 400 words. Reply with the note only.",
+  "final_message": "Dear Nell,\n\nI'm writing this at ten past four in the morning, which should tell you most of what you need to know. I went to bed at eleven like a sensible person, and by midnight I was lying there composing speeches to people who have never wronged me. Mostly to the man at the bakery, for reasons I can't explain.\n\nIt began with the clock. You know how a clock sounds ordinary all day and then, the minute the house goes quiet, turns into a small hammer? I turned the pillow over, then turned it back, then decided the pillow was the problem and fetched the other one. It was not the pillow. It is never the pillow.\n\nAround one I gave up and went down for tea, and I'll confess I stood in the kitchen in my stocking feet eating cold potatoes straight from the dish -- no plate, no fork, just my fingers like a thief in my own pantry. The cat watched me the whole time with such perfect contempt that I nearly apologized to her. She had the good sense to be asleep on the warm stove, which is more than I can say for anyone else in this house.\n\nThen came the worrying, which arrives in its own order, like guests at a dull party. First the letter I haven't answered (yours, I'm sorry, I know), then the roof over the back bedroom, then whether I said something foolish to Mrs. Harlan on Sunday. I probably did. I generally do. By two I had settled the roof and quarreled with Mrs. Harlan in three different ways, and won all of them, which is the only comfort of a sleepless night.\n\nSomewhere past three it got strangely pleasant, if you can believe it. The wind dropped, and I sat at the window with a shawl over my knees and watched the street lamp make its little yellow circle on the wet stones. Nobody passed. One dog barked, once, as if he'd been asked a question and thought better of it. I felt wide awake and a little silly and oddly fond of everything, even the hammering clock.\n\nNow it's nearly five and of course I'm sleepy at last, with the whole day coming at me and a pile of mending that won't mend itself. I expect I'll be dreadful company by noon. If you call and I yawn in your face, you'll know why, and you may tease me as much as you like.\n\nDo write soon, and tell me you sleep better than I do. Or tell me you don't -- that might be the greater comfort, now I think of it.\n\nLouisa",
+  "draft": "Dear Nell,\n\nI'm writing this at ten past four in the morning, which should tell you most of what you need to know. I went to bed at eleven like a sensible person, and by midnight I was lying there composing speeches to people who have never wronged me. Mostly to the man at the bakery, for reasons I can't explain.\n\nIt began with the clock. You know how a clock sounds ordinary all day and then, the minute the house goes quiet, turns into a small hammer? I turned the pillow over, then turned it back, then decided the pillow was the problem and fetched the other one. It was not the pillow. It is never the pillow.\n\nAround one I gave up and went down for tea, and I'll confess I stood in the kitchen in my stocking feet eating cold potatoes straight from the dish -- no plate, no fork, just my fingers like a thief in my own pantry. The cat watched me the whole time with such perfect contempt that I nearly apologized to her. She had the good sense to be asleep on the warm stove, which is more than I can say for anyone else in this house.\n\nThen came the worrying, which arrives in its own order, like guests at a dull party. First the letter I haven't answered (yours, I'm sorry, I know), then the roof over the back bedroom, then whether I said something foolish to Mrs. Harlan on Sunday. I probably did. I generally do. By two I had settled the roof and quarreled with Mrs. Harlan in three different ways, and won all of them, which is the only comfort of a sleepless night.\n\nSomewhere past three it got strangely pleasant, if you can believe it. The wind dropped, and I sat at the window with a shawl over my knees and watched the street lamp make its little yellow circle on the wet stones. Nobody passed. One dog barked, once, as if he'd been asked a question and thought better of it. I felt wide awake and a little silly and oddly fond of everything, even the hammering clock.\n\nNow it's nearly five and of course I'm sleepy at last, with the whole day coming at me and a pile of mending that won't mend itself. I expect I'll be dreadful company by noon. If you call and I yawn in your face, you'll know why, and you may tease me as much as you like.\n\nDo write soon, and tell me you sleep better than I do. Or tell me you don't -- that might be the greater comfort, now I think of it.\n\nLouisa",
+  "draft_words": 447,
+  "target_words": 400,
+  "valid": true,
+  "invalid_reasons": [],
+  "invalid_history": [],
+  "evidence": {
+    "init_skills": [
+      "my-voice"
+    ],
+    "init_plugins": [],
+    "init_mcp_servers": [],
+    "claude_code_version": "2.1.306",
+    "model": "claude-sonnet-5-5",
+    "skill_calls": [
+      "my-voice"
+    ],
+    "tools_used": [
+      "Skill"
+    ],
+    "invoked": true,
+    "invocation_detail": "skill_tool_use_ok",
+    "invariant_violations": [],
+    "problems": []
+  },
+  "log_label": "d-era-d-heldout-03-with-r1-a1-10220953",
+  "created": "2026-10-22T09:54"
+}

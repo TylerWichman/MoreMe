@@ -1,0 +1,41 @@
+{
+  "license_header": "Corpus-derived content (persona era-f). Source texts are in the public domain in the USA. Sources: eval/corpus/PROVENANCE.md",
+  "persona": "era-f",
+  "task_id": "era-f-heldout-03",
+  "split": "heldout",
+  "arm": "with",
+  "rep": 2,
+  "mode": "auto",
+  "model_requested": "claude-sonnet-5-5",
+  "position_in_task": 4,
+  "attempt": 1,
+  "prompt": "Write a note to a friend about impressions from a trip abroad. Aim for about 400 words. Reply with the note only.",
+  "final_message": "Dear friend,\n\nI am back home now, and I want to tell you about the trip while it is still fresh in my mind. You asked me to write, so here it is.\n\nThe first thing I noticed was the pace of life. People there do not rush. They sit at a table for two hours over a simple meal and talk. I used to think this was wasted time. Now I think they have something to teach us.\n\nThe city itself was older than anything I have seen at home. I walked down narrow stone streets that were worn smooth by hundreds of years of feet. In the mornings the bakers opened their doors, and the smell of bread followed me all the way to the square. I went back to the same bakery every day.\n\nI will be honest with you. The first two days were hard. I could not read the signs, and I got lost more than once. But a shop owner drew me a map on a paper bag, and a schoolboy walked me to the train station because he did not want me to miss it. I will not forget either of them. Strangers were kind to me, and I did not even have the words to thank them well.\n\nWhat stayed with me most was how much I learned by simply paying attention. I watched how people greeted each other, how they cared for their old buildings, and how they took pride in small work done well. A man repairing a wall took an hour to place a single stone, and he would not move on until it was right.\n\nI came home wanting to do my own work with that same care. I think you would feel the same if you went. If you ever get the chance to travel, take it, and go without a tight plan. Leave room to be surprised.\n\nCome by this week and I will show you the photographs. I have more stories than fit in a note, and I would like to hear what you have been doing too.\n\nYour friend,\nSamuel",
+  "draft": "Dear friend,\n\nI am back home now, and I want to tell you about the trip while it is still fresh in my mind. You asked me to write, so here it is.\n\nThe first thing I noticed was the pace of life. People there do not rush. They sit at a table for two hours over a simple meal and talk. I used to think this was wasted time. Now I think they have something to teach us.\n\nThe city itself was older than anything I have seen at home. I walked down narrow stone streets that were worn smooth by hundreds of years of feet. In the mornings the bakers opened their doors, and the smell of bread followed me all the way to the square. I went back to the same bakery every day.\n\nI will be honest with you. The first two days were hard. I could not read the signs, and I got lost more than once. But a shop owner drew me a map on a paper bag, and a schoolboy walked me to the train station because he did not want me to miss it. I will not forget either of them. Strangers were kind to me, and I did not even have the words to thank them well.\n\nWhat stayed with me most was how much I learned by simply paying attention. I watched how people greeted each other, how they cared for their old buildings, and how they took pride in small work done well. A man repairing a wall took an hour to place a single stone, and he would not move on until it was right.\n\nI came home wanting to do my own work with that same care. I think you would feel the same if you went. If you ever get the chance to travel, take it, and go without a tight plan. Leave room to be surprised.\n\nCome by this week and I will show you the photographs. I have more stories than fit in a note, and I would like to hear what you have been doing too.\n\nYour friend,\nSamuel",
+  "draft_words": 356,
+  "target_words": 400,
+  "valid": true,
+  "invalid_reasons": [],
+  "invalid_history": [],
+  "evidence": {
+    "init_skills": [
+      "my-voice"
+    ],
+    "init_plugins": [],
+    "init_mcp_servers": [],
+    "claude_code_version": "2.1.306",
+    "model": "claude-sonnet-5-5",
+    "skill_calls": [
+      "my-voice"
+    ],
+    "tools_used": [
+      "Skill"
+    ],
+    "invoked": true,
+    "invocation_detail": "skill_tool_use_ok",
+    "invariant_violations": [],
+    "problems": []
+  },
+  "log_label": "d-era-f-heldout-03-with-r2-a1-10221009",
+  "created": "2026-10-22T10:11"
+}

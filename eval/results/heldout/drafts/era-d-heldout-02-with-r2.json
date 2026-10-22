@@ -1,0 +1,41 @@
+{
+  "license_header": "Corpus-derived content (persona era-d). Source texts are in the public domain in the USA. Sources: eval/corpus/PROVENANCE.md",
+  "persona": "era-d",
+  "task_id": "era-d-heldout-02",
+  "split": "heldout",
+  "arm": "with",
+  "rep": 2,
+  "mode": "auto",
+  "model_requested": "claude-sonnet-5-5",
+  "position_in_task": 5,
+  "attempt": 1,
+  "prompt": "Write a short blog post about a visit from friends. Aim for about 400 words. Reply with the post only.",
+  "final_message": "Our friends came to stay last weekend, and I'm still finding crumbs in odd places -- the couch, my left shoe, a drawer I'm fairly sure nobody opened. They were due Friday at six, which in their language means a quarter to nine, so I'd already eaten half the cheese by the time the car pulled in. (I'm not sorry. It was a very good cheese, and somebody had to test it.) Miriam came in first, talking before she'd even shut the car door, and Jimmy followed with a bag of oranges and an apology for the state of the back seat, which I'll say was fully deserved. We stood around the kitchen for an hour, nobody sitting, everyone holding a glass of something and interrupting everybody else, and I thought, well, this is exactly what I wanted, though I'd have liked it with fewer elbows. Saturday we meant to go walking. We did go, technically, as far as the end of the lane, where a dog took a great liking to Jimmy and followed us home, and then it rained, and then it was decided that rain was an excellent reason to play cards instead. Such cards! Such quarrels! Mr. Pruitt from next door heard the shouting through the wall and came over to ask if anyone was hurt, and Miriam, who cheats shamelessly and knows I know it, offered him a seat and a hand of whist before he could say no. He stayed three hours. He won, too, which Miriam is taking very hard, but hush -- it isn't kind to laugh at a lady who lost to a man of seventy-one in her own best cardigan. I will say I was a little worried on Saturday night. Jimmy went quiet at supper, the way he does, and I couldn't tell if he was tired or low or just chewing, and I never did find out, because by morning he was cheerful again and burning the toast with great energy. Sunday was slow and rather untidy. We ate everything left in the house, including some soup I'd forgotten I made, and talked about nothing in particular -- who's married, who's moved, whether the old schoolhouse is truly being torn down or whether that's just one of those rumors that goes round every spring. Somebody cried a little over a photograph, and it may have been me. They left after tea, with the dog still looking hopefully at the gate. The house is very quiet now, and I've put the oranges in a bowl where I'll see them. I keep thinking I ought to wash the cards, though I can't think why, and there is still the matter of the shoe.\n\nLouisa",
+  "draft": "Our friends came to stay last weekend, and I'm still finding crumbs in odd places -- the couch, my left shoe, a drawer I'm fairly sure nobody opened. They were due Friday at six, which in their language means a quarter to nine, so I'd already eaten half the cheese by the time the car pulled in. (I'm not sorry. It was a very good cheese, and somebody had to test it.) Miriam came in first, talking before she'd even shut the car door, and Jimmy followed with a bag of oranges and an apology for the state of the back seat, which I'll say was fully deserved. We stood around the kitchen for an hour, nobody sitting, everyone holding a glass of something and interrupting everybody else, and I thought, well, this is exactly what I wanted, though I'd have liked it with fewer elbows. Saturday we meant to go walking. We did go, technically, as far as the end of the lane, where a dog took a great liking to Jimmy and followed us home, and then it rained, and then it was decided that rain was an excellent reason to play cards instead. Such cards! Such quarrels! Mr. Pruitt from next door heard the shouting through the wall and came over to ask if anyone was hurt, and Miriam, who cheats shamelessly and knows I know it, offered him a seat and a hand of whist before he could say no. He stayed three hours. He won, too, which Miriam is taking very hard, but hush -- it isn't kind to laugh at a lady who lost to a man of seventy-one in her own best cardigan. I will say I was a little worried on Saturday night. Jimmy went quiet at supper, the way he does, and I couldn't tell if he was tired or low or just chewing, and I never did find out, because by morning he was cheerful again and burning the toast with great energy. Sunday was slow and rather untidy. We ate everything left in the house, including some soup I'd forgotten I made, and talked about nothing in particular -- who's married, who's moved, whether the old schoolhouse is truly being torn down or whether that's just one of those rumors that goes round every spring. Somebody cried a little over a photograph, and it may have been me. They left after tea, with the dog still looking hopefully at the gate. The house is very quiet now, and I've put the oranges in a bowl where I'll see them. I keep thinking I ought to wash the cards, though I can't think why, and there is still the matter of the shoe.\n\nLouisa",
+  "draft_words": 452,
+  "target_words": 400,
+  "valid": true,
+  "invalid_reasons": [],
+  "invalid_history": [],
+  "evidence": {
+    "init_skills": [
+      "my-voice"
+    ],
+    "init_plugins": [],
+    "init_mcp_servers": [],
+    "claude_code_version": "2.1.306",
+    "model": "claude-sonnet-5-5",
+    "skill_calls": [
+      "my-voice"
+    ],
+    "tools_used": [
+      "Skill"
+    ],
+    "invoked": true,
+    "invocation_detail": "skill_tool_use_ok",
+    "invariant_violations": [],
+    "problems": []
+  },
+  "log_label": "d-era-d-heldout-02-with-r2-a1-10220953",
+  "created": "2026-10-22T09:54"
+}

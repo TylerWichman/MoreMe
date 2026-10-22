@@ -1,0 +1,41 @@
+{
+  "license_header": "Corpus-derived content (persona era-c). Source texts are in the public domain in the USA. Sources: eval/corpus/PROVENANCE.md",
+  "persona": "era-c",
+  "task_id": "era-c-heldout-02",
+  "split": "heldout",
+  "arm": "with",
+  "rep": 2,
+  "mode": "auto",
+  "model_requested": "claude-sonnet-5-5",
+  "position_in_task": 1,
+  "attempt": 1,
+  "prompt": "Write a short blog post about the weather and how it has changed your plans. Aim for about 400 words. Reply with the post only.",
+  "final_message": "**The Rain Has Other Plans**\n\nI had meant to spend this week putting the last of the garden to bed, but the weather has had other ideas. It started raining on Sunday night and hasn't really stopped, so the rake is still leaning against the porch where I left it.\n\nI won't pretend I'm not a little cross about it. I had the whole week laid out, with the beds cleared on Monday and the bulbs in the ground by Wednesday. By Tuesday morning the yard looked like a pond with a few cabbages sticking out of it.\n\nSo I've changed my plans, which is something I seem to do every October. The bulbs will wait, and I'll tell myself the tulips don't mind. They've waited through worse than a wet week, and I'm sure they'll come up all the same in the spring.\n\nIn the meantime, I've been catching up on the indoor jobs I put off all summer. I finally sorted the pantry, and I found three jars of plum jam from two years ago, which I'm calling vintage. I also mended the hem on my good winter coat, since the cold will be here before I know it.\n\nI'd also planned to drive over and see my sister on Thursday. The road out to her place floods in the low spot past the mill, and I'm not fond of the idea of sitting in a puddle with the engine off. I've written her a long letter instead, and I told her the visit will keep until the water goes down. She'll probably say she expected as much, because she knows me and she knows that road.\n\nI will say there's something to be said for being made to slow down. If the sun had been out, I'd have gone full tilt all week and never once sat by the window with a cup of tea watching the rain run off the roof. It's a pretty sound when you finally stop to listen to it, and I'd forgotten how much I like it.\n\nThe forecast says it should clear by the weekend, though I've learned not to hold the weatherman to his word. If it does, I'll be out there with my boots and my trowel first thing Saturday, making up for lost time. If it doesn't, I suppose I'll find another jar of jam to open.\n\nYou may be stuck inside this week yourself, and if so, I hope you've got a good book and a warm blanket. Let the weather change your plans a little. It will anyway.\n\nHattie",
+  "draft": "**The Rain Has Other Plans**\n\nI had meant to spend this week putting the last of the garden to bed, but the weather has had other ideas. It started raining on Sunday night and hasn't really stopped, so the rake is still leaning against the porch where I left it.\n\nI won't pretend I'm not a little cross about it. I had the whole week laid out, with the beds cleared on Monday and the bulbs in the ground by Wednesday. By Tuesday morning the yard looked like a pond with a few cabbages sticking out of it.\n\nSo I've changed my plans, which is something I seem to do every October. The bulbs will wait, and I'll tell myself the tulips don't mind. They've waited through worse than a wet week, and I'm sure they'll come up all the same in the spring.\n\nIn the meantime, I've been catching up on the indoor jobs I put off all summer. I finally sorted the pantry, and I found three jars of plum jam from two years ago, which I'm calling vintage. I also mended the hem on my good winter coat, since the cold will be here before I know it.\n\nI'd also planned to drive over and see my sister on Thursday. The road out to her place floods in the low spot past the mill, and I'm not fond of the idea of sitting in a puddle with the engine off. I've written her a long letter instead, and I told her the visit will keep until the water goes down. She'll probably say she expected as much, because she knows me and she knows that road.\n\nI will say there's something to be said for being made to slow down. If the sun had been out, I'd have gone full tilt all week and never once sat by the window with a cup of tea watching the rain run off the roof. It's a pretty sound when you finally stop to listen to it, and I'd forgotten how much I like it.\n\nThe forecast says it should clear by the weekend, though I've learned not to hold the weatherman to his word. If it does, I'll be out there with my boots and my trowel first thing Saturday, making up for lost time. If it doesn't, I suppose I'll find another jar of jam to open.\n\nYou may be stuck inside this week yourself, and if so, I hope you've got a good book and a warm blanket. Let the weather change your plans a little. It will anyway.\n\nHattie",
+  "draft_words": 433,
+  "target_words": 400,
+  "valid": true,
+  "invalid_reasons": [],
+  "invalid_history": [],
+  "evidence": {
+    "init_skills": [
+      "my-voice"
+    ],
+    "init_plugins": [],
+    "init_mcp_servers": [],
+    "claude_code_version": "2.1.306",
+    "model": "claude-sonnet-5-5",
+    "skill_calls": [
+      "my-voice"
+    ],
+    "tools_used": [
+      "Skill"
+    ],
+    "invoked": true,
+    "invocation_detail": "skill_tool_use_ok",
+    "invariant_violations": [],
+    "problems": []
+  },
+  "log_label": "d-era-c-heldout-02-with-r2-a1-10211513",
+  "created": "2026-10-21T15:14"
+}

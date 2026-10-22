@@ -1,0 +1,41 @@
+{
+  "license_header": "Corpus-derived content (persona era-c). Source texts are in the public domain in the USA. Sources: eval/corpus/PROVENANCE.md",
+  "persona": "era-c",
+  "task_id": "era-c-heldout-03",
+  "split": "heldout",
+  "arm": "with",
+  "rep": 2,
+  "mode": "auto",
+  "model_requested": "claude-sonnet-5-5",
+  "position_in_task": 2,
+  "attempt": 1,
+  "prompt": "Write a note to a friend about a funny thing that happened with a neighbor. Aim for about 400 words. Reply with the note only.",
+  "final_message": "Dear friend,\n\nI have a small story for you, and I'm still laughing about it, so you must forgive me if it comes out crooked.\n\nLast Tuesday morning I opened the door and found a peach pie sitting on my porch step, still faintly warm, with a clean cloth tucked over the top. There was no note, and I looked up and down the road and saw nobody. I decided right then that some kind soul had remembered I'd been under the weather, and I carried it in like a prize.\n\nI cut a slice for my breakfast, which I admit is not how a sensible woman starts her day. By noon I had cut another, and by supper I had told myself that a pie that size could not possibly keep, and that it would be a sin to let good peaches go to waste. By evening there was about half of it left, and I felt rather well looked after.\n\nThen Mrs. Dunning from the next farm over came walking up the lane with her hat pulled low and a very careful look on her face. She stood on my step for a good while talking about the weather and her hens and her sister's knee. At last she said she had set a pie down by mistake at the wrong gate, and that it had been meant for the new preacher, who was coming to supper at her place that very night.\n\nI said nothing for a moment, because there was nothing sensible to say. Then I told her the pie had been very good, and that I was sorry to report the preacher would be getting a smaller share than she planned.\n\nShe looked at me, and I looked at her, and then she began to laugh so hard she had to hold on to my porch rail. I have never seen a woman so red in the face. She said she had walked a mile and a half rehearsing how to ask, and had worried the whole way that I'd be offended.\n\nOf course I wasn't. I gave her the rest of the pie on my best plate, and she went home and cut it so the missing part didn't show, and told the preacher it was a family way of serving. I hear he had two helpings and asked for the recipe.\n\nI plan to bake her one on Saturday, a whole pie, and I intend to put my name on it.\n\nWrite soon and tell me what your neighbors are up to, for I'm sure it can't be as good as mine.\n\nHattie",
+  "draft": "Dear friend,\n\nI have a small story for you, and I'm still laughing about it, so you must forgive me if it comes out crooked.\n\nLast Tuesday morning I opened the door and found a peach pie sitting on my porch step, still faintly warm, with a clean cloth tucked over the top. There was no note, and I looked up and down the road and saw nobody. I decided right then that some kind soul had remembered I'd been under the weather, and I carried it in like a prize.\n\nI cut a slice for my breakfast, which I admit is not how a sensible woman starts her day. By noon I had cut another, and by supper I had told myself that a pie that size could not possibly keep, and that it would be a sin to let good peaches go to waste. By evening there was about half of it left, and I felt rather well looked after.\n\nThen Mrs. Dunning from the next farm over came walking up the lane with her hat pulled low and a very careful look on her face. She stood on my step for a good while talking about the weather and her hens and her sister's knee. At last she said she had set a pie down by mistake at the wrong gate, and that it had been meant for the new preacher, who was coming to supper at her place that very night.\n\nI said nothing for a moment, because there was nothing sensible to say. Then I told her the pie had been very good, and that I was sorry to report the preacher would be getting a smaller share than she planned.\n\nShe looked at me, and I looked at her, and then she began to laugh so hard she had to hold on to my porch rail. I have never seen a woman so red in the face. She said she had walked a mile and a half rehearsing how to ask, and had worried the whole way that I'd be offended.\n\nOf course I wasn't. I gave her the rest of the pie on my best plate, and she went home and cut it so the missing part didn't show, and told the preacher it was a family way of serving. I hear he had two helpings and asked for the recipe.\n\nI plan to bake her one on Saturday, a whole pie, and I intend to put my name on it.\n\nWrite soon and tell me what your neighbors are up to, for I'm sure it can't be as good as mine.\n\nHattie",
+  "draft_words": 440,
+  "target_words": 400,
+  "valid": true,
+  "invalid_reasons": [],
+  "invalid_history": [],
+  "evidence": {
+    "init_skills": [
+      "my-voice"
+    ],
+    "init_plugins": [],
+    "init_mcp_servers": [],
+    "claude_code_version": "2.1.306",
+    "model": "claude-sonnet-5-5",
+    "skill_calls": [
+      "my-voice"
+    ],
+    "tools_used": [
+      "Skill"
+    ],
+    "invoked": true,
+    "invocation_detail": "skill_tool_use_ok",
+    "invariant_violations": [],
+    "problems": []
+  },
+  "log_label": "d-era-c-heldout-03-with-r2-a1-10211513",
+  "created": "2026-10-21T15:16"
+}

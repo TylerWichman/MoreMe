@@ -1,0 +1,41 @@
+{
+  "license_header": "Corpus-derived content (persona era-e). Source texts are in the public domain in the USA. Sources: eval/corpus/PROVENANCE.md",
+  "persona": "era-e",
+  "task_id": "era-e-heldout-08",
+  "split": "heldout",
+  "arm": "with",
+  "rep": 2,
+  "mode": "auto",
+  "model_requested": "claude-sonnet-5-5",
+  "position_in_task": 5,
+  "attempt": 1,
+  "prompt": "Write a short blog post about why everyone should grow something. Aim for about 400 words. Reply with the post only.",
+  "final_message": "**Why Everyone Should Grow Something**\n\nI hold that every person ought to grow something, if only to learn how little the world consults us. A man may command a department, a household, or a very large dog, and still find that a bean will come up in its own time and not a day sooner. This is good for him. It is also good for the bean, which has had enough pressure already.\n\nThe objection is always the same: there is no room. I have heard it from people with a perfectly serviceable windowsill. A pot of basil asks for very little: a sunny ledge, a drink now and then, and a measure of neglect that most of us can manage without effort. If the basil dies, one has lost the price of a sandwich and gained a useful humility. If it lives, one has fresh basil, and the neighbors will treat one with a new and wary respect.\n\nThere is a particular pleasure in eating what one has raised oneself. It is a pleasure out of all proportion to the thing, even if the thing be only a radish. The grocer's radish is perfectly good; I have no quarrel with it. But it arrives with no history, whereas mine arrives with a record of every morning I stood over it, doubtful, and every evening I pretended I had not. One cannot buy that sort of acquaintance, though I understand several companies are working on it.\n\nGrowing something also teaches patience, which is a virtue we praise highly and practice rarely. Lettuce is a fine instructor here; it will not be hurried, and it bolts the moment one's attention wanders, much like a committee. Peas are sterner still. One plants them in the cold, in ground that looks entirely uninterested, and waits. Then one day there are peas, and the whole business seems, for an hour or so, to have been the shrewdest bargain of one's life.\n\nI would add, as a practical matter, that a plant is the one companion that never offers an opinion on one's politics. It asks for water; it receives water; it gets on with things. In a season given to a good deal of talk, I find this restful.\n\nSo I recommend it to all comers: the apartment dweller, the busy, the unconvinced, and the person who has killed a cactus (it can be done; I have seen it). Start with one pot, one packet of seed, and one reasonable expectation, which is that something will go wrong. Something generally does. But a tomato on the sill in August is a small monument to stubbornness, and I know of no cheaper way to put up a monument.\n\nPlant something this week. The ground will not mind, and the rest of us will be glad to hear about the results; I ask only that you spare us the ones that fail.",
+  "draft": "**Why Everyone Should Grow Something**\n\nI hold that every person ought to grow something, if only to learn how little the world consults us. A man may command a department, a household, or a very large dog, and still find that a bean will come up in its own time and not a day sooner. This is good for him. It is also good for the bean, which has had enough pressure already.\n\nThe objection is always the same: there is no room. I have heard it from people with a perfectly serviceable windowsill. A pot of basil asks for very little: a sunny ledge, a drink now and then, and a measure of neglect that most of us can manage without effort. If the basil dies, one has lost the price of a sandwich and gained a useful humility. If it lives, one has fresh basil, and the neighbors will treat one with a new and wary respect.\n\nThere is a particular pleasure in eating what one has raised oneself. It is a pleasure out of all proportion to the thing, even if the thing be only a radish. The grocer's radish is perfectly good; I have no quarrel with it. But it arrives with no history, whereas mine arrives with a record of every morning I stood over it, doubtful, and every evening I pretended I had not. One cannot buy that sort of acquaintance, though I understand several companies are working on it.\n\nGrowing something also teaches patience, which is a virtue we praise highly and practice rarely. Lettuce is a fine instructor here; it will not be hurried, and it bolts the moment one's attention wanders, much like a committee. Peas are sterner still. One plants them in the cold, in ground that looks entirely uninterested, and waits. Then one day there are peas, and the whole business seems, for an hour or so, to have been the shrewdest bargain of one's life.\n\nI would add, as a practical matter, that a plant is the one companion that never offers an opinion on one's politics. It asks for water; it receives water; it gets on with things. In a season given to a good deal of talk, I find this restful.\n\nSo I recommend it to all comers: the apartment dweller, the busy, the unconvinced, and the person who has killed a cactus (it can be done; I have seen it). Start with one pot, one packet of seed, and one reasonable expectation, which is that something will go wrong. Something generally does. But a tomato on the sill in August is a small monument to stubbornness, and I know of no cheaper way to put up a monument.\n\nPlant something this week. The ground will not mind, and the rest of us will be glad to hear about the results; I ask only that you spare us the ones that fail.",
+  "draft_words": 486,
+  "target_words": 400,
+  "valid": true,
+  "invalid_reasons": [],
+  "invalid_history": [],
+  "evidence": {
+    "init_skills": [
+      "my-voice"
+    ],
+    "init_plugins": [],
+    "init_mcp_servers": [],
+    "claude_code_version": "2.1.306",
+    "model": "claude-sonnet-5-5",
+    "skill_calls": [
+      "my-voice"
+    ],
+    "tools_used": [
+      "Skill"
+    ],
+    "invoked": true,
+    "invocation_detail": "skill_tool_use_ok",
+    "invariant_violations": [],
+    "problems": []
+  },
+  "log_label": "d-era-e-heldout-08-with-r2-a1-10221000",
+  "created": "2026-10-22T10:09"
+}

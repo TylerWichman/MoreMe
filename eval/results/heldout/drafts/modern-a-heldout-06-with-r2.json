@@ -1,0 +1,41 @@
+{
+  "license_header": "Corpus-derived content (persona modern-a). Contains public sector information licensed under the Open Government Licence v3.0 (https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/). Sources and changes: eval/corpus/PROVENANCE.md",
+  "persona": "modern-a",
+  "task_id": "modern-a-heldout-06",
+  "split": "heldout",
+  "arm": "with",
+  "rep": 2,
+  "mode": "auto",
+  "model_requested": "claude-sonnet-5-5",
+  "position_in_task": 4,
+  "attempt": 1,
+  "prompt": "Write a note to a friend about lessons from rebuilding a service people depend on every day. Aim for about 400 words. Reply with the note only.",
+  "final_message": "I've been meaning to tell you what we learned from rebuilding the service. It's the one people use every day, so the stakes were high. Here's what I'd pass on.\n\nStart with what people actually do. We spent the first weeks watching real users, not reading our own requirements. The tasks we thought mattered most weren't always the ones people cared about.\n\nDon't switch it all off at once. We never did a big launch day. We moved small groups of users across, watched what broke, and fixed it before the next group. It felt slow. It was much safer.\n\nKeep the old service running longer than you'd like. People will find edge cases you never knew existed. We'd have been in real trouble without a way back.\n\nRequirements will change. Budgets will change. The thing we started building wasn't the thing we ended up with, and that's fine. Short cycles let us adjust without drama.\n\nFewer meetings, more releases. We cut a lot of the approval steps and shipped small changes most days. Each one was easy to understand and easy to undo. Big releases hide big risks.\n\nLook after the people on call. When a service matters this much, someone is always holding the pager. We made the alerts quieter and the runbooks clearer. That did more for the team than any new tool.\n\nTalk to users while you're changing things. We posted plain updates saying what was changing, what it meant for them, and why. Nobody wants a surprise in a service they rely on. Most people were happy to wait if they knew what was coming.\n\nMeasure the boring things. Speed, errors, and how many people got stuck. We put the numbers where everyone could see them, and it kept us honest. When something got worse, we knew within hours.\n\nBe careful about rebuilding everything. We were tempted to redo parts that worked fine. In the end we left some of the old pieces alone, and nobody noticed. Fix what hurts people first.\n\nThe last lesson is about the team. We're proud of this work, but it only held together because people trusted each other to say when something wasn't right. I'd protect that above any plan.\n\nIf you're about to do something similar, I'm happy to talk it through. I'd rather you skipped a few of our mistakes.\n\nGraham",
+  "draft": "I've been meaning to tell you what we learned from rebuilding the service. It's the one people use every day, so the stakes were high. Here's what I'd pass on.\n\nStart with what people actually do. We spent the first weeks watching real users, not reading our own requirements. The tasks we thought mattered most weren't always the ones people cared about.\n\nDon't switch it all off at once. We never did a big launch day. We moved small groups of users across, watched what broke, and fixed it before the next group. It felt slow. It was much safer.\n\nKeep the old service running longer than you'd like. People will find edge cases you never knew existed. We'd have been in real trouble without a way back.\n\nRequirements will change. Budgets will change. The thing we started building wasn't the thing we ended up with, and that's fine. Short cycles let us adjust without drama.\n\nFewer meetings, more releases. We cut a lot of the approval steps and shipped small changes most days. Each one was easy to understand and easy to undo. Big releases hide big risks.\n\nLook after the people on call. When a service matters this much, someone is always holding the pager. We made the alerts quieter and the runbooks clearer. That did more for the team than any new tool.\n\nTalk to users while you're changing things. We posted plain updates saying what was changing, what it meant for them, and why. Nobody wants a surprise in a service they rely on. Most people were happy to wait if they knew what was coming.\n\nMeasure the boring things. Speed, errors, and how many people got stuck. We put the numbers where everyone could see them, and it kept us honest. When something got worse, we knew within hours.\n\nBe careful about rebuilding everything. We were tempted to redo parts that worked fine. In the end we left some of the old pieces alone, and nobody noticed. Fix what hurts people first.\n\nThe last lesson is about the team. We're proud of this work, but it only held together because people trusted each other to say when something wasn't right. I'd protect that above any plan.\n\nIf you're about to do something similar, I'm happy to talk it through. I'd rather you skipped a few of our mistakes.\n\nGraham",
+  "draft_words": 394,
+  "target_words": 400,
+  "valid": true,
+  "invalid_reasons": [],
+  "invalid_history": [],
+  "evidence": {
+    "init_skills": [
+      "my-voice"
+    ],
+    "init_plugins": [],
+    "init_mcp_servers": [],
+    "claude_code_version": "2.1.303",
+    "model": "claude-sonnet-5-5",
+    "skill_calls": [
+      "my-voice"
+    ],
+    "tools_used": [
+      "Skill"
+    ],
+    "invoked": true,
+    "invocation_detail": "skill_tool_use_ok",
+    "invariant_violations": [],
+    "problems": []
+  },
+  "log_label": "d-modern-a-heldout-06-with-r2-a1-10210946",
+  "created": "2026-10-21T09:52"
+}

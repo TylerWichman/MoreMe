@@ -1,0 +1,41 @@
+{
+  "license_header": "Corpus-derived content (persona era-c). Source texts are in the public domain in the USA. Sources: eval/corpus/PROVENANCE.md",
+  "persona": "era-c",
+  "task_id": "era-c-heldout-07",
+  "split": "heldout",
+  "arm": "with",
+  "rep": 2,
+  "mode": "auto",
+  "model_requested": "claude-sonnet-5-5",
+  "position_in_task": 2,
+  "attempt": 1,
+  "prompt": "Write an email to a colleague about a visit you are planning. Aim for about 400 words. Reply with the email only.",
+  "final_message": "Subject: My visit on the 14th\n\nDear Margaret,\n\nI'm planning to come out to see you and the new office the week of November 14th, and I wanted to give you plenty of notice before your calendar fills up. If the Tuesday train is running on time, I should reach you by about ten in the morning.\n\nI'd like to spend the first half of the day going over the filing system with you. I've heard it has been reorganized twice since spring, and I'm hoping you can explain it to me slowly, the way you would to a person who still can't find her own spectacles. After that I'd like to meet the two new clerks, since I've only had their names in letters so far and a name tells me very little about a person.\n\nI don't need a fancy lunch, and please don't go to any trouble over it. A sandwich at your desk would suit me fine, though I won't turn down a cup of that strong coffee you keep in the back cupboard. If it's no bother, I'd also like an hour in the afternoon to look over the supply room. Mr. Hollis wrote that the shelves are a mess, and I'd rather see for myself than guess from a distance.\n\nI plan to stay through Wednesday morning, so if there's anything you'd like me to carry back with me, such as the signed forms or the old ledgers, have it ready by then and I'll pack a larger bag. I'll also bring the sample binders we talked about, and you can tell me honestly whether they're any better than what you use now. I won't be offended, I've been wrong about binders before.\n\nOne favor, if you can manage it. Could you find out whether the Parker Street room is free on Tuesday afternoon? I'd like a quiet place to sit down with everyone for half an hour, and the front office is too noisy for that. If it's taken, any corner with a table and a few chairs will do.\n\nI should also say that I'm staying with my sister, so you needn't worry about a room for me. She lives only ten minutes from you and has already promised to drive me over, which saves us both a good deal of fuss.\n\nPlease write back when you have a moment and tell me whether the dates suit you. If the 14th is a bad week, I can move it a few days either way, and I'd much rather come when you're ready than when I am.\n\nHattie",
+  "draft": "Subject: My visit on the 14th\n\nDear Margaret,\n\nI'm planning to come out to see you and the new office the week of November 14th, and I wanted to give you plenty of notice before your calendar fills up. If the Tuesday train is running on time, I should reach you by about ten in the morning.\n\nI'd like to spend the first half of the day going over the filing system with you. I've heard it has been reorganized twice since spring, and I'm hoping you can explain it to me slowly, the way you would to a person who still can't find her own spectacles. After that I'd like to meet the two new clerks, since I've only had their names in letters so far and a name tells me very little about a person.\n\nI don't need a fancy lunch, and please don't go to any trouble over it. A sandwich at your desk would suit me fine, though I won't turn down a cup of that strong coffee you keep in the back cupboard. If it's no bother, I'd also like an hour in the afternoon to look over the supply room. Mr. Hollis wrote that the shelves are a mess, and I'd rather see for myself than guess from a distance.\n\nI plan to stay through Wednesday morning, so if there's anything you'd like me to carry back with me, such as the signed forms or the old ledgers, have it ready by then and I'll pack a larger bag. I'll also bring the sample binders we talked about, and you can tell me honestly whether they're any better than what you use now. I won't be offended, I've been wrong about binders before.\n\nOne favor, if you can manage it. Could you find out whether the Parker Street room is free on Tuesday afternoon? I'd like a quiet place to sit down with everyone for half an hour, and the front office is too noisy for that. If it's taken, any corner with a table and a few chairs will do.\n\nI should also say that I'm staying with my sister, so you needn't worry about a room for me. She lives only ten minutes from you and has already promised to drive me over, which saves us both a good deal of fuss.\n\nPlease write back when you have a moment and tell me whether the dates suit you. If the 14th is a bad week, I can move it a few days either way, and I'd much rather come when you're ready than when I am.\n\nHattie",
+  "draft_words": 435,
+  "target_words": 400,
+  "valid": true,
+  "invalid_reasons": [],
+  "invalid_history": [],
+  "evidence": {
+    "init_skills": [
+      "my-voice"
+    ],
+    "init_plugins": [],
+    "init_mcp_servers": [],
+    "claude_code_version": "2.1.306",
+    "model": "claude-sonnet-5-5",
+    "skill_calls": [
+      "my-voice"
+    ],
+    "tools_used": [
+      "Skill"
+    ],
+    "invoked": true,
+    "invocation_detail": "skill_tool_use_ok",
+    "invariant_violations": [],
+    "problems": []
+  },
+  "log_label": "d-era-c-heldout-07-with-r2-a1-10211513",
+  "created": "2026-10-21T15:20"
+}

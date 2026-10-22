@@ -1,0 +1,41 @@
+{
+  "license_header": "Corpus-derived content (persona era-e). Source texts are in the public domain in the USA. Sources: eval/corpus/PROVENANCE.md",
+  "persona": "era-e",
+  "task_id": "era-e-heldout-06",
+  "split": "heldout",
+  "arm": "with",
+  "rep": 1,
+  "mode": "auto",
+  "model_requested": "claude-sonnet-5-5",
+  "position_in_task": 2,
+  "attempt": 1,
+  "prompt": "Write a note to a friend about garden tools that never seem to work. Aim for about 400 words. Reply with the note only.",
+  "final_message": "Dear Harold,\n\nYou asked whether I had found a trowel worth owning. I have not; I have found a drawer of them, which is a different thing entirely. Each was bought in the spring with confidence and retired by midsummer, bent at the neck like a defeated clerk.\n\nThe hose is the chief offender. It has a nozzle with seven settings, and I have used all seven in the hope that one of them would produce water in a useful shape. Two produce a mist suited to orchids, which I do not grow. One produces a jet that has removed a good deal of mulch and, last Tuesday, my hat. The remaining settings leak at the joint, so that I water my boots with great thoroughness while the zucchini go thirsty.\n\nThen there are the pruning shears, sold to me as \"self-sharpening.\" I do not know who sharpens them, but it is not the shears. They chew a raspberry cane rather than cut it, and the cane, to its credit, bears this with more dignity than I do. I have taken to using the kitchen scissors, and my wife has taken to noticing.\n\nI should say a word for the hoe, which is the single tool I own that does what its name promises; it has never failed me, and for that reason I distrust it a little. A thing that works every time belongs in a better class of household than mine.\n\nThe wheelbarrow deserves mention as well. It has one wheel, which is generally considered sufficient, and that wheel has a flat tire that I have patched, inflated, and finally addressed in strong language. It holds air for about the length of a good sandwich. I load it half full as a precaution, so that when it tips (and it will) the disaster is of a modest size, like a minor border dispute and not a war.\n\nI have concluded that garden tools are made for gardens that exist only in the catalogue, where the soil is the color of chocolate cake and nothing is ever rooted under a stone. Mine has stones; it has clay; it has a rhubarb plant that predates the house and resents correction. Against such opposition a trowel does what it can, which is to bend.\n\nCome by on Saturday if you like. Bring your own spade, and do not tell me about it if it works; I could not bear it.\n\nWalter",
+  "draft": "Dear Harold,\n\nYou asked whether I had found a trowel worth owning. I have not; I have found a drawer of them, which is a different thing entirely. Each was bought in the spring with confidence and retired by midsummer, bent at the neck like a defeated clerk.\n\nThe hose is the chief offender. It has a nozzle with seven settings, and I have used all seven in the hope that one of them would produce water in a useful shape. Two produce a mist suited to orchids, which I do not grow. One produces a jet that has removed a good deal of mulch and, last Tuesday, my hat. The remaining settings leak at the joint, so that I water my boots with great thoroughness while the zucchini go thirsty.\n\nThen there are the pruning shears, sold to me as \"self-sharpening.\" I do not know who sharpens them, but it is not the shears. They chew a raspberry cane rather than cut it, and the cane, to its credit, bears this with more dignity than I do. I have taken to using the kitchen scissors, and my wife has taken to noticing.\n\nI should say a word for the hoe, which is the single tool I own that does what its name promises; it has never failed me, and for that reason I distrust it a little. A thing that works every time belongs in a better class of household than mine.\n\nThe wheelbarrow deserves mention as well. It has one wheel, which is generally considered sufficient, and that wheel has a flat tire that I have patched, inflated, and finally addressed in strong language. It holds air for about the length of a good sandwich. I load it half full as a precaution, so that when it tips (and it will) the disaster is of a modest size, like a minor border dispute and not a war.\n\nI have concluded that garden tools are made for gardens that exist only in the catalogue, where the soil is the color of chocolate cake and nothing is ever rooted under a stone. Mine has stones; it has clay; it has a rhubarb plant that predates the house and resents correction. Against such opposition a trowel does what it can, which is to bend.\n\nCome by on Saturday if you like. Bring your own spade, and do not tell me about it if it works; I could not bear it.\n\nWalter",
+  "draft_words": 411,
+  "target_words": 400,
+  "valid": true,
+  "invalid_reasons": [],
+  "invalid_history": [],
+  "evidence": {
+    "init_skills": [
+      "my-voice"
+    ],
+    "init_plugins": [],
+    "init_mcp_servers": [],
+    "claude_code_version": "2.1.306",
+    "model": "claude-sonnet-5-5",
+    "skill_calls": [
+      "my-voice"
+    ],
+    "tools_used": [
+      "Skill"
+    ],
+    "invoked": true,
+    "invocation_detail": "skill_tool_use_ok",
+    "invariant_violations": [],
+    "problems": []
+  },
+  "log_label": "d-era-e-heldout-06-with-r1-a1-10221000",
+  "created": "2026-10-22T10:06"
+}

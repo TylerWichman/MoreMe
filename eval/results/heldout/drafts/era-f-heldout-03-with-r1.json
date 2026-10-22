@@ -1,0 +1,41 @@
+{
+  "license_header": "Corpus-derived content (persona era-f). Source texts are in the public domain in the USA. Sources: eval/corpus/PROVENANCE.md",
+  "persona": "era-f",
+  "task_id": "era-f-heldout-03",
+  "split": "heldout",
+  "arm": "with",
+  "rep": 1,
+  "mode": "auto",
+  "model_requested": "claude-sonnet-5-5",
+  "position_in_task": 5,
+  "attempt": 1,
+  "prompt": "Write a note to a friend about impressions from a trip abroad. Aim for about 400 words. Reply with the note only.",
+  "final_message": "Dear friend,\n\nI have been home for a week now, and I still think about the trip every day. I want to tell you what stayed with me, because I think you would enjoy hearing it.\n\nThe first thing I noticed was how slowly people eat. A meal in Lisbon is not something you finish in twenty minutes. You sit, you talk, and nobody looks at a clock.\n\nI found this hard at first. I kept waiting for the bill. By the third day I had stopped waiting, and I enjoyed my food more than I have in years.\n\nThe streets were another surprise. They are narrow and steep, and you cannot hurry up them. I walked about ten miles a day, and my legs hurt, but I saw more than any bus would have shown me.\n\nPeople were kind to me, even though I knew only a few words of their language. A woman at a bakery taught me how to ask for bread. She laughed at my first try, then made me say it again until I got it right.\n\nI think about that often. She did not have to help me. She did it because she wanted me to do well, and that is a good way to treat a stranger.\n\nI also learned something about myself. I had planned every hour of the trip before I left, and by the second day the plan was useless. The best moments came when I had nothing planned at all.\n\nOne evening I sat by the river and watched the light change on the water. I had no place to be. I do not remember the last time I could say that.\n\nI came home with a few small gifts, some bad photographs, and a better sense of how much I do not know. I count that last part as the most useful thing I brought back.\n\nI would like you to go there yourself. You do not need much money or much time. You only need to be willing to walk slowly and to let yourself be a beginner again.\n\nWhen you have a free evening, come over and I will show you the photographs. I will cook something from the trip, and I promise to make it last longer than twenty minutes.\n\nWrite and tell me how you have been. I want to hear about your work, your family, and anything new you have learned lately.\n\nSamuel",
+  "draft": "Dear friend,\n\nI have been home for a week now, and I still think about the trip every day. I want to tell you what stayed with me, because I think you would enjoy hearing it.\n\nThe first thing I noticed was how slowly people eat. A meal in Lisbon is not something you finish in twenty minutes. You sit, you talk, and nobody looks at a clock.\n\nI found this hard at first. I kept waiting for the bill. By the third day I had stopped waiting, and I enjoyed my food more than I have in years.\n\nThe streets were another surprise. They are narrow and steep, and you cannot hurry up them. I walked about ten miles a day, and my legs hurt, but I saw more than any bus would have shown me.\n\nPeople were kind to me, even though I knew only a few words of their language. A woman at a bakery taught me how to ask for bread. She laughed at my first try, then made me say it again until I got it right.\n\nI think about that often. She did not have to help me. She did it because she wanted me to do well, and that is a good way to treat a stranger.\n\nI also learned something about myself. I had planned every hour of the trip before I left, and by the second day the plan was useless. The best moments came when I had nothing planned at all.\n\nOne evening I sat by the river and watched the light change on the water. I had no place to be. I do not remember the last time I could say that.\n\nI came home with a few small gifts, some bad photographs, and a better sense of how much I do not know. I count that last part as the most useful thing I brought back.\n\nI would like you to go there yourself. You do not need much money or much time. You only need to be willing to walk slowly and to let yourself be a beginner again.\n\nWhen you have a free evening, come over and I will show you the photographs. I will cook something from the trip, and I promise to make it last longer than twenty minutes.\n\nWrite and tell me how you have been. I want to hear about your work, your family, and anything new you have learned lately.\n\nSamuel",
+  "draft_words": 410,
+  "target_words": 400,
+  "valid": true,
+  "invalid_reasons": [],
+  "invalid_history": [],
+  "evidence": {
+    "init_skills": [
+      "my-voice"
+    ],
+    "init_plugins": [],
+    "init_mcp_servers": [],
+    "claude_code_version": "2.1.306",
+    "model": "claude-sonnet-5-5",
+    "skill_calls": [
+      "my-voice"
+    ],
+    "tools_used": [
+      "Skill"
+    ],
+    "invoked": true,
+    "invocation_detail": "skill_tool_use_ok",
+    "invariant_violations": [],
+    "problems": []
+  },
+  "log_label": "d-era-f-heldout-03-with-r1-a1-10221009",
+  "created": "2026-10-22T10:12"
+}

@@ -1,0 +1,41 @@
+{
+  "license_header": "Corpus-derived content (persona modern-a). Contains public sector information licensed under the Open Government Licence v3.0 (https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/). Sources and changes: eval/corpus/PROVENANCE.md",
+  "persona": "modern-a",
+  "task_id": "modern-a-heldout-05",
+  "split": "heldout",
+  "arm": "with",
+  "rep": 2,
+  "mode": "auto",
+  "model_requested": "claude-sonnet-5-5",
+  "position_in_task": 1,
+  "attempt": 1,
+  "prompt": "Write a short blog post about why services should be built around users, not around the org chart. Aim for about 400 words. Reply with the post only.",
+  "final_message": "# Build services around users, not the org chart\n\nUsers don't care which team owns what. They care about getting something done. Renewing a licence, claiming a benefit, reporting a problem. That's the job, and it rarely fits inside one department.\n\nMost of us still build services the way we're organised. One team owns the form. Another owns the payment. A third owns the letter that arrives afterwards. Each team does good work, but the user sees one broken journey.\n\nWe've all seen the signs. A person gives the same details three times. A page says \"contact another department\" with no link. Two services use different words for the same thing. None of this is anyone's fault. It's what happens when the structure of the organisation shows through to the public.\n\nStart with the user's need instead. Ask what they're trying to do, from the moment they begin to the moment they're finished. Then build the service to match that journey. Team boundaries can follow from there, not the other way round.\n\nIn practice, this means a few things:\n\n- We map the whole journey, including the parts we don't own.\n- We put one team in charge of the end-to-end experience.\n- We measure success by whether people complete the task, not by whether each team hit its own targets.\n- We fix problems where users feel them, even when the cause sits somewhere else.\n\nIt isn't always easy. Budgets follow the org chart. So do reporting lines, and so does accountability. Changing how we work can mean hard conversations about who decides what. But the alternative is a service that works fine on paper and badly in real life.\n\nThere's a practical case too. Joined-up services cost less to run. Fewer people get stuck, so fewer people phone for help. We spend less time on rework and on explaining to users why the process works the way it does. The savings are real, even if they don't show up in any one team's budget.\n\nYou don't need a big reorganisation to begin. Pick one service. Sit with the people who use it and watch where they struggle. Bring the teams involved into one room and look at the problems together. We've found that this alone changes the conversation.\n\nThe org chart tells us who's responsible for what. It says nothing about what people need. Our services should be built around the second, even when the first is more comfortable.\n\nSo: start with the user, and let the structure follow.",
+  "draft": "# Build services around users, not the org chart\n\nUsers don't care which team owns what. They care about getting something done. Renewing a licence, claiming a benefit, reporting a problem. That's the job, and it rarely fits inside one department.\n\nMost of us still build services the way we're organised. One team owns the form. Another owns the payment. A third owns the letter that arrives afterwards. Each team does good work, but the user sees one broken journey.\n\nWe've all seen the signs. A person gives the same details three times. A page says \"contact another department\" with no link. Two services use different words for the same thing. None of this is anyone's fault. It's what happens when the structure of the organisation shows through to the public.\n\nStart with the user's need instead. Ask what they're trying to do, from the moment they begin to the moment they're finished. Then build the service to match that journey. Team boundaries can follow from there, not the other way round.\n\nIn practice, this means a few things:\n\n- We map the whole journey, including the parts we don't own.\n- We put one team in charge of the end-to-end experience.\n- We measure success by whether people complete the task, not by whether each team hit its own targets.\n- We fix problems where users feel them, even when the cause sits somewhere else.\n\nIt isn't always easy. Budgets follow the org chart. So do reporting lines, and so does accountability. Changing how we work can mean hard conversations about who decides what. But the alternative is a service that works fine on paper and badly in real life.\n\nThere's a practical case too. Joined-up services cost less to run. Fewer people get stuck, so fewer people phone for help. We spend less time on rework and on explaining to users why the process works the way it does. The savings are real, even if they don't show up in any one team's budget.\n\nYou don't need a big reorganisation to begin. Pick one service. Sit with the people who use it and watch where they struggle. Bring the teams involved into one room and look at the problems together. We've found that this alone changes the conversation.\n\nThe org chart tells us who's responsible for what. It says nothing about what people need. Our services should be built around the second, even when the first is more comfortable.\n\nSo: start with the user, and let the structure follow.",
+  "draft_words": 419,
+  "target_words": 400,
+  "valid": true,
+  "invalid_reasons": [],
+  "invalid_history": [],
+  "evidence": {
+    "init_skills": [
+      "my-voice"
+    ],
+    "init_plugins": [],
+    "init_mcp_servers": [],
+    "claude_code_version": "2.1.303",
+    "model": "claude-sonnet-5-5",
+    "skill_calls": [
+      "my-voice"
+    ],
+    "tools_used": [
+      "Skill"
+    ],
+    "invoked": true,
+    "invocation_detail": "skill_tool_use_ok",
+    "invariant_violations": [],
+    "problems": []
+  },
+  "log_label": "d-modern-a-heldout-05-with-r2-a1-10210946",
+  "created": "2026-10-21T09:51"
+}

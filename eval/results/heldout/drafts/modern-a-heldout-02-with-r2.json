@@ -1,0 +1,41 @@
+{
+  "license_header": "Corpus-derived content (persona modern-a). Contains public sector information licensed under the Open Government Licence v3.0 (https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/). Sources and changes: eval/corpus/PROVENANCE.md",
+  "persona": "modern-a",
+  "task_id": "modern-a-heldout-02",
+  "split": "heldout",
+  "arm": "with",
+  "rep": 2,
+  "mode": "auto",
+  "model_requested": "claude-sonnet-5-5",
+  "position_in_task": 4,
+  "attempt": 1,
+  "prompt": "Write a short blog post about replacing an old paper-based payments process with a digital service. Aim for about 400 words. Reply with the post only.",
+  "final_message": "# We've replaced our paper payments process\n\nWe've retired the paper form people used to pay us. Payments now go through a simple online service.\n\nThe old process worked, but only just. People printed a form, filled it in by hand and posted it with a cheque. Our team opened the post, keyed in the details and banked the money. It took up to three weeks from posting to confirmation.\n\n## What we found\n\nWe started by watching how the process ran day to day. It wasn't pretty.\n\nAround one in five forms came back to us with a mistake. Missing reference numbers were the most common. Each one meant a phone call or a letter, and another week of waiting for the person paying.\n\nOur staff weren't happy with it either. Hours went on re-typing information that someone had already written down once.\n\n## What we built\n\nWe kept the first version small. It does one thing: it lets you pay online and tells you straight away that it worked.\n\nYou enter your reference number and the amount, then pay by card or bank transfer. We check the reference as you type, so most mistakes get caught before you submit. You get a confirmation on screen and by email.\n\nWe tested it with real users from the start. Some of them hadn't paid anything online before. Their feedback changed our wording, our button labels and the order of the steps. We're glad we asked early.\n\n## What we kept\n\nWe didn't switch off the paper route on day one. Not everyone can pay online, and we won't leave those people behind. Anyone who needs to can still pay by phone, and our team enters the details for them.\n\n## What's changed\n\nConfirmation now takes seconds, not weeks. Errors on submitted payments have dropped sharply, and our team spends far less time on data entry. They now help people who are stuck, which is a better use of their skills.\n\nWe've also learned a few things:\n\n- Start with the problem people have, not the technology.\n- Release early and fix what you find.\n- Keep a way for people to reach a human.\n\n## What's next\n\nWe're adding a receipt download and reminders for payments that are due. We're also looking at which other paper forms could follow the same path.\n\nIf you've used the new service, tell us how it went. We read every message, and we'll keep improving it.\n\nGraham",
+  "draft": "# We've replaced our paper payments process\n\nWe've retired the paper form people used to pay us. Payments now go through a simple online service.\n\nThe old process worked, but only just. People printed a form, filled it in by hand and posted it with a cheque. Our team opened the post, keyed in the details and banked the money. It took up to three weeks from posting to confirmation.\n\n## What we found\n\nWe started by watching how the process ran day to day. It wasn't pretty.\n\nAround one in five forms came back to us with a mistake. Missing reference numbers were the most common. Each one meant a phone call or a letter, and another week of waiting for the person paying.\n\nOur staff weren't happy with it either. Hours went on re-typing information that someone had already written down once.\n\n## What we built\n\nWe kept the first version small. It does one thing: it lets you pay online and tells you straight away that it worked.\n\nYou enter your reference number and the amount, then pay by card or bank transfer. We check the reference as you type, so most mistakes get caught before you submit. You get a confirmation on screen and by email.\n\nWe tested it with real users from the start. Some of them hadn't paid anything online before. Their feedback changed our wording, our button labels and the order of the steps. We're glad we asked early.\n\n## What we kept\n\nWe didn't switch off the paper route on day one. Not everyone can pay online, and we won't leave those people behind. Anyone who needs to can still pay by phone, and our team enters the details for them.\n\n## What's changed\n\nConfirmation now takes seconds, not weeks. Errors on submitted payments have dropped sharply, and our team spends far less time on data entry. They now help people who are stuck, which is a better use of their skills.\n\nWe've also learned a few things:\n\n- Start with the problem people have, not the technology.\n- Release early and fix what you find.\n- Keep a way for people to reach a human.\n\n## What's next\n\nWe're adding a receipt download and reminders for payments that are due. We're also looking at which other paper forms could follow the same path.\n\nIf you've used the new service, tell us how it went. We read every message, and we'll keep improving it.\n\nGraham",
+  "draft_words": 405,
+  "target_words": 400,
+  "valid": true,
+  "invalid_reasons": [],
+  "invalid_history": [],
+  "evidence": {
+    "init_skills": [
+      "my-voice"
+    ],
+    "init_plugins": [],
+    "init_mcp_servers": [],
+    "claude_code_version": "2.1.303",
+    "model": "claude-sonnet-5-5",
+    "skill_calls": [
+      "my-voice"
+    ],
+    "tools_used": [
+      "Skill"
+    ],
+    "invoked": true,
+    "invocation_detail": "skill_tool_use_ok",
+    "invariant_violations": [],
+    "problems": []
+  },
+  "log_label": "d-modern-a-heldout-02-with-r2-a1-10210946",
+  "created": "2026-10-21T09:48"
+}

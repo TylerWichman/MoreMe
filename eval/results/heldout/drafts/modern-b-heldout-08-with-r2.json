@@ -1,0 +1,41 @@
+{
+  "license_header": "Corpus-derived content (persona modern-b). Adapted from works licensed under CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/); this file is licensed under CC BY-SA 4.0. Attribution, sources, and changes: eval/corpus/PROVENANCE.md",
+  "persona": "modern-b",
+  "task_id": "modern-b-heldout-08",
+  "split": "heldout",
+  "arm": "with",
+  "rep": 2,
+  "mode": "auto",
+  "model_requested": "claude-sonnet-5-5",
+  "position_in_task": 1,
+  "attempt": 1,
+  "prompt": "Write a short blog post about helping a company adapt to fast change. Aim for about 400 words. Reply with the post only.",
+  "final_message": "**Helping a Company Adapt to Fast Change**\n\nLast year I worked with a mid-sized distribution company whose market shifted almost overnight. A major customer changed its ordering system. Two competitors cut prices. Leadership had a plan, but the plan was already out of date.\n\nHere's the main point I shared with them: when change is fast, planning matters less than feedback. A plan assumes you can see the road ahead. In fast change, you can't. You can only see the next step.\n\nThink of it as a series of doors. You can't know what's behind the second door until you've walked through the first. After you choose one, you find more doors to choose from. So the goal isn't a perfect map. The goal is to choose well, learn quickly, and choose again.\n\nThat leads to the first change we made, which was decision speed. In their old structure, a pricing question could take two weeks to reach the right person. Each approval added a day or more. By then, the customer had moved on. We gave the sales leads authority to adjust prices within a set range. Decisions moved to the frontline, where the issues were.\n\nThe second change was transparency. I define this as \"everyone can see what everyone else is doing and why.\" We started a short weekly review, held in one shared document. Each team wrote down the door it picked and what happened after. Other teams could read it and offer advice. A warehouse manager spotted a shipping problem in the sales notes before it became a complaint.\n\nThe third change was harder. We stopped asking people to juggle many projects at once. The common term is \"multi-tasking,\" but it's a misnomer. People actually switch back and forth between tasks, and each switch costs mental energy. We cut the number of active priorities per team to three. Work finished faster, and people were less worn out.\n\nNone of this required new software or a large budget. It required leaders to give up some control (which is not easy) and trust the people closest to the problem.\n\nAfter six months, the company had recovered most of its lost accounts. More important, it no longer feared the next shift. The teams knew how to respond: pick a door, share the choice, and ask for help.\n\nIf your company is facing fast change, start small. Pick one decision that waits too long for approval and move it closer to the people who know the most. Then see what you learn.",
+  "draft": "**Helping a Company Adapt to Fast Change**\n\nLast year I worked with a mid-sized distribution company whose market shifted almost overnight. A major customer changed its ordering system. Two competitors cut prices. Leadership had a plan, but the plan was already out of date.\n\nHere's the main point I shared with them: when change is fast, planning matters less than feedback. A plan assumes you can see the road ahead. In fast change, you can't. You can only see the next step.\n\nThink of it as a series of doors. You can't know what's behind the second door until you've walked through the first. After you choose one, you find more doors to choose from. So the goal isn't a perfect map. The goal is to choose well, learn quickly, and choose again.\n\nThat leads to the first change we made, which was decision speed. In their old structure, a pricing question could take two weeks to reach the right person. Each approval added a day or more. By then, the customer had moved on. We gave the sales leads authority to adjust prices within a set range. Decisions moved to the frontline, where the issues were.\n\nThe second change was transparency. I define this as \"everyone can see what everyone else is doing and why.\" We started a short weekly review, held in one shared document. Each team wrote down the door it picked and what happened after. Other teams could read it and offer advice. A warehouse manager spotted a shipping problem in the sales notes before it became a complaint.\n\nThe third change was harder. We stopped asking people to juggle many projects at once. The common term is \"multi-tasking,\" but it's a misnomer. People actually switch back and forth between tasks, and each switch costs mental energy. We cut the number of active priorities per team to three. Work finished faster, and people were less worn out.\n\nNone of this required new software or a large budget. It required leaders to give up some control (which is not easy) and trust the people closest to the problem.\n\nAfter six months, the company had recovered most of its lost accounts. More important, it no longer feared the next shift. The teams knew how to respond: pick a door, share the choice, and ask for help.\n\nIf your company is facing fast change, start small. Pick one decision that waits too long for approval and move it closer to the people who know the most. Then see what you learn.",
+  "draft_words": 424,
+  "target_words": 400,
+  "valid": true,
+  "invalid_reasons": [],
+  "invalid_history": [],
+  "evidence": {
+    "init_skills": [
+      "my-voice"
+    ],
+    "init_plugins": [],
+    "init_mcp_servers": [],
+    "claude_code_version": "2.1.306",
+    "model": "claude-sonnet-5-5",
+    "skill_calls": [
+      "my-voice"
+    ],
+    "tools_used": [
+      "Skill"
+    ],
+    "invoked": true,
+    "invocation_detail": "skill_tool_use_ok",
+    "invariant_violations": [],
+    "problems": []
+  },
+  "log_label": "d-modern-b-heldout-08-with-r2-a1-10211521",
+  "created": "2026-10-21T15:28"
+}

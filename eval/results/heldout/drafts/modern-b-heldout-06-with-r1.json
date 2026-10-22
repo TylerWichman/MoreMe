@@ -1,0 +1,41 @@
+{
+  "license_header": "Corpus-derived content (persona modern-b). Adapted from works licensed under CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/); this file is licensed under CC BY-SA 4.0. Attribution, sources, and changes: eval/corpus/PROVENANCE.md",
+  "persona": "modern-b",
+  "task_id": "modern-b-heldout-06",
+  "split": "heldout",
+  "arm": "with",
+  "rep": 1,
+  "mode": "auto",
+  "model_requested": "claude-sonnet-5-5",
+  "position_in_task": 2,
+  "attempt": 1,
+  "prompt": "Write a note to a friend about how managers can share decisions with their teams. Aim for about 400 words. Reply with the note only.",
+  "final_message": "Hi there,\n\nYou asked how I think managers should share decisions with their teams. Here's my short answer: decide who should decide, and say so out loud.\n\nStart by sorting decisions into three kinds. Some you make alone, and you simply explain them. Some you make after asking for input (you listen, then you choose). And some you hand over completely, so the team chooses and you back them up. Most trouble comes from blurring these. If you ask for opinions but have already decided, people notice, and they stop offering opinions.\n\nGive the decision to the people closest to the problem. Take a support team that keeps getting the same complaint. The agents on the phones know the cause better than any manager does. Let them pick the fix, and ask only that they tell you what they chose and why.\n\nBe clear about the limits before you hand anything over. A budget, a deadline, or a legal rule can all be a limit. \"You can choose the tool, as long as it costs under $500 a month\" is a fair boundary. It's much better than saying \"it's up to you\" and then overruling the result.\n\nKeep the reasoning visible, too. When you make the call yourself, explain what you weighed. People can disagree with a decision and still accept it if they understand how you got there. They can't do that when the reasons are hidden.\n\nThen live with the outcome. If the team picks something you wouldn't have, resist the urge to step in unless it's truly harmful. A mistake they own teaches them far more than a correct answer you gave them. Afterward, sit down together and ask what worked and what didn't. That review is where the real learning happens.\n\nOne last point: speed. Decisions that wait for approval up and down a chain of command are slow, and the people waiting lose interest. Moving the choice to the frontline is usually faster and better informed.\n\nYou don't need to do all of this at once. Pick one small decision this week and hand it over. See how it feels, then adjust.\n\nTalk soon,",
+  "draft": "Hi there,\n\nYou asked how I think managers should share decisions with their teams. Here's my short answer: decide who should decide, and say so out loud.\n\nStart by sorting decisions into three kinds. Some you make alone, and you simply explain them. Some you make after asking for input (you listen, then you choose). And some you hand over completely, so the team chooses and you back them up. Most trouble comes from blurring these. If you ask for opinions but have already decided, people notice, and they stop offering opinions.\n\nGive the decision to the people closest to the problem. Take a support team that keeps getting the same complaint. The agents on the phones know the cause better than any manager does. Let them pick the fix, and ask only that they tell you what they chose and why.\n\nBe clear about the limits before you hand anything over. A budget, a deadline, or a legal rule can all be a limit. \"You can choose the tool, as long as it costs under $500 a month\" is a fair boundary. It's much better than saying \"it's up to you\" and then overruling the result.\n\nKeep the reasoning visible, too. When you make the call yourself, explain what you weighed. People can disagree with a decision and still accept it if they understand how you got there. They can't do that when the reasons are hidden.\n\nThen live with the outcome. If the team picks something you wouldn't have, resist the urge to step in unless it's truly harmful. A mistake they own teaches them far more than a correct answer you gave them. Afterward, sit down together and ask what worked and what didn't. That review is where the real learning happens.\n\nOne last point: speed. Decisions that wait for approval up and down a chain of command are slow, and the people waiting lose interest. Moving the choice to the frontline is usually faster and better informed.\n\nYou don't need to do all of this at once. Pick one small decision this week and hand it over. See how it feels, then adjust.\n\nTalk soon,",
+  "draft_words": 358,
+  "target_words": 400,
+  "valid": true,
+  "invalid_reasons": [],
+  "invalid_history": [],
+  "evidence": {
+    "init_skills": [
+      "my-voice"
+    ],
+    "init_plugins": [],
+    "init_mcp_servers": [],
+    "claude_code_version": "2.1.306",
+    "model": "claude-sonnet-5-5",
+    "skill_calls": [
+      "my-voice"
+    ],
+    "tools_used": [
+      "Skill"
+    ],
+    "invoked": true,
+    "invocation_detail": "skill_tool_use_ok",
+    "invariant_violations": [],
+    "problems": []
+  },
+  "log_label": "d-modern-b-heldout-06-with-r1-a1-10211521",
+  "created": "2026-10-21T15:26"
+}

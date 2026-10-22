@@ -1,0 +1,41 @@
+{
+  "license_header": "Corpus-derived content (persona modern-a). Contains public sector information licensed under the Open Government Licence v3.0 (https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/). Sources and changes: eval/corpus/PROVENANCE.md",
+  "persona": "modern-a",
+  "task_id": "modern-a-heldout-05",
+  "split": "heldout",
+  "arm": "with",
+  "rep": 1,
+  "mode": "auto",
+  "model_requested": "claude-sonnet-5-5",
+  "position_in_task": 5,
+  "attempt": 1,
+  "prompt": "Write a short blog post about why services should be built around users, not around the org chart. Aim for about 400 words. Reply with the post only.",
+  "final_message": "# Build services around people, not the org chart\n\nMost government services are shaped by the way we're organised. That's the wrong starting point. People don't care which team owns which part of a service. They just want to get something done.\n\nThink about someone who's lost their job. In a single week they might need to claim benefits, tell the council, sort out their tax and find training. To them, that's one problem. To us, it's four departments, four websites and four sets of forms.\n\nWe built it that way because it matched our budgets and our reporting lines. It made sense for us. It made no sense for them.\n\nThe result is familiar. People repeat the same details again and again. They get sent from one page to another. They give up, or they ring a helpline, which costs more for everyone. We've all seen the data on this, and we've all heard the complaints.\n\nStarting with the user changes the work in practice. We begin by asking what someone is trying to do, not who is responsible. We map the whole journey, including the parts that cross team boundaries. Then we fix the places where people get stuck, even when the fix sits in someone else's area.\n\nThat last part is the hard bit. It means teams have to work together, share data and agree on priorities. It means some of us will give up a little control. I'm not pretending that's easy. But the alternative is asking the public to do the joining up for us, and that's not fair.\n\nThere are a few things that help.\n\nFirst, put people with different skills in one team. Designers, developers, researchers and policy colleagues should sit together and work on one service. Handing work between departments slows everything down.\n\nSecond, measure what users experience. Track how long a task takes and how many people finish it. Those numbers tell us far more than how many meetings we held.\n\nThird, talk to real users often. Don't wait for a big launch. Small, regular research sessions catch problems while they're cheap to fix.\n\nNone of this means the org chart doesn't matter. We still need clear accountability, and we still need people who know their area well. But the structure should serve the service, not the other way round.\n\nIf we get it right, the public never notices our internal boundaries. They just find that things work. That's the goal, and it's one we can reach if we keep the user in view.",
+  "draft": "# Build services around people, not the org chart\n\nMost government services are shaped by the way we're organised. That's the wrong starting point. People don't care which team owns which part of a service. They just want to get something done.\n\nThink about someone who's lost their job. In a single week they might need to claim benefits, tell the council, sort out their tax and find training. To them, that's one problem. To us, it's four departments, four websites and four sets of forms.\n\nWe built it that way because it matched our budgets and our reporting lines. It made sense for us. It made no sense for them.\n\nThe result is familiar. People repeat the same details again and again. They get sent from one page to another. They give up, or they ring a helpline, which costs more for everyone. We've all seen the data on this, and we've all heard the complaints.\n\nStarting with the user changes the work in practice. We begin by asking what someone is trying to do, not who is responsible. We map the whole journey, including the parts that cross team boundaries. Then we fix the places where people get stuck, even when the fix sits in someone else's area.\n\nThat last part is the hard bit. It means teams have to work together, share data and agree on priorities. It means some of us will give up a little control. I'm not pretending that's easy. But the alternative is asking the public to do the joining up for us, and that's not fair.\n\nThere are a few things that help.\n\nFirst, put people with different skills in one team. Designers, developers, researchers and policy colleagues should sit together and work on one service. Handing work between departments slows everything down.\n\nSecond, measure what users experience. Track how long a task takes and how many people finish it. Those numbers tell us far more than how many meetings we held.\n\nThird, talk to real users often. Don't wait for a big launch. Small, regular research sessions catch problems while they're cheap to fix.\n\nNone of this means the org chart doesn't matter. We still need clear accountability, and we still need people who know their area well. But the structure should serve the service, not the other way round.\n\nIf we get it right, the public never notices our internal boundaries. They just find that things work. That's the goal, and it's one we can reach if we keep the user in view.",
+  "draft_words": 422,
+  "target_words": 400,
+  "valid": true,
+  "invalid_reasons": [],
+  "invalid_history": [],
+  "evidence": {
+    "init_skills": [
+      "my-voice"
+    ],
+    "init_plugins": [],
+    "init_mcp_servers": [],
+    "claude_code_version": "2.1.303",
+    "model": "claude-sonnet-5-5",
+    "skill_calls": [
+      "my-voice"
+    ],
+    "tools_used": [
+      "Skill"
+    ],
+    "invoked": true,
+    "invocation_detail": "skill_tool_use_ok",
+    "invariant_violations": [],
+    "problems": []
+  },
+  "log_label": "d-modern-a-heldout-05-with-r1-a1-10210946",
+  "created": "2026-10-21T09:51"
+}

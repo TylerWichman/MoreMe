@@ -1,0 +1,41 @@
+{
+  "license_header": "Corpus-derived content (persona modern-b). Adapted from works licensed under CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/); this file is licensed under CC BY-SA 4.0. Attribution, sources, and changes: eval/corpus/PROVENANCE.md",
+  "persona": "modern-b",
+  "task_id": "modern-b-heldout-05",
+  "split": "heldout",
+  "arm": "with",
+  "rep": 2,
+  "mode": "auto",
+  "model_requested": "claude-sonnet-5-5",
+  "position_in_task": 4,
+  "attempt": 1,
+  "prompt": "Write a short blog post about building trust in a team that works across countries. Aim for about 400 words. Reply with the post only.",
+  "final_message": "Building Trust Across Borders\n\nTrust is the belief that a colleague will do what they say, and will tell you early when they can't. On a team spread across countries, that belief is harder to build. You can't read a face across a desk or share a coffee break. Trust has to be built on purpose.\n\nStart with a clear definition of \"reliable.\" Reliability means different things in different places. In some cultures, a deadline is a firm promise. In others, it's a starting point for discussion. Neither view is wrong. The trouble comes when two people hold different views and never say so. So we ask each person what a commitment means to them, and we write down how we'll handle a delay.\n\nNext, make work visible. When people can't see what others are doing, they tend to assume the worst. A shared board, short written updates, and open notes from every meeting all help. For example, one of our teams posts a three-line summary at the end of each day (what's done, what's blocked, what's next). Colleagues in other time zones wake up knowing exactly where things stand.\n\nThen, respect time zones fairly. If every meeting suits the head office, the other offices will notice. We rotate meeting times so that the early start or late night is shared. That small act says, \"Your time matters as much as mine.\"\n\nLanguage deserves care too. Many of us work in a second or third language. Speak plainly, avoid idioms, and follow up important calls with a written summary. It's not about talking down to anyone. It's about making sure we all understood the same thing.\n\nFinally, make room for people, not just tasks. Spend the first five minutes of a call on something personal. Ask about the weather, a holiday, or a local dish. These small exchanges build the familiarity that office teams get for free.\n\nTrust won't appear after one good meeting. It grows from many small, steady acts: a promise kept, a problem raised early, a thank-you said out loud. Over time, those acts add up, and distance matters much less.\n\nIf I had to pick one habit to start with, it would be the daily summary. It costs two minutes and pays back every day.",
+  "draft": "Building Trust Across Borders\n\nTrust is the belief that a colleague will do what they say, and will tell you early when they can't. On a team spread across countries, that belief is harder to build. You can't read a face across a desk or share a coffee break. Trust has to be built on purpose.\n\nStart with a clear definition of \"reliable.\" Reliability means different things in different places. In some cultures, a deadline is a firm promise. In others, it's a starting point for discussion. Neither view is wrong. The trouble comes when two people hold different views and never say so. So we ask each person what a commitment means to them, and we write down how we'll handle a delay.\n\nNext, make work visible. When people can't see what others are doing, they tend to assume the worst. A shared board, short written updates, and open notes from every meeting all help. For example, one of our teams posts a three-line summary at the end of each day (what's done, what's blocked, what's next). Colleagues in other time zones wake up knowing exactly where things stand.\n\nThen, respect time zones fairly. If every meeting suits the head office, the other offices will notice. We rotate meeting times so that the early start or late night is shared. That small act says, \"Your time matters as much as mine.\"\n\nLanguage deserves care too. Many of us work in a second or third language. Speak plainly, avoid idioms, and follow up important calls with a written summary. It's not about talking down to anyone. It's about making sure we all understood the same thing.\n\nFinally, make room for people, not just tasks. Spend the first five minutes of a call on something personal. Ask about the weather, a holiday, or a local dish. These small exchanges build the familiarity that office teams get for free.\n\nTrust won't appear after one good meeting. It grows from many small, steady acts: a promise kept, a problem raised early, a thank-you said out loud. Over time, those acts add up, and distance matters much less.\n\nIf I had to pick one habit to start with, it would be the daily summary. It costs two minutes and pays back every day.",
+  "draft_words": 381,
+  "target_words": 400,
+  "valid": true,
+  "invalid_reasons": [],
+  "invalid_history": [],
+  "evidence": {
+    "init_skills": [
+      "my-voice"
+    ],
+    "init_plugins": [],
+    "init_mcp_servers": [],
+    "claude_code_version": "2.1.306",
+    "model": "claude-sonnet-5-5",
+    "skill_calls": [
+      "my-voice"
+    ],
+    "tools_used": [
+      "Skill"
+    ],
+    "invoked": true,
+    "invocation_detail": "skill_tool_use_ok",
+    "invariant_violations": [],
+    "problems": []
+  },
+  "log_label": "d-modern-b-heldout-05-with-r2-a1-10211521",
+  "created": "2026-10-21T15:26"
+}

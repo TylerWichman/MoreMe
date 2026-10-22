@@ -1,0 +1,41 @@
+{
+  "license_header": "Corpus-derived content (persona era-d). Source texts are in the public domain in the USA. Sources: eval/corpus/PROVENANCE.md",
+  "persona": "era-d",
+  "task_id": "era-d-heldout-04",
+  "split": "heldout",
+  "arm": "with",
+  "rep": 2,
+  "mode": "auto",
+  "model_requested": "claude-sonnet-5-5",
+  "position_in_task": 4,
+  "attempt": 1,
+  "prompt": "Write an email to a colleague about rumors going around town. Aim for about 400 words. Reply with the email only.",
+  "final_message": "Subject: You will not believe what I heard at the bakery\n\nDear Margaret,\n\nI have been dying to write to you ever since Tuesday, and now that I have finally sat down I hardly know where to begin -- so I shall begin with the bakery, because that is where it started.\n\nI was standing in line for bread, minding my own business, when Mrs. Hollis leaned over and said, in a whisper that could have been heard in the next county, that the mill is going to close before the new year. Closed! Just like that. She had it from her sister-in-law, who has it from a man who does the books, and you know how I feel about information that has passed through three pairs of hands. By the time it reaches me it has usually grown a second story and a cupola.\n\nThen, of course, there is the other business. Have you heard about Mr. Danvers and the committee funds? I am only repeating what is being said, and I am not saying I believe it. But three separate people have now told me, with great solemnity, that the numbers do not add up, and one of them added that he has been seen \"looking pale.\" Pale! As if that settles anything. The man has looked pale since 1998. I think it is simply his complexion. Still, it is awfully convenient how quickly everyone has decided he is guilty, and I will confess that I listened to every word with my head tilted and my mouth shut, which is not like me at all.\n\nAnd then there is the thing about the Pruitt house being sold, which I have heard is either to a young couple from the city or to a developer who means to put up flats, depending on whom you ask. The young couple version is far more cheerful, so naturally I am inclined to doubt it.\n\nWhat I want to know is what you have heard, because you always know things before I do, and it is rather annoying. Has anyone said anything at the office? You sit so near the kitchen, where all the real news is delivered along with the stale biscuits. If the mill rumor is true I suppose we shall all be hearing about it officially soon enough, and I do hope it is not true, for the Pruitts' sake and the Hollises' and, well, everyone's.\n\nI am trying not to worry, and failing a little. Do write back, or better still, come to tea on Thursday and bring whatever you know. I will supply the biscuits, fresh ones, from the very same bakery.\n\nLouisa",
+  "draft": "Subject: You will not believe what I heard at the bakery\n\nDear Margaret,\n\nI have been dying to write to you ever since Tuesday, and now that I have finally sat down I hardly know where to begin -- so I shall begin with the bakery, because that is where it started.\n\nI was standing in line for bread, minding my own business, when Mrs. Hollis leaned over and said, in a whisper that could have been heard in the next county, that the mill is going to close before the new year. Closed! Just like that. She had it from her sister-in-law, who has it from a man who does the books, and you know how I feel about information that has passed through three pairs of hands. By the time it reaches me it has usually grown a second story and a cupola.\n\nThen, of course, there is the other business. Have you heard about Mr. Danvers and the committee funds? I am only repeating what is being said, and I am not saying I believe it. But three separate people have now told me, with great solemnity, that the numbers do not add up, and one of them added that he has been seen \"looking pale.\" Pale! As if that settles anything. The man has looked pale since 1998. I think it is simply his complexion. Still, it is awfully convenient how quickly everyone has decided he is guilty, and I will confess that I listened to every word with my head tilted and my mouth shut, which is not like me at all.\n\nAnd then there is the thing about the Pruitt house being sold, which I have heard is either to a young couple from the city or to a developer who means to put up flats, depending on whom you ask. The young couple version is far more cheerful, so naturally I am inclined to doubt it.\n\nWhat I want to know is what you have heard, because you always know things before I do, and it is rather annoying. Has anyone said anything at the office? You sit so near the kitchen, where all the real news is delivered along with the stale biscuits. If the mill rumor is true I suppose we shall all be hearing about it officially soon enough, and I do hope it is not true, for the Pruitts' sake and the Hollises' and, well, everyone's.\n\nI am trying not to worry, and failing a little. Do write back, or better still, come to tea on Thursday and bring whatever you know. I will supply the biscuits, fresh ones, from the very same bakery.\n\nLouisa",
+  "draft_words": 446,
+  "target_words": 400,
+  "valid": true,
+  "invalid_reasons": [],
+  "invalid_history": [],
+  "evidence": {
+    "init_skills": [
+      "my-voice"
+    ],
+    "init_plugins": [],
+    "init_mcp_servers": [],
+    "claude_code_version": "2.1.306",
+    "model": "claude-sonnet-5-5",
+    "skill_calls": [
+      "my-voice"
+    ],
+    "tools_used": [
+      "Skill"
+    ],
+    "invoked": true,
+    "invocation_detail": "skill_tool_use_ok",
+    "invariant_violations": [],
+    "problems": []
+  },
+  "log_label": "d-era-d-heldout-04-with-r2-a1-10220953",
+  "created": "2026-10-22T09:56"
+}

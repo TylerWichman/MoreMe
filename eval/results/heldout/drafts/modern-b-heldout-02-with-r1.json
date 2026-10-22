@@ -1,0 +1,41 @@
+{
+  "license_header": "Corpus-derived content (persona modern-b). Adapted from works licensed under CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/); this file is licensed under CC BY-SA 4.0. Attribution, sources, and changes: eval/corpus/PROVENANCE.md",
+  "persona": "modern-b",
+  "task_id": "modern-b-heldout-02",
+  "split": "heldout",
+  "arm": "with",
+  "rep": 1,
+  "mode": "auto",
+  "model_requested": "claude-sonnet-5-5",
+  "position_in_task": 3,
+  "attempt": 1,
+  "prompt": "Write a short blog post about using open organization principles to cut energy use in a factory. Aim for about 400 words. Reply with the post only.",
+  "final_message": "# Cutting Factory Energy Use by Opening the Org Chart\n\nMost factories treat energy as a facilities problem. A small team watches the utility bill and sends out reminders. That rarely works, because the people who see the waste every day aren't the people tasked with fixing it.\n\nAn open organization is one where information flows freely, decisions sit close to the work, and people can see how their choices affect the whole. Those principles apply well to energy.\n\nStart with transparency. Put real-time energy data where operators can see it, not in a monthly report for managers. One plant I know of posted a simple display above each line showing kilowatt-hours per unit produced. Within weeks, operators noticed that a compressor ran all night with nothing connected to it. No audit found that. The person standing next to it did.\n\nNext, move decisions to the frontline. If an operator needs three approvals to shut down idle equipment, the equipment stays on. Give teams a clear rule instead (for example, \"any machine idle for 15 minutes gets powered down\") and let them act. Quick decisions get made where the issues are.\n\nThen invite contribution. Ask people from every shift to suggest fixes, and share the results openly. The night crew knows things the day crew doesn't, such as which heaters cycle too often or which doors stay propped open. When their ideas are tracked in a shared list and credited by name, more of them show up.\n\nFinally, share the gains. If a team's change saves money, say so, and say how much. Some companies put a portion of the savings toward something the team chooses, like better break-room equipment or training. That builds trust, and trust keeps the effort going after the first round of easy wins.\n\nNone of this requires new machinery. It does require patience. Teams will make mistakes, and some suggestions won't pan out. That's fine. In a system with many moving parts, feedback is more useful than a perfect plan written in advance.\n\nIf you're looking for a place to begin, pick one production line. Post its energy numbers where everyone can see them, give the team permission to act, and meet for ten minutes each week to compare notes. Then watch what happens to the meter.",
+  "draft": "# Cutting Factory Energy Use by Opening the Org Chart\n\nMost factories treat energy as a facilities problem. A small team watches the utility bill and sends out reminders. That rarely works, because the people who see the waste every day aren't the people tasked with fixing it.\n\nAn open organization is one where information flows freely, decisions sit close to the work, and people can see how their choices affect the whole. Those principles apply well to energy.\n\nStart with transparency. Put real-time energy data where operators can see it, not in a monthly report for managers. One plant I know of posted a simple display above each line showing kilowatt-hours per unit produced. Within weeks, operators noticed that a compressor ran all night with nothing connected to it. No audit found that. The person standing next to it did.\n\nNext, move decisions to the frontline. If an operator needs three approvals to shut down idle equipment, the equipment stays on. Give teams a clear rule instead (for example, \"any machine idle for 15 minutes gets powered down\") and let them act. Quick decisions get made where the issues are.\n\nThen invite contribution. Ask people from every shift to suggest fixes, and share the results openly. The night crew knows things the day crew doesn't, such as which heaters cycle too often or which doors stay propped open. When their ideas are tracked in a shared list and credited by name, more of them show up.\n\nFinally, share the gains. If a team's change saves money, say so, and say how much. Some companies put a portion of the savings toward something the team chooses, like better break-room equipment or training. That builds trust, and trust keeps the effort going after the first round of easy wins.\n\nNone of this requires new machinery. It does require patience. Teams will make mistakes, and some suggestions won't pan out. That's fine. In a system with many moving parts, feedback is more useful than a perfect plan written in advance.\n\nIf you're looking for a place to begin, pick one production line. Post its energy numbers where everyone can see them, give the team permission to act, and meet for ten minutes each week to compare notes. Then watch what happens to the meter.",
+  "draft_words": 383,
+  "target_words": 400,
+  "valid": true,
+  "invalid_reasons": [],
+  "invalid_history": [],
+  "evidence": {
+    "init_skills": [
+      "my-voice"
+    ],
+    "init_plugins": [],
+    "init_mcp_servers": [],
+    "claude_code_version": "2.1.306",
+    "model": "claude-sonnet-5-5",
+    "skill_calls": [
+      "my-voice"
+    ],
+    "tools_used": [
+      "Skill"
+    ],
+    "invoked": true,
+    "invocation_detail": "skill_tool_use_ok",
+    "invariant_violations": [],
+    "problems": []
+  },
+  "log_label": "d-modern-b-heldout-02-with-r1-a1-10211521",
+  "created": "2026-10-21T15:23"
+}

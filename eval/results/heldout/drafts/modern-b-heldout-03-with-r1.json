@@ -1,0 +1,41 @@
+{
+  "license_header": "Corpus-derived content (persona modern-b). Adapted from works licensed under CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/); this file is licensed under CC BY-SA 4.0. Attribution, sources, and changes: eval/corpus/PROVENANCE.md",
+  "persona": "modern-b",
+  "task_id": "modern-b-heldout-03",
+  "split": "heldout",
+  "arm": "with",
+  "rep": 1,
+  "mode": "auto",
+  "model_requested": "claude-sonnet-5-5",
+  "position_in_task": 5,
+  "attempt": 1,
+  "prompt": "Write a note to a friend about what the sharing economy means for how companies are run. Aim for about 400 words. Reply with the note only.",
+  "final_message": "Hi,\n\nYou asked what the sharing economy means for how companies are run. I've been thinking about it, and here's my short answer. It changes who owns the assets, who does the work, and how decisions get made.\n\nLet me define the term first. The \"sharing economy\" is a set of businesses that connect people who have something (a car, a spare room, a few free hours) with people who need it. Uber, Airbnb, and TaskRabbit are the usual examples. The company doesn't own the cars or the rooms. It runs the platform in the middle.\n\nThat's the first big shift. A traditional company grows by buying things and hiring people. A platform company grows by attracting people who already have the things. Airbnb has no hotel buildings to maintain, so it can add listings faster than any hotel chain could add rooms. The cost is control. The company can't fully dictate the quality of a room it doesn't own.\n\nThe second shift is in the workforce. Many people on these platforms are independent contractors, not employees. That's a legal and practical difference. A contractor sets their own hours and uses their own tools, but they don't get benefits or job security. Companies gain flexibility, and workers take on more risk. I think the debate over that trade-off is far from settled.\n\nThe third shift is how decisions get made. When thousands of drivers and hosts are acting at once, a manager can't approve every move. Ratings, reviews, and pricing algorithms do much of the supervising instead. Feedback arrives in real time, from customers, and the company adjusts quickly. Planning matters less here, and listening matters more.\n\nThat leads to my main point. Running one of these companies is less about managing people and more about managing a marketplace. The leaders' job is to build trust between strangers, set fair rules, and fix problems fast. If riders don't feel safe, or hosts don't feel paid fairly, the whole thing falls apart, because no one is required to stay.\n\nEven traditional companies are borrowing the ideas. Some let staff pick up shifts through an app. Others rent out unused equipment. I'd expect more of that, and I'd expect more flat, fast-moving teams along with it.\n\nI'd love to hear what you think, especially from your side of things. Call me when you have a minute.\n\nTalk soon,",
+  "draft": "Hi,\n\nYou asked what the sharing economy means for how companies are run. I've been thinking about it, and here's my short answer. It changes who owns the assets, who does the work, and how decisions get made.\n\nLet me define the term first. The \"sharing economy\" is a set of businesses that connect people who have something (a car, a spare room, a few free hours) with people who need it. Uber, Airbnb, and TaskRabbit are the usual examples. The company doesn't own the cars or the rooms. It runs the platform in the middle.\n\nThat's the first big shift. A traditional company grows by buying things and hiring people. A platform company grows by attracting people who already have the things. Airbnb has no hotel buildings to maintain, so it can add listings faster than any hotel chain could add rooms. The cost is control. The company can't fully dictate the quality of a room it doesn't own.\n\nThe second shift is in the workforce. Many people on these platforms are independent contractors, not employees. That's a legal and practical difference. A contractor sets their own hours and uses their own tools, but they don't get benefits or job security. Companies gain flexibility, and workers take on more risk. I think the debate over that trade-off is far from settled.\n\nThe third shift is how decisions get made. When thousands of drivers and hosts are acting at once, a manager can't approve every move. Ratings, reviews, and pricing algorithms do much of the supervising instead. Feedback arrives in real time, from customers, and the company adjusts quickly. Planning matters less here, and listening matters more.\n\nThat leads to my main point. Running one of these companies is less about managing people and more about managing a marketplace. The leaders' job is to build trust between strangers, set fair rules, and fix problems fast. If riders don't feel safe, or hosts don't feel paid fairly, the whole thing falls apart, because no one is required to stay.\n\nEven traditional companies are borrowing the ideas. Some let staff pick up shifts through an app. Others rent out unused equipment. I'd expect more of that, and I'd expect more flat, fast-moving teams along with it.\n\nI'd love to hear what you think, especially from your side of things. Call me when you have a minute.\n\nTalk soon,",
+  "draft_words": 398,
+  "target_words": 400,
+  "valid": true,
+  "invalid_reasons": [],
+  "invalid_history": [],
+  "evidence": {
+    "init_skills": [
+      "my-voice"
+    ],
+    "init_plugins": [],
+    "init_mcp_servers": [],
+    "claude_code_version": "2.1.306",
+    "model": "claude-sonnet-5-5",
+    "skill_calls": [
+      "my-voice"
+    ],
+    "tools_used": [
+      "Skill"
+    ],
+    "invoked": true,
+    "invocation_detail": "skill_tool_use_ok",
+    "invariant_violations": [],
+    "problems": []
+  },
+  "log_label": "d-modern-b-heldout-03-with-r1-a1-10211521",
+  "created": "2026-10-21T15:24"
+}

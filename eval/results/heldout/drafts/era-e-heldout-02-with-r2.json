@@ -1,0 +1,41 @@
+{
+  "license_header": "Corpus-derived content (persona era-e). Source texts are in the public domain in the USA. Sources: eval/corpus/PROVENANCE.md",
+  "persona": "era-e",
+  "task_id": "era-e-heldout-02",
+  "split": "heldout",
+  "arm": "with",
+  "rep": 2,
+  "mode": "auto",
+  "model_requested": "claude-sonnet-5-5",
+  "position_in_task": 1,
+  "attempt": 1,
+  "prompt": "Write a short blog post about battling weeds. Aim for about 400 words. Reply with the post only.",
+  "final_message": "# The Weeds Have Not Read the Treaty\n\nI have been at war with the weeds for some years now, and I am prepared to report that the war is going about as well as most wars do: much effort, a few local victories, and no prospect of a signed settlement.\n\nThe enemy is patient. I clear a bed on Saturday, admire it with my hands on my hips, and by Wednesday there is a green fuzz along the whole border, as though the soil had been waiting for me to leave the room. Purslane is the worst of them. It lies flat and innocent, looks almost like a crop, and will root again from a pulled piece left lying on the ground. I have learned to carry it to the bin like a prisoner under escort.\n\nMy tactics are few and plain. The first is the hoe, which I rank above every other tool in the shed. A sharp hoe, drawn through the top half inch of soil on a dry morning, will cut down a hundred seedlings before they have decided what they want to be. This is the whole secret, and it is hardly a secret; but it must be done early, while the weeds are small and the gardener is still cheerful. A weed let go until August is no longer a weed but a tenant, with rights.\n\nThe second tactic is mulch. A thick layer of straw or shredded leaves keeps the light from the seeds, and the seeds, deprived of light, seem to lose heart. I put it down four inches deep around the zucchini, which is a plant that needs no encouragement and gets none from me. The mulch also keeps the soil moist, so that the few weeds that do break through come out of the ground with their roots entire, and with something like good grace.\n\nThe third is a matter of temperament. One must accept that a certain number of dandelions will live in the turf, and that they have as much claim to it as the grass, having arrived first and with better manners than the clover. I pull the ones that come near the peas. The rest I leave to their own devices, and we maintain a cool but correct relationship.\n\nThere are people who spray, and I do not judge them; a man with two acres of bindweed may be forgiven much. But on my small plot I prefer the slow work of the hoe. There is a dignity in it. The back stays straight, the mind wanders, and by the end of an hour one has the quiet satisfaction of having been, for a short time, the more determined party.\n\nI am told that a weed is merely a plant in the wrong place. This is generous, and I have tried to take it to heart. But the lamb's quarters in my carrot row is not in the wrong place so much as in the wrong century, and I will go on hoeing it until it learns the difference.\n\nWalter",
+  "draft": "# The Weeds Have Not Read the Treaty\n\nI have been at war with the weeds for some years now, and I am prepared to report that the war is going about as well as most wars do: much effort, a few local victories, and no prospect of a signed settlement.\n\nThe enemy is patient. I clear a bed on Saturday, admire it with my hands on my hips, and by Wednesday there is a green fuzz along the whole border, as though the soil had been waiting for me to leave the room. Purslane is the worst of them. It lies flat and innocent, looks almost like a crop, and will root again from a pulled piece left lying on the ground. I have learned to carry it to the bin like a prisoner under escort.\n\nMy tactics are few and plain. The first is the hoe, which I rank above every other tool in the shed. A sharp hoe, drawn through the top half inch of soil on a dry morning, will cut down a hundred seedlings before they have decided what they want to be. This is the whole secret, and it is hardly a secret; but it must be done early, while the weeds are small and the gardener is still cheerful. A weed let go until August is no longer a weed but a tenant, with rights.\n\nThe second tactic is mulch. A thick layer of straw or shredded leaves keeps the light from the seeds, and the seeds, deprived of light, seem to lose heart. I put it down four inches deep around the zucchini, which is a plant that needs no encouragement and gets none from me. The mulch also keeps the soil moist, so that the few weeds that do break through come out of the ground with their roots entire, and with something like good grace.\n\nThe third is a matter of temperament. One must accept that a certain number of dandelions will live in the turf, and that they have as much claim to it as the grass, having arrived first and with better manners than the clover. I pull the ones that come near the peas. The rest I leave to their own devices, and we maintain a cool but correct relationship.\n\nThere are people who spray, and I do not judge them; a man with two acres of bindweed may be forgiven much. But on my small plot I prefer the slow work of the hoe. There is a dignity in it. The back stays straight, the mind wanders, and by the end of an hour one has the quiet satisfaction of having been, for a short time, the more determined party.\n\nI am told that a weed is merely a plant in the wrong place. This is generous, and I have tried to take it to heart. But the lamb's quarters in my carrot row is not in the wrong place so much as in the wrong century, and I will go on hoeing it until it learns the difference.\n\nWalter",
+  "draft_words": 513,
+  "target_words": 400,
+  "valid": true,
+  "invalid_reasons": [],
+  "invalid_history": [],
+  "evidence": {
+    "init_skills": [
+      "my-voice"
+    ],
+    "init_plugins": [],
+    "init_mcp_servers": [],
+    "claude_code_version": "2.1.306",
+    "model": "claude-sonnet-5-5",
+    "skill_calls": [
+      "my-voice"
+    ],
+    "tools_used": [
+      "Skill"
+    ],
+    "invoked": true,
+    "invocation_detail": "skill_tool_use_ok",
+    "invariant_violations": [],
+    "problems": []
+  },
+  "log_label": "d-era-e-heldout-02-with-r2-a1-10221000",
+  "created": "2026-10-22T10:01"
+}

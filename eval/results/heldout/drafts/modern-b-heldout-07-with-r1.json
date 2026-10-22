@@ -1,0 +1,41 @@
+{
+  "license_header": "Corpus-derived content (persona modern-b). Adapted from works licensed under CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/); this file is licensed under CC BY-SA 4.0. Attribution, sources, and changes: eval/corpus/PROVENANCE.md",
+  "persona": "modern-b",
+  "task_id": "modern-b-heldout-07",
+  "split": "heldout",
+  "arm": "with",
+  "rep": 1,
+  "mode": "auto",
+  "model_requested": "claude-sonnet-5-5",
+  "position_in_task": 3,
+  "attempt": 1,
+  "prompt": "Write an email to a colleague about encouraging people to share what they know at work. Aim for about 400 words. Reply with the email only.",
+  "final_message": "Subject: Getting people to share what they know\n\nHi Sam,\n\nI'd like your help with something I've been thinking about. We should make it easier, and more normal, for people on our team to share what they know.\n\nHere's the main point. Knowledge that stays in one person's head helps only that person. Once it's shared, it helps everyone who needs it. Think of a nurse who figures out a faster way to hand off patients between shifts. If she keeps it to herself, one shift improves. If she tells the team, the whole ward does.\n\nMost people don't hold back because they're selfish. They hold back for quieter reasons. Some assume everyone already knows it. Some worry they'll look like they're showing off. Others are simply too busy, and sharing feels like extra work with no reward.\n\nSo I think we have to remove those obstacles one at a time. I have four ideas.\n\nFirst, make sharing small. A two-minute note in our team channel is enough. We don't need a polished presentation (a rough tip is often more useful anyway).\n\nSecond, ask for it directly. People rarely volunteer. A simple question in our weekly meeting, such as \"What did you learn this week that others could use?\", gives them permission to speak.\n\nThird, say thank you in public. When someone shares a useful tip, we should name them and explain how it helped. That shows the team that sharing is valued, and it makes the next person more willing to do it.\n\nFourth, go first. If you and I share our own mistakes and shortcuts, others will feel safe doing the same. People copy what leaders do, not what leaders say.\n\nI'd also like to avoid making this a formal program with forms and deadlines. That kind of structure tends to turn sharing into a chore. A light habit will last longer than a heavy system.\n\nCould we talk for 20 minutes this week? I'd like to hear which of these ideas you think would work best with your group, and whether you've seen other approaches succeed. We could then pick one to try for a month and see what happens.\n\nThanks for considering it.\n\nBest regards,",
+  "draft": "Subject: Getting people to share what they know\n\nHi Sam,\n\nI'd like your help with something I've been thinking about. We should make it easier, and more normal, for people on our team to share what they know.\n\nHere's the main point. Knowledge that stays in one person's head helps only that person. Once it's shared, it helps everyone who needs it. Think of a nurse who figures out a faster way to hand off patients between shifts. If she keeps it to herself, one shift improves. If she tells the team, the whole ward does.\n\nMost people don't hold back because they're selfish. They hold back for quieter reasons. Some assume everyone already knows it. Some worry they'll look like they're showing off. Others are simply too busy, and sharing feels like extra work with no reward.\n\nSo I think we have to remove those obstacles one at a time. I have four ideas.\n\nFirst, make sharing small. A two-minute note in our team channel is enough. We don't need a polished presentation (a rough tip is often more useful anyway).\n\nSecond, ask for it directly. People rarely volunteer. A simple question in our weekly meeting, such as \"What did you learn this week that others could use?\", gives them permission to speak.\n\nThird, say thank you in public. When someone shares a useful tip, we should name them and explain how it helped. That shows the team that sharing is valued, and it makes the next person more willing to do it.\n\nFourth, go first. If you and I share our own mistakes and shortcuts, others will feel safe doing the same. People copy what leaders do, not what leaders say.\n\nI'd also like to avoid making this a formal program with forms and deadlines. That kind of structure tends to turn sharing into a chore. A light habit will last longer than a heavy system.\n\nCould we talk for 20 minutes this week? I'd like to hear which of these ideas you think would work best with your group, and whether you've seen other approaches succeed. We could then pick one to try for a month and see what happens.\n\nThanks for considering it.\n\nBest regards,",
+  "draft_words": 369,
+  "target_words": 400,
+  "valid": true,
+  "invalid_reasons": [],
+  "invalid_history": [],
+  "evidence": {
+    "init_skills": [
+      "my-voice"
+    ],
+    "init_plugins": [],
+    "init_mcp_servers": [],
+    "claude_code_version": "2.1.306",
+    "model": "claude-sonnet-5-5",
+    "skill_calls": [
+      "my-voice"
+    ],
+    "tools_used": [
+      "Skill"
+    ],
+    "invoked": true,
+    "invocation_detail": "skill_tool_use_ok",
+    "invariant_violations": [],
+    "problems": []
+  },
+  "log_label": "d-modern-b-heldout-07-with-r1-a1-10211521",
+  "created": "2026-10-21T15:27"
+}

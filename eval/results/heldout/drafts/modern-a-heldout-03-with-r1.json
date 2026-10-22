@@ -1,0 +1,41 @@
+{
+  "license_header": "Corpus-derived content (persona modern-a). Contains public sector information licensed under the Open Government Licence v3.0 (https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/). Sources and changes: eval/corpus/PROVENANCE.md",
+  "persona": "modern-a",
+  "task_id": "modern-a-heldout-03",
+  "split": "heldout",
+  "arm": "with",
+  "rep": 1,
+  "mode": "auto",
+  "model_requested": "claude-sonnet-5-5",
+  "position_in_task": 4,
+  "attempt": 1,
+  "prompt": "Write a note to a friend about what your team delivered over the last year and a bit. Aim for about 400 words. Reply with the note only.",
+  "final_message": "Over the last year and a bit, we've shipped more than I expected when we started. I wanted to tell you about it properly.\n\nThe biggest piece was [main service or product]. We took it from a rough prototype to something real people use every day. It's now live, and [number] people have used it so far. Most of the early feedback was about [common feedback theme]. We listened, and we changed it.\n\nThat's how we've worked throughout. We start small, put something in front of users, and learn from what happens. Requirements moved a few times. So did the budget and the scope. Working in short cycles meant we could deal with that without drama.\n\nWe also made [second delivery] much simpler. It used to take [old time or number of steps]. Now it takes [new time or number of steps]. That's a small change on paper, but it saves our users real time, and it saves us a lot of support work.\n\nOn the technical side, we moved [system or area] onto a better setup. Nobody outside the team will notice, and that's the point. It's more stable, it's cheaper to run, and we can release changes in days rather than months. We now ship updates most weeks.\n\nWe've also got better at using data. We built a simple performance dashboard that the whole team looks at. It shows what's working and what isn't. We've stopped arguing about opinions and started looking at the numbers.\n\nIt hasn't all been smooth. [One thing that went wrong or took longer] cost us a couple of months. We learned from it, and we're doing things differently now. I'm glad we were honest about it early.\n\nWhat I'm proudest of is the team. We've had [number] new people join, and they settled in fast. We run short stand-ups, we share what we're learning, and we don't hide problems. People feel able to speak up, and the work is better for it.\n\nNext, we're focused on [next priority]. We want to reach more users and make [area] easier still. There's plenty left to do.\n\nI'd love to tell you more over a coffee. I'm free [day or week], if that suits you. Let me know what works.\n\nGraham",
+  "draft": "Over the last year and a bit, we've shipped more than I expected when we started. I wanted to tell you about it properly.\n\nThe biggest piece was [main service or product]. We took it from a rough prototype to something real people use every day. It's now live, and [number] people have used it so far. Most of the early feedback was about [common feedback theme]. We listened, and we changed it.\n\nThat's how we've worked throughout. We start small, put something in front of users, and learn from what happens. Requirements moved a few times. So did the budget and the scope. Working in short cycles meant we could deal with that without drama.\n\nWe also made [second delivery] much simpler. It used to take [old time or number of steps]. Now it takes [new time or number of steps]. That's a small change on paper, but it saves our users real time, and it saves us a lot of support work.\n\nOn the technical side, we moved [system or area] onto a better setup. Nobody outside the team will notice, and that's the point. It's more stable, it's cheaper to run, and we can release changes in days rather than months. We now ship updates most weeks.\n\nWe've also got better at using data. We built a simple performance dashboard that the whole team looks at. It shows what's working and what isn't. We've stopped arguing about opinions and started looking at the numbers.\n\nIt hasn't all been smooth. [One thing that went wrong or took longer] cost us a couple of months. We learned from it, and we're doing things differently now. I'm glad we were honest about it early.\n\nWhat I'm proudest of is the team. We've had [number] new people join, and they settled in fast. We run short stand-ups, we share what we're learning, and we don't hide problems. People feel able to speak up, and the work is better for it.\n\nNext, we're focused on [next priority]. We want to reach more users and make [area] easier still. There's plenty left to do.\n\nI'd love to tell you more over a coffee. I'm free [day or week], if that suits you. Let me know what works.\n\nGraham",
+  "draft_words": 376,
+  "target_words": 400,
+  "valid": true,
+  "invalid_reasons": [],
+  "invalid_history": [],
+  "evidence": {
+    "init_skills": [
+      "my-voice"
+    ],
+    "init_plugins": [],
+    "init_mcp_servers": [],
+    "claude_code_version": "2.1.303",
+    "model": "claude-sonnet-5-5",
+    "skill_calls": [
+      "my-voice"
+    ],
+    "tools_used": [
+      "Skill"
+    ],
+    "invoked": true,
+    "invocation_detail": "skill_tool_use_ok",
+    "invariant_violations": [],
+    "problems": []
+  },
+  "log_label": "d-modern-a-heldout-03-with-r1-a1-10210946",
+  "created": "2026-10-21T09:49"
+}

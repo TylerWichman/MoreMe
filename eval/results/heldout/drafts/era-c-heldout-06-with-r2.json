@@ -1,0 +1,41 @@
+{
+  "license_header": "Corpus-derived content (persona era-c). Source texts are in the public domain in the USA. Sources: eval/corpus/PROVENANCE.md",
+  "persona": "era-c",
+  "task_id": "era-c-heldout-06",
+  "split": "heldout",
+  "arm": "with",
+  "rep": 2,
+  "mode": "auto",
+  "model_requested": "claude-sonnet-5-5",
+  "position_in_task": 1,
+  "attempt": 1,
+  "prompt": "Write a note to a friend about a book you have been reading. Aim for about 400 words. Reply with the note only.",
+  "final_message": "Dear Ruth,\n\nI have been meaning to write to you since I started this book, because I think you would like it. It is called Letters of a Woman Homesteader, and it is exactly what it says. A widow with a little girl goes out to Wyoming, takes up a claim, and writes to a former employer about how she gets along.\n\nI picked it up thinking it would be a sort of dusty history lesson, and I was wrong about that. She writes the way a person talks when she is tired and pleased at the same time. In one letter she is fixing a fence, and in the next she is worrying over a pie crust for a neighbor's dinner. Nothing is fussed over, and she is never sorry for herself, though I would not have blamed her if she had been.\n\nMy favorite part so far is the Thanksgiving dinner she puts on for the neighbors. She borrows dishes from every woman for miles, irons the tablecloths while they are still damp so they look better, and then tells the guests to wash their own dishes afterward. I laughed out loud at that, because it is the sort of trick I would try myself if I had the nerve.\n\nI should say that she is a little too sure of herself now and then, and some of what she says about her neighbors would not go over well today. But she is honest about her own mistakes too, and she admits her ignorance more than once, which makes her easier to forgive. I find I read her slowly, a letter or two each evening, the way you would sip something hot.\n\nIt has also made me look at my own kitchen differently. I complain about the stove, and she cooked on whatever she could get going in a cabin with the wind coming through the walls. I have not stopped complaining, mind you, but I do it a little more quietly now.\n\nI am about halfway through, and she has just taken on a hired man who may turn out to be more trouble than he is worth. I will let you know how that goes. If you want it, I can send you my copy when I am finished. It has a coffee ring on page forty, but I promise that was there when I bought it.\n\nWrite when you have a minute, and tell me what you are reading. I am always short of ideas.\n\nHattie",
+  "draft": "Dear Ruth,\n\nI have been meaning to write to you since I started this book, because I think you would like it. It is called Letters of a Woman Homesteader, and it is exactly what it says. A widow with a little girl goes out to Wyoming, takes up a claim, and writes to a former employer about how she gets along.\n\nI picked it up thinking it would be a sort of dusty history lesson, and I was wrong about that. She writes the way a person talks when she is tired and pleased at the same time. In one letter she is fixing a fence, and in the next she is worrying over a pie crust for a neighbor's dinner. Nothing is fussed over, and she is never sorry for herself, though I would not have blamed her if she had been.\n\nMy favorite part so far is the Thanksgiving dinner she puts on for the neighbors. She borrows dishes from every woman for miles, irons the tablecloths while they are still damp so they look better, and then tells the guests to wash their own dishes afterward. I laughed out loud at that, because it is the sort of trick I would try myself if I had the nerve.\n\nI should say that she is a little too sure of herself now and then, and some of what she says about her neighbors would not go over well today. But she is honest about her own mistakes too, and she admits her ignorance more than once, which makes her easier to forgive. I find I read her slowly, a letter or two each evening, the way you would sip something hot.\n\nIt has also made me look at my own kitchen differently. I complain about the stove, and she cooked on whatever she could get going in a cabin with the wind coming through the walls. I have not stopped complaining, mind you, but I do it a little more quietly now.\n\nI am about halfway through, and she has just taken on a hired man who may turn out to be more trouble than he is worth. I will let you know how that goes. If you want it, I can send you my copy when I am finished. It has a coffee ring on page forty, but I promise that was there when I bought it.\n\nWrite when you have a minute, and tell me what you are reading. I am always short of ideas.\n\nHattie",
+  "draft_words": 421,
+  "target_words": 400,
+  "valid": true,
+  "invalid_reasons": [],
+  "invalid_history": [],
+  "evidence": {
+    "init_skills": [
+      "my-voice"
+    ],
+    "init_plugins": [],
+    "init_mcp_servers": [],
+    "claude_code_version": "2.1.306",
+    "model": "claude-sonnet-5-5",
+    "skill_calls": [
+      "my-voice"
+    ],
+    "tools_used": [
+      "Skill"
+    ],
+    "invoked": true,
+    "invocation_detail": "skill_tool_use_ok",
+    "invariant_violations": [],
+    "problems": []
+  },
+  "log_label": "d-era-c-heldout-06-with-r2-a1-10211513",
+  "created": "2026-10-21T15:18"
+}

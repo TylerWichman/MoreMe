@@ -1,0 +1,41 @@
+{
+  "license_header": "Corpus-derived content (persona era-d). Source texts are in the public domain in the USA. Sources: eval/corpus/PROVENANCE.md",
+  "persona": "era-d",
+  "task_id": "era-d-heldout-06",
+  "split": "heldout",
+  "arm": "with",
+  "rep": 1,
+  "mode": "auto",
+  "model_requested": "claude-sonnet-5-5",
+  "position_in_task": 3,
+  "attempt": 1,
+  "prompt": "Write a note to a friend about a quarrel and making up afterward. Aim for about 400 words. Reply with the note only.",
+  "final_message": "Dear Nell,\n\nI have been meaning to write since Sunday, and I kept putting it off because I didn't know whether to begin with an apology or with a complaint. So I'll do both and let you sort them out.\n\nFirst, the complaint: you were wrong about the dinner. Not wrong in a large way, but wrong in the particular way that made me want to throw a dish towel at you. You said I'd \"made it about myself,\" and I went home so stiff with indignation that I rehearsed my reply the whole way, and it was a very good reply, too, full of clauses and a few devastating pauses. I'm sorry you never got to hear it. It was my best work in years.\n\nNow the apology. By Monday morning the reply had gone rather flat, the way a cake does when somebody slams the oven door, and what was left was the plain fact that you had been tired and I had been loud, and neither of us had been very kind. I did talk a great deal that evening. I know I did. I told the whole story of the hat three times -- once for the table, once for you, and once, I think, for the cat. You were patient longer than I deserved.\n\nI will say, in my own defense, that you did not have to say it in front of Harriet. She will bring it up at Christmas. She has a memory like a ledger and no mercy whatever, and I can already hear her saying \"Well, I wasn't going to mention it, but--\" and then mentioning it.\n\nBut hush, that isn't fair, and I promised myself this was to be a nice letter.\n\nSo here is what I'd like. Come Thursday, if you can bear it. I'll make the soup you like, the one with too much pepper that you pretend to hate, and I will sit quietly and let you talk. Truly quietly. You may time me. I give myself twenty minutes before I start in on something, and I'll try very hard to make it forty.\n\nDon't write back if you'd rather not. Just come, or don't, and if you don't, I shall be cross for exactly one day and then I'll walk over there with the soup anyway, so you may as well save me the trouble of the walk.\n\nLouisa",
+  "draft": "Dear Nell,\n\nI have been meaning to write since Sunday, and I kept putting it off because I didn't know whether to begin with an apology or with a complaint. So I'll do both and let you sort them out.\n\nFirst, the complaint: you were wrong about the dinner. Not wrong in a large way, but wrong in the particular way that made me want to throw a dish towel at you. You said I'd \"made it about myself,\" and I went home so stiff with indignation that I rehearsed my reply the whole way, and it was a very good reply, too, full of clauses and a few devastating pauses. I'm sorry you never got to hear it. It was my best work in years.\n\nNow the apology. By Monday morning the reply had gone rather flat, the way a cake does when somebody slams the oven door, and what was left was the plain fact that you had been tired and I had been loud, and neither of us had been very kind. I did talk a great deal that evening. I know I did. I told the whole story of the hat three times -- once for the table, once for you, and once, I think, for the cat. You were patient longer than I deserved.\n\nI will say, in my own defense, that you did not have to say it in front of Harriet. She will bring it up at Christmas. She has a memory like a ledger and no mercy whatever, and I can already hear her saying \"Well, I wasn't going to mention it, but--\" and then mentioning it.\n\nBut hush, that isn't fair, and I promised myself this was to be a nice letter.\n\nSo here is what I'd like. Come Thursday, if you can bear it. I'll make the soup you like, the one with too much pepper that you pretend to hate, and I will sit quietly and let you talk. Truly quietly. You may time me. I give myself twenty minutes before I start in on something, and I'll try very hard to make it forty.\n\nDon't write back if you'd rather not. Just come, or don't, and if you don't, I shall be cross for exactly one day and then I'll walk over there with the soup anyway, so you may as well save me the trouble of the walk.\n\nLouisa",
+  "draft_words": 401,
+  "target_words": 400,
+  "valid": true,
+  "invalid_reasons": [],
+  "invalid_history": [],
+  "evidence": {
+    "init_skills": [
+      "my-voice"
+    ],
+    "init_plugins": [],
+    "init_mcp_servers": [],
+    "claude_code_version": "2.1.306",
+    "model": "claude-sonnet-5-5",
+    "skill_calls": [
+      "my-voice"
+    ],
+    "tools_used": [
+      "Skill"
+    ],
+    "invoked": true,
+    "invocation_detail": "skill_tool_use_ok",
+    "invariant_violations": [],
+    "problems": []
+  },
+  "log_label": "d-era-d-heldout-06-with-r1-a1-10220953",
+  "created": "2026-10-22T09:58"
+}

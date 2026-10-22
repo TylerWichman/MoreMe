@@ -1,0 +1,41 @@
+{
+  "license_header": "Corpus-derived content (persona era-c). Source texts are in the public domain in the USA. Sources: eval/corpus/PROVENANCE.md",
+  "persona": "era-c",
+  "task_id": "era-c-heldout-02",
+  "split": "heldout",
+  "arm": "with",
+  "rep": 1,
+  "mode": "auto",
+  "model_requested": "claude-sonnet-5-5",
+  "position_in_task": 2,
+  "attempt": 1,
+  "prompt": "Write a short blog post about the weather and how it has changed your plans. Aim for about 400 words. Reply with the post only.",
+  "final_message": "# The Rain Had Other Ideas\n\nI had a plan for this week, and it was a good one. On Saturday I meant to drive out to the lake, spread a blanket under the big maple, and eat a sandwich while the leaves did their showing off. I had even bought the good bread.\n\nThe weather had other ideas. It started raining Thursday night, and by Friday morning the sky looked like a wet wool blanket hung over the whole county. The forecast promised more of the same through Sunday, which I took personally.\n\nI will admit I sulked for about an hour. I stood at the kitchen window with my tea and told the clouds what I thought of them, and they did not answer. Then the tea went cold, and I figured I could either keep complaining or find something useful to do with a wet Saturday.\n\nSo the lake trip became a kitchen day. I pulled out the flour and the last of the apples from the bag a neighbor left on my porch, and I made a pie. It was not the pie I had planned, because I had meant to buy the nice cinnamon, and the old jar in my cupboard has seen better years. It tasted fine anyway, and the house smelled like a bakery by noon.\n\nThe rest of the day went better than I deserved. I finally sorted the drawer of old letters I have been putting off since spring, and I found one from a friend that made me laugh out loud, alone in my living room, like a person who has lost her mind. I wrote her back that same afternoon. The mail won't carry it until Monday, but it is written, and that counts for something.\n\nBy evening the rain had settled into a steady patter on the roof, the kind you can hear from every room. I sat with a slice of pie and a blanket, and I will tell you plainly that I did not miss the lake one bit. The picnic will keep. The maple will still be there next weekend, though maybe with fewer leaves, and I can live with that.\n\nWhat I keep coming back to is how easily a changed plan can turn into a better day, if you let it. I do not always manage that. This time I did, and I am pleased with myself.\n\nIf your weekend got rained out too, I hope you found a pie of your own to make. And if you have good cinnamon, send some my way.\n\nHattie",
+  "draft": "# The Rain Had Other Ideas\n\nI had a plan for this week, and it was a good one. On Saturday I meant to drive out to the lake, spread a blanket under the big maple, and eat a sandwich while the leaves did their showing off. I had even bought the good bread.\n\nThe weather had other ideas. It started raining Thursday night, and by Friday morning the sky looked like a wet wool blanket hung over the whole county. The forecast promised more of the same through Sunday, which I took personally.\n\nI will admit I sulked for about an hour. I stood at the kitchen window with my tea and told the clouds what I thought of them, and they did not answer. Then the tea went cold, and I figured I could either keep complaining or find something useful to do with a wet Saturday.\n\nSo the lake trip became a kitchen day. I pulled out the flour and the last of the apples from the bag a neighbor left on my porch, and I made a pie. It was not the pie I had planned, because I had meant to buy the nice cinnamon, and the old jar in my cupboard has seen better years. It tasted fine anyway, and the house smelled like a bakery by noon.\n\nThe rest of the day went better than I deserved. I finally sorted the drawer of old letters I have been putting off since spring, and I found one from a friend that made me laugh out loud, alone in my living room, like a person who has lost her mind. I wrote her back that same afternoon. The mail won't carry it until Monday, but it is written, and that counts for something.\n\nBy evening the rain had settled into a steady patter on the roof, the kind you can hear from every room. I sat with a slice of pie and a blanket, and I will tell you plainly that I did not miss the lake one bit. The picnic will keep. The maple will still be there next weekend, though maybe with fewer leaves, and I can live with that.\n\nWhat I keep coming back to is how easily a changed plan can turn into a better day, if you let it. I do not always manage that. This time I did, and I am pleased with myself.\n\nIf your weekend got rained out too, I hope you found a pie of your own to make. And if you have good cinnamon, send some my way.\n\nHattie",
+  "draft_words": 432,
+  "target_words": 400,
+  "valid": true,
+  "invalid_reasons": [],
+  "invalid_history": [],
+  "evidence": {
+    "init_skills": [
+      "my-voice"
+    ],
+    "init_plugins": [],
+    "init_mcp_servers": [],
+    "claude_code_version": "2.1.306",
+    "model": "claude-sonnet-5-5",
+    "skill_calls": [
+      "my-voice"
+    ],
+    "tools_used": [
+      "Skill"
+    ],
+    "invoked": true,
+    "invocation_detail": "skill_tool_use_ok",
+    "invariant_violations": [],
+    "problems": []
+  },
+  "log_label": "d-era-c-heldout-02-with-r1-a1-10211513",
+  "created": "2026-10-21T15:15"
+}

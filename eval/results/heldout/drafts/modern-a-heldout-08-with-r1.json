@@ -1,0 +1,41 @@
+{
+  "license_header": "Corpus-derived content (persona modern-a). Contains public sector information licensed under the Open Government Licence v3.0 (https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/). Sources and changes: eval/corpus/PROVENANCE.md",
+  "persona": "modern-a",
+  "task_id": "modern-a-heldout-08",
+  "split": "heldout",
+  "arm": "with",
+  "rep": 1,
+  "mode": "auto",
+  "model_requested": "claude-sonnet-5-5",
+  "position_in_task": 2,
+  "attempt": 1,
+  "prompt": "Write a short blog post about what comes next for your digital team. Aim for about 400 words. Reply with the post only.",
+  "final_message": "# What comes next for our digital team\n\nWe're changing how we work over the next year. The short version: fewer big plans, more small releases, and more time with the people who use our services.\n\nHere's what that means in practice.\n\n## We'll release smaller changes, more often\n\nLarge projects drift. Requirements shift, budgets move, and the thing we start building is rarely the thing we finish. We know that, so we're planning for it.\n\nFrom now on, we'll ship small changes every week where we can. Each one gets tested with real users before the next begins. If something isn't working, we'll find out in days, not months.\n\n## We'll spend more time with users\n\nOur analytics tell us what people do. They don't tell us why. So we're putting researchers and designers in front of users every sprint, and the whole team will watch the sessions.\n\nI'd like every person on the team, not just the researchers, to see someone struggle with our service at least once a quarter. It changes how you think about the work.\n\n## We'll fix the basics first\n\nSome of our pages are slow. Some of our forms ask for things we already know. Some of our guidance is longer than it needs to be.\n\nNone of that is exciting, but it matters to the people who rely on us. We'll clear that backlog before we start on anything new.\n\n## We'll share more of our work\n\nWe're going to show our progress openly. That means regular show-and-tells, a public roadmap, and plain notes on what we tried and what didn't work.\n\nOther teams are solving the same problems we are. If we share what we learn, they won't repeat our mistakes. We'd like the same from them.\n\n## We'll make decisions closer to the work\n\nFewer meetings, shorter approval chains. The people building the service know it best, so they should have the authority to change it. Where we need sign-off, we'll keep it quick and keep it visible.\n\nWe won't get everything right. We'll make mistakes, and some of our plans will change. That's fine, as long as we notice early and respond fast.\n\n## What I'm asking of you\n\nIf you're on the team, speak up when something isn't working. If you use our services, tell us what's wrong. Both help us more than you'd think.\n\nWe'll report back on progress every quarter, including the parts that haven't gone to plan.\n\nGraham",
+  "draft": "# What comes next for our digital team\n\nWe're changing how we work over the next year. The short version: fewer big plans, more small releases, and more time with the people who use our services.\n\nHere's what that means in practice.\n\n## We'll release smaller changes, more often\n\nLarge projects drift. Requirements shift, budgets move, and the thing we start building is rarely the thing we finish. We know that, so we're planning for it.\n\nFrom now on, we'll ship small changes every week where we can. Each one gets tested with real users before the next begins. If something isn't working, we'll find out in days, not months.\n\n## We'll spend more time with users\n\nOur analytics tell us what people do. They don't tell us why. So we're putting researchers and designers in front of users every sprint, and the whole team will watch the sessions.\n\nI'd like every person on the team, not just the researchers, to see someone struggle with our service at least once a quarter. It changes how you think about the work.\n\n## We'll fix the basics first\n\nSome of our pages are slow. Some of our forms ask for things we already know. Some of our guidance is longer than it needs to be.\n\nNone of that is exciting, but it matters to the people who rely on us. We'll clear that backlog before we start on anything new.\n\n## We'll share more of our work\n\nWe're going to show our progress openly. That means regular show-and-tells, a public roadmap, and plain notes on what we tried and what didn't work.\n\nOther teams are solving the same problems we are. If we share what we learn, they won't repeat our mistakes. We'd like the same from them.\n\n## We'll make decisions closer to the work\n\nFewer meetings, shorter approval chains. The people building the service know it best, so they should have the authority to change it. Where we need sign-off, we'll keep it quick and keep it visible.\n\nWe won't get everything right. We'll make mistakes, and some of our plans will change. That's fine, as long as we notice early and respond fast.\n\n## What I'm asking of you\n\nIf you're on the team, speak up when something isn't working. If you use our services, tell us what's wrong. Both help us more than you'd think.\n\nWe'll report back on progress every quarter, including the parts that haven't gone to plan.\n\nGraham",
+  "draft_words": 409,
+  "target_words": 400,
+  "valid": true,
+  "invalid_reasons": [],
+  "invalid_history": [],
+  "evidence": {
+    "init_skills": [
+      "my-voice"
+    ],
+    "init_plugins": [],
+    "init_mcp_servers": [],
+    "claude_code_version": "2.1.306",
+    "model": "claude-sonnet-5-5",
+    "skill_calls": [
+      "my-voice"
+    ],
+    "tools_used": [
+      "Skill"
+    ],
+    "invoked": true,
+    "invocation_detail": "skill_tool_use_ok",
+    "invariant_violations": [],
+    "problems": []
+  },
+  "log_label": "d-modern-a-heldout-08-with-r1-a1-10211511",
+  "created": "2026-10-21T15:12"
+}

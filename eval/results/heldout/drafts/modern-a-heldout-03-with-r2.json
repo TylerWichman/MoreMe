@@ -1,0 +1,41 @@
+{
+  "license_header": "Corpus-derived content (persona modern-a). Contains public sector information licensed under the Open Government Licence v3.0 (https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/). Sources and changes: eval/corpus/PROVENANCE.md",
+  "persona": "modern-a",
+  "task_id": "modern-a-heldout-03",
+  "split": "heldout",
+  "arm": "with",
+  "rep": 2,
+  "mode": "auto",
+  "model_requested": "claude-sonnet-5-5",
+  "position_in_task": 1,
+  "attempt": 1,
+  "prompt": "Write a note to a friend about what your team delivered over the last year and a bit. Aim for about 400 words. Reply with the note only.",
+  "final_message": "Hi,\n\nYou asked what we've been up to. It's been a busy year and a bit, so here's the short version.\n\nThe biggest change was to how we're governed. We no longer have a cross-government Chief Information Officer, or a Head of Profession for ICT. We moved responsibility for those areas to the Government Digital Service. In practice, that means fewer places to go for a decision and clearer ownership.\n\nWe also closed several cross-government technology boards. We're reviewing the rest. The aim is simple: we want to be set up as efficiently as we can, and we don't want meetings that exist only because they always have.\n\nThat ties into how we build things. We've pushed hard for agile as the default on digital public services. We know the thing we start won't be the thing we finish. Requirements shift, budgets move, and scope changes. Agile lets us handle all of that without a fuss.\n\nSo our advice to teams has been plain: if you're working on a digital public service, just go with agile from the start. We've seen far fewer surprises since teams began doing that.\n\nI'm proud of the shift in mindset. We've moved away from treating this as technology procurement. We now think of it more like service design. That's a big change for a lot of people, and it hasn't always been easy.\n\nWe've also put more effort into the basics that users notice. That means helpful web services, good tools to iterate and add features, and strong data analysis. Our public performance pages are a good example, and we use them to see what's working and what isn't.\n\nOn the day to day, we've swapped some big budget-holder meetings for short stand-ups. We release more often, in smaller pieces, based on what users need. Smaller releases are easier to test, and they're easier to fix when we get something wrong.\n\nIt hasn't all gone smoothly. Some of the changes took longer to land than I'd hoped. A few people were unsure what the new arrangements meant for them. We've tried to be open about that and to explain the reasons as we go.\n\nStill, I think we're in a much better place than a year ago. The team is clearer on what it owns, and the work is closer to the people who use it.\n\nI'd love to catch up properly and hear how things are with you. Let me know when you're free for a coffee.\n\nGraham",
+  "draft": "Hi,\n\nYou asked what we've been up to. It's been a busy year and a bit, so here's the short version.\n\nThe biggest change was to how we're governed. We no longer have a cross-government Chief Information Officer, or a Head of Profession for ICT. We moved responsibility for those areas to the Government Digital Service. In practice, that means fewer places to go for a decision and clearer ownership.\n\nWe also closed several cross-government technology boards. We're reviewing the rest. The aim is simple: we want to be set up as efficiently as we can, and we don't want meetings that exist only because they always have.\n\nThat ties into how we build things. We've pushed hard for agile as the default on digital public services. We know the thing we start won't be the thing we finish. Requirements shift, budgets move, and scope changes. Agile lets us handle all of that without a fuss.\n\nSo our advice to teams has been plain: if you're working on a digital public service, just go with agile from the start. We've seen far fewer surprises since teams began doing that.\n\nI'm proud of the shift in mindset. We've moved away from treating this as technology procurement. We now think of it more like service design. That's a big change for a lot of people, and it hasn't always been easy.\n\nWe've also put more effort into the basics that users notice. That means helpful web services, good tools to iterate and add features, and strong data analysis. Our public performance pages are a good example, and we use them to see what's working and what isn't.\n\nOn the day to day, we've swapped some big budget-holder meetings for short stand-ups. We release more often, in smaller pieces, based on what users need. Smaller releases are easier to test, and they're easier to fix when we get something wrong.\n\nIt hasn't all gone smoothly. Some of the changes took longer to land than I'd hoped. A few people were unsure what the new arrangements meant for them. We've tried to be open about that and to explain the reasons as we go.\n\nStill, I think we're in a much better place than a year ago. The team is clearer on what it owns, and the work is closer to the people who use it.\n\nI'd love to catch up properly and hear how things are with you. Let me know when you're free for a coffee.\n\nGraham",
+  "draft_words": 419,
+  "target_words": 400,
+  "valid": true,
+  "invalid_reasons": [],
+  "invalid_history": [],
+  "evidence": {
+    "init_skills": [
+      "my-voice"
+    ],
+    "init_plugins": [],
+    "init_mcp_servers": [],
+    "claude_code_version": "2.1.303",
+    "model": "claude-sonnet-5-5",
+    "skill_calls": [
+      "my-voice"
+    ],
+    "tools_used": [
+      "Skill"
+    ],
+    "invoked": true,
+    "invocation_detail": "skill_tool_use_ok",
+    "invariant_violations": [],
+    "problems": []
+  },
+  "log_label": "d-modern-a-heldout-03-with-r2-a1-10210946",
+  "created": "2026-10-21T09:48"
+}
