@@ -107,6 +107,7 @@ def test_discover_skips_generic_ci_users_and_noreply(monkeypatch):
                                                         "user.email": "1+h@users.noreply.github.com"}[key])
     t = sa.discover(home="/home/runner", user="runner", env={})
     assert t["users"] == [] and t["names"] == [] and t["emails"] == []
+    assert "home" not in [kind for kind, _, _ in sa.Sanitizer(t).rules]
 
 
 def test_discover_defaults_to_this_machine():

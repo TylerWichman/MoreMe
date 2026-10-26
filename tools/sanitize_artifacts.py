@@ -126,7 +126,8 @@ class Sanitizer(object):
         self.tokens = tokens if tokens is not None else discover()
         self.rules = []  # (kind, compiled regex, replacement or None)
         drive, parts = _home_parts(self.tokens["home"])
-        if parts and len(parts) >= 1 and self.tokens["home"] not in ("/", ""):
+        # A CI runner's home folder (e.g. /home/runner) says nothing about a person.
+        if parts and parts[-1].lower() not in GENERIC_USERS and self.tokens["home"] not in ("/", ""):
             body = SEP.join(re.escape(p) for p in parts)
             if drive:
                 prefix = (r"(?:%s%s:|(?<![A-Za-z0-9:])/{1,2}%s(?=[\\/%%])|%s%s(?:%%3[aA]))?" % (
