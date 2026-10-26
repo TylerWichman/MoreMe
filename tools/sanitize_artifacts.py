@@ -75,8 +75,6 @@ def discover(home=None, user=None, use_git=True, env=None):
     home = str(home if home is not None else Path.home())
     # Split on both separators so a Windows path is read the same on any OS.
     home_name = re.split(r"[\\/]", home.rstrip("\\/"))[-1]
-    if home_name.lower() in GENERIC_USERS:
-        home = ""  # a CI runner's home folder (e.g. /home/runner) says nothing about a person
     users = []
     for u in (user if user is not None else _safe_getuser(), home_name):
         if u and len(u) >= 3 and u.lower() not in GENERIC_USERS and u.lower() not in [x.lower() for x in users]:
